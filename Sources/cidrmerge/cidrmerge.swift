@@ -20,7 +20,7 @@ struct CIDRMerge: ParsableCommand {
 
     static let configuration = CommandConfiguration(
         commandName: "cidrmerge",
-        abstract: "Compile IP addresses and networks into a minimal, sorted, exact CIDR cover."
+        abstract: "Compile IP addresses, networks, and ranges into a minimal, sorted, exact address cover."
     )
 
     @Option(
@@ -35,6 +35,12 @@ struct CIDRMerge: ParsableCommand {
     )
     var outputFormat: OutputFormat?
 
+    @Option(
+        name: .customLong("representation"),
+        help: "Semantic representation: ranges or cidr. The default is ranges."
+    )
+    var representation: OutputRepresentation = .ranges
+
     @Flag(
         name: .customLong("json"),
         help: "Emit JSON. This cannot be combined with --output-format."
@@ -43,7 +49,7 @@ struct CIDRMerge: ParsableCommand {
 
     @Flag(
         name: .customLong("stats"),
-        help: "Write input, normalization, output, and reduction counts to stderr."
+        help: "Write input, normalization, selected output, and count change to stderr."
     )
     var stats = false
 
@@ -81,7 +87,7 @@ struct CIDRMerge: ParsableCommand {
 
         let format = json ? OutputFormat.json : outputFormat ?? .text
         let collection = try TextInputLoader.load(inputs: inputs)
-        let result = collection.merged()
+        let result = collection.merged(representation: representation)
 
         let output: Data
         switch format {
@@ -127,3 +133,5 @@ enum OutputFormat: String, ExpressibleByArgument {
     case text
     case json
 }
+
+extension OutputRepresentation: ExpressibleByArgument {}

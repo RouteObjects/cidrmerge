@@ -13,7 +13,13 @@
 
 import CIDR
 
+enum OutputRepresentation: String, Equatable, Sendable {
+    case ranges
+    case cidr
+}
+
 struct MergeStatistics: Equatable, Sendable {
+    var representation: OutputRepresentation
     var inputCount = 0
     var inputIPv4Count = 0
     var inputIPv6Count = 0
@@ -25,133 +31,97 @@ struct MergeStatistics: Equatable, Sendable {
         outputIPv4Count + outputIPv6Count
     }
 
-    var removedCount: Int {
-        inputCount - outputCount
+    /// Positive for expansion, negative for reduction, and zero when the count is unchanged.
+    var countChange: Int {
+        outputCount - inputCount
+    }
+}
+
+enum FamilyMergeOutput<Family: IPAddressFamily>: Equatable, Sendable {
+    case ranges([IPAddressRange<Family>])
+    case cidr([IPNetwork<Family>])
+
+    var count: Int {
+        switch self {
+        case .ranges(let ranges): ranges.count
+        case .cidr(let networks): networks.count
+        }
+    }
+
+    var descriptions: [String] {
+        switch self {
+        case .ranges(let ranges): ranges.map(\.description)
+        case .cidr(let networks): networks.map(\.description)
+        }
     }
 }
 
 struct MergeResult: Equatable, Sendable {
-    var ipv4: [IPv4Network]
-    var ipv6: [IPv6Network]
+    var ipv4: FamilyMergeOutput<V4>
+    var ipv6: FamilyMergeOutput<V6>
     var statistics: MergeStatistics
 }
 
-struct PrefixCollection: Sendable {
-    private(set) var ipv4: [IPv4Network] = []
-    private(set) var ipv6: [IPv6Network] = []
-    private(set) var statistics = MergeStatistics()
+struct CoverageCollection: Sendable {
+    private(set) var ipv4: [IPv4AddressRange] = []
+    private(set) var ipv6: [IPv6AddressRange] = []
+    private(set) var inputCount = 0
+    private(set) var inputIPv4Count = 0
+    private(set) var inputIPv6Count = 0
+    private(set) var normalizedInputCount = 0
 
-    mutating func append(_ network: AnyIPNetwork, normalized: Bool) {
-        statistics.inputCount += 1
+    mutating func append(_ range: AnyIPAddressRange, normalized: Bool) {
+        inputCount += 1
         if normalized {
-            statistics.normalizedInputCount += 1
+            normalizedInputCount += 1
         }
 
-        switch network {
-        case .v4(let network):
-            statistics.inputIPv4Count += 1
-            ipv4.append(network)
-        case .v6(let network):
-            statistics.inputIPv6Count += 1
-            ipv6.append(network)
+        switch range {
+        case .v4(let range):
+            inputIPv4Count += 1
+            ipv4.append(range)
+        case .v6(let range):
+            inputIPv6Count += 1
+            ipv6.append(range)
         }
     }
 
-    func merged() -> MergeResult {
-        let mergedIPv4 = NetworkMerger.merge(ipv4)
-        let mergedIPv6 = NetworkMerger.merge(ipv6)
-        var finalStatistics = statistics
-        finalStatistics.outputIPv4Count = mergedIPv4.count
-        finalStatistics.outputIPv6Count = mergedIPv6.count
+    func merged(representation: OutputRepresentation = .ranges) -> MergeResult {
+        let mergedIPv4 = IPv4AddressRange.coalescing(ipv4)
+        let mergedIPv6 = IPv6AddressRange.coalescing(ipv6)
+
+        let ipv4Output: FamilyMergeOutput<V4>
+        let ipv6Output: FamilyMergeOutput<V6>
+        switch representation {
+        case .ranges:
+            ipv4Output = .ranges(mergedIPv4)
+            ipv6Output = .ranges(mergedIPv6)
+        case .cidr:
+            // CHANGE: swift-cidr's existing summarizer remains the only range-to-prefix engine.
+            ipv4Output = .cidr(
+                mergedIPv4.flatMap {
+                    IPv4Network.summarize(from: $0.lowerBound, to: $0.upperBound)
+                }
+            )
+            ipv6Output = .cidr(
+                mergedIPv6.flatMap {
+                    IPv6Network.summarize(from: $0.lowerBound, to: $0.upperBound)
+                }
+            )
+        }
 
         return MergeResult(
-            ipv4: mergedIPv4,
-            ipv6: mergedIPv6,
-            statistics: finalStatistics
-        )
-    }
-}
-
-enum NetworkMerger {
-    static func merge<Family: IPAddressFamily>(
-        _ networks: [IPNetwork<Family>]
-    ) -> [IPNetwork<Family>] {
-        guard networks.count > 1 else { return networks }
-
-        let sorted = networks.sorted { lhs, rhs in
-            if lhs.prefix == rhs.prefix {
-                return lhs.prefixLength < rhs.prefixLength
-            }
-            return lhs.prefix < rhs.prefix
-        }
-
-        var stack: [IPNetwork<Family>] = []
-        stack.reserveCapacity(sorted.count)
-
-        for network in sorted {
-            var current = network
-            var isSubsumed = false
-
-            while let previous = stack.last {
-                if previous.contains(current) {
-                    isSubsumed = true
-                    break
-                }
-
-                if current.contains(previous) {
-                    stack.removeLast()
-                    continue
-                }
-
-                if let parent = aggregateSiblings(previous, current) {
-                    // CHANGE: Re-evaluate the parent against the stack so sibling merges cascade to a fixed point.
-                    stack.removeLast()
-                    current = parent
-                    continue
-                }
-
-                break
-            }
-
-            if !isSubsumed {
-                stack.append(current)
-            }
-        }
-
-        return stack
-    }
-
-    static func aggregateSiblings<Family: IPAddressFamily>(
-        _ lhs: IPNetwork<Family>,
-        _ rhs: IPNetwork<Family>
-    ) -> IPNetwork<Family>? {
-        guard lhs != rhs,
-            lhs.prefixLength == rhs.prefixLength,
-            lhs.nextNetwork == rhs,
-            let lhsParent = parent(of: lhs),
-            let rhsParent = parent(of: rhs),
-            lhsParent == rhsParent
-        else {
-            return nil
-        }
-
-        return lhsParent
-    }
-
-    static func parent<Family: IPAddressFamily>(
-        of network: IPNetwork<Family>
-    ) -> IPNetwork<Family>? {
-        let rawPrefixLength = network.prefixLength.rawValue
-        guard rawPrefixLength > 0,
-            let parentPrefixLength = PrefixLength<Family>(rawValue: rawPrefixLength - 1)
-        else {
-            return nil
-        }
-
-        // CHANGE: Construct through IPNetwork so swift-cidr remains the canonical alignment engine.
-        return IPNetwork(
-            prefix: network.prefix,
-            prefixLength: parentPrefixLength
+            ipv4: ipv4Output,
+            ipv6: ipv6Output,
+            statistics: MergeStatistics(
+                representation: representation,
+                inputCount: inputCount,
+                inputIPv4Count: inputIPv4Count,
+                inputIPv6Count: inputIPv6Count,
+                normalizedInputCount: normalizedInputCount,
+                outputIPv4Count: ipv4Output.count,
+                outputIPv6Count: ipv6Output.count
+            )
         )
     }
 }

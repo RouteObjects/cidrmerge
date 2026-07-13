@@ -16,7 +16,7 @@ import Foundation
 
 enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
     case conflictingOutputFormats
-    case invalidPrefix(source: String, line: Int, value: String)
+    case invalidInput(source: String, line: Int, value: String)
     case invalidUTF8(source: String, line: Int)
     case inputReadFailed(source: String, reason: String)
     case outputWriteFailed(destination: String, reason: String)
@@ -27,8 +27,9 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
         switch self {
         case .conflictingOutputFormats:
             return "cidrmerge: error: --json cannot be combined with --output-format"
-        case .invalidPrefix(let source, let line, let value):
-            return "cidrmerge: \(source):\(line): error: invalid IP address or network \(String(reflecting: value))"
+        case .invalidInput(let source, let line, let value):
+            return
+                "cidrmerge: \(source):\(line): error: invalid IP address, network, or range \(String(reflecting: value))"
         case .invalidUTF8(let source, let line):
             return "cidrmerge: \(source):\(line): error: input is not valid UTF-8"
         case .inputReadFailed(let source, let reason):
@@ -51,13 +52,13 @@ enum TextInputLoader {
     static func load(
         inputs: [String],
         standardInput: FileHandle = .standardInput
-    ) throws -> PrefixCollection {
+    ) throws -> CoverageCollection {
         let sources = inputs.isEmpty ? ["-"] : inputs
         guard sources.lazy.filter({ $0 == "-" }).count <= 1 else {
             throw CIDRMergeError.repeatedStandardInput
         }
 
-        var collection = PrefixCollection()
+        var collection = CoverageCollection()
         for source in sources {
             if source == "-" {
                 try consume(
@@ -89,8 +90,8 @@ enum TextInputLoader {
         return collection
     }
 
-    static func load(data: Data, source: String = "<memory>") throws -> PrefixCollection {
-        var collection = PrefixCollection()
+    static func load(data: Data, source: String = "<memory>") throws -> CoverageCollection {
+        var collection = CoverageCollection()
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
         var lineNumber = 1
@@ -125,7 +126,7 @@ enum TextInputLoader {
     private static func consume(
         _ handle: FileHandle,
         source: String,
-        into collection: inout PrefixCollection
+        into collection: inout CoverageCollection
     ) throws {
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
@@ -171,7 +172,7 @@ enum TextInputLoader {
         _ rawBytes: [UInt8],
         source: String,
         lineNumber: Int,
-        into collection: inout PrefixCollection
+        into collection: inout CoverageCollection
     ) throws {
         var bytes = rawBytes
         if bytes.last == 0x0D {
@@ -194,28 +195,68 @@ enum TextInputLoader {
         let token = uncommented.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !token.isEmpty else { return }
 
-        let network: AnyIPNetwork
-        if token.contains("/") {
+        let range: AnyIPAddressRange
+        let normalized: Bool
+        switch inputKind(of: token) {
+        case .network:
             guard let parsed = AnyIPNetwork(token) else {
-                throw CIDRMergeError.invalidPrefix(
+                throw CIDRMergeError.invalidInput(
                     source: source,
                     line: lineNumber,
                     value: token
                 )
             }
-            network = parsed
-        } else {
+            range = AnyIPAddressRange(covering: parsed)
+            normalized = parsed.description != token
+        case .range:
+            guard let parsed = AnyIPAddressRange(token) else {
+                throw CIDRMergeError.invalidInput(
+                    source: source,
+                    line: lineNumber,
+                    value: token
+                )
+            }
+            range = parsed
+            normalized = parsed.description != token
+        case .address:
             guard let address = AnyIPAddress(token) else {
-                throw CIDRMergeError.invalidPrefix(
+                throw CIDRMergeError.invalidInput(
                     source: source,
                     line: lineNumber,
                     value: token
                 )
             }
-            network = address.network
+            range = AnyIPAddressRange(address)
+            normalized = address.description != token
         }
 
         // CHANGE: Compare after comment/whitespace removal so stats count semantic canonicalization only.
-        collection.append(network, normalized: network.description != token)
+        collection.append(range, normalized: normalized)
     }
+
+    private static func inputKind(of token: String) -> InputTokenKind {
+        var consecutiveDots = 0
+        // CHANGE: Classify each line in one UTF-8 pass so prefix-heavy and range-heavy data sets do
+        // not pay for separate full-string delimiter searches.
+        for byte in token.utf8 {
+            switch byte {
+            case 0x2F:
+                return .network
+            case 0x2E:
+                consecutiveDots += 1
+                if consecutiveDots == 3 {
+                    return .range
+                }
+            default:
+                consecutiveDots = 0
+            }
+        }
+        return .address
+    }
+}
+
+private enum InputTokenKind {
+    case address
+    case network
+    case range
 }

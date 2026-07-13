@@ -87,6 +87,12 @@ private struct Generator {
             }
             let value = UInt64(index)
             return "2001:db8:\(String(value >> 16, radix: 16)):\(String(value & 0xFFFF, radix: 16))::/64"
+        case .arbitraryRanges:
+            let lower = UInt32(truncatingIfNeeded: index &* 16)
+            return "\(ipv4(lower))...\(ipv4(lower &+ 5))"
+        case .overlappingRanges:
+            let lower = index % 240
+            return "203.0.113.\(lower)...203.0.113.\(lower + 15)"
         }
     }
 
@@ -118,6 +124,8 @@ private enum Scenario: String {
     case bgpLike = "bgp-like"
     case rpkiLike = "rpki-like"
     case mixed
+    case arbitraryRanges = "arbitrary-ranges"
+    case overlappingRanges = "overlapping-ranges"
 }
 
 private enum GeneratorError: Error, CustomStringConvertible {
@@ -126,7 +134,7 @@ private enum GeneratorError: Error, CustomStringConvertible {
     var description: String {
         """
         Usage: CorpusGenerator <scenario> <count>
-        Scenarios: disjoint, siblings, subsumed, bgp-like, rpki-like, mixed
+        Scenarios: disjoint, siblings, subsumed, bgp-like, rpki-like, mixed, arbitrary-ranges, overlapping-ranges
         """
     }
 }

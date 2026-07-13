@@ -17,26 +17,18 @@ import Foundation
 enum OutputRenderer {
     static func text(_ result: MergeResult) -> Data {
         var data = Data()
-        reserveOutputCapacity(in: &data, prefixCount: result.statistics.outputCount)
-
-        for network in result.ipv4 {
-            data.appendUTF8(network.description)
-            data.append(0x0A)
-        }
-        for network in result.ipv6 {
-            data.appendUTF8(network.description)
-            data.append(0x0A)
-        }
-
+        reserveOutputCapacity(in: &data, entryCount: result.statistics.outputCount)
+        appendText(result.ipv4, to: &data)
+        appendText(result.ipv6, to: &data)
         return data
     }
 
     static func json(_ result: MergeResult) -> Data {
         var data = Data()
-        reserveOutputCapacity(in: &data, prefixCount: result.statistics.outputCount)
+        reserveOutputCapacity(in: &data, entryCount: result.statistics.outputCount)
         data.appendUTF8("{\n")
-        appendJSONNetworks(result.ipv4, key: "ipv4", trailingComma: true, to: &data)
-        appendJSONNetworks(result.ipv6, key: "ipv6", trailingComma: false, to: &data)
+        appendJSON(result.ipv4, key: "ipv4", trailingComma: true, to: &data)
+        appendJSON(result.ipv6, key: "ipv6", trailingComma: false, to: &data)
         data.appendUTF8("}\n")
         return data
     }
@@ -46,52 +38,120 @@ enum OutputRenderer {
         if statistics.inputCount == 0 {
             percentage = "n/a"
         } else {
-            let reduction = Double(statistics.removedCount) / Double(statistics.inputCount) * 100
+            let magnitude =
+                abs(Double(statistics.countChange))
+                / Double(statistics.inputCount) * 100
             percentage = String(
                 format: "%.1f%%",
                 locale: Locale(identifier: "en_US_POSIX"),
-                reduction
+                magnitude
             )
+        }
+
+        let changeDescription: String
+        if statistics.countChange < 0 {
+            changeDescription = "reduction: \(entryDescription(-statistics.countChange)) (\(percentage))"
+        } else if statistics.countChange > 0 {
+            changeDescription = "expansion: \(entryDescription(statistics.countChange)) (\(percentage))"
+        } else {
+            changeDescription = "change: unchanged (\(percentage))"
         }
 
         return Data(
             """
-            input: \(countDescription(statistics.inputCount)) (\(statistics.inputIPv4Count) IPv4, \(statistics.inputIPv6Count) IPv6)
-            normalized: \(countDescription(statistics.normalizedInputCount))
-            output: \(countDescription(statistics.outputCount)) (\(statistics.outputIPv4Count) IPv4, \(statistics.outputIPv6Count) IPv6)
-            reduction: \(countDescription(statistics.removedCount)) (\(percentage))
+            input: \(entryDescription(statistics.inputCount)) (\(statistics.inputIPv4Count) IPv4, \(statistics.inputIPv6Count) IPv6)
+            normalized: \(entryDescription(statistics.normalizedInputCount))
+            output: \(outputDescription(statistics.outputCount, representation: statistics.representation)) (\(statistics.outputIPv4Count) IPv4, \(statistics.outputIPv6Count) IPv6)
+            \(changeDescription)
 
             """.utf8
         )
     }
 
-    private static func countDescription(_ count: Int) -> String {
-        "\(count) \(count == 1 ? "prefix" : "prefixes")"
+    private static func appendText<Family: IPAddressFamily>(
+        _ output: FamilyMergeOutput<Family>,
+        to data: inout Data
+    ) {
+        switch output {
+        case .ranges(let ranges):
+            for range in ranges {
+                data.appendUTF8(range.description)
+                data.append(0x0A)
+            }
+        case .cidr(let networks):
+            for network in networks {
+                data.appendUTF8(network.description)
+                data.append(0x0A)
+            }
+        }
     }
 
-    private static func appendJSONNetworks<Family: IPAddressFamily>(
-        _ networks: [IPNetwork<Family>],
+    private static func appendJSON<Family: IPAddressFamily>(
+        _ output: FamilyMergeOutput<Family>,
         key: String,
         trailingComma: Bool,
         to data: inout Data
     ) {
-        if networks.isEmpty {
+        switch output {
+        case .ranges(let ranges):
+            appendJSONValues(
+                ranges,
+                key: key,
+                trailingComma: trailingComma,
+                description: \.description,
+                to: &data
+            )
+        case .cidr(let networks):
+            appendJSONValues(
+                networks,
+                key: key,
+                trailingComma: trailingComma,
+                description: \.description,
+                to: &data
+            )
+        }
+    }
+
+    private static func appendJSONValues<Value>(
+        _ values: [Value],
+        key: String,
+        trailingComma: Bool,
+        description: KeyPath<Value, String>,
+        to data: inout Data
+    ) {
+        if values.isEmpty {
             data.appendUTF8("  \"\(key)\": []\(trailingComma ? "," : "")\n")
             return
         }
 
         data.appendUTF8("  \"\(key)\": [\n")
-        for (index, network) in networks.enumerated() {
-            // CHANGE: Canonical CIDR descriptions contain only JSON-safe ASCII, enabling byte-stable output.
+        for (index, value) in values.enumerated() {
+            // CHANGE: Canonical CIDR and range descriptions contain only JSON-safe ASCII.
             data.appendUTF8("    \"")
-            data.appendUTF8(network.description)
-            data.appendUTF8(index == networks.index(before: networks.endIndex) ? "\"\n" : "\",\n")
+            data.appendUTF8(value[keyPath: description])
+            data.appendUTF8(index == values.index(before: values.endIndex) ? "\"\n" : "\",\n")
         }
         data.appendUTF8("  ]\(trailingComma ? "," : "")\n")
     }
 
-    private static func reserveOutputCapacity(in data: inout Data, prefixCount: Int) {
-        let (capacity, overflow) = prefixCount.multipliedReportingOverflow(by: 32)
+    private static func entryDescription(_ count: Int) -> String {
+        "\(count) \(count == 1 ? "entry" : "entries")"
+    }
+
+    private static func outputDescription(
+        _ count: Int,
+        representation: OutputRepresentation
+    ) -> String {
+        switch representation {
+        case .ranges:
+            return "\(count) \(count == 1 ? "range" : "ranges")"
+        case .cidr:
+            return "\(count) \(count == 1 ? "prefix" : "prefixes")"
+        }
+    }
+
+    private static func reserveOutputCapacity(in data: inout Data, entryCount: Int) {
+        let (capacity, overflow) = entryCount.multipliedReportingOverflow(by: 48)
         if !overflow {
             data.reserveCapacity(capacity)
         }
