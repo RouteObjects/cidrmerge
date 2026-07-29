@@ -31,8 +31,8 @@ jobs:
       - name: Test
         run: ./scripts/test.sh
 
-      - name: Release Build
-        run: swift build -c release --product cidrmerge
+      - name: Release Build and Smoke Test
+        run: ./scripts/smoke-test.sh
 
   linux:
     name: Linux
@@ -53,5 +53,5 @@ jobs:
       - name: Test
         run: ./scripts/test.sh
 
-      - name: Release Build
-        run: swift build -c release --product cidrmerge
+      - name: Release Build and Smoke Test
+        run: ./scripts/smoke-test.sh

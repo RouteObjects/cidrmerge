@@ -71,22 +71,41 @@ USAGE: cidrmerge [--input-format <input-format>] [--output-format <output-format
 - `-o, --output` atomically writes a file instead of stdout.
 - `-v, --version` prints the version.
 
-URL input, vendor `searchbot` JSON, and admission-policy output are planned
-for 0.2.0.
+Local-file and stdin vendor `searchbot` JSON plus admission-policy output are
+planned for 0.2.0. Download vendor feeds separately with `curl`, CI tooling, or
+another downloader; cidrmerge remains independent of network availability.
 
-## Phase 0 Vendor Result
+## Operational Feed Result
 
-A dated 2026-07-10 Phase 0 capture of Google's common-crawlers feed contained
-315 prefixes and collapsed to 65 exact CIDR prefixes, a 79.4% reduction. This
-predates the range representation and remains the CIDR baseline. Vendor feeds
-change, so both representations will be recaptured before release documentation
-freezes.
+A dated 2026-07-13 capture of Google's common-crawlers feed contained 315
+prefixes. cidrmerge compiled the same exact address coverage into 38 ranges or
+65 CIDR prefixes. The default range representation reduced the list by 87.9%
+and used 41.5% fewer entries than the CIDR representation. Vendor feeds change,
+so this is an auditable snapshot rather than a permanent result.
 
 ## Build and Test
 
+Clone and build the release executable with:
+
 ```bash
-swift build
+git clone https://github.com/RouteObjects/cidrmerge.git
+cd cidrmerge
+swift build -c release
+.build/release/cidrmerge --version
+```
+
+Run it directly from the package without installing it:
+
+```bash
+printf '%s\n' 192.0.2.0/25 192.0.2.128/25 \
+  | swift run -c release cidrmerge --representation cidr
+```
+
+Run the unit and binary-level smoke tests with:
+
+```bash
 ./scripts/test.sh
+./scripts/smoke-test.sh
 ```
 
 The test wrapper adds Swift Testing framework paths only when standalone

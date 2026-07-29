@@ -39,7 +39,9 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
         case .repeatedStandardInput:
             return "cidrmerge: error: standard input '-' may appear at most once"
         case .unsupportedURL(let value):
-            return "cidrmerge: \(value): error: URL input is planned for cidrmerge 0.2.0"
+            // CHANGE: Keep network acquisition outside the deterministic merge path.
+            let guidance = "download it first and pass a local file or stdin"
+            return "cidrmerge: \(value): error: URL input is not supported; \(guidance)"
         }
     }
 }

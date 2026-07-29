@@ -18,7 +18,8 @@ import PackageDescription
 let package = Package(
     name: "cidrmerge",
     platforms: [
-        .macOS(.v15)
+        .iOS(.v18),  // CHANGE: Match swift-cidr's UInt128 deployment floor for Xcode builds.
+        .macOS(.v15),
     ],
     products: [
         .executable(name: "cidrmerge", targets: ["cidrmerge"])

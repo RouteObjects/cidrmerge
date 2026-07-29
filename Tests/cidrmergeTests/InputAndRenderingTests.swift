@@ -166,13 +166,18 @@ struct TextInputTests {
         }
     }
 
-    @Test("URL input is reserved for Phase 2")
+    // CHANGE: Lock the deliberate network-free boundary in the public diagnostic.
+    @Test("URL input must be downloaded externally")
     func rejectsURLInput() {
         do {
             _ = try TextInputLoader.load(inputs: ["https://example.com/prefixes.txt"])
             Issue.record("Expected URL input to throw.")
         } catch let error as CIDRMergeError {
             #expect(error == .unsupportedURL("https://example.com/prefixes.txt"))
+            #expect(
+                error.description
+                    == "cidrmerge: https://example.com/prefixes.txt: error: URL input is not supported; download it first and pass a local file or stdin"
+            )
         } catch {
             Issue.record("Unexpected error: \(error)")
         }

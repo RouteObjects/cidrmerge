@@ -18,6 +18,7 @@ enum OutputRepresentation: String, Equatable, Sendable {
     case cidr
 }
 
+/// Input and output cardinality recorded while compiling one coverage set.
 struct MergeStatistics: Equatable, Sendable {
     var representation: OutputRepresentation
     var inputCount = 0
@@ -62,6 +63,10 @@ struct MergeResult: Equatable, Sendable {
     var statistics: MergeStatistics
 }
 
+/// Accumulates family-partitioned address coverage and its input statistics.
+///
+/// Parsing appends exact closed ranges here. Finalization coalesces those ranges once, then either
+/// retains them or asks swift-cidr to summarize them into canonical CIDR networks.
 struct CoverageCollection: Sendable {
     private(set) var ipv4: [IPv4AddressRange] = []
     private(set) var ipv6: [IPv6AddressRange] = []
@@ -86,6 +91,7 @@ struct CoverageCollection: Sendable {
         }
     }
 
+    /// Returns the minimal exact cover in the requested representation with count statistics.
     func merged(representation: OutputRepresentation = .ranges) -> MergeResult {
         let mergedIPv4 = IPv4AddressRange.coalescing(ipv4)
         let mergedIPv6 = IPv6AddressRange.coalescing(ipv6)
