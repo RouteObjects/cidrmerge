@@ -1,8 +1,15 @@
 .DS_Store
-/.build
-/Packages
-xcuserdata/
+/.build/
+/Packages/
+.swiftpm/
 DerivedData/
-.swiftpm/configuration/registries.json
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+xcuserdata/
+*.xcuserstate
+
+# Local credentials and developer-environment overrides must never be tracked.
 .netrc
+.env
+.env.*
+!.env.example
+.credentials/
+.secrets/

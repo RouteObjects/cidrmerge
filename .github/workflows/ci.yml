@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -15,43 +17,131 @@ concurrency:
 jobs:
   macos:
     name: macOS
+    # CHANGE: Keep the higher-cost macOS and iOS checks available for deliberate validation only.
+    if: github.event_name == 'workflow_dispatch'
     runs-on: macos-15
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
-      - name: Swift Version
-        run: swift --version
+      - name: Toolchain versions
+        run: |
+          swift --version
+          xcodebuild -version
+          swift format --version
 
-      - name: Resolve Dependencies
+      - name: Resolve dependencies
         run: swift package resolve
+
+      - name: Verify locked resolution
+        run: git diff --exit-code -- Package.resolved
+
+      - name: Audit tracked release content
+        run: ./scripts/audit-release-content.sh tree
+
+      - name: Strict format lint
+        run: >-
+          swift format lint
+          --configuration .swift-format.json
+          --recursive
+          --strict
+          Package.swift Sources Tests Benchmarks
+
+      - name: Debug build
+        run: swift build --product cidrmerge
 
       - name: Test
         run: ./scripts/test.sh
 
-      - name: Release Build and Smoke Test
+      - name: Release build and offline smoke test
         run: ./scripts/smoke-test.sh
+
+      - name: Build CIDRMergeCore for the iOS 18 simulator
+        run: |
+          sdk_path="$(xcrun --sdk iphonesimulator --show-sdk-path)"
+          swift build \
+            --target CIDRMergeCore \
+            --triple arm64-apple-ios18.0-simulator \
+            --sdk "${sdk_path}"
 
   linux:
-    name: Linux
-    runs-on: ubuntu-latest
-    container: swift:6.3
-    timeout-minutes: 15
+    name: Linux ${{ matrix.arch }}
+    runs-on: ${{ matrix.runner }}
+    # swift:6.1-jammy multi-architecture manifest, resolved 2026-07-24.
+    container: >-
+      swift:6.1-jammy@sha256:12be34a341945adb64914405ed7b568fcb2d35edbd63a3755007e47dce59456e
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            arch: x86_64
+          - runner: ubuntu-24.04-arm
+            arch: aarch64
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
 
-      - name: Swift Version
+      # CHANGE: Container steps do not inherit Checkout's host-level safe-directory setting.
+      - name: Trust checked-out workspace
+        run: git config --global --add safe.directory "${GITHUB_WORKSPACE}"
+
+      - name: Swift version
         run: swift --version
 
-      - name: Resolve Dependencies
+      - name: Resolve dependencies
         run: swift package resolve
+
+      - name: Verify locked resolution
+        run: git diff --exit-code -- Package.resolved
+
+      # CHANGE: Preserve automatic release-content and formatting gates on the lower-cost x86_64 job.
+      - name: Audit tracked release content
+        if: matrix.arch == 'x86_64'
+        run: ./scripts/audit-release-content.sh tree
+
+      - name: Strict format lint
+        if: matrix.arch == 'x86_64'
+        run: >-
+          swift format lint
+          --configuration .swift-format.json
+          --recursive
+          --strict
+          Package.swift Sources Tests Benchmarks
+
+      - name: Debug build
+        run: swift build --product cidrmerge
 
       - name: Test
         run: ./scripts/test.sh
 
-      - name: Release Build and Smoke Test
+      - name: Release build and offline smoke test
         run: ./scripts/smoke-test.sh
+
+      # CHANGE: Prove the declared dependency floors from committed source without
+      # mutating or relying on the release lockfile used by the normal CI build.
+      - name: Test dependency floors from a clean copy
+        if: matrix.arch == 'x86_64'
+        run: |
+          set -euo pipefail
+          floor_root="$(mktemp -d)"
+          git archive --format=tar HEAD | tar -x -C "${floor_root}"
+          cd "${floor_root}"
+          rm Package.resolved
+
+          swift package resolve swift-cidr --version 0.4.0
+          swift package resolve swift-argument-parser --version 1.7.0
+
+          awk -F '"' '
+            /"identity"/ { identity = $4 }
+            /"version"/ && $4 != "" { print identity " " $4 }
+          ' Package.resolved >resolved-versions.txt
+          grep -qx 'swift-cidr 0.4.0' resolved-versions.txt
+          grep -qx 'swift-argument-parser 1.7.0' resolved-versions.txt
+
+          swift build --product cidrmerge
+          ./scripts/test.sh

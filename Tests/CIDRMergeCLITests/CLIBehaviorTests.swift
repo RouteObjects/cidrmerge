@@ -14,7 +14,7 @@
 import Foundation
 import Testing
 
-@testable import cidrmerge
+@testable import CIDRMergeCLI
 
 @Suite("Text Input Tests")
 struct TextInputTests {
@@ -182,6 +182,28 @@ struct TextInputTests {
             Issue.record("Unexpected error: \(error)")
         }
     }
+
+    @Test("Every URL operand is rejected before any local file is opened")
+    func prevalidatesURLInputs() {
+        do {
+            _ = try TextInputLoader.load(inputs: [
+                "/definitely/missing/prefixes.txt",
+                "https://example.com/prefixes.txt",
+            ])
+            Issue.record("Expected URL input to throw.")
+        } catch let error as CIDRMergeError {
+            #expect(error == .unsupportedURL("https://example.com/prefixes.txt"))
+        } catch {
+            Issue.record("Unexpected error: \(error)")
+        }
+    }
+
+    @Test("HTTP URL schemes are rejected case-insensitively")
+    func rejectsCaseVariantURLSchemes() {
+        #expect(throws: CIDRMergeError.unsupportedURL("HTTPS://example.com/prefixes.txt")) {
+            try TextInputLoader.load(inputs: ["HTTPS://example.com/prefixes.txt"])
+        }
+    }
 }
 
 @Suite("Output Tests")
@@ -196,7 +218,7 @@ struct OutputTests {
         )
 
         #expect(
-            String(decoding: OutputRenderer.text(result), as: UTF8.self)
+            String(decoding: OutputRenderer.raw(result), as: UTF8.self)
                 == """
                 192.0.2.0...192.0.2.255
                 2001:db8::...2001:db8:ffff:ffff:ffff:ffff:ffff:ffff
@@ -216,7 +238,7 @@ struct OutputTests {
         )
 
         #expect(
-            String(decoding: OutputRenderer.text(result), as: UTF8.self)
+            String(decoding: OutputRenderer.raw(result), as: UTF8.self)
                 == """
                 192.0.2.0/24
                 2001:db8::/32
@@ -235,15 +257,16 @@ struct OutputTests {
         )
 
         #expect(
-            String(decoding: OutputRenderer.json(result), as: UTF8.self)
+            String(decoding: try OutputRenderer.json(result), as: UTF8.self)
                 == """
                 {
-                  "ipv4": [
+                  "ipv4" : [
                     "192.0.2.0...192.0.2.255"
                   ],
-                  "ipv6": [
+                  "ipv6" : [
                     "2001:db8::...2001:db8:ffff:ffff:ffff:ffff:ffff:ffff"
-                  ]
+                  ],
+                  "representation" : "ranges"
                 }
 
                 """
@@ -251,20 +274,25 @@ struct OutputTests {
     }
 
     @Test("Empty JSON output preserves both family arrays")
-    func rendersEmptyJSON() {
-        let result = CoverageCollection().merged()
+    func rendersEmptyJSON() throws {
+        let result = ParsedInput().merged()
 
         #expect(
-            String(decoding: OutputRenderer.json(result), as: UTF8.self)
+            String(decoding: try OutputRenderer.json(result), as: UTF8.self)
                 == """
                 {
-                  "ipv4": [],
-                  "ipv6": []
+                  "ipv4" : [
+
+                  ],
+                  "ipv6" : [
+
+                  ],
+                  "representation" : "ranges"
                 }
 
                 """
         )
-        #expect(OutputRenderer.text(result).isEmpty)
+        #expect(OutputRenderer.raw(result).isEmpty)
     }
 
     @Test("Statistics include normalization, family totals, and reduction")
@@ -331,7 +359,7 @@ struct OutputTests {
         defer { try? FileManager.default.removeItem(at: outputURL) }
         try Data("old\n".utf8).write(to: outputURL)
 
-        try CIDRMerge.write(Data("new\n".utf8), to: outputURL.path)
+        try CIDRMergeApplication.write(Data("new\n".utf8), to: outputURL.path)
 
         #expect(try String(contentsOf: outputURL, encoding: .utf8) == "new\n")
     }
@@ -346,11 +374,10 @@ struct OutputTests {
 
 @Suite("Command Surface Tests")
 struct CommandSurfaceTests {
-    @Test("Root command exposes the Phase 1 options")
-    func parsesPhaseOneOptions() throws {
-        let command = try CIDRMerge.parse([
-            "--input-format", "text",
-            "--output-format", "json",
+    @Test("Root command exposes orthogonal serialization and representation options")
+    func parsesCommandOptions() throws {
+        let command = try CIDRMergeCommand.parse([
+            "--json",
             "--representation", "cidr",
             "--stats",
             "-o", "merged.json",
@@ -359,7 +386,6 @@ struct CommandSurfaceTests {
             "second.txt",
         ])
 
-        #expect(command.inputFormat == .text)
         #expect(command.outputFormat == .json)
         #expect(command.representation == .cidr)
         #expect(command.stats)
@@ -369,19 +395,138 @@ struct CommandSurfaceTests {
 
     @Test("Ranges are the default semantic representation")
     func defaultsToRanges() throws {
-        #expect(try CIDRMerge.parse([]).representation == .ranges)
+        let command = try CIDRMergeCommand.parse([])
+
+        #expect(command.representation == .ranges)
+        #expect(command.outputFormat == .raw)
     }
 
-    @Test("--json is mutually exclusive with --output-format")
+    @Test("Raw and JSON serialization flags are mutually exclusive")
     func rejectsConflictingOutputFormats() {
         #expect(throws: (any Error).self) {
-            try CIDRMerge.parse(["--json", "--output-format", "text"])
+            try CIDRMergeCommand.parse(["--raw", "--json"])
         }
     }
 
-    @Test("Long and short version flags are accepted")
-    func parsesVersionFlags() throws {
-        #expect(try CIDRMerge.parse(["--version"]).showVersion)
-        #expect(try CIDRMerge.parse(["-v"]).showVersion)
+    @Test("Version metadata is owned by ArgumentParser and -v remains unassigned")
+    func exposesVersionMetadata() throws {
+        #expect(CIDRMergeCommand.configuration.version == "0.1.0")
+        #expect(throws: (any Error).self) {
+            try CIDRMergeCommand.parse(["-v"])
+        }
+    }
+}
+
+@Suite("Application Boundary Tests")
+struct ApplicationBoundaryTests {
+    @Test("The application buffers output and writes statistics after one output commit")
+    func commitsOutputBeforeDiagnostics() throws {
+        let recorder = ApplicationRecorder()
+        let application = CIDRMergeApplication(
+            inputLoader: { _ in
+                try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
+            },
+            outputWriter: { output, path in
+                recorder.recordOutput(output, path: path)
+            },
+            diagnosticWriter: { diagnostics in
+                recorder.recordDiagnostics(diagnostics)
+            }
+        )
+
+        try application.run(
+            inputs: ["ignored-by-injected-loader"],
+            outputFormat: .json,
+            representation: .cidr,
+            includeStatistics: true,
+            outputPath: "merged.json"
+        )
+
+        #expect(recorder.outputWriteCount == 1)
+        #expect(recorder.outputPath == "merged.json")
+        #expect(recorder.outputString.contains(#""representation" : "cidr""#))
+        #expect(recorder.diagnosticWriteCount == 1)
+        #expect(recorder.diagnosticsString.contains("output: 1 prefix"))
+        #expect(recorder.events == ["output", "diagnostics"])
+    }
+
+    @Test("An output failure prevents statistics from being emitted")
+    func outputFailurePreventsDiagnostics() {
+        let recorder = ApplicationRecorder()
+        let application = CIDRMergeApplication(
+            inputLoader: { _ in
+                try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
+            },
+            outputWriter: { _, _ in
+                throw ExpectedOutputFailure()
+            },
+            diagnosticWriter: { diagnostics in
+                recorder.recordDiagnostics(diagnostics)
+            }
+        )
+
+        #expect(throws: ExpectedOutputFailure.self) {
+            try application.run(
+                inputs: [],
+                outputFormat: .raw,
+                representation: .ranges,
+                includeStatistics: true,
+                outputPath: nil
+            )
+        }
+        #expect(recorder.diagnosticWriteCount == 0)
+    }
+}
+
+private struct ExpectedOutputFailure: Error {}
+
+private final class ApplicationRecorder: @unchecked Sendable {
+    private let lock = NSLock()
+    private var recordedEvents: [String] = []
+    private var recordedOutput = Data()
+    private var recordedOutputPath: String?
+    private var recordedDiagnostics = Data()
+    private var recordedOutputWriteCount = 0
+    private var recordedDiagnosticWriteCount = 0
+
+    var events: [String] {
+        lock.withLock { recordedEvents }
+    }
+
+    var outputString: String {
+        lock.withLock { String(decoding: recordedOutput, as: UTF8.self) }
+    }
+
+    var outputPath: String? {
+        lock.withLock { recordedOutputPath }
+    }
+
+    var diagnosticsString: String {
+        lock.withLock { String(decoding: recordedDiagnostics, as: UTF8.self) }
+    }
+
+    var outputWriteCount: Int {
+        lock.withLock { recordedOutputWriteCount }
+    }
+
+    var diagnosticWriteCount: Int {
+        lock.withLock { recordedDiagnosticWriteCount }
+    }
+
+    func recordOutput(_ output: Data, path: String?) {
+        lock.withLock {
+            recordedEvents.append("output")
+            recordedOutput = output
+            recordedOutputPath = path
+            recordedOutputWriteCount += 1
+        }
+    }
+
+    func recordDiagnostics(_ diagnostics: Data) {
+        lock.withLock {
+            recordedEvents.append("diagnostics")
+            recordedDiagnostics = diagnostics
+            recordedDiagnosticWriteCount += 1
+        }
     }
 }

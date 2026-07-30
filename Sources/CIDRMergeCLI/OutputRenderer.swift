@@ -15,7 +15,16 @@ import CIDR
 import Foundation
 
 enum OutputRenderer {
-    static func text(_ result: MergeResult) -> Data {
+    static func render(_ result: MergeResult, format: OutputFormat) throws -> Data {
+        switch format {
+        case .raw:
+            return raw(result)
+        case .json:
+            return try json(result)
+        }
+    }
+
+    static func raw(_ result: MergeResult) -> Data {
         var data = Data()
         reserveOutputCapacity(in: &data, entryCount: result.statistics.outputCount)
         appendText(result.ipv4, to: &data)
@@ -23,13 +32,17 @@ enum OutputRenderer {
         return data
     }
 
-    static func json(_ result: MergeResult) -> Data {
-        var data = Data()
-        reserveOutputCapacity(in: &data, entryCount: result.statistics.outputCount)
-        data.appendUTF8("{\n")
-        appendJSON(result.ipv4, key: "ipv4", trailingComma: true, to: &data)
-        appendJSON(result.ipv6, key: "ipv6", trailingComma: false, to: &data)
-        data.appendUTF8("}\n")
+    static func json(_ result: MergeResult) throws -> Data {
+        let payload = JSONOutput(
+            representation: result.representation.rawValue,
+            ipv4: result.ipv4.descriptions,
+            ipv6: result.ipv6.descriptions
+        )
+        let encoder = JSONEncoder()
+        // CHANGE: Sorted keys make JSON byte-deterministic without coupling Core models to this schema.
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
+        var data = try encoder.encode(payload)
+        data.append(0x0A)
         return data
     }
 
@@ -86,54 +99,6 @@ enum OutputRenderer {
         }
     }
 
-    private static func appendJSON<Family: IPAddressFamily>(
-        _ output: FamilyMergeOutput<Family>,
-        key: String,
-        trailingComma: Bool,
-        to data: inout Data
-    ) {
-        switch output {
-        case .ranges(let ranges):
-            appendJSONValues(
-                ranges,
-                key: key,
-                trailingComma: trailingComma,
-                description: \.description,
-                to: &data
-            )
-        case .cidr(let networks):
-            appendJSONValues(
-                networks,
-                key: key,
-                trailingComma: trailingComma,
-                description: \.description,
-                to: &data
-            )
-        }
-    }
-
-    private static func appendJSONValues<Value>(
-        _ values: [Value],
-        key: String,
-        trailingComma: Bool,
-        description: KeyPath<Value, String>,
-        to data: inout Data
-    ) {
-        if values.isEmpty {
-            data.appendUTF8("  \"\(key)\": []\(trailingComma ? "," : "")\n")
-            return
-        }
-
-        data.appendUTF8("  \"\(key)\": [\n")
-        for (index, value) in values.enumerated() {
-            // CHANGE: Canonical CIDR and range descriptions contain only JSON-safe ASCII.
-            data.appendUTF8("    \"")
-            data.appendUTF8(value[keyPath: description])
-            data.appendUTF8(index == values.index(before: values.endIndex) ? "\"\n" : "\",\n")
-        }
-        data.appendUTF8("  ]\(trailingComma ? "," : "")\n")
-    }
-
     private static func entryDescription(_ count: Int) -> String {
         "\(count) \(count == 1 ? "entry" : "entries")"
     }
@@ -156,6 +121,12 @@ enum OutputRenderer {
             data.reserveCapacity(capacity)
         }
     }
+}
+
+private struct JSONOutput: Encodable {
+    let representation: String
+    let ipv4: [String]
+    let ipv6: [String]
 }
 
 extension Data {

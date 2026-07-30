@@ -22,24 +22,52 @@ let package = Package(
         .macOS(.v15),
     ],
     products: [
-        .executable(name: "cidrmerge", targets: ["cidrmerge"])
+        .library(name: "CIDRMergeCore", targets: ["CIDRMergeCore"]),
+        .executable(name: "cidrmerge", targets: ["CIDRMergeExecutable"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/RouteObjects/swift-cidr.git", from: "0.3.0"),
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.7.0"),
+        .package(
+            url: "https://github.com/RouteObjects/swift-cidr.git",
+            .upToNextMinor(from: "0.4.0")
+        ),
+        .package(
+            url: "https://github.com/apple/swift-argument-parser",
+            .upToNextMajor(from: "1.7.0")
+        ),
     ],
     targets: [
-        .executableTarget(
-            name: "cidrmerge",
+        .target(
+            name: "CIDRMergeCore",
             dependencies: [
+                .product(name: "CIDR", package: "swift-cidr")
+            ]
+        ),
+        // CHANGE: Keep command parsing and process I/O importable for SwiftPM and Xcode tests.
+        .target(
+            name: "CIDRMergeCLI",
+            dependencies: [
+                "CIDRMergeCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "CIDR", package: "swift-cidr"),
             ]
         ),
+        // CHANGE: The executable target owns only process startup and delegates to CIDRMergeCLI.
+        .executableTarget(
+            name: "CIDRMergeExecutable",
+            dependencies: ["CIDRMergeCLI"]
+        ),
         .testTarget(
-            name: "cidrmergeTests",
+            name: "CIDRMergeCoreTests",
             dependencies: [
-                "cidrmerge",
+                "CIDRMergeCore",
+                .product(name: "CIDR", package: "swift-cidr"),
+            ]
+        ),
+        .testTarget(
+            name: "CIDRMergeCLITests",
+            dependencies: [
+                "CIDRMergeCLI",
+                "CIDRMergeCore",
                 .product(name: "CIDR", package: "swift-cidr"),
             ]
         ),

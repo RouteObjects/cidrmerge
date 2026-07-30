@@ -12,13 +12,14 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
+import CIDRMergeCore
 
 enum OutputRepresentation: String, Equatable, Sendable {
     case ranges
     case cidr
 }
 
-/// Input and output cardinality recorded while compiling one coverage set.
+/// Input and output cardinality recorded by the text-oriented CLI boundary.
 struct MergeStatistics: Equatable, Sendable {
     var representation: OutputRepresentation
     var inputCount = 0
@@ -58,16 +59,14 @@ enum FamilyMergeOutput<Family: IPAddressFamily>: Equatable, Sendable {
 }
 
 struct MergeResult: Equatable, Sendable {
+    var representation: OutputRepresentation
     var ipv4: FamilyMergeOutput<V4>
     var ipv6: FamilyMergeOutput<V6>
     var statistics: MergeStatistics
 }
 
-/// Accumulates family-partitioned address coverage and its input statistics.
-///
-/// Parsing appends exact closed ranges here. Finalization coalesces those ranges once, then either
-/// retains them or asks swift-cidr to summarize them into canonical CIDR networks.
-struct CoverageCollection: Sendable {
+/// Parsed family-partitioned coverage plus statistics that only have meaning for textual input.
+struct ParsedInput: Sendable {
     private(set) var ipv4: [IPv4AddressRange] = []
     private(set) var ipv6: [IPv6AddressRange] = []
     private(set) var inputCount = 0
@@ -91,32 +90,24 @@ struct CoverageCollection: Sendable {
         }
     }
 
-    /// Returns the minimal exact cover in the requested representation with count statistics.
     func merged(representation: OutputRepresentation = .ranges) -> MergeResult {
-        let mergedIPv4 = IPv4AddressRange.coalescing(ipv4)
-        let mergedIPv6 = IPv6AddressRange.coalescing(ipv6)
+        let ipv4Coverage = IPAddressCoverage(ipv4)
+        let ipv6Coverage = IPAddressCoverage(ipv6)
 
         let ipv4Output: FamilyMergeOutput<V4>
         let ipv6Output: FamilyMergeOutput<V6>
         switch representation {
         case .ranges:
-            ipv4Output = .ranges(mergedIPv4)
-            ipv6Output = .ranges(mergedIPv6)
+            ipv4Output = .ranges(ipv4Coverage.ranges)
+            ipv6Output = .ranges(ipv6Coverage.ranges)
         case .cidr:
-            // CHANGE: swift-cidr's existing summarizer remains the only range-to-prefix engine.
-            ipv4Output = .cidr(
-                mergedIPv4.flatMap {
-                    IPv4Network.summarize(from: $0.lowerBound, to: $0.upperBound)
-                }
-            )
-            ipv6Output = .cidr(
-                mergedIPv6.flatMap {
-                    IPv6Network.summarize(from: $0.lowerBound, to: $0.upperBound)
-                }
-            )
+            // CHANGE: swift-cidr remains the only range-to-prefix summarization engine.
+            ipv4Output = .cidr(ipv4Coverage.summarizedNetworks())
+            ipv6Output = .cidr(ipv6Coverage.summarizedNetworks())
         }
 
         return MergeResult(
+            representation: representation,
             ipv4: ipv4Output,
             ipv6: ipv6Output,
             statistics: MergeStatistics(

@@ -29,13 +29,23 @@ BINARY="$BINARY_DIRECTORY/cidrmerge"
 # CHANGE: Lock the user-visible release identity and basic help wiring before a tag is created.
 [[ "$("$BINARY" --version)" == "0.1.0" ]] \
     || fail "--version did not report 0.1.0"
-[[ "$("$BINARY" -v)" == "0.1.0" ]] \
-    || fail "-v did not report 0.1.0"
+
+set +e
+"$BINARY" -v >"$TEMPORARY_DIRECTORY/short-version.stdout" \
+    2>"$TEMPORARY_DIRECTORY/short-version.stderr"
+SHORT_VERSION_STATUS=$?
+set -e
+[[ "$SHORT_VERSION_STATUS" -ne 0 ]] \
+    || fail "-v is intentionally unassigned but was accepted"
 
 HELP_STDOUT="$TEMPORARY_DIRECTORY/help.stdout"
 "$BINARY" --help >"$HELP_STDOUT"
 grep -Fq 'USAGE: cidrmerge' "$HELP_STDOUT" \
     || fail "--help did not contain the command usage"
+grep -Fq -- '--raw' "$HELP_STDOUT" \
+    || fail "--help did not document raw output"
+grep -Fq -- '-j, --json' "$HELP_STDOUT" \
+    || fail "--help did not document the short and long JSON flags"
 grep -Fq 'Semantic representation: ranges or cidr.' "$HELP_STDOUT" \
     || fail "--help did not document both representations"
 grep -Fq '(default: ranges)' "$HELP_STDOUT" \
@@ -67,6 +77,33 @@ then
     fail "statistics stderr did not match"
 fi
 
+EMPTY_STDOUT="$TEMPORARY_DIRECTORY/empty.stdout"
+printf '' | "$BINARY" --raw >"$EMPTY_STDOUT"
+[[ ! -s "$EMPTY_STDOUT" ]] \
+    || fail "empty raw input did not produce exactly zero output bytes"
+
+JSON_STDOUT="$TEMPORARY_DIRECTORY/json.stdout"
+printf '%s\n' \
+    '2001:db8::/126' \
+    '192.0.2.0/31' \
+    | "$BINARY" --json --representation cidr >"$JSON_STDOUT"
+
+if ! diff -u \
+    <(printf '%s\n' \
+        '{' \
+        '  "ipv4" : [' \
+        '    "192.0.2.0/31"' \
+        '  ],' \
+        '  "ipv6" : [' \
+        '    "2001:db8::/126"' \
+        '  ],' \
+        '  "representation" : "cidr"' \
+        '}') \
+    "$JSON_STDOUT"
+then
+    fail "JSON output schema or deterministic ordering did not match"
+fi
+
 INVALID_STDOUT="$TEMPORARY_DIRECTORY/invalid.stdout"
 INVALID_STDERR="$TEMPORARY_DIRECTORY/invalid.stderr"
 
@@ -86,5 +123,26 @@ grep -Fq \
     'cidrmerge: <stdin>:2: error: invalid IP address, network, or range "not-a-prefix"' \
     "$INVALID_STDERR" \
     || fail "invalid input diagnostic did not identify <stdin>:2"
+
+PRESERVED_OUTPUT="$TEMPORARY_DIRECTORY/preserved-output.txt"
+PRESERVED_STDERR="$TEMPORARY_DIRECTORY/preserved-output.stderr"
+printf '%s\n' 'existing policy' >"$PRESERVED_OUTPUT"
+
+set +e
+printf '%s\n' \
+    '192.0.2.0/24' \
+    'not-a-prefix' \
+    | "$BINARY" --output "$PRESERVED_OUTPUT" 2>"$PRESERVED_STDERR"
+PRESERVED_STATUS=$?
+set -e
+
+[[ "$PRESERVED_STATUS" -eq 1 ]] \
+    || fail "invalid file input exited with status $PRESERVED_STATUS instead of 1"
+if ! diff -u \
+    <(printf '%s\n' 'existing policy') \
+    "$PRESERVED_OUTPUT"
+then
+    fail "invalid input replaced an existing output file"
+fi
 
 printf 'cidrmerge smoke test passed\n'

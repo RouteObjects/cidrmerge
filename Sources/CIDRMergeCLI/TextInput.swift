@@ -12,10 +12,10 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
+import CIDRMergeCore
 import Foundation
 
 enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
-    case conflictingOutputFormats
     case invalidInput(source: String, line: Int, value: String)
     case invalidUTF8(source: String, line: Int)
     case inputReadFailed(source: String, reason: String)
@@ -25,8 +25,6 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
 
     var description: String {
         switch self {
-        case .conflictingOutputFormats:
-            return "cidrmerge: error: --json cannot be combined with --output-format"
         case .invalidInput(let source, let line, let value):
             return
                 "cidrmerge: \(source):\(line): error: invalid IP address, network, or range \(String(reflecting: value))"
@@ -54,13 +52,17 @@ enum TextInputLoader {
     static func load(
         inputs: [String],
         standardInput: FileHandle = .standardInput
-    ) throws -> CoverageCollection {
+    ) throws -> ParsedInput {
         let sources = inputs.isEmpty ? ["-"] : inputs
         guard sources.lazy.filter({ $0 == "-" }).count <= 1 else {
             throw CIDRMergeError.repeatedStandardInput
         }
+        // CHANGE: Reject every unsupported URL before opening any earlier local-file operand.
+        if let source = sources.first(where: isHTTPURL) {
+            throw CIDRMergeError.unsupportedURL(source)
+        }
 
-        var collection = CoverageCollection()
+        var collection = ParsedInput()
         for source in sources {
             if source == "-" {
                 try consume(
@@ -69,10 +71,6 @@ enum TextInputLoader {
                     into: &collection
                 )
                 continue
-            }
-
-            guard !source.hasPrefix("https://"), !source.hasPrefix("http://") else {
-                throw CIDRMergeError.unsupportedURL(source)
             }
 
             let handle: FileHandle
@@ -92,8 +90,8 @@ enum TextInputLoader {
         return collection
     }
 
-    static func load(data: Data, source: String = "<memory>") throws -> CoverageCollection {
-        var collection = CoverageCollection()
+    static func load(data: Data, source: String = "<memory>") throws -> ParsedInput {
+        var collection = ParsedInput()
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
         var lineNumber = 1
@@ -128,7 +126,7 @@ enum TextInputLoader {
     private static func consume(
         _ handle: FileHandle,
         source: String,
-        into collection: inout CoverageCollection
+        into collection: inout ParsedInput
     ) throws {
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
@@ -174,7 +172,7 @@ enum TextInputLoader {
         _ rawBytes: [UInt8],
         source: String,
         lineNumber: Int,
-        into collection: inout CoverageCollection
+        into collection: inout ParsedInput
     ) throws {
         var bytes = rawBytes
         if bytes.last == 0x0D {
@@ -254,6 +252,11 @@ enum TextInputLoader {
             }
         }
         return .address
+    }
+
+    private static func isHTTPURL(_ source: String) -> Bool {
+        let normalized = source.prefix(8).lowercased()
+        return normalized.hasPrefix("http://") || normalized.hasPrefix("https://")
     }
 }
 
