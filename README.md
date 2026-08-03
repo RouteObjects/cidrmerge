@@ -23,6 +23,51 @@ The initial release is verified against the declared compatibility floors of
 `swift-cidr` 0.4.0 and Swift Argument Parser 1.7.0. `Package.resolved` records
 the exact dependency revisions used for release verification.
 
+## Install a release archive
+
+GitHub Releases provide native archives for macOS and Linux on ARM64 and
+x86-64. Select the archive for the current host, download it together with the
+published checksum file, and verify it before installation:
+
+```sh
+version=0.1.0
+case "$(uname -s)-$(uname -m)" in
+  Darwin-arm64)  platform=darwin-aarch64 ;;
+  Darwin-x86_64) platform=darwin-x86_64 ;;
+  Linux-aarch64) platform=linux-aarch64 ;;
+  Linux-x86_64)  platform=linux-x86_64 ;;
+  *) printf 'Unsupported host: %s-%s\n' "$(uname -s)" "$(uname -m)" >&2; exit 1 ;;
+esac
+
+asset="cidrmerge-${version}-${platform}.tar.gz"
+base_url="https://github.com/RouteObjects/cidrmerge/releases/download/${version}"
+curl --fail --location --remote-name "${base_url}/${asset}"
+curl --fail --location --remote-name "${base_url}/SHA256SUMS"
+
+awk -v name="${asset}" '$2 == name' SHA256SUMS >"${asset}.sha256"
+test -s "${asset}.sha256"
+if command -v sha256sum >/dev/null 2>&1; then
+  sha256sum --check "${asset}.sha256"
+else
+  shasum -a 256 --check "${asset}.sha256"
+fi
+```
+
+Extract the verified archive and install the executable in a directory on
+`PATH`:
+
+```sh
+stage="cidrmerge-${version}"
+mkdir "${stage}"
+tar -C "${stage}" -xzf "${asset}"
+mkdir -p "${HOME}/.local/bin"
+install -m 0755 "${stage}/cidrmerge" "${HOME}/.local/bin/cidrmerge"
+"${HOME}/.local/bin/cidrmerge" --version
+```
+
+Each archive also contains `LICENSE` and `THIRD_PARTY_NOTICES.txt`. Review and
+retain those files with redistributed copies of the executable.
+
 ## Build from source
 
 Clone the repository and build a release executable:
