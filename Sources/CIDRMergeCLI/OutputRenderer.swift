@@ -39,7 +39,7 @@ enum OutputRenderer {
             ipv6: result.ipv6.descriptions
         )
         let encoder = JSONEncoder()
-        // CHANGE: Sorted keys make JSON byte-deterministic without coupling Core models to this schema.
+        // Sorted keys make JSON byte-deterministic without coupling Core models to this schema.
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
         var data = try encoder.encode(payload)
         data.append(0x0A)

@@ -16,7 +16,7 @@ import CIDRMergeCLI
 @main
 enum CIDRMergeMain {
     static func main() {
-        // CHANGE: Keep process startup separate from the importable, testable command module.
+        // Keep process startup separate from the importable, testable command module.
         CIDRMergeCommand.main()
     }
 }

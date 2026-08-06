@@ -96,9 +96,11 @@ Only after the GitHub Release is public:
    checksum downloads, installation, and the formula test. Push the signed tap
    commit only after `brew install RouteObjects/tap/cidrmerge` and `brew test`
    succeed without a Swift toolchain.
-3. Submit `https://github.com/RouteObjects/cidrmerge.git` to Swift Package Index.
-   Verify the `0.1.0` package, platform results, and hosted `CIDRMergeCore`
-   documentation before adding public badges or links in a later signed commit.
+3. Submit `https://github.com/RouteObjects/cidrmerge.git` to Swift Package Index
+   and record its platform and hosted `CIDRMergeCore` documentation results as
+   pending or passed. Index backlog never blocks release distribution or
+   downstream development; add public badges or links only after their URLs
+   resolve.
 
 Never move the released tag when publishing post-release documentation.
 

@@ -41,7 +41,7 @@ while IFS= read -r swift_file; do
         fail "Apache license header is missing: ${swift_file}"
 done < <(find Package.swift Sources Tests Benchmarks -name '*.swift' -type f -print)
 
-# CHANGE: Keep the reviewed notice synchronized with every pin in the complete
+# Keep the reviewed notice synchronized with every pin in the complete
 # resolved graph, including packages resolved for products cidrmerge does not link.
 resolved_pin_count=0
 while IFS='|' read -r identity version revision; do
@@ -74,7 +74,7 @@ swift format lint \
 swift build --product cidrmerge
 "${SCRIPT_DIR}/test.sh"
 
-# CHANGE: Exercise process-level contracts before benchmarking the same complete
+# Exercise process-level contracts before benchmarking the same complete
 # offline compiler pipeline with the release-candidate million-record corpus.
 "${SCRIPT_DIR}/smoke-test.sh"
 benchmark_log="${release_temporary_directory}/benchmark.log"
@@ -90,7 +90,7 @@ benchmark_record_count="$(
 [[ "${benchmark_record_count}" -eq 16 ]] ||
     fail "The million-record benchmark did not report numeric metrics for all 16 runs."
 
-# CHANGE: Lock the benchmark corpus cardinalities and prove that CIDR and range
+# Lock the benchmark corpus cardinalities and prove that CIDR and range
 # output independently normalize back to the same exact deterministic cover.
 benchmark_generator="${release_temporary_directory}/corpus-generator"
 swiftc -parse-as-library -O Benchmarks/CorpusGenerator.swift -o "${benchmark_generator}"

@@ -19,8 +19,8 @@ or adjacent coverage; it never fills an uncovered gap to make output shorter.
   executable
 - iOS 18 or newer when using `CIDRMergeCore` in an application
 
-The initial release is verified against the declared compatibility floors of
-`swift-cidr` 0.4.0 and Swift Argument Parser 1.7.0. `Package.resolved` records
+The package is verified against the declared compatibility floors of
+`swift-cidr` 0.5.0 and Swift Argument Parser 1.7.0. `Package.resolved` records
 the exact dependency revisions used for release verification.
 
 ## Install a release archive
@@ -192,11 +192,11 @@ Add `cidrmerge` and `swift-cidr` to another Swift package:
 dependencies: [
     .package(
         url: "https://github.com/RouteObjects/cidrmerge.git",
-        .upToNextMinor(from: "0.1.0")
+        .upToNextMinor(from: "0.2.0")
     ),
     .package(
         url: "https://github.com/RouteObjects/swift-cidr.git",
-        .upToNextMinor(from: "0.4.0")
+        .upToNextMinor(from: "0.5.0")
     ),
 ],
 targets: [
@@ -213,18 +213,45 @@ targets: [
 Applications use `swift-cidr` values directly, so declare its package and
 `CIDR` product explicitly instead of relying on a transitive dependency.
 
-`IPAddressRange<Family>` represents one inclusive, family-bound interval.
-`IPAddressCoverage<Family>` normalizes any sequence of those intervals into an
-immutable exact union and provides logarithmic containment lookup:
+`swift-cidr` owns `IPAddressRange<Family>`, `AnyIPAddressRange`, and
+`IPAddressCoverage<Family>`. The family-bound coverage type normalizes any
+sequence of intervals into an immutable exact union and provides logarithmic
+containment lookup.
+
+Inside a throwing context, handle textual configuration errors explicitly:
 
 ```swift
 import CIDR
 import CIDRMergeCore
 
-let prefixes = [
-    IPv4Network("192.0.2.0/25")!,
-    IPv4Network("192.0.2.128/26")!,
-]
+enum PolicyInputError: Error {
+    case invalidValue(String)
+}
+
+func parseIPv4Network(_ text: String) throws -> IPv4Network {
+    guard let network = IPv4Network(text) else {
+        throw PolicyInputError.invalidValue(text)
+    }
+    return network
+}
+
+func parseIPv4Address(_ text: String) throws -> IPv4Address {
+    guard let address = IPv4Address(text) else {
+        throw PolicyInputError.invalidValue(text)
+    }
+    return address
+}
+
+func parseRange(_ text: String) throws -> AnyIPAddressRange {
+    guard let range = AnyIPAddressRange(text) else {
+        throw PolicyInputError.invalidValue(text)
+    }
+    return range
+}
+
+let prefixes = try ["192.0.2.0/25", "192.0.2.128/26"].map {
+    try parseIPv4Network($0)
+}
 let coverage = IPAddressCoverage(covering: prefixes)
 
 coverage.ranges.map(\.description)
@@ -233,8 +260,8 @@ coverage.ranges.map(\.description)
 coverage.summarizedNetworks().map(\.description)
 // ["192.0.2.0/25", "192.0.2.128/26"]
 
-coverage.contains(IPv4Address("192.0.2.190")!) // true
-coverage.contains(IPv4Address("192.0.2.192")!) // false
+coverage.contains(try parseIPv4Address("192.0.2.190")) // true
+coverage.contains(try parseIPv4Address("192.0.2.192")) // false
 ```
 
 `IPAddressRange.summarizedNetworks()` and
@@ -243,6 +270,31 @@ coverage.contains(IPv4Address("192.0.2.192")!) // false
 lengths as the input. `AnyIPAddressRange` is the family-erased boundary for
 parsing or mixed-family collections; keep algorithms family-bound when the
 family is known statically.
+
+`CIDRMergeCoverage` is cidrmerge's mixed-family facade. It normalizes each
+family independently and always exposes IPv4 before IPv6:
+
+```swift
+let mixedRanges = try [
+    "2001:db8::...2001:db8::ffff",
+    "192.0.2.0...192.0.2.191",
+].map { try parseRange($0) }
+let mixed = CIDRMergeCoverage(ranges: mixedRanges)
+
+mixed.ranges.map(\.description)
+// ["192.0.2.0...192.0.2.191", "2001:db8::...2001:db8::ffff"]
+
+mixed.summarizedNetworks().map(\.description)
+// ["192.0.2.0/25", "192.0.2.128/26", "2001:db8::/112"]
+
+mixed.contains(AnyIPAddress(try parseIPv4Address("192.0.2.190"))) // true
+```
+
+Beginning with the 0.2 line, `CIDRMergeCore` no longer provides the range and
+coverage types that it declared in 0.1. Import `CIDR` and use the canonical
+swift-cidr declarations directly. This deliberate pre-1.0 source break keeps
+one owner for address, network, range, containment, normalization, and
+summarization behavior.
 
 ## Routing and RPKI data
 

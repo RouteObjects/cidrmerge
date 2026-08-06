@@ -12,7 +12,8 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
-import CIDRMergeCore
+
+import struct CIDRMergeCore.CIDRMergeCoverage
 
 enum OutputRepresentation: String, Equatable, Sendable {
     case ranges
@@ -91,19 +92,20 @@ struct ParsedInput: Sendable {
     }
 
     func merged(representation: OutputRepresentation = .ranges) -> MergeResult {
-        let ipv4Coverage = IPAddressCoverage(ipv4)
-        let ipv6Coverage = IPAddressCoverage(ipv6)
+        // Use the Core facade without rebuilding a family-erased staging array; the text
+        // parser already partitions each canonical swift-cidr range as it records statistics.
+        let coverage = CIDRMergeCoverage(ipv4Ranges: ipv4, ipv6Ranges: ipv6)
 
         let ipv4Output: FamilyMergeOutput<V4>
         let ipv6Output: FamilyMergeOutput<V6>
         switch representation {
         case .ranges:
-            ipv4Output = .ranges(ipv4Coverage.ranges)
-            ipv6Output = .ranges(ipv6Coverage.ranges)
+            ipv4Output = .ranges(coverage.ipv4.ranges)
+            ipv6Output = .ranges(coverage.ipv6.ranges)
         case .cidr:
-            // CHANGE: swift-cidr remains the only range-to-prefix summarization engine.
-            ipv4Output = .cidr(ipv4Coverage.summarizedNetworks())
-            ipv6Output = .cidr(ipv6Coverage.summarizedNetworks())
+            // swift-cidr remains the only range-to-prefix summarization engine.
+            ipv4Output = .cidr(coverage.ipv4.summarizedNetworks())
+            ipv6Output = .cidr(coverage.ipv6.summarizedNetworks())
         }
 
         return MergeResult(

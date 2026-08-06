@@ -166,7 +166,7 @@ struct TextInputTests {
         }
     }
 
-    // CHANGE: Lock the deliberate network-free boundary in the public diagnostic.
+    // Lock the deliberate network-free boundary in the public diagnostic.
     @Test("URL input must be downloaded externally")
     func rejectsURLInput() {
         do {

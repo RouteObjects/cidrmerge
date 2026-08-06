@@ -49,7 +49,7 @@ audit_tracked_tree() {
     local expected_resolved_dependencies
     local status
 
-    # CHANGE: Allowlist the public dependency graph rather than merely rejecting
+    # Allowlist the public dependency graph rather than merely rejecting
     # path and SSH forms; an unexpected HTTPS fork must fail the release audit too.
     expected_direct_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser'
     actual_direct_dependencies="$(
@@ -67,7 +67,7 @@ audit_tracked_tree() {
     [[ "${actual_resolved_dependencies}" == "${expected_resolved_dependencies}" ]] ||
         fail "Package.resolved contains an unexpected dependency location."
 
-    # CHANGE: Public release manifests must resolve through canonical HTTPS URLs,
+    # Public release manifests must resolve through canonical HTTPS URLs,
     # never a developer-local path, file URL, or SSH credential context.
     if git -C "${PACKAGE_ROOT}" grep --quiet -I -E \
         -e "${local_package}" \

@@ -139,14 +139,14 @@ jobs:
 
           # CHANGE: Initialize SwiftPM workspace state before resolving individual package floors.
           swift package resolve
-          swift package resolve swift-cidr --version 0.4.0
+          swift package resolve swift-cidr --version 0.5.0
           swift package resolve swift-argument-parser --version 1.7.0
 
           awk -F '"' '
             /"identity"/ { identity = $4 }
             /"version"/ && $4 != "" { print identity " " $4 }
           ' Package.resolved >resolved-versions.txt
-          grep -qx 'swift-cidr 0.4.0' resolved-versions.txt
+          grep -qx 'swift-cidr 0.5.0' resolved-versions.txt
           grep -qx 'swift-argument-parser 1.7.0' resolved-versions.txt
 
           swift build --product cidrmerge

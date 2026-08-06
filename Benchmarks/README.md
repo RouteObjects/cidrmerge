@@ -62,6 +62,29 @@ All scenarios remain below 512 MiB. On the six original corpora, CIDR mode is
 faster than the recorded Phase 1 baseline; the 15% regression ceiling therefore
 passes with margin.
 
+## 0.2 Core Ownership Migration Check
+
+Captured 2026-08-05 on Darwin 25.6.0 arm64 with Apple Swift 6.3.3. These are
+medians of three interleaved one-million-record release runs comparing the
+`0.1.0` tag with the Gate 3 candidate after moving range ownership to
+swift-cidr 0.5.0 and simplifying Core to depend on `CIDR` directly. The CLI uses
+a package-only prepartitioned facade initializer so its parser does not
+construct a second family-erased staging collection.
+
+| Corpus | Representation | 0.1.0 time | Gate 3 time | 0.1.0 RSS | Gate 3 RSS |
+|---|---|---:|---:|---:|---:|
+| disjoint | ranges | 1.30 s | 1.12 s | 82,416 KiB | 82,752 KiB |
+| disjoint | CIDR | 2.05 s | 1.94 s | 68,880 KiB | 69,744 KiB |
+| subsumed | ranges | 2.40 s | 2.25 s | 47,856 KiB | 48,192 KiB |
+| subsumed | CIDR | 2.41 s | 2.26 s | 48,208 KiB | 48,272 KiB |
+| BGP-like | ranges | 3.63 s | 3.50 s | 52,464 KiB | 52,464 KiB |
+| BGP-like | CIDR | 3.82 s | 3.69 s | 59,568 KiB | 58,352 KiB |
+
+Peak RSS remains within -2.0% to +1.3% of `0.1.0`, and elapsed time improves
+3.4% to 13.8% in these paired runs. Raw and JSON bytes, statistics bytes,
+exact coverage, deterministic ordering, and all eight locked range/CIDR
+cardinality vectors are unchanged.
+
 ## Output Cardinality and Compression
 
 Timing and peak RSS measure the cost of compiling an input. Output cardinality

@@ -19,14 +19,14 @@ fail() {
 export CLANG_MODULE_CACHE_PATH="${CLANG_MODULE_CACHE_PATH:-$PACKAGE_ROOT/.build/clang-module-cache}"
 mkdir -p "$CLANG_MODULE_CACHE_PATH"
 
-# CHANGE: Exercise the packaged release executable so CLI process wiring is covered in addition to
+# Exercise the packaged release executable so CLI process wiring is covered in addition to
 # unit-level parsing, merging, and rendering helpers.
 swift build --package-path "$PACKAGE_ROOT" -c release --product cidrmerge
 BINARY_DIRECTORY="$(swift build --package-path "$PACKAGE_ROOT" -c release --show-bin-path)"
 BINARY="$BINARY_DIRECTORY/cidrmerge"
 [[ -x "$BINARY" ]] || fail "release executable was not found at $BINARY"
 
-# CHANGE: Lock the user-visible release identity and basic help wiring before a tag is created.
+# Lock the user-visible release identity and basic help wiring before a tag is created.
 [[ "$("$BINARY" --version)" == "0.1.0" ]] \
     || fail "--version did not report 0.1.0"
 

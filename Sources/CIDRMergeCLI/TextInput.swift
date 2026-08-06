@@ -12,7 +12,6 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
-import CIDRMergeCore
 import Foundation
 
 enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
@@ -37,7 +36,7 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
         case .repeatedStandardInput:
             return "cidrmerge: error: standard input '-' may appear at most once"
         case .unsupportedURL(let value):
-            // CHANGE: Keep network acquisition outside the deterministic merge path.
+            // Keep network acquisition outside the deterministic merge path.
             let guidance = "download it first and pass a local file or stdin"
             return "cidrmerge: \(value): error: URL input is not supported; \(guidance)"
         }
@@ -57,7 +56,7 @@ enum TextInputLoader {
         guard sources.lazy.filter({ $0 == "-" }).count <= 1 else {
             throw CIDRMergeError.repeatedStandardInput
         }
-        // CHANGE: Reject every unsupported URL before opening any earlier local-file operand.
+        // Reject every unsupported URL before opening any earlier local-file operand.
         if let source = sources.first(where: isHTTPURL) {
             throw CIDRMergeError.unsupportedURL(source)
         }
@@ -230,13 +229,13 @@ enum TextInputLoader {
             normalized = address.description != token
         }
 
-        // CHANGE: Compare after comment/whitespace removal so stats count semantic canonicalization only.
+        // Compare after comment/whitespace removal so stats count semantic canonicalization only.
         collection.append(range, normalized: normalized)
     }
 
     private static func inputKind(of token: String) -> InputTokenKind {
         var consecutiveDots = 0
-        // CHANGE: Classify each line in one UTF-8 pass so prefix-heavy and range-heavy data sets do
+        // Classify each line in one UTF-8 pass so prefix-heavy and range-heavy data sets do
         // not pay for separate full-string delimiter searches.
         for byte in token.utf8 {
             switch byte {

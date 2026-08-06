@@ -18,7 +18,7 @@ import PackageDescription
 let package = Package(
     name: "cidrmerge",
     platforms: [
-        .iOS(.v18),  // CHANGE: Match swift-cidr's UInt128 deployment floor for Xcode builds.
+        .iOS(.v18),  // Match swift-cidr's UInt128 deployment floor for Xcode builds.
         .macOS(.v15),
     ],
     products: [
@@ -28,7 +28,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/RouteObjects/swift-cidr.git",
-            .upToNextMinor(from: "0.4.0")
+            .upToNextMinor(from: "0.5.0")
         ),
         .package(
             url: "https://github.com/apple/swift-argument-parser",
@@ -39,10 +39,11 @@ let package = Package(
         .target(
             name: "CIDRMergeCore",
             dependencies: [
+                // swift-cidr is the sole owner of address-range and exact-coverage math.
                 .product(name: "CIDR", package: "swift-cidr")
             ]
         ),
-        // CHANGE: Keep command parsing and process I/O importable for SwiftPM and Xcode tests.
+        // Keep command parsing and process I/O importable for SwiftPM and Xcode tests.
         .target(
             name: "CIDRMergeCLI",
             dependencies: [
@@ -51,7 +52,7 @@ let package = Package(
                 .product(name: "CIDR", package: "swift-cidr"),
             ]
         ),
-        // CHANGE: The executable target owns only process startup and delegates to CIDRMergeCLI.
+        // The executable target owns only process startup and delegates to CIDRMergeCLI.
         .executableTarget(
             name: "CIDRMergeExecutable",
             dependencies: ["CIDRMergeCLI"]

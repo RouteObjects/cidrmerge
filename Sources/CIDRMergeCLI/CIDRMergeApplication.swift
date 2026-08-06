@@ -45,7 +45,7 @@ struct CIDRMergeApplication: Sendable {
         let result = parsedInput.merged(representation: representation)
         let output = try OutputRenderer.render(result, format: outputFormat)
 
-        // CHANGE: Commit rendered output once and only after every input has parsed and merged.
+        // Commit rendered output once and only after every input has parsed and merged.
         try outputWriter(output, outputPath)
         if includeStatistics {
             try diagnosticWriter(OutputRenderer.statistics(result.statistics))
@@ -55,7 +55,7 @@ struct CIDRMergeApplication: Sendable {
     static func write(_ data: Data, to outputPath: String?) throws {
         do {
             if let outputPath {
-                // CHANGE: Atomic replacement prevents a failed write from corrupting the destination.
+                // Atomic replacement prevents a failed write from corrupting the destination.
                 try data.write(
                     to: URL(fileURLWithPath: outputPath),
                     options: .atomic
