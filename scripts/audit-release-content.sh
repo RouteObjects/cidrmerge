@@ -51,7 +51,7 @@ audit_tracked_tree() {
 
     # Allowlist the public dependency graph rather than merely rejecting
     # path and SSH forms; an unexpected HTTPS fork must fail the release audit too.
-    expected_direct_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser'
+    expected_direct_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser\nhttps://github.com/apple/swift-crypto.git'
     actual_direct_dependencies="$(
         sed -nE 's/.*url:[[:space:]]*"([^"]+)".*/\1/p' \
             "${PACKAGE_ROOT}/Package.swift" | LC_ALL=C sort
@@ -59,13 +59,31 @@ audit_tracked_tree() {
     [[ "${actual_direct_dependencies}" == "${expected_direct_dependencies}" ]] ||
         fail "Package.swift contains an unexpected direct dependency URL."
 
-    expected_resolved_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser\nhttps://github.com/apple/swift-atomics.git\nhttps://github.com/apple/swift-collections.git\nhttps://github.com/apple/swift-nio.git\nhttps://github.com/apple/swift-system.git'
+    expected_resolved_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser\nhttps://github.com/apple/swift-asn1.git\nhttps://github.com/apple/swift-atomics.git\nhttps://github.com/apple/swift-collections.git\nhttps://github.com/apple/swift-crypto.git\nhttps://github.com/apple/swift-nio.git\nhttps://github.com/apple/swift-system.git'
     actual_resolved_dependencies="$(
         awk -F '"' '/"location"/ { print $4 }' \
             "${PACKAGE_ROOT}/Package.resolved" | LC_ALL=C sort
     )"
     [[ "${actual_resolved_dependencies}" == "${expected_resolved_dependencies}" ]] ||
         fail "Package.resolved contains an unexpected dependency location."
+
+    # CHANGE: Hashing is an artifact-boundary concern. Keep Crypto in the CLI target once and
+    # out of the reusable Core target even though SwiftPM resolves direct packages manifest-wide.
+    [[ "$(grep -Fc '.product(name: "Crypto", package: "swift-crypto")' \
+        "${PACKAGE_ROOT}/Package.swift")" -eq 1 ]] ||
+        fail "Package.swift must declare exactly one Crypto product dependency."
+    sed -n \
+        '/name: "CIDRMergeCLI"/,/name: "CIDRMergeExecutable"/p' \
+        "${PACKAGE_ROOT}/Package.swift" \
+        | grep -Fq '.product(name: "Crypto", package: "swift-crypto")' ||
+        fail "Crypto must belong to CIDRMergeCLI."
+    # CHANGE: Keep the linked dependency's NOTICE and CXKCP binary terms in every archive.
+    grep -Fq 'Copyright 2019 The SwiftCrypto Project' \
+        "${PACKAGE_ROOT}/THIRD_PARTY_NOTICES.txt" ||
+        fail "THIRD_PARTY_NOTICES.txt is missing the Swift Crypto NOTICE."
+    grep -Fq 'Copyright (c) 1998-2008, Brian Gladman, Worcester, UK.' \
+        "${PACKAGE_ROOT}/THIRD_PARTY_NOTICES.txt" ||
+        fail "THIRD_PARTY_NOTICES.txt is missing the CXKCP component terms."
 
     # Public release manifests must resolve through canonical HTTPS URLs,
     # never a developer-local path, file URL, or SSH credential context.

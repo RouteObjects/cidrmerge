@@ -34,6 +34,10 @@ let package = Package(
             url: "https://github.com/apple/swift-argument-parser",
             .upToNextMajor(from: "1.7.0")
         ),
+        .package(
+            url: "https://github.com/apple/swift-crypto.git",
+            .upToNextMajor(from: "4.5.1")
+        ),
     ],
     targets: [
         .target(
@@ -50,6 +54,8 @@ let package = Package(
                 "CIDRMergeCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "CIDR", package: "swift-cidr"),
+                // CHANGE: Exact-byte integrity belongs to the CLI artifact boundary, not Core.
+                .product(name: "Crypto", package: "swift-crypto"),
             ]
         ),
         // The executable target owns only process startup and delegates to CIDRMergeCLI.

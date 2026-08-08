@@ -15,7 +15,8 @@ import Foundation
 
 struct CIDRMergeApplication: Sendable {
     typealias InputLoader = @Sendable (_ inputs: [String], _ format: InputFormat) throws -> ParsedInput
-    typealias OutputWriter = @Sendable (_ output: Data, _ path: String?) throws -> Void
+    typealias OutputWriter =
+        @Sendable (_ output: Data, _ path: String?, _ includeChecksum: Bool) throws -> Void
     typealias DiagnosticWriter = @Sendable (_ diagnostics: Data) throws -> Void
 
     static let live = CIDRMergeApplication(
@@ -27,8 +28,12 @@ struct CIDRMergeApplication: Sendable {
                 try SearchbotInputLoader.load(inputs: inputs)
             }
         },
-        outputWriter: { output, path in
-            try write(output, to: path)
+        outputWriter: { output, path, includeChecksum in
+            try OutputCommitter.live.write(
+                output,
+                to: path,
+                includeChecksum: includeChecksum
+            )
         },
         diagnosticWriter: { diagnostics in
             try FileHandle.standardError.write(contentsOf: diagnostics)
@@ -45,35 +50,23 @@ struct CIDRMergeApplication: Sendable {
         outputFormat: OutputFormat,
         representation: OutputRepresentation,
         includeStatistics: Bool,
+        includeChecksum: Bool = false,
         outputPath: String?
     ) throws {
+        // CHANGE: Reject incompatible destinations before an input file or stdin is consumed.
+        try DetachedSHA256Checksum.validate(
+            isEnabled: includeChecksum,
+            outputPath: outputPath
+        )
+
         let parsedInput = try inputLoader(inputs, inputFormat)
         let result = parsedInput.merged(representation: representation)
         let output = try OutputRenderer.render(result, format: outputFormat)
 
         // Commit rendered output once and only after every input has parsed and merged.
-        try outputWriter(output, outputPath)
+        try outputWriter(output, outputPath, includeChecksum)
         if includeStatistics {
             try diagnosticWriter(OutputRenderer.statistics(result.statistics))
-        }
-    }
-
-    static func write(_ data: Data, to outputPath: String?) throws {
-        do {
-            if let outputPath {
-                // Atomic replacement prevents a failed write from corrupting the destination.
-                try data.write(
-                    to: URL(fileURLWithPath: outputPath),
-                    options: .atomic
-                )
-            } else {
-                try FileHandle.standardOutput.write(contentsOf: data)
-            }
-        } catch {
-            throw CIDRMergeError.outputWriteFailed(
-                destination: outputPath ?? "<stdout>",
-                reason: error.localizedDescription
-            )
         }
     }
 }

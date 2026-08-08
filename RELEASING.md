@@ -58,7 +58,12 @@ Verify all checksums from inside the download directory with `sha256sum
 --check SHA256SUMS` on Linux or `shasum -a 256 --check SHA256SUMS` on macOS.
 Each archive must contain only `cidrmerge`, `LICENSE`, and
 `THIRD_PARTY_NOTICES.txt`. Exercise a compatible archive's `--version`,
-`--help`, and an offline stdin merge before tagging.
+`--help`, an offline stdin merge, and `--checksum --output` before tagging.
+Verify the generated detached checksum file with `sha256sum --check` or
+`shasum -a 256 --check`, run from the output file's parent directory because
+the checksum file intentionally records only its basename. Record each
+stripped executable's byte size for the four release platforms as comparison
+evidence, but do not impose a brittle cross-platform size threshold.
 
 ## Sign the tag and review the draft
 
