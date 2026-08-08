@@ -15,12 +15,17 @@ import CIDR
 
 import struct CIDRMergeCore.CIDRMergeCoverage
 
+enum InputFormat: String, Equatable, Sendable {
+    case text
+    case searchbot
+}
+
 enum OutputRepresentation: String, Equatable, Sendable {
     case ranges
     case cidr
 }
 
-/// Input and output cardinality recorded by the text-oriented CLI boundary.
+/// Input and output cardinality recorded by the CLI input boundary.
 struct MergeStatistics: Equatable, Sendable {
     var representation: OutputRepresentation
     var inputCount = 0
@@ -66,7 +71,7 @@ struct MergeResult: Equatable, Sendable {
     var statistics: MergeStatistics
 }
 
-/// Parsed family-partitioned coverage plus statistics that only have meaning for textual input.
+/// Parsed family-partitioned coverage plus input-boundary statistics.
 struct ParsedInput: Sendable {
     private(set) var ipv4: [IPv4AddressRange] = []
     private(set) var ipv6: [IPv6AddressRange] = []
@@ -92,8 +97,8 @@ struct ParsedInput: Sendable {
     }
 
     func merged(representation: OutputRepresentation = .ranges) -> MergeResult {
-        // Use the Core facade without rebuilding a family-erased staging array; the text
-        // parser already partitions each canonical swift-cidr range as it records statistics.
+        // Use the Core facade without rebuilding a family-erased staging array; each input
+        // parser already partitions canonical swift-cidr ranges as it records statistics.
         let coverage = CIDRMergeCoverage(ipv4Ranges: ipv4, ipv6Ranges: ipv6)
 
         let ipv4Output: FamilyMergeOutput<V4>

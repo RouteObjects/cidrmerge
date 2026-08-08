@@ -14,13 +14,18 @@
 import Foundation
 
 struct CIDRMergeApplication: Sendable {
-    typealias InputLoader = @Sendable (_ inputs: [String]) throws -> ParsedInput
+    typealias InputLoader = @Sendable (_ inputs: [String], _ format: InputFormat) throws -> ParsedInput
     typealias OutputWriter = @Sendable (_ output: Data, _ path: String?) throws -> Void
     typealias DiagnosticWriter = @Sendable (_ diagnostics: Data) throws -> Void
 
     static let live = CIDRMergeApplication(
-        inputLoader: { inputs in
-            try TextInputLoader.load(inputs: inputs)
+        inputLoader: { inputs, format in
+            switch format {
+            case .text:
+                try TextInputLoader.load(inputs: inputs)
+            case .searchbot:
+                try SearchbotInputLoader.load(inputs: inputs)
+            }
         },
         outputWriter: { output, path in
             try write(output, to: path)
@@ -36,12 +41,13 @@ struct CIDRMergeApplication: Sendable {
 
     func run(
         inputs: [String],
+        inputFormat: InputFormat = .text,
         outputFormat: OutputFormat,
         representation: OutputRepresentation,
         includeStatistics: Bool,
         outputPath: String?
     ) throws {
-        let parsedInput = try inputLoader(inputs)
+        let parsedInput = try inputLoader(inputs, inputFormat)
         let result = parsedInput.merged(representation: representation)
         let output = try OutputRenderer.render(result, format: outputFormat)
 

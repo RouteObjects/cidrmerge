@@ -378,6 +378,7 @@ struct CommandSurfaceTests {
     func parsesCommandOptions() throws {
         let command = try CIDRMergeCommand.parse([
             "--json",
+            "--input-format", "searchbot",
             "--representation", "cidr",
             "--stats",
             "-o", "merged.json",
@@ -387,6 +388,7 @@ struct CommandSurfaceTests {
         ])
 
         #expect(command.outputFormat == .json)
+        #expect(command.inputFormat == .searchbot)
         #expect(command.representation == .cidr)
         #expect(command.stats)
         #expect(command.outputPath == "merged.json")
@@ -399,12 +401,20 @@ struct CommandSurfaceTests {
 
         #expect(command.representation == .ranges)
         #expect(command.outputFormat == .raw)
+        #expect(command.inputFormat == .text)
     }
 
     @Test("Raw and JSON serialization flags are mutually exclusive")
     func rejectsConflictingOutputFormats() {
         #expect(throws: (any Error).self) {
             try CIDRMergeCommand.parse(["--raw", "--json"])
+        }
+    }
+
+    @Test("Unknown input formats are rejected")
+    func rejectsUnknownInputFormat() {
+        #expect(throws: (any Error).self) {
+            try CIDRMergeCommand.parse(["--input-format", "auto"])
         }
     }
 
@@ -423,8 +433,9 @@ struct ApplicationBoundaryTests {
     func commitsOutputBeforeDiagnostics() throws {
         let recorder = ApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _ in
-                try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
+            inputLoader: { _, format in
+                #expect(format == .searchbot)
+                return try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
             outputWriter: { output, path in
                 recorder.recordOutput(output, path: path)
@@ -436,6 +447,7 @@ struct ApplicationBoundaryTests {
 
         try application.run(
             inputs: ["ignored-by-injected-loader"],
+            inputFormat: .searchbot,
             outputFormat: .json,
             representation: .cidr,
             includeStatistics: true,
@@ -454,7 +466,7 @@ struct ApplicationBoundaryTests {
     func outputFailurePreventsDiagnostics() {
         let recorder = ApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _ in
+            inputLoader: { _, _ in
                 try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
             outputWriter: { _, _ in
@@ -476,9 +488,39 @@ struct ApplicationBoundaryTests {
         }
         #expect(recorder.diagnosticWriteCount == 0)
     }
+
+    @Test("An input failure prevents output and statistics from being emitted")
+    func inputFailurePreventsWrites() {
+        let recorder = ApplicationRecorder()
+        let application = CIDRMergeApplication(
+            inputLoader: { _, _ in
+                throw ExpectedInputFailure()
+            },
+            outputWriter: { output, path in
+                recorder.recordOutput(output, path: path)
+            },
+            diagnosticWriter: { diagnostics in
+                recorder.recordDiagnostics(diagnostics)
+            }
+        )
+
+        #expect(throws: ExpectedInputFailure.self) {
+            try application.run(
+                inputs: [],
+                inputFormat: .searchbot,
+                outputFormat: .raw,
+                representation: .ranges,
+                includeStatistics: true,
+                outputPath: nil
+            )
+        }
+        #expect(recorder.outputWriteCount == 0)
+        #expect(recorder.diagnosticWriteCount == 0)
+    }
 }
 
 private struct ExpectedOutputFailure: Error {}
+private struct ExpectedInputFailure: Error {}
 
 private final class ApplicationRecorder: @unchecked Sendable {
     private let lock = NSLock()

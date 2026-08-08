@@ -70,7 +70,8 @@ let package = Package(
                 "CIDRMergeCLI",
                 "CIDRMergeCore",
                 .product(name: "CIDR", package: "swift-cidr"),
-            ]
+            ],
+            resources: [.process("Fixtures")]
         ),
     ],
     swiftLanguageModes: [.v6]

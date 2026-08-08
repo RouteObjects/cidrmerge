@@ -32,7 +32,8 @@ for required in \
     .spi.yml \
     .swift-format.json \
     .github/workflows/ci.yml \
-    .github/workflows/release.yml; do
+    .github/workflows/release.yml \
+    scripts/check-documentation.sh; do
     [[ -e "${required}" ]] || fail "Required release file is missing: ${required}"
 done
 
@@ -130,18 +131,8 @@ for benchmark_index in "${!benchmark_scenarios[@]}"; do
         fail "Unexpected CIDR cardinality for ${scenario}: ${cidr_count}."
 done
 
-# Verify that the reusable public surface can emit a symbol graph independently
-# of the command-line and executable modules.
-symbol_graph_directory="$(
-    mktemp -d "${release_temporary_directory}/cidrmerge-symbol-graphs.XXXXXX"
-)"
-swift build \
-    --target CIDRMergeCore \
-    -Xswiftc -emit-symbol-graph \
-    -Xswiftc -emit-symbol-graph-dir \
-    -Xswiftc "${symbol_graph_directory}"
-test -s "${symbol_graph_directory}/CIDRMergeCore.symbols.json" ||
-    fail "CIDRMergeCore did not emit a public symbol graph."
+# CHANGE: Validate the reusable public surface and its hosted conceptual documentation together.
+"${SCRIPT_DIR}/check-documentation.sh"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     sdk_path="$(xcrun --sdk iphonesimulator --show-sdk-path)"

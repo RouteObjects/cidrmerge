@@ -16,6 +16,7 @@ import Foundation
 
 enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
     case invalidInput(source: String, line: Int, value: String)
+    case invalidSearchbotInput(source: String, path: String, reason: String)
     case invalidUTF8(source: String, line: Int)
     case inputReadFailed(source: String, reason: String)
     case outputWriteFailed(destination: String, reason: String)
@@ -27,6 +28,8 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
         case .invalidInput(let source, let line, let value):
             return
                 "cidrmerge: \(source):\(line): error: invalid IP address, network, or range \(String(reflecting: value))"
+        case .invalidSearchbotInput(let source, let path, let reason):
+            return "cidrmerge: \(source):\(path): error: invalid searchbot input: \(reason)"
         case .invalidUTF8(let source, let line):
             return "cidrmerge: \(source):\(line): error: input is not valid UTF-8"
         case .inputReadFailed(let source, let reason):
@@ -43,8 +46,30 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
     }
 }
 
+enum InputSources {
+    static let standardInputLabel = "<stdin>"
+
+    static func validated(_ inputs: [String]) throws -> [String] {
+        let sources = inputs.isEmpty ? ["-"] : inputs
+        guard sources.lazy.filter({ $0 == "-" }).count <= 1 else {
+            throw CIDRMergeError.repeatedStandardInput
+        }
+
+        // CHANGE: Preflight the complete operand list so a later URL cannot cause earlier local
+        // files or standard input to be consumed before the deterministic offline boundary fails.
+        if let source = sources.first(where: isHTTPURL) {
+            throw CIDRMergeError.unsupportedURL(source)
+        }
+        return sources
+    }
+
+    private static func isHTTPURL(_ source: String) -> Bool {
+        let normalized = source.prefix(8).lowercased()
+        return normalized.hasPrefix("http://") || normalized.hasPrefix("https://")
+    }
+}
+
 enum TextInputLoader {
-    private static let standardInputLabel = "<stdin>"
     private static let chunkSize = 64 * 1_024
     private static let utf8ByteOrderMark: [UInt8] = [0xEF, 0xBB, 0xBF]
 
@@ -52,21 +77,14 @@ enum TextInputLoader {
         inputs: [String],
         standardInput: FileHandle = .standardInput
     ) throws -> ParsedInput {
-        let sources = inputs.isEmpty ? ["-"] : inputs
-        guard sources.lazy.filter({ $0 == "-" }).count <= 1 else {
-            throw CIDRMergeError.repeatedStandardInput
-        }
-        // Reject every unsupported URL before opening any earlier local-file operand.
-        if let source = sources.first(where: isHTTPURL) {
-            throw CIDRMergeError.unsupportedURL(source)
-        }
+        let sources = try InputSources.validated(inputs)
 
         var collection = ParsedInput()
         for source in sources {
             if source == "-" {
                 try consume(
                     standardInput,
-                    source: standardInputLabel,
+                    source: InputSources.standardInputLabel,
                     into: &collection
                 )
                 continue
@@ -253,10 +271,6 @@ enum TextInputLoader {
         return .address
     }
 
-    private static func isHTTPURL(_ source: String) -> Bool {
-        let normalized = source.prefix(8).lowercased()
-        return normalized.hasPrefix("http://") || normalized.hasPrefix("https://")
-    }
 }
 
 private enum InputTokenKind {
