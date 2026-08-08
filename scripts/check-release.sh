@@ -33,7 +33,8 @@ for required in \
     .swift-format.json \
     .github/workflows/ci.yml \
     .github/workflows/release.yml \
-    scripts/check-documentation.sh; do
+    scripts/check-documentation.sh \
+    scripts/check-core-consumer.sh; do
     [[ -e "${required}" ]] || fail "Required release file is missing: ${required}"
 done
 
@@ -133,6 +134,7 @@ done
 
 # CHANGE: Validate the reusable public surface and its hosted conceptual documentation together.
 "${SCRIPT_DIR}/check-documentation.sh"
+"${SCRIPT_DIR}/check-core-consumer.sh"
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     sdk_path="$(xcrun --sdk iphonesimulator --show-sdk-path)"
@@ -171,6 +173,10 @@ elif [[ "$(uname -s)" == "Darwin" ]]; then
     strip -S -x "${binary}"
 fi
 
+binary_size_bytes="$(wc -c <"${binary}" | tr -d '[:space:]')"
+printf 'stripped release binary: %s bytes (%s %s)\n' \
+    "${binary_size_bytes}" "$(uname -s)" "$(uname -m)"
+
 [[ "$("${binary}" --version)" == "${VERSION}" ]] ||
     fail "The executable version does not match ${VERSION}."
 "${binary}" --help >/dev/null
@@ -178,9 +184,14 @@ fi
 
 if [[ "$(uname -s)" == "Linux" ]]; then
     readelf -d "${binary}" >.build/release-elf-dynamic-section.txt
-    if grep -E 'NEEDED.*(libswift|libFoundation|libdispatch|libBlocksRuntime)' \
+    if grep -Ei 'NEEDED.*(libswift|libFoundation|libdispatch|libBlocksRuntime|libcrypto|libssl)' \
         .build/release-elf-dynamic-section.txt; then
-        fail "The executable still requires a Swift runtime shared library."
+        fail "The executable still requires an unexpected runtime or crypto shared library."
+    fi
+elif [[ "$(uname -s)" == "Darwin" ]]; then
+    otool -L "${binary}" >.build/release-macho-libraries.txt
+    if grep -Ei '(libcrypto|libssl)' .build/release-macho-libraries.txt; then
+        fail "The executable unexpectedly links a non-system crypto shared library."
     fi
 fi
 

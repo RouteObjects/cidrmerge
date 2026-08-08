@@ -141,7 +141,22 @@ jobs:
             | "${binary}" --raw >actual-output.txt
           printf '%s\n' '192.0.2.0...192.0.2.255' >expected-output.txt
           cmp expected-output.txt actual-output.txt
+
+          printf '%s\n' '192.0.2.0/25' '192.0.2.128/25' \
+            | "${binary}" --raw --checksum --output checksum-output.txt
+          cmp expected-output.txt checksum-output.txt
+          printf '%s\n' \
+            '4fadfa35475984133bb25b33cbb5e793e475888f0c2f1d1347f4df2c7b06f52e  checksum-output.txt' \
+            >expected-checksum.txt
+          cmp expected-checksum.txt checksum-output.txt.sha256
+          shasum -a 256 --check checksum-output.txt.sha256
+
           ./scripts/audit-release-content.sh binary "${binary}"
+          if otool -L "${binary}" | grep -Ei '(libcrypto|libssl)'; then
+            printf 'Release binary unexpectedly links a non-system crypto library.\n' >&2
+            exit 1
+          fi
+          printf 'stripped binary size: %s bytes\n' "$(wc -c <"${binary}" | tr -d '[:space:]')"
 
       - name: Package release archive
         env:
@@ -157,6 +172,21 @@ jobs:
           install -m 0644 LICENSE THIRD_PARTY_NOTICES.txt "${stage}/"
           COPYFILE_DISABLE=1 tar -C "${stage}" -czf "${asset}" \
             cidrmerge LICENSE THIRD_PARTY_NOTICES.txt
+
+      - name: Exercise native macOS archive checksum generation
+        env:
+          VERSION: ${{ needs.metadata.outputs.version }}
+          ARCH: ${{ matrix.arch }}
+        run: |
+          set -euo pipefail
+          stage="$(mktemp -d)"
+          tar -C "${stage}" -xzf "cidrmerge-${VERSION}-darwin-${ARCH}.tar.gz"
+          printf '%s\n' '192.0.2.0/25' '192.0.2.128/25' \
+            | "${stage}/cidrmerge" --checksum --output "${stage}/archive-output.txt"
+          (
+            cd "${stage}"
+            shasum -a 256 --check archive-output.txt.sha256
+          )
 
       - name: Upload release archive
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -233,14 +263,25 @@ jobs:
             | "${binary}" --raw >actual-output.txt
           printf '%s\n' '192.0.2.0...192.0.2.255' >expected-output.txt
           cmp expected-output.txt actual-output.txt
+
+          printf '%s\n' '192.0.2.0/25' '192.0.2.128/25' \
+            | "${binary}" --raw --checksum --output checksum-output.txt
+          cmp expected-output.txt checksum-output.txt
+          printf '%s\n' \
+            '4fadfa35475984133bb25b33cbb5e793e475888f0c2f1d1347f4df2c7b06f52e  checksum-output.txt' \
+            >expected-checksum.txt
+          cmp expected-checksum.txt checksum-output.txt.sha256
+          sha256sum --check checksum-output.txt.sha256
+
           ./scripts/audit-release-content.sh binary "${binary}"
 
           readelf -d "${binary}" >elf-dynamic-section.txt
-          if grep -E 'NEEDED.*(libswift|libFoundation|libdispatch|libBlocksRuntime)' \
+          if grep -Ei 'NEEDED.*(libswift|libFoundation|libdispatch|libBlocksRuntime|libcrypto|libssl)' \
               elf-dynamic-section.txt; then
-            printf 'Release binary still requires a Swift runtime shared library.\n' >&2
+            printf 'Release binary requires an unexpected runtime or crypto shared library.\n' >&2
             exit 1
           fi
+          printf 'stripped binary size: %s bytes\n' "$(wc -c <"${binary}" | tr -d '[:space:]')"
 
       - name: Package release archive
         env:
@@ -280,6 +321,20 @@ jobs:
                 /opt/cidrmerge/cidrmerge --raw >archive-output.txt
           printf '%s\n' '192.0.2.0...192.0.2.255' >expected-output.txt
           cmp expected-output.txt archive-output.txt
+
+          run_directory="$(mktemp -d)"
+          printf '%s\n' '192.0.2.0/25' '192.0.2.128/25' \
+            | docker run --rm -i \
+                --platform "${DOCKER_PLATFORM}" \
+                --volume "${stage}:/opt/cidrmerge:ro" \
+                --volume "${run_directory}:/work" \
+                --workdir /work \
+                "${image}" \
+                /opt/cidrmerge/cidrmerge --checksum --output archive-checksum.txt
+          (
+            cd "${run_directory}"
+            sha256sum --check archive-checksum.txt.sha256
+          )
 
       - name: Upload release archive
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

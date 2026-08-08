@@ -149,6 +149,7 @@ jobs:
           swift package resolve
           swift package resolve swift-cidr --version 0.5.0
           swift package resolve swift-argument-parser --version 1.7.0
+          swift package resolve swift-crypto --version 4.5.1
 
           awk -F '"' '
             /"identity"/ { identity = $4 }
@@ -156,6 +157,11 @@ jobs:
           ' Package.resolved >resolved-versions.txt
           grep -qx 'swift-cidr 0.5.0' resolved-versions.txt
           grep -qx 'swift-argument-parser 1.7.0' resolved-versions.txt
+          grep -qx 'swift-crypto 4.5.1' resolved-versions.txt
 
           swift build --product cidrmerge
           ./scripts/test.sh
+
+      - name: Test the external CIDRMergeCore consumer boundary
+        if: matrix.arch == 'x86_64'
+        run: ./scripts/check-core-consumer.sh

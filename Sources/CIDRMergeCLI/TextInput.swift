@@ -20,6 +20,8 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
     case invalidUTF8(source: String, line: Int)
     case inputReadFailed(source: String, reason: String)
     case outputWriteFailed(destination: String, reason: String)
+    case checksumRequiresOutput
+    case invalidChecksumBasename(String)
     case repeatedStandardInput
     case unsupportedURL(String)
 
@@ -36,6 +38,11 @@ enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
             return "cidrmerge: \(source): error: unable to read input: \(reason)"
         case .outputWriteFailed(let destination, let reason):
             return "cidrmerge: \(destination): error: unable to write output: \(reason)"
+        case .checksumRequiresOutput:
+            return "cidrmerge: error: --checksum requires --output"
+        case .invalidChecksumBasename(let basename):
+            return
+                "cidrmerge: error: --checksum output basename must not contain CR or LF: \(String(reflecting: basename))"
         case .repeatedStandardInput:
             return "cidrmerge: error: standard input '-' may appear at most once"
         case .unsupportedURL(let value):

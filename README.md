@@ -20,8 +20,10 @@ or adjacent coverage; it never fills an uncovered gap to make output shorter.
 - iOS 18 or newer when using `CIDRMergeCore` in an application
 
 The package is verified against the declared compatibility floors of
-`swift-cidr` 0.5.0 and Swift Argument Parser 1.7.0. `Package.resolved` records
-the exact dependency revisions used for release verification.
+`swift-cidr` 0.5.0, Swift Argument Parser 1.7.0, and Swift Crypto 4.5.1.
+`Package.resolved` records the exact dependency revisions used for release
+verification. Swift Crypto is used only by the CLI artifact boundary;
+`CIDRMergeCore` does not import or link it.
 
 ## Install a release archive
 
@@ -206,6 +208,7 @@ orthogonal to serialization:
 - `--raw` and `--json` are mutually exclusive.
 - `--input-format text|searchbot` selects one input grammar for all operands.
 - `-o, --output <path>` atomically replaces a file instead of writing stdout.
+- `--checksum` requires `--output` and writes a detached SHA-256 checksum file.
 - `--stats` reports statistics for the selected representation on stderr.
 - `--version` prints the release version. `-v` is intentionally unassigned.
 
@@ -223,6 +226,50 @@ family arrays:
   "representation" : "cidr"
 }
 ```
+
+### Detached SHA-256 checksums
+
+`--checksum` writes a detached SHA-256 checksum file at
+`<output-path>.sha256` for either raw or JSON output. It hashes the exact
+rendered bytes, including the final line feed normally emitted by both
+serializers. Empty raw output is zero bytes and uses SHA-256's standard
+empty-input digest.
+
+```sh
+cidrmerge --input-format searchbot --raw \
+  --representation ranges --stats --checksum \
+  --output allow.ranges.txt common-crawlers.json
+```
+
+The companion `allow.ranges.txt.sha256` contains exactly one record:
+
+```text
+<64 lowercase hexadecimal characters><two spaces>allow.ranges.txt<LF>
+```
+
+Only the output basename is recorded. Basenames containing carriage return or
+line feed are rejected, and invalid checksum/output combinations fail before
+cidrmerge reads input. Run standard verification from the output file's parent
+directory so the recorded basename resolves to the generated file:
+
+```sh
+sha256sum --check allow.ranges.txt.sha256      # Linux
+shasum -a 256 --check allow.ranges.txt.sha256 # macOS
+```
+
+cidrmerge renders and hashes before touching either destination, atomically
+replaces the detached checksum file first, and atomically replaces the output
+second. The two paths cannot be one filesystem transaction: if the second
+replacement fails, the new checksum intentionally does not match the old or
+missing output, so a consumer requiring verification fails closed. Deploy
+immutable or versioned directories and switch generations outside cidrmerge
+when pair-level rollout atomicity is required.
+
+Detached checksum verification detects a mismatch between the recorded digest
+and output bytes; it does not authenticate the file's origin, verify a
+crawler's identity, or bind independent allow and deny files into one
+generation. Raw text remains the direct admission interchange; a checksum does
+not make cidrmerge's JSON schema an admission-policy format.
 
 Output is buffered until all input has parsed, merged, and rendered, so a
 failure in those stages emits no standard output. File destinations are

@@ -46,6 +46,12 @@ package struct CIDRMergeCommand: ParsableCommand {
     )
     var stats = false
 
+    @Flag(
+        name: .customLong("checksum"),
+        help: "With --output, write a detached SHA-256 checksum file for the exact output bytes."
+    )
+    var checksum = false
+
     @Option(
         name: [.customShort("o"), .customLong("output")],
         help: "Write output atomically to a file instead of stdout."
@@ -60,6 +66,10 @@ package struct CIDRMergeCommand: ParsableCommand {
     package init() {}
 
     package mutating func validate() throws {
+        try DetachedSHA256Checksum.validate(
+            isEnabled: checksum,
+            outputPath: outputPath
+        )
         if inputs.lazy.filter({ $0 == "-" }).count > 1 {
             throw CIDRMergeError.repeatedStandardInput
         }
@@ -72,6 +82,7 @@ package struct CIDRMergeCommand: ParsableCommand {
             outputFormat: outputFormat,
             representation: representation,
             includeStatistics: stats,
+            includeChecksum: checksum,
             outputPath: outputPath
         )
     }

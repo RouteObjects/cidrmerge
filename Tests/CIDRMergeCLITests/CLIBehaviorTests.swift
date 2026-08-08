@@ -359,7 +359,11 @@ struct OutputTests {
         defer { try? FileManager.default.removeItem(at: outputURL) }
         try Data("old\n".utf8).write(to: outputURL)
 
-        try CIDRMergeApplication.write(Data("new\n".utf8), to: outputURL.path)
+        try OutputCommitter.live.write(
+            Data("new\n".utf8),
+            to: outputURL.path,
+            includeChecksum: false
+        )
 
         #expect(try String(contentsOf: outputURL, encoding: .utf8) == "new\n")
     }
@@ -381,6 +385,7 @@ struct CommandSurfaceTests {
             "--input-format", "searchbot",
             "--representation", "cidr",
             "--stats",
+            "--checksum",
             "-o", "merged.json",
             "first.txt",
             "-",
@@ -391,6 +396,7 @@ struct CommandSurfaceTests {
         #expect(command.inputFormat == .searchbot)
         #expect(command.representation == .cidr)
         #expect(command.stats)
+        #expect(command.checksum)
         #expect(command.outputPath == "merged.json")
         #expect(command.inputs == ["first.txt", "-", "second.txt"])
     }
@@ -402,6 +408,7 @@ struct CommandSurfaceTests {
         #expect(command.representation == .ranges)
         #expect(command.outputFormat == .raw)
         #expect(command.inputFormat == .text)
+        #expect(!command.checksum)
     }
 
     @Test("Raw and JSON serialization flags are mutually exclusive")
@@ -415,6 +422,26 @@ struct CommandSurfaceTests {
     func rejectsUnknownInputFormat() {
         #expect(throws: (any Error).self) {
             try CIDRMergeCommand.parse(["--input-format", "auto"])
+        }
+    }
+
+    @Test("Checksum generation requires a file output destination")
+    func checksumRequiresOutputPath() {
+        #expect(throws: (any Error).self) {
+            try CIDRMergeCommand.parse([
+                "--checksum",
+                "/definitely/missing/input.txt",
+            ])
+        }
+    }
+
+    @Test("Checksum generation rejects line breaks in the output basename")
+    func checksumRejectsUnsafeOutputBasename() {
+        #expect(throws: (any Error).self) {
+            try CIDRMergeCommand.parse([
+                "--checksum",
+                "--output", "policy\n.txt",
+            ])
         }
     }
 
@@ -437,8 +464,12 @@ struct ApplicationBoundaryTests {
                 #expect(format == .searchbot)
                 return try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
-            outputWriter: { output, path in
-                recorder.recordOutput(output, path: path)
+            outputWriter: { output, path, includeChecksum in
+                recorder.recordOutput(
+                    output,
+                    path: path,
+                    includeChecksum: includeChecksum
+                )
             },
             diagnosticWriter: { diagnostics in
                 recorder.recordDiagnostics(diagnostics)
@@ -451,11 +482,13 @@ struct ApplicationBoundaryTests {
             outputFormat: .json,
             representation: .cidr,
             includeStatistics: true,
+            includeChecksum: true,
             outputPath: "merged.json"
         )
 
         #expect(recorder.outputWriteCount == 1)
         #expect(recorder.outputPath == "merged.json")
+        #expect(recorder.includeChecksum)
         #expect(recorder.outputString.contains(#""representation" : "cidr""#))
         #expect(recorder.diagnosticWriteCount == 1)
         #expect(recorder.diagnosticsString.contains("output: 1 prefix"))
@@ -469,7 +502,7 @@ struct ApplicationBoundaryTests {
             inputLoader: { _, _ in
                 try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
-            outputWriter: { _, _ in
+            outputWriter: { _, _, _ in
                 throw ExpectedOutputFailure()
             },
             diagnosticWriter: { diagnostics in
@@ -496,8 +529,12 @@ struct ApplicationBoundaryTests {
             inputLoader: { _, _ in
                 throw ExpectedInputFailure()
             },
-            outputWriter: { output, path in
-                recorder.recordOutput(output, path: path)
+            outputWriter: { output, path, includeChecksum in
+                recorder.recordOutput(
+                    output,
+                    path: path,
+                    includeChecksum: includeChecksum
+                )
             },
             diagnosticWriter: { diagnostics in
                 recorder.recordDiagnostics(diagnostics)
@@ -527,6 +564,7 @@ private final class ApplicationRecorder: @unchecked Sendable {
     private var recordedEvents: [String] = []
     private var recordedOutput = Data()
     private var recordedOutputPath: String?
+    private var recordedIncludeChecksum = false
     private var recordedDiagnostics = Data()
     private var recordedOutputWriteCount = 0
     private var recordedDiagnosticWriteCount = 0
@@ -547,6 +585,10 @@ private final class ApplicationRecorder: @unchecked Sendable {
         lock.withLock { String(decoding: recordedDiagnostics, as: UTF8.self) }
     }
 
+    var includeChecksum: Bool {
+        lock.withLock { recordedIncludeChecksum }
+    }
+
     var outputWriteCount: Int {
         lock.withLock { recordedOutputWriteCount }
     }
@@ -555,11 +597,12 @@ private final class ApplicationRecorder: @unchecked Sendable {
         lock.withLock { recordedDiagnosticWriteCount }
     }
 
-    func recordOutput(_ output: Data, path: String?) {
+    func recordOutput(_ output: Data, path: String?, includeChecksum: Bool) {
         lock.withLock {
             recordedEvents.append("output")
             recordedOutput = output
             recordedOutputPath = path
+            recordedIncludeChecksum = includeChecksum
             recordedOutputWriteCount += 1
         }
     }

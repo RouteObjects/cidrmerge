@@ -56,6 +56,12 @@ grep -Fq 'Semantic representation: ranges or cidr.' "$HELP_STDOUT" \
     || fail "--help did not document both representations"
 grep -Fq '(default: ranges)' "$HELP_STDOUT" \
     || fail "--help did not identify ranges as the default representation"
+grep -Fq -- '--checksum' "$HELP_STDOUT" \
+    || fail "--help did not document detached checksum generation"
+grep -Fq 'With --output, write a detached SHA-256 checksum file' "$HELP_STDOUT" \
+    || fail "--help did not document the checksum output boundary"
+grep -Fq 'for the exact output bytes.' "$HELP_STDOUT" \
+    || fail "--help did not document the checksum output boundary"
 
 VALID_STDOUT="$TEMPORARY_DIRECTORY/valid.stdout"
 VALID_STDERR="$TEMPORARY_DIRECTORY/valid.stderr"
@@ -109,6 +115,69 @@ if ! diff -u \
 then
     fail "JSON output schema or deterministic ordering did not match"
 fi
+
+# CHANGE: Verify the exact producer contract independently with system checksum tooling.
+CHECKSUM_OUTPUT="$TEMPORARY_DIRECTORY/allow ranges.txt"
+CHECKSUM_STDOUT="$TEMPORARY_DIRECTORY/checksum.stdout"
+printf '%s\n' '192.0.2.0/25' '192.0.2.128/25' \
+    | "$BINARY" --raw --checksum --output "$CHECKSUM_OUTPUT" >"$CHECKSUM_STDOUT"
+[[ ! -s "$CHECKSUM_STDOUT" ]] \
+    || fail "file output with --checksum produced stdout"
+if ! diff -u \
+    <(printf '%s\n' '192.0.2.0...192.0.2.255') \
+    "$CHECKSUM_OUTPUT"
+then
+    fail "checksummed raw output did not match"
+fi
+if ! diff -u \
+    <(printf '%s\n' \
+        '4fadfa35475984133bb25b33cbb5e793e475888f0c2f1d1347f4df2c7b06f52e  allow ranges.txt') \
+    "$CHECKSUM_OUTPUT.sha256"
+then
+    fail "raw detached checksum bytes did not match"
+fi
+if command -v sha256sum >/dev/null 2>&1; then
+    (cd "$TEMPORARY_DIRECTORY" && sha256sum --check 'allow ranges.txt.sha256')
+else
+    (cd "$TEMPORARY_DIRECTORY" && shasum -a 256 --check 'allow ranges.txt.sha256')
+fi
+
+CHECKSUM_JSON="$TEMPORARY_DIRECTORY/policy.json"
+printf '%s\n' '192.0.2.0/24' '2001:db8::/32' \
+    | "$BINARY" --json --representation cidr --checksum --output "$CHECKSUM_JSON"
+if ! diff -u \
+    <(printf '%s\n' \
+        '901df054b3fb4eb812693875e0a8b52db5fc112afd76e1402e732cfcd4f2bdac  policy.json') \
+    "$CHECKSUM_JSON.sha256"
+then
+    fail "JSON detached checksum did not cover the exact renderer bytes"
+fi
+
+EMPTY_CHECKSUM_OUTPUT="$TEMPORARY_DIRECTORY/empty.txt"
+printf '' | "$BINARY" --raw --checksum --output "$EMPTY_CHECKSUM_OUTPUT"
+[[ ! -s "$EMPTY_CHECKSUM_OUTPUT" ]] \
+    || fail "checksummed empty raw output was not zero bytes"
+if ! diff -u \
+    <(printf '%s\n' \
+        'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  empty.txt') \
+    "$EMPTY_CHECKSUM_OUTPUT.sha256"
+then
+    fail "empty raw detached checksum did not hash zero bytes"
+fi
+
+CHECKSUM_OPTION_STDOUT="$TEMPORARY_DIRECTORY/checksum-option.stdout"
+CHECKSUM_OPTION_STDERR="$TEMPORARY_DIRECTORY/checksum-option.stderr"
+set +e
+"$BINARY" --checksum /definitely/missing/input.txt \
+    >"$CHECKSUM_OPTION_STDOUT" 2>"$CHECKSUM_OPTION_STDERR"
+CHECKSUM_OPTION_STATUS=$?
+set -e
+[[ "$CHECKSUM_OPTION_STATUS" -eq 1 ]] \
+    || fail "--checksum without --output did not exit with status 1"
+[[ ! -s "$CHECKSUM_OPTION_STDOUT" ]] \
+    || fail "--checksum without --output produced stdout"
+grep -Fq 'cidrmerge: error: --checksum requires --output' "$CHECKSUM_OPTION_STDERR" \
+    || fail "--checksum without --output did not fail before reading input"
 
 SEARCHBOT_STDOUT="$TEMPORARY_DIRECTORY/searchbot.stdout"
 SEARCHBOT_STDERR="$TEMPORARY_DIRECTORY/searchbot.stderr"
@@ -238,5 +307,67 @@ if ! diff -u \
 then
     fail "invalid later searchbot document replaced an existing output file"
 fi
+
+PRESERVED_CHECKSUM_OUTPUT="$TEMPORARY_DIRECTORY/preserved-checksum.txt"
+PRESERVED_DETACHED_CHECKSUM="$PRESERVED_CHECKSUM_OUTPUT.sha256"
+printf '%s\n' 'existing checksummed policy' >"$PRESERVED_CHECKSUM_OUTPUT"
+printf '%s\n' 'existing detached checksum' >"$PRESERVED_DETACHED_CHECKSUM"
+
+set +e
+printf '%s\n' '192.0.2.0/24' 'not-a-prefix' \
+    | "$BINARY" --checksum --output "$PRESERVED_CHECKSUM_OUTPUT" \
+        >"$TEMPORARY_DIRECTORY/preserved-checksum.stdout" \
+        2>"$TEMPORARY_DIRECTORY/preserved-checksum.stderr"
+PRESERVED_CHECKSUM_STATUS=$?
+set -e
+[[ "$PRESERVED_CHECKSUM_STATUS" -eq 1 ]] \
+    || fail "invalid checksummed input did not exit with status 1"
+if ! diff -u \
+    <(printf '%s\n' 'existing checksummed policy') \
+    "$PRESERVED_CHECKSUM_OUTPUT"
+then
+    fail "invalid checksummed input replaced the output"
+fi
+if ! diff -u \
+    <(printf '%s\n' 'existing detached checksum') \
+    "$PRESERVED_DETACHED_CHECKSUM"
+then
+    fail "invalid checksummed input replaced the detached checksum"
+fi
+
+CHECKSUM_FAILURE_OUTPUT="$TEMPORARY_DIRECTORY/checksum-failure.txt"
+printf '%s\n' 'preserved after checksum failure' >"$CHECKSUM_FAILURE_OUTPUT"
+mkdir "$CHECKSUM_FAILURE_OUTPUT.sha256"
+set +e
+printf '%s\n' '192.0.2.0/24' \
+    | "$BINARY" --checksum --output "$CHECKSUM_FAILURE_OUTPUT" \
+        >"$TEMPORARY_DIRECTORY/checksum-failure.stdout" \
+        2>"$TEMPORARY_DIRECTORY/checksum-failure.stderr"
+CHECKSUM_FAILURE_STATUS=$?
+set -e
+[[ "$CHECKSUM_FAILURE_STATUS" -eq 1 ]] \
+    || fail "detached checksum replacement failure did not exit with status 1"
+if ! diff -u \
+    <(printf '%s\n' 'preserved after checksum failure') \
+    "$CHECKSUM_FAILURE_OUTPUT"
+then
+    fail "detached checksum failure replaced the output"
+fi
+
+OUTPUT_FAILURE_PATH="$TEMPORARY_DIRECTORY/output-failure"
+mkdir "$OUTPUT_FAILURE_PATH"
+set +e
+printf '%s\n' '192.0.2.0/24' \
+    | "$BINARY" --checksum --output "$OUTPUT_FAILURE_PATH" \
+        >"$TEMPORARY_DIRECTORY/output-failure.stdout" \
+        2>"$TEMPORARY_DIRECTORY/output-failure.stderr"
+OUTPUT_FAILURE_STATUS=$?
+set -e
+[[ "$OUTPUT_FAILURE_STATUS" -eq 1 ]] \
+    || fail "output replacement failure did not exit with status 1"
+[[ -d "$OUTPUT_FAILURE_PATH" ]] \
+    || fail "output replacement failure changed the destination directory"
+[[ -s "$OUTPUT_FAILURE_PATH.sha256" ]] \
+    || fail "output replacement failure did not leave the new fail-closed checksum"
 
 printf 'cidrmerge smoke test passed\n'
