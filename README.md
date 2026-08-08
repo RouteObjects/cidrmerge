@@ -91,8 +91,8 @@ The SwiftPM executable product, source-built binary, and command are all named
 
 ## Command-line usage
 
-With no file operands, `cidrmerge` reads line-oriented text from standard
-input. For example:
+With no file operands, `cidrmerge` reads the selected input grammar from
+standard input. RouteObjects IP List Text v1 is the default. For example:
 
 ```sh
 printf '%s\n' \
@@ -119,7 +119,10 @@ output: 2 ranges (1 IPv4, 1 IPv6)
 reduction: 1 entry (33.3%)
 ```
 
-### Input semantics
+### Input formats and semantics
+
+`--input-format text|searchbot` selects one grammar for every operand in an
+invocation. The default `text` grammar accepts:
 
 - A bare IPv4 address means one `/32`; a bare IPv6 address means one `/128`.
 - Slash-qualified input has network semantics. For example,
@@ -133,6 +136,47 @@ reduction: 1 entry (33.3%)
   with files.
 - HTTP and HTTPS operands are rejected. Download changing inputs separately
   with `curl`, CI tooling, or another acquisition step.
+
+The `searchbot` grammar accepts the complete UTF-8 Google/Bing/Apple/OpenAI-
+compatible crawler-prefix JSON shape. It names a de facto compatible grammar,
+not a formal standard, provider identity check, or generic vendor decoder. The
+top-level object must contain a `prefixes` array. Each entry must contain exactly
+one string-valued `ipv4Prefix` or `ipv6Prefix` matching the declared family.
+Unknown top-level and entry metadata are ignored so publishers can add
+descriptive fields without changing the address-list contract.
+
+```json
+{
+  "creationTime": "2026-01-01T00:00:00Z",
+  "prefixes": [
+    { "ipv4Prefix": "192.0.2.0/24" },
+    { "ipv6Prefix": "2001:db8::/32" }
+  ]
+}
+```
+
+`creationTime` and other unknown metadata are ignored. The prefix values above
+use addresses reserved for documentation.
+
+Download vendor data explicitly, then compile the saved file offline:
+
+```sh
+curl --fail --location \
+  --output common-crawlers.json \
+  https://developers.google.com/static/crawling/ipranges/common-crawlers.json
+
+cidrmerge --input-format searchbot \
+  --raw --representation ranges --stats \
+  common-crawlers.json
+```
+
+Every searchbot operand is one complete document; NDJSON, concatenated JSON
+documents, malformed or trailing JSON, missing/ambiguous/duplicate
+policy-bearing members, non-string values, wrong-family prefixes, and invalid
+networks fail the whole operation. Diagnostics identify the source and JSON
+path such as `$.prefixes[2].ipv6Prefix`. An empty `prefixes` array is valid.
+JSON container nesting is limited to 128 levels. Statistics count extracted
+prefix values and their canonicalization, not documents or metadata.
 
 Every accepted value becomes an inclusive first-to-last address interval.
 Intervals are partitioned by family, numerically sorted, and coalesced. This
@@ -160,6 +204,7 @@ orthogonal to serialization:
 - Raw line-oriented output is the default; `--raw` selects it explicitly.
 - `--json` or `-j` emits structured JSON.
 - `--raw` and `--json` are mutually exclusive.
+- `--input-format text|searchbot` selects one input grammar for all operands.
 - `-o, --output <path>` atomically replaces a file instead of writing stdout.
 - `--stats` reports statistics for the selected representation on stderr.
 - `--version` prints the release version. `-v` is intentionally unassigned.
@@ -304,10 +349,11 @@ RPKI-derived data, explicitly project it to prefixes. The output is not a route
 advertisement or ROA and does not preserve ASN, AS path, community,
 `maxLength`, TAL, source, or validation state.
 
-The compiler is deliberately offline. Vendor feed acquisition, DNS, IRRd/RPKI
-queries, admission-policy hot reload, and named vendor policy generation do not
-belong in the 0.1 package boundary. Local-file and stdin parsing for a future
-`searchbot` schema and admission-policy output remain 0.2 design work.
+The compiler is deliberately offline. `--input-format searchbot` parses saved
+local files or standard input but never fetches them. Vendor feed acquisition,
+DNS, IRRd/RPKI queries, admission-policy hot reload, named vendor policy
+generation, and admission-policy serialization remain outside this package
+boundary.
 
 ## Performance
 

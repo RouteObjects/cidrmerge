@@ -55,6 +55,10 @@ jobs:
       - name: Test
         run: ./scripts/test.sh
 
+      # CHANGE: Keep hosted Core API and package-workflow documentation buildable with Xcode DocC.
+      - name: Build CIDRMergeCore documentation
+        run: ./scripts/check-documentation.sh
+
       - name: Release build and offline smoke test
         run: ./scripts/smoke-test.sh
 
@@ -122,6 +126,10 @@ jobs:
 
       - name: Test
         run: ./scripts/test.sh
+
+      # CHANGE: Verify the public Core graph on both supported Linux architectures.
+      - name: Validate CIDRMergeCore documentation surface
+        run: ./scripts/check-documentation.sh
 
       - name: Release build and offline smoke test
         run: ./scripts/smoke-test.sh

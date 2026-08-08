@@ -46,6 +46,12 @@ grep -Fq -- '--raw' "$HELP_STDOUT" \
     || fail "--help did not document raw output"
 grep -Fq -- '-j, --json' "$HELP_STDOUT" \
     || fail "--help did not document the short and long JSON flags"
+grep -Fq -- '--input-format <input-format>' "$HELP_STDOUT" \
+    || fail "--help did not document input format selection"
+grep -Fq 'Input grammar for every operand: text or searchbot.' "$HELP_STDOUT" \
+    || fail "--help did not document both input grammars"
+grep -Fq '(default: text)' "$HELP_STDOUT" \
+    || fail "--help did not identify text as the default input grammar"
 grep -Fq 'Semantic representation: ranges or cidr.' "$HELP_STDOUT" \
     || fail "--help did not document both representations"
 grep -Fq '(default: ranges)' "$HELP_STDOUT" \
@@ -104,6 +110,68 @@ then
     fail "JSON output schema or deterministic ordering did not match"
 fi
 
+SEARCHBOT_STDOUT="$TEMPORARY_DIRECTORY/searchbot.stdout"
+SEARCHBOT_STDERR="$TEMPORARY_DIRECTORY/searchbot.stderr"
+printf '%s' \
+    '{"creationTime":"fixture","prefixes":[{"ipv6Prefix":"2001:0DB8::1/126"},{"ipv4Prefix":"192.0.2.1/31"},{"ipv4Prefix":"192.0.2.2/31"}]}' \
+    | "$BINARY" --input-format searchbot --representation cidr --stats \
+        >"$SEARCHBOT_STDOUT" 2>"$SEARCHBOT_STDERR"
+
+if ! diff -u \
+    <(printf '%s\n' '192.0.2.0/30' '2001:db8::/126') \
+    "$SEARCHBOT_STDOUT"
+then
+    fail "searchbot stdin did not produce deterministic CIDR output"
+fi
+
+if ! diff -u \
+    <(printf '%s\n' \
+        'input: 3 entries (2 IPv4, 1 IPv6)' \
+        'normalized: 2 entries' \
+        'output: 2 prefixes (1 IPv4, 1 IPv6)' \
+        'reduction: 1 entry (33.3%)') \
+    "$SEARCHBOT_STDERR"
+then
+    fail "searchbot statistics stderr did not match"
+fi
+
+INVALID_SEARCHBOT_STDOUT="$TEMPORARY_DIRECTORY/invalid-searchbot.stdout"
+INVALID_SEARCHBOT_STDERR="$TEMPORARY_DIRECTORY/invalid-searchbot.stderr"
+set +e
+printf '%s' '{"prefixes":[{"ipv4Prefix":17}]}' \
+    | "$BINARY" --input-format searchbot \
+        >"$INVALID_SEARCHBOT_STDOUT" 2>"$INVALID_SEARCHBOT_STDERR"
+INVALID_SEARCHBOT_STATUS=$?
+set -e
+
+[[ "$INVALID_SEARCHBOT_STATUS" -eq 1 ]] \
+    || fail "invalid searchbot input exited with status $INVALID_SEARCHBOT_STATUS instead of 1"
+[[ ! -s "$INVALID_SEARCHBOT_STDOUT" ]] \
+    || fail "invalid searchbot input produced partial stdout"
+grep -Fq \
+    'cidrmerge: <stdin>:$.prefixes[0].ipv4Prefix: error: invalid searchbot input: value has the wrong JSON type' \
+    "$INVALID_SEARCHBOT_STDERR" \
+    || fail "invalid searchbot diagnostic did not identify <stdin> and the prefix path"
+
+DUPLICATE_SEARCHBOT_STDOUT="$TEMPORARY_DIRECTORY/duplicate-searchbot.stdout"
+DUPLICATE_SEARCHBOT_STDERR="$TEMPORARY_DIRECTORY/duplicate-searchbot.stderr"
+set +e
+printf '%s' \
+    '{"prefixes":[{"ipv4Prefix":"192.0.2.0/24","ipv4Prefix":"198.51.100.0/24"}]}' \
+    | "$BINARY" --input-format searchbot \
+        >"$DUPLICATE_SEARCHBOT_STDOUT" 2>"$DUPLICATE_SEARCHBOT_STDERR"
+DUPLICATE_SEARCHBOT_STATUS=$?
+set -e
+
+[[ "$DUPLICATE_SEARCHBOT_STATUS" -eq 1 ]] \
+    || fail "duplicate searchbot member exited with status $DUPLICATE_SEARCHBOT_STATUS instead of 1"
+[[ ! -s "$DUPLICATE_SEARCHBOT_STDOUT" ]] \
+    || fail "duplicate searchbot member produced partial stdout"
+grep -Fq \
+    'cidrmerge: <stdin>:$.prefixes[0].ipv4Prefix: error: invalid searchbot input: duplicate JSON member' \
+    "$DUPLICATE_SEARCHBOT_STDERR" \
+    || fail "duplicate searchbot diagnostic did not identify the semantic member"
+
 INVALID_STDOUT="$TEMPORARY_DIRECTORY/invalid.stdout"
 INVALID_STDERR="$TEMPORARY_DIRECTORY/invalid.stderr"
 
@@ -143,6 +211,32 @@ if ! diff -u \
     "$PRESERVED_OUTPUT"
 then
     fail "invalid input replaced an existing output file"
+fi
+
+VALID_SEARCHBOT_FILE="$TEMPORARY_DIRECTORY/valid-searchbot.json"
+INVALID_SEARCHBOT_FILE="$TEMPORARY_DIRECTORY/invalid-searchbot.json"
+PRESERVED_SEARCHBOT_OUTPUT="$TEMPORARY_DIRECTORY/preserved-searchbot-output.txt"
+printf '%s' '{"prefixes":[{"ipv4Prefix":"192.0.2.0/24"}]}' \
+    >"$VALID_SEARCHBOT_FILE"
+printf '%s' '{"prefixes":[{"ipv6Prefix":false}]}' \
+    >"$INVALID_SEARCHBOT_FILE"
+printf '%s\n' 'existing searchbot policy' >"$PRESERVED_SEARCHBOT_OUTPUT"
+
+set +e
+"$BINARY" --input-format searchbot --output "$PRESERVED_SEARCHBOT_OUTPUT" \
+    "$VALID_SEARCHBOT_FILE" "$INVALID_SEARCHBOT_FILE" \
+    >"$TEMPORARY_DIRECTORY/preserved-searchbot.stdout" \
+    2>"$TEMPORARY_DIRECTORY/preserved-searchbot.stderr"
+PRESERVED_SEARCHBOT_STATUS=$?
+set -e
+
+[[ "$PRESERVED_SEARCHBOT_STATUS" -eq 1 ]] \
+    || fail "invalid later searchbot document exited with status $PRESERVED_SEARCHBOT_STATUS instead of 1"
+if ! diff -u \
+    <(printf '%s\n' 'existing searchbot policy') \
+    "$PRESERVED_SEARCHBOT_OUTPUT"
+then
+    fail "invalid later searchbot document replaced an existing output file"
 fi
 
 printf 'cidrmerge smoke test passed\n'

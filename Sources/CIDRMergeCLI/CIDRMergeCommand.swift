@@ -29,6 +29,12 @@ package struct CIDRMergeCommand: ParsableCommand {
     var outputFormat: OutputFormat = .raw
 
     @Option(
+        name: .customLong("input-format"),
+        help: "Input grammar for every operand: text or searchbot. The default is text."
+    )
+    var inputFormat: InputFormat = .text
+
+    @Option(
         name: .customLong("representation"),
         help: "Semantic representation: ranges or cidr. The default is ranges."
     )
@@ -47,7 +53,7 @@ package struct CIDRMergeCommand: ParsableCommand {
     var outputPath: String?
 
     @Argument(
-        help: "Local text files. With no input, read stdin; use '-' once to include stdin explicitly."
+        help: "Local input files. With no input, read stdin; use '-' once to include stdin explicitly."
     )
     var inputs: [String] = []
 
@@ -62,6 +68,7 @@ package struct CIDRMergeCommand: ParsableCommand {
     package mutating func run() throws {
         try CIDRMergeApplication.live.run(
             inputs: inputs,
+            inputFormat: inputFormat,
             outputFormat: outputFormat,
             representation: representation,
             includeStatistics: stats,
@@ -96,3 +103,4 @@ extension OutputFormat: EnumerableFlag {
 }
 
 extension OutputRepresentation: ExpressibleByArgument {}
+extension InputFormat: ExpressibleByArgument {}
