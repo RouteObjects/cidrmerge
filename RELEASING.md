@@ -11,7 +11,7 @@ Start from a clean `main` that matches its remote. The version must not have a
 leading `v`:
 
 ```sh
-version=0.1.0
+version=0.2.0
 git switch main
 git pull --ff-only origin main
 git status --short --branch

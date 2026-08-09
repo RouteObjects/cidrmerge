@@ -17,7 +17,7 @@ import Foundation
 // Package access lets the thin executable invoke Argument Parser while the command remains in the
 // regular CIDRMergeCLI module used by SwiftPM and Xcode tests.
 package struct CIDRMergeCommand: ParsableCommand {
-    static let version = "0.1.0"
+    static let version = "0.2.0"
 
     package static let configuration = CommandConfiguration(
         commandName: "cidrmerge",

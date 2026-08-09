@@ -32,7 +32,7 @@ x86-64. Select the archive for the current host, download it together with the
 published checksum file, and verify it before installation:
 
 ```sh
-version=0.1.0
+version=0.2.0
 case "$(uname -s)-$(uname -m)" in
   Darwin-arm64)  platform=darwin-aarch64 ;;
   Darwin-x86_64) platform=darwin-x86_64 ;;
