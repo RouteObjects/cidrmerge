@@ -1,4 +1,10 @@
-# cidrmerge
+<h1 align="left">
+  <img src="Documentation/Assets/cidrmerge-icon.png" alt="cidrmerge icon" width="75" height="75" valign="middle">
+  &nbsp;cidrmerge
+</h1>
+
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FRouteObjects%2Fcidrmerge%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/RouteObjects/cidrmerge)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FRouteObjects%2Fcidrmerge%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/RouteObjects/cidrmerge)
 
 `cidrmerge` is an offline policy compiler and reusable Swift library. It turns
 IPv4 and IPv6 addresses, networks, and inclusive ranges into a deterministic,
