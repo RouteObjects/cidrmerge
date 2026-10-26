@@ -36,7 +36,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/apple/swift-crypto.git",
-            .upToNextMajor(from: "4.5.1")
+            .upToNextMajor(from: "5.0.3")
         ),
     ],
     targets: [
