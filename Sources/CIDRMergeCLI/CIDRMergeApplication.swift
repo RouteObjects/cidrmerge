@@ -53,7 +53,7 @@ struct CIDRMergeApplication: Sendable {
         includeChecksum: Bool = false,
         outputPath: String?
     ) throws {
-        // CHANGE: Reject incompatible destinations before an input file or stdin is consumed.
+        // Reject incompatible destinations before an input file or stdin is consumed.
         try DetachedSHA256Checksum.validate(
             isEnabled: includeChecksum,
             outputPath: outputPath

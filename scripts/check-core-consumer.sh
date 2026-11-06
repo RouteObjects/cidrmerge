@@ -19,7 +19,7 @@ fail() {
 mkdir -p "${CONSUMER_ROOT}/Sources/CoreConsumer"
 
 cat >"${CONSUMER_ROOT}/Package.swift" <<EOF
-// swift-tools-version: 6.1
+// swift-tools-version: 6.2
 
 import PackageDescription
 
@@ -27,12 +27,12 @@ let package = Package(
     name: "CoreConsumer",
     platforms: [.macOS(.v15)],
     dependencies: [
-        // CHANGE: Give the local dependency a stable identity even when a release
+        // Give the local dependency a stable identity even when a release
         // snapshot or consumer checks out the package under another directory name.
         .package(name: "cidrmerge", path: "${PACKAGE_ROOT}"),
         .package(
             url: "https://github.com/RouteObjects/swift-cidr.git",
-            .upToNextMinor(from: "0.5.0")
+            .upToNextMinor(from: "0.8.1")
         ),
     ],
     targets: [

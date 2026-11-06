@@ -1,4 +1,4 @@
-// swift-tools-version: 6.1
+// swift-tools-version: 6.2
 
 //===----------------------------------------------------------------------===//
 //
@@ -28,7 +28,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/RouteObjects/swift-cidr.git",
-            .upToNextMinor(from: "0.5.0")
+            .upToNextMinor(from: "0.8.1")
         ),
         .package(
             url: "https://github.com/apple/swift-argument-parser",
@@ -36,7 +36,7 @@ let package = Package(
         ),
         .package(
             url: "https://github.com/apple/swift-crypto.git",
-            .upToNextMajor(from: "4.5.1")
+            .upToNextMajor(from: "5.1.1")
         ),
     ],
     targets: [
@@ -54,7 +54,7 @@ let package = Package(
                 "CIDRMergeCore",
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 .product(name: "CIDR", package: "swift-cidr"),
-                // CHANGE: Exact-byte integrity belongs to the CLI artifact boundary, not Core.
+                // Exact-byte integrity belongs to the CLI artifact boundary, not Core.
                 .product(name: "Crypto", package: "swift-crypto"),
             ]
         ),

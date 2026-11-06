@@ -19,14 +19,14 @@ or adjacent coverage; it never fills an uncovered gap to make output shorter.
 
 ## Requirements
 
-- Swift 6.1 or newer when building from source or using the `CIDRMergeCore`
+- Swift 6.2 or newer when building from source or using the `CIDRMergeCore`
   library through SwiftPM
 - macOS 15 or newer, or Ubuntu 22.04 or newer, to run the command-line
   executable
 - iOS 18 or newer when using `CIDRMergeCore` in an application
 
 The package is verified against the declared compatibility floors of
-`swift-cidr` 0.5.0, Swift Argument Parser 1.7.0, and Swift Crypto 4.5.1.
+`swift-cidr` 0.8.1, Swift Argument Parser 1.7.0, and Swift Crypto 5.1.1.
 `Package.resolved` records the exact dependency revisions used for release
 verification. Swift Crypto is used only by the CLI artifact boundary;
 `CIDRMergeCore` does not import or link it.
@@ -135,6 +135,8 @@ invocation. The default `text` grammar accepts:
 - A bare IPv4 address means one `/32`; a bare IPv6 address means one `/128`.
 - Slash-qualified input has network semantics. For example,
   `192.0.2.129/24` canonicalizes to the coverage of `192.0.2.0/24`.
+  Prefix lengths use canonical unsigned decimal text; padded and signed forms
+  such as `/024`, `/+24`, and `/-0` are rejected.
 - An inclusive range uses exactly `lower...upper`, with address-only endpoints
   from the same family. Reversed bounds and CIDR-qualified endpoints are
   rejected.
@@ -294,7 +296,7 @@ dependencies: [
     ),
     .package(
         url: "https://github.com/RouteObjects/swift-cidr.git",
-        .upToNextMinor(from: "0.5.0")
+        .upToNextMinor(from: "0.8.1")
     ),
 ],
 targets: [

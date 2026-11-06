@@ -88,7 +88,7 @@ enum SearchbotInputLoader {
 
         let document: SearchbotDocument
         do {
-            // CHANGE: Searchbot operands are complete documents by contract. Decoding the whole
+            // Searchbot operands are complete documents by contract. Decoding the whole
             // value also rejects malformed or trailing JSON before any output can be committed.
             document = try JSONDecoder().decode(SearchbotDocument.self, from: data)
         } catch let issue as SearchbotDecodingIssue {
@@ -161,7 +161,7 @@ private struct SearchbotPrefix: Decodable {
         let hasIPv4 = container.contains(.ipv4Prefix)
         let hasIPv6 = container.contains(.ipv6Prefix)
 
-        // CHANGE: `contains` distinguishes an absent key from an explicitly null key, ensuring
+        // `contains` distinguishes an absent key from an explicitly null key, ensuring
         // null is diagnosed as a wrong value instead of being mistaken for an omitted family.
         guard hasIPv4 != hasIPv6 else {
             throw SearchbotDecodingIssue(
@@ -307,7 +307,7 @@ private struct SearchbotJSONPreflight {
             let keyToken = try scanStringToken()
             let key = try decodeString(in: keyToken)
 
-            // CHANGE: Foundation collapses duplicate object members. Detect the policy-bearing
+            // Foundation collapses duplicate object members. Detect the policy-bearing
             // keys structurally so equivalent spellings cannot select different prefixes.
             if let path = semanticPath(for: key, in: context),
                 !semanticMembers.insert(key).inserted

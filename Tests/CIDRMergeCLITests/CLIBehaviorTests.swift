@@ -66,6 +66,34 @@ struct TextInputTests {
         }
     }
 
+    @Test("Text input rejects noncanonical prefixes and malformed IPv6 literals")
+    func rejectsCorrectedSwiftCIDRGrammar() {
+        // Lock cidrmerge to the validation corrections adopted with swift-cidr 0.8.1.
+        let invalidValues = [
+            "192.0.2.0/032",
+            "192.0.2.0/+24",
+            "192.0.2.0/-0",
+            "00000::1/64",
+            "1:2:3:4:5:6:7:8:/64",
+            "1:2:3:4:5:6:7:8::/64",
+        ]
+
+        for value in invalidValues {
+            #expect(
+                throws: CIDRMergeError.invalidInput(
+                    source: "grammar.txt",
+                    line: 1,
+                    value: value
+                )
+            ) {
+                try TextInputLoader.load(
+                    data: Data("\(value)\n".utf8),
+                    source: "grammar.txt"
+                )
+            }
+        }
+    }
+
     @Test("Text input accepts strict address ranges and canonicalizes their spelling")
     func acceptsAddressRanges() throws {
         let collection = try TextInputLoader.load(

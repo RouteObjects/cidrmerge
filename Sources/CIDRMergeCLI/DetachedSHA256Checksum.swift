@@ -87,7 +87,7 @@ struct OutputCommitter: Sendable {
         }
 
         if includeChecksum {
-            // CHANGE: Commit the detached verifier first. Any later failure leaves a missing or
+            // Commit the detached verifier first. Any later failure leaves a missing or
             // mismatched pair that an admission consumer using required verification rejects.
             let checksum = try DetachedSHA256Checksum.render(
                 output: output,

@@ -62,7 +62,7 @@ enum InputSources {
             throw CIDRMergeError.repeatedStandardInput
         }
 
-        // CHANGE: Preflight the complete operand list so a later URL cannot cause earlier local
+        // Preflight the complete operand list so a later URL cannot cause earlier local
         // files or standard input to be consumed before the deterministic offline boundary fails.
         if let source = sources.first(where: isHTTPURL) {
             throw CIDRMergeError.unsupportedURL(source)

@@ -73,9 +73,9 @@ jobs:
   linux:
     name: Linux ${{ matrix.arch }}
     runs-on: ${{ matrix.runner }}
-    # swift:6.1-jammy multi-architecture manifest, resolved 2026-07-24.
+    # swift:6.2.4-jammy multi-architecture manifest, resolved 2026-11-05.
     container: >-
-      swift:6.1-jammy@sha256:12be34a341945adb64914405ed7b568fcb2d35edbd63a3755007e47dce59456e
+      swift:6.2.4-jammy@sha256:7889980d84f47447d109990a6763f3a7997acf2d1059bbd7c56f7e0af6243f73
     defaults:
       run:
         # CHANGE: Container jobs otherwise use /bin/sh, which does not support pipefail.
@@ -147,17 +147,17 @@ jobs:
 
           # CHANGE: Initialize SwiftPM workspace state before resolving individual package floors.
           swift package resolve
-          swift package resolve swift-cidr --version 0.5.0
+          swift package resolve swift-cidr --version 0.8.1
           swift package resolve swift-argument-parser --version 1.7.0
-          swift package resolve swift-crypto --version 4.5.1
+          swift package resolve swift-crypto --version 5.1.1
 
           awk -F '"' '
             /"identity"/ { identity = $4 }
             /"version"/ && $4 != "" { print identity " " $4 }
           ' Package.resolved >resolved-versions.txt
-          grep -qx 'swift-cidr 0.5.0' resolved-versions.txt
+          grep -qx 'swift-cidr 0.8.1' resolved-versions.txt
           grep -qx 'swift-argument-parser 1.7.0' resolved-versions.txt
-          grep -qx 'swift-crypto 4.5.1' resolved-versions.txt
+          grep -qx 'swift-crypto 5.1.1' resolved-versions.txt
 
           swift build --product cidrmerge
           ./scripts/test.sh
