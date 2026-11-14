@@ -40,7 +40,9 @@ for scenario in "${SCENARIOS[@]}"; do
             /usr/bin/time -p -l -o "$metrics" "$BINARY" --representation "$representation" "$fixture" >/dev/null
             peak_rss_kb="$(awk '/maximum resident set size/ { printf "%.0f", $1 / 1024 }' "$metrics")"
         else
-            /usr/bin/time -p -v -o "$metrics" "$BINARY" --representation "$representation" "$fixture" >/dev/null
+            # CHANGE: GNU time's verbose format overrides -p; request the fields parsed below explicitly.
+            /usr/bin/time -f 'real %e\nuser %U\nsys %S\nMaximum resident set size (kbytes): %M' \
+                -o "$metrics" "$BINARY" --representation "$representation" "$fixture" >/dev/null
             peak_rss_kb="$(awk -F ': ' '/Maximum resident set size/ { print $2 }' "$metrics")"
         fi
 

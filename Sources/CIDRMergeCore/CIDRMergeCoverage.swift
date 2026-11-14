@@ -64,22 +64,52 @@ public struct CIDRMergeCoverage: Sendable, Hashable {
     }
 
     /// The normalized family-erased ranges, ordered IPv4 first and then IPv6.
+    @inlinable
     public var ranges: [AnyIPAddressRange] {
+        // Let rebuilt clients return empty coverage without an out-of-line call.
+        guard !ipv4.ranges.isEmpty || !ipv6.ranges.isEmpty else { return [] }
+        return nonemptyRanges()
+    }
+
+    // Keep loops out of line while supporting the inlinable empty fast path.
+    @usableFromInline
+    @inline(never)
+    internal func nonemptyRanges() -> [AnyIPAddressRange] {
         var result: [AnyIPAddressRange] = []
         result.reserveCapacity(ipv4.ranges.count + ipv6.ranges.count)
-        result.append(contentsOf: ipv4.ranges.map(AnyIPAddressRange.v4))
-        result.append(contentsOf: ipv6.ranges.map(AnyIPAddressRange.v6))
+        // Append family projections into the reserved buffer without intermediate arrays.
+        for range in ipv4.ranges {
+            result.append(.v4(range))
+        }
+        for range in ipv6.ranges {
+            result.append(.v6(range))
+        }
         return result
     }
 
     /// The smallest exact CIDR cover, ordered IPv4 first and then IPv6.
+    @inlinable
     public func summarizedNetworks() -> [AnyIPNetwork] {
+        // Let rebuilt clients return empty coverage without an out-of-line call.
+        guard !ipv4.ranges.isEmpty || !ipv6.ranges.isEmpty else { return [] }
+        return nonemptySummarizedNetworks()
+    }
+
+    // Keep loops out of line while supporting the inlinable empty fast path.
+    @usableFromInline
+    @inline(never)
+    internal func nonemptySummarizedNetworks() -> [AnyIPNetwork] {
         let ipv4Networks = ipv4.summarizedNetworks()
         let ipv6Networks = ipv6.summarizedNetworks()
         var result: [AnyIPNetwork] = []
         result.reserveCapacity(ipv4Networks.count + ipv6Networks.count)
-        result.append(contentsOf: ipv4Networks.map(AnyIPNetwork.v4))
-        result.append(contentsOf: ipv6Networks.map(AnyIPNetwork.v6))
+        // Project networks directly while preserving deterministic IPv4-first output.
+        for network in ipv4Networks {
+            result.append(.v4(network))
+        }
+        for network in ipv6Networks {
+            result.append(.v6(network))
+        }
         return result
     }
 

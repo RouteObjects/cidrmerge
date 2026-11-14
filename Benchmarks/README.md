@@ -23,6 +23,26 @@ distributions. `arbitrary-ranges` exercises range-to-CIDR expansion, while
 `overlapping-ranges` exercises heavy coalescing. These corpora contain no operational
 routing or authorization data.
 
+## 0.4.0 Summarization Qualification
+
+The [latest 0.4.0 qualification](Results/2026-11-13-summarization/RESULTS.md#final-follow-up-explicit-loops-and-the-empty-call-fast-path)
+uses explicit family-projection loops and inlinable empty guards. The complete
+57-test suite passed in 14 normal Debug/Release configurations across macOS,
+ARM64 Linux and x86-64 Linux, plus a separate Linux dependency-floor run.
+
+Matched Swift 6.4.2 Core and CLI comparisons cover all three platforms, with
+additional focused Swift 6.3.3 Core controls on both Linux architectures.
+No selected G/E Core wall-clock p50/p90 or CLI paired elapsed comparison exceeds +5%.
+Exact CLI output, coverage and fixed cardinalities are preserved on all three
+platforms, and every measured/warmup CLI invocation stays below 512 MiB RSS.
+The strict Linux empty-allocation gates pass. The Mac raw gate retains one
+16-byte event in each empty total-allocation histogram; a fixed-empty-array control
+reproduces it only with ARC metrics enabled. The report keeps that gate false,
+explains the diagnostic, and retains sparse-sample limits and all historical
+lazy-map and rejected-candidate results. These measurements apply to the recorded
+toolchains; distributed archives use the Swift 6.2 compatibility toolchain and
+receive separate release validation.
+
 ## Initial Baseline
 
 Captured 2026-07-11 on arm64 macOS 26.5.2 with Swift 6.3.2. Each row is a

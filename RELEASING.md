@@ -11,7 +11,7 @@ Start from a clean `main` that matches its remote. The version must not have a
 leading `v`:
 
 ```sh
-version=0.3.0
+version=0.4.0
 git switch main
 git pull --ff-only origin main
 git status --short --branch
@@ -23,10 +23,10 @@ Confirm every release commit has a valid signature and inspect all content that
 will become public. Do not continue if the tree, history, workflow logs, or
 artifacts expose credentials, private paths, or internal-only material.
 
-## Run the private dry run
+## Run the release dry run
 
-While the repository is private, let the push to `main` complete the automatic
-Linux x86-64 and ARM64 CI jobs. Then manually dispatch `.github/workflows/ci.yml`
+Let the push to `main` complete the automatic Linux x86-64 and ARM64 CI jobs.
+Then manually dispatch `.github/workflows/ci.yml`
 and require its macOS job, including the iOS Core simulator build, to pass.
 
 Manually dispatch `.github/workflows/release.yml` with the intended version. A
