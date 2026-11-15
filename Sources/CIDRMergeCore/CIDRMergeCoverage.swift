@@ -49,6 +49,8 @@ public struct CIDRMergeCoverage: Sendable, Hashable {
     ///
     /// This package-only path preserves the streaming parser's bounded staging cost while keeping
     /// the public API centered on family-erased swift-cidr ranges.
+    // Let the CLI carry its concrete array types through the upstream coalescing chain.
+    @inlinable
     package init<IPv4Ranges: Sequence, IPv6Ranges: Sequence>(
         ipv4Ranges: IPv4Ranges,
         ipv6Ranges: IPv6Ranges
