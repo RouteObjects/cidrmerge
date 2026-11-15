@@ -1,0 +1,22 @@
+{
+  "created_at": "2026-11-14T21:17:39.002277+00:00",
+  "platform": "native macOS ARM64, AppleM1Max, 64GiB, ACpower",
+  "primary_suite": "All4tools process identical prepartitioned IPv4/IPv6files sequentially; elapsed=sum, peakRSS=max perprocess",
+  "native_suite": "cidrmerge,rs-aggregate,mapcidr process identical unsplit mixed-disjoint,mixed-permuted,mixed-overlap inputs",
+  "rounds": {
+    "split": 8,
+    "native": 9
+  },
+  "warmup": "One independentlyverified excludedrun pertool/case/suite; freshprocess,warmcache",
+  "order": "Rotatecaseorder;toolpositionsbalanced with alternatingforward/reversed rotationgroups",
+  "time": "Pythonperf_counter_nsaroundblockingPopen/waitincludingBSDtime launcher; no pollingwait; rawBSDreal,user,sysretained",
+  "memory": "BSDtime maximumresidentsetsizebytes; notcombinedsystem/pipeline memory",
+  "outputs": "WritefilesunderDownloads; hashoutsideclockagainstindependentlyverifiedwarmup; removeonlyidenticalduplicateoutputfiles; nofsyncdurabilityclaim",
+  "coverage": "IndependentPythonstdlibparser+numericintervalunion+minimumCIDRcount; expectedvaluesderivefromactualfixturebytes",
+  "timeout_seconds_per_process": 180,
+  "failure_policy": "Preservefailures; noautomaticsamplereplacement; stopmeasurementonunexpectedexit,stderr,oroutputchange",
+  "native_ranges": "range-derived-mixed starts500k six-addressintervals expandedto1millionCIDRs beforetiming for everytool; notnative-rangeparsing benchmark",
+  "threading": "Tooldefaults; noRAYONorGOMAXPROCSoverrides",
+  "isolation": "NoCPUaffinity/frequencylock, no coldcacheclaim, ordinaryactiveMac; alltaskbuilds/generationstoppedbeforemeasure",
+  "storage": "AlltasktemporarydataunderDownloads; nosystempackageinstall"
+}

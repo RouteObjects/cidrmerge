@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "started_at": "2026-11-14T21:54:26.108404+00:00",
+  "finished_at": "2026-11-14T21:54:27.098801+00:00",
+  "auditor": "Independent subagent; raw fixture manifests, frozen SHA-256 records, oracle receipts, retained stdout bytes, and per-process sample receipts checked independently of summary statistics.",
+  "scope": "Post-measurement integrity and coverage-evidence audit. No benchmark reruns and no repeated IP parsing. Previously parsed warmup coverage receipts are bound to retained stdout by freshly computed SHA-256 hashes.",
+  "checks": {
+    "assertions": 7762,
+    "frozen_files": 53,
+    "analysis_freeze_files": 1,
+    "fixture_text_files": 24,
+    "fixture_manifests": 8,
+    "retained_warmup_outputs_rehashed": 61,
+    "warmup_coverage_receipts": 41,
+    "removed_measured_outputs_with_receipts": 497,
+    "measured_process_parts": 497,
+    "measured_samples": 337
+  },
+  "measured_process_parts_by_suite": {
+    "native": 81,
+    "split": 416
+  },
+  "measured_samples_by_suite": {
+    "split": 256,
+    "native": 81
+  },
+  "fixture_expectations": {
+    "ipv4-disjoint": {
+      "coverage_sha256": "cb99f73e676decc558271dea259da1aa13347bb0bccde3a039f74274799d066e",
+      "range_count": 1000000,
+      "minimal_cidr_count": 1000000
+    },
+    "ipv6-disjoint": {
+      "coverage_sha256": "7569660dd4e371291c04d2b10870e55560001a75756b7be41d5b88bb9a2647bd",
+      "range_count": 1000000,
+      "minimal_cidr_count": 1000000
+    },
+    "mixed-disjoint": {
+      "coverage_sha256": "f774655f3baf3e1a545e7b80e472d6203efa990d4a442e57080b74fe0a19f329",
+      "range_count": 1000000,
+      "minimal_cidr_count": 1000000
+    },
+    "mixed-permuted": {
+      "coverage_sha256": "f774655f3baf3e1a545e7b80e472d6203efa990d4a442e57080b74fe0a19f329",
+      "range_count": 1000000,
+      "minimal_cidr_count": 1000000
+    },
+    "mixed-overlap": {
+      "coverage_sha256": "d5abf69f7b997011affb11ca5d9bae4ca1d3b5435ce79a73394dabe4273cbc41",
+      "range_count": 2,
+      "minimal_cidr_count": 2
+    },
+    "mixed-adjacent": {
+      "coverage_sha256": "5752e52176ff29565b7e11d5f6549244de095c540624fdd183e80129256dd3f2",
+      "range_count": 2,
+      "minimal_cidr_count": 14
+    },
+    "bgp-like-ipv4": {
+      "coverage_sha256": "4f674a8e92ed5bfbc5771b2cd93f1eb541a0d7ed97d238fe04ebd2ad4180415f",
+      "range_count": 193255,
+      "minimal_cidr_count": 233532
+    },
+    "range-derived-mixed": {
+      "coverage_sha256": "076c8dc1f981a852d8edd4682510b0aed325665c79482c3cf5ac379c8b5e8986",
+      "range_count": 500000,
+      "minimal_cidr_count": 1000000
+    }
+  },
+  "evidence_sha256": {
+    "control/freeze.json": "205320e58fc96fe67202b1f24b1c00a4ac79b0e3b2cebfe5124b9f183f61ecf2",
+    "control/analysis-freeze.json": "03dcec455b27b63fa1180d3599a0fae855267587b6509c3c946bcc1d171576c9",
+    "fixtures/generation-receipt.json": "9c11b5e3b8126a38680baa8da9815a36817dcf5550384fa709c85b4e7f4a2267",
+    "verification-matrix.json": "d65ce6dff118f12c8a0f8a872055a4f4f1e8284ab4bb086ea0e28963f13df107",
+    "measurement-complete.json": "3138af41de8f049073dada7ad7229c8636fb503327672fdc5922646566d91884",
+    "summary.json": "4bca91951441d505905b4392b268350cf250b63d163d0a73368b871f8120f63b"
+  },
+  "limitations": [
+    "Measured stdout duplicate files were removed by the benchmark runner after recorded exact-hash agreement; this audit verifies those stored hashes against freshly rehashed retained warmup outputs, not unavailable duplicate bytes.",
+    "The freeze manifest itself is recorded by its current hash; all 53 content hashes it freezes match, and fixture manifest/expected hashes also match the separate generation receipt."
+  ],
+  "errors": []
+}

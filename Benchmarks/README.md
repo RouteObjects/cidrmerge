@@ -43,6 +43,20 @@ lazy-map and rejected-candidate results. These measurements apply to the recorde
 toolchains; distributed archives use the Swift 6.2 compatibility toolchain and
 receive separate release validation.
 
+## 0.4.0 Competitor Comparison
+
+The [2026-11-14 comparison](Results/2026-11-14-competitors/RESULTS.md) measures
+cidrmerge 0.4.0, rs-aggregate 0.3.2, iprange 2.1.1, and mapCIDR 1.1.97 on matched
+million-record inputs on an M1 Max Mac. All 41 coverage preflights and 337 measured
+samples passed. rs-aggregate had the lowest median elapsed time in all tested
+cases; iprange had the lowest peak RSS in the separate-family suite. cidrmerge
+was faster than mapCIDR throughout and faster than iprange on IPv6-disjoint input.
+
+The report separates prepartitioned-family measurements from native mixed-file
+runs, documents the shipped cidrmerge Swift 6.2 build, and includes all samples,
+spread, peak memory, binary pins, and reproduction scripts. It preserves the
+historical qualification evidence and makes no cross-platform performance claim.
+
 ## Initial Baseline
 
 Captured 2026-07-11 on arm64 macOS 26.5.2 with Swift 6.3.2. Each row is a
