@@ -157,20 +157,24 @@ enum TextInputLoader {
         var lineNumber = 1
 
         do {
-            while let data = try handle.read(upToCount: chunkSize), !data.isEmpty {
-                for byte in data {
-                    if byte == 0x0A {
-                        try consumeLine(
-                            pending,
-                            source: source,
-                            lineNumber: lineNumber,
-                            into: &collection
+            while true {
+                #if canImport(ObjectiveC)
+                    // Bound Foundation temporaries around both the read and its consumption.
+                    // Only owned pending bytes and parsed values survive into the next chunk.
+                    let hasData = try autoreleasepool {
+                        try consumeChunk(
+                            handle, source: source, pending: &pending,
+                            lineNumber: &lineNumber, into: &collection
                         )
-                        pending.removeAll(keepingCapacity: true)
-                        lineNumber += 1
-                    } else {
-                        pending.append(byte)
                     }
+                #else
+                    let hasData = try consumeChunk(
+                        handle, source: source, pending: &pending,
+                        lineNumber: &lineNumber, into: &collection
+                    )
+                #endif
+                if !hasData {
+                    break
                 }
             }
 
@@ -190,6 +194,33 @@ enum TextInputLoader {
                 reason: error.localizedDescription
             )
         }
+    }
+
+    private static func consumeChunk(
+        _ handle: FileHandle,
+        source: String,
+        pending: inout [UInt8],
+        lineNumber: inout Int,
+        into collection: inout ParsedInput
+    ) throws -> Bool {
+        guard let data = try handle.read(upToCount: chunkSize), !data.isEmpty else {
+            return false
+        }
+        for byte in data {
+            if byte == 0x0A {
+                try consumeLine(
+                    pending,
+                    source: source,
+                    lineNumber: lineNumber,
+                    into: &collection
+                )
+                pending.removeAll(keepingCapacity: true)
+                lineNumber += 1
+            } else {
+                pending.append(byte)
+            }
+        }
+        return true
     }
 
     private static func consumeLine(

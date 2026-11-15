@@ -1,0 +1,1622 @@
+{
+  "content_kind": "compact transformed follow-up scalar evidence",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "platform": "arm64",
+  "original_summary_sha256": "985a26fff488cab67ec62814872a63c756326b2e0f717c4e5193425fb1e09f7b",
+  "primary_summary_sha256": "976596c9fc3baf2a767bdf3f006b0a5b173d2b80bdec39c17bdfe48c84905fd4",
+  "separate_followup_not_pooled": true,
+  "measured_samples": [
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 314377407,
+      "cpu_seconds": 0.314021,
+      "peak_rss_bytes": 44290048,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 314377407,
+          "exit_code": 0,
+          "peak_rss_bytes": 44290048,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.301021,
+          "cpu_system_s": 0.013,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.314021
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 316816078,
+      "cpu_seconds": 0.316021,
+      "peak_rss_bytes": 44273664,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 316816078,
+          "exit_code": 0,
+          "peak_rss_bytes": 44273664,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.298077,
+          "cpu_system_s": 0.017943999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.316021
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 503778728,
+      "cpu_seconds": 0.503371,
+      "peak_rss_bytes": 76070912,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 189630363,
+          "exit_code": 0,
+          "peak_rss_bytes": 34140160,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18134899999999998,
+          "cpu_system_s": 0.008015,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.18936399999999998
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 314148365,
+          "exit_code": 0,
+          "peak_rss_bytes": 76070912,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.30000699999999997,
+          "cpu_system_s": 0.013999999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.314007
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 515166248,
+      "cpu_seconds": 0.51475,
+      "peak_rss_bytes": 76070912,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 195286581,
+          "exit_code": 0,
+          "peak_rss_bytes": 34152448,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.190058,
+          "cpu_system_s": 0.005000999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.195059
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 319879667,
+          "exit_code": 0,
+          "peak_rss_bytes": 76070912,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.304706,
+          "cpu_system_s": 0.014985,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.319691
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 524677639,
+      "cpu_seconds": 0.5242749999999999,
+      "peak_rss_bytes": 76058624,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 191699992,
+          "exit_code": 0,
+          "peak_rss_bytes": 34152448,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.185502,
+          "cpu_system_s": 0.005983,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.191485
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 332977647,
+          "exit_code": 0,
+          "peak_rss_bytes": 76058624,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.322675,
+          "cpu_system_s": 0.010114999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.33279
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 501421683,
+      "cpu_seconds": 0.501027,
+      "peak_rss_bytes": 76144640,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 192637868,
+          "exit_code": 0,
+          "peak_rss_bytes": 34152448,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.188443,
+          "cpu_system_s": 0.003988,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.192431
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 308783815,
+          "exit_code": 0,
+          "peak_rss_bytes": 76144640,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.29261699999999996,
+          "cpu_system_s": 0.015979,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.308596
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 320058083,
+      "cpu_seconds": 0.319816,
+      "peak_rss_bytes": 44281856,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 320058083,
+          "exit_code": 0,
+          "peak_rss_bytes": 44281856,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.306824,
+          "cpu_system_s": 0.012992,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.319816
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 321163710,
+      "cpu_seconds": 0.320993,
+      "peak_rss_bytes": 44314624,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 321163710,
+          "exit_code": 0,
+          "peak_rss_bytes": 44314624,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.307994,
+          "cpu_system_s": 0.012999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.320993
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 318705748,
+      "cpu_seconds": 0.31854,
+      "peak_rss_bytes": 44281856,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 318705748,
+          "exit_code": 0,
+          "peak_rss_bytes": 44281856,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.305518,
+          "cpu_system_s": 0.013021999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31854
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 345241710,
+      "cpu_seconds": 0.34505199999999997,
+      "peak_rss_bytes": 44269568,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 345241710,
+          "exit_code": 0,
+          "peak_rss_bytes": 44269568,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.332113,
+          "cpu_system_s": 0.012938999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.34505199999999997
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 508699028,
+      "cpu_seconds": 0.5083599999999999,
+      "peak_rss_bytes": 76156928,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 190373531,
+          "exit_code": 0,
+          "peak_rss_bytes": 34148352,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18018199999999998,
+          "cpu_system_s": 0.01001,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.19019199999999997
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 318325497,
+          "exit_code": 0,
+          "peak_rss_bytes": 76156928,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.306162,
+          "cpu_system_s": 0.012006,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.318168
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 498573885,
+      "cpu_seconds": 0.498201,
+      "peak_rss_bytes": 76062720,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 193277744,
+          "exit_code": 0,
+          "peak_rss_bytes": 34189312,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.187077,
+          "cpu_system_s": 0.0060019999999999995,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.193079
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 305296141,
+          "exit_code": 0,
+          "peak_rss_bytes": 76062720,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.295118,
+          "cpu_system_s": 0.010003999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.305122
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 504114020,
+      "cpu_seconds": 0.503592,
+      "peak_rss_bytes": 76062720,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 194596538,
+          "exit_code": 0,
+          "peak_rss_bytes": 34144256,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.19028899999999999,
+          "cpu_system_s": 0.004006,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.194295
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 309517482,
+          "exit_code": 0,
+          "peak_rss_bytes": 76062720,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.300289,
+          "cpu_system_s": 0.009008,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.309297
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 504946772,
+      "cpu_seconds": 0.504644,
+      "peak_rss_bytes": 76075008,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 191796867,
+          "exit_code": 0,
+          "peak_rss_bytes": 34156544,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18464999999999998,
+          "cpu_system_s": 0.006986,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.19163599999999997
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 313149905,
+          "exit_code": 0,
+          "peak_rss_bytes": 76075008,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.295008,
+          "cpu_system_s": 0.018,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.313008
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 314106615,
+      "cpu_seconds": 0.31381499999999996,
+      "peak_rss_bytes": 44294144,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 314106615,
+          "exit_code": 0,
+          "peak_rss_bytes": 44294144,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.302822,
+          "cpu_system_s": 0.010993,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31381499999999996
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 317728163,
+      "cpu_seconds": 0.317534,
+      "peak_rss_bytes": 44331008,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 317728163,
+          "exit_code": 0,
+          "peak_rss_bytes": 44331008,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.306481,
+          "cpu_system_s": 0.011053,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.317534
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 321812170,
+      "cpu_seconds": 0.321638,
+      "peak_rss_bytes": 44294144,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 321812170,
+          "exit_code": 0,
+          "peak_rss_bytes": 44294144,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.311619,
+          "cpu_system_s": 0.010019,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.321638
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 343955165,
+      "cpu_seconds": 0.33392700000000003,
+      "peak_rss_bytes": 44339200,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 343955165,
+          "exit_code": 0,
+          "peak_rss_bytes": 44339200,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.317979,
+          "cpu_system_s": 0.015948,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.33392700000000003
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 500596055,
+      "cpu_seconds": 0.5002639999999999,
+      "peak_rss_bytes": 76075008,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 188789819,
+          "exit_code": 0,
+          "peak_rss_bytes": 34140160,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18461,
+          "cpu_system_s": 0.004013,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.18862299999999999
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 311806236,
+          "exit_code": 0,
+          "peak_rss_bytes": 76075008,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.29961699999999997,
+          "cpu_system_s": 0.012024,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31164099999999995
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 506543357,
+      "cpu_seconds": 0.506219,
+      "peak_rss_bytes": 76124160,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 189694362,
+          "exit_code": 0,
+          "peak_rss_bytes": 34136064,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.179554,
+          "cpu_system_s": 0.009975,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.189529
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 316848995,
+          "exit_code": 0,
+          "peak_rss_bytes": 76124160,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.303703,
+          "cpu_system_s": 0.012986999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31669
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 504802187,
+      "cpu_seconds": 0.504422,
+      "peak_rss_bytes": 76083200,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 189373778,
+          "exit_code": 0,
+          "peak_rss_bytes": 34164736,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.185196,
+          "cpu_system_s": 0.004004,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.1892
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 315428409,
+          "exit_code": 0,
+          "peak_rss_bytes": 76083200,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.299211,
+          "cpu_system_s": 0.016011,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.315222
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 498799220,
+      "cpu_seconds": 0.49848,
+      "peak_rss_bytes": 76021760,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 186631441,
+          "exit_code": 0,
+          "peak_rss_bytes": 34201600,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18148899999999998,
+          "cpu_system_s": 0.004985,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.18647399999999997
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 312167779,
+          "exit_code": 0,
+          "peak_rss_bytes": 76021760,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.303006,
+          "cpu_system_s": 0.009,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.312006
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 316273744,
+      "cpu_seconds": 0.316113,
+      "peak_rss_bytes": 44273664,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 316273744,
+          "exit_code": 0,
+          "peak_rss_bytes": 44273664,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.30611,
+          "cpu_system_s": 0.010003,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.316113
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 315351242,
+      "cpu_seconds": 0.31519,
+      "peak_rss_bytes": 44269568,
+      "output_bytes": 14806125,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 315351242,
+          "exit_code": 0,
+          "peak_rss_bytes": 44269568,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.304184,
+          "cpu_system_s": 0.011006,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31519
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 507263900,
+      "cpu_seconds": 0.50707,
+      "peak_rss_bytes": 88170496,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 507263900,
+          "exit_code": 0,
+          "peak_rss_bytes": 88170496,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.48506699999999997,
+          "cpu_system_s": 0.022002999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.50707
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 1,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 528908229,
+      "cpu_seconds": 0.5287209999999999,
+      "peak_rss_bytes": 88236032,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 528908229,
+          "exit_code": 0,
+          "peak_rss_bytes": 88236032,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.5126689999999999,
+          "cpu_system_s": 0.016052,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.5287209999999999
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 514147787,
+      "cpu_seconds": 0.513953,
+      "peak_rss_bytes": 88166400,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 514147787,
+          "exit_code": 0,
+          "peak_rss_bytes": 88166400,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.498955,
+          "cpu_system_s": 0.014998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.513953
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 2,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 529567938,
+      "cpu_seconds": 0.528264,
+      "peak_rss_bytes": 88145920,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 529567938,
+          "exit_code": 0,
+          "peak_rss_bytes": 88145920,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.508254,
+          "cpu_system_s": 0.02001,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.528264
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 521859175,
+      "cpu_seconds": 0.5216569999999999,
+      "peak_rss_bytes": 88170496,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 521859175,
+          "exit_code": 0,
+          "peak_rss_bytes": 88170496,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.500671,
+          "cpu_system_s": 0.020985999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.5216569999999999
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 3,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 514560204,
+      "cpu_seconds": 0.5143639999999999,
+      "peak_rss_bytes": 88174592,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 514560204,
+          "exit_code": 0,
+          "peak_rss_bytes": 88174592,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.49334999999999996,
+          "cpu_system_s": 0.021013999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.5143639999999999
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 510389614,
+      "cpu_seconds": 0.510193,
+      "peak_rss_bytes": 88158208,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 510389614,
+          "exit_code": 0,
+          "peak_rss_bytes": 88158208,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.494187,
+          "cpu_system_s": 0.016006,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.510193
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 4,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 510123822,
+      "cpu_seconds": 0.509794,
+      "peak_rss_bytes": 88158208,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 510123822,
+          "exit_code": 0,
+          "peak_rss_bytes": 88158208,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.49180199999999996,
+          "cpu_system_s": 0.017991999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.509794
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 521923925,
+      "cpu_seconds": 0.5217269999999999,
+      "peak_rss_bytes": 88158208,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 521923925,
+          "exit_code": 0,
+          "peak_rss_bytes": 88158208,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.496741,
+          "cpu_system_s": 0.024985999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.5217269999999999
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 5,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 500122347,
+      "cpu_seconds": 0.499808,
+      "peak_rss_bytes": 88158208,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 500122347,
+          "exit_code": 0,
+          "peak_rss_bytes": 88158208,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.478817,
+          "cpu_system_s": 0.020991,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.499808
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 524409679,
+      "cpu_seconds": 0.524224,
+      "peak_rss_bytes": 88174592,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 524409679,
+          "exit_code": 0,
+          "peak_rss_bytes": 88174592,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.511219,
+          "cpu_system_s": 0.013005,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.524224
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 6,
+      "order": [
+        "C",
+        "B"
+      ],
+      "elapsed_ns": 524106137,
+      "cpu_seconds": 0.523931,
+      "peak_rss_bytes": 88162304,
+      "output_bytes": 17864212,
+      "excluded_warmup": false,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 524106137,
+          "exit_code": 0,
+          "peak_rss_bytes": 88162304,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.502934,
+          "cpu_system_s": 0.020997,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.523931
+        }
+      ]
+    }
+  ],
+  "excluded_warmups": [
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "B",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 315035200,
+      "cpu_seconds": 0.31428100000000003,
+      "peak_rss_bytes": 44322816,
+      "output_bytes": 14806125,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 315035200,
+          "exit_code": 0,
+          "peak_rss_bytes": 44322816,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.stdout",
+          "cpu_user_s": 0.302271,
+          "cpu_system_s": 0.01201,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.31428100000000003
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "tool": "C",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 320694627,
+      "cpu_seconds": 0.32039999999999996,
+      "peak_rss_bytes": 44285952,
+      "output_bytes": 14806125,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/ipv4-disjoint/ipv4.txt",
+          "elapsed_ns": 320694627,
+          "exit_code": 0,
+          "peak_rss_bytes": 44285952,
+          "output_bytes": 14806125,
+          "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.stdout",
+          "cpu_user_s": 0.30838499999999996,
+          "cpu_system_s": 0.012015,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.32039999999999996
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 523865970,
+      "cpu_seconds": 0.5234429999999999,
+      "peak_rss_bytes": 76136448,
+      "output_bytes": 17864212,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 190113530,
+          "exit_code": 0,
+          "peak_rss_bytes": 34140160,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.stdout",
+          "cpu_user_s": 0.18495899999999998,
+          "cpu_system_s": 0.004998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.189957
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 333752440,
+          "exit_code": 0,
+          "peak_rss_bytes": 76136448,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.stdout",
+          "cpu_user_s": 0.31646199999999997,
+          "cpu_system_s": 0.017024,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.33348599999999995
+        }
+      ]
+    },
+    {
+      "suite": "split",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 504657896,
+      "cpu_seconds": 0.504222,
+      "peak_rss_bytes": 76066816,
+      "output_bytes": 17864212,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": 4,
+          "input": "fixtures/mixed-permuted/ipv4.txt",
+          "elapsed_ns": 192325034,
+          "exit_code": 0,
+          "peak_rss_bytes": 34131968,
+          "output_bytes": 7399156,
+          "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.stdout",
+          "cpu_user_s": 0.17904399999999998,
+          "cpu_system_s": 0.013002999999999999,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.19204699999999997
+        },
+        {
+          "family": 6,
+          "input": "fixtures/mixed-permuted/ipv6.txt",
+          "elapsed_ns": 312332862,
+          "exit_code": 0,
+          "peak_rss_bytes": 76066816,
+          "output_bytes": 10465056,
+          "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.stdout",
+          "cpu_user_s": 0.30217,
+          "cpu_system_s": 0.010005,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.312175
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "B",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 523626011,
+      "cpu_seconds": 0.523311,
+      "peak_rss_bytes": 88162304,
+      "output_bytes": 17864212,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 523626011,
+          "exit_code": 0,
+          "peak_rss_bytes": 88162304,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.stdout",
+          "cpu_user_s": 0.505335,
+          "cpu_system_s": 0.017976,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.523311
+        }
+      ]
+    },
+    {
+      "suite": "native",
+      "case": "mixed-permuted",
+      "tool": "C",
+      "round": 0,
+      "order": [
+        "B",
+        "C"
+      ],
+      "elapsed_ns": 505576648,
+      "cpu_seconds": 0.505231,
+      "peak_rss_bytes": 88182784,
+      "output_bytes": 17864212,
+      "excluded_warmup": true,
+      "parts": [
+        {
+          "family": null,
+          "input": "fixtures/mixed-permuted/input.txt",
+          "elapsed_ns": 505576648,
+          "exit_code": 0,
+          "peak_rss_bytes": 88182784,
+          "output_bytes": 17864212,
+          "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+          "stderr_bytes": 0,
+          "original_output": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.stdout",
+          "cpu_user_s": 0.48919199999999996,
+          "cpu_system_s": 0.016038999999999998,
+          "original_metrics": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.rusage.json",
+          "measurement_source": "monotonic elapsed and exact-child wait4 rusage; Linux RSS converted from KiB",
+          "cpu_seconds": 0.505231
+        }
+      ]
+    }
+  ]
+}

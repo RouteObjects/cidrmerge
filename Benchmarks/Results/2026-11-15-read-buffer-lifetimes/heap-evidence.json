@@ -1,0 +1,400 @@
+{
+  "content_kind": "path-redacted heap evidence",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "summary": {
+    "created_at": "2026-11-15T18:43:13.488166+00:00",
+    "captures": [
+      {
+        "capture": "B-ipv6-disjoint-0300",
+        "variant": "B",
+        "case": "ipv6-disjoint",
+        "phase": "input parsing",
+        "live_NSConcreteData_Bytes_Storage_blocks": 149,
+        "live_NSConcreteData_Bytes_Storage_bytes": 9764864,
+        "stack_anchors": [
+          {
+            "line": 31,
+            "frame": "875 specialized static TextInputLoader.consume(_:source:into:)  (in B-profile) + 528  [0x100403928]  TextInput.swift:163"
+          },
+          {
+            "line": 32,
+            "frame": "875 specialized static TextInputLoader.consumeLine(_:source:lineNumber:into:)  (in B-profile) + 432  [0x100403200]  TextInput.swift:228"
+          }
+        ],
+        "ordinary_binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+        "profile_binary_sha256": "c86d99217d704659295304271a98599e550c3de2149cf133b01bd152e56addde",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769708,
+            "sha256": "8963c66d8d0b483160086f737856086678efb3da1b79f1a6c00ab440a43a614d"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5580,
+            "sha256": "635755b58790a483624d43d11be9332f3c2c6d0f8c6b849c6ff43c1dff410d76"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "bd9d80b2de44b73298b3e4878a5234ef827240b552deda24811e76a8f6d1fd76"
+          }
+        },
+        "output_bytes": 21342471,
+        "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/B-ipv6-disjoint-0300/receipt.json": {
+            "sha256": "322670b8be5bef135628ea2005c31e833b8cea1c5282644daeb4cce7226d9845",
+            "bytes": 2024
+          },
+          "macos/heap/B-ipv6-disjoint-0300/heap.log": {
+            "sha256": "811bdbb1abb1cc5a7fbd23e142a3b914ebc625cfba4f07c8a8bb50810e2e6d58",
+            "bytes": 70148
+          },
+          "macos/heap/B-ipv6-disjoint-0300/sample.txt": {
+            "sha256": "53c29f3fb39b9f0144601983161be06bc3d215fc8d235b26a5d5e6ac116071ad",
+            "bytes": 73579
+          },
+          "macos/heap/B-ipv6-disjoint-0300/vmmap.log": {
+            "sha256": "d0c8c351f2c13230dbed18f22df35d570c281bb2e24034958681fbec2acee31d",
+            "bytes": 5577
+          }
+        }
+      },
+      {
+        "capture": "B-ipv6-disjoint-0450",
+        "variant": "B",
+        "case": "ipv6-disjoint",
+        "phase": "rendering",
+        "live_NSConcreteData_Bytes_Storage_blocks": 326,
+        "live_NSConcreteData_Bytes_Storage_bytes": 21348352,
+        "stack_anchors": [
+          {
+            "line": 29,
+            "frame": "876 specialized static OutputRenderer.appendText<A>(_:to:)  (in B-profile) + 108  [0x104cd3efc]  OutputRenderer.swift:0"
+          }
+        ],
+        "ordinary_binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+        "profile_binary_sha256": "c86d99217d704659295304271a98599e550c3de2149cf133b01bd152e56addde",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769708,
+            "sha256": "8963c66d8d0b483160086f737856086678efb3da1b79f1a6c00ab440a43a614d"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5580,
+            "sha256": "635755b58790a483624d43d11be9332f3c2c6d0f8c6b849c6ff43c1dff410d76"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "bd9d80b2de44b73298b3e4878a5234ef827240b552deda24811e76a8f6d1fd76"
+          }
+        },
+        "output_bytes": 21342471,
+        "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/B-ipv6-disjoint-0450/receipt.json": {
+            "sha256": "6bd4027987e95d9690de1658fad79db667fb879343b55386be9ba2ff63bca012",
+            "bytes": 2025
+          },
+          "macos/heap/B-ipv6-disjoint-0450/heap.log": {
+            "sha256": "0ecfbc2df6ab40d315d1df598779836f694d29ac3e75ed22b506f0da7006e082",
+            "bytes": 88044
+          },
+          "macos/heap/B-ipv6-disjoint-0450/sample.txt": {
+            "sha256": "e6aa8c6e36d2ecea6cf7be9029702bfac83ca1711e208f19d55a0f3c1d8ccce0",
+            "bytes": 73288
+          },
+          "macos/heap/B-ipv6-disjoint-0450/vmmap.log": {
+            "sha256": "29079ebbb0d134790770e39b3721cb8f9abb4d70e4adb4dfe599a17d1d9e3407",
+            "bytes": 5581
+          }
+        }
+      },
+      {
+        "capture": "B-ipv6-disjoint-post-render",
+        "variant": "B",
+        "case": "ipv6-disjoint",
+        "phase": "post-render output write",
+        "live_NSConcreteData_Bytes_Storage_blocks": 326,
+        "live_NSConcreteData_Bytes_Storage_bytes": 21348352,
+        "stack_anchors": [
+          {
+            "line": 29,
+            "frame": "801 OutputCommitter.write(_:to:includeChecksum:)  (in B-profile) + 592  [0x100b4eb30]  DetachedSHA256Checksum.swift:85"
+          }
+        ],
+        "ordinary_binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+        "profile_binary_sha256": "c86d99217d704659295304271a98599e550c3de2149cf133b01bd152e56addde",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769708,
+            "sha256": "8963c66d8d0b483160086f737856086678efb3da1b79f1a6c00ab440a43a614d"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5580,
+            "sha256": "635755b58790a483624d43d11be9332f3c2c6d0f8c6b849c6ff43c1dff410d76"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "bd9d80b2de44b73298b3e4878a5234ef827240b552deda24811e76a8f6d1fd76"
+          }
+        },
+        "output_bytes": 21342471,
+        "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/B-ipv6-disjoint-post-render/receipt.json": {
+            "sha256": "c30c6239a0db6a5fde30b022dbafd6a1a5a686accdc960e6841827cd15eddc21",
+            "bytes": 1965
+          },
+          "macos/heap/B-ipv6-disjoint-post-render/heap.log": {
+            "sha256": "787b0cbc6a83ff1a560b446476ce571d664df50bf624795867ee33f72acd26ca",
+            "bytes": 88216
+          },
+          "macos/heap/B-ipv6-disjoint-post-render/sample.txt": {
+            "sha256": "3f61d70affc9a2f9a974262c8a405b14dd4f3a34c880f4781dd33d2c4f9796aa",
+            "bytes": 73509
+          },
+          "macos/heap/B-ipv6-disjoint-post-render/vmmap.log": {
+            "sha256": "b9dc52c97f95ddc5acdcf37f2db63662c5ba53261ed61128442ed5225cfd291c",
+            "bytes": 5581
+          }
+        }
+      },
+      {
+        "capture": "B-mixed-disjoint-post-render",
+        "variant": "B",
+        "case": "mixed-disjoint",
+        "phase": "post-render output write",
+        "live_NSConcreteData_Bytes_Storage_blocks": 273,
+        "live_NSConcreteData_Bytes_Storage_bytes": 17874944,
+        "stack_anchors": [
+          {
+            "line": 29,
+            "frame": "801 OutputCommitter.write(_:to:includeChecksum:)  (in B-profile) + 592  [0x102276b30]  DetachedSHA256Checksum.swift:85"
+          }
+        ],
+        "ordinary_binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+        "profile_binary_sha256": "c86d99217d704659295304271a98599e550c3de2149cf133b01bd152e56addde",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769708,
+            "sha256": "8963c66d8d0b483160086f737856086678efb3da1b79f1a6c00ab440a43a614d"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5580,
+            "sha256": "635755b58790a483624d43d11be9332f3c2c6d0f8c6b849c6ff43c1dff410d76"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "bd9d80b2de44b73298b3e4878a5234ef827240b552deda24811e76a8f6d1fd76"
+          }
+        },
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/B-mixed-disjoint-post-render/receipt.json": {
+            "sha256": "0e139a3706373e02a40ab0224c097be82e1f40cc180a758807e657df4430aba5",
+            "bytes": 1968
+          },
+          "macos/heap/B-mixed-disjoint-post-render/heap.log": {
+            "sha256": "9a404a4a76dc9af856137b6a1ce81768ef93704cabea9ddc9f5f0f9edaab67a3",
+            "bytes": 83067
+          },
+          "macos/heap/B-mixed-disjoint-post-render/sample.txt": {
+            "sha256": "e486e98248dc615415d367f4414995f31dfb12700e921fd432916e5d264ecfe1",
+            "bytes": 73509
+          },
+          "macos/heap/B-mixed-disjoint-post-render/vmmap.log": {
+            "sha256": "bca0971068a235b426f779dc4f0fdf96f748924941586738c01d881f560ccd1c",
+            "bytes": 5580
+          }
+        }
+      },
+      {
+        "capture": "C-ipv6-disjoint-0300",
+        "variant": "C",
+        "case": "ipv6-disjoint",
+        "phase": "input parsing",
+        "live_NSConcreteData_Bytes_Storage_blocks": 1,
+        "live_NSConcreteData_Bytes_Storage_bytes": 65536,
+        "stack_anchors": [
+          {
+            "line": 31,
+            "frame": "790 specialized static TextInputLoader.consume(_:source:into:)  (in C-profile) + 588  [0x1042cf918]  TextInput.swift:164"
+          },
+          {
+            "line": 32,
+            "frame": "790 specialized static TextInputLoader.consumeLine(_:source:lineNumber:into:)  (in C-profile) + 1652  [0x1042cf678]  /<compiler-generated>:0"
+          }
+        ],
+        "ordinary_binary_sha256": "6320ee900d02ff558c60b0b08d7af67ce54f3fffe502907858e8188281f949e9",
+        "profile_binary_sha256": "7b594fc200b504dd197f17de16bec615da994b589fee574c6006b6fb901a931f",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769720,
+            "sha256": "aec20184265a2713e09756c3ca71760909914d629da0bd2b994f0e5af83ac67e"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5604,
+            "sha256": "fa42386d3b494bd8207e5ffb7ceb8aab4449eabd619a9f31da55867c2978f2a2"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "4cd60662bfdad02e560a940abb3f836e4276a954935654351627cf81fc894ab1"
+          }
+        },
+        "output_bytes": 21342471,
+        "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/C-ipv6-disjoint-0300/receipt.json": {
+            "sha256": "9b3cec114a5f3fe5c9ef959b99ede6bf39bf10a2eef710cc6b24f3723813c8d3",
+            "bytes": 2024
+          },
+          "macos/heap/C-ipv6-disjoint-0300/heap.log": {
+            "sha256": "a4b89e092412d050f624533a3c537eea7f2283a576cbb024c361a9ca3ca5fa02",
+            "bytes": 55609
+          },
+          "macos/heap/C-ipv6-disjoint-0300/sample.txt": {
+            "sha256": "7a3fd48118103aa41c840323d09d949fa8bf96304d3c5126e07cf891b1926cac",
+            "bytes": 73788
+          },
+          "macos/heap/C-ipv6-disjoint-0300/vmmap.log": {
+            "sha256": "e5b019b5dbc357bf42b784b42334b666bacebde560f91654173a419f80919509",
+            "bytes": 5577
+          }
+        }
+      },
+      {
+        "capture": "C-ipv6-disjoint-post-render",
+        "variant": "C",
+        "case": "ipv6-disjoint",
+        "phase": "post-render output write",
+        "live_NSConcreteData_Bytes_Storage_blocks": 0,
+        "live_NSConcreteData_Bytes_Storage_bytes": 0,
+        "stack_anchors": [
+          {
+            "line": 29,
+            "frame": "793 OutputCommitter.write(_:to:includeChecksum:)  (in C-profile) + 592  [0x10098ab30]  DetachedSHA256Checksum.swift:85"
+          }
+        ],
+        "ordinary_binary_sha256": "6320ee900d02ff558c60b0b08d7af67ce54f3fffe502907858e8188281f949e9",
+        "profile_binary_sha256": "7b594fc200b504dd197f17de16bec615da994b589fee574c6006b6fb901a931f",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769720,
+            "sha256": "aec20184265a2713e09756c3ca71760909914d629da0bd2b994f0e5af83ac67e"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5604,
+            "sha256": "fa42386d3b494bd8207e5ffb7ceb8aab4449eabd619a9f31da55867c2978f2a2"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "4cd60662bfdad02e560a940abb3f836e4276a954935654351627cf81fc894ab1"
+          }
+        },
+        "output_bytes": 21342471,
+        "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/C-ipv6-disjoint-post-render/receipt.json": {
+            "sha256": "1584475d2868205b3d71c7620301d9bb5313b4ad5fceae630edb6274a0bec6f5",
+            "bytes": 1965
+          },
+          "macos/heap/C-ipv6-disjoint-post-render/heap.log": {
+            "sha256": "0703e00192eaeb16500cf7ad4a6f116d7dc7c710829e8a8d1da3ffaebce2eb94",
+            "bytes": 56051
+          },
+          "macos/heap/C-ipv6-disjoint-post-render/sample.txt": {
+            "sha256": "0913c7a6120f775cf618645f96c70c5e06554d4302d6412e936de1f0582e1650",
+            "bytes": 73509
+          },
+          "macos/heap/C-ipv6-disjoint-post-render/vmmap.log": {
+            "sha256": "53ce8d485e2da7ccd0e2d6ec925d074f723f0a3c026b713a2171ae185e2926a6",
+            "bytes": 5580
+          }
+        }
+      },
+      {
+        "capture": "C-mixed-disjoint-post-render",
+        "variant": "C",
+        "case": "mixed-disjoint",
+        "phase": "post-render output write",
+        "live_NSConcreteData_Bytes_Storage_blocks": 0,
+        "live_NSConcreteData_Bytes_Storage_bytes": 0,
+        "stack_anchors": [
+          {
+            "line": 29,
+            "frame": "793 OutputCommitter.write(_:to:includeChecksum:)  (in C-profile) + 592  [0x100efab30]  DetachedSHA256Checksum.swift:85"
+          }
+        ],
+        "ordinary_binary_sha256": "6320ee900d02ff558c60b0b08d7af67ce54f3fffe502907858e8188281f949e9",
+        "profile_binary_sha256": "7b594fc200b504dd197f17de16bec615da994b589fee574c6006b6fb901a931f",
+        "executable_sections_verified_unchanged": {
+          "__TEXT,__text": {
+            "bytes": 769720,
+            "sha256": "aec20184265a2713e09756c3ca71760909914d629da0bd2b994f0e5af83ac67e"
+          },
+          "__TEXT,__stubs": {
+            "bytes": 5604,
+            "sha256": "fa42386d3b494bd8207e5ffb7ceb8aab4449eabd619a9f31da55867c2978f2a2"
+          },
+          "__TEXT,__objc_stubs": {
+            "bytes": 160,
+            "sha256": "4cd60662bfdad02e560a940abb3f836e4276a954935654351627cf81fc894ab1"
+          }
+        },
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "output_matches_reference": true,
+        "artifacts": {
+          "macos/heap/C-mixed-disjoint-post-render/receipt.json": {
+            "sha256": "6dfc1658feff01d9ef5d9fcfa4a6509265d779373af4320ba17e2b26fb1b20a8",
+            "bytes": 1968
+          },
+          "macos/heap/C-mixed-disjoint-post-render/heap.log": {
+            "sha256": "bf9e9befefde928a6e243e4fb7112fd69d14e9303e2a076f0a36b18ad815f75e",
+            "bytes": 56147
+          },
+          "macos/heap/C-mixed-disjoint-post-render/sample.txt": {
+            "sha256": "1839e6fed06430fc0ccfa186dbe766744a7eed105ca6b13c92174a9f667fbfa5",
+            "bytes": 73507
+          },
+          "macos/heap/C-mixed-disjoint-post-render/vmmap.log": {
+            "sha256": "d3e53f8c3510e21bbc455a20c58d6313dc239b810fd5881f4441bc5c0692e86b",
+            "bytes": 5577
+          }
+        }
+      }
+    ],
+    "method": "Owned child process; SIGSTOP; sample, heap --noContent --addresses=all, vmmap; resume and verify full output. Post-render checkpoints wait for the first stdout byte before stopping a child whose remaining stdout is blocked in a pipe.",
+    "binary_note": "Profiling copies have a debugging entitlement; executable instruction-section hashes match the separately preserved ordinary release binaries used in timing.",
+    "limits": [
+      "Heap counts describe live NSConcreteData byte storage, not total allocations or peak RSS.",
+      "Parsing snapshots are stack-confirmed phases, not identical record-count checkpoints.",
+      "The baseline snapshot does not by itself identify the retaining root or prove the autorelease mechanism. The candidate intervention removes the observed accumulation.",
+      "The post-render sample is an intentionally blocked output-write phase, not ordinary elapsed-time evidence."
+    ],
+    "passed": true
+  },
+  "conditional_retention_gate": {
+    "retention_persists": true,
+    "baseline": "675d534a29fd3c2231d58bb58bf395b6343e233b",
+    "recorded_at": "2026-11-15T18:35:29.169370+00:00",
+    "ordinary_binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+    "phase": "rendering (stack-confirmed)",
+    "live_input_storage_blocks": 326,
+    "live_input_storage_bytes": 21348352,
+    "full_output_matches_reference": true,
+    "profiling_copy_executable_sections_unchanged": true,
+    "limitation": "Heap supports retained input-chunk attribution; it does not identify the retaining root or prove an autorelease cause.",
+    "evidence": {
+      "macos/heap/B-ipv6-disjoint-0450/receipt.json": "6bd4027987e95d9690de1658fad79db667fb879343b55386be9ba2ff63bca012",
+      "macos/heap/B-ipv6-disjoint-0450/heap.log": "0ecfbc2df6ab40d315d1df598779836f694d29ac3e75ed22b506f0da7006e082",
+      "macos/heap/B-ipv6-disjoint-0450/sample.txt": "e6aa8c6e36d2ecea6cf7be9029702bfac83ca1711e208f19d55a0f3c1d8ccce0"
+    }
+  }
+}

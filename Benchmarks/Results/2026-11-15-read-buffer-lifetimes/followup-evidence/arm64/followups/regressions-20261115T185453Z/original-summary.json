@@ -1,0 +1,3659 @@
+{
+  "content_kind": "complete path-redacted original summary",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "original_summary": "arm64/followups/regressions-20261115T185453Z/summary.json",
+  "original_summary_sha256": "985a26fff488cab67ec62814872a63c756326b2e0f717c4e5193425fb1e09f7b",
+  "primary_summary_sha256": "976596c9fc3baf2a767bdf3f006b0a5b173d2b80bdec39c17bdfe48c84905fd4",
+  "separate_followup_not_pooled": true,
+  "summary": {
+    "passed": true,
+    "completed_at": "2026-11-15T18:55:13.676351+00:00",
+    "selected_cases": [
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "trigger_pairs": [
+          {
+            "round": 2,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 5.344469542948227,
+            "rss_change_pct": 0.34300546954668665,
+            "elapsed_difference_s": 0.017301569,
+            "rss_difference_mib": 0.14453125
+          }
+        ]
+      },
+      {
+        "suite": "split",
+        "case": "mixed-permuted",
+        "trigger_pairs": [
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 12.75614625636674,
+            "rss_change_pct": 0.005384739647840142,
+            "elapsed_difference_s": 0.067998605,
+            "rss_difference_mib": 0.00390625
+          }
+        ]
+      },
+      {
+        "suite": "native",
+        "case": "mixed-permuted",
+        "trigger_pairs": [
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 5.086875208192798,
+            "rss_change_pct": 0.11153452923133855,
+            "elapsed_difference_s": 0.025918886,
+            "rss_difference_mib": 0.09375
+          }
+        ]
+      }
+    ],
+    "primary_summary_sha256": "976596c9fc3baf2a767bdf3f006b0a5b173d2b80bdec39c17bdfe48c84905fd4",
+    "separate_followup_not_pooled": true,
+    "samples": [
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:55.657328+00:00",
+        "free_bytes_before": 5775390744576,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:54:55.657639+00:00",
+            "elapsed_ns": 314377407,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.301021,
+              "ru_stime": 0.013,
+              "ru_maxrss": 43252,
+              "ru_minflt": 4177,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 3
+            },
+            "peak_rss_bytes": 44290048,
+            "cpu_seconds": 0.314021,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 314377407,
+        "peak_rss_bytes": 44290048,
+        "cpu_seconds": 0.314021,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:55.989085+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:55.989494+00:00",
+        "free_bytes_before": 5775375740928,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:54:55.989799+00:00",
+            "elapsed_ns": 316816078,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.298077,
+              "ru_stime": 0.017943999999999998,
+              "ru_maxrss": 43236,
+              "ru_minflt": 4176,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 44273664,
+            "cpu_seconds": 0.316021,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 316816078,
+        "peak_rss_bytes": 44273664,
+        "cpu_seconds": 0.316021,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:56.318505+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:56.318997+00:00",
+        "free_bytes_before": 5775360851968,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:54:56.319289+00:00",
+            "elapsed_ns": 189630363,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18134899999999998,
+              "ru_stime": 0.008015,
+              "ru_maxrss": 33340,
+              "ru_minflt": 2487,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 34140160,
+            "cpu_seconds": 0.18936399999999998,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:54:56.516026+00:00",
+            "elapsed_ns": 314148365,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.30000699999999997,
+              "ru_stime": 0.013999999999999999,
+              "ru_maxrss": 74288,
+              "ru_minflt": 6385,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "peak_rss_bytes": 76070912,
+            "cpu_seconds": 0.314007,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 503778728,
+        "peak_rss_bytes": 76070912,
+        "cpu_seconds": 0.503371,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:56.838269+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:56.838680+00:00",
+        "free_bytes_before": 5775342972928,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:54:56.838994+00:00",
+            "elapsed_ns": 195286581,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.190058,
+              "ru_stime": 0.005000999999999999,
+              "ru_maxrss": 33352,
+              "ru_minflt": 2487,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 34152448,
+            "cpu_seconds": 0.195059,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:54:57.042779+00:00",
+            "elapsed_ns": 319879667,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.304706,
+              "ru_stime": 0.014985,
+              "ru_maxrss": 74288,
+              "ru_minflt": 6387,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 76070912,
+            "cpu_seconds": 0.319691,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 515166248,
+        "peak_rss_bytes": 76070912,
+        "cpu_seconds": 0.51475,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:57.373607+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:57.374229+00:00",
+        "free_bytes_before": 5775324954624,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:54:57.374523+00:00",
+            "elapsed_ns": 191699992,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.185502,
+              "ru_stime": 0.005983,
+              "ru_maxrss": 33352,
+              "ru_minflt": 2481,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 9
+            },
+            "peak_rss_bytes": 34152448,
+            "cpu_seconds": 0.191485,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:54:57.573191+00:00",
+            "elapsed_ns": 332977647,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.322675,
+              "ru_stime": 0.010114999999999999,
+              "ru_maxrss": 74276,
+              "ru_minflt": 6389,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 76058624,
+            "cpu_seconds": 0.33279,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 524677639,
+        "peak_rss_bytes": 76058624,
+        "cpu_seconds": 0.5242749999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:57.914861+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:57.915370+00:00",
+        "free_bytes_before": 5775307059200,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:54:57.915673+00:00",
+            "elapsed_ns": 192637868,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.188443,
+              "ru_stime": 0.003988,
+              "ru_maxrss": 33352,
+              "ru_minflt": 2483,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 34152448,
+            "cpu_seconds": 0.192431,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:54:58.115467+00:00",
+            "elapsed_ns": 308783815,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.29261699999999996,
+              "ru_stime": 0.015979,
+              "ru_maxrss": 74360,
+              "ru_minflt": 6385,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 76144640,
+            "cpu_seconds": 0.308596,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 501421683,
+        "peak_rss_bytes": 76144640,
+        "cpu_seconds": 0.501027,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:58.432639+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:58.433168+00:00",
+        "free_bytes_before": 5775287963648,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:54:58.433436+00:00",
+            "elapsed_ns": 320058083,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.306824,
+              "ru_stime": 0.012992,
+              "ru_maxrss": 43244,
+              "ru_minflt": 4180,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 9
+            },
+            "peak_rss_bytes": 44281856,
+            "cpu_seconds": 0.319816,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 320058083,
+        "peak_rss_bytes": 44281856,
+        "cpu_seconds": 0.319816,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:58.765265+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:58.765683+00:00",
+        "free_bytes_before": 5775273078784,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:54:58.765996+00:00",
+            "elapsed_ns": 321163710,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.307994,
+              "ru_stime": 0.012999,
+              "ru_maxrss": 43276,
+              "ru_minflt": 4179,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44314624,
+            "cpu_seconds": 0.320993,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 321163710,
+        "peak_rss_bytes": 44314624,
+        "cpu_seconds": 0.320993,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:59.099110+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:59.099710+00:00",
+        "free_bytes_before": 5775256330240,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:54:59.100035+00:00",
+            "elapsed_ns": 318705748,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.305518,
+              "ru_stime": 0.013021999999999999,
+              "ru_maxrss": 43244,
+              "ru_minflt": 4181,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44281856,
+            "cpu_seconds": 0.31854,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 318705748,
+        "peak_rss_bytes": 44281856,
+        "cpu_seconds": 0.31854,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:59.430299+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:59.430772+00:00",
+        "free_bytes_before": 5775242563584,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:54:59.431079+00:00",
+            "elapsed_ns": 345241710,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.332113,
+              "ru_stime": 0.012938999999999999,
+              "ru_maxrss": 43232,
+              "ru_minflt": 4177,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 44269568,
+            "cpu_seconds": 0.34505199999999997,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 345241710,
+        "peak_rss_bytes": 44269568,
+        "cpu_seconds": 0.34505199999999997,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:59.790972+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:59.791892+00:00",
+        "free_bytes_before": 5775227887616,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:54:59.792268+00:00",
+            "elapsed_ns": 190373531,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18018199999999998,
+              "ru_stime": 0.01001,
+              "ru_maxrss": 33348,
+              "ru_minflt": 2481,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 34148352,
+            "cpu_seconds": 0.19019199999999997,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:54:59.991260+00:00",
+            "elapsed_ns": 318325497,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.306162,
+              "ru_stime": 0.012006,
+              "ru_maxrss": 74372,
+              "ru_minflt": 6386,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 76156928,
+            "cpu_seconds": 0.318168,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 508699028,
+        "peak_rss_bytes": 76156928,
+        "cpu_seconds": 0.5083599999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:00.318336+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:00.318789+00:00",
+        "free_bytes_before": 5775209660416,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:55:00.319119+00:00",
+            "elapsed_ns": 193277744,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.187077,
+              "ru_stime": 0.0060019999999999995,
+              "ru_maxrss": 33388,
+              "ru_minflt": 2486,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 34189312,
+            "cpu_seconds": 0.193079,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:55:00.520694+00:00",
+            "elapsed_ns": 305296141,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.295118,
+              "ru_stime": 0.010003999999999999,
+              "ru_maxrss": 74280,
+              "ru_minflt": 6389,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 76062720,
+            "cpu_seconds": 0.305122,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 498573885,
+        "peak_rss_bytes": 76062720,
+        "cpu_seconds": 0.498201,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:00.839151+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:00.839775+00:00",
+        "free_bytes_before": 5775191777280,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:55:00.840081+00:00",
+            "elapsed_ns": 194596538,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.19028899999999999,
+              "ru_stime": 0.004006,
+              "ru_maxrss": 33344,
+              "ru_minflt": 2486,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 3
+            },
+            "peak_rss_bytes": 34144256,
+            "cpu_seconds": 0.194295,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:55:01.042981+00:00",
+            "elapsed_ns": 309517482,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.300289,
+              "ru_stime": 0.009008,
+              "ru_maxrss": 74280,
+              "ru_minflt": 6389,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 5
+            },
+            "peak_rss_bytes": 76062720,
+            "cpu_seconds": 0.309297,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 504114020,
+        "peak_rss_bytes": 76062720,
+        "cpu_seconds": 0.503592,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:01.360656+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:01.361102+00:00",
+        "free_bytes_before": 5775173836800,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:55:01.361375+00:00",
+            "elapsed_ns": 191796867,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18464999999999998,
+              "ru_stime": 0.006986,
+              "ru_maxrss": 33356,
+              "ru_minflt": 2479,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 34156544,
+            "cpu_seconds": 0.19163599999999997,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:55:01.561072+00:00",
+            "elapsed_ns": 313149905,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.295008,
+              "ru_stime": 0.018,
+              "ru_maxrss": 74292,
+              "ru_minflt": 6385,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 76075008,
+            "cpu_seconds": 0.313008,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 504946772,
+        "peak_rss_bytes": 76075008,
+        "cpu_seconds": 0.504644,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:01.883543+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:01.884118+00:00",
+        "free_bytes_before": 5775155953664,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:55:01.884426+00:00",
+            "elapsed_ns": 314106615,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.302822,
+              "ru_stime": 0.010993,
+              "ru_maxrss": 43256,
+              "ru_minflt": 4177,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 3
+            },
+            "peak_rss_bytes": 44294144,
+            "cpu_seconds": 0.31381499999999996,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 314106615,
+        "peak_rss_bytes": 44294144,
+        "cpu_seconds": 0.31381499999999996,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:02.210187+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:02.210625+00:00",
+        "free_bytes_before": 5775141134336,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:55:02.210928+00:00",
+            "elapsed_ns": 317728163,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.306481,
+              "ru_stime": 0.011053,
+              "ru_maxrss": 43292,
+              "ru_minflt": 4179,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 44331008,
+            "cpu_seconds": 0.317534,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 317728163,
+        "peak_rss_bytes": 44331008,
+        "cpu_seconds": 0.317534,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:02.540199+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:02.540820+00:00",
+        "free_bytes_before": 5775125016576,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:55:02.541136+00:00",
+            "elapsed_ns": 321812170,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.311619,
+              "ru_stime": 0.010019,
+              "ru_maxrss": 43256,
+              "ru_minflt": 4176,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44294144,
+            "cpu_seconds": 0.321638,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 321812170,
+        "peak_rss_bytes": 44294144,
+        "cpu_seconds": 0.321638,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:02.877952+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:02.878653+00:00",
+        "free_bytes_before": 5775110180864,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:55:02.879077+00:00",
+            "elapsed_ns": 343955165,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.317979,
+              "ru_stime": 0.015948,
+              "ru_maxrss": 43300,
+              "ru_minflt": 4306,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 236,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44339200,
+            "cpu_seconds": 0.33392700000000003,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 343955165,
+        "peak_rss_bytes": 44339200,
+        "cpu_seconds": 0.33392700000000003,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:03.235142+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:03.235700+00:00",
+        "free_bytes_before": 5775095365632,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:55:03.236023+00:00",
+            "elapsed_ns": 188789819,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18461,
+              "ru_stime": 0.004013,
+              "ru_maxrss": 33340,
+              "ru_minflt": 2485,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 34140160,
+            "cpu_seconds": 0.18862299999999999,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:55:03.433057+00:00",
+            "elapsed_ns": 311806236,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.29961699999999997,
+              "ru_stime": 0.012024,
+              "ru_maxrss": 74292,
+              "ru_minflt": 6386,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 76075008,
+            "cpu_seconds": 0.31164099999999995,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 500596055,
+        "peak_rss_bytes": 76075008,
+        "cpu_seconds": 0.5002639999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:03.752832+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:03.753248+00:00",
+        "free_bytes_before": 5775077478400,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:55:03.753547+00:00",
+            "elapsed_ns": 189694362,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.179554,
+              "ru_stime": 0.009975,
+              "ru_maxrss": 33336,
+              "ru_minflt": 2482,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 34136064,
+            "cpu_seconds": 0.189529,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:55:03.951530+00:00",
+            "elapsed_ns": 316848995,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.303703,
+              "ru_stime": 0.012986999999999999,
+              "ru_maxrss": 74340,
+              "ru_minflt": 6388,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 76124160,
+            "cpu_seconds": 0.31669,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 506543357,
+        "peak_rss_bytes": 76124160,
+        "cpu_seconds": 0.506219,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:04.276676+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:04.277314+00:00",
+        "free_bytes_before": 5775059582976,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:55:04.277627+00:00",
+            "elapsed_ns": 189373778,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.185196,
+              "ru_stime": 0.004004,
+              "ru_maxrss": 33364,
+              "ru_minflt": 2481,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 3
+            },
+            "peak_rss_bytes": 34164736,
+            "cpu_seconds": 0.1892,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:55:04.475208+00:00",
+            "elapsed_ns": 315428409,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.299211,
+              "ru_stime": 0.016011,
+              "ru_maxrss": 74300,
+              "ru_minflt": 6391,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 76083200,
+            "cpu_seconds": 0.315222,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 504802187,
+        "peak_rss_bytes": 76083200,
+        "cpu_seconds": 0.504422,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:04.798690+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:04.799118+00:00",
+        "free_bytes_before": 5775040434176,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:55:04.799431+00:00",
+            "elapsed_ns": 186631441,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18148899999999998,
+              "ru_stime": 0.004985,
+              "ru_maxrss": 33400,
+              "ru_minflt": 2482,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 34201600,
+            "cpu_seconds": 0.18647399999999997,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:55:04.994199+00:00",
+            "elapsed_ns": 312167779,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.303006,
+              "ru_stime": 0.009,
+              "ru_maxrss": 74240,
+              "ru_minflt": 6390,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 76021760,
+            "cpu_seconds": 0.312006,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 498799220,
+        "peak_rss_bytes": 76021760,
+        "cpu_seconds": 0.49848,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:05.316266+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:05.316781+00:00",
+        "free_bytes_before": 5775022542848,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:55:05.317106+00:00",
+            "elapsed_ns": 316273744,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.30611,
+              "ru_stime": 0.010003,
+              "ru_maxrss": 43236,
+              "ru_minflt": 4176,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 44273664,
+            "cpu_seconds": 0.316113,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 316273744,
+        "peak_rss_bytes": 44273664,
+        "cpu_seconds": 0.316113,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:05.644826+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:05.645237+00:00",
+        "free_bytes_before": 5775006199808,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:55:05.645548+00:00",
+            "elapsed_ns": 315351242,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.304184,
+              "ru_stime": 0.011006,
+              "ru_maxrss": 43232,
+              "ru_minflt": 4176,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44269568,
+            "cpu_seconds": 0.31519,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 315351242,
+        "peak_rss_bytes": 44269568,
+        "cpu_seconds": 0.31519,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:05.977376+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:07.035196+00:00",
+        "free_bytes_before": 5774955614208,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:07.035505+00:00",
+            "elapsed_ns": 507263900,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.48506699999999997,
+              "ru_stime": 0.022002999999999998,
+              "ru_maxrss": 86104,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 24
+            },
+            "peak_rss_bytes": 88170496,
+            "cpu_seconds": 0.50707,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 507263900,
+        "peak_rss_bytes": 88170496,
+        "cpu_seconds": 0.50707,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:07.556734+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:07.557238+00:00",
+        "free_bytes_before": 5774937739264,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:07.557552+00:00",
+            "elapsed_ns": 528908229,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.5126689999999999,
+              "ru_stime": 0.016052,
+              "ru_maxrss": 86168,
+              "ru_minflt": 7577,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 88236032,
+            "cpu_seconds": 0.5287209999999999,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 528908229,
+        "peak_rss_bytes": 88236032,
+        "cpu_seconds": 0.5287209999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:08.099820+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:08.100568+00:00",
+        "free_bytes_before": 5774918455296,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:08.100894+00:00",
+            "elapsed_ns": 514147787,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.498955,
+              "ru_stime": 0.014998,
+              "ru_maxrss": 86100,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 7
+            },
+            "peak_rss_bytes": 88166400,
+            "cpu_seconds": 0.513953,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 514147787,
+        "peak_rss_bytes": 88166400,
+        "cpu_seconds": 0.513953,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:08.629301+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:08.629754+00:00",
+        "free_bytes_before": 5774900580352,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:08.630075+00:00",
+            "elapsed_ns": 529567938,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.508254,
+              "ru_stime": 0.02001,
+              "ru_maxrss": 86080,
+              "ru_minflt": 7577,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 88145920,
+            "cpu_seconds": 0.528264,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 529567938,
+        "peak_rss_bytes": 88145920,
+        "cpu_seconds": 0.528264,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:09.173496+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:09.174135+00:00",
+        "free_bytes_before": 5774881878016,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:09.174486+00:00",
+            "elapsed_ns": 521859175,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.500671,
+              "ru_stime": 0.020985999999999998,
+              "ru_maxrss": 86104,
+              "ru_minflt": 7574,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 88170496,
+            "cpu_seconds": 0.5216569999999999,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 521859175,
+        "peak_rss_bytes": 88170496,
+        "cpu_seconds": 0.5216569999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:09.709543+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:09.709989+00:00",
+        "free_bytes_before": 5774862438400,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:09.710327+00:00",
+            "elapsed_ns": 514560204,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.49334999999999996,
+              "ru_stime": 0.021013999999999998,
+              "ru_maxrss": 86108,
+              "ru_minflt": 7575,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 88174592,
+            "cpu_seconds": 0.5143639999999999,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 514560204,
+        "peak_rss_bytes": 88174592,
+        "cpu_seconds": 0.5143639999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:10.237967+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:10.238576+00:00",
+        "free_bytes_before": 5774844551168,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:10.238890+00:00",
+            "elapsed_ns": 510389614,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.494187,
+              "ru_stime": 0.016006,
+              "ru_maxrss": 86092,
+              "ru_minflt": 7577,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 88158208,
+            "cpu_seconds": 0.510193,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 510389614,
+        "peak_rss_bytes": 88158208,
+        "cpu_seconds": 0.510193,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:10.762765+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:10.763205+00:00",
+        "free_bytes_before": 5774827667456,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:10.763530+00:00",
+            "elapsed_ns": 510123822,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.49180199999999996,
+              "ru_stime": 0.017991999999999998,
+              "ru_maxrss": 86092,
+              "ru_minflt": 7577,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 5
+            },
+            "peak_rss_bytes": 88158208,
+            "cpu_seconds": 0.509794,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 510123822,
+        "peak_rss_bytes": 88158208,
+        "cpu_seconds": 0.509794,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:11.286836+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:11.287460+00:00",
+        "free_bytes_before": 5774809780224,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:11.287785+00:00",
+            "elapsed_ns": 521923925,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.496741,
+              "ru_stime": 0.024985999999999998,
+              "ru_maxrss": 86092,
+              "ru_minflt": 7578,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 7
+            },
+            "peak_rss_bytes": 88158208,
+            "cpu_seconds": 0.5217269999999999,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 521923925,
+        "peak_rss_bytes": 88158208,
+        "cpu_seconds": 0.5217269999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:11.823328+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:11.823737+00:00",
+        "free_bytes_before": 5774790500352,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:11.824059+00:00",
+            "elapsed_ns": 500122347,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.478817,
+              "ru_stime": 0.020991,
+              "ru_maxrss": 86092,
+              "ru_minflt": 7577,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 5
+            },
+            "peak_rss_bytes": 88158208,
+            "cpu_seconds": 0.499808,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 500122347,
+        "peak_rss_bytes": 88158208,
+        "cpu_seconds": 0.499808,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:12.337354+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:12.337961+00:00",
+        "free_bytes_before": 5774772617216,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:12.338279+00:00",
+            "elapsed_ns": 524409679,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.511219,
+              "ru_stime": 0.013005,
+              "ru_maxrss": 86108,
+              "ru_minflt": 7571,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 88174592,
+            "cpu_seconds": 0.524224,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 524409679,
+        "peak_rss_bytes": 88174592,
+        "cpu_seconds": 0.524224,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:12.875857+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:12.876324+00:00",
+        "free_bytes_before": 5774754717696,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:12.876629+00:00",
+            "elapsed_ns": 524106137,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.502934,
+              "ru_stime": 0.020997,
+              "ru_maxrss": 86096,
+              "ru_minflt": 7575,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "peak_rss_bytes": 88162304,
+            "cpu_seconds": 0.523931,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 524106137,
+        "peak_rss_bytes": 88162304,
+        "cpu_seconds": 0.523931,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:13.417329+00:00"
+      }
+    ],
+    "warmup_samples": [
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:53.918585+00:00",
+        "free_bytes_before": 5775459151872,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T18:54:53.918872+00:00",
+            "elapsed_ns": 315035200,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.302271,
+              "ru_stime": 0.01201,
+              "ru_maxrss": 43284,
+              "ru_minflt": 4182,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 2,
+              "ru_nivcsw": 2
+            },
+            "peak_rss_bytes": 44322816,
+            "cpu_seconds": 0.31428100000000003,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 315035200,
+        "peak_rss_bytes": 44322816,
+        "cpu_seconds": 0.31428100000000003,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:54.245480+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:54.245905+00:00",
+        "free_bytes_before": 5775444324352,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T18:54:54.246230+00:00",
+            "elapsed_ns": 320694627,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.30838499999999996,
+              "ru_stime": 0.012015,
+              "ru_maxrss": 43248,
+              "ru_minflt": 4182,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28918,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 12
+            },
+            "peak_rss_bytes": 44285952,
+            "cpu_seconds": 0.32039999999999996,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 320694627,
+        "peak_rss_bytes": 44285952,
+        "cpu_seconds": 0.32039999999999996,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:54.578398+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:54:54.578893+00:00",
+        "free_bytes_before": 5775429283840,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.stderr",
+            "started_at": "2026-11-15T18:54:54.579231+00:00",
+            "elapsed_ns": 190113530,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.18495899999999998,
+              "ru_stime": 0.004998,
+              "ru_maxrss": 33340,
+              "ru_minflt": 2483,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "peak_rss_bytes": 34140160,
+            "cpu_seconds": 0.189957,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.stderr",
+            "started_at": "2026-11-15T18:54:54.776292+00:00",
+            "elapsed_ns": 333752440,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.31646199999999997,
+              "ru_stime": 0.017024,
+              "ru_maxrss": 74352,
+              "ru_minflt": 6392,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 8
+            },
+            "peak_rss_bytes": 76136448,
+            "cpu_seconds": 0.33348599999999995,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 523865970,
+        "peak_rss_bytes": 76136448,
+        "cpu_seconds": 0.5234429999999999,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:55.120207+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:54:55.130584+00:00",
+        "free_bytes_before": 5775410163712,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/tmp-4/"
+            },
+            "input": "fixtures/mixed-permuted/ipv4.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.stderr",
+            "started_at": "2026-11-15T18:54:55.133768+00:00",
+            "elapsed_ns": 192325034,
+            "exit_code": 0,
+            "output_bytes": 7399156,
+            "output_sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.17904399999999998,
+              "ru_stime": 0.013002999999999999,
+              "ru_maxrss": 33332,
+              "ru_minflt": 2481,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 14451,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "peak_rss_bytes": 34131968,
+            "cpu_seconds": 0.19204699999999997,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.rusage.json"
+          },
+          {
+            "family": 6,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/ipv6.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/tmp-6/"
+            },
+            "input": "fixtures/mixed-permuted/ipv6.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.stderr",
+            "started_at": "2026-11-15T18:54:55.335925+00:00",
+            "elapsed_ns": 312332862,
+            "exit_code": 0,
+            "output_bytes": 10465056,
+            "output_sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.30217,
+              "ru_stime": 0.010005,
+              "ru_maxrss": 74284,
+              "ru_minflt": 6387,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 20439,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "peak_rss_bytes": 76066816,
+            "cpu_seconds": 0.312175,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 504657896,
+        "peak_rss_bytes": 76066816,
+        "cpu_seconds": 0.504222,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:54:55.656697+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "started_at": "2026-11-15T18:55:05.978119+00:00",
+        "free_bytes_before": 5774991380480,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.stderr",
+            "started_at": "2026-11-15T18:55:05.978435+00:00",
+            "elapsed_ns": 523626011,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.505335,
+              "ru_stime": 0.017976,
+              "ru_maxrss": 86096,
+              "ru_minflt": 7569,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 9
+            },
+            "peak_rss_bytes": 88162304,
+            "cpu_seconds": 0.523311,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 523626011,
+        "peak_rss_bytes": 88162304,
+        "cpu_seconds": 0.523311,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:06.515203+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "started_at": "2026-11-15T18:55:06.515599+00:00",
+        "free_bytes_before": 5774973505536,
+        "parts": [
+          {
+            "family": null,
+            "command": [
+              "$PLATFORM_ROOT/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$PLATFORM_ROOT/fixtures/mixed-permuted/input.txt"
+            ],
+            "environment": {
+              "PATH": "/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$PLATFORM_ROOT/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/tmp-mixed/"
+            },
+            "input": "fixtures/mixed-permuted/input.txt",
+            "output": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.stdout",
+            "stderr": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.stderr",
+            "started_at": "2026-11-15T18:55:06.515909+00:00",
+            "elapsed_ns": 505576648,
+            "exit_code": 0,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.48919199999999996,
+              "ru_stime": 0.016038999999999998,
+              "ru_maxrss": 86116,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 5
+            },
+            "peak_rss_bytes": 88182784,
+            "cpu_seconds": 0.505231,
+            "raw_metrics": "followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 505576648,
+        "peak_rss_bytes": 88182784,
+        "cpu_seconds": 0.505231,
+        "output_bytes": 17864212,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T18:55:07.034590+00:00"
+      }
+    ],
+    "measured_samples": 36,
+    "excluded_warmup_samples": 6,
+    "groups": [
+      {
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "n": 6,
+        "elapsed_median_s": 0.52189155,
+        "elapsed_min_s": 0.5072639,
+        "elapsed_max_s": 0.529567938,
+        "peak_rss_median_mib": 84.076171875,
+        "peak_rss_min_mib": 84.0625,
+        "peak_rss_max_mib": 84.0859375,
+        "cpu_median_s": 0.5216919999999999
+      },
+      {
+        "suite": "native",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "n": 6,
+        "elapsed_median_s": 0.5143539955,
+        "elapsed_min_s": 0.500122347,
+        "elapsed_max_s": 0.528908229,
+        "peak_rss_median_mib": 84.0859375,
+        "peak_rss_min_mib": 84.07421875,
+        "peak_rss_max_mib": 84.1484375,
+        "cpu_median_s": 0.5141585
+      },
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "n": 6,
+        "elapsed_median_s": 0.3182169555,
+        "elapsed_min_s": 0.314377407,
+        "elapsed_max_s": 0.32181217,
+        "peak_rss_median_mib": 42.240234375,
+        "peak_rss_min_mib": 42.21875,
+        "peak_rss_max_mib": 42.27734375,
+        "cpu_median_s": 0.318037
+      },
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "n": 6,
+        "elapsed_median_s": 0.31843708049999997,
+        "elapsed_min_s": 0.314106615,
+        "elapsed_max_s": 0.34524171,
+        "peak_rss_median_mib": 42.2265625,
+        "peak_rss_min_mib": 42.21875,
+        "peak_rss_max_mib": 42.28515625,
+        "cpu_median_s": 0.3179645
+      },
+      {
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "B",
+        "n": 6,
+        "elapsed_median_s": 0.5026002055000001,
+        "elapsed_min_s": 0.49879922,
+        "elapsed_max_s": 0.508699028,
+        "peak_rss_median_mib": 72.55078125,
+        "peak_rss_min_mib": 72.5,
+        "peak_rss_max_mib": 72.62890625,
+        "cpu_median_s": 0.5021990000000001
+      },
+      {
+        "suite": "split",
+        "case": "mixed-permuted",
+        "tool": "C",
+        "n": 6,
+        "elapsed_median_s": 0.505672772,
+        "elapsed_min_s": 0.498573885,
+        "elapsed_max_s": 0.524677639,
+        "peak_rss_median_mib": 72.54296875,
+        "peak_rss_min_mib": 72.53515625,
+        "peak_rss_max_mib": 72.59765625,
+        "cpu_median_s": 0.5053205000000001
+      }
+    ],
+    "comparisons": [
+      {
+        "suite": "native",
+        "case": "mixed-permuted",
+        "n_pairs": 6,
+        "paired_elapsed_change_median_pct": -0.6732721024556243,
+        "paired_elapsed_change_min_pct": -4.177156278091676,
+        "paired_elapsed_change_max_pct": 4.266877457670448,
+        "paired_rss_change_median_pct": 0.00929173733762445,
+        "paired_rss_difference_median_mib": 0.0078125,
+        "pairs": [
+          {
+            "round": 1,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 4.266877457670448,
+            "rss_change_pct": 0.07432871875872049,
+            "elapsed_difference_s": 0.021644329,
+            "rss_difference_mib": 0.0625
+          },
+          {
+            "round": 2,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -2.9118362146765775,
+            "rss_change_pct": 0.023234200743504907,
+            "elapsed_difference_s": -0.015420151,
+            "rss_difference_mib": 0.01953125
+          },
+          {
+            "round": 3,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -1.3986476332431996,
+            "rss_change_pct": 0.004645544922410316,
+            "elapsed_difference_s": -0.007298971,
+            "rss_difference_mib": 0.00390625
+          },
+          {
+            "round": 4,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 0.05210342833195103,
+            "rss_change_pct": 0.0,
+            "elapsed_difference_s": 0.000265792,
+            "rss_difference_mib": 0.0
+          },
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -4.177156278091676,
+            "rss_change_pct": 0.0,
+            "elapsed_difference_s": -0.021801578,
+            "rss_difference_mib": 0.0
+          },
+          {
+            "round": 6,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 0.05791613159453757,
+            "rss_change_pct": 0.013937929752838585,
+            "elapsed_difference_s": 0.000303542,
+            "rss_difference_mib": 0.01171875
+          }
+        ]
+      },
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "n_pairs": 6,
+        "paired_elapsed_change_median_pct": 0.5341230238274819,
+        "paired_elapsed_change_min_pct": -1.139825933529226,
+        "paired_elapsed_change_max_pct": 8.326163605935344,
+        "paired_rss_change_median_pct": -0.03237101170021073,
+        "paired_rss_difference_median_mib": -0.013671875,
+        "pairs": [
+          {
+            "round": 1,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 0.7757144583866449,
+            "rss_change_pct": -0.03699250901691986,
+            "elapsed_difference_s": 0.002438671,
+            "rss_difference_mib": -0.015625
+          },
+          {
+            "round": 2,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -0.3442565164040512,
+            "rss_change_pct": -0.07394398742952557,
+            "elapsed_difference_s": -0.001105627,
+            "rss_difference_mib": -0.03125
+          },
+          {
+            "round": 3,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 8.326163605935344,
+            "rss_change_pct": -0.027749514383501594,
+            "elapsed_difference_s": 0.026535962,
+            "rss_difference_mib": -0.01171875
+          },
+          {
+            "round": 4,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -1.139825933529226,
+            "rss_change_pct": -0.08315624133788946,
+            "elapsed_difference_s": -0.003621548,
+            "rss_difference_mib": -0.03515625
+          },
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 6.880720203962465,
+            "rss_change_pct": 0.10171999260217834,
+            "elapsed_difference_s": 0.022142995,
+            "rss_difference_mib": 0.04296875
+          },
+          {
+            "round": 6,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 0.2925315892683189,
+            "rss_change_pct": 0.009252405625459481,
+            "elapsed_difference_s": 0.000922502,
+            "rss_difference_mib": 0.00390625
+          }
+        ]
+      },
+      {
+        "suite": "split",
+        "case": "mixed-permuted",
+        "n_pairs": 6,
+        "paired_elapsed_change_median_pct": 1.1957638794446557,
+        "paired_elapsed_change_min_pct": -1.990399517728192,
+        "paired_elapsed_change_max_pct": 4.638003658090706,
+        "paired_rss_change_median_pct": -0.008076239702792254,
+        "paired_rss_difference_median_mib": -0.005859375,
+        "pairs": [
+          {
+            "round": 1,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 2.2604209679929266,
+            "rss_change_pct": 0.0,
+            "elapsed_difference_s": 0.01138752,
+            "rss_difference_mib": 0.0
+          },
+          {
+            "round": 2,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 4.638003658090706,
+            "rss_change_pct": -0.11296395911780666,
+            "elapsed_difference_s": 0.023255956,
+            "rss_difference_mib": -0.08203125
+          },
+          {
+            "round": 3,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -1.990399517728192,
+            "rss_change_pct": -0.12370246867100532,
+            "elapsed_difference_s": -0.010125143,
+            "rss_difference_mib": -0.08984375
+          },
+          {
+            "round": 4,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -0.1649187689034326,
+            "rss_change_pct": -0.016152479405584508,
+            "elapsed_difference_s": -0.000832752,
+            "rss_difference_mib": -0.01171875
+          },
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": 1.1880441207232417,
+            "rss_change_pct": 0.06460991762236024,
+            "elapsed_difference_s": 0.005947302,
+            "rss_difference_mib": 0.046875
+          },
+          {
+            "round": 6,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 1.2034836381660696,
+            "rss_change_pct": 0.08081896551723755,
+            "elapsed_difference_s": 0.006002967,
+            "rss_difference_mib": 0.05859375
+          }
+        ]
+      }
+    ],
+    "no_samples_removed_or_retried": true,
+    "all_outputs_retained": true,
+    "all_outputs_match_original_independent_coverage": true,
+    "host_after": {
+      "at": "2026-11-15T18:55:13.676587+00:00",
+      "platform_label": "native ARM64 Linux OrbStack",
+      "machine": "aarch64",
+      "kernel": "7.2.12-orbstack-00394-gbecdd6130068",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "loadavg": "0.48 1.20 1.19 1/400 307\n",
+      "memory": "MemTotal:       16424796 kB\nMemFree:        13166928 kB\nMemAvailable:   15506692 kB\nBuffers:             120 kB\nCached:          1600488 kB\nSwapCached:            0 kB\nActive:           332464 kB\nInactive:        1572016 kB\nActive(anon):     288516 kB\nInactive(anon):    38444 kB\nActive(file):      43948 kB\nInactive(file):  1533572 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:      17473364 kB\nSwapFree:       17473364 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:        293704 kB\nMapped:            82984 kB\nShmem:             23088 kB\nKReclaimable:    1019424 kB\nSlab:            1145440 kB\nSReclaimable:    1019424 kB\nSUnreclaim:       126016 kB\nKernelStack:        6544 kB\nPageTables:         8324 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    25685760 kB\nCommitted_AS:    9010680 kB\nVmallocTotal:   135288315904 kB\nVmallocUsed:       72484 kB\nVmallocChunk:          0 kB\nPercpu:             5040 kB\nAnonHugePages:     75776 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nBalloon:               0 kB\nGPUActive:             0 kB\nGPUReclaim:            0 kB\n",
+      "cpuinfo": "processor\t: 0\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 1\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 2\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 3\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 4\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 5\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 6\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 7\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 8\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\nprocessor\t: 9\nBogoMIPS\t: 48.00\nFeatures\t: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 asimddp sha512 asimdfhm dit uscat ilrcpc flagm sb dcpodp flagm2 frint\nCPU implementer\t: 0x61\nCPU architecture: 8\nCPU variant\t: 0x0\nCPU part\t: 0x000\nCPU revision\t: 0\n\n",
+      "disk_free_bytes": 5774736793600,
+      "swift": {
+        "command": [
+          "/usr/bin/swift",
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: aarch64-unknown-linux-gnu\n",
+        "stderr": ""
+      },
+      "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "cpu_max": "max 100000\n"
+    }
+  }
+}
