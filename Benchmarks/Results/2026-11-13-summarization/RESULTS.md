@@ -1078,3 +1078,11 @@ universal performance, a dedicated-host result, or deployment readiness. Review
 the final source and run the clean-tree and hosted release gates before any
 cidrmerge 0.4.0 publication. No commit, tag, push, or release was performed for
 cidrmerge in this follow-up.
+
+## Subsequent competitor comparison (2026-11-14)
+
+The published cidrmerge 0.4.0 executable was subsequently compared with
+rs-aggregate, iprange, and mapCIDR on matched million-record inputs. The separate
+[competitor report](../2026-11-14-competitors/RESULTS.md) records equivalent minimal
+coverage, elapsed time, peak RSS, all observations, and reproducibility details.
+The historical qualification sections above are preserved verbatim.
