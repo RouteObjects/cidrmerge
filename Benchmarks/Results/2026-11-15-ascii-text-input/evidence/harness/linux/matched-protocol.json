@@ -1,0 +1,32 @@
+{
+  "measured_rounds": 6,
+  "split_cases": [
+    "ipv4-disjoint",
+    "ipv6-disjoint",
+    "mixed-disjoint",
+    "mixed-permuted",
+    "mixed-overlap",
+    "mixed-adjacent",
+    "bgp-like-ipv4",
+    "range-derived-mixed"
+  ],
+  "native_cases": [
+    "mixed-disjoint",
+    "mixed-permuted",
+    "mixed-overlap"
+  ],
+  "order": "B,C on odd rounds; C,B on even rounds; rotate cases per round",
+  "warmup": "one excluded warmup per configuration",
+  "measured_samples": 132,
+  "measured_processes": 192,
+  "warmup_samples": 22,
+  "warmup_processes": 32,
+  "minimum_free_bytes": 3221225472,
+  "timeout_seconds": 180,
+  "elapsed": "perf_counter_ns includes process launch and blocking wait4; output verification outside timer",
+  "rss": "Linux wait4 ru_maxrss for that exact child, KiB times1024; max across split processes",
+  "output": "all stdout/stderr retained and exact byte count/hash compared with original independent coverage reference",
+  "build_tests": "full B/C cidrmerge Core+CLI Debug and Release; freeze ordinary release CLI binaries before tests",
+  "comparison": "same-source cidrmerge main6703901 vs TextInput ASCII fast path; identical released remote dependency pins",
+  "correctness_gate": "exact differential behavior with frozen binary/script hashes; new full tests complete"
+}

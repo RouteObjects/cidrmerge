@@ -1,0 +1,2040 @@
+{
+  "passed": true,
+  "method": "Time Profiler attaches to owned process blocked on stdin. Identical fixture bytes are fed after capture readiness; stdout inherited from parent. CPU samples only; file-based benchmark timing is separate.",
+  "transformation": "Selected numeric fields and semantic metadata only; original hashes apply to raw artifacts retained in the Downloads evidence bundle.",
+  "profiles": [
+    {
+      "variant": "B",
+      "case": "ipv6-disjoint",
+      "binary_sha256": "391d2706622fa6c819aced86141c0f3815222aefeb039d799f2079c1af0acff5",
+      "target_exit_code": 0,
+      "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "output_bytes": 21342471,
+      "matches_reference": true,
+      "target_samples": 948,
+      "input_categories": {
+        "normalization_description_formatting_named": {
+          "samples": 55,
+          "sample_weight_ns": 55000000,
+          "sample_weight_ms": 55.0,
+          "percent_of_input_weight": 6.586826347305389,
+          "percent_of_target_weight": 5.801687763713081,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddress.description.getter",
+              "sample_weight_ms": 55.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 18.0
+            },
+            {
+              "function": "closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 15.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.withIPv6Bytes<A>(_:_:)",
+              "sample_weight_ms": 11.0
+            },
+            {
+              "function": "closure #1 in static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 11.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeHextet(left:right:into:at:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "specialized static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "comment_string_split": {
+          "samples": 380,
+          "sample_weight_ns": 380000000,
+          "sample_weight_ms": 380.0,
+          "percent_of_input_weight": 45.50898203592814,
+          "percent_of_target_weight": 40.08438818565401,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 378.0
+            },
+            {
+              "function": "specialized Collection.split(maxSplits:omittingEmptySubsequences:whereSeparator:)",
+              "sample_weight_ms": 343.0
+            },
+            {
+              "function": "partial apply for specialized closure #1 in Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 56.0
+            },
+            {
+              "function": "specialized closure #1 in Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 45.0
+            }
+          ]
+        },
+        "foundation_whitespace_trimming": {
+          "samples": 30,
+          "sample_weight_ns": 30000000,
+          "sample_weight_ms": 30.0,
+          "percent_of_input_weight": 3.592814371257485,
+          "percent_of_target_weight": 3.1645569620253164,
+          "matched_anchor_functions": [
+            {
+              "function": "StringProtocol.trimmingCharacters(in:)",
+              "sample_weight_ms": 30.0
+            },
+            {
+              "function": "specialized BidirectionalCollection<>._trimmingCharacters(in:)",
+              "sample_weight_ms": 15.0
+            },
+            {
+              "function": "__CharacterSetStorage.contains(_:)",
+              "sample_weight_ms": 8.0
+            }
+          ]
+        },
+        "unicode_character_string_traversal": {
+          "samples": 269,
+          "sample_weight_ns": 269000000,
+          "sample_weight_ms": 269.0,
+          "percent_of_input_weight": 32.21556886227545,
+          "percent_of_target_weight": 28.37552742616034,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String",
+              "sample_weight_ms": 119.0
+            },
+            {
+              "function": "String.subscript.getter",
+              "sample_weight_ms": 96.0
+            },
+            {
+              "function": "protocol witness for Collection.formIndex(after:) in conformance String",
+              "sample_weight_ms": 91.0
+            },
+            {
+              "function": "String._uncheckedIndex(after:)",
+              "sample_weight_ms": 62.0
+            },
+            {
+              "function": "protocol witness for static Equatable.== infix(_:_:) in conformance Character",
+              "sample_weight_ms": 38.0
+            },
+            {
+              "function": "static Character.== infix(_:_:)",
+              "sample_weight_ms": 38.0
+            },
+            {
+              "function": "_StringGuts.validateScalarIndex(_:)",
+              "sample_weight_ms": 30.0
+            },
+            {
+              "function": "String.index(after:)",
+              "sample_weight_ms": 26.0
+            },
+            {
+              "function": "_StringGuts.validateCharacterIndex(_:)",
+              "sample_weight_ms": 23.0
+            },
+            {
+              "function": "DYLD-STUB$$String.index(after:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "DYLD-STUB$$String.subscript.getter",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "protocol witness for Collection.subscript.getter in conformance String",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "numeric_address_prefix_parsing_named": {
+          "samples": 45,
+          "sample_weight_ns": 45000000,
+          "sample_weight_ms": 45.0,
+          "percent_of_input_weight": 5.389221556886228,
+          "percent_of_target_weight": 4.746835443037975,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized AnyIPNetwork.init(_:)",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "specialized IPNetwork.init(_:policy:)",
+              "sample_weight_ms": 39.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:parseOrder:)",
+              "sample_weight_ms": 39.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:policy:parseOrder:)",
+              "sample_weight_ms": 39.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V6",
+              "sample_weight_ms": 37.0
+            },
+            {
+              "function": "static AF.V6.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 37.0
+            },
+            {
+              "function": "static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 36.0
+            },
+            {
+              "function": "static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 23.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 23.0
+            },
+            {
+              "function": "static AF._parseIPv6CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 23.0
+            },
+            {
+              "function": "consumeHexDigit #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "hexValue #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "specialized static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V4",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "static AF.V4.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "specialized static PrefixLengthTextParser.parse<A>(_:maximum:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "data_chunk_iteration": {
+          "samples": 48,
+          "sample_weight_ns": 48000000,
+          "sample_weight_ms": 48.0,
+          "percent_of_input_weight": 5.748502994011976,
+          "percent_of_target_weight": 5.063291139240507,
+          "matched_anchor_functions": [
+            {
+              "function": "Data.Iterator.next()",
+              "sample_weight_ms": 36.0
+            },
+            {
+              "function": "DYLD-STUB$$Data.Iterator.next()",
+              "sample_weight_ms": 12.0
+            }
+          ]
+        },
+        "input_token_kind_scan_named": {
+          "samples": 24,
+          "sample_weight_ns": 24000000,
+          "sample_weight_ms": 24.0,
+          "percent_of_input_weight": 2.874251497005988,
+          "percent_of_target_weight": 2.5316455696202533,
+          "matched_anchor_functions": [
+            {
+              "function": "static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 24.0
+            },
+            {
+              "function": "specialized static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 24.0
+            }
+          ]
+        },
+        "utf8_view_byte_traversal": {
+          "samples": 12,
+          "sample_weight_ns": 12000000,
+          "sample_weight_ms": 12.0,
+          "percent_of_input_weight": 1.437125748502994,
+          "percent_of_target_weight": 1.2658227848101267,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String.UTF8View",
+              "sample_weight_ms": 11.0
+            },
+            {
+              "function": "protocol witness for Collection.formIndex(after:) in conformance String.UTF8View",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "line_utf8_string_construction_named": {
+          "samples": 55,
+          "sample_weight_ns": 55000000,
+          "sample_weight_ms": 55.0,
+          "percent_of_input_weight": 6.586826347305389,
+          "percent_of_target_weight": 5.801687763713081,
+          "matched_anchor_functions": [
+            {
+              "function": "String.init<A>(bytes:encoding:)",
+              "sample_weight_ms": 55.0
+            }
+          ]
+        },
+        "array_append_growth_any_input_context": {
+          "samples": 77,
+          "sample_weight_ns": 77000000,
+          "sample_weight_ms": 77.0,
+          "percent_of_input_weight": 9.221556886227544,
+          "percent_of_target_weight": 8.122362869198312,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Array.append(_:)",
+              "sample_weight_ms": 76.0
+            },
+            {
+              "function": "specialized Array._makeUniqueAndReserveCapacityIfNotUnique()",
+              "sample_weight_ms": 63.0
+            },
+            {
+              "function": "specialized Array._createNewBuffer(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 38.0
+            },
+            {
+              "function": "specialized _ArrayBuffer._consumeAndCreateNew(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 38.0
+            },
+            {
+              "function": "specialized _ContiguousArrayBuffer.init(_uninitializedCount:minimumCapacity:)",
+              "sample_weight_ms": 24.0
+            },
+            {
+              "function": "specialized Array._reserveCapacityAssumingUniqueBuffer(oldCount:)",
+              "sample_weight_ms": 6.0
+            }
+          ]
+        },
+        "parsed_input_append_named": {
+          "samples": 11,
+          "sample_weight_ns": 11000000,
+          "sample_weight_ms": 11.0,
+          "percent_of_input_weight": 1.3173652694610778,
+          "percent_of_target_weight": 1.160337552742616,
+          "matched_anchor_functions": [
+            {
+              "function": "ParsedInput.append(_:normalized:)",
+              "sample_weight_ms": 11.0
+            }
+          ]
+        },
+        "network_to_range_conversion_named": {
+          "samples": 5,
+          "sample_weight_ns": 5000000,
+          "sample_weight_ms": 5.0,
+          "percent_of_input_weight": 0.5988023952095808,
+          "percent_of_target_weight": 0.5274261603375527,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddressRange.init(covering:)",
+              "sample_weight_ms": 5.0
+            }
+          ]
+        },
+        "file_read_named": {
+          "samples": 7,
+          "sample_weight_ns": 7000000,
+          "sample_weight_ms": 7.0,
+          "percent_of_input_weight": 0.8383233532934131,
+          "percent_of_target_weight": 0.7383966244725738,
+          "matched_anchor_functions": [
+            {
+              "function": "NSFileHandle.read(upToCount:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataOfLength:]",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataUpToLength:error:]",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "read",
+              "sample_weight_ms": 3.0
+            }
+          ]
+        },
+        "string_comparison_mixed_contexts": {
+          "samples": 47,
+          "sample_weight_ns": 47000000,
+          "sample_weight_ms": 47.0,
+          "percent_of_input_weight": 5.62874251497006,
+          "percent_of_target_weight": 4.957805907172996,
+          "matched_anchor_functions": [
+            {
+              "function": "_stringCompare(_:_:expecting:)",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "static String.== infix(_:_:)",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "_stringCompareWithSmolCheck(_:_:expecting:)",
+              "sample_weight_ms": 21.0
+            },
+            {
+              "function": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "_stringCompareInternal(_:_:expecting:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "_stringCompareFastUTF8(_:_:expecting:bothNFC:)",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "runtime_memory_management_mixed_contexts": {
+          "samples": 201,
+          "sample_weight_ns": 201000000,
+          "sample_weight_ms": 201.0,
+          "percent_of_input_weight": 24.07185628742515,
+          "percent_of_target_weight": 21.20253164556962,
+          "matched_anchor_functions": [
+            {
+              "function": "bool swift::RefCounts<swift::RefCountBitsT<(swift::RefCountInlinedness)1>>::doDecrementSlow<(swift::PerformDeinit)1>(swift::RefCountBitsT<(swift::RefCountInlinedness)1>, unsigned int)",
+              "sample_weight_ms": 75.0
+            },
+            {
+              "function": "_swift_release_dealloc",
+              "sample_weight_ms": 69.0
+            },
+            {
+              "function": "_xzm_free_main",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "swift_allocObject",
+              "sample_weight_ms": 35.0
+            },
+            {
+              "function": "swift_release",
+              "sample_weight_ms": 20.0
+            },
+            {
+              "function": "swift_bridgeObjectRelease",
+              "sample_weight_ms": 19.0
+            },
+            {
+              "function": "_xzm_xzone_malloc_tiny",
+              "sample_weight_ms": 16.0
+            },
+            {
+              "function": "swift_retain",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRelease",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "_swift_stdlib_malloc_size",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "_free",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "swift_arrayDestroy",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "_ContiguousArrayStorage.__deallocating_deinit",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "malloc_size",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "swift_bridgeObjectRetain",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "swift_deallocClassInstance",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "malloc_type_malloc",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "xzm_malloc_zone_size",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "DYLD-STUB$$malloc_size",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "_malloc_zone_realloc",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "xzm_malloc_zone_malloc_type_realloc",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRetain",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "_xzm_malloc_large_huge",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "free",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "xzm_reclaim_mark_free_locked",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "__StringStorage.__deallocating_deinit",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_allocObject",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "variant": "C",
+      "case": "ipv6-disjoint",
+      "binary_sha256": "a216d212ebd9ee39c0abc1d77e5114d35c3ba795ea248e5529d262acd8d81b15",
+      "target_exit_code": 0,
+      "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "output_bytes": 21342471,
+      "matches_reference": true,
+      "target_samples": 520,
+      "input_categories": {
+        "normalization_description_formatting_named": {
+          "samples": 44,
+          "sample_weight_ns": 44000000,
+          "sample_weight_ms": 44.0,
+          "percent_of_input_weight": 11.16751269035533,
+          "percent_of_target_weight": 8.461538461538462,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddress.description.getter",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 16.0
+            },
+            {
+              "function": "closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 15.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.withIPv6Bytes<A>(_:_:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "closure #1 in static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "specialized static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeHextet(left:right:into:at:)",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "comment_string_split": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "foundation_whitespace_trimming": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "unicode_character_string_traversal": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "numeric_address_prefix_parsing_named": {
+          "samples": 54,
+          "sample_weight_ns": 54000000,
+          "sample_weight_ms": 54.0,
+          "percent_of_input_weight": 13.705583756345177,
+          "percent_of_target_weight": 10.384615384615385,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized AnyIPNetwork.init(_:)",
+              "sample_weight_ms": 54.0
+            },
+            {
+              "function": "specialized IPNetwork.init(_:policy:)",
+              "sample_weight_ms": 50.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:parseOrder:)",
+              "sample_weight_ms": 50.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:policy:parseOrder:)",
+              "sample_weight_ms": 50.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V6",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "static AF.V6.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 44.0
+            },
+            {
+              "function": "static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 42.0
+            },
+            {
+              "function": "static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 31.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 30.0
+            },
+            {
+              "function": "static AF._parseIPv6CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 30.0
+            },
+            {
+              "function": "consumeHexDigit #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "hexValue #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V4",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "static AF.V4.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static PrefixLengthTextParser.parse<A>(_:maximum:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "data_chunk_iteration": {
+          "samples": 61,
+          "sample_weight_ns": 61000000,
+          "sample_weight_ms": 61.0,
+          "percent_of_input_weight": 15.48223350253807,
+          "percent_of_target_weight": 11.73076923076923,
+          "matched_anchor_functions": [
+            {
+              "function": "Data.Iterator.next()",
+              "sample_weight_ms": 57.0
+            },
+            {
+              "function": "DYLD-STUB$$Data.Iterator.next()",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "input_token_kind_scan_named": {
+          "samples": 26,
+          "sample_weight_ns": 26000000,
+          "sample_weight_ms": 26.0,
+          "percent_of_input_weight": 6.598984771573604,
+          "percent_of_target_weight": 5.0,
+          "matched_anchor_functions": [
+            {
+              "function": "static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 26.0
+            },
+            {
+              "function": "specialized static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 26.0
+            }
+          ]
+        },
+        "utf8_view_byte_traversal": {
+          "samples": 21,
+          "sample_weight_ns": 21000000,
+          "sample_weight_ms": 21.0,
+          "percent_of_input_weight": 5.32994923857868,
+          "percent_of_target_weight": 4.038461538461538,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String.UTF8View",
+              "sample_weight_ms": 21.0
+            }
+          ]
+        },
+        "line_utf8_string_construction_named": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "array_append_growth_any_input_context": {
+          "samples": 55,
+          "sample_weight_ns": 55000000,
+          "sample_weight_ms": 55.0,
+          "percent_of_input_weight": 13.959390862944163,
+          "percent_of_target_weight": 10.576923076923077,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Array.append(_:)",
+              "sample_weight_ms": 55.0
+            },
+            {
+              "function": "specialized Array._makeUniqueAndReserveCapacityIfNotUnique()",
+              "sample_weight_ms": 34.0
+            },
+            {
+              "function": "specialized Array._createNewBuffer(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized Array._reserveCapacityAssumingUniqueBuffer(oldCount:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized _ArrayBuffer._consumeAndCreateNew(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 6.0
+            }
+          ]
+        },
+        "parsed_input_append_named": {
+          "samples": 12,
+          "sample_weight_ns": 12000000,
+          "sample_weight_ms": 12.0,
+          "percent_of_input_weight": 3.045685279187817,
+          "percent_of_target_weight": 2.3076923076923075,
+          "matched_anchor_functions": [
+            {
+              "function": "ParsedInput.append(_:normalized:)",
+              "sample_weight_ms": 12.0
+            }
+          ]
+        },
+        "network_to_range_conversion_named": {
+          "samples": 6,
+          "sample_weight_ns": 6000000,
+          "sample_weight_ms": 6.0,
+          "percent_of_input_weight": 1.5228426395939085,
+          "percent_of_target_weight": 1.1538461538461537,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddressRange.init(covering:)",
+              "sample_weight_ms": 6.0
+            }
+          ]
+        },
+        "file_read_named": {
+          "samples": 6,
+          "sample_weight_ns": 6000000,
+          "sample_weight_ms": 6.0,
+          "percent_of_input_weight": 1.5228426395939085,
+          "percent_of_target_weight": 1.1538461538461537,
+          "matched_anchor_functions": [
+            {
+              "function": "NSFileHandle.read(upToCount:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataOfLength:]",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataUpToLength:error:]",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "read",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "string_comparison_mixed_contexts": {
+          "samples": 8,
+          "sample_weight_ns": 8000000,
+          "sample_weight_ms": 8.0,
+          "percent_of_input_weight": 2.030456852791878,
+          "percent_of_target_weight": 1.5384615384615385,
+          "matched_anchor_functions": [
+            {
+              "function": "_stringCompare(_:_:expecting:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "static String.== infix(_:_:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "_stringCompareFastUTF8(_:_:expecting:bothNFC:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "_stringCompareInternal(_:_:expecting:)",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "runtime_memory_management_mixed_contexts": {
+          "samples": 95,
+          "sample_weight_ns": 95000000,
+          "sample_weight_ms": 95.0,
+          "percent_of_input_weight": 24.111675126903553,
+          "percent_of_target_weight": 18.26923076923077,
+          "matched_anchor_functions": [
+            {
+              "function": "bool swift::RefCounts<swift::RefCountBitsT<(swift::RefCountInlinedness)1>>::doDecrementSlow<(swift::PerformDeinit)1>(swift::RefCountBitsT<(swift::RefCountInlinedness)1>, unsigned int)",
+              "sample_weight_ms": 41.0
+            },
+            {
+              "function": "_swift_release_dealloc",
+              "sample_weight_ms": 34.0
+            },
+            {
+              "function": "_xzm_free_main",
+              "sample_weight_ms": 26.0
+            },
+            {
+              "function": "swift_allocObject",
+              "sample_weight_ms": 24.0
+            },
+            {
+              "function": "swift_retain",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "_xzm_xzone_malloc_tiny",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "swift_bridgeObjectRelease",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "swift_release",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "malloc_type_malloc",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "_free",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "swift_bridgeObjectRetain",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "swift_deallocClassInstance",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRelease",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "__StringStorage.__deallocating_deinit",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRetain",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "xzm_segment_group_free_chunk",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "variant": "B",
+      "case": "mixed-disjoint",
+      "binary_sha256": "391d2706622fa6c819aced86141c0f3815222aefeb039d799f2079c1af0acff5",
+      "target_exit_code": 0,
+      "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "output_bytes": 17864212,
+      "matches_reference": true,
+      "target_samples": 783,
+      "input_categories": {
+        "normalization_description_formatting_named": {
+          "samples": 37,
+          "sample_weight_ns": 37000000,
+          "sample_weight_ms": 37.0,
+          "percent_of_input_weight": 5.300859598853868,
+          "percent_of_target_weight": 4.725415070242656,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddress.description.getter",
+              "sample_weight_ms": 37.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "static AF.formatV4CIDR(address:prefixLength:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "static AF.V4.formatCIDR(_:prefixLength:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.withIPv6Bytes<A>(_:_:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "closure #1 in static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "closure #1 in static AF.formatV4CIDR(address:prefixLength:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV4CIDR(address:prefixLength:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeHextet(left:right:into:at:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "comment_string_split": {
+          "samples": 315,
+          "sample_weight_ns": 315000000,
+          "sample_weight_ms": 315.0,
+          "percent_of_input_weight": 45.12893982808023,
+          "percent_of_target_weight": 40.229885057471265,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 313.0
+            },
+            {
+              "function": "specialized Collection.split(maxSplits:omittingEmptySubsequences:whereSeparator:)",
+              "sample_weight_ms": 285.0
+            },
+            {
+              "function": "partial apply for specialized closure #1 in Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 49.0
+            },
+            {
+              "function": "specialized closure #1 in Collection<>.split(separator:maxSplits:omittingEmptySubsequences:)",
+              "sample_weight_ms": 43.0
+            }
+          ]
+        },
+        "foundation_whitespace_trimming": {
+          "samples": 25,
+          "sample_weight_ns": 25000000,
+          "sample_weight_ms": 25.0,
+          "percent_of_input_weight": 3.5816618911174785,
+          "percent_of_target_weight": 3.1928480204342273,
+          "matched_anchor_functions": [
+            {
+              "function": "StringProtocol.trimmingCharacters(in:)",
+              "sample_weight_ms": 24.0
+            },
+            {
+              "function": "specialized BidirectionalCollection<>._trimmingCharacters(in:)",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "__CharacterSetStorage.contains(_:)",
+              "sample_weight_ms": 3.0
+            }
+          ]
+        },
+        "unicode_character_string_traversal": {
+          "samples": 232,
+          "sample_weight_ns": 232000000,
+          "sample_weight_ms": 232.0,
+          "percent_of_input_weight": 33.2378223495702,
+          "percent_of_target_weight": 29.62962962962963,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String",
+              "sample_weight_ms": 101.0
+            },
+            {
+              "function": "String.subscript.getter",
+              "sample_weight_ms": 78.0
+            },
+            {
+              "function": "protocol witness for Collection.formIndex(after:) in conformance String",
+              "sample_weight_ms": 77.0
+            },
+            {
+              "function": "String._uncheckedIndex(after:)",
+              "sample_weight_ms": 45.0
+            },
+            {
+              "function": "protocol witness for static Equatable.== infix(_:_:) in conformance Character",
+              "sample_weight_ms": 33.0
+            },
+            {
+              "function": "static Character.== infix(_:_:)",
+              "sample_weight_ms": 33.0
+            },
+            {
+              "function": "String.index(after:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "_StringGuts.validateCharacterIndex(_:)",
+              "sample_weight_ms": 24.0
+            },
+            {
+              "function": "_StringGuts.validateScalarIndex(_:)",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "DYLD-STUB$$String.subscript.getter",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "DYLD-STUB$$String.index(after:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "protocol witness for Collection.subscript.getter in conformance String",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "protocol witness for Collection.isEmpty.getter in conformance String",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "numeric_address_prefix_parsing_named": {
+          "samples": 34,
+          "sample_weight_ns": 34000000,
+          "sample_weight_ms": 34.0,
+          "percent_of_input_weight": 4.871060171919771,
+          "percent_of_target_weight": 4.342273307790549,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized AnyIPNetwork.init(_:)",
+              "sample_weight_ms": 34.0
+            },
+            {
+              "function": "specialized IPNetwork.init(_:policy:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:parseOrder:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:policy:parseOrder:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V6",
+              "sample_weight_ms": 19.0
+            },
+            {
+              "function": "static AF.V6.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 19.0
+            },
+            {
+              "function": "static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 18.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "static AF._parseIPv6CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 13.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V4",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "static AF.V4.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "specialized static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "consumeHexDigit #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "static AF._parseIPv4CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "static AF._parseIPv4TextCore(_:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "hexValue #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "specialized static PrefixLengthTextParser.parse<A>(_:maximum:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "data_chunk_iteration": {
+          "samples": 42,
+          "sample_weight_ns": 42000000,
+          "sample_weight_ms": 42.0,
+          "percent_of_input_weight": 6.017191977077364,
+          "percent_of_target_weight": 5.363984674329502,
+          "matched_anchor_functions": [
+            {
+              "function": "Data.Iterator.next()",
+              "sample_weight_ms": 31.0
+            },
+            {
+              "function": "DYLD-STUB$$Data.Iterator.next()",
+              "sample_weight_ms": 11.0
+            }
+          ]
+        },
+        "input_token_kind_scan_named": {
+          "samples": 31,
+          "sample_weight_ns": 31000000,
+          "sample_weight_ms": 31.0,
+          "percent_of_input_weight": 4.441260744985673,
+          "percent_of_target_weight": 3.9591315453384417,
+          "matched_anchor_functions": [
+            {
+              "function": "static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 31.0
+            },
+            {
+              "function": "specialized static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 30.0
+            }
+          ]
+        },
+        "utf8_view_byte_traversal": {
+          "samples": 21,
+          "sample_weight_ns": 21000000,
+          "sample_weight_ms": 21.0,
+          "percent_of_input_weight": 3.008595988538682,
+          "percent_of_target_weight": 2.681992337164751,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String.UTF8View",
+              "sample_weight_ms": 20.0
+            },
+            {
+              "function": "protocol witness for Collection.formIndex(after:) in conformance String.UTF8View",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "line_utf8_string_construction_named": {
+          "samples": 55,
+          "sample_weight_ns": 55000000,
+          "sample_weight_ms": 55.0,
+          "percent_of_input_weight": 7.8796561604584525,
+          "percent_of_target_weight": 7.0242656449553005,
+          "matched_anchor_functions": [
+            {
+              "function": "String.init<A>(bytes:encoding:)",
+              "sample_weight_ms": 55.0
+            }
+          ]
+        },
+        "array_append_growth_any_input_context": {
+          "samples": 49,
+          "sample_weight_ns": 49000000,
+          "sample_weight_ms": 49.0,
+          "percent_of_input_weight": 7.020057306590258,
+          "percent_of_target_weight": 6.257982120051086,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Array.append(_:)",
+              "sample_weight_ms": 49.0
+            },
+            {
+              "function": "specialized Array._makeUniqueAndReserveCapacityIfNotUnique()",
+              "sample_weight_ms": 43.0
+            },
+            {
+              "function": "specialized _ArrayBuffer._consumeAndCreateNew(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 28.0
+            },
+            {
+              "function": "specialized Array._createNewBuffer(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 28.0
+            },
+            {
+              "function": "specialized _ContiguousArrayBuffer.init(_uninitializedCount:minimumCapacity:)",
+              "sample_weight_ms": 18.0
+            },
+            {
+              "function": "specialized Array._reserveCapacityAssumingUniqueBuffer(oldCount:)",
+              "sample_weight_ms": 3.0
+            }
+          ]
+        },
+        "parsed_input_append_named": {
+          "samples": 11,
+          "sample_weight_ns": 11000000,
+          "sample_weight_ms": 11.0,
+          "percent_of_input_weight": 1.5759312320916905,
+          "percent_of_target_weight": 1.40485312899106,
+          "matched_anchor_functions": [
+            {
+              "function": "ParsedInput.append(_:normalized:)",
+              "sample_weight_ms": 11.0
+            }
+          ]
+        },
+        "network_to_range_conversion_named": {
+          "samples": 2,
+          "sample_weight_ns": 2000000,
+          "sample_weight_ms": 2.0,
+          "percent_of_input_weight": 0.28653295128939826,
+          "percent_of_target_weight": 0.2554278416347382,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddressRange.init(covering:)",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "file_read_named": {
+          "samples": 6,
+          "sample_weight_ns": 6000000,
+          "sample_weight_ms": 6.0,
+          "percent_of_input_weight": 0.8595988538681948,
+          "percent_of_target_weight": 0.7662835249042146,
+          "matched_anchor_functions": [
+            {
+              "function": "NSFileHandle.read(upToCount:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataOfLength:]",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataUpToLength:error:]",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "read",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "string_comparison_mixed_contexts": {
+          "samples": 37,
+          "sample_weight_ns": 37000000,
+          "sample_weight_ms": 37.0,
+          "percent_of_input_weight": 5.300859598853868,
+          "percent_of_target_weight": 4.725415070242656,
+          "matched_anchor_functions": [
+            {
+              "function": "_stringCompare(_:_:expecting:)",
+              "sample_weight_ms": 35.0
+            },
+            {
+              "function": "static String.== infix(_:_:)",
+              "sample_weight_ms": 35.0
+            },
+            {
+              "function": "_stringCompareWithSmolCheck(_:_:expecting:)",
+              "sample_weight_ms": 21.0
+            },
+            {
+              "function": "DYLD-STUB$$_stringCompareWithSmolCheck(_:_:expecting:)",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "_stringCompareInternal(_:_:expecting:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "_stringCompareFastUTF8(_:_:expecting:bothNFC:)",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "runtime_memory_management_mixed_contexts": {
+          "samples": 140,
+          "sample_weight_ns": 140000000,
+          "sample_weight_ms": 140.0,
+          "percent_of_input_weight": 20.05730659025788,
+          "percent_of_target_weight": 17.879948914431672,
+          "matched_anchor_functions": [
+            {
+              "function": "bool swift::RefCounts<swift::RefCountBitsT<(swift::RefCountInlinedness)1>>::doDecrementSlow<(swift::PerformDeinit)1>(swift::RefCountBitsT<(swift::RefCountInlinedness)1>, unsigned int)",
+              "sample_weight_ms": 55.0
+            },
+            {
+              "function": "_swift_release_dealloc",
+              "sample_weight_ms": 43.0
+            },
+            {
+              "function": "_xzm_free_main",
+              "sample_weight_ms": 27.0
+            },
+            {
+              "function": "swift_allocObject",
+              "sample_weight_ms": 25.0
+            },
+            {
+              "function": "swift_bridgeObjectRelease",
+              "sample_weight_ms": 17.0
+            },
+            {
+              "function": "swift_release",
+              "sample_weight_ms": 17.0
+            },
+            {
+              "function": "_xzm_xzone_malloc_tiny",
+              "sample_weight_ms": 16.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRelease",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "_swift_stdlib_malloc_size",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "malloc_size",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "swift_retain",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "_free",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "swift_arrayDestroy",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "_ContiguousArrayStorage.__deallocating_deinit",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "xzm_malloc_zone_size",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "swift_bridgeObjectRetain",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "xzm_malloc_zone_malloc_type_realloc",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "_malloc_zone_realloc",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "malloc_type_malloc",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "DYLD-STUB$$malloc_size",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "swift_deallocClassInstance",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "__StringStorage.__deallocating_deinit",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "variant": "C",
+      "case": "mixed-disjoint",
+      "binary_sha256": "a216d212ebd9ee39c0abc1d77e5114d35c3ba795ea248e5529d262acd8d81b15",
+      "target_exit_code": 0,
+      "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "output_bytes": 17864212,
+      "matches_reference": true,
+      "target_samples": 382,
+      "input_categories": {
+        "normalization_description_formatting_named": {
+          "samples": 40,
+          "sample_weight_ns": 40000000,
+          "sample_weight_ms": 40.0,
+          "percent_of_input_weight": 13.651877133105803,
+          "percent_of_target_weight": 10.471204188481675,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddress.description.getter",
+              "sample_weight_ms": 40.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 11.0
+            },
+            {
+              "function": "static AF.formatV4CIDR(address:prefixLength:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "static AF.V4.formatCIDR(_:prefixLength:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "closure #1 in static AF.formatV6CompressedCIDR(address:prefixLength:)",
+              "sample_weight_ms": 7.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.withIPv6Bytes<A>(_:_:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "closure #1 in static CIDRUTF8Writer.writeCompressedIPv6AddressLiteral(_:into:)",
+              "sample_weight_ms": 6.0
+            },
+            {
+              "function": "specialized static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "static IPv6ZeroSequenceFinder.longestZeroSequenceRange(inIPv6Bytes:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "specialized static CIDRUTF8Writer.writeCompressedIPv6AddressLiteralBytes(_:zeroRun:into:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "partial apply for closure #1 in static AF.formatV4CIDR(address:prefixLength:)",
+              "sample_weight_ms": 2.0
+            }
+          ]
+        },
+        "comment_string_split": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "foundation_whitespace_trimming": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "unicode_character_string_traversal": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "numeric_address_prefix_parsing_named": {
+          "samples": 36,
+          "sample_weight_ns": 36000000,
+          "sample_weight_ms": 36.0,
+          "percent_of_input_weight": 12.286689419795222,
+          "percent_of_target_weight": 9.424083769633508,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized AnyIPNetwork.init(_:)",
+              "sample_weight_ms": 34.0
+            },
+            {
+              "function": "specialized IPNetwork.init(_:policy:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:policy:parseOrder:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "AnyIPNetwork.init(_:parseOrder:)",
+              "sample_weight_ms": 29.0
+            },
+            {
+              "function": "static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 21.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V6",
+              "sample_weight_ms": 20.0
+            },
+            {
+              "function": "static AF.V6.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 20.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv6CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 18.0
+            },
+            {
+              "function": "static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 17.0
+            },
+            {
+              "function": "static AF._parseIPv6CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 17.0
+            },
+            {
+              "function": "protocol witness for static IPAddressFamily.parseCIDR(_:requiresPrefix:policy:) in conformance AF.V4",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "static AF.V4.parseCIDR(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "specialized static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "consumeHexDigit #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 8.0
+            },
+            {
+              "function": "closure #1 in static AF.parseIPv4CIDRTextSuffix(_:requiresPrefix:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "hexValue #1 (_:) in static AF._parseIPv6TextCore(_:policy:)",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "static AF._parseIPv4CIDRTextCore(_:slashIndex:requiresPrefix:policy:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "static AF._parseIPv4TextCore(_:policy:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "specialized static PrefixLengthTextParser.parse<A>(_:maximum:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "data_chunk_iteration": {
+          "samples": 50,
+          "sample_weight_ns": 50000000,
+          "sample_weight_ms": 50.0,
+          "percent_of_input_weight": 17.064846416382252,
+          "percent_of_target_weight": 13.089005235602095,
+          "matched_anchor_functions": [
+            {
+              "function": "Data.Iterator.next()",
+              "sample_weight_ms": 43.0
+            },
+            {
+              "function": "DYLD-STUB$$Data.Iterator.next()",
+              "sample_weight_ms": 7.0
+            }
+          ]
+        },
+        "input_token_kind_scan_named": {
+          "samples": 36,
+          "sample_weight_ns": 36000000,
+          "sample_weight_ms": 36.0,
+          "percent_of_input_weight": 12.286689419795222,
+          "percent_of_target_weight": 9.424083769633508,
+          "matched_anchor_functions": [
+            {
+              "function": "static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 36.0
+            },
+            {
+              "function": "specialized static TextInputLoader.inputKind(of:)",
+              "sample_weight_ms": 36.0
+            }
+          ]
+        },
+        "utf8_view_byte_traversal": {
+          "samples": 21,
+          "sample_weight_ns": 21000000,
+          "sample_weight_ms": 21.0,
+          "percent_of_input_weight": 7.167235494880546,
+          "percent_of_target_weight": 5.49738219895288,
+          "matched_anchor_functions": [
+            {
+              "function": "protocol witness for Collection.subscript.read in conformance String.UTF8View",
+              "sample_weight_ms": 16.0
+            },
+            {
+              "function": "protocol witness for Collection.formIndex(after:) in conformance String.UTF8View",
+              "sample_weight_ms": 5.0
+            }
+          ]
+        },
+        "line_utf8_string_construction_named": {
+          "samples": 0,
+          "sample_weight_ns": 0,
+          "sample_weight_ms": 0.0,
+          "percent_of_input_weight": 0.0,
+          "percent_of_target_weight": 0.0,
+          "matched_anchor_functions": []
+        },
+        "array_append_growth_any_input_context": {
+          "samples": 23,
+          "sample_weight_ns": 23000000,
+          "sample_weight_ms": 23.0,
+          "percent_of_input_weight": 7.849829351535837,
+          "percent_of_target_weight": 6.020942408376963,
+          "matched_anchor_functions": [
+            {
+              "function": "specialized Array.append(_:)",
+              "sample_weight_ms": 23.0
+            },
+            {
+              "function": "specialized Array._makeUniqueAndReserveCapacityIfNotUnique()",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "specialized Array._createNewBuffer(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "specialized Array._reserveCapacityAssumingUniqueBuffer(oldCount:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "specialized _ArrayBuffer._consumeAndCreateNew(bufferIsUnique:minimumCapacity:growForAppend:)",
+              "sample_weight_ms": 4.0
+            }
+          ]
+        },
+        "parsed_input_append_named": {
+          "samples": 8,
+          "sample_weight_ns": 8000000,
+          "sample_weight_ms": 8.0,
+          "percent_of_input_weight": 2.7303754266211606,
+          "percent_of_target_weight": 2.094240837696335,
+          "matched_anchor_functions": [
+            {
+              "function": "ParsedInput.append(_:normalized:)",
+              "sample_weight_ms": 8.0
+            }
+          ]
+        },
+        "network_to_range_conversion_named": {
+          "samples": 3,
+          "sample_weight_ns": 3000000,
+          "sample_weight_ms": 3.0,
+          "percent_of_input_weight": 1.023890784982935,
+          "percent_of_target_weight": 0.7853403141361257,
+          "matched_anchor_functions": [
+            {
+              "function": "AnyIPAddressRange.init(covering:)",
+              "sample_weight_ms": 3.0
+            }
+          ]
+        },
+        "file_read_named": {
+          "samples": 10,
+          "sample_weight_ns": 10000000,
+          "sample_weight_ms": 10.0,
+          "percent_of_input_weight": 3.4129692832764507,
+          "percent_of_target_weight": 2.6178010471204187,
+          "matched_anchor_functions": [
+            {
+              "function": "NSFileHandle.read(upToCount:)",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataOfLength:]",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "-[NSConcreteFileHandle readDataUpToLength:error:]",
+              "sample_weight_ms": 10.0
+            },
+            {
+              "function": "read",
+              "sample_weight_ms": 7.0
+            }
+          ]
+        },
+        "string_comparison_mixed_contexts": {
+          "samples": 4,
+          "sample_weight_ns": 4000000,
+          "sample_weight_ms": 4.0,
+          "percent_of_input_weight": 1.3651877133105803,
+          "percent_of_target_weight": 1.0471204188481675,
+          "matched_anchor_functions": [
+            {
+              "function": "_stringCompare(_:_:expecting:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "static String.== infix(_:_:)",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "_stringCompareFastUTF8(_:_:expecting:bothNFC:)",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "_stringCompareWithSmolCheck(_:_:expecting:)",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        },
+        "runtime_memory_management_mixed_contexts": {
+          "samples": 51,
+          "sample_weight_ns": 51000000,
+          "sample_weight_ms": 51.0,
+          "percent_of_input_weight": 17.406143344709896,
+          "percent_of_target_weight": 13.350785340314136,
+          "matched_anchor_functions": [
+            {
+              "function": "swift_allocObject",
+              "sample_weight_ms": 17.0
+            },
+            {
+              "function": "bool swift::RefCounts<swift::RefCountBitsT<(swift::RefCountInlinedness)1>>::doDecrementSlow<(swift::PerformDeinit)1>(swift::RefCountBitsT<(swift::RefCountInlinedness)1>, unsigned int)",
+              "sample_weight_ms": 15.0
+            },
+            {
+              "function": "_swift_release_dealloc",
+              "sample_weight_ms": 14.0
+            },
+            {
+              "function": "_xzm_free_main",
+              "sample_weight_ms": 12.0
+            },
+            {
+              "function": "_xzm_xzone_malloc_tiny",
+              "sample_weight_ms": 9.0
+            },
+            {
+              "function": "swift_release",
+              "sample_weight_ms": 5.0
+            },
+            {
+              "function": "swift_bridgeObjectRelease",
+              "sample_weight_ms": 4.0
+            },
+            {
+              "function": "xzm_malloc_zone_malloc_type_realloc",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "_malloc_zone_realloc",
+              "sample_weight_ms": 3.0
+            },
+            {
+              "function": "swift_bridgeObjectRetain",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "swift_retain",
+              "sample_weight_ms": 2.0
+            },
+            {
+              "function": "swift_deallocClassInstance",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRelease",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "_free",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "DYLD-STUB$$swift_bridgeObjectRetain",
+              "sample_weight_ms": 1.0
+            },
+            {
+              "function": "malloc_type_malloc",
+              "sample_weight_ms": 1.0
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "originals": {
+    "macos/profiles-attach-stdin-v2/results.json": {
+      "bytes": 292337,
+      "sha256": "12efc912485e27ab309cc5c53ea7a40845dad055209ac375f2dc81cc4547c661"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-ipv6-disjoint-summary.json": {
+      "bytes": 109976,
+      "sha256": "643639ac74247234e554ce59d2229c913b652d32279d7c61732871aca7a9fcbc"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-ipv6-disjoint-input.json": {
+      "bytes": 68584,
+      "sha256": "1a955b8658e4251a08ded5af5d56264a73f2b2e7457b9034bb69fa14fc5d65c8"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-ipv6-disjoint-samples.xml": {
+      "bytes": 471610,
+      "sha256": "84d44b585814144a4a9d5ea8048c417a26c4c1b2b82c607dc7dd1448e9ff5365"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-ipv6-disjoint-summary.json": {
+      "bytes": 80937,
+      "sha256": "8b68474ee9c0804608a7374c2c14d792cc0f77b388f2ed90f66a4ca6cac7b8d4"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-ipv6-disjoint-input.json": {
+      "bytes": 51100,
+      "sha256": "96b7efb6ac14a2a35cc73d5e636d38d4264efbd5c6baa89b8f8828b396040bb3"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-ipv6-disjoint-samples.xml": {
+      "bytes": 286210,
+      "sha256": "4e7c642615e650d4851b26f0c742c6176c8329c5327e4f30e5f4830e38d8dadd"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-mixed-disjoint-summary.json": {
+      "bytes": 111090,
+      "sha256": "232cbb986a5937ea3d83d6ed281d1960979fece8c4a6881c573183d27c9b9f6f"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-mixed-disjoint-input.json": {
+      "bytes": 70496,
+      "sha256": "506115df338294404b890d263c1e07e3ed51645703977f038d8d9a785ce6306e"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-B-mixed-disjoint-samples.xml": {
+      "bytes": 439257,
+      "sha256": "880f4c5dd6f007b18ea51c408028005c356fc423bc3b370027d481e4a9c68aba"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-mixed-disjoint-summary.json": {
+      "bytes": 82199,
+      "sha256": "0bd3ea9b4336b699ebb47b554bbf5c2e4d361213274a272ea535c7a37eb955a6"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-mixed-disjoint-input.json": {
+      "bytes": 51664,
+      "sha256": "06de0d9c0047fd86921f789a9f3a4eca44ba6ce1ddb488dddca560c21a34b9f3"
+    },
+    "macos/profiles-attach-stdin-v2/cpu-C-mixed-disjoint-samples.xml": {
+      "bytes": 243424,
+      "sha256": "6a583d28fcc3e48a6c1bcee2990470220c1d1b203fdf2f48a953b5acc83fd632"
+    }
+  },
+  "attempts": [
+    {
+      "directory": "macos/profiles",
+      "passed": false,
+      "reason": "Instruments-launched target stalled waiting for Downloads-folder access; profiler time limit killed target. TCC log explicitly shows SystemPolicyDownloadsFolder prompting for target PID8619. No output file; excluded from analysis.",
+      "evidence": [
+        "macos/control/profile-progress.log",
+        "macos/profiles/cpu-B-ipv6-disjoint-toc.xml",
+        "macos/profiles/failed-target-tcc-v2.log"
+      ],
+      "evidence_hashes": {
+        "macos/control/profile-progress.log": "4a22f211aac289852cdf1e5c904b19165bde32e289f2c802490b3e7daf946f62",
+        "macos/profiles/cpu-B-ipv6-disjoint-toc.xml": "803a096cdd26f1ba97482ff085ee18b65e846b91d76f01aa42b405d4f0bb10d2",
+        "macos/profiles/failed-target-tcc-v2.log": "5ebeb66344dab0edcec3c1bcad8069d4ffd20bef34b0459e658f6fd09288cb93"
+      }
+    },
+    {
+      "directory": "macos/profiles-attach-stdin",
+      "passed": false,
+      "reason": "Helper awaited a readiness string xctrace did not emit. Fifteen-second capture ended before input was fed; waiting child was terminated by helper cleanup. Excluded from analysis.",
+      "evidence": [
+        "macos/control/profile-attach-progress.log",
+        "macos/profiles-attach-stdin/cpu-B-ipv6-disjoint.log"
+      ],
+      "evidence_hashes": {
+        "macos/control/profile-attach-progress.log": "c8fde19d91cc67f7f29d7b4646d3c575d98c53a7152e6e3bbf011f48086124fe",
+        "macos/profiles-attach-stdin/cpu-B-ipv6-disjoint.log": "1947a682b71ac8da5d872f01631c389febebf4002ad934ca865062ee4029e134"
+      }
+    },
+    {
+      "directory": "macos/profiles-attach-stdin-v2",
+      "passed": true,
+      "reason": "Attached to owned CLI waiting on stdin; used observed Ctrl-C readiness message, allowed one second for attachment, then fed identical full fixture. Four child exits0 and exact reference output hashes passed.",
+      "evidence": [
+        "macos/control/profile-attach-v2-progress.log",
+        "macos/profiles-attach-stdin-v2/results.json"
+      ],
+      "evidence_hashes": {
+        "macos/control/profile-attach-v2-progress.log": "e13abb9d4b005c887c8e3291fcb397b5abf1792ffffc5ce73ddccf50698c688d",
+        "macos/profiles-attach-stdin-v2/results.json": "12efc912485e27ab309cc5c53ea7a40845dad055209ac375f2dc81cc4547c661"
+      }
+    }
+  ]
+}

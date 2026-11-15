@@ -1,0 +1,65 @@
+{
+  "content_kind": "selected and path-redacted platform metadata",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "platform": "macos",
+  "metadata": {
+    "architecture": "arm64",
+    "os": {
+      "command": [
+        "sw_vers"
+      ],
+      "exit_code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+      "stderr": ""
+    },
+    "toolchain": {
+      "command": [
+        "xcrun",
+        "swift",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+      "stderr": "swift-driver version: 1.168.6 "
+    },
+    "hardware_exit_code": 0,
+    "hardware": {
+      "hw.model": "MacBookPro18,2",
+      "hw.memsize": "68719476736",
+      "hw.ncpu": "10",
+      "machdep.cpu.brand_string": "Apple M1 Max"
+    },
+    "selected_developer": {
+      "command": [
+        "xcode-select",
+        "-p"
+      ],
+      "exit_code": 0,
+      "stdout": "/Applications/Xcode-27.2.0.app/Contents/Developer\n",
+      "stderr": ""
+    },
+    "xcode": {
+      "command": [
+        "xcodebuild",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "Xcode 27.2\nBuild version 27B52\n",
+      "stderr": ""
+    },
+    "runtime": {
+      "command": [
+        "xcrun",
+        "dyld_info",
+        "-uuid",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswift_StringProcessing.dylib",
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation"
+      ],
+      "exit_code": 0,
+      "stdout": "/usr/lib/swift/libswiftCore.dylib [arm64e]:\n    -uuid:\n        EC0C27EC-C327-3027-80FA-2F2FF76C4D52\n/usr/lib/swift/libswift_StringProcessing.dylib [arm64e]:\n    -uuid:\n        41BE15D1-2323-37FC-BF67-8413FC453DD4\n/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation [arm64e]:\n    -uuid:\n        3F6D1ACE-7756-3B52-A297-8E7ADA36194F\n",
+      "stderr": ""
+    },
+    "hardware_source": "host-after-profiling"
+  }
+}

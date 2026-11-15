@@ -1,0 +1,87 @@
+diff --git a/Sources/CIDRMergeCLI/TextInput.swift b/Sources/CIDRMergeCLI/TextInput.swift
+index 6552ea0..1454983 100644
+--- a/Sources/CIDRMergeCLI/TextInput.swift
++++ b/Sources/CIDRMergeCLI/TextInput.swift
+@@ -198,25 +198,55 @@ enum TextInputLoader {
+         lineNumber: Int,
+         into collection: inout ParsedInput
+     ) throws {
+-        var bytes = rawBytes
+-        if bytes.last == 0x0D {
+-            bytes.removeLast()
+-        }
+-        if lineNumber == 1, bytes.starts(with: utf8ByteOrderMark) {
+-            bytes.removeFirst(utf8ByteOrderMark.count)
++        var isASCII = true
++        var commentStart = rawBytes.endIndex
++        // CHANGE: Check the entire line, including comments, before bypassing Unicode processing.
++        // A non-ASCII byte must retain strict UTF-8 validation and Character-based # matching.
++        for index in rawBytes.indices {
++            let byte = rawBytes[index]
++            if byte >= 0x80 {
++                isASCII = false
++                break
++            }
++            if byte == 0x23, commentStart == rawBytes.endIndex {
++                commentStart = index
++            }
+         }
+ 
+-        guard let line = String(bytes: bytes, encoding: .utf8) else {
+-            throw CIDRMergeError.invalidUTF8(source: source, line: lineNumber)
+-        }
++        let token: String
++        if isASCII {
++            var start = rawBytes.startIndex
++            var end = commentStart
++            // CHANGE: Match the ASCII members of Foundation's whitespacesAndNewlines set.
++            while start < end, isASCIIBoundaryWhitespace(rawBytes[start]) {
++                start += 1
++            }
++            while end > start, isASCIIBoundaryWhitespace(rawBytes[end - 1]) {
++                end -= 1
++            }
++            guard start < end else { return }
++            token = String(decoding: rawBytes[start..<end], as: UTF8.self)
++        } else {
++            var bytes = rawBytes
++            if bytes.last == 0x0D {
++                bytes.removeLast()
++            }
++            if lineNumber == 1, bytes.starts(with: utf8ByteOrderMark) {
++                bytes.removeFirst(utf8ByteOrderMark.count)
++            }
++
++            guard let line = String(bytes: bytes, encoding: .utf8) else {
++                throw CIDRMergeError.invalidUTF8(source: source, line: lineNumber)
++            }
+ 
+-        let uncommented =
+-            line.split(
+-                separator: "#",
+-                maxSplits: 1,
+-                omittingEmptySubsequences: false
+-            ).first ?? ""
+-        let token = uncommented.trimmingCharacters(in: .whitespacesAndNewlines)
++            let uncommented =
++                line.split(
++                    separator: "#",
++                    maxSplits: 1,
++                    omittingEmptySubsequences: false
++                ).first ?? ""
++            token = uncommented.trimmingCharacters(in: .whitespacesAndNewlines)
++        }
+         guard !token.isEmpty else { return }
+ 
+         let range: AnyIPAddressRange
+@@ -258,6 +288,10 @@ enum TextInputLoader {
+         collection.append(range, normalized: normalized)
+     }
+ 
++    private static func isASCIIBoundaryWhitespace(_ byte: UInt8) -> Bool {
++        byte == 0x20 || (byte >= 0x09 && byte <= 0x0D)
++    }
++
+     private static func inputKind(of token: String) -> InputTokenKind {
+         var consecutiveDots = 0
+         // Classify each line in one UTF-8 pass so prefix-heavy and range-heavy data sets do
