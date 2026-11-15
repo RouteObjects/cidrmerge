@@ -1,0 +1,939 @@
+{
+  "content_kind": "path-redacted setup and audit attempt receipts",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "note": "Failure receipts are deliberately retained alongside successful checks; no timed observation was discarded.",
+  "receipts": {
+    "arm64/control/cache-seed-repair.json": {
+      "at": "2026-11-15T18:43:35.995958+00:00",
+      "cause": "Old cache directory contains manifests only; bare repositories are under old build/B/cli/repositories. Initial attempts failed before compilation with network disabled.",
+      "preserved_failed_attempt": [
+        {
+          "original": "build",
+          "preserved": "attempts/cache-seed-failure-01/build",
+          "file_hashes": {
+            "B/cli/workspace-state.json": "ec16aca52867cd83a5331c6d05a2cc3d930ab25179f77469715c144773e9d5c6",
+            "B/cli/CACHEDIR.TAG": "61833598201b8d9bb6a18003b6be9fd00ae014cfbd583253c1f23b746bf035d1",
+            "B/cli/.buildSystem_release": "bef32d2c315a289576f2a6828d27edb16bb316a4d85c271f2d794045f3ea668d"
+          }
+        },
+        {
+          "original": "cache",
+          "preserved": "attempts/cache-seed-failure-01/cache",
+          "file_hashes": {
+            "manifests/manifest.db": "8b5b8dcf3dc87b4e9e85f290a186daf1ecef80817910fead506803a570a60a06"
+          }
+        },
+        {
+          "original": "control/build-tests",
+          "preserved": "attempts/cache-seed-failure-01/control/build-tests",
+          "file_hashes": {
+            "B-cli-build-release.json": "b05f3df7181ffb8678a35f6b3479f541943e2b4b3821ee87bede52719bba9ab5",
+            "B-cli-build-release-started.json": "dcab74f3e8d0c0ba9f396f134e206f259326d1504de738fe8b2c05890d5091b2",
+            "start.json": "619faad2471274f5ca649ea18dc2cfcaef4e099a74f8139fc46946e53ff134ec",
+            "failed.json": "14e51928edd0e664512a0cd85fcca9af47a594890b7b5c0ab23ac60b5af8ba78"
+          }
+        },
+        {
+          "original": "control/phases/build-tests",
+          "preserved": "attempts/cache-seed-failure-01/control/phases/build-tests",
+          "file_hashes": {
+            "start.json": "5d97be61082c63d82596eb6999cf16818f4eb4b611736394d7ce69c190cd5315",
+            "failed.json": "b2dce9c8737ab89e54653a32596dc42eb2daa0086fdfe63e81e27c271a2341a4"
+          }
+        },
+        {
+          "original": "control/runtime.json",
+          "preserved": "attempts/cache-seed-failure-01/control/runtime.json",
+          "file_hashes": {
+            "runtime.json": "67842df9374876569b03fb04fd5a0f748819425fe484a1c560ab32ed22e355e8"
+          }
+        },
+        {
+          "original": "logs/B-cli-build-release.log",
+          "preserved": "attempts/cache-seed-failure-01/logs/B-cli-build-release.log",
+          "file_hashes": {
+            "B-cli-build-release.log": "f09693f62c7c5a2cf02da78b7c075fe18eb4a6d6c8c6a220226b1b7856e8a0a4"
+          }
+        },
+        {
+          "original": "logs/phase-build-tests.log",
+          "preserved": "attempts/cache-seed-failure-01/logs/phase-build-tests.log",
+          "file_hashes": {
+            "phase-build-tests.log": "7fd270aaf17ed5659cadcb68d5c78a683962a13f8b715599abc7cdc7f107642a"
+          }
+        },
+        {
+          "original": "floor-6.2.4/build",
+          "preserved": "attempts/cache-seed-failure-01/floor-6.2.4/build",
+          "file_hashes": {
+            "workspace-state.json": "ec16aca52867cd83a5331c6d05a2cc3d930ab25179f77469715c144773e9d5c6"
+          }
+        },
+        {
+          "original": "floor-6.2.4/cache",
+          "preserved": "attempts/cache-seed-failure-01/floor-6.2.4/cache",
+          "file_hashes": {
+            "manifests/manifest.db": "b3c8994c01bb4397d2805c41d8afcbf714ed7d46184a7475fe611f9e1f1a17ff"
+          }
+        },
+        {
+          "original": "floor-6.2.4/control/test-debug.json",
+          "preserved": "attempts/cache-seed-failure-01/floor-6.2.4/control/test-debug.json",
+          "file_hashes": {
+            "test-debug.json": "3161ada1046de7ef664274b185010a5e9e1e83c471a009e2b7c431815d6be656"
+          }
+        },
+        {
+          "original": "floor-6.2.4/logs/test-debug.log",
+          "preserved": "attempts/cache-seed-failure-01/floor-6.2.4/logs/test-debug.log",
+          "file_hashes": {
+            "test-debug.log": "4c465db444edb394ff8fdb1aca098624fc8599e0ff32f5c666d1669da1aa6d37"
+          }
+        },
+        {
+          "original": "floor-6.2.4/logs/progress.log",
+          "preserved": "attempts/cache-seed-failure-01/floor-6.2.4/logs/progress.log",
+          "file_hashes": {
+            "progress.log": "19fd28e9375075f3b93002ac98fcc94296266880b6fd23cb9eed2fb4d977e4f3"
+          }
+        }
+      ],
+      "repair": {
+        "source": "$DOWNLOADS/cidrmerge-ascii-20261115T170645Z/arm64/build/B/cli/repositories",
+        "copied": "bare repository objects only; no checkouts or compiled artifacts",
+        "targets": [
+          {
+            "target": "build/B/cli/repositories",
+            "repositories": [
+              "swift-argument-parser-54a11a8d",
+              "swift-asn1-7065ad2c",
+              "swift-atomics-7429e549",
+              "swift-cidr-a7456387",
+              "swift-collections-9a58d5cf",
+              "swift-crypto-7e0614ea",
+              "swift-nio-a9bb6d62",
+              "swift-system-5815d4b7"
+            ]
+          },
+          {
+            "target": "build/C/cli/repositories",
+            "repositories": [
+              "swift-argument-parser-54a11a8d",
+              "swift-asn1-7065ad2c",
+              "swift-atomics-7429e549",
+              "swift-cidr-a7456387",
+              "swift-collections-9a58d5cf",
+              "swift-crypto-7e0614ea",
+              "swift-nio-a9bb6d62",
+              "swift-system-5815d4b7"
+            ]
+          },
+          {
+            "target": "floor-6.2.4/build/repositories",
+            "repositories": [
+              "swift-argument-parser-54a11a8d",
+              "swift-asn1-7065ad2c",
+              "swift-atomics-7429e549",
+              "swift-cidr-a7456387",
+              "swift-collections-9a58d5cf",
+              "swift-crypto-7e0614ea",
+              "swift-nio-a9bb6d62",
+              "swift-system-5815d4b7"
+            ]
+          }
+        ]
+      }
+    },
+    "arm64/control/floor-swiftshims-retry.json": {
+      "at": "2026-11-15T18:45:54.127135+00:00",
+      "error": "Duplicate SwiftShims PCM at identical path and missing SwiftOverlayShims while emitting discovered-tests module; no tests executed.",
+      "preserved": [
+        {
+          "original": "floor-6.2.4/build",
+          "preserved": "attempts/floor-swiftshims-failure-02/build"
+        },
+        {
+          "original": "floor-6.2.4/cache",
+          "preserved": "attempts/floor-swiftshims-failure-02/cache"
+        },
+        {
+          "original": "floor-6.2.4/clang-cache",
+          "preserved": "attempts/floor-swiftshims-failure-02/clang-cache"
+        },
+        {
+          "original": "floor-6.2.4/config",
+          "preserved": "attempts/floor-swiftshims-failure-02/config"
+        },
+        {
+          "original": "floor-6.2.4/security",
+          "preserved": "attempts/floor-swiftshims-failure-02/security"
+        },
+        {
+          "original": "floor-6.2.4/tmp",
+          "preserved": "attempts/floor-swiftshims-failure-02/tmp"
+        },
+        {
+          "original": "floor-6.2.4/control/test-debug.json",
+          "preserved": "attempts/floor-swiftshims-failure-02/control/test-debug.json",
+          "sha256": "a0b3e5b7a9ed9d4571e36fd8f372dd0e5fa1f7c6e0149131db63f97f0201af70"
+        },
+        {
+          "original": "floor-6.2.4/logs/test-debug.log",
+          "preserved": "attempts/floor-swiftshims-failure-02/logs/test-debug.log",
+          "sha256": "6fe17ff9f2e6b9b770d69efd4cb0f8b87b026c2d034ff96aba32ec13f757c26a"
+        },
+        {
+          "original": "floor-6.2.4/logs/progress.log",
+          "preserved": "attempts/floor-swiftshims-failure-02/logs/progress.log",
+          "sha256": "19fd28e9375075f3b93002ac98fcc94296266880b6fd23cb9eed2fb4d977e4f3"
+        }
+      ],
+      "retry": "Fresh scratch, package cache, Clang cache, config, security and temporary directories; identical compiler, source, dependencies, command and parallelism."
+    },
+    "control/mac-evidence-audit.json": {
+      "passed": false,
+      "errors": [
+        {
+          "exception": "FileNotFoundError(2, 'No such file or directory')",
+          "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/control/audit_mac_evidence.py\", line 244, in <module>\n    log=[json.loads(l) for l in (R/'control/benchmark-progress.log').read_text().splitlines()];check(len(log)==154,'log count')\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '$EXPERIMENT/macos/control/benchmark-progress.log'\n"
+        }
+      ],
+      "scope": "Independent read-only audit; no benchmark harness imported or benchmark rerun. Only audit artifacts written.",
+      "started_at": "2026-11-15T18:50:53.252896+00:00",
+      "summary_sha256": "f42594b678caf58ef182ade66dafc8f55f80d53e67111a23c756d8a917569f22",
+      "frozen_files_verified": {
+        "new": 18,
+        "source": 367,
+        "old": 53,
+        "references": 39
+      },
+      "full_tests_verified": 282,
+      "dependency_pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-asn1": {
+          "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+          "version": "1.7.1"
+        },
+        "swift-atomics": {
+          "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+          "version": "1.3.1"
+        },
+        "swift-cidr": {
+          "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+          "version": "0.10.1"
+        },
+        "swift-collections": {
+          "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+          "version": "1.6.0"
+        },
+        "swift-crypto": {
+          "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+          "version": "5.1.1"
+        },
+        "swift-nio": {
+          "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+          "version": "2.101.2"
+        },
+        "swift-system": {
+          "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+          "version": "1.7.4"
+        }
+      },
+      "differential_cases_verified": 77,
+      "supplemental_checks_verified": 6,
+      "additional_baseline_characterizations_verified": {
+        "cases": 3,
+        "processes": 9
+      },
+      "profile_captures_verified": [
+        {
+          "capture": "B-ipv6-disjoint-0300",
+          "variant": "B",
+          "phase": "input parsing",
+          "storage_blocks": 149,
+          "storage_bytes": 9764864
+        },
+        {
+          "capture": "B-ipv6-disjoint-0450",
+          "variant": "B",
+          "phase": "rendering",
+          "storage_blocks": 326,
+          "storage_bytes": 21348352
+        },
+        {
+          "capture": "B-ipv6-disjoint-post-render",
+          "variant": "B",
+          "phase": "post-render output write",
+          "storage_blocks": 326,
+          "storage_bytes": 21348352
+        },
+        {
+          "capture": "B-mixed-disjoint-post-render",
+          "variant": "B",
+          "phase": "post-render output write",
+          "storage_blocks": 273,
+          "storage_bytes": 17874944
+        },
+        {
+          "capture": "C-ipv6-disjoint-0300",
+          "variant": "C",
+          "phase": "input parsing",
+          "storage_blocks": 1,
+          "storage_bytes": 65536
+        },
+        {
+          "capture": "C-ipv6-disjoint-post-render",
+          "variant": "C",
+          "phase": "post-render output write",
+          "storage_blocks": 0,
+          "storage_bytes": 0
+        },
+        {
+          "capture": "C-mixed-disjoint-post-render",
+          "variant": "C",
+          "phase": "post-render output write",
+          "storage_blocks": 0,
+          "storage_bytes": 0
+        }
+      ],
+      "prototype_scope_verified": "Per-chunk Foundation autorelease pool on Objective-C platforms; helper extraction on Linux. Reader byte loop, Data loader, EOF flush, diagnostic conversion and parsing unchanged.",
+      "checks": {
+        "files_hashed": 1172,
+        "bytes_hashed": 2435784411,
+        "assertions": 4885,
+        "differential_processes_verified": 154,
+        "outputs_verified": 224,
+        "raw_timing_files_verified": 224
+      },
+      "completed_at": "2026-11-15T18:50:54.958931+00:00"
+    },
+    "control/mac-evidence-audit-log-path-corrected.json": {
+      "passed": true,
+      "errors": [],
+      "scope": "Independent read-only audit; no benchmark harness imported or benchmark rerun. Only audit artifacts written.",
+      "started_at": "2026-11-15T18:51:42.771294+00:00",
+      "auditor_sha256": "bb8a27bcb27e070ffcaa1011aba6332b3a4c1d2867067be192a695b7b36893c8",
+      "summary_sha256": "f42594b678caf58ef182ade66dafc8f55f80d53e67111a23c756d8a917569f22",
+      "frozen_files_verified": {
+        "new": 18,
+        "source": 367,
+        "old": 53,
+        "references": 39
+      },
+      "full_tests_verified": 282,
+      "dependency_pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-asn1": {
+          "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+          "version": "1.7.1"
+        },
+        "swift-atomics": {
+          "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+          "version": "1.3.1"
+        },
+        "swift-cidr": {
+          "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+          "version": "0.10.1"
+        },
+        "swift-collections": {
+          "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+          "version": "1.6.0"
+        },
+        "swift-crypto": {
+          "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+          "version": "5.1.1"
+        },
+        "swift-nio": {
+          "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+          "version": "2.101.2"
+        },
+        "swift-system": {
+          "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+          "version": "1.7.4"
+        }
+      },
+      "differential_cases_verified": 77,
+      "supplemental_checks_verified": 6,
+      "additional_baseline_characterizations_verified": {
+        "cases": 3,
+        "processes": 9
+      },
+      "profile_captures_verified": [
+        {
+          "capture": "B-ipv6-disjoint-0300",
+          "variant": "B",
+          "phase": "input parsing",
+          "storage_blocks": 149,
+          "storage_bytes": 9764864
+        },
+        {
+          "capture": "B-ipv6-disjoint-0450",
+          "variant": "B",
+          "phase": "rendering",
+          "storage_blocks": 326,
+          "storage_bytes": 21348352
+        },
+        {
+          "capture": "B-ipv6-disjoint-post-render",
+          "variant": "B",
+          "phase": "post-render output write",
+          "storage_blocks": 326,
+          "storage_bytes": 21348352
+        },
+        {
+          "capture": "B-mixed-disjoint-post-render",
+          "variant": "B",
+          "phase": "post-render output write",
+          "storage_blocks": 273,
+          "storage_bytes": 17874944
+        },
+        {
+          "capture": "C-ipv6-disjoint-0300",
+          "variant": "C",
+          "phase": "input parsing",
+          "storage_blocks": 1,
+          "storage_bytes": 65536
+        },
+        {
+          "capture": "C-ipv6-disjoint-post-render",
+          "variant": "C",
+          "phase": "post-render output write",
+          "storage_blocks": 0,
+          "storage_bytes": 0
+        },
+        {
+          "capture": "C-mixed-disjoint-post-render",
+          "variant": "C",
+          "phase": "post-render output write",
+          "storage_blocks": 0,
+          "storage_bytes": 0
+        }
+      ],
+      "prototype_scope_verified": "Per-chunk Foundation autorelease pool on Objective-C platforms; helper extraction on Linux. Reader byte loop, Data loader, EOF flush, diagnostic conversion and parsing unchanged.",
+      "measured_samples": 132,
+      "measured_processes": 192,
+      "excluded_warmup_samples": 22,
+      "excluded_warmup_processes": 32,
+      "all_sample_records_accounted_for": true,
+      "all_outputs_match_original_verified_coverage": true,
+      "balanced_six_rounds": true,
+      "no_observed_dropped_or_retried_samples": true,
+      "recomputed_groups": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.245653229,
+          "elapsed_min_s": 0.241461084,
+          "elapsed_max_s": 0.250361209,
+          "peak_rss_median_mib": 70.1875,
+          "peak_rss_min_mib": 70.15625,
+          "peak_rss_max_mib": 70.21875,
+          "cpu_median_s": 0.23
+        },
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.236207771,
+          "elapsed_min_s": 0.23545525,
+          "elapsed_max_s": 0.246984167,
+          "peak_rss_median_mib": 56.1484375,
+          "peak_rss_min_mib": 56.078125,
+          "peak_rss_max_mib": 56.21875,
+          "cpu_median_s": 0.22
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.4609788335,
+          "elapsed_min_s": 0.450623292,
+          "elapsed_max_s": 0.466235125,
+          "peak_rss_median_mib": 167.0625,
+          "peak_rss_min_mib": 167.0625,
+          "peak_rss_max_mib": 167.0625,
+          "cpu_median_s": 0.44
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.457905875,
+          "elapsed_min_s": 0.451704,
+          "elapsed_max_s": 0.463019083,
+          "peak_rss_median_mib": 146.8203125,
+          "peak_rss_min_mib": 146.796875,
+          "peak_rss_max_mib": 146.84375,
+          "cpu_median_s": 0.44
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.359148563,
+          "elapsed_min_s": 0.354520834,
+          "elapsed_max_s": 0.364472541,
+          "peak_rss_median_mib": 86.84375,
+          "peak_rss_min_mib": 86.828125,
+          "peak_rss_max_mib": 86.875,
+          "cpu_median_s": 0.32
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.354302167,
+          "elapsed_min_s": 0.35100275,
+          "elapsed_max_s": 0.356879625,
+          "peak_rss_median_mib": 76.9921875,
+          "peak_rss_min_mib": 76.734375,
+          "peak_rss_max_mib": 77.0,
+          "cpu_median_s": 0.325
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.449073938,
+          "elapsed_min_s": 0.446753,
+          "elapsed_max_s": 0.4575185,
+          "peak_rss_median_mib": 86.859375,
+          "peak_rss_min_mib": 86.828125,
+          "peak_rss_max_mib": 86.875,
+          "cpu_median_s": 0.42000000000000004
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.4481278335,
+          "elapsed_min_s": 0.439335834,
+          "elapsed_max_s": 0.454451333,
+          "peak_rss_median_mib": 76.9921875,
+          "peak_rss_min_mib": 76.90625,
+          "peak_rss_max_mib": 77.015625,
+          "cpu_median_s": 0.41500000000000004
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.355887062,
+          "elapsed_min_s": 0.351246667,
+          "elapsed_max_s": 0.368429,
+          "peak_rss_median_mib": 71.1875,
+          "peak_rss_min_mib": 71.171875,
+          "peak_rss_max_mib": 71.21875,
+          "cpu_median_s": 0.32
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.352981291,
+          "elapsed_min_s": 0.347194083,
+          "elapsed_max_s": 0.3677015,
+          "peak_rss_median_mib": 61.78125,
+          "peak_rss_min_mib": 61.703125,
+          "peak_rss_max_mib": 61.78125,
+          "cpu_median_s": 0.32
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.28107452099999997,
+          "elapsed_min_s": 0.275007708,
+          "elapsed_max_s": 0.313816208,
+          "peak_rss_median_mib": 71.484375,
+          "peak_rss_min_mib": 71.484375,
+          "peak_rss_max_mib": 71.515625,
+          "cpu_median_s": 0.24
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.27461466599999995,
+          "elapsed_min_s": 0.267489833,
+          "elapsed_max_s": 0.277356417,
+          "peak_rss_median_mib": 61.7578125,
+          "peak_rss_min_mib": 61.71875,
+          "peak_rss_max_mib": 61.765625,
+          "cpu_median_s": 0.24
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.36235377049999995,
+          "elapsed_min_s": 0.355560458,
+          "elapsed_max_s": 0.373340125,
+          "peak_rss_median_mib": 50.9765625,
+          "peak_rss_min_mib": 50.96875,
+          "peak_rss_max_mib": 51.046875,
+          "cpu_median_s": 0.345
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.3565551455,
+          "elapsed_min_s": 0.353654875,
+          "elapsed_max_s": 0.362116583,
+          "peak_rss_median_mib": 35.890625,
+          "peak_rss_min_mib": 35.875,
+          "peak_rss_max_mib": 35.953125,
+          "cpu_median_s": 0.34
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.39634710399999995,
+          "elapsed_min_s": 0.371820209,
+          "elapsed_max_s": 0.399144625,
+          "peak_rss_median_mib": 94.921875,
+          "peak_rss_min_mib": 94.90625,
+          "peak_rss_max_mib": 94.9375,
+          "cpu_median_s": 0.33999999999999997
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.369131937,
+          "elapsed_min_s": 0.366242959,
+          "elapsed_max_s": 0.397740541,
+          "peak_rss_median_mib": 84.65625,
+          "peak_rss_min_mib": 84.59375,
+          "peak_rss_max_mib": 84.703125,
+          "cpu_median_s": 0.33
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.3586414585,
+          "elapsed_min_s": 0.351907375,
+          "elapsed_max_s": 0.362751584,
+          "peak_rss_median_mib": 118.765625,
+          "peak_rss_min_mib": 118.75,
+          "peak_rss_max_mib": 118.78125,
+          "cpu_median_s": 0.34
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.353833021,
+          "elapsed_min_s": 0.347622041,
+          "elapsed_max_s": 0.356781,
+          "peak_rss_median_mib": 101.796875,
+          "peak_rss_min_mib": 101.75,
+          "peak_rss_max_mib": 103.265625,
+          "cpu_median_s": 0.335
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.44862514600000003,
+          "elapsed_min_s": 0.445414208,
+          "elapsed_max_s": 0.459288583,
+          "peak_rss_median_mib": 118.7734375,
+          "peak_rss_min_mib": 118.75,
+          "peak_rss_max_mib": 119.96875,
+          "cpu_median_s": 0.43
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.4434105625,
+          "elapsed_min_s": 0.440037542,
+          "elapsed_max_s": 0.450227459,
+          "peak_rss_median_mib": 101.7578125,
+          "peak_rss_min_mib": 101.734375,
+          "peak_rss_max_mib": 101.796875,
+          "cpu_median_s": 0.43
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.35302056299999995,
+          "elapsed_min_s": 0.348587458,
+          "elapsed_max_s": 0.358605542,
+          "peak_rss_median_mib": 82.109375,
+          "peak_rss_min_mib": 82.09375,
+          "peak_rss_max_mib": 82.109375,
+          "cpu_median_s": 0.34
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.34832058349999995,
+          "elapsed_min_s": 0.344946417,
+          "elapsed_max_s": 0.352547375,
+          "peak_rss_median_mib": 65.65625,
+          "peak_rss_min_mib": 65.65625,
+          "peak_rss_max_mib": 66.84375,
+          "cpu_median_s": 0.335
+        }
+      ],
+      "recomputed_comparisons": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -3.0425799272591316,
+          "paired_elapsed_change_min_pct": -4.812016596209723,
+          "paired_elapsed_change_max_pct": -1.3488679070885912,
+          "paired_rss_change_median_pct": -19.991095280498662,
+          "paired_rss_difference_median_mib": -14.03125
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.3548461603887443,
+          "paired_elapsed_change_min_pct": -1.8014819241923052,
+          "paired_elapsed_change_max_pct": 0.8916752847171416,
+          "paired_rss_change_median_pct": -12.116535727646838,
+          "paired_rss_difference_median_mib": -20.2421875
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.8857975022770248,
+          "paired_elapsed_change_min_pct": -3.695694321180698,
+          "paired_elapsed_change_max_pct": -0.002609155545429953,
+          "paired_rss_change_median_pct": -11.344007384847343,
+          "paired_rss_difference_median_mib": -9.8515625
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.4216169975062023,
+          "paired_elapsed_change_min_pct": -2.044735240214335,
+          "paired_elapsed_change_max_pct": 0.8618192712465111,
+          "paired_rss_change_median_pct": -11.359956826767403,
+          "paired_rss_difference_median_mib": -9.8671875
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.3385564042826361,
+          "paired_elapsed_change_min_pct": -1.683890293628476,
+          "paired_elapsed_change_max_pct": 0.45053779827040064,
+          "paired_rss_change_median_pct": -13.224319578577699,
+          "paired_rss_difference_median_mib": -9.4140625
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -2.482192328278648,
+          "paired_elapsed_change_min_pct": -11.618198828022297,
+          "paired_elapsed_change_max_pct": -0.2006005591668747,
+          "paired_rss_change_median_pct": -13.615998414154152,
+          "paired_rss_difference_median_mib": -9.734375
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -1.4437383558651429,
+          "paired_elapsed_change_min_pct": -3.368867195831149,
+          "paired_elapsed_change_max_pct": 0.4313992530392774,
+          "paired_rss_change_median_pct": -29.60635374798465,
+          "paired_rss_difference_median_mib": -15.09375
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -3.476925639882417,
+          "paired_elapsed_change_min_pct": -7.645273273769881,
+          "paired_elapsed_change_max_pct": -0.2582941545366202,
+          "paired_rss_change_median_pct": -10.823044205945415,
+          "paired_rss_difference_median_mib": -10.2734375
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -1.393324434762333,
+          "paired_elapsed_change_min_pct": -2.74593840220958,
+          "paired_elapsed_change_max_pct": 0.07017727321003697,
+          "paired_rss_change_median_pct": -14.2875905232695,
+          "paired_rss_difference_median_mib": -16.96875
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -1.57790714543537,
+          "paired_elapsed_change_min_pct": -2.0824432960298234,
+          "paired_elapsed_change_max_pct": -0.43605373597976893,
+          "paired_rss_change_median_pct": -14.326119906750106,
+          "paired_rss_difference_median_mib": -17.015625
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -1.4244141520647402,
+          "paired_elapsed_change_min_pct": -2.6840950133779518,
+          "paired_elapsed_change_max_pct": 0.464401471583753,
+          "paired_rss_change_median_pct": -20.030449366293162,
+          "paired_rss_difference_median_mib": -16.4453125
+        }
+      ],
+      "limits": [
+        "This auditor was adapted from the earlier independent coalescing audit; it imports no timing or differential harness code.",
+        "External nanoseconds originate in raw sample records; native time only supports a hundredth-second sanity check, not exact reconstruction.",
+        "Original independent coverage receipts and outputs were hash-verified; the coverage algorithm was not rerun.",
+        "Six pairs per workload validate this controlled Mac experiment, not cross-platform performance.",
+        "Profile heap snapshots count live storage; they do not measure total allocation count or peak RSS. Parsing snapshots are not aligned by record count.",
+        "Post-render profiling intentionally blocks an output pipe; no profiling duration is treated as ordinary elapsed-time evidence.",
+        "Baseline retention does not identify a retaining root; the pool intervention removes the observed storage accumulation in the captured phases."
+      ],
+      "checks": {
+        "files_hashed": 1173,
+        "bytes_hashed": 2435812149,
+        "assertions": 5647,
+        "differential_processes_verified": 154,
+        "outputs_verified": 224,
+        "raw_timing_files_verified": 224
+      },
+      "completed_at": "2026-11-15T18:51:44.444122+00:00"
+    },
+    "control/harness-metadata-correction-01/linux-harness-finalized.json": {
+      "passed": true,
+      "baseline": "675d534a29fd3c2231d58bb58bf395b6343e233b",
+      "expected_tests": {
+        "B": 69,
+        "C": 72
+      },
+      "full_source_files": 367,
+      "build_input_inventory": 41,
+      "remote_dependency_pins": 8,
+      "timing_runner_and_statistics_unchanged": true,
+      "files": {
+        "README.md": "7aef746336f7a22806b72d1c2e07b9f82282bb61da739644944c9f9445b97631",
+        "audit_linux.py": "d6905aefa1b3fa1d28010096da807a7f0ca6bc1465292a8ef266fd614973fe76",
+        "build_tests.py": "053670c3f0b9f9f0559bdac2c097e6584f44ccfbf04434b5b326719eeee052f1",
+        "common.py": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8",
+        "differential.py": "d2e1cf3555283dfa25bc346b5bff85a131d047ae5f337ce1d27a5d634f2d420c",
+        "freeze_runtime_libraries.py": "d16981de118cfe30327ac1b19f5b7164b93b16caac32e211f3b07a400a061518",
+        "linux_runner.py": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac",
+        "matched-protocol.json": "dac8d72eef0f530ce3aea8f6e323a88d8708aeee23e73b7a2003addcf4fe1095",
+        "phase_runner.py": "484b71084ab46bea513fdfc8e7c622e9ed74eeaf488f34d9a5a5cd6f8991fbdd",
+        "prepare_benchmark.py": "c68df072d674b363a5755f783feefcaae897516aa7384e6b8f2f8604f141fe99",
+        "reference.json": "aa892aabae87fdc9bff34421bcacccac9f3546ab058086c63250333427b2cecd",
+        "run_correctness.py": "1e659d178b252802c99136a42613ca67d14e0252e7dd83533f5bbd73c6bd5e01",
+        "run_matched.py": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f",
+        "source-reference.json": "54d0195c6c095da034faf7f14c1d3869c80ba705309cc0497fed45acbafd007b"
+      }
+    },
+    "control/harness-metadata-correction-01/matched-protocol.json": {
+      "measured_rounds": 6,
+      "split_cases": [
+        "ipv4-disjoint",
+        "ipv6-disjoint",
+        "mixed-disjoint",
+        "mixed-permuted",
+        "mixed-overlap",
+        "mixed-adjacent",
+        "bgp-like-ipv4",
+        "range-derived-mixed"
+      ],
+      "native_cases": [
+        "mixed-disjoint",
+        "mixed-permuted",
+        "mixed-overlap"
+      ],
+      "order": "B,C on odd rounds; C,B on even rounds; rotate cases per round",
+      "warmup": "one excluded warmup per configuration",
+      "measured_samples": 132,
+      "measured_processes": 192,
+      "warmup_samples": 22,
+      "warmup_processes": 32,
+      "minimum_free_bytes": 3221225472,
+      "timeout_seconds": 180,
+      "elapsed": "perf_counter_ns includes process launch and blocking wait4; output verification outside timer",
+      "rss": "Linux wait4 ru_maxrss for that exact child, KiB times1024; max across split processes",
+      "output": "all stdout/stderr retained and exact byte count/hash compared with original independent coverage reference",
+      "build_tests": "full B/C cidrmerge Core+CLI Debug and Release; freeze ordinary release CLI binaries before tests",
+      "comparison": "same-source cidrmerge main6703901 vs TextInput ASCII fast path; identical released remote dependency pins",
+      "correctness_gate": "exact differential behavior with frozen binary/script hashes; new full tests complete"
+    },
+    "control/harness-metadata-correction-01/x86_64-matched-protocol-before.json": {
+      "measured_rounds": 6,
+      "split_cases": [
+        "ipv4-disjoint",
+        "ipv6-disjoint",
+        "mixed-disjoint",
+        "mixed-permuted",
+        "mixed-overlap",
+        "mixed-adjacent",
+        "bgp-like-ipv4",
+        "range-derived-mixed"
+      ],
+      "native_cases": [
+        "mixed-disjoint",
+        "mixed-permuted",
+        "mixed-overlap"
+      ],
+      "order": "B,C on odd rounds; C,B on even rounds; rotate cases per round",
+      "warmup": "one excluded warmup per configuration",
+      "measured_samples": 132,
+      "measured_processes": 192,
+      "warmup_samples": 22,
+      "warmup_processes": 32,
+      "minimum_free_bytes": 3221225472,
+      "timeout_seconds": 180,
+      "elapsed": "perf_counter_ns includes process launch and blocking wait4; output verification outside timer",
+      "rss": "Linux wait4 ru_maxrss for that exact child, KiB times1024; max across split processes",
+      "output": "all stdout/stderr retained and exact byte count/hash compared with original independent coverage reference",
+      "build_tests": "full B/C cidrmerge Core+CLI Debug and Release; freeze ordinary release CLI binaries before tests",
+      "comparison": "same-source cidrmerge main6703901 vs TextInput ASCII fast path; identical released remote dependency pins",
+      "correctness_gate": "exact differential behavior with frozen binary/script hashes; new full tests complete"
+    }
+  }
+}

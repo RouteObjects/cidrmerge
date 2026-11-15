@@ -1,0 +1,927 @@
+{
+  "content_kind": "path-redacted preservation and validation receipts",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "receipts": {
+    "x86_64/control/build-cleanup-plan.json": {
+      "authorized_scope": "Only new experiment generated build products after all validation and preserved ordinary/test binaries, sources, logs and pin receipts.",
+      "started_at": "2026-11-15T18:55:19.758343+00:00",
+      "root": "$EXPERIMENT_REMOTE",
+      "ordinary_binary_sha256": {
+        "B": "e6ac0af8bab89a6fa360dd4cf3e9160eb7b3a42735517cd350640a110a62a977",
+        "C": "002bdeaef561711ed13dca9b939fe112991c6cb72599f11d729fc6c6f97923b2"
+      },
+      "dependency_pins": {
+        "B": {
+          "swift-argument-parser": {
+            "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+            "version": "1.8.2"
+          },
+          "swift-asn1": {
+            "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+            "version": "1.7.1"
+          },
+          "swift-atomics": {
+            "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+            "version": "1.3.1"
+          },
+          "swift-cidr": {
+            "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+            "version": "0.10.1"
+          },
+          "swift-collections": {
+            "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+            "version": "1.6.0"
+          },
+          "swift-crypto": {
+            "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+            "version": "5.1.1"
+          },
+          "swift-nio": {
+            "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+            "version": "2.101.2"
+          },
+          "swift-system": {
+            "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+            "version": "1.7.4"
+          }
+        },
+        "C": {
+          "swift-argument-parser": {
+            "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+            "version": "1.8.2"
+          },
+          "swift-asn1": {
+            "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+            "version": "1.7.1"
+          },
+          "swift-atomics": {
+            "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+            "version": "1.3.1"
+          },
+          "swift-cidr": {
+            "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+            "version": "0.10.1"
+          },
+          "swift-collections": {
+            "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+            "version": "1.6.0"
+          },
+          "swift-crypto": {
+            "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+            "version": "5.1.1"
+          },
+          "swift-nio": {
+            "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+            "version": "2.101.2"
+          },
+          "swift-system": {
+            "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+            "version": "1.7.4"
+          }
+        }
+      },
+      "saved_test_executables": {
+        "test-bin/B/debug/cidrmergePackageTests.xctest": {
+          "sha256": "bc186c7d21e6ce6f8ae621370599c867181d10b2550dbf16ab48731446ad52a6",
+          "bytes": 24195088,
+          "source": "build/B/cli/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest"
+        },
+        "test-bin/B/release/cidrmergePackageTests.xctest": {
+          "sha256": "9a85e9395d3555f95c6e7dc532315b980d7c33ef617db673184e4387520a2596",
+          "bytes": 22119936,
+          "source": "build/B/cli/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest"
+        },
+        "test-bin/C/debug/cidrmergePackageTests.xctest": {
+          "sha256": "d79ee450c12529c2d6625351a1de38c18515000f44865f1c1e3d5a6926d11ad3",
+          "bytes": 24338632,
+          "source": "build/C/cli/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest"
+        },
+        "test-bin/C/release/cidrmergePackageTests.xctest": {
+          "sha256": "2154dd9e029e1e5d6d2fb683f9a535fef7613174203514b64af1192be679db0d",
+          "bytes": 22216392,
+          "source": "build/C/cli/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest"
+        }
+      },
+      "saved_workspace_states": {
+        "control/preserved-build-state/B-workspace-state.json": "02ba76c72ffd16988b88ed042c63ba92c7d0b5f90d9363281ab096e1142c6931",
+        "control/preserved-build-state/C-workspace-state.json": "02ba76c72ffd16988b88ed042c63ba92c7d0b5f90d9363281ab096e1142c6931"
+      },
+      "cleanup_allowlist": [
+        "$EXPERIMENT_REMOTE/build",
+        "$EXPERIMENT_REMOTE/clang-cache",
+        "$EXPERIMENT_REMOTE/cache"
+      ],
+      "free_bytes_before_cleanup": 4731011072
+    },
+    "x86_64/control/build-cleanup-receipt.json": {
+      "authorized_scope": "Only new experiment generated build products after all validation and preserved ordinary/test binaries, sources, logs and pin receipts.",
+      "started_at": "2026-11-15T18:55:19.758343+00:00",
+      "root": "$EXPERIMENT_REMOTE",
+      "ordinary_binary_sha256": {
+        "B": "e6ac0af8bab89a6fa360dd4cf3e9160eb7b3a42735517cd350640a110a62a977",
+        "C": "002bdeaef561711ed13dca9b939fe112991c6cb72599f11d729fc6c6f97923b2"
+      },
+      "dependency_pins": {
+        "B": {
+          "swift-argument-parser": {
+            "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+            "version": "1.8.2"
+          },
+          "swift-asn1": {
+            "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+            "version": "1.7.1"
+          },
+          "swift-atomics": {
+            "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+            "version": "1.3.1"
+          },
+          "swift-cidr": {
+            "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+            "version": "0.10.1"
+          },
+          "swift-collections": {
+            "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+            "version": "1.6.0"
+          },
+          "swift-crypto": {
+            "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+            "version": "5.1.1"
+          },
+          "swift-nio": {
+            "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+            "version": "2.101.2"
+          },
+          "swift-system": {
+            "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+            "version": "1.7.4"
+          }
+        },
+        "C": {
+          "swift-argument-parser": {
+            "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+            "version": "1.8.2"
+          },
+          "swift-asn1": {
+            "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+            "version": "1.7.1"
+          },
+          "swift-atomics": {
+            "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+            "version": "1.3.1"
+          },
+          "swift-cidr": {
+            "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+            "version": "0.10.1"
+          },
+          "swift-collections": {
+            "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+            "version": "1.6.0"
+          },
+          "swift-crypto": {
+            "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+            "version": "5.1.1"
+          },
+          "swift-nio": {
+            "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+            "version": "2.101.2"
+          },
+          "swift-system": {
+            "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+            "version": "1.7.4"
+          }
+        }
+      },
+      "saved_test_executables": {
+        "test-bin/B/debug/cidrmergePackageTests.xctest": {
+          "sha256": "bc186c7d21e6ce6f8ae621370599c867181d10b2550dbf16ab48731446ad52a6",
+          "bytes": 24195088,
+          "source": "build/B/cli/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest"
+        },
+        "test-bin/B/release/cidrmergePackageTests.xctest": {
+          "sha256": "9a85e9395d3555f95c6e7dc532315b980d7c33ef617db673184e4387520a2596",
+          "bytes": 22119936,
+          "source": "build/B/cli/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest"
+        },
+        "test-bin/C/debug/cidrmergePackageTests.xctest": {
+          "sha256": "d79ee450c12529c2d6625351a1de38c18515000f44865f1c1e3d5a6926d11ad3",
+          "bytes": 24338632,
+          "source": "build/C/cli/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest"
+        },
+        "test-bin/C/release/cidrmergePackageTests.xctest": {
+          "sha256": "2154dd9e029e1e5d6d2fb683f9a535fef7613174203514b64af1192be679db0d",
+          "bytes": 22216392,
+          "source": "build/C/cli/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest"
+        }
+      },
+      "saved_workspace_states": {
+        "control/preserved-build-state/B-workspace-state.json": "02ba76c72ffd16988b88ed042c63ba92c7d0b5f90d9363281ab096e1142c6931",
+        "control/preserved-build-state/C-workspace-state.json": "02ba76c72ffd16988b88ed042c63ba92c7d0b5f90d9363281ab096e1142c6931"
+      },
+      "cleanup_allowlist": [
+        "$EXPERIMENT_REMOTE/build",
+        "$EXPERIMENT_REMOTE/clang-cache",
+        "$EXPERIMENT_REMOTE/cache"
+      ],
+      "free_bytes_before_cleanup": 4731011072,
+      "completed_at": "2026-11-15T18:55:23.548404+00:00",
+      "free_bytes_after_cleanup": 6057893888,
+      "observed_free_byte_increase": 1326882816,
+      "passed": true
+    },
+    "x86_64/control/measurement-space-gate.json": {
+      "passed": true,
+      "at": "2026-11-15T18:55:28.693689+00:00",
+      "free_bytes": 5972725760,
+      "known_all_output_bytes": 1816398122,
+      "minimum_remaining_bytes": 3221225472,
+      "extra_metadata_and_margin_bytes": 268435456,
+      "required_free_bytes": 5306059050,
+      "expected_remaining_bytes_after_outputs": 4156327638,
+      "no_cleanup_during_measurement": true,
+      "measurements": 132,
+      "warmups": 22
+    },
+    "x86_64/control/retrieved-evidence-audit.json": {
+      "passed": true,
+      "platform_root": "$EXPERIMENT/x86_64",
+      "started_at": "2026-11-15T19:04:45.101708+00:00",
+      "scope": "Independent evidence-only audit; no harness imports or benchmark execution.",
+      "errors": [],
+      "summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "frozen_files_verified": 385,
+      "source_files_verified": 367,
+      "fixtures_verified": 24,
+      "runtime_arch": "x86_64",
+      "runtime_libraries_verified": false,
+      "runtime_note": "Runtime receipt frozen; native library paths are not rehashed on this retrieval host.",
+      "binary_sha256": {
+        "B": "e6ac0af8bab89a6fa360dd4cf3e9160eb7b3a42735517cd350640a110a62a977",
+        "C": "002bdeaef561711ed13dca9b939fe112991c6cb72599f11d729fc6c6f97923b2"
+      },
+      "correctness_gate_verified": true,
+      "test_executions_verified": 282,
+      "test_configurations_verified": 4,
+      "original_reference_files_verified": 22,
+      "native_execution_root": "$EXPERIMENT_REMOTE",
+      "progress_log": "logs/phase-benchmark.log",
+      "correctness_gate_timing_evidence": "No gate timestamp stored; required gate hash is bound by the pre-benchmark freeze and start validation receipt.",
+      "measured_samples": 132,
+      "measured_processes": 192,
+      "excluded_warmup_samples": 22,
+      "excluded_warmup_processes": 32,
+      "balanced_six_rounds": true,
+      "all_sample_files_accounted_for": true,
+      "all_outputs_match_verified_coverage": true,
+      "no_observed_dropped_or_retried_samples": true,
+      "recomputed_groups": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.804868897,
+          "elapsed_min_s": 0.789523622,
+          "elapsed_max_s": 0.847758364,
+          "peak_rss_median_mib": 43.43359375,
+          "peak_rss_min_mib": 43.32421875,
+          "peak_rss_max_mib": 43.55078125,
+          "cpu_median_s": 0.8018299999999999
+        },
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.8463231265,
+          "elapsed_min_s": 0.799345759,
+          "elapsed_max_s": 0.922981954,
+          "peak_rss_median_mib": 43.39453125,
+          "peak_rss_min_mib": 43.2109375,
+          "peak_rss_max_mib": 43.58203125,
+          "cpu_median_s": 0.8431960000000001
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.6722399085,
+          "elapsed_min_s": 1.654490708,
+          "elapsed_max_s": 1.737349748,
+          "peak_rss_median_mib": 112.09765625,
+          "peak_rss_min_mib": 111.96875,
+          "peak_rss_max_mib": 112.25390625,
+          "cpu_median_s": 1.6688735000000001
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.704706278,
+          "elapsed_min_s": 1.64024289,
+          "elapsed_max_s": 1.729126491,
+          "peak_rss_median_mib": 112.171875,
+          "peak_rss_min_mib": 111.88671875,
+          "peak_rss_max_mib": 112.21484375,
+          "cpu_median_s": 1.701339
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.252774515,
+          "elapsed_min_s": 1.23005686,
+          "elapsed_max_s": 1.292467469,
+          "peak_rss_median_mib": 66.318359375,
+          "peak_rss_min_mib": 66.24609375,
+          "peak_rss_max_mib": 66.51953125,
+          "cpu_median_s": 1.2472059999999998
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.257696082,
+          "elapsed_min_s": 1.228280268,
+          "elapsed_max_s": 1.28661923,
+          "peak_rss_median_mib": 66.345703125,
+          "peak_rss_min_mib": 66.29296875,
+          "peak_rss_max_mib": 66.48046875,
+          "cpu_median_s": 1.2519355
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.68183481,
+          "elapsed_min_s": 1.662523487,
+          "elapsed_max_s": 1.694249895,
+          "peak_rss_median_mib": 73.751953125,
+          "peak_rss_min_mib": 73.57421875,
+          "peak_rss_max_mib": 73.8515625,
+          "cpu_median_s": 1.6760825
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.6878536155,
+          "elapsed_min_s": 1.666444698,
+          "elapsed_max_s": 1.720025413,
+          "peak_rss_median_mib": 73.7890625,
+          "peak_rss_min_mib": 73.6640625,
+          "peak_rss_max_mib": 73.84375,
+          "cpu_median_s": 1.6820015
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.3314955175,
+          "elapsed_min_s": 1.326503679,
+          "elapsed_max_s": 1.39282142,
+          "peak_rss_median_mib": 58.552734375,
+          "peak_rss_min_mib": 58.4921875,
+          "peak_rss_max_mib": 58.6328125,
+          "cpu_median_s": 1.3258159999999999
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.3389942110000002,
+          "elapsed_min_s": 1.324317681,
+          "elapsed_max_s": 1.373594804,
+          "peak_rss_median_mib": 58.435546875,
+          "peak_rss_min_mib": 58.39453125,
+          "peak_rss_max_mib": 58.52734375,
+          "cpu_median_s": 1.333631
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.9571671900000001,
+          "elapsed_min_s": 0.946462382,
+          "elapsed_max_s": 0.963611381,
+          "peak_rss_median_mib": 51.083984375,
+          "peak_rss_min_mib": 51.03125,
+          "peak_rss_max_mib": 51.26171875,
+          "cpu_median_s": 0.9523345
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.9531111320000001,
+          "elapsed_min_s": 0.947141461,
+          "elapsed_max_s": 1.003239947,
+          "peak_rss_median_mib": 51.126953125,
+          "peak_rss_min_mib": 51.0625,
+          "peak_rss_max_mib": 51.1875,
+          "cpu_median_s": 0.9481284999999999
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.1605174725,
+          "elapsed_min_s": 1.148957929,
+          "elapsed_max_s": 1.180156509,
+          "peak_rss_median_mib": 40.974609375,
+          "peak_rss_min_mib": 40.9453125,
+          "peak_rss_max_mib": 41.03515625,
+          "cpu_median_s": 1.1574550000000001
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.1578268405,
+          "elapsed_min_s": 1.150527166,
+          "elapsed_max_s": 1.170308022,
+          "peak_rss_median_mib": 40.935546875,
+          "peak_rss_min_mib": 40.83203125,
+          "peak_rss_max_mib": 41.078125,
+          "cpu_median_s": 1.154718
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.286520444,
+          "elapsed_min_s": 1.26978079,
+          "elapsed_max_s": 1.332294369,
+          "peak_rss_median_mib": 66.2890625,
+          "peak_rss_min_mib": 66.265625,
+          "peak_rss_max_mib": 66.3359375,
+          "cpu_median_s": 1.2810190000000001
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.2850360950000002,
+          "elapsed_min_s": 1.272039085,
+          "elapsed_max_s": 1.307993723,
+          "peak_rss_median_mib": 66.228515625,
+          "peak_rss_min_mib": 66.18359375,
+          "peak_rss_max_mib": 66.3125,
+          "cpu_median_s": 1.279478
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.277911935,
+          "elapsed_min_s": 1.247755522,
+          "elapsed_max_s": 1.294773777,
+          "peak_rss_median_mib": 77.826171875,
+          "peak_rss_min_mib": 77.6484375,
+          "peak_rss_max_mib": 77.99609375,
+          "cpu_median_s": 1.274837
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.2804339635000002,
+          "elapsed_min_s": 1.251935972,
+          "elapsed_max_s": 1.325889323,
+          "peak_rss_median_mib": 77.849609375,
+          "peak_rss_min_mib": 77.73046875,
+          "peak_rss_max_mib": 78.00390625,
+          "cpu_median_s": 1.2775159999999999
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.6980769265,
+          "elapsed_min_s": 1.67461476,
+          "elapsed_max_s": 1.741440211,
+          "peak_rss_median_mib": 85.248046875,
+          "peak_rss_min_mib": 85.046875,
+          "peak_rss_max_mib": 85.30078125,
+          "cpu_median_s": 1.6945725
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.703529468,
+          "elapsed_min_s": 1.674002765,
+          "elapsed_max_s": 1.775602255,
+          "peak_rss_median_mib": 85.3046875,
+          "peak_rss_min_mib": 85.20703125,
+          "peak_rss_max_mib": 85.328125,
+          "cpu_median_s": 1.700099
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 1.3822764745,
+          "elapsed_min_s": 1.344935887,
+          "elapsed_max_s": 1.421586615,
+          "peak_rss_median_mib": 68.169921875,
+          "peak_rss_min_mib": 68.0625,
+          "peak_rss_max_mib": 68.21875,
+          "cpu_median_s": 1.3785764999999999
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 1.360861874,
+          "elapsed_min_s": 1.329577404,
+          "elapsed_max_s": 1.391506297,
+          "peak_rss_median_mib": 68.181640625,
+          "peak_rss_min_mib": 68.0859375,
+          "peak_rss_max_mib": 68.296875,
+          "cpu_median_s": 1.3574655
+        }
+      ],
+      "recomputed_comparisons": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 2.6395489468110878,
+          "paired_elapsed_change_min_pct": -0.16533355773440395,
+          "paired_elapsed_change_max_pct": 16.452441651136084,
+          "paired_rss_change_median_pct": -0.08993211926711098,
+          "paired_rss_difference_median_mib": -0.0390625
+        },
+        {
+          "suite": "split",
+          "case": "ipv6-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 0.4730058997708064,
+          "paired_elapsed_change_min_pct": -2.649062519103096,
+          "paired_elapsed_change_max_pct": 3.0965754443759153,
+          "paired_rss_change_median_pct": 0.06448453458881565,
+          "paired_rss_difference_median_mib": 0.072265625
+        },
+        {
+          "suite": "split",
+          "case": "mixed-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 0.7963891307168569,
+          "paired_elapsed_change_min_pct": -3.26345915945061,
+          "paired_elapsed_change_max_pct": 4.598354095598478,
+          "paired_rss_change_median_pct": 0.08832170957331908,
+          "paired_rss_difference_median_mib": 0.05859375
+        },
+        {
+          "suite": "split",
+          "case": "mixed-permuted",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 0.2628803111507816,
+          "paired_elapsed_change_min_pct": -1.1974153638311669,
+          "paired_elapsed_change_max_pct": 3.458713603123975,
+          "paired_rss_change_median_pct": 0.060946936044126154,
+          "paired_rss_difference_median_mib": 0.044921875
+        },
+        {
+          "suite": "split",
+          "case": "mixed-overlap",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.4062012918510882,
+          "paired_elapsed_change_min_pct": -3.242402173855141,
+          "paired_elapsed_change_max_pct": 3.497820556787601,
+          "paired_rss_change_median_pct": -0.2000721985636611,
+          "paired_rss_difference_median_mib": -0.1171875
+        },
+        {
+          "suite": "split",
+          "case": "mixed-adjacent",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.03954971635719562,
+          "paired_elapsed_change_min_pct": -1.2077479348202358,
+          "paired_elapsed_change_max_pct": 4.112504976733966,
+          "paired_rss_change_median_pct": 0.09939632179258862,
+          "paired_rss_difference_median_mib": 0.05078125
+        },
+        {
+          "suite": "split",
+          "case": "bgp-like-ipv4",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.13293985160732769,
+          "paired_elapsed_change_min_pct": -2.262730222335285,
+          "paired_elapsed_change_max_pct": 0.6762394691651075,
+          "paired_rss_change_median_pct": -0.1334369719364792,
+          "paired_rss_difference_median_mib": -0.0546875
+        },
+        {
+          "suite": "split",
+          "case": "range-derived-mixed",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.25210575795295287,
+          "paired_elapsed_change_min_pct": -4.5226704699823035,
+          "paired_elapsed_change_max_pct": 2.080616246592948,
+          "paired_rss_change_median_pct": -0.1325685360806239,
+          "paired_rss_difference_median_mib": -0.087890625
+        },
+        {
+          "suite": "native",
+          "case": "mixed-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 0.8279781354849192,
+          "paired_elapsed_change_min_pct": -1.9077763574447237,
+          "paired_elapsed_change_max_pct": 4.626055944743568,
+          "paired_rss_change_median_pct": -0.027590170792579638,
+          "paired_rss_difference_median_mib": -0.021484375
+        },
+        {
+          "suite": "native",
+          "case": "mixed-permuted",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": 0.9152218044806371,
+          "paired_elapsed_change_min_pct": -3.8725099819117426,
+          "paired_elapsed_change_max_pct": 4.161653558588996,
+          "paired_rss_change_median_pct": 0.04124247659642588,
+          "paired_rss_difference_median_mib": 0.03515625
+        },
+        {
+          "suite": "native",
+          "case": "mixed-overlap",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -0.7512109766852126,
+          "paired_elapsed_change_min_pct": -5.058216379845238,
+          "paired_elapsed_change_max_pct": 0.7512259062624871,
+          "paired_rss_change_median_pct": 0.09455909542275265,
+          "paired_rss_difference_median_mib": 0.064453125
+        }
+      ],
+      "limits": [
+        "Nanosecond elapsed values originate in frozen raw per-child records; this audit checks consistency and accounting, not an independent clock recording.",
+        "Prior coverage receipts and exact output hashes establish unchanged coverage; the original coverage algorithm is not rerun.",
+        "Differential gate and frozen binaries are checked; this audit does not independently re-execute parser semantic cases."
+      ],
+      "checks": {
+        "files_hashed": 1034,
+        "bytes_hashed": 2190721752,
+        "assertions": 5481,
+        "outputs_verified": 224,
+        "raw_rusage_files_verified": 224
+      },
+      "completed_at": "2026-11-15T19:04:46.411698+00:00"
+    },
+    "x86_64/control/retrieved-final-consistency.json": {
+      "passed": true,
+      "at": "2026-11-15T19:05:52.386172+00:00",
+      "runtime_byte_copies_verified": 20,
+      "test_executables_verified": 4,
+      "primary_raw_audit_passed": true,
+      "followup_raw_audit_passed": true,
+      "loader_disassembly_comparison_passed": true,
+      "source_files": 367,
+      "raw_primary_outputs": 224,
+      "raw_followup_outputs": 14,
+      "all_old_experiments_preserved": true
+    },
+    "arm64/control/containers-stopped-final.json": {
+      "passed": true,
+      "at": "2026-11-15T19:01:52.593895+00:00",
+      "all_timing_and_native_audits_completed": true,
+      "only_task_containers_touched": true,
+      "containers": [
+        {
+          "container": "cidrmerge-read-buffer-arm642-20261115T182833Z",
+          "image": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+          "processes_before_stop": "PID                 COMMAND             COMMAND\n162989              docker-init         /sbin/docker-init -- sleep infinity\n163003              sleep               sleep infinity\n",
+          "container_filesystem_changes": "C /root\nA /root/.cache\nA /root/.cache/org.swift.foundation.URLCache\nA /root/.cache/org.swift.foundation.URLCache/swift-package\nA /root/.cache/org.swift.swiftpm\nA /root/.local\nA /root/.local/share\nA /root/.local/share/bin\nA /root/.swiftpm\nA /root/.swiftpm/security\nA /root/.swiftpm/cache\nA /root/.swiftpm/configuration\nC /etc\nC /etc/ca-certificates\nA /etc/ca-certificates/trust-source\nA /etc/ca-certificates/trust-source/anchors\nA /etc/ca-certificates/trust-source/anchors/orbstack-root.crt\nC /etc/ssl\nC /etc/ssl/certs\nA /etc/ssl/certs/orbstack-root.crt\nC /etc/ssl/certs/ca-certificates.crt\nC /tmp\nA /tmp/TemporaryDirectory.5IewTf\nA /tmp/TemporaryDirectory.5IewTf/.keep-directory\nA /tmp/TemporaryDirectory.Icly6H\nA /tmp/TemporaryDirectory.Icly6H/.keep-directory\nA /tmp/TemporaryDirectory.SuQQPz\nA /tmp/TemporaryDirectory.SuQQPz/.keep-directory\nA /tmp/TemporaryDirectory.hJSgBk\nA /tmp/TemporaryDirectory.hJSgBk/.keep-directory\nA /tmp/TemporaryDirectory.mEjN1v\nA /tmp/TemporaryDirectory.mEjN1v/.keep-directory\nA /tmp/TemporaryDirectory.LxVqt6\nA /tmp/TemporaryDirectory.LxVqt6/.keep-directory\nA /tmp/TemporaryDirectory.NNqp9i\nA /tmp/TemporaryDirectory.NNqp9i/.keep-directory\nA /tmp/TemporaryDirectory.ZbZg0c\nA /tmp/TemporaryDirectory.ZbZg0c/.keep-directory\nA /tmp/TemporaryDirectory.a6ZQEf\nA /tmp/TemporaryDirectory.a6ZQEf/.keep-directory\nA /tmp/TemporaryDirectory.kC9dEX\nA /tmp/TemporaryDirectory.kC9dEX/.keep-directory\nA /tmp/TemporaryDirectory.kh8Cdg\nA /tmp/TemporaryDirectory.kh8Cdg/.keep-directory\nA /tmp/TemporaryDirectory.lYFe2s\nA /tmp/TemporaryDirectory.lYFe2s/.keep-directory\nA /validation\nC /usr\nC /usr/local\nC /usr/local/share\nC /usr/local/share/ca-certificates\nA /usr/local/share/ca-certificates/orbstack-root.crt\nC /usr/sbin\nA /usr/sbin/docker-init\nA /Users\nA $HOME\nA $DOWNLOADS\nA $BASELINE_REFERENCES\nA $BASELINE_REFERENCES/fixtures\n",
+          "stop_stdout": "cidrmerge-read-buffer-arm642-20261115T182833Z\n"
+        },
+        {
+          "container": "cidrmerge-read-buffer-arm624-20261115T182833Z",
+          "image": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+          "processes_before_stop": "PID                 COMMAND             COMMAND\n163468              docker-init         /sbin/docker-init -- sleep infinity\n163480              sleep               sleep infinity\n",
+          "container_filesystem_changes": "C /etc\nC /etc/ssl\nC /etc/ssl/certs\nA /etc/ssl/certs/orbstack-root.crt\nC /etc/ssl/certs/ca-certificates.crt\nC /etc/ca-certificates\nA /etc/ca-certificates/trust-source\nA /etc/ca-certificates/trust-source/anchors\nA /etc/ca-certificates/trust-source/anchors/orbstack-root.crt\nC /usr\nC /usr/local\nC /usr/local/share\nC /usr/local/share/ca-certificates\nA /usr/local/share/ca-certificates/orbstack-root.crt\nC /usr/sbin\nA /usr/sbin/docker-init\nA /validation\nA $PLATFORM_ROOT/floor-6.2.4\nC /root\nA /root/.swiftpm\nA /root/.swiftpm/configuration\nA /root/.swiftpm/security\nA /root/.swiftpm/cache\nA /root/.cache\nA /root/.cache/org.swift.foundation.URLCache\nA /root/.cache/org.swift.foundation.URLCache/swift-package\nA /root/.cache/org.swift.swiftpm\nA /root/.local\nA /root/.local/share\nA /root/.local/share/bin\nC /tmp\nA /tmp/TemporaryDirectory.Nyi7gO\nA /tmp/TemporaryDirectory.Nyi7gO/.keep-directory\nA /tmp/TemporaryDirectory.YmMqc4\nA /tmp/TemporaryDirectory.YmMqc4/.keep-directory\nA /tmp/TemporaryDirectory.l0X39I\nA /tmp/TemporaryDirectory.l0X39I/.keep-directory\nA /tmp/TemporaryDirectory.AkHnGT\nA /tmp/TemporaryDirectory.AkHnGT/.keep-directory\nA /tmp/TemporaryDirectory.M7Bqwf\nA /tmp/TemporaryDirectory.M7Bqwf/.keep-directory\nA /tmp/TemporaryDirectory.NgEb3N\nA /tmp/TemporaryDirectory.NgEb3N/.keep-directory\n",
+          "stop_stdout": "cidrmerge-read-buffer-arm624-20261115T182833Z\n"
+        }
+      ]
+    },
+    "arm64/floor-6.2.4/control/runtime-postcheck.json": {
+      "passed": true,
+      "files": {
+        "/usr/lib/swift/linux/libswiftCore.so": "8fdbbfbf6cda36870e97fe46af2bf21eff39253d97e878aaae003f5be0127f92"
+      },
+      "checked_at": "2026-11-15T19:01:51.648333+00:00",
+      "toolchain_version_unchanged": true,
+      "toolchain_version": "Swift version 6.2.4 (swift-6.2.4-RELEASE)\nTarget: aarch64-unknown-linux-gnu\n",
+      "swift_executable": "/usr/bin/swift-driver",
+      "swift_executable_current_sha256": "5a7209655c37a4f4937ea5219a4af59a7c9fc52dd13c615f26682642bc3a83ff",
+      "preflight_sha256": "0de6e3a9bb22477d0b0e92b706f0e1eb3ed73b6a541eba93760d4dbbcb4e2048",
+      "limitations": "Floor preflight hashed libswiftCore and recorded version and immutable image identity; no initial Swift executable or full linked-library hash inventory was captured. Current compiler hash is provided without claiming pre/post compiler-byte parity."
+    },
+    "control/baseline-read-lifetime-characterization/summary.json": {
+      "passed": true,
+      "at": "2026-11-15T18:44:06.037948+00:00",
+      "binary": "$EXPERIMENT/macos/bin/B",
+      "binary_sha256": "4ed8594e32cfc7a1d4a9ea7e8efb184c8f71283d30ba23d67b8b2d14c4ad5277",
+      "script_sha256": "ae0b0012caad7f1d4cfe262bce54f116253dfb8ecd47a965719314c1b391bc7b",
+      "fixture_sha256": {
+        "long.txt": "bdfb29b9b3260614f0b12979794de2ad67f31add4bcd06eb972d1830f825e9e3",
+        "first.txt": "7c2063b0597929ddbb8b5120d904571f5943dd94c762ea9d91a03d700d55a960",
+        "empty.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "second.txt": "7f94176edb891bc3520dd65dea9903d4e4f04ab6452e9c734a314365107f281b",
+        "write-only.txt": "7c05f476485b46ce90b613f8e594ed25245cacfc0337ffb25c47b4771807f6a4"
+      },
+      "characterized_added_test_cases": 3,
+      "process_count": 9,
+      "records": [
+        {
+          "label": "long-line-final-token-ranges-raw",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--raw",
+            "--representation",
+            "ranges",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/long.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "735831bbbed0ab00fc4995e504aa935182551c229ebf0400b0edb623cd989335",
+          "stderr_sha256": "55f35cbdd4adda25fd3f548bce5fcad87e56ec79310479e084ed02f125f0838d",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "long-line-final-token-ranges-json",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--json",
+            "--representation",
+            "ranges",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/long.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "043a28075aae291f2819d0483f6a01c444901a69c94d056fddc8d147e373954d",
+          "stderr_sha256": "55f35cbdd4adda25fd3f548bce5fcad87e56ec79310479e084ed02f125f0838d",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "long-line-final-token-cidr-raw",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--raw",
+            "--representation",
+            "cidr",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/long.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "a92f2483a5ac12f7bb7abfc3a9e2ede0134d6d1997e84896c0f79ca0cee09903",
+          "stderr_sha256": "e794594e06eebc69dd2b533b273338e0415d47ba9a52640ccaed7b50a4bd8e8a",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "long-line-final-token-cidr-json",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--json",
+            "--representation",
+            "cidr",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/long.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "72262cffc024d2432674efdd474c4995a1c9b75f9bfda04485aacf7ea5a1cf2c",
+          "stderr_sha256": "e794594e06eebc69dd2b533b273338e0415d47ba9a52640ccaed7b50a4bd8e8a",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "repeated-empty-bom-sources-ranges-raw",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--raw",
+            "--representation",
+            "ranges",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/empty.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/second.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "735831bbbed0ab00fc4995e504aa935182551c229ebf0400b0edb623cd989335",
+          "stderr_sha256": "8ea3278a7bae02a0cb5fc114a83b0c2217d35d5ae93c65cce098f7f3d9c74729",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "repeated-empty-bom-sources-ranges-json",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--json",
+            "--representation",
+            "ranges",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/empty.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/second.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "043a28075aae291f2819d0483f6a01c444901a69c94d056fddc8d147e373954d",
+          "stderr_sha256": "8ea3278a7bae02a0cb5fc114a83b0c2217d35d5ae93c65cce098f7f3d9c74729",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "repeated-empty-bom-sources-cidr-raw",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--raw",
+            "--representation",
+            "cidr",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/empty.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/second.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "a92f2483a5ac12f7bb7abfc3a9e2ede0134d6d1997e84896c0f79ca0cee09903",
+          "stderr_sha256": "5b493eb59f9c2e71221f271f6be35ed3df99c48e2afbb04fe17e2fb89e3fe9f8",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "repeated-empty-bom-sources-cidr-json",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--json",
+            "--representation",
+            "cidr",
+            "--stats",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/empty.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/first.txt",
+            "$EXPERIMENT/control/baseline-read-lifetime-characterization/second.txt"
+          ],
+          "returncode": 0,
+          "stdout_sha256": "72262cffc024d2432674efdd474c4995a1c9b75f9bfda04485aacf7ea5a1cf2c",
+          "stderr_sha256": "5b493eb59f9c2e71221f271f6be35ed3df99c48e2afbb04fe17e2fb89e3fe9f8",
+          "passed": true,
+          "output_contract_passed": true,
+          "statistics_exact": true
+        },
+        {
+          "label": "write-only-stdin",
+          "command": [
+            "$EXPERIMENT/macos/bin/B",
+            "--raw",
+            "--stats",
+            "-"
+          ],
+          "returncode": 1,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "22f44b111bf387ca97177dffc09781a3a9334df66dcdd129bad754838697d062",
+          "passed": true,
+          "source": "<stdin>",
+          "error_type": "inputReadFailed",
+          "underlying_reason_nonempty": true,
+          "stdin_mode": "write-only existing regular file descriptor"
+        }
+      ],
+      "limits": [
+        "CLI characterizations are separate from the unchanged 69-test baseline suite and 77-case differential gate.",
+        "JSON output is checked structurally against exact expected values; raw output and successful stderr statistics are checked byte for byte.",
+        "Read-error reason must be nonempty; localized wording is not a compatibility requirement."
+      ]
+    }
+  }
+}

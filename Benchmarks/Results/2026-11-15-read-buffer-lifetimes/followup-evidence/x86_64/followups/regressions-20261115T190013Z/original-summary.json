@@ -1,0 +1,1046 @@
+{
+  "content_kind": "complete path-redacted original summary",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "original_summary": "x86_64/followups/regressions-20261115T190013Z/summary.json",
+  "original_summary_sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71",
+  "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+  "separate_followup_not_pooled": true,
+  "summary": {
+    "passed": true,
+    "completed_at": "2026-11-15T19:00:31.835909+00:00",
+    "selected_cases": [
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint"
+      }
+    ],
+    "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+    "separate_followup_not_pooled": true,
+    "samples": [
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:18.222843+00:00",
+        "free_bytes_before": 4121939968,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:18.223603+00:00",
+            "elapsed_ns": 872065682,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.801998,
+              "ru_stime": 0.066999,
+              "ru_maxrss": 44464,
+              "ru_minflt": 14311,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 11
+            },
+            "peak_rss_bytes": 45531136,
+            "cpu_seconds": 0.868997,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 872065682,
+        "peak_rss_bytes": 45531136,
+        "cpu_seconds": 0.868997,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:19.184761+00:00"
+      },
+      {
+        "round": 1,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:19.185402+00:00",
+        "free_bytes_before": 4107108352,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:19.186155+00:00",
+            "elapsed_ns": 800615168,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.741796,
+              "ru_stime": 0.055984,
+              "ru_maxrss": 44504,
+              "ru_minflt": 14313,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 9
+            },
+            "peak_rss_bytes": 45572096,
+            "cpu_seconds": 0.79778,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 800615168,
+        "peak_rss_bytes": 45572096,
+        "cpu_seconds": 0.79778,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:20.075645+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:20.076504+00:00",
+        "free_bytes_before": 4092284928,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:20.077248+00:00",
+            "elapsed_ns": 822143831,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.747149,
+              "ru_stime": 0.072014,
+              "ru_maxrss": 44364,
+              "ru_minflt": 14311,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 7
+            },
+            "peak_rss_bytes": 45428736,
+            "cpu_seconds": 0.819163,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 822143831,
+        "peak_rss_bytes": 45428736,
+        "cpu_seconds": 0.819163,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:20.988540+00:00"
+      },
+      {
+        "round": 2,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:20.989188+00:00",
+        "free_bytes_before": 4077453312,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:20.989960+00:00",
+            "elapsed_ns": 828187862,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.7655299999999999,
+              "ru_stime": 0.059962999999999995,
+              "ru_maxrss": 44528,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 13,
+              "ru_nivcsw": 7
+            },
+            "peak_rss_bytes": 45596672,
+            "cpu_seconds": 0.8254929999999999,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 828187862,
+        "peak_rss_bytes": 45596672,
+        "cpu_seconds": 0.8254929999999999,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:21.907125+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:21.908178+00:00",
+        "free_bytes_before": 4062629888,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:21.908924+00:00",
+            "elapsed_ns": 823576123,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.7596029999999999,
+              "ru_stime": 0.060967999999999994,
+              "ru_maxrss": 44384,
+              "ru_minflt": 14310,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 8
+            },
+            "peak_rss_bytes": 45449216,
+            "cpu_seconds": 0.8205709999999999,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 823576123,
+        "peak_rss_bytes": 45449216,
+        "cpu_seconds": 0.8205709999999999,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:22.821488+00:00"
+      },
+      {
+        "round": 3,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:22.822159+00:00",
+        "free_bytes_before": 4047798272,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:22.822917+00:00",
+            "elapsed_ns": 795413859,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.722529,
+              "ru_stime": 0.070051,
+              "ru_maxrss": 44464,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 45531136,
+            "cpu_seconds": 0.79258,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 795413859,
+        "peak_rss_bytes": 45531136,
+        "cpu_seconds": 0.79258,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:23.707018+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:23.707889+00:00",
+        "free_bytes_before": 4032974848,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:23.708651+00:00",
+            "elapsed_ns": 801195824,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.72456,
+              "ru_stime": 0.07295499999999999,
+              "ru_maxrss": 44472,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 17
+            },
+            "peak_rss_bytes": 45539328,
+            "cpu_seconds": 0.797515,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 801195824,
+        "peak_rss_bytes": 45539328,
+        "cpu_seconds": 0.797515,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:24.598601+00:00"
+      },
+      {
+        "round": 4,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:24.599245+00:00",
+        "free_bytes_before": 4018143232,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:24.600082+00:00",
+            "elapsed_ns": 797680263,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.733548,
+              "ru_stime": 0.060961999999999995,
+              "ru_maxrss": 44616,
+              "ru_minflt": 14313,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 45686784,
+            "cpu_seconds": 0.7945099999999999,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 797680263,
+        "peak_rss_bytes": 45686784,
+        "cpu_seconds": 0.7945099999999999,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:25.486650+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:25.487534+00:00",
+        "free_bytes_before": 4003319808,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:25.488282+00:00",
+            "elapsed_ns": 914797358,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.738028,
+              "ru_stime": 0.174006,
+              "ru_maxrss": 44404,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 13
+            },
+            "peak_rss_bytes": 45469696,
+            "cpu_seconds": 0.912034,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 914797358,
+        "peak_rss_bytes": 45469696,
+        "cpu_seconds": 0.912034,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:26.492096+00:00"
+      },
+      {
+        "round": 5,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:26.492755+00:00",
+        "free_bytes_before": 3988488192,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:26.493525+00:00",
+            "elapsed_ns": 791975202,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.7260249999999999,
+              "ru_stime": 0.063002,
+              "ru_maxrss": 44408,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 9
+            },
+            "peak_rss_bytes": 45473792,
+            "cpu_seconds": 0.7890269999999999,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 791975202,
+        "peak_rss_bytes": 45473792,
+        "cpu_seconds": 0.7890269999999999,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:27.374877+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:27.375761+00:00",
+        "free_bytes_before": 3973664768,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:27.376522+00:00",
+            "elapsed_ns": 796786526,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.7300449999999999,
+              "ru_stime": 0.064091,
+              "ru_maxrss": 44564,
+              "ru_minflt": 14312,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 7
+            },
+            "peak_rss_bytes": 45633536,
+            "cpu_seconds": 0.794136,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 796786526,
+        "peak_rss_bytes": 45633536,
+        "cpu_seconds": 0.794136,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:28.262583+00:00"
+      },
+      {
+        "round": 6,
+        "order": [
+          "C",
+          "B"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:28.263245+00:00",
+        "free_bytes_before": 3958833152,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:28.263998+00:00",
+            "elapsed_ns": 814218745,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.740456,
+              "ru_stime": 0.070852,
+              "ru_maxrss": 44348,
+              "ru_minflt": 14309,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 6
+            },
+            "peak_rss_bytes": 45412352,
+            "cpu_seconds": 0.811308,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 814218745,
+        "peak_rss_bytes": 45412352,
+        "cpu_seconds": 0.811308,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:29.167780+00:00"
+      }
+    ],
+    "warmup_samples": [
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "started_at": "2026-11-15T19:00:16.406520+00:00",
+        "free_bytes_before": 4151603200,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/4.stderr",
+            "started_at": "2026-11-15T19:00:16.407271+00:00",
+            "elapsed_ns": 844519328,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.780899,
+              "ru_stime": 0.059992,
+              "ru_maxrss": 44516,
+              "ru_minflt": 14311,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 13,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 45584384,
+            "cpu_seconds": 0.840891,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 844519328,
+        "peak_rss_bytes": 45584384,
+        "cpu_seconds": 0.840891,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:17.340896+00:00"
+      },
+      {
+        "round": 0,
+        "order": [
+          "B",
+          "C"
+        ],
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "started_at": "2026-11-15T19:00:17.341569+00:00",
+        "free_bytes_before": 4136763392,
+        "parts": [
+          {
+            "family": 4,
+            "command": [
+              "$EXPERIMENT_REMOTE/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT_REMOTE/fixtures/ipv4-disjoint/ipv4.txt"
+            ],
+            "environment": {
+              "PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin:/usr/bin:/bin",
+              "LD_LIBRARY_PATH": "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux",
+              "LANG": "C",
+              "LC_ALL": "C",
+              "TZ": "UTC",
+              "TMPDIR": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/tmp-4/"
+            },
+            "input": "fixtures/ipv4-disjoint/ipv4.txt",
+            "output": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/4.stdout",
+            "stderr": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/4.stderr",
+            "started_at": "2026-11-15T19:00:17.342316+00:00",
+            "elapsed_ns": 790695832,
+            "exit_code": 0,
+            "output_bytes": 14806125,
+            "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+            "stderr_bytes": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.7299789999999999,
+              "ru_stime": 0.057997999999999994,
+              "ru_maxrss": 44516,
+              "ru_minflt": 14311,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 28920,
+              "ru_nvcsw": 14,
+              "ru_nivcsw": 10
+            },
+            "peak_rss_bytes": 45584384,
+            "cpu_seconds": 0.7879769999999999,
+            "raw_metrics": "followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/4.rusage.json"
+          }
+        ],
+        "passed": true,
+        "elapsed_ns": 790695832,
+        "peak_rss_bytes": 45584384,
+        "cpu_seconds": 0.7879769999999999,
+        "output_bytes": 14806125,
+        "matches_verified_warmup_bytes": true,
+        "finished_at": "2026-11-15T19:00:18.221969+00:00"
+      }
+    ],
+    "measured_samples": 12,
+    "excluded_warmup_samples": 2,
+    "groups": [
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "B",
+        "n": 6,
+        "elapsed_median_s": 0.8258819925,
+        "elapsed_min_s": 0.797680263,
+        "elapsed_max_s": 0.914797358,
+        "peak_rss_median_mib": 43.392578125,
+        "peak_rss_min_mib": 43.30859375,
+        "peak_rss_max_mib": 43.5703125,
+        "cpu_median_s": 0.823032
+      },
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "tool": "C",
+        "n": 6,
+        "elapsed_median_s": 0.798700847,
+        "elapsed_min_s": 0.791975202,
+        "elapsed_max_s": 0.822143831,
+        "peak_rss_median_mib": 43.42578125,
+        "peak_rss_min_mib": 43.32421875,
+        "peak_rss_max_mib": 43.51953125,
+        "cpu_median_s": 0.7958255
+      }
+    ],
+    "comparisons": [
+      {
+        "suite": "split",
+        "case": "ipv4-disjoint",
+        "n_pairs": 6,
+        "paired_elapsed_change_median_pct": -2.780242216585005,
+        "paired_elapsed_change_min_pct": -13.426159894965506,
+        "paired_elapsed_change_max_pct": 0.44072307703568736,
+        "paired_rss_change_median_pct": 0.049484307438008024,
+        "paired_rss_difference_median_mib": 0.021484375,
+        "pairs": [
+          {
+            "round": 1,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -8.193249141066417,
+            "rss_change_pct": 0.08996041741633487,
+            "elapsed_difference_s": -0.071450514,
+            "rss_difference_mib": 0.0390625
+          },
+          {
+            "round": 2,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -0.7297898553359827,
+            "rss_change_pct": -0.36830758174631884,
+            "elapsed_difference_s": -0.006044031,
+            "rss_difference_mib": -0.16015625
+          },
+          {
+            "round": 3,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -3.4195095284470733,
+            "rss_change_pct": 0.18024513338139592,
+            "elapsed_difference_s": -0.028162264,
+            "rss_difference_mib": 0.078125
+          },
+          {
+            "round": 4,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": 0.44072307703568736,
+            "rss_change_pct": -0.3227541689080127,
+            "elapsed_difference_s": 0.003515561,
+            "rss_difference_mib": -0.140625
+          },
+          {
+            "round": 5,
+            "order": [
+              "B",
+              "C"
+            ],
+            "elapsed_change_pct": -13.426159894965506,
+            "rss_change_pct": 0.009008197459681178,
+            "elapsed_difference_s": -0.122822156,
+            "rss_difference_mib": 0.00390625
+          },
+          {
+            "round": 6,
+            "order": [
+              "C",
+              "B"
+            ],
+            "elapsed_change_pct": -2.1409749047229365,
+            "rss_change_pct": 0.48705691350230396,
+            "elapsed_difference_s": -0.017432219,
+            "rss_difference_mib": 0.2109375
+          }
+        ]
+      }
+    ],
+    "no_samples_removed_or_retried": true,
+    "all_outputs_retained": true,
+    "all_outputs_match_original_independent_coverage": true,
+    "host_after": {
+      "at": "2026-11-15T19:00:31.836252+00:00",
+      "platform_label": "native x86-64 Linux swift-dev",
+      "machine": "x86_64",
+      "kernel": "6.14.8-2-pve",
+      "affinity": [
+        3,
+        8,
+        9,
+        14
+      ],
+      "loadavg": "0.77 1.35 1.57 1/482 2306072\n",
+      "memory": "MemTotal:        8388608 kB\nMemFree:          439348 kB\nMemAvailable:    8334238 kB\nBuffers:               0 kB\nCached:          6625252 kB\nSwapCached:            0 kB\nActive:          3548336 kB\nInactive:        3115492 kB\nActive(anon):      30424 kB\nInactive(anon):     8396 kB\nActive(file):    3517912 kB\nInactive(file):  3107096 kB\nUnevictable:           0 kB\nMlocked:           24348 kB\nSwapTotal:        524288 kB\nSwapFree:         514804 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:         38740 kB\nMapped:                0 kB\nShmem:                80 kB\nKReclaimable:    2018204 kB\nSlab:            1273105 kB\nSReclaimable:    1269882 kB\nSUnreclaim:         3222 kB\nKernelStack:        7952 kB\nPageTables:        14696 kB\nSecPageTables:      4108 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    74336372 kB\nCommitted_AS:    2447508 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      220508 kB\nVmallocChunk:          0 kB\nPercpu:           105472 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      410436 kB\nDirectMap2M:    133797888 kB\n",
+      "cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2394.000\ncache size\t: 8192 KB\nphysical id\t: 1\nsiblings\t: 8\ncore id\t\t: 1\ncpu cores\t: 4\napicid\t\t: 18\ninitial apicid\t: 18\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2394.000\ncache size\t: 8192 KB\nphysical id\t: 0\nsiblings\t: 8\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 1880.636\ncache size\t: 8192 KB\nphysical id\t: 1\nsiblings\t: 8\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 17\ninitial apicid\t: 17\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2394.000\ncache size\t: 8192 KB\nphysical id\t: 0\nsiblings\t: 8\ncore id\t\t: 3\ncpu cores\t: 4\napicid\t\t: 7\ninitial apicid\t: 7\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+      "disk_free_bytes": 3944009728,
+      "swift": {
+        "command": [
+          "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+          "--version"
+        ],
+        "exit_code": 0,
+        "stdout": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-linux-gnu\n",
+        "stderr": ""
+      },
+      "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+      "cpu_max": "max 100000\n"
+    }
+  }
+}

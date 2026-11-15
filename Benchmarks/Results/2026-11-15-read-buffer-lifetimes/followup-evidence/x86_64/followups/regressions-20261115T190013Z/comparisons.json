@@ -1,0 +1,225 @@
+{
+  "content_kind": "separate follow-up statistics recomputed from retained samples",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "original_summary_sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71",
+  "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+  "separate_followup_not_pooled": true,
+  "cases": [
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "n_pairs": 6,
+      "pairs": [
+        {
+          "round": 1,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -8.193249141066417,
+          "cpu_change_pct": -8.195310225466823,
+          "rss_change_pct": 0.08996041741633487,
+          "elapsed_difference_s": -0.071450514,
+          "rss_difference_mib": 0.0390625
+        },
+        {
+          "round": 2,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": -0.7297898553359827,
+          "cpu_change_pct": -0.7668144975184421,
+          "rss_change_pct": -0.36830758174631884,
+          "elapsed_difference_s": -0.006044031,
+          "rss_difference_mib": -0.16015625
+        },
+        {
+          "round": 3,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -3.4195095284470733,
+          "cpu_change_pct": -3.41116125234745,
+          "rss_change_pct": 0.18024513338139592,
+          "elapsed_difference_s": -0.028162264,
+          "rss_difference_mib": 0.078125
+        },
+        {
+          "round": 4,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 0.44072307703568736,
+          "cpu_change_pct": 0.3782205384450732,
+          "rss_change_pct": -0.3227541689080127,
+          "elapsed_difference_s": 0.003515561,
+          "rss_difference_mib": -0.140625
+        },
+        {
+          "round": 5,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -13.426159894965506,
+          "cpu_change_pct": -13.487106840315178,
+          "rss_change_pct": 0.009008197459681178,
+          "elapsed_difference_s": -0.122822156,
+          "rss_difference_mib": 0.00390625
+        },
+        {
+          "round": 6,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": -2.1409749047229365,
+          "cpu_change_pct": -2.116582111849019,
+          "rss_change_pct": 0.48705691350230396,
+          "elapsed_difference_s": -0.017432219,
+          "rss_difference_mib": 0.2109375
+        }
+      ],
+      "B": {
+        "elapsed_s": {
+          "median": 0.8258819925,
+          "min": 0.797680263,
+          "max": 0.914797358
+        },
+        "cpu_s": {
+          "median": 0.823032,
+          "min": 0.7945099999999999,
+          "max": 0.912034
+        },
+        "peak_rss_mib": {
+          "median": 43.392578125,
+          "min": 43.30859375,
+          "max": 43.5703125
+        }
+      },
+      "C": {
+        "elapsed_s": {
+          "median": 0.798700847,
+          "min": 0.791975202,
+          "max": 0.822143831
+        },
+        "cpu_s": {
+          "median": 0.7958255,
+          "min": 0.7890269999999999,
+          "max": 0.819163
+        },
+        "peak_rss_mib": {
+          "median": 43.42578125,
+          "min": 43.32421875,
+          "max": 43.51953125
+        }
+      },
+      "paired_elapsed_change_pct": {
+        "median": -2.780242216585005,
+        "min": -13.426159894965506,
+        "max": 0.44072307703568736
+      },
+      "paired_cpu_change_pct": {
+        "median": -2.7638716820982347,
+        "min": -13.487106840315178,
+        "max": 0.3782205384450732
+      },
+      "paired_rss_change_pct": {
+        "median": 0.049484307438008024,
+        "min": -0.36830758174631884,
+        "max": 0.48705691350230396
+      }
+    }
+  ],
+  "regression_screen": {
+    "threshold_pct": 5,
+    "criterion": "Any individual paired elapsed or peak-RSS regression strictly above +5%",
+    "pairs_checked": 6,
+    "triggers": [],
+    "passed": true,
+    "recomputed_from_exported_samples": true
+  },
+  "original_pairs_retained": [
+    {
+      "suite": "split",
+      "case": "ipv4-disjoint",
+      "n_pairs": 6,
+      "paired_elapsed_change_median_pct": -2.780242216585005,
+      "paired_elapsed_change_min_pct": -13.426159894965506,
+      "paired_elapsed_change_max_pct": 0.44072307703568736,
+      "paired_rss_change_median_pct": 0.049484307438008024,
+      "paired_rss_difference_median_mib": 0.021484375,
+      "pairs": [
+        {
+          "round": 1,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -8.193249141066417,
+          "rss_change_pct": 0.08996041741633487,
+          "elapsed_difference_s": -0.071450514,
+          "rss_difference_mib": 0.0390625
+        },
+        {
+          "round": 2,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": -0.7297898553359827,
+          "rss_change_pct": -0.36830758174631884,
+          "elapsed_difference_s": -0.006044031,
+          "rss_difference_mib": -0.16015625
+        },
+        {
+          "round": 3,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -3.4195095284470733,
+          "rss_change_pct": 0.18024513338139592,
+          "elapsed_difference_s": -0.028162264,
+          "rss_difference_mib": 0.078125
+        },
+        {
+          "round": 4,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 0.44072307703568736,
+          "rss_change_pct": -0.3227541689080127,
+          "elapsed_difference_s": 0.003515561,
+          "rss_difference_mib": -0.140625
+        },
+        {
+          "round": 5,
+          "order": [
+            "B",
+            "C"
+          ],
+          "elapsed_change_pct": -13.426159894965506,
+          "rss_change_pct": 0.009008197459681178,
+          "elapsed_difference_s": -0.122822156,
+          "rss_difference_mib": 0.00390625
+        },
+        {
+          "round": 6,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": -2.1409749047229365,
+          "rss_change_pct": 0.48705691350230396,
+          "elapsed_difference_s": -0.017432219,
+          "rss_difference_mib": 0.2109375
+        }
+      ]
+    }
+  ]
+}

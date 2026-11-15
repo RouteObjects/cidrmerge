@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "content_kind": "transformed separate-follow-up evidence",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "created_at": "2026-11-15T19:07:18.535339+00:00",
+  "followups": [
+    {
+      "followup": "arm64/followups/regressions-20261115T185453Z",
+      "platform": "arm64",
+      "summary_sha256": "985a26fff488cab67ec62814872a63c756326b2e0f717c4e5193425fb1e09f7b",
+      "primary_summary_sha256": "976596c9fc3baf2a767bdf3f006b0a5b173d2b80bdec39c17bdfe48c84905fd4",
+      "measured_samples": 36,
+      "warmups": 6,
+      "measured_processes": 48,
+      "warmup_processes": 8,
+      "cases": 3,
+      "pairs": 18,
+      "regression_triggers": 2,
+      "all_original_numeric_leaves_retained": true,
+      "separate_followup_not_pooled": true
+    },
+    {
+      "followup": "x86_64/followups/regressions-20261115T190013Z",
+      "platform": "x86_64",
+      "summary_sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71",
+      "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "measured_samples": 12,
+      "warmups": 2,
+      "measured_processes": 12,
+      "warmup_processes": 2,
+      "cases": 1,
+      "pairs": 6,
+      "regression_triggers": 0,
+      "all_original_numeric_leaves_retained": true,
+      "separate_followup_not_pooled": true
+    }
+  ],
+  "independent_audits_required": true,
+  "original_artifacts": {
+    "arm64/followups/regressions-20261115T185453Z/summary.json": {
+      "bytes": 134590,
+      "sha256": "985a26fff488cab67ec62814872a63c756326b2e0f717c4e5193425fb1e09f7b"
+    },
+    "arm64/measurements/summary.json": {
+      "bytes": 469122,
+      "sha256": "976596c9fc3baf2a767bdf3f006b0a5b173d2b80bdec39c17bdfe48c84905fd4"
+    },
+    "arm64/followups/regressions-20261115T185453Z/evidence-audit-portable.json": {
+      "bytes": 9915,
+      "sha256": "a275b6c5cf4d4f9ecb1fd6778f488e8865032e005bc9b01ffd7259bd9c201817"
+    },
+    "arm64/followups/regressions-20261115T185453Z/selection.json": {
+      "bytes": 1430,
+      "sha256": "d210ff845f4af087046e821798fc29f744a83ed5bd4c00857f839f9385d91039"
+    },
+    "arm64/followups/regressions-20261115T185453Z/evidence-audit.json": {
+      "bytes": 9790,
+      "sha256": "ee16fc82f3b5e83afcfba70f46266f2819afa4713e93abd4c396c257a9718bd1"
+    },
+    "arm64/followups/regressions-20261115T185453Z/space-gate.json": {
+      "bytes": 194,
+      "sha256": "4ab13c654c55d004bd7bbbc716ca28527d684414bb8f4f8d50f5494c71ef370b"
+    },
+    "arm64/followups/regressions-20261115T185453Z/start.json": {
+      "bytes": 6220,
+      "sha256": "b50f89c6a98b3c8732756e3245937f7b6b0f443f31a05fc478608d0a0708c89d"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/sample.json": {
+      "bytes": 1918,
+      "sha256": "2be44e99855dc0b016977dc6008a49789de6c440b336b2edcc2727f9e1f11395"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1353,
+      "sha256": "b84bea5bd6efac4d290d8f7bd484a7a36c80880ec19034086e9ad7e6f05ea608"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/sample.json": {
+      "bytes": 1934,
+      "sha256": "f31bf6833933609844dcc2262fa48629801b9ab3f2674e3d83cb34826caba066"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1369,
+      "sha256": "8ee9dc900e577cff26cc8e5fbfcc96ba053036f64d2ab8b01eefc086e52ac3f4"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/sample.json": {
+      "bytes": 3504,
+      "sha256": "808cd9a8aef4b3c8befaea0aa1f9505cbf10667d6ca562341ecc7f2af771b072"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1384,
+      "sha256": "3cef76f69dac2d74175d47f5580f9299ba974b6ef16e68d2660dd1d3c6235038"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1385,
+      "sha256": "c53cd232082a6e543485fa0a07f11636423ed37ae2ac0d518a3612ccd7385da7"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/sample.json": {
+      "bytes": 3469,
+      "sha256": "264fd775b023def1a7a88815729a32816038d3a663b32d99c3ce3aa16bde3467"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1373,
+      "sha256": "d3366c0632792d5ce19d9bf40a76982e8e6d7d051a3dfce41e479228573be3df"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-01/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1362,
+      "sha256": "9f40982191e72c1ce3f39918fcd0ca0c852eef043cb5e3558eeb8e800dd13e7f"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/sample.json": {
+      "bytes": 3479,
+      "sha256": "3e3e8a4203b5cee66a9d590dce732d2367c61bab4def6aebf63f4f7394207ff4"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1361,
+      "sha256": "1036f3d61a7ec49af1856fd10b95298c71712df03717c71e5c6b38b52202bfac"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1373,
+      "sha256": "606d065610f1e0510e420fc0acf59a9494927f1fc49a5ee5fb2b656e41e1a52b"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/sample.json": {
+      "bytes": 3469,
+      "sha256": "517aa7d631f180de7731f633abc34c7c1bdac9f568cb90aec8ab6ffba758bc71"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1361,
+      "sha256": "0c33eed97ee7dc47468ac39607978c5a479c07c556d169d269c22a6d8e1eac70"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1373,
+      "sha256": "7d776c6d7ecb146d5a5ed631d85a6b6871a57d7a5a92e8b87f39c7489e84b2a8"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/sample.json": {
+      "bytes": 1921,
+      "sha256": "3ed23c69864bad21cfc7d017a5ca63da341fef4860f37664521dbebbcc9628d2"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1356,
+      "sha256": "3a95e0c92761cf2c1e53e19de3c548ba574247ede63599800b34bd5293a8275c"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/sample.json": {
+      "bytes": 1921,
+      "sha256": "465948f7e64ccb16531fad2871b825208a4094722004a2bcbbc0bcd02592138f"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-02/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1356,
+      "sha256": "8cd8bfa3831b5dfa556bc1d8d47d5d6fa77325ddeb052ade52cdc0def127de27"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/sample.json": {
+      "bytes": 1931,
+      "sha256": "e013fc66d16aae2bd6dd260a915100331afd9ec07f4e0c5cce53b6c55eb271a2"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1367,
+      "sha256": "c1809218ff9d1bbfc31bde120f69bc2c31c8066a8f8a2995f4d0cae821a87c77"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/sample.json": {
+      "bytes": 1955,
+      "sha256": "a8fae66586c9647a241c0f614e9a84874ac16f439b68a415c1fddc454bf06c57"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1379,
+      "sha256": "f62e895d70d0fff86ee28e59171a05ce03c3e3249d550945847a84c817b17764"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/sample.json": {
+      "bytes": 3489,
+      "sha256": "45be9e74d216f6811644b9ed5042c880d43a365e1340daeae1d5d0564a110c93"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1382,
+      "sha256": "f19ec2ac0334df45cc81355f28d91141e1dab7ed52eca42aa424cd221c5b66c9"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1362,
+      "sha256": "26e011439d31dec8e11a39b5dc47afd1e3d90356854d5d9467ddc25b90918ebd"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/sample.json": {
+      "bytes": 3483,
+      "sha256": "6842eff4f51cd42bf22f948d87ef47770d3557af944f803b7061419240d300a9"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1374,
+      "sha256": "ee8830d1255bae9727462b67551bf4de21acef2988c008c231c7717a8d3c38f9"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-03/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1374,
+      "sha256": "9cf18035f43608d4f9db211a99f173603592463e9ef6ff666d1ea03fbfa96dc5"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/sample.json": {
+      "bytes": 3469,
+      "sha256": "1116e4457879b01a075b11c6bfb9ae3ada5a9886dec3112a4f13006cb158dedf"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1372,
+      "sha256": "db5b2625f54e62d6b98d979a6b13ded5dff1c566b435ddd0600b6418e272537c"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1362,
+      "sha256": "b6b577cdf97c3b8be3a0f58df073c5a11a2df53554cbaf7369cc4519ed5d19fc"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/sample.json": {
+      "bytes": 3477,
+      "sha256": "c42eed10ea0ddae130de2507af5d176c5a79d6a3c645fb05cc88ec6d2814bfba"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1383,
+      "sha256": "3460016f7d4f4b691573c7c627cdab4c8bd6298daef77f430e1a3c514853e8e0"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1359,
+      "sha256": "3dbb6d6eb802e47752991897492dc620ef7f55f695f474c24ac5335a91580309"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/sample.json": {
+      "bytes": 1943,
+      "sha256": "d5e232983b009a1b8302e9e96fb13024d1fa77749ff3a691c9bf32041b6c38fc"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1367,
+      "sha256": "8334ca25bdee168c3bc5f93ce0ddce18821c1cad8fed1d0441de639fecfb726b"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/sample.json": {
+      "bytes": 1921,
+      "sha256": "12c6693760a5e6f4fed17b3c7cd06016a12ee195d23f31d0985d24ece006a4f8"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-04/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1356,
+      "sha256": "a20c3df1a61050a4e84da27f27b0f0ae64d57d541f98c276b8a7bfce617b3d63"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/sample.json": {
+      "bytes": 1921,
+      "sha256": "3d25146c00ea8c70d93b1e5327408ecac3bf4b0e2bb878ebe672074534966913"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1356,
+      "sha256": "23b082fdf112f8c10ab44025e26d19f676545c2f951e822dc7a7f106fab42ead"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/sample.json": {
+      "bytes": 1945,
+      "sha256": "20c16ea5888292b48e62b91b1a3a6605fa47e0c33cd3a9fab4b712d34dff6f76"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1369,
+      "sha256": "531a64fd5cbbb68d9c4a5d47b65d2706edbc46c41bfea1dbf34bbae785efd103"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/sample.json": {
+      "bytes": 3500,
+      "sha256": "a073f7f003b1986eab72ab9f2d9380290f351f7db445872e3ff5499d6d8bafd3"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1371,
+      "sha256": "260ca4bae03768882e5b26d4612aa59e6ab49aefff03886be68179596b3de734"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1384,
+      "sha256": "81841684748774fb4d4e253d18c7a65052c62a9c231dcfe81f1fae7b8e9a7b1f"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/sample.json": {
+      "bytes": 3469,
+      "sha256": "9ea2ef902eda7e3a1c30cddbb048a8a108515241190efa0fe13431891bcf1a26"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1361,
+      "sha256": "3c011796172635b75fbbc5e20a20483015dec87b2d8af70ec6689a7526efefe9"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-05/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1373,
+      "sha256": "5e7bb441e0a51b6701f46b2801b05240141d2f9a1f5a290ac3cfbb93ee0889a8"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/sample.json": {
+      "bytes": 3456,
+      "sha256": "0be7724d0a07751e54110a463595a25f829157cf24d129f0eaf1dacf53a6e60c"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1359,
+      "sha256": "3a2afa827659e9a4a39f9333bb2b733acfb249fe5f24d9a72537a8c1a5b0bfc1"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1362,
+      "sha256": "c03ed4837acd7843b9238739b3fe2e292ca5633a32bfd47b91d03c4f7335903c"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/sample.json": {
+      "bytes": 3476,
+      "sha256": "98b7f1579c27d7824fbcaed8493933fa2de4bf307551d61ec4f96cd5bfbbe0d9"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1383,
+      "sha256": "02859c42643c2b036ba988072b4a6952bb3c221faf33b6bd2d0a3943833c87a6"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1359,
+      "sha256": "4980a63fa8415438fc2b784dd99cd47987db87891139083d33e6758a6a8d8784"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/sample.json": {
+      "bytes": 1920,
+      "sha256": "d655a7e732ab7b5f38e974d1331d8367f222568c80114a6df2167b5b84e1017d"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1355,
+      "sha256": "604b394999f2baced1aff88bde23293ce7ec24d4d8b8d38f760a640de6cdb2e5"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/sample.json": {
+      "bytes": 1919,
+      "sha256": "c4af23503943d2d6589549beffd4ce4984520b17cf786ac58fbd266274c5a741"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/round-06/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1355,
+      "sha256": "5e4f53c591711c0da92b5cd4823973003fbf4b28ebbcbc0b43afcb5164d15113"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/sample.json": {
+      "bytes": 1976,
+      "sha256": "21a938e2e0d35d16565cb03e00b2fc77007634174548dbeeac4c3df8cf441410"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1410,
+      "sha256": "e16d5927fd55a31547337d351d94de1caa633be1943a09a72f930ee178e16e3b"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/sample.json": {
+      "bytes": 1984,
+      "sha256": "c0e0da33b62cb24a6107f3f0b8a18fc0c94ed7dfaa6745addc7328dff8d461a5"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-01/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1407,
+      "sha256": "26db1efa1a08f422bb89243f058b78b0c9f275de1f1c5872a52ef44b792c1d86"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/sample.json": {
+      "bytes": 1954,
+      "sha256": "59baaf02301d4104316e126e491c95e359beb6fcdb1ea723e58be83cad07ff83"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1387,
+      "sha256": "1b5eba4d5400cce4854984f590f7fcd32bb23c02e08fb733e6a0b631f2ef968a"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/sample.json": {
+      "bytes": 1953,
+      "sha256": "954f3414b9a5bbcc21c64e93dfb23bd761ac2b9c59c46f4bc6e596bee142a049"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-02/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1386,
+      "sha256": "a3fad5f7e8fbe91946a423cb72baa95ed63fb41d4aecb90f1092f9fbeb49d4ab"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/sample.json": {
+      "bytes": 1986,
+      "sha256": "8834ea88cbedf112152da270e97d298bd4a667897748219ad3bb2931bbb96ba0"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1409,
+      "sha256": "9c43570f8e2d6650bf1bca1437d468ff5709fa530d0607b630ad8cbeca0c41b3"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/sample.json": {
+      "bytes": 1997,
+      "sha256": "c535f1dedcf16c1fe5b405a476b068b62c9f45470a8d584086c646e319f8fa44"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-03/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1420,
+      "sha256": "38d0a87e3b3a3ade2048a4a2705dec438b77f53b7dfcafcd5f243b4ac3724ea8"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/sample.json": {
+      "bytes": 1954,
+      "sha256": "59b866130b177b831867073e41a4e4c8dbdcaa26a7c0ee04f555ba287f355a4c"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1387,
+      "sha256": "f3d030039ba3f9d90dfb5be8237f07486b1e2fba0f6f4796894c4cb21e6fb9b2"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/sample.json": {
+      "bytes": 1977,
+      "sha256": "8774ce5ad82c5d2e96416fd61a58b62dd7fabb0f308e3a1720be99f76521d530"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-04/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1410,
+      "sha256": "6f1c8ead7ae36413a8304488b0cdbde3bb0c8eade5ee3f2fbfe0c36ef5bd6e6d"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/sample.json": {
+      "bytes": 1986,
+      "sha256": "cb3667f93abf968895a2458c33a15238ade552e9d0ecc96692c8472fedd88398"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1409,
+      "sha256": "2bfdbacb47e39a3000829060690f307981818e5c537aa71395d19b30eb7c9d08"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/sample.json": {
+      "bytes": 1954,
+      "sha256": "0c6ae926cdfadf8e31ca6951f91070b200f68540a576f29e9cbf51290656d00b"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-05/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1387,
+      "sha256": "ae7ad993bdcb7861e3dea26a6b1c5791765ffbe90ae57fc5312d415b0d8a2a91"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/sample.json": {
+      "bytes": 1954,
+      "sha256": "f94ba46871292dce9c8470aa51affb30da48d53c30d334ad65c7418b1998ebea"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1387,
+      "sha256": "eafca4639b5c4e68c2d68e208fc6edd7faf5fd8276c2bbe6e180941149c44965"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/sample.json": {
+      "bytes": 1954,
+      "sha256": "aba71b36585b64e21408d8a1280ee806b2c09ba5b7e96d4b385300ca5a7edf7a"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/round-06/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1387,
+      "sha256": "4a47632bf3da2764892662b73ee2040c56d652e2b6bda7abffa6abf2675ef355"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/sample.json": {
+      "bytes": 1934,
+      "sha256": "c01fbfb08cffde64029fd7c108fbf63d8e1c0bf326c7589354431d5152eda032"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1358,
+      "sha256": "1229d645229d29e36e4e4b25fb7e21b7c72dd920e2f7864a818313857b091698"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/sample.json": {
+      "bytes": 1947,
+      "sha256": "bbe514f33193164502a9ceedfea1d9a89ee47128eeece75777c4893a02f8892a"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1371,
+      "sha256": "35e9a71099241c2bd1a5408be86ce3b98f62de9124d5128c0463aed322924eb4"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/sample.json": {
+      "bytes": 3485,
+      "sha256": "0349a00ff714d2884ed0ed03e212c7d78a46e6b8c527f239b34d39b771e9b4a6"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/4.rusage.json": {
+      "bytes": 1364,
+      "sha256": "e7d8c493522191564ee9a996983d32b9d548873d1b07c4c6a7f2c4f7513ebd32"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/B/6.rusage.json": {
+      "bytes": 1376,
+      "sha256": "651672a964cc3445bb5d2a20adce31140fbdd30af48fa9f0314aada293a32192"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/sample.json": {
+      "bytes": 3475,
+      "sha256": "5a7753794abaaa87f080e97b518df9907f6f3de5ffc8e2d9c3898ad6883c2d06"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/4.rusage.json": {
+      "bytes": 1387,
+      "sha256": "1ae341bf29fcc49dabb915c8f67848fc69b89e47a504076a912ca2b1930d86b7"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/split/warmup/mixed-permuted/C/6.rusage.json": {
+      "bytes": 1353,
+      "sha256": "6e38e360d5a451d16b1269ccfdf81b3487e147c6b567673590dcaf25626bdf44"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/sample.json": {
+      "bytes": 1946,
+      "sha256": "ab2d8430e4f73a2f9d252230fc6500c25faabe0acc42a4ec53721d1352dbc092"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/B/mixed.rusage.json": {
+      "bytes": 1379,
+      "sha256": "1ae80071621a54aabe6a0a9ef176dbc743a15a1c382007416d55300fa574303d"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/sample.json": {
+      "bytes": 1969,
+      "sha256": "e1fb59a67a5fd0c7a2e4189ed380c808711e6e90d51b5ad8edd42a3f2ed17ee5"
+    },
+    "arm64/followups/regressions-20261115T185453Z/measurements/native/warmup/mixed-permuted/C/mixed.rusage.json": {
+      "bytes": 1402,
+      "sha256": "ea8bd7f5ae424be18992ca31f8776130054afed61fbce4afa2c7ba1e8477f6b0"
+    },
+    "arm64/control/followup_runner.py": {
+      "bytes": 4401,
+      "sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1"
+    },
+    "arm64/control/audit_followup.py": {
+      "bytes": 13749,
+      "sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451"
+    },
+    "arm64/control/linux_runner.py": {
+      "bytes": 5057,
+      "sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac"
+    },
+    "arm64/control/common.py": {
+      "bytes": 5716,
+      "sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8"
+    },
+    "arm64/control/run_matched.py": {
+      "bytes": 7496,
+      "sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/summary.json": {
+      "bytes": 45507,
+      "sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71"
+    },
+    "x86_64/measurements/summary.json": {
+      "bytes": 525807,
+      "sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/evidence-audit.json": {
+      "bytes": 4165,
+      "sha256": "807fab6c8666c9c66b6a943661bf7eda2e211d30d66ab1db0a1203151deeef23"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/selection.json": {
+      "bytes": 1054,
+      "sha256": "93d591a404b9b761c889ccad87779e0bb1d215983f05ac301e783e8d447a39db"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/space-gate.json": {
+      "bytes": 280,
+      "sha256": "fd41ace0850093fdf7c8d257ad1c92e21eb791cc69a9257279ef0b551b0ac4fb"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/start.json": {
+      "bytes": 7693,
+      "sha256": "fd656484e21fe24a094204c62f5b88dfe0392a9135ecb42c4cac9b33ff2d1c0f"
+    },
+    "x86_64/control/pair-regression-screen.json": {
+      "bytes": 1066,
+      "sha256": "dd706d05245859046373290e871924ae03f303141fad8637f0029b15ab592234"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/sample.json": {
+      "bytes": 2166,
+      "sha256": "1f10879c7a89f06d56d7abfdadfa492ad543121e51aa2eb28914a5b09d1ac485"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1604,
+      "sha256": "e5eaa25eb0304536eb6933da102a479eedef5f670c13a449eba179a01d310152"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/sample.json": {
+      "bytes": 2163,
+      "sha256": "cb79fc3a02bac634ade27b80c8ce161a8d29c78f39919581f2f0fdb147e574c3"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1602,
+      "sha256": "941a0fe77e58df3c3dcce226b09cf167ff9d862e58d4338ebf6da33630bd4233"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/sample.json": {
+      "bytes": 2165,
+      "sha256": "fa6c30f54d48bbfa10e617f0a5491fdb0174a770ddd93afadd8dcb7b67edddcc"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1603,
+      "sha256": "4adf315441665838374fa79625ddbfb22f11c01a9e3ff257706051aab2aff2bf"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/sample.json": {
+      "bytes": 2207,
+      "sha256": "f9e3467d93175822ac1ad3f42228806e67170ccd078baa403b241313eb6fe633"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1635,
+      "sha256": "b4b4c197fc7d36870f781f4d4a47e11ff2224bc2a9bd63a1f64e05283ce4f469"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/sample.json": {
+      "bytes": 2207,
+      "sha256": "b8be1346a66c2e84dcc3df1bd9751eced115ad85587ab02412b7a08a2712a2db"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1635,
+      "sha256": "3b5b0058f9a2afdc903412f3925ab52b01d13609ea1153ec2b05e881700a85fa"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/sample.json": {
+      "bytes": 2164,
+      "sha256": "fe8cf698cf5e1fa122f066537c7ef4aaf5320b864ee2a907e8598ad6987e3653"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1603,
+      "sha256": "7e89b35932d66fe7397a1aa156e888f5011dacdbb6f2d2bf694339e8cb8d0d75"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/sample.json": {
+      "bytes": 2176,
+      "sha256": "c825fbf8cabe07bf00fc116bb3c5131abf2760fd24631eb69f2bff73b1f9c79c"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1614,
+      "sha256": "a6046d23169ef2bb5c2aa3a36228042f35c5e492b9db23b460662776d7e9a65e"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/sample.json": {
+      "bytes": 2198,
+      "sha256": "1333c61832c77ee497659f5a930eb653de7a14a4f48d93446468dc3906a4fc4a"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1626,
+      "sha256": "a68892f393446f75f91fe8997a496671d7b750b0997f018f96c5e9f26f3e5a72"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/sample.json": {
+      "bytes": 2166,
+      "sha256": "ebfbe86c726edcdd911e3c8ed01a3163cebf5738771e89aea3655f92ebc9b427"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1604,
+      "sha256": "c67c9ac6f7bf890fb372a63a3ccc47b461243e93cd007918dc2e8702f13d9c07"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/sample.json": {
+      "bytes": 2195,
+      "sha256": "5f2376c85f8ec22e418cc769c8db33364e0be1c3ade1f54a9f2a95934170a406"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1623,
+      "sha256": "771a550cf6d48d798158411e61659686db60326450176443e2930e21b0d54002"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/sample.json": {
+      "bytes": 2175,
+      "sha256": "20aa06c5457ea383aa65bc895db6ddc5e10bc996ba476027e56bfbe91a337f70"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1613,
+      "sha256": "d315f22ab78987bf4af16cf0f9710c659c60b1b1ecc4199cd998428f09f7989a"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/sample.json": {
+      "bytes": 2165,
+      "sha256": "bc3e10c0280b11f074de63eebc3dd4792158d3cf603c7050d98c2f74ce680507"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1603,
+      "sha256": "7ec62ebb03ff9e60dccb7695b5448f7113ac69f1cd49c96092d09ad947feb65c"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/sample.json": {
+      "bytes": 2158,
+      "sha256": "79114d5e1993f7276cce96958d994fb2dd4be5a6f001b5124547abaeb3ef8f71"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/4.rusage.json": {
+      "bytes": 1596,
+      "sha256": "6fda6ad969f0c9bcfb913cf1ca6cd872b136cde0a4b00b484a0c07158cbbdd72"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/sample.json": {
+      "bytes": 2200,
+      "sha256": "1cd6b635e086c95a0f1c619ad8543dbd96a47255098106b67968e298b0922a08"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/4.rusage.json": {
+      "bytes": 1628,
+      "sha256": "96ee62fba9f7144acaf8c5f5a512921fdfac976be8b2ce7df32ee45d266872aa"
+    },
+    "x86_64/control/followup_runner.py": {
+      "bytes": 4401,
+      "sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1"
+    },
+    "x86_64/control/audit_followup.py": {
+      "bytes": 13749,
+      "sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451"
+    },
+    "x86_64/control/linux_runner.py": {
+      "bytes": 5057,
+      "sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac"
+    },
+    "x86_64/control/common.py": {
+      "bytes": 5716,
+      "sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8"
+    },
+    "x86_64/control/run_matched.py": {
+      "bytes": 7496,
+      "sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f"
+    },
+    "control/export_followups.py": {
+      "bytes": 19075,
+      "sha256": "439c85c65cdd31ddfcf6d274a41ba76ecf3c599f592e68c91e46ac3f9a67da08"
+    },
+    "control/export_report_evidence.py": {
+      "bytes": 29326,
+      "sha256": "36163d27fddfdde5390ee76d6ff2889abe4993f7db42c87bdeb41b1de9b4b0ea"
+    }
+  },
+  "exported_artifacts": {
+    "arm64/followups/regressions-20261115T185453Z/harness/followup_runner.py": {
+      "bytes": 4401,
+      "sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1"
+    },
+    "arm64/followups/regressions-20261115T185453Z/harness/audit_followup.py": {
+      "bytes": 13749,
+      "sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451"
+    },
+    "arm64/followups/regressions-20261115T185453Z/harness/linux_runner.py": {
+      "bytes": 5057,
+      "sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac"
+    },
+    "arm64/followups/regressions-20261115T185453Z/harness/common.py": {
+      "bytes": 5716,
+      "sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8"
+    },
+    "arm64/followups/regressions-20261115T185453Z/harness/run_matched.py": {
+      "bytes": 7496,
+      "sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f"
+    },
+    "arm64/followups/regressions-20261115T185453Z/original-summary.json": {
+      "bytes": 143106,
+      "sha256": "2c132fea3bd25d541bcbbbe5c187a98e24036e6a13461cef7e66434b0dc5f90a"
+    },
+    "arm64/followups/regressions-20261115T185453Z/samples.json": {
+      "bytes": 62274,
+      "sha256": "fc06934e0040ead5546492d84eda239f41e87fcb7ae4e7cfdb3389bb4c475abf"
+    },
+    "arm64/followups/regressions-20261115T185453Z/comparisons.json": {
+      "bytes": 18639,
+      "sha256": "9257296e9d11c04c4437cc00045b547bdb892f02efbf0066221aa10db844046a"
+    },
+    "arm64/followups/regressions-20261115T185453Z/validation.json": {
+      "bytes": 51322,
+      "sha256": "950b17488626407e95beb8b32960973618638d9d331f3561da22a56ec7980592"
+    },
+    "arm64/followups/regressions-20261115T185453Z/TABLE.md": {
+      "bytes": 865,
+      "sha256": "2a63110f539841de985c0e38dd937f2e2f9a648d6d4c4ee64b66e34c9535f59b"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/harness/followup_runner.py": {
+      "bytes": 4401,
+      "sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/harness/audit_followup.py": {
+      "bytes": 13749,
+      "sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/harness/linux_runner.py": {
+      "bytes": 5057,
+      "sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/harness/common.py": {
+      "bytes": 5716,
+      "sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/harness/run_matched.py": {
+      "bytes": 7496,
+      "sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/original-summary.json": {
+      "bytes": 46356,
+      "sha256": "c0ca2afddf53ba79129e2a0b9b86c4ceba5323f458c404c44a21f832feaf5e3e"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/samples.json": {
+      "bytes": 17233,
+      "sha256": "4b054cbb927b19dda784ce5281e685cd7d3f7cfa47b4aa693f87acb3b0af18ce"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/comparisons.json": {
+      "bytes": 6643,
+      "sha256": "93db18e478b91cfe1e427cff77613b5a599c8d7999f04c4386bf0ca0e24dfec3"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/validation.json": {
+      "bytes": 22496,
+      "sha256": "ff710b69816d2cfa780d04b403ed64636eb3f5fe6fad09e5385360a72d800c10"
+    },
+    "x86_64/followups/regressions-20261115T190013Z/TABLE.md": {
+      "bytes": 682,
+      "sha256": "6cc7ffdaa11434b67d77b9b6dac68710638ac4aaa54058113c0dfd22c64e700a"
+    },
+    "README.md": {
+      "bytes": 936,
+      "sha256": "6ba03f28cad10e28a29101db8505b89e77045383284f29fba71c7f86ef2c519b"
+    }
+  },
+  "large_original_artifacts_read": false,
+  "original_artifacts_modified": false,
+  "pooled_with_primary": false
+}

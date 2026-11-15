@@ -1,0 +1,394 @@
+{
+  "content_kind": "path-redacted controls and independent audit",
+  "notice": "Transformed public evidence, not original raw JSON. Scalar measurements are retained without rounding; path-bearing fields are omitted or redacted. Tables and paired statistics are recomputed. Original artifacts remain unchanged in the experiment directory and are identified by byte count and SHA-256.",
+  "original_summary_sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71",
+  "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+  "independent_audit_passed_and_bound": true,
+  "receipts": {
+    "independent_audit_identifier": "x86_64/followups/regressions-20261115T190013Z/evidence-audit.json",
+    "independent_audit": {
+      "passed": true,
+      "scope": "Independent evidence-only audit; no harness imports or subprocess execution",
+      "followup": "$EXPERIMENT_REMOTE/followups/regressions-20261115T190013Z",
+      "started_at": "2026-11-15T19:01:36.259521+00:00",
+      "runtime_libraries_verified": 20,
+      "audit_script_sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451",
+      "summary_sha256": "99805dff1ea34d60ccc7d3a76c6609fb15b1ab205c6a8fe490e01edfbb80dc71",
+      "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "native_root": "$EXPERIMENT_REMOTE",
+      "frozen_files_verified": 385,
+      "fixtures_verified": 24,
+      "measured_samples_verified": 12,
+      "warmup_samples_verified": 2,
+      "measured_processes_verified": 12,
+      "warmup_processes_verified": 2,
+      "pairs_verified": 6,
+      "comparisons": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "n_pairs": 6,
+          "paired_elapsed_change_median_pct": -2.780242216585005,
+          "paired_elapsed_change_min_pct": -13.426159894965506,
+          "paired_elapsed_change_max_pct": 0.44072307703568736,
+          "paired_rss_change_median_pct": 0.049484307438008024,
+          "paired_rss_difference_median_mib": 0.021484375,
+          "pairs": [
+            {
+              "round": 1,
+              "order": [
+                "B",
+                "C"
+              ],
+              "elapsed_change_pct": -8.193249141066417,
+              "rss_change_pct": 0.08996041741633487,
+              "elapsed_difference_s": -0.071450514,
+              "rss_difference_mib": 0.0390625
+            },
+            {
+              "round": 2,
+              "order": [
+                "C",
+                "B"
+              ],
+              "elapsed_change_pct": -0.7297898553359827,
+              "rss_change_pct": -0.36830758174631884,
+              "elapsed_difference_s": -0.006044031,
+              "rss_difference_mib": -0.16015625
+            },
+            {
+              "round": 3,
+              "order": [
+                "B",
+                "C"
+              ],
+              "elapsed_change_pct": -3.4195095284470733,
+              "rss_change_pct": 0.18024513338139592,
+              "elapsed_difference_s": -0.028162264,
+              "rss_difference_mib": 0.078125
+            },
+            {
+              "round": 4,
+              "order": [
+                "C",
+                "B"
+              ],
+              "elapsed_change_pct": 0.44072307703568736,
+              "rss_change_pct": -0.3227541689080127,
+              "elapsed_difference_s": 0.003515561,
+              "rss_difference_mib": -0.140625
+            },
+            {
+              "round": 5,
+              "order": [
+                "B",
+                "C"
+              ],
+              "elapsed_change_pct": -13.426159894965506,
+              "rss_change_pct": 0.009008197459681178,
+              "elapsed_difference_s": -0.122822156,
+              "rss_difference_mib": 0.00390625
+            },
+            {
+              "round": 6,
+              "order": [
+                "C",
+                "B"
+              ],
+              "elapsed_change_pct": -2.1409749047229365,
+              "rss_change_pct": 0.48705691350230396,
+              "elapsed_difference_s": -0.017432219,
+              "rss_difference_mib": 0.2109375
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "B",
+          "n": 6,
+          "elapsed_median_s": 0.8258819925,
+          "elapsed_min_s": 0.797680263,
+          "elapsed_max_s": 0.914797358,
+          "peak_rss_median_mib": 43.392578125,
+          "peak_rss_min_mib": 43.30859375,
+          "peak_rss_max_mib": 43.5703125,
+          "cpu_median_s": 0.823032
+        },
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "tool": "C",
+          "n": 6,
+          "elapsed_median_s": 0.798700847,
+          "elapsed_min_s": 0.791975202,
+          "elapsed_max_s": 0.822143831,
+          "peak_rss_median_mib": 43.42578125,
+          "peak_rss_min_mib": 43.32421875,
+          "peak_rss_max_mib": 43.51953125,
+          "cpu_median_s": 0.7958255
+        }
+      ],
+      "all_outputs_match_original_independent_coverage": true,
+      "separate_followup_not_pooled": true,
+      "finished_at": "2026-11-15T19:01:40.038833+00:00",
+      "counters": {
+        "files_hashed": 448,
+        "bytes_hashed": 620816351,
+        "assertions": 796,
+        "outputs_verified": 14
+      }
+    },
+    "selection.json": {
+      "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "screen_sha256": "dd706d05245859046373290e871924ae03f303141fad8637f0029b15ab592234",
+      "criterion": "Any individual primary elapsed or peak RSS pair exceeds +5 percent",
+      "cases": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint"
+        }
+      ],
+      "all_triggering_pairs_retained": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "round": 4,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 7.216829974907624,
+          "rss_change_pct": -0.6466678641997459,
+          "elapsed_difference_s": 0.057902136,
+          "rss_difference_mib": -0.28125
+        },
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "round": 6,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 16.452441651136084,
+          "rss_change_pct": -0.08097894547417495,
+          "elapsed_difference_s": 0.130399213,
+          "rss_difference_mib": -0.03515625
+        }
+      ],
+      "not_pooled_with_primary": true
+    },
+    "space-gate.json": {
+      "passed": true,
+      "at": "2026-11-15T19:00:13.520596+00:00",
+      "free_bytes": 4151640064,
+      "known_output_bytes": 207285750,
+      "required_free_bytes": 3562728950,
+      "minimum_remaining_bytes": 3221225472,
+      "extra_metadata_margin": 134217728,
+      "no_cleanup_during_timing": true
+    },
+    "start.json": {
+      "at": "2026-11-15T19:00:16.283238+00:00",
+      "validation": {
+        "frozen_files": 385,
+        "sources": 367,
+        "fixture_files": 24
+      },
+      "host": {
+        "at": "2026-11-15T19:00:16.283471+00:00",
+        "platform_label": "native x86-64 Linux swift-dev",
+        "machine": "x86_64",
+        "kernel": "6.14.8-2-pve",
+        "affinity": [
+          3,
+          8,
+          9,
+          14
+        ],
+        "loadavg": "0.70 1.37 1.58 1/480 2305973\n",
+        "memory": "MemTotal:        8388608 kB\nMemFree:          222316 kB\nMemAvailable:    8336576 kB\nBuffers:               0 kB\nCached:          6835996 kB\nSwapCached:            0 kB\nActive:          3522860 kB\nInactive:        3349992 kB\nActive(anon):      28544 kB\nInactive(anon):     8396 kB\nActive(file):    3494316 kB\nInactive(file):  3341596 kB\nUnevictable:           0 kB\nMlocked:           24348 kB\nSwapTotal:        524288 kB\nSwapFree:         514804 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:         36860 kB\nMapped:                0 kB\nShmem:                80 kB\nKReclaimable:    2020028 kB\nSlab:            1281436 kB\nSReclaimable:    1278348 kB\nSUnreclaim:         3087 kB\nKernelStack:        7920 kB\nPageTables:        14544 kB\nSecPageTables:      4108 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    74336372 kB\nCommitted_AS:    2444268 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      220568 kB\nVmallocChunk:          0 kB\nPercpu:           105472 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      410436 kB\nDirectMap2M:    133797888 kB\n",
+        "cpuinfo": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2394.000\ncache size\t: 8192 KB\nphysical id\t: 1\nsiblings\t: 8\ncore id\t\t: 1\ncpu cores\t: 4\napicid\t\t: 18\ninitial apicid\t: 18\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 1\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2237.428\ncache size\t: 8192 KB\nphysical id\t: 0\nsiblings\t: 8\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 1\ninitial apicid\t: 1\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 2\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 2394.000\ncache size\t: 8192 KB\nphysical id\t: 1\nsiblings\t: 8\ncore id\t\t: 0\ncpu cores\t: 4\napicid\t\t: 17\ninitial apicid\t: 17\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\nprocessor\t: 3\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 26\nmodel name\t: Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\nstepping\t: 5\nmicrocode\t: 0x1d\ncpu MHz\t\t: 1750.890\ncache size\t: 8192 KB\nphysical id\t: 0\nsiblings\t: 8\ncore id\t\t: 3\ncpu cores\t: 4\napicid\t\t: 7\ninitial apicid\t: 7\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 11\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\nvmx flags\t: vnmi preemption_timer invvpid ept_x_only flexpriority tsc_offset vtpr mtf vapic ept vpid\nbugs\t\t: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit mmio_unknown\nbogomips\t: 4521.96\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 40 bits physical, 48 bits virtual\npower management:\n\n",
+        "disk_free_bytes": 4151615488,
+        "swift": {
+          "command": [
+            "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-linux-gnu\n",
+          "stderr": ""
+        },
+        "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+        "cpu_max": "max 100000\n"
+      },
+      "script_sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1",
+      "child_harness_sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac",
+      "primary_summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "separate_followup_not_pooled": true
+    },
+    "primary_regression_screen": {
+      "summary_sha256": "ccb7004da1d58aed2ea9689398170f2663c80465b2b37e094eb65505f368bde6",
+      "threshold_percent": 5,
+      "criterion": "Candidate change strictly greater than 5 percent in elapsed or RSS for any individual matched pair",
+      "pairs_checked": 66,
+      "regressions": [
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "round": 4,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 7.216829974907624,
+          "rss_change_pct": -0.6466678641997459,
+          "elapsed_difference_s": 0.057902136,
+          "rss_difference_mib": -0.28125
+        },
+        {
+          "suite": "split",
+          "case": "ipv4-disjoint",
+          "round": 6,
+          "order": [
+            "C",
+            "B"
+          ],
+          "elapsed_change_pct": 16.452441651136084,
+          "rss_change_pct": -0.08097894547417495,
+          "elapsed_difference_s": 0.130399213,
+          "rss_difference_mib": -0.03515625
+        }
+      ],
+      "elapsed_pairs_favoring_candidate": 30,
+      "maximum_individual_elapsed_change_pct": 16.452441651136084,
+      "maximum_individual_rss_change_pct": 0.595077089532059
+    }
+  },
+  "script_bindings": [
+    {
+      "source": "x86_64/control/followup_runner.py",
+      "destination": "x86_64/followups/regressions-20261115T190013Z/harness/followup_runner.py",
+      "transformation": "none; byte-identical",
+      "original_sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1",
+      "exported_sha256": "6acbaf46549b39e76703fa44af76cfe18a5a43fd5018dbed168929aeb00fb3c1"
+    },
+    {
+      "source": "x86_64/control/audit_followup.py",
+      "destination": "x86_64/followups/regressions-20261115T190013Z/harness/audit_followup.py",
+      "transformation": "none; byte-identical",
+      "original_sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451",
+      "exported_sha256": "4cd2dde24cee3ced0e1b0d38a1b7f7c8b14f9603a19f1823d23c44a5bb47e451"
+    },
+    {
+      "source": "x86_64/control/linux_runner.py",
+      "destination": "x86_64/followups/regressions-20261115T190013Z/harness/linux_runner.py",
+      "transformation": "none; byte-identical",
+      "original_sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac",
+      "exported_sha256": "646868b94d723a7c0c2e622c95d7e1a3366e3f4473aea0a6eea13b192b7ca2ac"
+    },
+    {
+      "source": "x86_64/control/common.py",
+      "destination": "x86_64/followups/regressions-20261115T190013Z/harness/common.py",
+      "transformation": "none; byte-identical",
+      "original_sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8",
+      "exported_sha256": "97f026890cb19be215d7e4c2e7353a1f6f136915ec86f35251ce874dc3d204a8"
+    },
+    {
+      "source": "x86_64/control/run_matched.py",
+      "destination": "x86_64/followups/regressions-20261115T190013Z/harness/run_matched.py",
+      "transformation": "none; byte-identical",
+      "original_sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f",
+      "exported_sha256": "7c3108d9b911a6955c33e74e33b35f9f53b5654ca892c27a97522baf0bf2194f"
+    }
+  ],
+  "large_output_artifacts": [
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-01/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-02/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-03/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-04/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-05/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/round-06/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/B/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    },
+    {
+      "identifier": "x86_64/followups/regressions-20261115T190013Z/measurements/split/warmup/ipv4-disjoint/C/4.stdout",
+      "bytes": 14806125,
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "source": "independently audited summary; not reread by exporter"
+    }
+  ]
+}
