@@ -39,6 +39,28 @@ for required in \
 done
 
 while IFS= read -r swift_file; do
+    # CHANGE: Preserve the exact bytes of two original Apache-2.0 benchmark probes.
+    # Their licensing and frozen hashes are recorded in Benchmarks/ArchivedSources.md.
+    # Every other Swift source, including new archived probes, still needs a header.
+    archived_sha256=""
+    case "${swift_file}" in
+        Benchmarks/Results/2026-11-15-inplace-coalescing/macos/retention/source/main.swift)
+            archived_sha256="988a79302379177cb4a56aec194b197aa054293b7c0177d647fe429c5bfb815c"
+            ;;
+        Benchmarks/Results/2026-11-16-compact-coalescing/macos/retention/source/main.swift)
+            archived_sha256="74c45690e01e7ffd676b38da8a334a1ac26cb0665db845de58ebf707e99e87fa"
+            ;;
+    esac
+    if [[ -n "${archived_sha256}" ]]; then
+        if command -v sha256sum >/dev/null 2>&1; then
+            actual_sha256="$(sha256sum "${swift_file}" | awk '{ print $1 }')"
+        else
+            actual_sha256="$(shasum -a 256 "${swift_file}" | awk '{ print $1 }')"
+        fi
+        [[ "${actual_sha256}" == "${archived_sha256}" ]] ||
+            fail "Archived benchmark source changed: ${swift_file}"
+        continue
+    fi
     grep -q 'SPDX-License-Identifier: Apache-2.0' "${swift_file}" ||
         fail "Apache license header is missing: ${swift_file}"
 done < <(find Package.swift Sources Tests Benchmarks -name '*.swift' -type f -print)
