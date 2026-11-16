@@ -129,15 +129,38 @@ struct TextInputASCIITests {
         let empty = try TextInputLoader.load(data: bom).merged()
         #expect(empty.statistics.inputCount == 0)
 
-        // CHANGE: Foundation also consumes a leading BOM during strict UTF-8 decoding.
-        for data in [
-            bom + Data("192.0.2.1\r\n".utf8),
-            bom + bom + Data("192.0.2.1".utf8),
-            Data("# first line\n".utf8) + bom + Data("192.0.2.1\n".utf8),
+        let firstLine = try TextInputLoader.load(data: bom + Data("192.0.2.1\r\n".utf8)).merged()
+        #expect(firstLine.ipv4.descriptions == ["192.0.2.1...192.0.2.1"])
+        #expect(firstLine.statistics.inputCount == 1)
+        #expect(firstLine.statistics.normalizedInputCount == 1)
+
+        // CHANGE: Foundation versions differ on whether strict decoding consumes a BOM.
+        // After the loader's one explicit first-line removal, preserve that decoder behavior.
+        let decoded = try #require(String(bytes: Array(bom + Data("192.0.2.1".utf8)), encoding: .utf8))
+        try #require(decoded == "192.0.2.1" || decoded == "\u{FEFF}192.0.2.1")
+        for (data, line) in [
+            (bom + bom + Data("192.0.2.1".utf8), 1),
+            (Data("# first line\n".utf8) + bom + Data("192.0.2.1\n".utf8), 2),
         ] {
-            let result = try TextInputLoader.load(data: data).merged()
-            #expect(result.ipv4.descriptions == ["192.0.2.1...192.0.2.1"])
-            #expect(result.statistics.inputCount == 1)
+            try withFile(data) { path in
+                if decoded == "192.0.2.1" {
+                    for collection in [
+                        try TextInputLoader.load(data: data, source: path),
+                        try TextInputLoader.load(inputs: [path]),
+                    ] {
+                        let result = collection.merged()
+                        #expect(result.ipv4.descriptions == ["192.0.2.1...192.0.2.1"])
+                        #expect(result.statistics.inputCount == 1)
+                        #expect(result.statistics.normalizedInputCount == 1)
+                    }
+                } else {
+                    let expected = CIDRMergeError.invalidInput(
+                        source: path, line: line, value: "\u{FEFF}192.0.2.1"
+                    )
+                    #expect(throws: expected) { try TextInputLoader.load(data: data, source: path) }
+                    #expect(throws: expected) { try TextInputLoader.load(inputs: [path]) }
+                }
+            }
         }
 
         expectInvalidToken(
