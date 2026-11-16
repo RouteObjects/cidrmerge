@@ -475,7 +475,7 @@ struct CommandSurfaceTests {
 
     @Test("Version metadata is owned by ArgumentParser and -v remains unassigned")
     func exposesVersionMetadata() throws {
-        #expect(CIDRMergeCommand.configuration.version == "0.4.0")
+        #expect(CIDRMergeCommand.configuration.version == "0.4.1")
         #expect(throws: (any Error).self) {
             try CIDRMergeCommand.parse(["-v"])
         }
