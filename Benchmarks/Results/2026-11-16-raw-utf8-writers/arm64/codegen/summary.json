@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "variants": {
+    "B": {
+      "binary_sha256": "5dea59f91ced65d4c595bd3d1210cecbd037688a5a9f1c09227f1cefaff86e15",
+      "assembly_sha256": "5bb9f074c36fca3f161627bd967f3ba467f21b028befdc3ebaeb8c749bda0d3d",
+      "selected_sha256": "a751a5c2e5baf7dc3fa0e8c4ff6d5f8f7362014c27665fe845aa69b9816a5463",
+      "functions": [
+        {
+          "address": "0x0000000000190358",
+          "symbol": "generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()",
+          "assembly_line": 343111,
+          "direct_calls": [
+            "  1903ac:\t97fb132c \tbl\t5505c <__swift_instantiateConcreteTypeFromMangledName>",
+            "  1903b4:\t97ffb245 \tbl\t17ccc8 <CIDR.IPAddressRange.description.getter : Swift.String>",
+            "  1903c0:\t940022e2 \tbl\t198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>",
+            "  1903c8:\t97fafec6 \tbl\t4fee0 <swift_bridgeObjectRelease@plt>",
+            "  1903d4:\t97faff13 \tbl\t50020 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  190418:\t97fb04ea \tbl\t517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  190424:\t97fafea7 \tbl\t4fec0 <swift_allocObject@plt>",
+            "  190448:\t97fb04e2 \tbl\t517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  190454:\t97fafe77 \tbl\t4fe30 <swift_release@plt>",
+            "  19048c:\t97fb04d5 \tbl\t517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  1904c8:\t97ff7025 \tbl\t16c55c <lazy protocol witness table accessor for type CIDR.AF.V4 and conformance CIDR.AF.V4 : CIDR.IPAddressFamily in CIDR>",
+            "  190500:\t94002292 \tbl\t198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>",
+            "  190508:\t97fafe76 \tbl\t4fee0 <swift_bridgeObjectRelease@plt>",
+            "  190514:\t97fafec3 \tbl\t50020 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  190558:\t97fb049a \tbl\t517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  190564:\t97fafe57 \tbl\t4fec0 <swift_allocObject@plt>",
+            "  190588:\t97fb0492 \tbl\t517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  190594:\t97fafe27 \tbl\t4fe30 <swift_release@plt>",
+            "  1905d0:\t97fb0484 \tbl\t517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  190660:\t97fb0088 \tbl\t50880 <__stack_chk_fail@plt>"
+          ]
+        },
+        {
+          "address": "0x0000000000190664",
+          "symbol": "generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()",
+          "assembly_line": 343308,
+          "direct_calls": [
+            "  1906b8:\t97fb1269 \tbl\t5505c <__swift_instantiateConcreteTypeFromMangledName>",
+            "  1906c0:\t97ffb182 \tbl\t17ccc8 <CIDR.IPAddressRange.description.getter : Swift.String>",
+            "  1906cc:\t9400221f \tbl\t198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>",
+            "  1906d4:\t97fafe03 \tbl\t4fee0 <swift_bridgeObjectRelease@plt>",
+            "  1906e0:\t97fafe50 \tbl\t50020 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  190724:\t97fb0427 \tbl\t517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  190730:\t97fafde4 \tbl\t4fec0 <swift_allocObject@plt>",
+            "  190754:\t97fb041f \tbl\t517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  190760:\t97fafdb4 \tbl\t4fe30 <swift_release@plt>",
+            "  190798:\t97fb0412 \tbl\t517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  1907e0:\t97ff64da \tbl\t169b48 <static CIDR.AF.V6.formatCIDR(_: Swift.UInt128, prefixLength: CIDR.PrefixLength<CIDR.AF.V6>) -> Swift.String>",
+            "  190818:\t9400013e \tbl\t190d10 <FoundationEssentials.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()>",
+            "  190834:\t97fafdfb \tbl\t50020 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  190878:\t97fb03d2 \tbl\t517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  190884:\t97fafd8f \tbl\t4fec0 <swift_allocObject@plt>",
+            "  1908a8:\t97fb03ca \tbl\t517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  1908b4:\t97fafd5f \tbl\t4fe30 <swift_release@plt>",
+            "  1908ec:\t97fb03bd \tbl\t517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  19090c:\t97fafd75 \tbl\t4fee0 <swift_bridgeObjectRelease@plt>",
+            "  190918:\t97fafdc2 \tbl\t50020 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  19095c:\t97fb0399 \tbl\t517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  190968:\t97fafd56 \tbl\t4fec0 <swift_allocObject@plt>",
+            "  19098c:\t97fb0391 \tbl\t517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  190998:\t97fafd26 \tbl\t4fe30 <swift_release@plt>",
+            "  1909d0:\t97fb0384 \tbl\t517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  190a08:\t94000028 \tbl\t190aa8 <generic specialization <Swift.String.UTF8View> of FoundationEssentials.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()>",
+            "  190a18:\t97fafd6a \tbl\t4ffc0 <Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>@plt>",
+            "  190aa4:\t97faff77 \tbl\t50880 <__stack_chk_fail@plt>"
+          ]
+        }
+      ]
+    },
+    "C": {
+      "binary_sha256": "44152a9aec7d9b14c3b8f7fc73738f0fc143b825158913176ef6d28ca7eb82ac",
+      "assembly_sha256": "14bf43b2937f2e027c03d6d1b39ca3b5ea3ed3c160a1a044689a1f32b539d3ed",
+      "selected_sha256": "c77f1a464dcdb87995a20bdc141902d09f9e08a5804ee2b611cf664551beef13",
+      "functions": [
+        {
+          "address": "0x0000000000198550",
+          "symbol": "static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data",
+          "assembly_line": 351731,
+          "direct_calls": [
+            "  198578:\t97fae4a0 \tbl\t517f8 <FoundationEssentials.__DataStorage.empty.unsafeMutableAddressor : FoundationEssentials.__DataStorage@plt>",
+            "  1985ac:\t97fade5b \tbl\t4ff18 <swift_retain@plt>",
+            "  1985b4:\t97fade59 \tbl\t4ff18 <swift_retain@plt>",
+            "  1985c0:\t940003a7 \tbl\t19945c <FoundationEssentials.Data._Representation.reserveCapacity(Swift.Int) -> ()>",
+            "  1985dc:\t94000015 \tbl\t198630 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()>",
+            "  1985f0:\t94000115 \tbl\t198a44 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()>",
+            "  19862c:\t97fae0b3 \tbl\t508f8 <__stack_chk_fail@plt>"
+          ]
+        },
+        {
+          "address": "0x0000000000198630",
+          "symbol": "closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()",
+          "assembly_line": 351789,
+          "direct_calls": [
+            "  198688:\t940003b6 \tbl\t199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>",
+            "  1986cc:\t97faf284 \tbl\t550dc <__swift_instantiateConcreteTypeFromMangledName>",
+            "  1986e8:\t97ff6c2d \tbl\t17379c <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  198758:\t97ff6c11 \tbl\t17379c <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  198784:\t97fade45 \tbl\t50098 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  1987c8:\t97fae41c \tbl\t51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  1987d4:\t97faddd9 \tbl\t4ff38 <swift_allocObject@plt>",
+            "  1987f8:\t97fae414 \tbl\t51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  198808:\t97fadda8 \tbl\t4fea8 <swift_release@plt>",
+            "  198838:\t97fae408 \tbl\t51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  19887c:\t94000339 \tbl\t199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>",
+            "  1988b4:\t97faf20a \tbl\t550dc <__swift_instantiateConcreteTypeFromMangledName>",
+            "  1988cc:\t97ff6c35 \tbl\t1739a0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  1988f0:\t97faddea \tbl\t50098 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  198934:\t97fae3c1 \tbl\t51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  198940:\t97fadd7e \tbl\t4ff38 <swift_allocObject@plt>",
+            "  198964:\t97fae3b9 \tbl\t51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  198974:\t97fadd4d \tbl\t4fea8 <swift_release@plt>",
+            "  1989ac:\t97fae3ab \tbl\t51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>"
+          ]
+        },
+        {
+          "address": "0x0000000000198a44",
+          "symbol": "closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()",
+          "assembly_line": 352052,
+          "direct_calls": [
+            "  198a9c:\t940002b1 \tbl\t199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>",
+            "  198ae4:\t97faf17e \tbl\t550dc <__swift_instantiateConcreteTypeFromMangledName>",
+            "  198b00:\t97ff6c60 \tbl\t173c80 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  198b70:\t97ff6c44 \tbl\t173c80 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  198b9c:\t97fadd3f \tbl\t50098 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  198be0:\t97fae316 \tbl\t51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  198bec:\t97fadcd3 \tbl\t4ff38 <swift_allocObject@plt>",
+            "  198c10:\t97fae30e \tbl\t51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  198c20:\t97fadca2 \tbl\t4fea8 <swift_release@plt>",
+            "  198c50:\t97fae302 \tbl\t51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>",
+            "  198c94:\t94000233 \tbl\t199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>",
+            "  198ccc:\t97faf104 \tbl\t550dc <__swift_instantiateConcreteTypeFromMangledName>",
+            "  198ce4:\t97ff6bff \tbl\t173ce0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>",
+            "  198d08:\t97fadce4 \tbl\t50098 <swift_isUniquelyReferenced_nonNull_native@plt>",
+            "  198d4c:\t97fae2bb \tbl\t51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>",
+            "  198d58:\t97fadc78 \tbl\t4ff38 <swift_allocObject@plt>",
+            "  198d7c:\t97fae2b3 \tbl\t51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>",
+            "  198d8c:\t97fadc47 \tbl\t4fea8 <swift_release@plt>",
+            "  198dc4:\t97fae2a5 \tbl\t51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>"
+          ]
+        }
+      ]
+    }
+  },
+  "limits": [
+    "Static ordinary Release code-generation inspection only; no allocation counter or elapsed-time claim.",
+    "Candidate raw output still builds the full Data result; MergeResult and OutputCommitter are unchanged.",
+    "Public upstream writers remain generic functions; no claim that their witness calls disappear."
+  ],
+  "candidate_direct_writer_links": {
+    "V4": {
+      "renderer_address": "0x0000000000198630",
+      "address_writer_call_count_in_body": 2,
+      "cidr_writer_call_count_in_body": 1,
+      "reachable_from_raw": true,
+      "no_description_getter_call_in_body": true
+    },
+    "V6": {
+      "renderer_address": "0x0000000000198a44",
+      "address_writer_call_count_in_body": 2,
+      "cidr_writer_call_count_in_body": 1,
+      "reachable_from_raw": true,
+      "no_description_getter_call_in_body": true
+    }
+  },
+  "reviewer_script_sha256": "b0f6f1e76635ef4a900de79e5cbd4f8216296a067f238a28e432c87ce4002f30",
+  "capture_receipt_sha256": "fc818547a38d1a7f4a11bb8e767d45bb1c7ee2359b299aeae754bf55502a19f0"
+}

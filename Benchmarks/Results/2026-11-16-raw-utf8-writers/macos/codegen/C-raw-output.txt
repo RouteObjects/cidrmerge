@@ -1,0 +1,310 @@
+function signature specialization <Arg[2] = Dead> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout Foundation.Data) -> ():
+00000001000b4eec	sub	sp, sp, #0xa0
+00000001000b4ef0	stp	x28, x27, [sp, #0x40]
+00000001000b4ef4	stp	x26, x25, [sp, #0x50]
+00000001000b4ef8	stp	x24, x23, [sp, #0x60]
+00000001000b4efc	stp	x22, x21, [sp, #0x70]
+00000001000b4f00	stp	x20, x19, [sp, #0x80]
+00000001000b4f04	stp	x29, x30, [sp, #0x90]
+00000001000b4f08	add	x29, sp, #0x90
+00000001000b4f0c	str	x2, [sp, #0x8]
+00000001000b4f10	mov	x20, x0
+00000001000b4f14	and	w8, w1, #0xff
+00000001000b4f18	adrp	x9, 52 ; 0x1000e8000
+00000001000b4f1c	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000b4f20	ldr	x9, [x9]
+00000001000b4f24	str	x9, [sp, #0x38]
+00000001000b4f28	ldr	x26, [x0, #0x10]
+00000001000b4f2c	cmp	w8, #0x1
+00000001000b4f30	b.ne	0x1000b4fe4
+00000001000b4f34	cbz	x26, 0x1000b50f4
+00000001000b4f38	adrp	x0, 58 ; 0x1000ee000
+00000001000b4f3c	add	x0, x0, #0xff8
+00000001000b4f40	adrp	x21, 58 ; 0x1000ee000
+00000001000b4f44	add	x21, x21, #0xff0
+00000001000b4f48	adrp	x22, 18 ; 0x1000c6000
+00000001000b4f4c	add	x22, x22, #0x6b8
+00000001000b4f50	adrp	x3, 12 ; 0x1000c0000
+00000001000b4f54	add	x3, x3, #0xe64
+00000001000b4f58	mov	x1, x21
+00000001000b4f5c	mov	x2, x22
+00000001000b4f60	bl	merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR
+00000001000b4f64	mov	x23, x0
+00000001000b4f68	add	x24, x20, #0x24
+00000001000b4f6c	add	x27, sp, #0x16
+00000001000b4f70	mov	w28, #0xa
+00000001000b4f74	b	0x1000b4f84
+00000001000b4f78	add	x24, x24, #0x8
+00000001000b4f7c	subs	x26, x26, #0x1
+00000001000b4f80	b.eq	0x1000b50f4
+00000001000b4f84	ldur	w8, [x24, #-0x4]
+00000001000b4f88	ldrb	w9, [x24]
+00000001000b4f8c	str	w8, [sp, #0x10]
+00000001000b4f90	strb	w9, [sp, #0x14]
+00000001000b4f94	mov	x0, x21
+00000001000b4f98	mov	x1, x22
+00000001000b4f9c	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000b4fa0	mov	x2, x0
+00000001000b4fa4	add	x0, sp, #0x16
+00000001000b4fa8	add	x8, sp, #0x16
+00000001000b4fac	add	x1, x8, #0x22
+00000001000b4fb0	add	x20, sp, #0x10
+00000001000b4fb4	mov	x3, x23
+00000001000b4fb8	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b4fbc	strb	w28, [x27, x0]
+00000001000b4fc0	adds	x8, x0, #0x1
+00000001000b4fc4	b.vs	0x1000b512c
+00000001000b4fc8	cbz	x8, 0x1000b4f78
+00000001000b4fcc	tbnz	x8, #0x3f, 0x1000b5148
+00000001000b4fd0	add	x0, sp, #0x16
+00000001000b4fd4	add	x1, x27, x8
+00000001000b4fd8	ldr	x20, [sp, #0x8]
+00000001000b4fdc	bl	0x1000bd464 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000b4fe0	b	0x1000b4f78
+00000001000b4fe4	cbz	x26, 0x1000b50f4
+00000001000b4fe8	adrp	x0, 59 ; 0x1000ef000
+00000001000b4fec	add	x0, x0, #0x8
+00000001000b4ff0	adrp	x1, 59 ; 0x1000ef000
+00000001000b4ff4	add	x1, x1, #0x0
+00000001000b4ff8	adrp	x2, 18 ; 0x1000c6000
+00000001000b4ffc	add	x2, x2, #0x6c0
+00000001000b5000	adrp	x3, 10 ; 0x1000bf000
+00000001000b5004	add	x3, x3, #0xde4
+00000001000b5008	bl	merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR
+00000001000b500c	mov	x23, x0
+00000001000b5010	add	x27, x20, #0x24
+00000001000b5014	mov	w28, #0x20
+00000001000b5018	add	x21, sp, #0x16
+00000001000b501c	mov	w22, #0x2e
+00000001000b5020	b	0x1000b5040
+00000001000b5024	add	x0, sp, #0x16
+00000001000b5028	add	x1, x21, x8
+00000001000b502c	ldr	x20, [sp, #0x8]
+00000001000b5030	bl	0x1000bd464 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000b5034	add	x27, x27, #0x8
+00000001000b5038	subs	x26, x26, #0x1
+00000001000b503c	b.eq	0x1000b50f4
+00000001000b5040	ldp	w8, w19, [x27, #-0x4]
+00000001000b5044	str	w8, [sp, #0x10]
+00000001000b5048	strb	w28, [sp, #0x14]
+00000001000b504c	adrp	x0, 58 ; 0x1000ef000
+00000001000b5050	add	x0, x0, #0x0
+00000001000b5054	adrp	x1, 17 ; 0x1000c6000
+00000001000b5058	add	x1, x1, #0x6c0
+00000001000b505c	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000b5060	mov	x24, x0
+00000001000b5064	add	x0, sp, #0x16
+00000001000b5068	add	x8, sp, #0x16
+00000001000b506c	add	x1, x8, #0x22
+00000001000b5070	add	x20, sp, #0x10
+00000001000b5074	mov	x2, x24
+00000001000b5078	mov	x3, x23
+00000001000b507c	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b5080	strb	w22, [x21, x0]
+00000001000b5084	adds	x8, x0, #0x1
+00000001000b5088	b.vs	0x1000b5130
+00000001000b508c	strb	w22, [x21, x8]
+00000001000b5090	adds	x8, x0, #0x2
+00000001000b5094	b.vs	0x1000b5134
+00000001000b5098	strb	w22, [x21, x8]
+00000001000b509c	adds	x25, x0, #0x3
+00000001000b50a0	b.vs	0x1000b5138
+00000001000b50a4	str	w19, [sp, #0x10]
+00000001000b50a8	strb	w28, [sp, #0x14]
+00000001000b50ac	cmp	x25, #0x22
+00000001000b50b0	b.gt	0x1000b513c
+00000001000b50b4	add	x0, x21, x25
+00000001000b50b8	add	x8, sp, #0x16
+00000001000b50bc	add	x1, x8, #0x22
+00000001000b50c0	add	x20, sp, #0x10
+00000001000b50c4	mov	x2, x24
+00000001000b50c8	mov	x3, x23
+00000001000b50cc	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b50d0	adds	x8, x25, x0
+00000001000b50d4	b.vs	0x1000b5140
+00000001000b50d8	mov	w9, #0xa
+00000001000b50dc	strb	w9, [x21, x8]
+00000001000b50e0	adds	x8, x8, #0x1
+00000001000b50e4	b.vs	0x1000b5144
+00000001000b50e8	cbz	x8, 0x1000b5034
+00000001000b50ec	tbz	x8, #0x3f, 0x1000b5024
+00000001000b50f0	brk	#0x1
+00000001000b50f4	ldr	x8, [sp, #0x38]
+00000001000b50f8	adrp	x9, 51 ; 0x1000e8000
+00000001000b50fc	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000b5100	ldr	x9, [x9]
+00000001000b5104	cmp	x9, x8
+00000001000b5108	b.ne	0x1000b514c
+00000001000b510c	ldp	x29, x30, [sp, #0x90]
+00000001000b5110	ldp	x20, x19, [sp, #0x80]
+00000001000b5114	ldp	x22, x21, [sp, #0x70]
+00000001000b5118	ldp	x24, x23, [sp, #0x60]
+00000001000b511c	ldp	x26, x25, [sp, #0x50]
+00000001000b5120	ldp	x28, x27, [sp, #0x40]
+00000001000b5124	add	sp, sp, #0xa0
+00000001000b5128	ret
+00000001000b512c	brk	#0x1
+00000001000b5130	brk	#0x1
+00000001000b5134	brk	#0x1
+00000001000b5138	brk	#0x1
+00000001000b513c	brk	#0x1
+00000001000b5140	brk	#0x1
+00000001000b5144	brk	#0x1
+00000001000b5148	brk	#0x1
+00000001000b514c	bl	0x1000be448 ; symbol stub for: ___stack_chk_fail
+function signature specialization <Arg[2] = Dead> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout Foundation.Data) -> ():
+00000001000b5150	sub	sp, sp, #0xe0
+00000001000b5154	stp	x28, x27, [sp, #0x80]
+00000001000b5158	stp	x26, x25, [sp, #0x90]
+00000001000b515c	stp	x24, x23, [sp, #0xa0]
+00000001000b5160	stp	x22, x21, [sp, #0xb0]
+00000001000b5164	stp	x20, x19, [sp, #0xc0]
+00000001000b5168	stp	x29, x30, [sp, #0xd0]
+00000001000b516c	add	x29, sp, #0xd0
+00000001000b5170	str	x2, [sp, #0x8]
+00000001000b5174	mov	x20, x0
+00000001000b5178	and	w8, w1, #0xff
+00000001000b517c	adrp	x9, 51 ; 0x1000e8000
+00000001000b5180	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000b5184	ldr	x9, [x9]
+00000001000b5188	stur	x9, [x29, #-0x58]
+00000001000b518c	ldr	x26, [x0, #0x10]
+00000001000b5190	cmp	w8, #0x1
+00000001000b5194	b.ne	0x1000b5248
+00000001000b5198	cbz	x26, 0x1000b5360
+00000001000b519c	adrp	x0, 57 ; 0x1000ee000
+00000001000b51a0	add	x0, x0, #0xfd8
+00000001000b51a4	adrp	x21, 57 ; 0x1000ee000
+00000001000b51a8	add	x21, x21, #0xfd0
+00000001000b51ac	adrp	x22, 17 ; 0x1000c6000
+00000001000b51b0	add	x22, x22, #0x6a8
+00000001000b51b4	adrp	x3, 11 ; 0x1000c0000
+00000001000b51b8	add	x3, x3, #0xe64
+00000001000b51bc	mov	x1, x21
+00000001000b51c0	mov	x2, x22
+00000001000b51c4	bl	merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR
+00000001000b51c8	mov	x23, x0
+00000001000b51cc	add	x24, x20, #0x30
+00000001000b51d0	add	x27, sp, #0x26
+00000001000b51d4	mov	w28, #0xa
+00000001000b51d8	b	0x1000b51e8
+00000001000b51dc	add	x24, x24, #0x20
+00000001000b51e0	subs	x26, x26, #0x1
+00000001000b51e4	b.eq	0x1000b5360
+00000001000b51e8	ldp	x8, x9, [x24, #-0x10]
+00000001000b51ec	ldrb	w10, [x24]
+00000001000b51f0	stp	x8, x9, [sp, #0x10]
+00000001000b51f4	strb	w10, [sp, #0x20]
+00000001000b51f8	mov	x0, x21
+00000001000b51fc	mov	x1, x22
+00000001000b5200	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000b5204	mov	x2, x0
+00000001000b5208	add	x0, sp, #0x26
+00000001000b520c	add	x8, sp, #0x26
+00000001000b5210	add	x1, x8, #0x52
+00000001000b5214	add	x20, sp, #0x10
+00000001000b5218	mov	x3, x23
+00000001000b521c	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b5220	strb	w28, [x27, x0]
+00000001000b5224	adds	x8, x0, #0x1
+00000001000b5228	b.vs	0x1000b5398
+00000001000b522c	cbz	x8, 0x1000b51dc
+00000001000b5230	tbnz	x8, #0x3f, 0x1000b53b4
+00000001000b5234	add	x0, sp, #0x26
+00000001000b5238	add	x1, x27, x8
+00000001000b523c	ldr	x20, [sp, #0x8]
+00000001000b5240	bl	0x1000bd464 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000b5244	b	0x1000b51dc
+00000001000b5248	cbz	x26, 0x1000b5360
+00000001000b524c	adrp	x0, 57 ; 0x1000ee000
+00000001000b5250	add	x0, x0, #0xfe8
+00000001000b5254	adrp	x1, 57 ; 0x1000ee000
+00000001000b5258	add	x1, x1, #0xfe0
+00000001000b525c	adrp	x2, 17 ; 0x1000c6000
+00000001000b5260	add	x2, x2, #0x6b0
+00000001000b5264	adrp	x3, 10 ; 0x1000bf000
+00000001000b5268	add	x3, x3, #0xde4
+00000001000b526c	bl	merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR
+00000001000b5270	mov	x23, x0
+00000001000b5274	add	x27, x20, #0x30
+00000001000b5278	add	x21, sp, #0x26
+00000001000b527c	mov	w22, #0x2e
+00000001000b5280	b	0x1000b52a0
+00000001000b5284	add	x0, sp, #0x26
+00000001000b5288	add	x1, x21, x8
+00000001000b528c	ldr	x20, [sp, #0x8]
+00000001000b5290	bl	0x1000bd464 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000b5294	add	x27, x27, #0x20
+00000001000b5298	subs	x26, x26, #0x1
+00000001000b529c	b.eq	0x1000b5360
+00000001000b52a0	ldp	x8, x9, [x27, #-0x10]
+00000001000b52a4	ldp	x25, x19, [x27]
+00000001000b52a8	stp	x8, x9, [sp, #0x10]
+00000001000b52ac	mov	w8, #0x80
+00000001000b52b0	strb	w8, [sp, #0x20]
+00000001000b52b4	adrp	x0, 57 ; 0x1000ee000
+00000001000b52b8	add	x0, x0, #0xfe0
+00000001000b52bc	adrp	x1, 17 ; 0x1000c6000
+00000001000b52c0	add	x1, x1, #0x6b0
+00000001000b52c4	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000b52c8	mov	x24, x0
+00000001000b52cc	add	x0, sp, #0x26
+00000001000b52d0	add	x8, sp, #0x26
+00000001000b52d4	add	x1, x8, #0x52
+00000001000b52d8	add	x20, sp, #0x10
+00000001000b52dc	mov	x2, x24
+00000001000b52e0	mov	x3, x23
+00000001000b52e4	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b52e8	strb	w22, [x21, x0]
+00000001000b52ec	adds	x8, x0, #0x1
+00000001000b52f0	b.vs	0x1000b539c
+00000001000b52f4	strb	w22, [x21, x8]
+00000001000b52f8	adds	x8, x0, #0x2
+00000001000b52fc	b.vs	0x1000b53a0
+00000001000b5300	strb	w22, [x21, x8]
+00000001000b5304	adds	x28, x0, #0x3
+00000001000b5308	b.vs	0x1000b53a4
+00000001000b530c	stp	x25, x19, [sp, #0x10]
+00000001000b5310	mov	w8, #0x80
+00000001000b5314	strb	w8, [sp, #0x20]
+00000001000b5318	cmp	x28, #0x52
+00000001000b531c	b.gt	0x1000b53a8
+00000001000b5320	add	x0, x21, x28
+00000001000b5324	add	x8, sp, #0x26
+00000001000b5328	add	x1, x8, #0x52
+00000001000b532c	add	x20, sp, #0x10
+00000001000b5330	mov	x2, x24
+00000001000b5334	mov	x3, x23
+00000001000b5338	bl	(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int
+00000001000b533c	adds	x8, x28, x0
+00000001000b5340	b.vs	0x1000b53ac
+00000001000b5344	mov	w9, #0xa
+00000001000b5348	strb	w9, [x21, x8]
+00000001000b534c	adds	x8, x8, #0x1
+00000001000b5350	b.vs	0x1000b53b0
+00000001000b5354	cbz	x8, 0x1000b5294
+00000001000b5358	tbz	x8, #0x3f, 0x1000b5284
+00000001000b535c	brk	#0x1
+00000001000b5360	ldur	x8, [x29, #-0x58]
+00000001000b5364	adrp	x9, 51 ; 0x1000e8000
+00000001000b5368	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000b536c	ldr	x9, [x9]
+00000001000b5370	cmp	x9, x8
+00000001000b5374	b.ne	0x1000b53b8
+00000001000b5378	ldp	x29, x30, [sp, #0xd0]
+00000001000b537c	ldp	x20, x19, [sp, #0xc0]
+00000001000b5380	ldp	x22, x21, [sp, #0xb0]
+00000001000b5384	ldp	x24, x23, [sp, #0xa0]
+00000001000b5388	ldp	x26, x25, [sp, #0x90]
+00000001000b538c	ldp	x28, x27, [sp, #0x80]
+00000001000b5390	add	sp, sp, #0xe0
+00000001000b5394	ret
+00000001000b5398	brk	#0x1
+00000001000b539c	brk	#0x1
+00000001000b53a0	brk	#0x1
+00000001000b53a4	brk	#0x1
+00000001000b53a8	brk	#0x1
+00000001000b53ac	brk	#0x1
+00000001000b53b0	brk	#0x1
+00000001000b53b4	brk	#0x1
+00000001000b53b8	bl	0x1000be448 ; symbol stub for: ___stack_chk_fail

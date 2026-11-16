@@ -1,0 +1,1711 @@
+{
+  "passed": true,
+  "started_at": "2026-11-16T15:49:53.223422+00:00",
+  "profiles": {
+    "measurements": {
+      "passed": true,
+      "measured": 144,
+      "warmups": 24,
+      "cases": 12,
+      "summary_sha256": "b4db6a326cf631019b03b25f851987a11fb6f051f2afdeda63971ccbc64862c1",
+      "sample_hashes": {
+        "measurements/warmup/ipv4-disjoint-ranges/B/sample.json": "ad1f53a9d8f0e3c94212321cf3a5b8d515d523cc3bb3c58911c2fd20737da565",
+        "measurements/warmup/ipv4-disjoint-ranges/C/sample.json": "dada61b2cd020d30e3134a0035f2bf57fea1c5d01d6b77c7185b7d9d0b44579c",
+        "measurements/warmup/ipv4-disjoint-cidr/B/sample.json": "da4ddac0ee6c94639211192db2f77031676c251661011a78f74b19f664b7e046",
+        "measurements/warmup/ipv4-disjoint-cidr/C/sample.json": "35f502fc8edfcb7662be48b93a44b3ab88926ff78b02c6fc70af5f9da4a4f869",
+        "measurements/warmup/ipv6-disjoint-ranges/B/sample.json": "69f1626844cab8a341ba413581e6f5dc7561e9a2defa70f77a6e903e0f442df5",
+        "measurements/warmup/ipv6-disjoint-ranges/C/sample.json": "561acce096e2c1cf195f6063c07b91d5556e31ba92838bb8f95d71339f55be75",
+        "measurements/warmup/ipv6-disjoint-cidr/B/sample.json": "851045c503b04c9531fbcd086a3c52eb66d0a567b84b76212a144740f25235c8",
+        "measurements/warmup/ipv6-disjoint-cidr/C/sample.json": "39c89801e515950a45fd3a811940a9b230ed914ebd5fef63a778c44bf2af75be",
+        "measurements/warmup/mixed-disjoint-ranges/B/sample.json": "37bd192b5982ee4da65cc44eb9b2ef196ba31d749549d8e609a65474cc86f23b",
+        "measurements/warmup/mixed-disjoint-ranges/C/sample.json": "cbffe3e31e10e1a85a573c430afcaad47d1bde5d0aa9fa2a87c856ecfe8b441f",
+        "measurements/warmup/mixed-disjoint-cidr/B/sample.json": "d6badb82afad7d4fb48c3b41c66adc4ebdaddfab4f20e20e317a26e2923644f3",
+        "measurements/warmup/mixed-disjoint-cidr/C/sample.json": "99a9f60770b5abf8915a1e425201e1645706ef461fe964d52c34a0d31a9e1ca5",
+        "measurements/warmup/mixed-permuted-ranges/B/sample.json": "6fe0be3df2424900f9bfd018d42aac3e034ca6dcfd055a09302f97439785bd8c",
+        "measurements/warmup/mixed-permuted-ranges/C/sample.json": "9735c9445cf5487393c1f31f5e0e6acc65f5e8c6ad0d45340df2b64ae900e669",
+        "measurements/warmup/mixed-permuted-cidr/B/sample.json": "227f76b2d2f65d5a7fc024ff71181a7b82dad9eb5d8279e25c30c0c242ab6645",
+        "measurements/warmup/mixed-permuted-cidr/C/sample.json": "d8b93a0dce6c49ced39f1cc0ea666c46a3cc7b3d8c0418c97aae32308cba82a4",
+        "measurements/warmup/mixed-overlap-ranges/B/sample.json": "3267fa2c2779c7d4e60910f6aa035e5c6b19ae35bc59e9378e06f70af26e841c",
+        "measurements/warmup/mixed-overlap-ranges/C/sample.json": "e696077f000c357a533dd724f38bf1c3225cd47ae7a3217d70037cc66d0e755b",
+        "measurements/warmup/mixed-overlap-cidr/B/sample.json": "08812774cee85b787969d10efa662867e2726b7d210a9550941ac2c000bd03ce",
+        "measurements/warmup/mixed-overlap-cidr/C/sample.json": "524e068d443c197408b3dc91eea2b9871d9a935400fe17cc929d3a682f55a1e5",
+        "measurements/warmup/range-derived-mixed-ranges/B/sample.json": "d5ba5dde8d67ab9ceb65e35efe3936a40601b2fa9623b9c2ccf1e17710c2edd5",
+        "measurements/warmup/range-derived-mixed-ranges/C/sample.json": "6f8e8f15c92daf8790d9423d75c47347c283f875eabb7fddf0973305a276b72d",
+        "measurements/warmup/range-derived-mixed-cidr/B/sample.json": "2171333f886b226d5106709fba0773a6edd82ff354f03994fac43af628bc3512",
+        "measurements/warmup/range-derived-mixed-cidr/C/sample.json": "6d869f105d86073c005cbed2cfaf715917475d5c8d8e536598df555faf6096af",
+        "measurements/round-01/ipv4-disjoint-ranges/B/sample.json": "eec55efbdd536c5b8cc42a4ffd4b7b72a61543e90845055fa539c237a4ce9228",
+        "measurements/round-01/ipv4-disjoint-ranges/C/sample.json": "660050aafd8a8762f044b5f33ed9d8cfff1ab3998d8297b34ae90963adfe8532",
+        "measurements/round-01/ipv4-disjoint-cidr/B/sample.json": "006de30de5fef20147b709ee9ab135b379e6fb38eb30f154cb1e4c087fc0ba38",
+        "measurements/round-01/ipv4-disjoint-cidr/C/sample.json": "24d6f277357444c57aef9e4024ddfe42f715dbebc600f2b0babbbd73de0c7c38",
+        "measurements/round-01/ipv6-disjoint-ranges/B/sample.json": "e72ffdc3954f9dde6d55870b2fef08d5dc4fe001b4805924ab2aec750ae04cf0",
+        "measurements/round-01/ipv6-disjoint-ranges/C/sample.json": "5a8c4384fc91762b2f54cfde44f1951bd88166fd61c45eb93f9dea70ebf96ec0",
+        "measurements/round-01/ipv6-disjoint-cidr/B/sample.json": "14ee3d7fb9e9773f1fc1ab87f0284b74c86bbc862f4a68501f522a2ed6dfe0de",
+        "measurements/round-01/ipv6-disjoint-cidr/C/sample.json": "a00377698ac0361660c86e5804de1ba59fa4f4831e2156b632e7985a0104c412",
+        "measurements/round-01/mixed-disjoint-ranges/B/sample.json": "e710b6181bbe568e02cd7a59bb85e0d20686135b32970b795cc86e29b53a2af1",
+        "measurements/round-01/mixed-disjoint-ranges/C/sample.json": "434b8b03d1c3b13164205623cc8cdb7396210914d38f464d14a3901fb45456bf",
+        "measurements/round-01/mixed-disjoint-cidr/B/sample.json": "73eea6859735368025a22aa58c2c0704a2bdb3f0103d928b3cbb40b10c4f7b85",
+        "measurements/round-01/mixed-disjoint-cidr/C/sample.json": "79da1e47823bbbffa64787446037bf7ce97a952062aba76417338bb78e858024",
+        "measurements/round-01/mixed-permuted-ranges/B/sample.json": "8cf10e04cbd7d4fbd4032e57fc082eded09eac87b4c1870556ad6f883d1b003d",
+        "measurements/round-01/mixed-permuted-ranges/C/sample.json": "0644f2eb6d6c62106c882780f2319aa703f12657641a1822676e816b27ad2fdf",
+        "measurements/round-01/mixed-permuted-cidr/B/sample.json": "23ee277b5d2bebc5d550a6e99adecb242fe1ab2a49d6a1bbae99d8f425506513",
+        "measurements/round-01/mixed-permuted-cidr/C/sample.json": "ec3a7f856ea309841793182c6e0e1e7e9790a087bb141f97d75b0c1cf3c89a42",
+        "measurements/round-01/mixed-overlap-ranges/B/sample.json": "de88e8702c95a2e0d8809e668d302c18b3c1d4c34c3825565c6372efd38618c1",
+        "measurements/round-01/mixed-overlap-ranges/C/sample.json": "b9dea54ee20a437e6ca7db5ebce179dd2dfd06291e41c68ed4dc14c94828b09e",
+        "measurements/round-01/mixed-overlap-cidr/B/sample.json": "4fb8584670d94f3efe467a33628b0fbfda83ff4a9c3ec8aa5595cbeff56cabdb",
+        "measurements/round-01/mixed-overlap-cidr/C/sample.json": "51ff58d43c66bd4d9d3e95d27f76dc394152da76045721c9789482078abd39c1",
+        "measurements/round-01/range-derived-mixed-ranges/B/sample.json": "faa287cdec59bf9986817e780fd196ebf1e0d612e67c5d4a88d92f74e8921b63",
+        "measurements/round-01/range-derived-mixed-ranges/C/sample.json": "3f5a6efc3a47f41bb89dcb832d3c9bb52fcdf8b092dc5888543e1c9b50330181",
+        "measurements/round-01/range-derived-mixed-cidr/B/sample.json": "2d0797a41a0b11b9172fc22681d2a4ae26a9dbfaa2b539c460d420a6f498fbb3",
+        "measurements/round-01/range-derived-mixed-cidr/C/sample.json": "94800513e9fe96b8b0ac07c8303828c4c2e43d13240fcc237cfcb9451294a2a6",
+        "measurements/round-02/ipv4-disjoint-cidr/C/sample.json": "0db3d1d035abfa6639e97b4733084266cc928cd09043b8364da35ad62099b81d",
+        "measurements/round-02/ipv4-disjoint-cidr/B/sample.json": "46faa3f5ef694eaf71301217e067d6e87e6cab4ffb56e6b19d6149a3f813964e",
+        "measurements/round-02/ipv6-disjoint-ranges/C/sample.json": "bbe124d37414bb715df398be4f5113087c088c8842a388ab6e1a062ba1c9a048",
+        "measurements/round-02/ipv6-disjoint-ranges/B/sample.json": "865a32dedaf7ead218c9807df9b7a929c4af45c4395466bcb40d989fc28783f5",
+        "measurements/round-02/ipv6-disjoint-cidr/C/sample.json": "34a7504d9fa2ff607373b2e5111b84330c7d04d6bf27a09b7ef9445be2010418",
+        "measurements/round-02/ipv6-disjoint-cidr/B/sample.json": "e3d8650a97954cb833980953458f629e8ce04b4600dd734a0aa58e9658204d51",
+        "measurements/round-02/mixed-disjoint-ranges/C/sample.json": "c802aea42739182a1553eaf14cd6c17121e480b6b10df46f10df9213231a2ef7",
+        "measurements/round-02/mixed-disjoint-ranges/B/sample.json": "f78282d846389a49b8f021d92ec01ec1feb9b95d10957aca204e37b2cf3df787",
+        "measurements/round-02/mixed-disjoint-cidr/C/sample.json": "e4f1c87083bb7fdf1f3d71dda2b2e8441b4c0a04161f329b634eb5ecddb9bfcc",
+        "measurements/round-02/mixed-disjoint-cidr/B/sample.json": "d30767b4cde87f32434d90c04561ef2ed6d684ffa63e32f881fba20c75dec5c9",
+        "measurements/round-02/mixed-permuted-ranges/C/sample.json": "efd7813af0a11355eb20043ac438356a984e8ef4fd7e689b44f82e4e34d4c95a",
+        "measurements/round-02/mixed-permuted-ranges/B/sample.json": "41621b4405b167e1b34e6f14599388ff6ad3f7653b82d4170998f34bce2020a3",
+        "measurements/round-02/mixed-permuted-cidr/C/sample.json": "e00fb69b78597a087d03553a97867521980b5db83a2321b957091b0f53e7f694",
+        "measurements/round-02/mixed-permuted-cidr/B/sample.json": "0302313e0f287fa78ed95172c16aafb6055f2e3fcdfadaee965c5170dbfcb7f2",
+        "measurements/round-02/mixed-overlap-ranges/C/sample.json": "3292583a383026eb7009bcd8c10b78b6d3ef0a425007027b9436cdbf405be996",
+        "measurements/round-02/mixed-overlap-ranges/B/sample.json": "b2e55c0176c7c9072cde45f57505c0dfd0c7a42697175f743cd7b268a17dd9f8",
+        "measurements/round-02/mixed-overlap-cidr/C/sample.json": "6ef5fc794383a9d63e09a1b7c8eeb8d726e36d5a0e34939404450c115ccc6d3b",
+        "measurements/round-02/mixed-overlap-cidr/B/sample.json": "21ea1b5e6cbea6dadfcba4a445dea1d7567d3c02c83ed85ce99e1eb5fb6c47f1",
+        "measurements/round-02/range-derived-mixed-ranges/C/sample.json": "19f5bbd7d75c70e10a37fa82b5a7078c719c87c254afeb9841896e1ba2bd35fd",
+        "measurements/round-02/range-derived-mixed-ranges/B/sample.json": "3bac6f0b4cc6e984c004bfb20da1970e83a38fad60ac3d4d48b4546afcc10370",
+        "measurements/round-02/range-derived-mixed-cidr/C/sample.json": "9947c2cbc149b5550f875d729d478205aa8eb3cff2e42d843d3da49ba2d76a05",
+        "measurements/round-02/range-derived-mixed-cidr/B/sample.json": "2ea3057186c410ecfd01d5fb85e649920b22dac656bd0de4e0f49c73b6ad9cb2",
+        "measurements/round-02/ipv4-disjoint-ranges/C/sample.json": "963e034691606d8c61759199fed9c3d35bff24d848b0fc8d3568b54d833aa07a",
+        "measurements/round-02/ipv4-disjoint-ranges/B/sample.json": "bf1bec4b8431c53a778bc676329bb3bb54bf1b348285bdab8192e0d972e27cc2",
+        "measurements/round-03/ipv6-disjoint-ranges/B/sample.json": "98b6432cb316de5884c09200962094e4e67e86ffefb725fc89a92617983487c4",
+        "measurements/round-03/ipv6-disjoint-ranges/C/sample.json": "cab6cc36e494580ae9ee66cff16123c5de7ff57b30f7e04f48f252c4449f614b",
+        "measurements/round-03/ipv6-disjoint-cidr/B/sample.json": "6723ed98077a94f929fb2720875713bcf867c9088fceb86a0a0edb1225fb42ba",
+        "measurements/round-03/ipv6-disjoint-cidr/C/sample.json": "730a529be36482d44735d98eeae5d761d70379d6e3d36b8d67632d0c04c43807",
+        "measurements/round-03/mixed-disjoint-ranges/B/sample.json": "8574a6a72a58f89850923c8012ce964abc273688f7c8c8bc7e9b880a0bd5ac8e",
+        "measurements/round-03/mixed-disjoint-ranges/C/sample.json": "621983a714db698122b38217a6ab71bedfd2b12f24d97f6030642a5597537670",
+        "measurements/round-03/mixed-disjoint-cidr/B/sample.json": "79b31713fc6bce533a88ce03168209709c15a26a39b702c28ec404330080d061",
+        "measurements/round-03/mixed-disjoint-cidr/C/sample.json": "cf4698e0d39c53982bea395c2fc3dfd1a6b5495927c6ee2d72cc7eef10196375",
+        "measurements/round-03/mixed-permuted-ranges/B/sample.json": "4d62194ee492e0e59f03c4e3f174f5f86d2b73ef13a3ca76bc9525b07d38dcaf",
+        "measurements/round-03/mixed-permuted-ranges/C/sample.json": "4e2467ad520838b23048ea698bd92735f6b0783fc257cdd7a7ae2457c5fd4739",
+        "measurements/round-03/mixed-permuted-cidr/B/sample.json": "f90d78b4073778dc6153573a7bb3ae8383e2b8532a13a06a24fabbc6b462e463",
+        "measurements/round-03/mixed-permuted-cidr/C/sample.json": "b89e5349fca782229f3e50b40139ed666ee007eadcca252a3b6b6f664fe46916",
+        "measurements/round-03/mixed-overlap-ranges/B/sample.json": "46a182d78d005d827a260ae43f4e89ae2420ff170307843d77bea3e427b77f83",
+        "measurements/round-03/mixed-overlap-ranges/C/sample.json": "7cb0d152fb57abd38c41c884bce804bde1cfb21953edce5dd4efe6dcf83d121b",
+        "measurements/round-03/mixed-overlap-cidr/B/sample.json": "a954485bc18d134fc8b642a43a37786e49454099cae5b4370fef9d13963de6ab",
+        "measurements/round-03/mixed-overlap-cidr/C/sample.json": "46d801469d00779ad812aaaf3eab6ceb186088281b677c739d732b4791ee0a6a",
+        "measurements/round-03/range-derived-mixed-ranges/B/sample.json": "2a824d3e1d96d4b85e6687e5bf64e4cbd8a165d6d86828d5c9c6f0de6c37f898",
+        "measurements/round-03/range-derived-mixed-ranges/C/sample.json": "bcf7252bc2024faf9f76cc6000e3b1dcaac641b9898674e5766f0c09880aa1d2",
+        "measurements/round-03/range-derived-mixed-cidr/B/sample.json": "9427e61e3115f008684adcde711f09f9f6377a4181c9a320fadad07e0bea611c",
+        "measurements/round-03/range-derived-mixed-cidr/C/sample.json": "66857517c6bbb970d07c83413c8699aba3b6a7d06a2ba752477f80057009e7dd",
+        "measurements/round-03/ipv4-disjoint-ranges/B/sample.json": "9000093e9d9574c422e87c6cf8f468e6315665c0e1d8aa6bc212a7f58175b48c",
+        "measurements/round-03/ipv4-disjoint-ranges/C/sample.json": "c78b8ceb6d9bdf752b1ba0efd43c3aa462c4bec33b53d1fc81e08f236f44e2c4",
+        "measurements/round-03/ipv4-disjoint-cidr/B/sample.json": "660df284a3104ceae73b3570380d98e1da7b4fc63e32c1d652e27e011009f872",
+        "measurements/round-03/ipv4-disjoint-cidr/C/sample.json": "8163fd127d987e6903ffae75d66e25ac4904ded8b8b77c8c08efa548014bea0e",
+        "measurements/round-04/ipv6-disjoint-cidr/C/sample.json": "f87e305128e4606642a56847d344cb59ffaff652689acd7ba9df959e455e6706",
+        "measurements/round-04/ipv6-disjoint-cidr/B/sample.json": "1dc90abd624023af2904f4b80c9d995db48e8e2c912ca81d850ae1c9268e149c",
+        "measurements/round-04/mixed-disjoint-ranges/C/sample.json": "f58010517b43ef23058e8b2b4c2da0c4e416dd669445f7dcfe8a933e8cbb7a89",
+        "measurements/round-04/mixed-disjoint-ranges/B/sample.json": "91e83668c19f45de427f010410419366ece3b19e16a6fa4737d50500ecd606bd",
+        "measurements/round-04/mixed-disjoint-cidr/C/sample.json": "b5942006546f414979748e77edc4f3d2fa1edb93e5a61c868e609e12b5baf3ed",
+        "measurements/round-04/mixed-disjoint-cidr/B/sample.json": "bb3541abe599a3b0ebf80243d02151f5d35249f7fc3cfe7b9bac71c8410ceffb",
+        "measurements/round-04/mixed-permuted-ranges/C/sample.json": "c01854ecf06856d955d11b0609bf48b2567642205f057b525e4872944ba16a05",
+        "measurements/round-04/mixed-permuted-ranges/B/sample.json": "f9896f7ce1f8d0f129a344a444bbd6f098fd8e0bf76361bf93ea0a2193de1713",
+        "measurements/round-04/mixed-permuted-cidr/C/sample.json": "8112b774690235b402210f87768bc2c06ca629189ece992b1ad67a4b70a282f6",
+        "measurements/round-04/mixed-permuted-cidr/B/sample.json": "8377a352157a58959b4944526d0fd70c9c5b0f906b812746a73303ad2dbaec08",
+        "measurements/round-04/mixed-overlap-ranges/C/sample.json": "8414131ba8f4671c1369474578d2ba0ec7d2ddaa351c4d5bfa09add3f8fab319",
+        "measurements/round-04/mixed-overlap-ranges/B/sample.json": "60fb87ec0270f5cb34d4bb476b42ba8ea143643cd656a55289765ddcfc16de28",
+        "measurements/round-04/mixed-overlap-cidr/C/sample.json": "4b5d5fcb64cda8b307d3cfbe81f782b5a6a3dccc9f87cf0822f704443dd65f5d",
+        "measurements/round-04/mixed-overlap-cidr/B/sample.json": "fdfe743c898ecb93ffbe9d6dfd71bdbc9a127ef22b2e9f67658640b6db3662d5",
+        "measurements/round-04/range-derived-mixed-ranges/C/sample.json": "da683446411ec500ec245c5a160c0563be0758e462413cb196357d58abcf9557",
+        "measurements/round-04/range-derived-mixed-ranges/B/sample.json": "43470bc3d57cc7ae1c3306b6544b77536f6206648b6b2c23474c492df951f791",
+        "measurements/round-04/range-derived-mixed-cidr/C/sample.json": "48ff9a90c91dd6c4ecf297e49b756e9b38b15634f6ff283c1d5d84ffea9f6491",
+        "measurements/round-04/range-derived-mixed-cidr/B/sample.json": "d26edee45fada302cb57edcbc56cb10aaeb5ae3e17d10139c45676bc93a6e20f",
+        "measurements/round-04/ipv4-disjoint-ranges/C/sample.json": "17d8a22904a654c3cc07453cad8d2bbabcc625be253669432b8263653dbf912c",
+        "measurements/round-04/ipv4-disjoint-ranges/B/sample.json": "072d40bd4c4eab14c320c9b07a92443b231a44d827c87fb5a5d58d99f127d98f",
+        "measurements/round-04/ipv4-disjoint-cidr/C/sample.json": "c493e06a84fb311f623a7ee9d339a97132a72e5f30f0f6c142c5600714b85a1b",
+        "measurements/round-04/ipv4-disjoint-cidr/B/sample.json": "c01bdc1ccfff0a327b688e57fef87bdc559ce2a6e9373eb2b6043dae961e3ee4",
+        "measurements/round-04/ipv6-disjoint-ranges/C/sample.json": "7490c0fcec193b405dd287c83b5fa96396e9ef49a251a781668955ed75c877a3",
+        "measurements/round-04/ipv6-disjoint-ranges/B/sample.json": "1997d1f77b68fba2bb466b925caa1325dba5663e2607573bef411589bcab9c5f",
+        "measurements/round-05/mixed-disjoint-ranges/B/sample.json": "ce72b2fa841805f5bf9c58f179bc8e631d5b4e655eff3dfe38cdc7487014a381",
+        "measurements/round-05/mixed-disjoint-ranges/C/sample.json": "b942b22fc8a2d007eab38b0d4e783941f99a89a22f8dd2af734b88989803ea36",
+        "measurements/round-05/mixed-disjoint-cidr/B/sample.json": "1692352566a598b9f4e2faf8535750b5533f634153f7f8f890e7108eaea3ea50",
+        "measurements/round-05/mixed-disjoint-cidr/C/sample.json": "a4ec993fb2aa9d1d745d6aa2eec478f98f05307c49ea231724a85267d0da70c5",
+        "measurements/round-05/mixed-permuted-ranges/B/sample.json": "eb7f776412740010dede6d79c83e2055fd6ebec1e823ef028cae36313659b880",
+        "measurements/round-05/mixed-permuted-ranges/C/sample.json": "351ca2f9cc475dc158de7ddadd4eee0745057f6534d3d40824603a379d4378db",
+        "measurements/round-05/mixed-permuted-cidr/B/sample.json": "8fb534cb1849dc5531ba1acef04acacc55a130fee86bd1955ac50c8c567be25a",
+        "measurements/round-05/mixed-permuted-cidr/C/sample.json": "018ca5c5926107486002d1ead9db7516b824a0217c2894b8af7c5c97768d720c",
+        "measurements/round-05/mixed-overlap-ranges/B/sample.json": "1d5dc278a4d35a1b2868bc21512f106bd66e1a977dc6fc546ec28a8a2bf45449",
+        "measurements/round-05/mixed-overlap-ranges/C/sample.json": "ae56477ef4b6bdac5a730c63518bd5a8a3788a5e564c0622ffa789212202dd72",
+        "measurements/round-05/mixed-overlap-cidr/B/sample.json": "f6f23db466fd368e0343a026bb02cc6fa29f6151934f11542d450334d9ec3a46",
+        "measurements/round-05/mixed-overlap-cidr/C/sample.json": "741bf00695abe887f554818c9340317e8245e9b2af6f45e16641edd037f7b593",
+        "measurements/round-05/range-derived-mixed-ranges/B/sample.json": "c9b21aa7e32bad3310d10b29e55356616bec7d24d35eb17e0549aaee7d9604ed",
+        "measurements/round-05/range-derived-mixed-ranges/C/sample.json": "25f4db2d751cc716218fededc11b874a0da805a09ce4e1abea914559a3d3645e",
+        "measurements/round-05/range-derived-mixed-cidr/B/sample.json": "fab3d380dc7b4ac3dd59a42dc8039c265bb0f8a24c21b92063474028d9c654d3",
+        "measurements/round-05/range-derived-mixed-cidr/C/sample.json": "cd3f91ed31eb8e6815c7bfb9ed454b24a1a1ec8916d4bbb42ff7956e33ee1829",
+        "measurements/round-05/ipv4-disjoint-ranges/B/sample.json": "0de0c630ab475e808253fa14fbfc3fdace3e9d17e462cde05aff1989bf8de638",
+        "measurements/round-05/ipv4-disjoint-ranges/C/sample.json": "f88bb7999798dfc6d59b28102363b3e63c9aaf0ba8860e36f83e5ba195e2276c",
+        "measurements/round-05/ipv4-disjoint-cidr/B/sample.json": "f2bae1de6c5572d1bc633a5e46ddc0070dcc0df4acf21d91949baff929c5d760",
+        "measurements/round-05/ipv4-disjoint-cidr/C/sample.json": "7db1150be6975c6614804b31507526800e28a34f32f0fa28e924eafe02313272",
+        "measurements/round-05/ipv6-disjoint-ranges/B/sample.json": "2dfad98fcef98c7a0cc3b7ed9058f7e34dae3e50863cfc0a963371a54a74acb8",
+        "measurements/round-05/ipv6-disjoint-ranges/C/sample.json": "40a42a553d529696c3ebe1452a769de634e1e41b0b1168baefd0b85c7d705911",
+        "measurements/round-05/ipv6-disjoint-cidr/B/sample.json": "db9335aec56c6bf5d218f9785da668a5233466c38ec20f4d90583182736b1a94",
+        "measurements/round-05/ipv6-disjoint-cidr/C/sample.json": "041bf22e24389cac2239bd8736e4b41b7167fb7ecb0c2767ccd9a558978f4347",
+        "measurements/round-06/mixed-disjoint-cidr/C/sample.json": "753a3c2ff0f82b2a550228fe6e6121dd1696038110fc2b645ee9ddf80d6a8e26",
+        "measurements/round-06/mixed-disjoint-cidr/B/sample.json": "a528360f876442cb9883cb18a6131394feee767398319c8057b8aa16904ed7a5",
+        "measurements/round-06/mixed-permuted-ranges/C/sample.json": "fc2aafdacc456f3780cd5e229751b86eab610dacdff70a1198e2580447599bb9",
+        "measurements/round-06/mixed-permuted-ranges/B/sample.json": "f660b17950ae8a1c4a4ad1fb08089a2155d20385e230d05189d9002a9c42504c",
+        "measurements/round-06/mixed-permuted-cidr/C/sample.json": "3629eaefaaee65c8e6c8f4762f90580c88d8ac01988e46f4e63c10e41b9fde80",
+        "measurements/round-06/mixed-permuted-cidr/B/sample.json": "24cbc7e8e82d777c36145200d1c5f664fc15e74b99cc6959857e939891eb9abc",
+        "measurements/round-06/mixed-overlap-ranges/C/sample.json": "bd1ced44aaa2e39739bdcef07b92dd596bec2b82c05d64d980b7cd95994b391c",
+        "measurements/round-06/mixed-overlap-ranges/B/sample.json": "d5b3e5db4355ad1322ba9547dc1ef8ab3aabffecf35908935acb71d7ac8016a0",
+        "measurements/round-06/mixed-overlap-cidr/C/sample.json": "2b225d27b64d83c470367925f9596dc6ed7e95bffada19919d734ede56f1aadc",
+        "measurements/round-06/mixed-overlap-cidr/B/sample.json": "aca3f4e62131aeddb560c8dca28be6a06efca3670d6bd11b05267db346c66817",
+        "measurements/round-06/range-derived-mixed-ranges/C/sample.json": "43918164a169f9129a019b8857732e1a38837a6ba932e708912a94033b216197",
+        "measurements/round-06/range-derived-mixed-ranges/B/sample.json": "1b1601bf4b0f92e284b75c43d3ad6f9c7fbc45f868adb8865100dbd28182d43b",
+        "measurements/round-06/range-derived-mixed-cidr/C/sample.json": "d62fc75336b98764a0c86853dab76c295d530117644e44cc7837047d911156b1",
+        "measurements/round-06/range-derived-mixed-cidr/B/sample.json": "da3b84d9c7c08a7bff6e265b7c53d6b8a751b652391100061d403af7ca353f35",
+        "measurements/round-06/ipv4-disjoint-ranges/C/sample.json": "7bca6b16ca7fe6d80ab39334736a6c4a626e69eeabe7f4c4d7dc401cbe1a6407",
+        "measurements/round-06/ipv4-disjoint-ranges/B/sample.json": "d0e851af99b4b3903f81249d69ce370d3c561c576a857487ebd0bce1a1527aee",
+        "measurements/round-06/ipv4-disjoint-cidr/C/sample.json": "a92a3d35389e0e39b6841010540ac0dc4a6517107fe6c8242c4eb93e8014b3fc",
+        "measurements/round-06/ipv4-disjoint-cidr/B/sample.json": "0a42d621c7597b4a14bbc6a8409774454902b0742efa04cdd34525d759e8140f",
+        "measurements/round-06/ipv6-disjoint-ranges/C/sample.json": "74ab84d44575b5b4795dee5240049ff205cbee514ecf8af3652d50cdc6272c66",
+        "measurements/round-06/ipv6-disjoint-ranges/B/sample.json": "686c52e860a6adbc05ccdc0949bcd1cf3362cd430eaf4df5059c6a4d28ae796b",
+        "measurements/round-06/ipv6-disjoint-cidr/C/sample.json": "aba7ddab770ec47a7a76d168c2f4635aa0095c357ec77e4cda27e68563e388d3",
+        "measurements/round-06/ipv6-disjoint-cidr/B/sample.json": "c5381aafba08669ed19a1d5c3bc54629730a4c263138695bf8863cb0eb214d12",
+        "measurements/round-06/mixed-disjoint-ranges/C/sample.json": "7afc4e6bee6480f90137a4e19fd0e692844a0a30187425f3a87ce2679aac6181",
+        "measurements/round-06/mixed-disjoint-ranges/B/sample.json": "cac0e9e08d3541d4a75fa0eba2e60b65447fde427616420b8fde553440e876b1"
+      },
+      "paired_results": {
+        "ipv4-disjoint-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1035678001,
+                "cpu_seconds": 1.0326199999999999,
+                "peak_rss_bytes": 55279616
+              },
+              "C": {
+                "elapsed_ns": 835587618,
+                "cpu_seconds": 0.8328869999999999,
+                "peak_rss_bytes": 55472128
+              },
+              "elapsed_change_pct": -19.319748300804164,
+              "cpu_change_pct": -19.342352462667776,
+              "rss_change_pct": 0.3482513337285109
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1073642604,
+                "cpu_seconds": 1.071192,
+                "peak_rss_bytes": 55427072
+              },
+              "C": {
+                "elapsed_ns": 745460934,
+                "cpu_seconds": 0.742722,
+                "peak_rss_bytes": 55418880
+              },
+              "elapsed_change_pct": -30.567124364971644,
+              "cpu_change_pct": -30.66397060470951,
+              "rss_change_pct": -0.014779781259233182
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1083069890,
+                "cpu_seconds": 1.080016,
+                "peak_rss_bytes": 55242752
+              },
+              "C": {
+                "elapsed_ns": 782062755,
+                "cpu_seconds": 0.779153,
+                "peak_rss_bytes": 55394304
+              },
+              "elapsed_change_pct": -27.792032423687818,
+              "cpu_change_pct": -27.857272484852082,
+              "rss_change_pct": 0.2743382516497306
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1028915669,
+                "cpu_seconds": 1.026055,
+                "peak_rss_bytes": 55369728
+              },
+              "C": {
+                "elapsed_ns": 856709701,
+                "cpu_seconds": 0.853849,
+                "peak_rss_bytes": 55386112
+              },
+              "elapsed_change_pct": -16.736645498592363,
+              "cpu_change_pct": -16.783310836163757,
+              "rss_change_pct": 0.029590176061544682
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1070578605,
+                "cpu_seconds": 1.0682770000000001,
+                "peak_rss_bytes": 55517184
+              },
+              "C": {
+                "elapsed_ns": 745278398,
+                "cpu_seconds": 0.742257,
+                "peak_rss_bytes": 55459840
+              },
+              "elapsed_change_pct": -30.38545749753705,
+              "cpu_change_pct": -30.5183019010987,
+              "rss_change_pct": -0.10329054153754846
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1048114525,
+                "cpu_seconds": 1.04538,
+                "peak_rss_bytes": 55521280
+              },
+              "C": {
+                "elapsed_ns": 855118174,
+                "cpu_seconds": 0.852309,
+                "peak_rss_bytes": 55533568
+              },
+              "elapsed_change_pct": -18.41367010918964,
+              "cpu_change_pct": -18.4689777879814,
+              "rss_change_pct": 0.022132054592405304
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -23.55589036224599,
+            "cpu": -23.59981247375993,
+            "rss": 0.025861115326974993
+          }
+        },
+        "ipv4-disjoint-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 788571341,
+                "cpu_seconds": 0.7856749999999999,
+                "peak_rss_bytes": 45547520
+              },
+              "C": {
+                "elapsed_ns": 738359894,
+                "cpu_seconds": 0.7355959999999999,
+                "peak_rss_bytes": 45625344
+              },
+              "elapsed_change_pct": -6.367394348408107,
+              "cpu_change_pct": -6.3740096095713845,
+              "rss_change_pct": 0.17086330935252025
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 801915507,
+                "cpu_seconds": 0.799287,
+                "peak_rss_bytes": 45633536
+              },
+              "C": {
+                "elapsed_ns": 740975290,
+                "cpu_seconds": 0.738065,
+                "peak_rss_bytes": 45498368
+              },
+              "elapsed_change_pct": -7.599331409362553,
+              "cpu_change_pct": -7.659576597642648,
+              "rss_change_pct": -0.29620321335607214
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 797318414,
+                "cpu_seconds": 0.79455,
+                "peak_rss_bytes": 45715456
+              },
+              "C": {
+                "elapsed_ns": 736429588,
+                "cpu_seconds": 0.733585,
+                "peak_rss_bytes": 45551616
+              },
+              "elapsed_change_pct": -7.636701339246887,
+              "cpu_change_pct": -7.672896608142965,
+              "rss_change_pct": -0.3583908251948764
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 796391365,
+                "cpu_seconds": 0.793364,
+                "peak_rss_bytes": 45711360
+              },
+              "C": {
+                "elapsed_ns": 814256741,
+                "cpu_seconds": 0.81151,
+                "peak_rss_bytes": 45559808
+              },
+              "elapsed_change_pct": 2.243291023126548,
+              "cpu_change_pct": 2.287222510726483,
+              "rss_change_pct": -0.33154121863798736
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 808904026,
+                "cpu_seconds": 0.806114,
+                "peak_rss_bytes": 45502464
+              },
+              "C": {
+                "elapsed_ns": 740389870,
+                "cpu_seconds": 0.73742,
+                "peak_rss_bytes": 45465600
+              },
+              "elapsed_change_pct": -8.46999814536712,
+              "cpu_change_pct": -8.521623492458886,
+              "rss_change_pct": -0.08101539292465487
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 808050307,
+                "cpu_seconds": 0.8050419999999999,
+                "peak_rss_bytes": 45428736
+              },
+              "C": {
+                "elapsed_ns": 771649344,
+                "cpu_seconds": 0.7687219999999999,
+                "peak_rss_bytes": 45477888
+              },
+              "elapsed_change_pct": -4.504789204912707,
+              "cpu_change_pct": -4.511565856191357,
+              "rss_change_pct": 0.10819583446037839
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -6.98336287888533,
+            "cpu": -7.016793103607016,
+            "rss": -0.1886093031403635
+          }
+        },
+        "ipv6-disjoint-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 2048301237,
+                "cpu_seconds": 2.044726,
+                "peak_rss_bytes": 117747712
+              },
+              "C": {
+                "elapsed_ns": 1572959840,
+                "cpu_seconds": 1.5691929999999998,
+                "peak_rss_bytes": 117530624
+              },
+              "elapsed_change_pct": -23.206615726903458,
+              "cpu_change_pct": -23.25656347109588,
+              "rss_change_pct": -0.1843670643893236
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 2055123262,
+                "cpu_seconds": 2.0512960000000002,
+                "peak_rss_bytes": 117329920
+              },
+              "C": {
+                "elapsed_ns": 1637899211,
+                "cpu_seconds": 1.634476,
+                "peak_rss_bytes": 117608448
+              },
+              "elapsed_change_pct": -20.301655804040042,
+              "cpu_change_pct": -20.319836825109594,
+              "rss_change_pct": 0.23738872403560318
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 2005614351,
+                "cpu_seconds": 2.001696,
+                "peak_rss_bytes": 117424128
+              },
+              "C": {
+                "elapsed_ns": 1648876065,
+                "cpu_seconds": 1.645676,
+                "peak_rss_bytes": 117436416
+              },
+              "elapsed_change_pct": -17.78698311677568,
+              "cpu_change_pct": -17.785917541924444,
+              "rss_change_pct": 0.010464629552120464
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 2022029323,
+                "cpu_seconds": 2.0185809999999997,
+                "peak_rss_bytes": 117514240
+              },
+              "C": {
+                "elapsed_ns": 1568459579,
+                "cpu_seconds": 1.565272,
+                "peak_rss_bytes": 117485568
+              },
+              "elapsed_change_pct": -22.431412781247783,
+              "cpu_change_pct": -22.45681496060846,
+              "rss_change_pct": -0.02439874520738794
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1999015029,
+                "cpu_seconds": 1.995409,
+                "peak_rss_bytes": 117522432
+              },
+              "C": {
+                "elapsed_ns": 1670816224,
+                "cpu_seconds": 1.667453,
+                "peak_rss_bytes": 117661696
+              },
+              "elapsed_change_pct": -16.418025889689293,
+              "cpu_change_pct": -16.43552775395921,
+              "rss_change_pct": 0.11849993029415806
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 2090187880,
+                "cpu_seconds": 2.0865989999999996,
+                "peak_rss_bytes": 117514240
+              },
+              "C": {
+                "elapsed_ns": 1576226886,
+                "cpu_seconds": 1.572902,
+                "peak_rss_bytes": 117485568
+              },
+              "elapsed_change_pct": -24.589224677735665,
+              "cpu_change_pct": -24.618865436051664,
+              "rss_change_pct": -0.02439874520738794
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -21.366534292643912,
+            "cpu": -21.38832589285903,
+            "rss": -0.006967057827633738
+          }
+        },
+        "ipv6-disjoint-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1657652853,
+                "cpu_seconds": 1.654329,
+                "peak_rss_bytes": 117403648
+              },
+              "C": {
+                "elapsed_ns": 1642653322,
+                "cpu_seconds": 1.6394469999999999,
+                "peak_rss_bytes": 117379072
+              },
+              "elapsed_change_pct": -0.9048656341316574,
+              "cpu_change_pct": -0.8995792251722645,
+              "rss_change_pct": -0.020932910023374607
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1669807248,
+                "cpu_seconds": 1.6665539999999999,
+                "peak_rss_bytes": 117547008
+              },
+              "C": {
+                "elapsed_ns": 1512625803,
+                "cpu_seconds": 1.508148,
+                "peak_rss_bytes": 117522432
+              },
+              "elapsed_change_pct": -9.413149043894919,
+              "cpu_change_pct": -9.50500253817157,
+              "rss_change_pct": -0.020907380305246193
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1650837440,
+                "cpu_seconds": 1.647695,
+                "peak_rss_bytes": 117399552
+              },
+              "C": {
+                "elapsed_ns": 1539058512,
+                "cpu_seconds": 1.5358029999999998,
+                "peak_rss_bytes": 117633024
+              },
+              "elapsed_change_pct": -6.771043913324382,
+              "cpu_change_pct": -6.790819902955347,
+              "rss_change_pct": 0.19886958342054672
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1721568281,
+                "cpu_seconds": 1.718235,
+                "peak_rss_bytes": 117354496
+              },
+              "C": {
+                "elapsed_ns": 1618606400,
+                "cpu_seconds": 1.614978,
+                "peak_rss_bytes": 117477376
+              },
+              "elapsed_change_pct": -5.980702719510667,
+              "cpu_change_pct": -6.009480658931987,
+              "rss_change_pct": 0.1047083871418053
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1677564752,
+                "cpu_seconds": 1.6742679999999999,
+                "peak_rss_bytes": 117682176
+              },
+              "C": {
+                "elapsed_ns": 1522446470,
+                "cpu_seconds": 1.519578,
+                "peak_rss_bytes": 117571584
+              },
+              "elapsed_change_pct": -9.246634552560028,
+              "cpu_change_pct": -9.239261575805058,
+              "rss_change_pct": -0.09397514879398994
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1764171000,
+                "cpu_seconds": 1.7606249999999999,
+                "peak_rss_bytes": 117530624
+              },
+              "C": {
+                "elapsed_ns": 1500794983,
+                "cpu_seconds": 1.497229,
+                "peak_rss_bytes": 117678080
+              },
+              "elapsed_change_pct": -14.929165993545979,
+              "cpu_change_pct": -14.960369187078449,
+              "rss_change_pct": 0.1254617690109372
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -8.008839232942204,
+            "cpu": -8.015040739380202,
+            "rss": 0.041900503418279555
+          }
+        },
+        "mixed-disjoint-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1658293875,
+                "cpu_seconds": 1.65488,
+                "peak_rss_bytes": 90587136
+              },
+              "C": {
+                "elapsed_ns": 1306287130,
+                "cpu_seconds": 1.3024799999999999,
+                "peak_rss_bytes": 90533888
+              },
+              "elapsed_change_pct": -21.22704246254301,
+              "cpu_change_pct": -21.294595378516878,
+              "rss_change_pct": -0.05878097305118679
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1674508658,
+                "cpu_seconds": 1.6712520000000002,
+                "peak_rss_bytes": 90537984
+              },
+              "C": {
+                "elapsed_ns": 1259573999,
+                "cpu_seconds": 1.256538,
+                "peak_rss_bytes": 90546176
+              },
+              "elapsed_change_pct": -24.779487225559627,
+              "cpu_change_pct": -24.814570154590697,
+              "rss_change_pct": 0.009048136083955605
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1669275905,
+                "cpu_seconds": 1.6662430000000001,
+                "peak_rss_bytes": 90562560
+              },
+              "C": {
+                "elapsed_ns": 1264261275,
+                "cpu_seconds": 1.261098,
+                "peak_rss_bytes": 90390528
+              },
+              "elapsed_change_pct": -24.262893197395073,
+              "cpu_change_pct": -24.314880842710217,
+              "rss_change_pct": -0.1899592944369033
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1664732711,
+                "cpu_seconds": 1.661248,
+                "peak_rss_bytes": 90435584
+              },
+              "C": {
+                "elapsed_ns": 1292469647,
+                "cpu_seconds": 1.2892080000000001,
+                "peak_rss_bytes": 90468352
+              },
+              "elapsed_change_pct": -22.361731798757212,
+              "cpu_change_pct": -22.395211311014364,
+              "rss_change_pct": 0.036233525069073735
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1693310948,
+                "cpu_seconds": 1.6902959999999998,
+                "peak_rss_bytes": 90521600
+              },
+              "C": {
+                "elapsed_ns": 1291415018,
+                "cpu_seconds": 1.288819,
+                "peak_rss_bytes": 90472448
+              },
+              "elapsed_change_pct": -23.734325374479305,
+              "cpu_change_pct": -23.751875411170587,
+              "rss_change_pct": -0.05429864253393424
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1726880803,
+                "cpu_seconds": 1.723514,
+                "peak_rss_bytes": 90554368
+              },
+              "C": {
+                "elapsed_ns": 1263768477,
+                "cpu_seconds": 1.2607599999999999,
+                "peak_rss_bytes": 90333184
+              },
+              "elapsed_change_pct": -26.817851307135065,
+              "cpu_change_pct": -26.84944827834297,
+              "rss_change_pct": -0.24425547313189355
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -23.99860928593719,
+            "cpu": -24.033378126940402,
+            "rss": -0.056539807792560515
+          }
+        },
+        "mixed-disjoint-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1279749800,
+                "cpu_seconds": 1.276527,
+                "peak_rss_bytes": 81641472
+              },
+              "C": {
+                "elapsed_ns": 1208606402,
+                "cpu_seconds": 1.205624,
+                "peak_rss_bytes": 81539072
+              },
+              "elapsed_change_pct": -5.55916461170769,
+              "cpu_change_pct": -5.554367436019758,
+              "rss_change_pct": -0.12542644992976637
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1279536795,
+                "cpu_seconds": 1.2767789999999999,
+                "peak_rss_bytes": 81649664
+              },
+              "C": {
+                "elapsed_ns": 1212986847,
+                "cpu_seconds": 1.209741,
+                "peak_rss_bytes": 81616896
+              },
+              "elapsed_change_pct": -5.201096854741094,
+              "cpu_change_pct": -5.250556282645624,
+              "rss_change_pct": -0.040132437042239566
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1285819759,
+                "cpu_seconds": 1.28247,
+                "peak_rss_bytes": 81539072
+              },
+              "C": {
+                "elapsed_ns": 1261755341,
+                "cpu_seconds": 1.2586529999999998,
+                "peak_rss_bytes": 81551360
+              },
+              "elapsed_change_pct": -1.871523425547239,
+              "cpu_change_pct": -1.8571194647828193,
+              "rss_change_pct": 0.01507007585270781
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1238680204,
+                "cpu_seconds": 1.235773,
+                "peak_rss_bytes": 81592320
+              },
+              "C": {
+                "elapsed_ns": 1190408856,
+                "cpu_seconds": 1.1872859999999998,
+                "peak_rss_bytes": 81539072
+              },
+              "elapsed_change_pct": -3.896998421716924,
+              "cpu_change_pct": -3.9236170396990566,
+              "rss_change_pct": -0.06526104417671208
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1287111495,
+                "cpu_seconds": 1.2838559999999999,
+                "peak_rss_bytes": 81387520
+              },
+              "C": {
+                "elapsed_ns": 1275711701,
+                "cpu_seconds": 1.273014,
+                "peak_rss_bytes": 81539072
+              },
+              "elapsed_change_pct": -0.885688150893249,
+              "cpu_change_pct": -0.8444872322129426,
+              "rss_change_pct": 0.18621036738801777
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1263692369,
+                "cpu_seconds": 1.260297,
+                "peak_rss_bytes": 81653760
+              },
+              "C": {
+                "elapsed_ns": 1187759312,
+                "cpu_seconds": 1.185022,
+                "peak_rss_bytes": 81539072
+              },
+              "elapsed_change_pct": -6.00882452586845,
+              "cpu_change_pct": -5.972798475280028,
+              "rss_change_pct": -0.1404564835716049
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -4.549047638229009,
+            "cpu": -4.58708666117234,
+            "rss": -0.05269674060947582
+          }
+        },
+        "mixed-permuted-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 2090017583,
+                "cpu_seconds": 2.086293,
+                "peak_rss_bytes": 98299904
+              },
+              "C": {
+                "elapsed_ns": 1793122553,
+                "cpu_seconds": 1.789366,
+                "peak_rss_bytes": 98283520
+              },
+              "elapsed_change_pct": -14.205384319008385,
+              "cpu_change_pct": -14.232277057920427,
+              "rss_change_pct": -0.016667361140043635
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 2089612479,
+                "cpu_seconds": 2.08614,
+                "peak_rss_bytes": 98402304
+              },
+              "C": {
+                "elapsed_ns": 1739919389,
+                "cpu_seconds": 1.736315,
+                "peak_rss_bytes": 98357248
+              },
+              "elapsed_change_pct": -16.734829711935305,
+              "cpu_change_pct": -16.769008791356278,
+              "rss_change_pct": -0.045787545787545625
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 2159403701,
+                "cpu_seconds": 2.15556,
+                "peak_rss_bytes": 98332672
+              },
+              "C": {
+                "elapsed_ns": 1750299769,
+                "cpu_seconds": 1.747137,
+                "peak_rss_bytes": 98304000
+              },
+              "elapsed_change_pct": -18.945226953651495,
+              "cpu_change_pct": -18.947419696041866,
+              "rss_change_pct": -0.029158162202691518
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 2103895526,
+                "cpu_seconds": 2.10046,
+                "peak_rss_bytes": 98422784
+              },
+              "C": {
+                "elapsed_ns": 1720024234,
+                "cpu_seconds": 1.7175900000000002,
+                "peak_rss_bytes": 98463744
+              },
+              "elapsed_change_pct": -18.245739261104355,
+              "cpu_change_pct": -18.227911981185063,
+              "rss_change_pct": 0.041616380207254444
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 2107175624,
+                "cpu_seconds": 2.103774,
+                "peak_rss_bytes": 98246656
+              },
+              "C": {
+                "elapsed_ns": 1698132264,
+                "cpu_seconds": 1.6947349999999999,
+                "peak_rss_bytes": 98324480
+              },
+              "elapsed_change_pct": -19.411925391559105,
+              "cpu_change_pct": -19.443105580732535,
+              "rss_change_pct": 0.07921287417660405
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 2200384126,
+                "cpu_seconds": 2.196611,
+                "peak_rss_bytes": 98304000
+              },
+              "C": {
+                "elapsed_ns": 1726477085,
+                "cpu_seconds": 1.7229379999999999,
+                "peak_rss_bytes": 98320384
+              },
+              "elapsed_change_pct": -21.537468635601307,
+              "cpu_change_pct": -21.563808976646303,
+              "rss_change_pct": 0.01666666666666483
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -18.595483107377923,
+            "cpu": -18.587665838613464,
+            "rss": -3.4723668940195296e-07
+          }
+        },
+        "mixed-permuted-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1715470153,
+                "cpu_seconds": 1.712291,
+                "peak_rss_bytes": 89456640
+              },
+              "C": {
+                "elapsed_ns": 1638459589,
+                "cpu_seconds": 1.6353220000000002,
+                "peak_rss_bytes": 89370624
+              },
+              "elapsed_change_pct": -4.4891812233121335,
+              "cpu_change_pct": -4.495088743677322,
+              "rss_change_pct": -0.09615384615384581
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1733546354,
+                "cpu_seconds": 1.73007,
+                "peak_rss_bytes": 89448448
+              },
+              "C": {
+                "elapsed_ns": 1599242238,
+                "cpu_seconds": 1.596136,
+                "peak_rss_bytes": 89329664
+              },
+              "elapsed_change_pct": -7.747362260611346,
+              "cpu_change_pct": -7.741536469622612,
+              "rss_change_pct": -0.13279604359373032
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1686881961,
+                "cpu_seconds": 1.6834289999999998,
+                "peak_rss_bytes": 89423872
+              },
+              "C": {
+                "elapsed_ns": 1610276034,
+                "cpu_seconds": 1.606973,
+                "peak_rss_bytes": 89354240
+              },
+              "elapsed_change_pct": -4.541273709192273,
+              "cpu_change_pct": -4.541682482599496,
+              "rss_change_pct": -0.07786735067790707
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1788393571,
+                "cpu_seconds": 1.784804,
+                "peak_rss_bytes": 89452544
+              },
+              "C": {
+                "elapsed_ns": 1707772314,
+                "cpu_seconds": 1.704335,
+                "peak_rss_bytes": 89350144
+              },
+              "elapsed_change_pct": -4.508026550046241,
+              "cpu_change_pct": -4.50856228471026,
+              "rss_change_pct": -0.11447410595722962
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1732195367,
+                "cpu_seconds": 1.7286569999999999,
+                "peak_rss_bytes": 89137152
+              },
+              "C": {
+                "elapsed_ns": 1647151503,
+                "cpu_seconds": 1.643916,
+                "peak_rss_bytes": 89481216
+              },
+              "elapsed_change_pct": -4.909600015111925,
+              "cpu_change_pct": -4.902129225173068,
+              "rss_change_pct": 0.3859939343810348
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1719741328,
+                "cpu_seconds": 1.716297,
+                "peak_rss_bytes": 89440256
+              },
+              "C": {
+                "elapsed_ns": 1623544399,
+                "cpu_seconds": 1.6203470000000002,
+                "peak_rss_bytes": 89432064
+              },
+              "elapsed_change_pct": -5.5936859476345635,
+              "cpu_change_pct": -5.590524250756124,
+              "rss_change_pct": -0.009159186664220442
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -4.725436862152099,
+            "cpu": -4.721905853886282,
+            "rss": -0.08701059841587644
+          }
+        },
+        "mixed-overlap-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1381776766,
+                "cpu_seconds": 1.379221,
+                "peak_rss_bytes": 71471104
+              },
+              "C": {
+                "elapsed_ns": 1406795311,
+                "cpu_seconds": 1.403641,
+                "peak_rss_bytes": 71417856
+              },
+              "elapsed_change_pct": 1.8106068661455588,
+              "cpu_change_pct": 1.7705646883276804,
+              "rss_change_pct": -0.07450283683878567
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1421419935,
+                "cpu_seconds": 1.418501,
+                "peak_rss_bytes": 71278592
+              },
+              "C": {
+                "elapsed_ns": 1367120626,
+                "cpu_seconds": 1.364531,
+                "peak_rss_bytes": 71475200
+              },
+              "elapsed_change_pct": -3.820075099762832,
+              "cpu_change_pct": -3.8047206170457426,
+              "rss_change_pct": 0.2758303643259463
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1356137642,
+                "cpu_seconds": 1.3531119999999999,
+                "peak_rss_bytes": 71483392
+              },
+              "C": {
+                "elapsed_ns": 1387992194,
+                "cpu_seconds": 1.384902,
+                "peak_rss_bytes": 71577600
+              },
+              "elapsed_change_pct": 2.348917323246158,
+              "cpu_change_pct": 2.349399015011344,
+              "rss_change_pct": 0.13179005271601874
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1382642245,
+                "cpu_seconds": 1.379697,
+                "peak_rss_bytes": 71405568
+              },
+              "C": {
+                "elapsed_ns": 1459809134,
+                "cpu_seconds": 1.45674,
+                "peak_rss_bytes": 71483392
+              },
+              "elapsed_change_pct": 5.581117550766002,
+              "cpu_change_pct": 5.584052150580887,
+              "rss_change_pct": 0.10898869959272695
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1392325081,
+                "cpu_seconds": 1.389139,
+                "peak_rss_bytes": 71278592
+              },
+              "C": {
+                "elapsed_ns": 1397577120,
+                "cpu_seconds": 1.3948470000000002,
+                "peak_rss_bytes": 71458816
+              },
+              "elapsed_change_pct": 0.37721355965432135,
+              "cpu_change_pct": 0.4109020047670109,
+              "rss_change_pct": 0.25284450063212116
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1394130912,
+                "cpu_seconds": 1.390874,
+                "peak_rss_bytes": 71245824
+              },
+              "C": {
+                "elapsed_ns": 1498116064,
+                "cpu_seconds": 1.4947439999999999,
+                "peak_rss_bytes": 71471104
+              },
+              "elapsed_change_pct": 7.458779595585074,
+              "cpu_change_pct": 7.4679661852906865,
+              "rss_change_pct": 0.31620098884672654
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.0797620946958584,
+            "cpu": 2.0599818516695123,
+            "rss": 0.19231727667406995
+          }
+        },
+        "mixed-overlap-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1333719522,
+                "cpu_seconds": 1.330942,
+                "peak_rss_bytes": 71462912
+              },
+              "C": {
+                "elapsed_ns": 1460253805,
+                "cpu_seconds": 1.456955,
+                "peak_rss_bytes": 71598080
+              },
+              "elapsed_change_pct": 9.487323302447702,
+              "cpu_change_pct": 9.467955778689063,
+              "rss_change_pct": 0.18914426548977126
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1362122954,
+                "cpu_seconds": 1.359111,
+                "peak_rss_bytes": 71499776
+              },
+              "C": {
+                "elapsed_ns": 1363147109,
+                "cpu_seconds": 1.3601489999999998,
+                "peak_rss_bytes": 71454720
+              },
+              "elapsed_change_pct": 0.07518814634115412,
+              "cpu_change_pct": 0.07637345294091435,
+              "rss_change_pct": -0.06301558203483104
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1360728760,
+                "cpu_seconds": 1.357675,
+                "peak_rss_bytes": 71602176
+              },
+              "C": {
+                "elapsed_ns": 1396635888,
+                "cpu_seconds": 1.394002,
+                "peak_rss_bytes": 71573504
+              },
+              "elapsed_change_pct": 2.6388159826944424,
+              "cpu_change_pct": 2.675677168689128,
+              "rss_change_pct": -0.04004347577369893
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1378247968,
+                "cpu_seconds": 1.3754849999999998,
+                "peak_rss_bytes": 71606272
+              },
+              "C": {
+                "elapsed_ns": 1369580717,
+                "cpu_seconds": 1.366201,
+                "peak_rss_bytes": 71344128
+              },
+              "elapsed_change_pct": -0.6288600601078498,
+              "cpu_change_pct": -0.6749619225218662,
+              "rss_change_pct": -0.36609083628875716
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1339273701,
+                "cpu_seconds": 1.336046,
+                "peak_rss_bytes": 71471104
+              },
+              "C": {
+                "elapsed_ns": 1364435727,
+                "cpu_seconds": 1.361147,
+                "peak_rss_bytes": 71458816
+              },
+              "elapsed_change_pct": 1.8787814605194075,
+              "cpu_change_pct": 1.8787526776772756,
+              "rss_change_pct": -0.017192962347412077
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1332732588,
+                "cpu_seconds": 1.3290819999999999,
+                "peak_rss_bytes": 71393280
+              },
+              "C": {
+                "elapsed_ns": 1363713749,
+                "cpu_seconds": 1.360774,
+                "peak_rss_bytes": 71372800
+              },
+              "elapsed_change_pct": 2.324634459977659,
+              "cpu_change_pct": 2.3845029877765267,
+              "rss_change_pct": -0.028686173264491632
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.1017079602485333,
+            "cpu": 2.131627832726901,
+            "rss": -0.03436482451909528
+          }
+        },
+        "range-derived-mixed-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1306448984,
+                "cpu_seconds": 1.303609,
+                "peak_rss_bytes": 71602176
+              },
+              "C": {
+                "elapsed_ns": 1190100883,
+                "cpu_seconds": 1.187055,
+                "peak_rss_bytes": 71643136
+              },
+              "elapsed_change_pct": -8.905675033997351,
+              "cpu_change_pct": -8.940871074072065,
+              "rss_change_pct": 0.05720496539098896
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1309261933,
+                "cpu_seconds": 1.3061379999999998,
+                "peak_rss_bytes": 71446528
+              },
+              "C": {
+                "elapsed_ns": 1216708776,
+                "cpu_seconds": 1.213672,
+                "peak_rss_bytes": 71356416
+              },
+              "elapsed_change_pct": -7.069109294877817,
+              "cpu_change_pct": -7.079343836562424,
+              "rss_change_pct": -0.1261250931605784
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1354389399,
+                "cpu_seconds": 1.351432,
+                "peak_rss_bytes": 71368704
+              },
+              "C": {
+                "elapsed_ns": 1131859832,
+                "cpu_seconds": 1.128705,
+                "peak_rss_bytes": 71696384
+              },
+              "elapsed_change_pct": -16.430250204579455,
+              "cpu_change_pct": -16.480814424995106,
+              "rss_change_pct": 0.45913682277318735
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1323672984,
+                "cpu_seconds": 1.320006,
+                "peak_rss_bytes": 71532544
+              },
+              "C": {
+                "elapsed_ns": 1239307545,
+                "cpu_seconds": 1.236266,
+                "peak_rss_bytes": 71602176
+              },
+              "elapsed_change_pct": -6.373586227094896,
+              "cpu_change_pct": -6.343910557982301,
+              "rss_change_pct": 0.09734310581768213
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1304176944,
+                "cpu_seconds": 1.301081,
+                "peak_rss_bytes": 71536640
+              },
+              "C": {
+                "elapsed_ns": 1234447374,
+                "cpu_seconds": 1.231083,
+                "peak_rss_bytes": 71512064
+              },
+              "elapsed_change_pct": -5.346634160402697,
+              "cpu_change_pct": -5.379987871623671,
+              "rss_change_pct": -0.03435442313197701
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1329815088,
+                "cpu_seconds": 1.326732,
+                "peak_rss_bytes": 71553024
+              },
+              "C": {
+                "elapsed_ns": 1163891066,
+                "cpu_seconds": 1.160862,
+                "peak_rss_bytes": 71413760
+              },
+              "elapsed_change_pct": -12.477225104246969,
+              "cpu_change_pct": -12.502148135418455,
+              "rss_change_pct": -0.19463048829354568
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -7.987392164437584,
+            "cpu": -8.010107455317245,
+            "rss": 0.011425271129505976
+          }
+        },
+        "range-derived-mixed-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1311733077,
+                "cpu_seconds": 1.308435,
+                "peak_rss_bytes": 83648512
+              },
+              "C": {
+                "elapsed_ns": 1253244757,
+                "cpu_seconds": 1.250202,
+                "peak_rss_bytes": 83546112
+              },
+              "elapsed_change_pct": -4.458858362691121,
+              "cpu_change_pct": -4.4505840947391295,
+              "rss_change_pct": -0.12241700127313404
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1292449857,
+                "cpu_seconds": 1.289491,
+                "peak_rss_bytes": 83472384
+              },
+              "C": {
+                "elapsed_ns": 1283942208,
+                "cpu_seconds": 1.2810869999999999,
+                "peak_rss_bytes": 83468288
+              },
+              "elapsed_change_pct": -0.6582575682856806,
+              "cpu_change_pct": -0.6517300237070311,
+              "rss_change_pct": -0.004907012120325405
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1293627112,
+                "cpu_seconds": 1.290795,
+                "peak_rss_bytes": 83521536
+              },
+              "C": {
+                "elapsed_ns": 1260338722,
+                "cpu_seconds": 1.257591,
+                "peak_rss_bytes": 83484672
+              },
+              "elapsed_change_pct": -2.5732600755819623,
+              "cpu_change_pct": -2.5723681916958174,
+              "rss_change_pct": -0.04413711931734454
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1283728796,
+                "cpu_seconds": 1.280947,
+                "peak_rss_bytes": 83554304
+              },
+              "C": {
+                "elapsed_ns": 1199059766,
+                "cpu_seconds": 1.1957849999999999,
+                "peak_rss_bytes": 83435520
+              },
+              "elapsed_change_pct": -6.59555431519665,
+              "cpu_change_pct": -6.6483625005562486,
+              "rss_change_pct": -0.14216383156037127
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1289978725,
+                "cpu_seconds": 1.2873020000000002,
+                "peak_rss_bytes": 83615744
+              },
+              "C": {
+                "elapsed_ns": 1304376577,
+                "cpu_seconds": 1.301117,
+                "peak_rss_bytes": 83578880
+              },
+              "elapsed_change_pct": 1.1161309656482876,
+              "cpu_change_pct": 1.073174748427319,
+              "rss_change_pct": -0.04408739100617565
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1276699208,
+                "cpu_seconds": 1.2733029999999999,
+                "peak_rss_bytes": 83427328
+              },
+              "C": {
+                "elapsed_ns": 1229485314,
+                "cpu_seconds": 1.226303,
+                "peak_rss_bytes": 83464192
+              },
+              "elapsed_change_pct": -3.698121977686697,
+              "cpu_change_pct": -3.691187407867569,
+              "rss_change_pct": 0.0441869599371536
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": -3.13569102663433,
+            "cpu": -3.131777799781693,
+            "rss": -0.044112255161760094
+          }
+        }
+      },
+      "followup_required": [
+        "mixed-overlap-ranges",
+        "mixed-overlap-cidr"
+      ]
+    },
+    "followup-measurements": {
+      "passed": true,
+      "measured": 24,
+      "warmups": 4,
+      "cases": 2,
+      "summary_sha256": "c759e055883d0febcd2bfcd434d342195ae082122928af798e5e683b50ada393",
+      "sample_hashes": {
+        "followup-measurements/warmup/mixed-overlap-ranges/B/sample.json": "0aed98fb3db6285e0e00c1cdde837d2371e4f0dfc07ada9671eb41e85e51f663",
+        "followup-measurements/warmup/mixed-overlap-ranges/C/sample.json": "e386708aaf82d943ea2323cc0ccd71906e7314060b520f75ea8c7a8177faf21a",
+        "followup-measurements/warmup/mixed-overlap-cidr/B/sample.json": "dcacbdca6190fda6300990f8e3fc5df48b6795ddf9db3da19238520c786ff4e3",
+        "followup-measurements/warmup/mixed-overlap-cidr/C/sample.json": "c6743f450af7b23ca9672d9fc0280970d0d7ec8de4b73e0bde29330a26314508",
+        "followup-measurements/round-01/mixed-overlap-ranges/B/sample.json": "6f64258cb77642d945971b895840a8a8cf6536737ca4feaec5e914bcb0e3c39b",
+        "followup-measurements/round-01/mixed-overlap-ranges/C/sample.json": "6af0d0bc7fea5872be8506383fcc969f79b421eab32b95c7d4dfdf37774b43aa",
+        "followup-measurements/round-01/mixed-overlap-cidr/B/sample.json": "88f2345d2425cfe44273e0bbdd2d4f8b1372d5fe5393d15b0decf433243c00a6",
+        "followup-measurements/round-01/mixed-overlap-cidr/C/sample.json": "ad1c7d58fe061ad58919b929d5498c229aa08d385ef523e6d5e75babe1d540a5",
+        "followup-measurements/round-02/mixed-overlap-cidr/C/sample.json": "e82f46d972aeb2b4ae082f8f18022f57db53c688f3ef6e56f8f1eb79aaf2a737",
+        "followup-measurements/round-02/mixed-overlap-cidr/B/sample.json": "aba8a68a3030cf146f616ce6e2cec2619e02340e10e24b194d60fa671de59efc",
+        "followup-measurements/round-02/mixed-overlap-ranges/C/sample.json": "8efe9dd1ff19fa42463fe2065e841a5e8d9d27ee5c20828d4be7589b30de085d",
+        "followup-measurements/round-02/mixed-overlap-ranges/B/sample.json": "200742da92285f87d4b825f91d76a8d58cb574b2a4fb99df0bb9840480df258c",
+        "followup-measurements/round-03/mixed-overlap-ranges/B/sample.json": "fce262c05a12d75ea9e2f7ae5a6548cf323ed12a1c84ca71a70b820c0fe52443",
+        "followup-measurements/round-03/mixed-overlap-ranges/C/sample.json": "701312d60ae7bf3e7672ea0a970a0e6b713cc89d7b42eb2bea59c510911bad07",
+        "followup-measurements/round-03/mixed-overlap-cidr/B/sample.json": "2e0b62d679e66e68b2c7c55fbc8c2fc01a51e19aecc39d8c16c8cece825291c9",
+        "followup-measurements/round-03/mixed-overlap-cidr/C/sample.json": "c632148edb6425d2cece8cba3c18d1cccd7fd382e5aff063e4ebf6f116f93665",
+        "followup-measurements/round-04/mixed-overlap-cidr/C/sample.json": "d231c7b024c967edbcbafe62b38823e2f91a53ee1a9dedb9ca12d25d5419cb12",
+        "followup-measurements/round-04/mixed-overlap-cidr/B/sample.json": "588bfa9fffc0ae7499164060883ce9a3b1c2f94714ce3a09f45af6aa520fee96",
+        "followup-measurements/round-04/mixed-overlap-ranges/C/sample.json": "5bca058c0975384fb0bc6f4462febee8d0e8680eef2e909f3d9efeed6bd9f129",
+        "followup-measurements/round-04/mixed-overlap-ranges/B/sample.json": "28b990b2df1c15aa1141a7f7ddc03d72458e40c114e181746e88d693d16826ed",
+        "followup-measurements/round-05/mixed-overlap-ranges/B/sample.json": "4fbf2a1698cdfb301f1a7b51da8f4b36710cb2d68314ce0d504118f7de5ca285",
+        "followup-measurements/round-05/mixed-overlap-ranges/C/sample.json": "e85c2d07efd5953151c1749979f7ec9ac654f4a8b0f4921f729149355eb9411e",
+        "followup-measurements/round-05/mixed-overlap-cidr/B/sample.json": "c6823668475483e1a0ec89bb7313e26892e2f4809841b943fa9c50b60ec0d128",
+        "followup-measurements/round-05/mixed-overlap-cidr/C/sample.json": "dac75bf26ecdebbf6893ffc68400a5f9dc0125170dc95cfc6f30d1b84ea0432d",
+        "followup-measurements/round-06/mixed-overlap-cidr/C/sample.json": "8376f2323baacf4312e6666ef07c3d18ea3b356c6183652742b24eb8243d265c",
+        "followup-measurements/round-06/mixed-overlap-cidr/B/sample.json": "0d7a753b155207b70cb141f936f049535ab62a62525b4139ea762521fd2fe975",
+        "followup-measurements/round-06/mixed-overlap-ranges/C/sample.json": "c92e536e1d2ada3afdbc8058682ed23faf249442a6eed3b30e0a27b2399a8226",
+        "followup-measurements/round-06/mixed-overlap-ranges/B/sample.json": "013902afe07f9dcd5efe738658439cfb6571f28cebac6e81a916f550f9736c31"
+      },
+      "paired_results": {
+        "mixed-overlap-ranges": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1362265516,
+                "cpu_seconds": 1.359052,
+                "peak_rss_bytes": 71389184
+              },
+              "C": {
+                "elapsed_ns": 1440556748,
+                "cpu_seconds": 1.4374879999999999,
+                "peak_rss_bytes": 71536640
+              },
+              "elapsed_change_pct": 5.747134540253596,
+              "cpu_change_pct": 5.7713759296921685,
+              "rss_change_pct": 0.2065522978943246
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1393954800,
+                "cpu_seconds": 1.390782,
+                "peak_rss_bytes": 71557120
+              },
+              "C": {
+                "elapsed_ns": 1377750976,
+                "cpu_seconds": 1.374847,
+                "peak_rss_bytes": 71532544
+              },
+              "elapsed_change_pct": -1.1624353960400957,
+              "cpu_change_pct": -1.1457582856263637,
+              "rss_change_pct": -0.03434459072696461
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1345431267,
+                "cpu_seconds": 1.341962,
+                "peak_rss_bytes": 71360512
+              },
+              "C": {
+                "elapsed_ns": 1372986948,
+                "cpu_seconds": 1.370124,
+                "peak_rss_bytes": 71524352
+              },
+              "elapsed_change_pct": 2.04809280681002,
+              "cpu_change_pct": 2.098569110004589,
+              "rss_change_pct": 0.2295947652393604
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1390918102,
+                "cpu_seconds": 1.38781,
+                "peak_rss_bytes": 71393280
+              },
+              "C": {
+                "elapsed_ns": 1371199430,
+                "cpu_seconds": 1.368113,
+                "peak_rss_bytes": 71389184
+              },
+              "elapsed_change_pct": -1.4176731161702816,
+              "cpu_change_pct": -1.4192865017545686,
+              "rss_change_pct": -0.005737234652902767
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1336493912,
+                "cpu_seconds": 1.333408,
+                "peak_rss_bytes": 71393280
+              },
+              "C": {
+                "elapsed_ns": 1355600961,
+                "cpu_seconds": 1.352634,
+                "peak_rss_bytes": 71471104
+              },
+              "elapsed_change_pct": 1.4296398081909079,
+              "cpu_change_pct": 1.4418692553217038,
+              "rss_change_pct": 0.10900745840505266
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1338653171,
+                "cpu_seconds": 1.335384,
+                "peak_rss_bytes": 71487488
+              },
+              "C": {
+                "elapsed_ns": 1397187539,
+                "cpu_seconds": 1.3943,
+                "peak_rss_bytes": 71569408
+              },
+              "elapsed_change_pct": 4.372631333347798,
+              "cpu_change_pct": 4.411914475536638,
+              "rss_change_pct": 0.11459347963100885
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 1.738866307500464,
+            "cpu": 1.7702191826631464,
+            "rss": 0.11180046901803076
+          }
+        },
+        "mixed-overlap-cidr": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 1383188219,
+                "cpu_seconds": 1.380172,
+                "peak_rss_bytes": 71401472
+              },
+              "C": {
+                "elapsed_ns": 1372495452,
+                "cpu_seconds": 1.369718,
+                "peak_rss_bytes": 71462912
+              },
+              "elapsed_change_pct": -0.7730522031000664,
+              "cpu_change_pct": -0.757441826091243,
+              "rss_change_pct": 0.08604864616796881
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 1332933119,
+                "cpu_seconds": 1.3300379999999998,
+                "peak_rss_bytes": 71372800
+              },
+              "C": {
+                "elapsed_ns": 1382829892,
+                "cpu_seconds": 1.379752,
+                "peak_rss_bytes": 71446528
+              },
+              "elapsed_change_pct": 3.7433815912259583,
+              "cpu_change_pct": 3.7377879429008942,
+              "rss_change_pct": 0.10329985652797191
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 1338414690,
+                "cpu_seconds": 1.335342,
+                "peak_rss_bytes": 71458816
+              },
+              "C": {
+                "elapsed_ns": 1373269472,
+                "cpu_seconds": 1.370358,
+                "peak_rss_bytes": 71356416
+              },
+              "elapsed_change_pct": 2.6041840589780207,
+              "cpu_change_pct": 2.6222495810062085,
+              "rss_change_pct": -0.14329932362718845
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 1377850139,
+                "cpu_seconds": 1.374723,
+                "peak_rss_bytes": 71479296
+              },
+              "C": {
+                "elapsed_ns": 1375715456,
+                "cpu_seconds": 1.372761,
+                "peak_rss_bytes": 71516160
+              },
+              "elapsed_change_pct": -0.1549285324708327,
+              "cpu_change_pct": -0.14271966061526475,
+              "rss_change_pct": 0.0515729757607053
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 1409305611,
+                "cpu_seconds": 1.406187,
+                "peak_rss_bytes": 71593984
+              },
+              "C": {
+                "elapsed_ns": 1454598005,
+                "cpu_seconds": 1.4518159999999998,
+                "peak_rss_bytes": 71483392
+              },
+              "elapsed_change_pct": 3.2138092438205756,
+              "cpu_change_pct": 3.244874259255681,
+              "rss_change_pct": -0.15447107958120876
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 1376790162,
+                "cpu_seconds": 1.373866,
+                "peak_rss_bytes": 71385088
+              },
+              "C": {
+                "elapsed_ns": 1393203538,
+                "cpu_seconds": 1.389904,
+                "peak_rss_bytes": 71475200
+              },
+              "elapsed_change_pct": 1.1921479723647321,
+              "cpu_change_pct": 1.1673627559019684,
+              "rss_change_pct": 0.1262336470048142
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 1.8981660156713764,
+            "cpu": 1.8948061684540884,
+            "rss": 0.06881081096433705
+          }
+        }
+      },
+      "followup_required": [
+        "mixed-overlap-ranges"
+      ]
+    }
+  },
+  "test_executions": 300,
+  "differential_cases": 77,
+  "binary_sha256": {
+    "B": "064cbc91cb5ccd4b9e4129d6237ba2419f4253a71f592489bd4b8621dc0508ed",
+    "C": "55bf506b75af265cee2976ebe03b2bed7b54768d1cddc28e9f4090c789f8ff6e"
+  },
+  "source_files": 43,
+  "checks": 3103,
+  "scope": "Native Linux wait4 values and complete output bytes independently recomputed; no timing or allocator-causation inference.",
+  "finished_at": "2026-11-16T15:50:26.493962+00:00"
+}

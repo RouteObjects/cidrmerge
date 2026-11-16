@@ -1,0 +1,49 @@
+{
+  "started_at": "2026-11-16T15:16:35.354912+00:00",
+  "command": [
+    "ssh",
+    "-M",
+    "-S",
+    "/tmp/cidr-raw-utf8-20261116.sock",
+    "-f",
+    "-N",
+    "-T",
+    "-o",
+    "ControlPersist=600",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UpdateHostKeys=no",
+    "swift-dev"
+  ],
+  "task_owned": true,
+  "config_or_keys_changed": false,
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "check": {
+    "command": [
+      "ssh",
+      "-S",
+      "/tmp/cidr-raw-utf8-20261116.sock",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ControlMaster=no",
+      "-o",
+      "ProxyCommand=false",
+      "-O",
+      "check",
+      "swift-dev"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Master running (pid=9211)\n"
+  },
+  "passed": true,
+  "finished_at": "2026-11-16T15:16:35.731324+00:00"
+}

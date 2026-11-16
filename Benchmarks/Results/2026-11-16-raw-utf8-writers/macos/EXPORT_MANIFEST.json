@@ -1,0 +1,1441 @@
+{
+  "path_redaction": "Experiment, home, runtime and temporary prefixes replaced with portable variables; numeric JSON values and types unchanged.",
+  "original_artifacts": {
+    "control/B-build-release.json": {
+      "original_path": "macos/control/B-build-release.json",
+      "original_sha256": "85bfce3f6ddecd5b1737581ab5ab83e06f902adba9c0dd83ef55a4d6a6b167ab",
+      "original_bytes": 1233,
+      "export_sha256": "0bc744aa91773d12455619df853f76e167db44887f515665dba4213f6b4ce84a",
+      "export_bytes": 1023
+    },
+    "control/B-test-debug.json": {
+      "original_path": "macos/control/B-test-debug.json",
+      "original_sha256": "a2798fed7d138184c5097fc2075ebb27d8ccd0faee9dcd0d02f10d6fac0a46be",
+      "original_bytes": 1205,
+      "export_sha256": "ed5c719274b5676320c002597f80ea7a332e2683236648bca8b94c52f36db0e6",
+      "export_bytes": 995
+    },
+    "control/B-test-release.json": {
+      "original_path": "macos/control/B-test-release.json",
+      "original_sha256": "490007448b00ab2e9d29512d8db38e65a08131b9ca1e5acca4d3613be6db737e",
+      "original_bytes": 1207,
+      "export_sha256": "bcd0c51367639029c48776f40884f4c3c38c4d2d26825ef0cb29d029e0f400ea",
+      "export_bytes": 997
+    },
+    "control/C-asan-focused.json": {
+      "original_path": "macos/control/C-asan-focused.json",
+      "original_sha256": "54ae00e2bf6cb55fa301dfb49bca1ae73a5bcd37f1a1ea14a3b174b77c659a5b",
+      "original_bytes": 957,
+      "export_sha256": "ba0b10ba3a8d62877fc4900f3bcff1208971cb8be1c245a324029ad7979279e7",
+      "export_bytes": 747
+    },
+    "control/C-build-release.json": {
+      "original_path": "macos/control/C-build-release.json",
+      "original_sha256": "5a3fde13eb649bfa6fbb3b3a2a0ac962e206f6aae0832416cab547a9fa3ecb9b",
+      "original_bytes": 1234,
+      "export_sha256": "6a0f94f20ee61b460bed2e9b8a47517c69f802d074373f1875fe0e4d157f9a7c",
+      "export_bytes": 1024
+    },
+    "control/C-test-debug.json": {
+      "original_path": "macos/control/C-test-debug.json",
+      "original_sha256": "f5b3d16e30045774d229b1194406c8698c677be50d8718c761d41691afa572fa",
+      "original_bytes": 1205,
+      "export_sha256": "85f4f5f4aae666686ddf007573e1def77bc269a2cc72d61cd168ae13cbbce220",
+      "export_bytes": 995
+    },
+    "control/C-test-release.json": {
+      "original_path": "macos/control/C-test-release.json",
+      "original_sha256": "9d8fa9734a696f694034670164867e024d4ee044d905e61b75e0886dd5c06d52",
+      "original_bytes": 1207,
+      "export_sha256": "26cfbde995fd87957b5fda75f5132c019a21513e808bb4b711978fdb205486d5",
+      "export_bytes": 997
+    },
+    "control/correctness-gate.json": {
+      "original_path": "macos/control/correctness-gate.json",
+      "original_sha256": "6644ef7af8bcdb124210c4c27b33a76a496c1468689e6159712c0e46d6b5d5da",
+      "original_bytes": 1593,
+      "export_sha256": "6644ef7af8bcdb124210c4c27b33a76a496c1468689e6159712c0e46d6b5d5da",
+      "export_bytes": 1593
+    },
+    "control/evidence-audit-v2.json": {
+      "original_path": "macos/control/evidence-audit-v2.json",
+      "original_sha256": "5d938376a3fdc59bad488dd5e895978f4288c540bb2c260389682b01debd124a",
+      "original_bytes": 2935,
+      "export_sha256": "5d938376a3fdc59bad488dd5e895978f4288c540bb2c260389682b01debd124a",
+      "export_bytes": 2935
+    },
+    "control/evidence-audit.json": {
+      "original_path": "macos/control/evidence-audit.json",
+      "original_sha256": "3c2c096c5206d64e687cc474239f459ce45aa0082ee46376b28903d41a053999",
+      "original_bytes": 245,
+      "export_sha256": "3c2c096c5206d64e687cc474239f459ce45aa0082ee46376b28903d41a053999",
+      "export_bytes": 245
+    },
+    "control/host-runtime-attempt01-diagnostic.json": {
+      "original_path": "macos/control/host-runtime-attempt01-diagnostic.json",
+      "original_sha256": "74e65929f00418856682cc6bcf2f3ba8cf8683402b944a116b8b1286f3d56f9e",
+      "original_bytes": 1594,
+      "export_sha256": "74e65929f00418856682cc6bcf2f3ba8cf8683402b944a116b8b1286f3d56f9e",
+      "export_bytes": 1594
+    },
+    "control/host-runtime.json": {
+      "original_path": "macos/control/host-runtime.json",
+      "original_sha256": "986d3b3640092f6bcaaf9abb8c1cda3defa3458133b584eee2fb356b40ada6b2",
+      "original_bytes": 8388,
+      "export_sha256": "bf3ef3e81befd9cc3bd74c80db65f174bc5ac969aa95e684310786d643941676",
+      "export_bytes": 8220
+    },
+    "control/post-benchmark-freeze.json": {
+      "original_path": "macos/control/post-benchmark-freeze.json",
+      "original_sha256": "fb3ef90d2f44c03ed71894e7bc66a39cc838368b0056772ecf3d46594af85c8c",
+      "original_bytes": 147,
+      "export_sha256": "fb3ef90d2f44c03ed71894e7bc66a39cc838368b0056772ecf3d46594af85c8c",
+      "export_bytes": 147
+    },
+    "control/pre-benchmark-freeze.json": {
+      "original_path": "macos/control/pre-benchmark-freeze.json",
+      "original_sha256": "f9d6f054f79fca6d63f4e6417a49546bf3740e1544e3b7f662014c08daf28f87",
+      "original_bytes": 1271,
+      "export_sha256": "f9d6f054f79fca6d63f4e6417a49546bf3740e1544e3b7f662014c08daf28f87",
+      "export_bytes": 1271
+    },
+    "differential/summary.json": {
+      "original_path": "macos/differential/summary.json",
+      "original_sha256": "4fde7b4db1b7d8f95db192fafa3f1e48edeadfc34b9be0bb1fa197420db186d1",
+      "original_bytes": 154011,
+      "export_sha256": "48a1e67dc98778ddf36d347fb455517b200fb39471f4401f1c464ffdb886c443",
+      "export_bytes": 141593
+    },
+    "followup-01/summary.json": {
+      "original_path": "macos/followup-01/summary.json",
+      "original_sha256": "8dbe78b32874f87ee205ff556f9745edc4bce0f77351464156cfe21f1924ecb8",
+      "original_bytes": 3314,
+      "export_sha256": "8dbe78b32874f87ee205ff556f9745edc4bce0f77351464156cfe21f1924ecb8",
+      "export_bytes": 3314
+    },
+    "measurements/summary.json": {
+      "original_path": "macos/measurements/summary.json",
+      "original_sha256": "3f463d1a355836b34c91932ab00532d696e226aea1b45f063b964727b1125b88",
+      "original_bytes": 37106,
+      "export_sha256": "3f463d1a355836b34c91932ab00532d696e226aea1b45f063b964727b1125b88",
+      "export_bytes": 37106
+    },
+    "measurements/round-01/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "bb17b1d1ff0330a747cde9e4d368e76aaa4bcaa6235a772a6e50a0917b89c72e",
+      "original_bytes": 861,
+      "export_sha256": "dc141798c7ec0a3a4665131e4192fba28d3f6a2f24197276eefc58e63e0f0753",
+      "export_bytes": 777
+    },
+    "measurements/round-01/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "2e171686992e28e6fade93124761fc1ead608a10f16b9945be87fb72b4fe095e",
+      "original_bytes": 860,
+      "export_sha256": "eb98c8fed20b7f792fbcaeda3c467b41d662c657e6da59594c2ecd1f852dea0d",
+      "export_bytes": 776
+    },
+    "measurements/round-01/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "39002186a05da78d3b119f53e616b9ca0676be812f038f238549f4ed6c265cac",
+      "original_bytes": 849,
+      "export_sha256": "9e2fe0620ac7b1e7701e5169141c78ca34cf1e3e1267b37d1b6a6b4e14fed473",
+      "export_bytes": 765
+    },
+    "measurements/round-01/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "9e30872a8c16201f850b79e72bb6e92ea6dd8d00c7b64cd5910dbc7507409c4b",
+      "original_bytes": 864,
+      "export_sha256": "2942470cc307161c93a4ca95af691acf3ff2d31c441109b8fdef6764fb1f552c",
+      "export_bytes": 780
+    },
+    "measurements/round-01/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "20af7bcde00d580dc805aea02fe6280ecee3d1719286f822c797f1c10e682180",
+      "original_bytes": 847,
+      "export_sha256": "849541885a27c2c76606766ba27dfba143c73227ed1df2ab733e7765e8c537ad",
+      "export_bytes": 763
+    },
+    "measurements/round-01/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "715a0b6ccb97453637a4c7599dd0d38f7f01f5ab3bbce6ea2ab7edf3fdf11797",
+      "original_bytes": 845,
+      "export_sha256": "bab821ee54e726245d234ed3499039bc4b0d2e3e226d61d4e799d57b506f1b70",
+      "export_bytes": 761
+    },
+    "measurements/round-01/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "c14ac9b60202d280112b9efcdefc336b72a9de0e7155321b034dbcff1bf4d2cf",
+      "original_bytes": 851,
+      "export_sha256": "737d9123e4c956e64ead099351b13ce149d8c935cfdbc55e900993dd37cb603f",
+      "export_bytes": 767
+    },
+    "measurements/round-01/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "76772417950ecf154bfef25939dc2beb3bf62220579ac56e5b7049adf5364d1d",
+      "original_bytes": 866,
+      "export_sha256": "c5444d20a3e1053e1eedf5b1f012347184ffd055fffddaf81d4b43289abca399",
+      "export_bytes": 782
+    },
+    "measurements/round-01/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "3a817e72de29ebee8eea20f839c6d4ac4409a2c0da51181e749648e3925da1e8",
+      "original_bytes": 849,
+      "export_sha256": "fa01c7e827487cf41bc7974217f55a1b016deda6cfb8cd992c75f953c41d6747",
+      "export_bytes": 765
+    },
+    "measurements/round-01/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "89acf5c123452ffe18af3bfed735fcd56f2b7336effa8a4a7a200de2e87273a0",
+      "original_bytes": 848,
+      "export_sha256": "781be665deacc5bf93576b9ca1280448d65949cd4fa28d4973b74592cfa90c81",
+      "export_bytes": 764
+    },
+    "measurements/round-01/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "0a9c341dc3c03fbbd2e09efed0feb1d38b82b6e0863727bb0e3129d0d99d4b81",
+      "original_bytes": 853,
+      "export_sha256": "6c38bd0cd7ee0a5b33304ff7b062a7e577d59dc03d719498eb41b0f06e129c0c",
+      "export_bytes": 769
+    },
+    "measurements/round-01/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "7c31a967a3a75481c2adbddf3ed497c20d808b3b9d2eb40ac7ab81f4f1819a2a",
+      "original_bytes": 852,
+      "export_sha256": "2b24a87eacb72391025a2daa345c6e74375d9d1dad0ee8671f7abd2bdafb7346",
+      "export_bytes": 768
+    },
+    "measurements/round-01/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "b469efa2dc271e5c2da3c444d516e9865f90bac8db2a58e91fea96e1742bb5f2",
+      "original_bytes": 840,
+      "export_sha256": "3f801206267659ef2f108bcefb0e2627f4625ee538c1e08c912e494fb09e6ff8",
+      "export_bytes": 756
+    },
+    "measurements/round-01/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "90ada87f7107d8ec539b1d95ba60d8ccef071327b09cb1b49cb71bf52a1ef503",
+      "original_bytes": 840,
+      "export_sha256": "76122780d884e752291bd20f435669e56304e0bd7a007674deb61acffb15e2cf",
+      "export_bytes": 756
+    },
+    "measurements/round-01/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "d1b40ae0613d682035f6647a6899f80a2031965fe75b9df5d13d30faca25cacc",
+      "original_bytes": 844,
+      "export_sha256": "9fb5c66ba77f199f8449fa69bcb523fa5983d393369891bf47a178a33674dcca",
+      "export_bytes": 760
+    },
+    "measurements/round-01/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "7ada2004b0916e8ecd59aa1572532a7089e9ba259077d3bb7458f66aabf79a11",
+      "original_bytes": 844,
+      "export_sha256": "9ae93acee25021cd8b1669be38eabd22ef658ea401e3db346d2b5172d31762fe",
+      "export_bytes": 760
+    },
+    "measurements/round-01/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "0488920c1f36893b27b06d867128fbf7a24c96842d7c09f9a6a23c731a1c8e6f",
+      "original_bytes": 849,
+      "export_sha256": "f9b4f155a3e57cf671b941c9ad3300940e0d5f90e20a6ded97a203d3048f2380",
+      "export_bytes": 765
+    },
+    "measurements/round-01/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "85f755e459887ad5ad303580378441ea93ee769e5550ffd709e15bc98b9152ce",
+      "original_bytes": 849,
+      "export_sha256": "139a601597e8ff3ac6156338edde9d0b5119b9bed3271000b3ae2c16cc7aa19f",
+      "export_bytes": 765
+    },
+    "measurements/round-01/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "003482b2b11d8fe0e9cb11c4cfaac303913dddd86031c6cb0e14bb0e03e4b746",
+      "original_bytes": 853,
+      "export_sha256": "e9a617a7d8e5d2fe17a76ba17d13c1f8450b4b92ac362216320d79d8a7cf389a",
+      "export_bytes": 769
+    },
+    "measurements/round-01/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "5b31e61235cd62b48f1817822d46405356069657016030e5014e70af35e5f892",
+      "original_bytes": 867,
+      "export_sha256": "029a7d4524b8612c2391cfd43ca83824866390ed485d8dfcbca2092bd8de4955",
+      "export_bytes": 783
+    },
+    "measurements/round-01/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-01/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "9eaf06631a75ef4c9b83971736d4fd8b480d8ceb1f27b19acfe2466d0fa5bd8b",
+      "original_bytes": 874,
+      "export_sha256": "a4c4195f212bee994ec8411f79e5bf44c546fbf54a555182448a29af3dcb3448",
+      "export_bytes": 790
+    },
+    "measurements/round-01/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-01/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "0b566f97622bbc16a85f4bfa026f2a0f1283bc4f002967d6471dde6d629946b0",
+      "original_bytes": 858,
+      "export_sha256": "44f920b0b9bf0a7abb93bfd4bcad7c39e6ba060abc3ccfb66a6797e5c0ab9095",
+      "export_bytes": 774
+    },
+    "measurements/round-01/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-01/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "0038d1dd4dd51dbb1b6fc34490175b74066ffffd2c2a348ee8aacc5634ae56bd",
+      "original_bytes": 877,
+      "export_sha256": "94dd39648996d2219dd147a26db9f18cc25350cddfbfbcbfa640e6eb4159c166",
+      "export_bytes": 793
+    },
+    "measurements/round-01/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-01/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "4372a670595e8cdc4d72f3d12991e71fc83b39b3702379dffbf4423abffd6e64",
+      "original_bytes": 861,
+      "export_sha256": "e5cf81be2c2e0b3d44f9a69580fb2d157cc1dcda4400ba09c8f27ec7d7399393",
+      "export_bytes": 777
+    },
+    "measurements/round-02/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "0367f702f0bb59b18adec5f153464fd36bb93a4456504d0db8e820a2638d0247",
+      "original_bytes": 846,
+      "export_sha256": "d09c5f47f2eba822dbf4c799f20b6e98b99a9800b352cba446930bef0a8ebe98",
+      "export_bytes": 762
+    },
+    "measurements/round-02/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "4e592d33c9cd04d1cd1c613819d971c6dcd4b051478458fd399edc974af88ba6",
+      "original_bytes": 860,
+      "export_sha256": "e6a62bb41c1ecf989be3fdccb57047263326eaccc63f6037bf200b9d95ad6438",
+      "export_bytes": 776
+    },
+    "measurements/round-02/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "e20d658c030d44fc8588e93403c58b025925eb427404b48b6e0eae142a0b9ec1",
+      "original_bytes": 849,
+      "export_sha256": "fb85b7ea53d2a3a4ce26752e4881e0d8d933a3109d51d9a917425418ec87c09e",
+      "export_bytes": 765
+    },
+    "measurements/round-02/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "1a113185c7b4463b5d66d7ee86eafde0257bbf139109bb534891807dd01ed492",
+      "original_bytes": 864,
+      "export_sha256": "1268b28c2b8bf14928c17ecbfa5e3ca98b1fcd5b808e170d1525fa3933d6c785",
+      "export_bytes": 780
+    },
+    "measurements/round-02/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "3e5d3f4e66c0d2529474cc42677e425df853781d44406e34d172d491275622dc",
+      "original_bytes": 847,
+      "export_sha256": "f06487fd730e14ff1d2e3c1c61415bf813808160b75e2af11a75b0fa09324d20",
+      "export_bytes": 763
+    },
+    "measurements/round-02/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "c54ecbce070598547492a7c14be762e6ff5ecab79e3bbfeb4af2706e1fff6ee9",
+      "original_bytes": 847,
+      "export_sha256": "0dfdafcbd9f7b28d2ca16cde8ba0b4175a9afdd498ce0f8563cd149f7b7b9ab7",
+      "export_bytes": 763
+    },
+    "measurements/round-02/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "4c0954d24df95884e3557b175db1298229bc0e6041cb261d0e68d9a57d94d622",
+      "original_bytes": 851,
+      "export_sha256": "beeec4d29cc6378f7d51f6a6e72bb9e72a7c8e424c977ace3e45055ba0f4b0bd",
+      "export_bytes": 767
+    },
+    "measurements/round-02/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "99cd378c87b184e153f46b3d69e4ec26d7a67e9a3ee292ab7baf8651ff60e121",
+      "original_bytes": 866,
+      "export_sha256": "bd05b644ca86c636ee5c3cf09171d55826438ac772a0a78c0f4a636a63bdd255",
+      "export_bytes": 782
+    },
+    "measurements/round-02/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "921f377adbcc6b19663220fa3c5c9fa1b8c9e563bd91e5c22133e5ffaecd1b79",
+      "original_bytes": 849,
+      "export_sha256": "26f5bdf44eaefdf5bf996071090ad9141db956fc5e43a9ca4a9b59f26b781bb0",
+      "export_bytes": 765
+    },
+    "measurements/round-02/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "958bbb0f9859c278f5b04c1c20461601d37e07da2282d3232c8625a00515c084",
+      "original_bytes": 848,
+      "export_sha256": "8694c2665a25b3cd01eef6210749f88111f14e5abdaf3cedad955a1744506060",
+      "export_bytes": 764
+    },
+    "measurements/round-02/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "8ef4cb3a515383b8523e6677ea3b92a03ce057c03380bc665e515200bc75e54e",
+      "original_bytes": 853,
+      "export_sha256": "01f33d15de61d660aace5e475bfbb0f2bcced12eb409c8fe65207d9b1a175bcf",
+      "export_bytes": 769
+    },
+    "measurements/round-02/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "1a1f313b3bb9b35a9674a6122d0a62ad6d61bec55e7cb55cc3c9b1663c7e8222",
+      "original_bytes": 853,
+      "export_sha256": "d8b858a76484a8ec80bcce6aa86982116a18f08594e1c73723b6f7bc538a4634",
+      "export_bytes": 769
+    },
+    "measurements/round-02/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "255ebf17a7b260f76da1b0dbde9b03fc807586c2d9fc99c66e4776f86ed6518f",
+      "original_bytes": 840,
+      "export_sha256": "6dab853b6eed04e24142a95bdf25fa7ef58741084c61129d3f82da97ef257891",
+      "export_bytes": 756
+    },
+    "measurements/round-02/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "a210766e9a4202ee69387e8c8a458e81c37491b2a45158b7a1401526d104a311",
+      "original_bytes": 840,
+      "export_sha256": "1615495da793a86de4ac4860023897b6129d326089971b1563e51e8a27235f10",
+      "export_bytes": 756
+    },
+    "measurements/round-02/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "16615acd3ce0724bdc7c7716f0fc745f1311fa83492c74d29b333b2075555776",
+      "original_bytes": 844,
+      "export_sha256": "e1ed658cbc5245f74a3091561a9cb386ea9a8a0d15c3d211b9379d7c13b886d7",
+      "export_bytes": 760
+    },
+    "measurements/round-02/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "38bbcc3ef899e1b4f1d364fd752dce4d7cb1972c0596dd083bdba110a24c798e",
+      "original_bytes": 844,
+      "export_sha256": "eb8906854f4f5e8ab0c3787c49b7619f3080043f4c55d6f6d91878c32521587c",
+      "export_bytes": 760
+    },
+    "measurements/round-02/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "ab31aeba23d1289dda770e2b56a71daef4a0c41e47c9a25f042f9499b1592d48",
+      "original_bytes": 849,
+      "export_sha256": "56717fad32be4f7c53ae0a91be909359cbb4b29e9d473e3ddc4ec59e22e9b19f",
+      "export_bytes": 765
+    },
+    "measurements/round-02/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "0f1625e31c978c772ed4b48c9b3ea46cfe85585c0a71a7e69fd945fe13842fff",
+      "original_bytes": 864,
+      "export_sha256": "36956aa0ace6b5e6a760ca5a5df051b1cd3a139ec87a10ef9f29bdec2cd3cc98",
+      "export_bytes": 780
+    },
+    "measurements/round-02/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "c4537ae9a91544f3ed888fa8c77523f3ebb30b9f1587178d6d4e7a339d272d88",
+      "original_bytes": 853,
+      "export_sha256": "3ff811042d160a049e8aa5163c11c6937120f88b4503f6cd8001825d9ab66a96",
+      "export_bytes": 769
+    },
+    "measurements/round-02/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "1a201336e5982655243f27674a159736cc344e8437bc7b3f09ee489ddd810fc5",
+      "original_bytes": 868,
+      "export_sha256": "a696b4e5d6b10f939e53b97464a4e7f0714ea90b748f42b9a7e75643bbc9bb74",
+      "export_bytes": 784
+    },
+    "measurements/round-02/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-02/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "b38cbc5f9843d1fea23ac08fa253c4c5a648c3cd8e1a659557d82e9bd336229d",
+      "original_bytes": 874,
+      "export_sha256": "70e7aca6ea77e288d995a3c0031d2d31bbcd2d4e64e00f7b54579437593f0af3",
+      "export_bytes": 790
+    },
+    "measurements/round-02/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-02/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "2d6bb6148662fdfee06e6271be499306ff5784d297398834b1549c7b5965cc79",
+      "original_bytes": 858,
+      "export_sha256": "3f1ed18b66623d4145f7ea0839bb0e6dc2062da85d177fd9a5b963cbb37b9153",
+      "export_bytes": 774
+    },
+    "measurements/round-02/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-02/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "46e6ef6ebe43b6bf496260037b4899b179d8a79f959f753c9272578fc43a4d25",
+      "original_bytes": 877,
+      "export_sha256": "77958ff29f10c0f77092b894b4e2d65338dc94b03454efade55e16e21c4fb959",
+      "export_bytes": 793
+    },
+    "measurements/round-02/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-02/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "fad4e60bdef84dbf26c558a891338811d21ba1196b5129f4f46a2879a2aeaf07",
+      "original_bytes": 861,
+      "export_sha256": "84bb2f6c27a3cd80d0925f80a33ef210a4e466fd51433b56ad71b21c6adf7402",
+      "export_bytes": 777
+    },
+    "measurements/round-03/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "fe4c35a5c0f951d57064e2861b76962698c13cd094b6b940b75fb2fa8b819688",
+      "original_bytes": 846,
+      "export_sha256": "9023e0a6aec60758d7d6cf6af7bfebdbf0fdcfc6203680eeb7be25ee2b123a05",
+      "export_bytes": 762
+    },
+    "measurements/round-03/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "aca5515a4793d27a95d04958a6ff49b094e6b3ef61536fad00e5b8a0ee0f9a88",
+      "original_bytes": 860,
+      "export_sha256": "f3aa9ca409713c1ae202bb821d0369303d64f0eb356684a6924c86f73c040f1e",
+      "export_bytes": 776
+    },
+    "measurements/round-03/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "d6bcee53d48b382f1333b749c1021d740176430d64ed3243414fe19d135be5ba",
+      "original_bytes": 849,
+      "export_sha256": "439fd87e883cfba2d2596e0c8a6639dcfc415b52386bebd68e4febfaa8bb5473",
+      "export_bytes": 765
+    },
+    "measurements/round-03/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "8c0c532765a11c7223f3c67db83bd4a11ef99ab4731e99fd54865d6b6767b756",
+      "original_bytes": 864,
+      "export_sha256": "507e87717e6200a2f95ecde389fefd41fe8480be086cefd7737844c2e59843af",
+      "export_bytes": 780
+    },
+    "measurements/round-03/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "d7b83380b568599bc4c38ae5a2dcea67228e3a13c1ca5e7c22f8d1e21ade9119",
+      "original_bytes": 847,
+      "export_sha256": "e73158ac8752626b764c085b527aabb1ab978b40b4b0f23c22b5d6894ef28e25",
+      "export_bytes": 763
+    },
+    "measurements/round-03/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "613f724e72626382a77d68bc50b98421598f4290d180e730f6d1ca67d11a43bd",
+      "original_bytes": 846,
+      "export_sha256": "71366392ec2ffc70584fc5a9ffd895e076180c6a4e6292b964b82165b411a544",
+      "export_bytes": 762
+    },
+    "measurements/round-03/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "6bb83a77eaba0aee2eb7aafe9ca58dc9b0c0269b770afe28cb23e8fe670167c9",
+      "original_bytes": 851,
+      "export_sha256": "1b6adb3547103c2888b40c02d570fa19683082cbc77fde568fe5cab0a463125c",
+      "export_bytes": 767
+    },
+    "measurements/round-03/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "aa6dcdca87b046e2f8a06747ac816ac0c93d9f0af6bc40e06c6d8c82715622c3",
+      "original_bytes": 866,
+      "export_sha256": "d9430f299d1f75ee5dc408fa967993c70ca181bbf4310a09df1093444fcb1fd7",
+      "export_bytes": 782
+    },
+    "measurements/round-03/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "6cc80e3ad7c8a38541da72a055d615992ce5fe2b78fdba0ea23f01e40a2b67c4",
+      "original_bytes": 849,
+      "export_sha256": "fc77861011d9de29defa352f86022a00c1d4b7f050e3566a6c39989d02cabdb8",
+      "export_bytes": 765
+    },
+    "measurements/round-03/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "030ac140f598932e93ade71ec9f70c87dda37c4ca2f0a4d53adbdc1ea8f0726b",
+      "original_bytes": 848,
+      "export_sha256": "4c2a297e43f4c2dcd4d146eab15e541ce7ca7d1f31f246ce3bd101fbe77d312f",
+      "export_bytes": 764
+    },
+    "measurements/round-03/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "8ba808e7e91a7301c8000c3e1fd79fbaa154b0a2f0fb90adf0662117c5b6dc00",
+      "original_bytes": 853,
+      "export_sha256": "ff4c4da43ebc8978966c1765547eaca21f755ca820663f69af5b58a92021e330",
+      "export_bytes": 769
+    },
+    "measurements/round-03/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "36378d1a3feef6fc23a83d2bc46ad8426d559ba09daef2abe86ab6f859358625",
+      "original_bytes": 853,
+      "export_sha256": "86c186c2ada2d318cb509bf7e6001b5438891982b20544ac175f95265361fad2",
+      "export_bytes": 769
+    },
+    "measurements/round-03/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "ff4fca261cdf485de62af7ad643ea67e32b166207ba9c8c2ff735810fa12927b",
+      "original_bytes": 840,
+      "export_sha256": "731e234afc98add71362f41a0078368d95bd34e8803fad0353043eb1212dd0d3",
+      "export_bytes": 756
+    },
+    "measurements/round-03/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "68c7ae7091698cc37d685efc58221008ecef0cfa871bc984dfcaa5df1ece32ec",
+      "original_bytes": 840,
+      "export_sha256": "3865a76d61487bb9cf43ffa4c37bb4da5dc1e696d50336fefb18e520c1f409d0",
+      "export_bytes": 756
+    },
+    "measurements/round-03/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "64818f6f840369099324f0348765205054d76e0ad634a9c942f89766cc16f6b2",
+      "original_bytes": 844,
+      "export_sha256": "4f059df1d3caf38b9a2d63d5d925fded080e106fa9281a91d2133e15c1c5dbe7",
+      "export_bytes": 760
+    },
+    "measurements/round-03/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "151894221948ad70c286bd1b928cf33883d851d065dad2416caadf977b4ac396",
+      "original_bytes": 844,
+      "export_sha256": "c04466c85c04621ea0b214f6fe9ac0d5be84816457e8811946060911f0824ed0",
+      "export_bytes": 760
+    },
+    "measurements/round-03/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "8741c3795131828ef355eaa9893196a0132b18e160ac6a2844f4e2630a450314",
+      "original_bytes": 849,
+      "export_sha256": "6f2f8ae75515e1a9cc2d8da53865277630b9262e7ee54a99a29b089f26a1037e",
+      "export_bytes": 765
+    },
+    "measurements/round-03/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "48f9540ab3f99195cccaa6e9d3638a294ecf5f7fc9d9cb3a1536a817976e2c10",
+      "original_bytes": 848,
+      "export_sha256": "4863d8bb4e297adddc9ec0ccedb364277423b8b9cac242b505c7c788dca559da",
+      "export_bytes": 764
+    },
+    "measurements/round-03/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "bf7e805d1454afe6f59d89b5f31604b2394b6cf1ce60cb20ff1ea1c906208e1b",
+      "original_bytes": 853,
+      "export_sha256": "5e64872c597eb6e7f9363f451ace72223cfeb2640a09a6e22ad5b80fdf425cea",
+      "export_bytes": 769
+    },
+    "measurements/round-03/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "50e397938a81611dfabfc7619b347994ea46e6a8a051484a66df0927ac9a0a07",
+      "original_bytes": 868,
+      "export_sha256": "da8617aee33a0349f62ee8b3d5907743d5f7300385bfe4e72b36dabfd640afc5",
+      "export_bytes": 784
+    },
+    "measurements/round-03/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-03/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "c4041fd3657a8d307e25930fe7254fe569a5e05d5db6da5bfef5f98e63d23d60",
+      "original_bytes": 874,
+      "export_sha256": "966613cc02cbec1ffaa9aae630b999de0b4772440a2b7a381f95c7b7c17c4336",
+      "export_bytes": 790
+    },
+    "measurements/round-03/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-03/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "4f434eceab8298d30c9147c3d0e0de574af255a826b51e8cf01bd0703c0a1b07",
+      "original_bytes": 858,
+      "export_sha256": "4062fa4ad11a380ce73538a38399952704151084eeaa46c4c29918c414f1ed24",
+      "export_bytes": 774
+    },
+    "measurements/round-03/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-03/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "90e7936a39c7bf7fcbc1cb7104234f90fb0e7835a8cae150aa3155c6fd01c8b4",
+      "original_bytes": 877,
+      "export_sha256": "a417dec88dfef50e8458fa86c37cddfe4cac398f048acceaccdb314573ebbb62",
+      "export_bytes": 793
+    },
+    "measurements/round-03/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-03/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "8e193b24b887da7fa663a71a21fd4f3693d4cfd7e480dbd0bf0a739f65a1fb0a",
+      "original_bytes": 861,
+      "export_sha256": "dcc48d01470cc464d8f4e38435ad973bee1294843ae65852f2114adafa176001",
+      "export_bytes": 777
+    },
+    "measurements/round-04/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "96dfa580b51f1ac7ee8cac24862ca08858ec346ebb09a659fbcffd3dff5e727a",
+      "original_bytes": 846,
+      "export_sha256": "2317457ee950aacb2f02f96f8871138ceefd61fd1cd1ab1fd86e8b8ebe6ef3c2",
+      "export_bytes": 762
+    },
+    "measurements/round-04/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "6677003105ccdcc41bebfc5406ef5961cc3eb15afb1ad0b894f0f8a4fdb66b54",
+      "original_bytes": 860,
+      "export_sha256": "25064561ea39f806923d6b419bd99214cc7475405c3bd1c79dedf49b5024b889",
+      "export_bytes": 776
+    },
+    "measurements/round-04/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "e9fab24685a1c02f4b709968533dd821fe6b37149c76717eecd39baa71c27696",
+      "original_bytes": 849,
+      "export_sha256": "f516f1f937cedc206b624e986363fa3815321ecf0dcfd83d7cdc260dfb84ff50",
+      "export_bytes": 765
+    },
+    "measurements/round-04/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "4cd040f7ff9a39fc54df8a8b6252e17a035cfe09b427953aa8ae234fd008b560",
+      "original_bytes": 864,
+      "export_sha256": "7d84b3eefa68255d9ad1fc0a22bfd4955e793c03ba18a2f29e1f95c0a972465d",
+      "export_bytes": 780
+    },
+    "measurements/round-04/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "d9dfdfce8f07d020db52f81268a5b5c5a5e27a6cfcb73e08e56209e44e4e3bb0",
+      "original_bytes": 847,
+      "export_sha256": "593102739d2997332858904f4314146086d4a3142b000b8ce04a39fe5ad6bf70",
+      "export_bytes": 763
+    },
+    "measurements/round-04/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "6457706ea44999f3bf26898a865ae67a572fbe8f6ad8b6a271ad68fd8f802912",
+      "original_bytes": 846,
+      "export_sha256": "6523577b400569645f2496df27da1c0f7cac54e737ea5fabf0fcebfd62854062",
+      "export_bytes": 762
+    },
+    "measurements/round-04/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "7264a9cb1c7ba7b82ae0302843ab0ca4a67c131a656b71103ccc54ed75f18008",
+      "original_bytes": 851,
+      "export_sha256": "ceae0eb4261ddd186b964233a8764f00aeff0b3b6aaba009f61997b98658f62d",
+      "export_bytes": 767
+    },
+    "measurements/round-04/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "8cf4bc7d96f01899495bac6cb75344132bcbc339a43e8085be1e27607407663a",
+      "original_bytes": 866,
+      "export_sha256": "2c96fbc48ffe7ac14b6492cd696b0ea86e7aa41dd9be941afaf3399d4763a72b",
+      "export_bytes": 782
+    },
+    "measurements/round-04/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "c662316ac92badce3378f75b9b4c66dd845a862d078bd30feb7445d4cc058777",
+      "original_bytes": 849,
+      "export_sha256": "43081758c0be1c437692b9151bbeee905c0c0b188516a54653fb8451ed384bb2",
+      "export_bytes": 765
+    },
+    "measurements/round-04/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "1acbc1883d248c56204e0d90802b27c79b501f4e33e815754c606fc258e97fd6",
+      "original_bytes": 848,
+      "export_sha256": "784d21e6bf35d3afd331d1740a4def7389951993d8c4c50f633ad82f4a455718",
+      "export_bytes": 764
+    },
+    "measurements/round-04/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "42a432e1fde6345c48ead3f82fd0c21cb1b584be741faffe32334201be227b5c",
+      "original_bytes": 853,
+      "export_sha256": "80648bb7da16b9562528ea2f831d10203090c0bfdd4b454f33c7f748290827b0",
+      "export_bytes": 769
+    },
+    "measurements/round-04/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "d1115148264fb2d7501a12158192d44b2183ac623719d5f39c8662dba30017c5",
+      "original_bytes": 852,
+      "export_sha256": "b35bddd99b4b99da41a160f0096d8efae1e0b3379dfeb387296b9b4d410e457d",
+      "export_bytes": 768
+    },
+    "measurements/round-04/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "de5e56e7ee76e770dc680bd32e0f70904323980b7c2fddc80cdc271ffffb2d7c",
+      "original_bytes": 840,
+      "export_sha256": "5cbe21d57b4e4b10a48d3556d90660af568367c360abc1d1cadf4da82ad071f1",
+      "export_bytes": 756
+    },
+    "measurements/round-04/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "96af7daf9f1b6f67165c2783ef0e31ae8b75be15f62b63036908d66edfb129b8",
+      "original_bytes": 840,
+      "export_sha256": "75e933c8cf999c801a2610dc94546f900c00fe06d04c92983dca21bd45122def",
+      "export_bytes": 756
+    },
+    "measurements/round-04/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "56850667d1464f0591addc8625bb9bdd91c6901a39cf44af780f64d97fb6024e",
+      "original_bytes": 844,
+      "export_sha256": "60d5696212512e5ab89c2c3223054b650772fdc784a073e80b16ea28e4486557",
+      "export_bytes": 760
+    },
+    "measurements/round-04/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "3be1f0c47a9dbe0e1633cdbffdc53b7a65638e3a262920865ed8a378da8a2b29",
+      "original_bytes": 844,
+      "export_sha256": "a4d3deb78a203746df0735513135160ccdcdde391f411c1b998197d70f13a725",
+      "export_bytes": 760
+    },
+    "measurements/round-04/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "d79926348f86a158a4a40c82cfd80711bb4fa14b329d463216046a03002cef2e",
+      "original_bytes": 849,
+      "export_sha256": "ba918e985a0cc4a68de2aafa91d9060ec37dcde4fb58f9296a58fdbf4eee813a",
+      "export_bytes": 765
+    },
+    "measurements/round-04/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "c7a0380791858a59e219f065f52981a0f615fb9b34dd08aa1d94fb267346a3bb",
+      "original_bytes": 848,
+      "export_sha256": "807c4f7e4a6f42895bdd829a49eb2435148c6bc644b1a0c731795efaf2e4cfda",
+      "export_bytes": 764
+    },
+    "measurements/round-04/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "719034821d71059269860bfb44025668e2e0d36d65d35557f863c40af1846ca6",
+      "original_bytes": 853,
+      "export_sha256": "69cda1becfa9af5007e10b851b6e7c843a9e6beafcc3e5a9a0725a0c77506b78",
+      "export_bytes": 769
+    },
+    "measurements/round-04/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "a55e1549b8a7e7f4efb635352898be3bcf0e98efbdcd51f31c6f5d9cf1346b93",
+      "original_bytes": 867,
+      "export_sha256": "43e0bcac807cc95c09bcee86850b89969d00b8ab921da23f23db5d73edad6dee",
+      "export_bytes": 783
+    },
+    "measurements/round-04/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-04/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "b90b042af8199d25a194b507ff0dbe95c575fe1d5c76e5346a0241013c51ee59",
+      "original_bytes": 874,
+      "export_sha256": "188c9d55d02337416f6b14ceb49de9a20d16f9e177e10c6cf31650de8a947c04",
+      "export_bytes": 790
+    },
+    "measurements/round-04/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-04/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "5b5972c6a4f81576a6b90db6ecb9d483a051403b6235978de4154b7a38629270",
+      "original_bytes": 858,
+      "export_sha256": "2332fa9dc481c4abd5d67c0a33a7cb8f3ceeafbce0538ca5c67cb35827e248e3",
+      "export_bytes": 774
+    },
+    "measurements/round-04/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-04/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "e4cbe9689ede0c285322745f4a95677b5ad0ab18632843d0824fc4da33aa7bc5",
+      "original_bytes": 877,
+      "export_sha256": "24cc58e664c21db7c45557bddb59e8c25f61a3e546f48719bf98ddaf8031f728",
+      "export_bytes": 793
+    },
+    "measurements/round-04/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-04/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "93dc149b88ecf173f157ff2af29a9881ca0e09f4d20dadcf51100c60e661d9cb",
+      "original_bytes": 861,
+      "export_sha256": "590d628b5fc0cf68311d79dbddff077bf4c2d26eac546e51a0734b9c8cfb235a",
+      "export_bytes": 777
+    },
+    "measurements/round-05/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "641bca60498edadf0c76f2d6dee114738aab0a87a5dcfbfaa495c5498e4ce594",
+      "original_bytes": 846,
+      "export_sha256": "eacb0aaa2ff9f84590a8f271323b7c12abb0cf0ed890b722534bdf7050249d91",
+      "export_bytes": 762
+    },
+    "measurements/round-05/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "276e6cf139ebfc568d79b9c7c93a35c218d2095fa67c8b76d3ce4aa9602391b2",
+      "original_bytes": 860,
+      "export_sha256": "6311b0e2bb1be76d6fed0dbaf7d4c47f250eafce0a5ce0fba7407ad3c63f1caa",
+      "export_bytes": 776
+    },
+    "measurements/round-05/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "82851c02ec899868c5339809f5777fd42155adf92d61af540eb7da0ff5aacf9b",
+      "original_bytes": 849,
+      "export_sha256": "9227cdc530153215c5cd1555d20bba4a0453562399200712675ee41e7ab2d0ed",
+      "export_bytes": 765
+    },
+    "measurements/round-05/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "76062002e56ed80845a106b20ad2d8e4dc957aa08d3ec793467222b289c5edc6",
+      "original_bytes": 864,
+      "export_sha256": "daeca26c29c4fb1c67279d82ef3b9fbee4e746f25ffe960b706c04c06521d39b",
+      "export_bytes": 780
+    },
+    "measurements/round-05/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "3ea4f811e339b7309b85595bec89bdb08a2cad1cdba35ed2b1573e5edb0a4dee",
+      "original_bytes": 847,
+      "export_sha256": "8bc4b4a1f28b4070eb7fccb15b908c92e03a8ef4cb5d081302ed5b25929df1bd",
+      "export_bytes": 763
+    },
+    "measurements/round-05/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "09a544b48bbe19b98c10688a985752260935177bfbad0b480c2ae1131a8d91df",
+      "original_bytes": 846,
+      "export_sha256": "2ab07e68e8162ce1a01b890787b7a5544d23ca069f65587ddf7714b4dd177b61",
+      "export_bytes": 762
+    },
+    "measurements/round-05/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "ffcb51b8859a4bf972a5faa53fc2ed6d5deba63b9986ad875fec71b128a489ba",
+      "original_bytes": 851,
+      "export_sha256": "abe033ec5d6b702bb542cf0d0df498ce1b5d2406aa8b70af2ca30bfef516b5df",
+      "export_bytes": 767
+    },
+    "measurements/round-05/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "4733213255d4de3ff37204054b102427a92ae347d188a3dc18a21058fe11708c",
+      "original_bytes": 866,
+      "export_sha256": "fb15eec2485334e661a1468eb444f27f029dda87dee7babd16e3fd96bf710040",
+      "export_bytes": 782
+    },
+    "measurements/round-05/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "590fad5bd3d33d24c67cdcb4396c207ca3e13d293fd9afb136d9fadc66db7267",
+      "original_bytes": 849,
+      "export_sha256": "28ee0570b26cd6b40f51342385226e674057cc2cd3f98313d73eaca6bcdddd9e",
+      "export_bytes": 765
+    },
+    "measurements/round-05/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "cfd88ec7015039a6bcbb26c5a3c80ed907bbba7bea463f10640b15b83f05e7da",
+      "original_bytes": 848,
+      "export_sha256": "f2e6d6b81abecd3bbad0e64d6e7bd6be4cd0052f4832936e2223e23705bcfe03",
+      "export_bytes": 764
+    },
+    "measurements/round-05/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "b00e6c1ffb23b24a559eeff4bd07e5a4d6bde6b85ddde960185efdd10eab72ae",
+      "original_bytes": 853,
+      "export_sha256": "d896dedd97a60251e3e835190f91730d3cf2528566f11d2ab5e971d0c205c720",
+      "export_bytes": 769
+    },
+    "measurements/round-05/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "c5d63b560d1cbe6ca0cf84e45559d7eae7b46a865f5def15d83043065ccab545",
+      "original_bytes": 852,
+      "export_sha256": "e4672c1176fa25b20f74f55166a51837131bd4f21694bc10f86c21d75d85e216",
+      "export_bytes": 768
+    },
+    "measurements/round-05/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "795c5bfd017c49ed7082c72ed11937a27189fd4315d102a3ff3465e63cce983c",
+      "original_bytes": 840,
+      "export_sha256": "9512454eaea85ba2234b36d60023aecb95c0965341d500b175617e83c40478ef",
+      "export_bytes": 756
+    },
+    "measurements/round-05/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "3632353b1a5188f923a36848fe79125ea668618ad877d5a235ed87390c12da24",
+      "original_bytes": 840,
+      "export_sha256": "bc4b79474ac6e8954fcda7be704b16e748364a7c8178b7f2a36e159538de6e60",
+      "export_bytes": 756
+    },
+    "measurements/round-05/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "c2faeb2de4fd7ae6a24e0cf8cbd6d3fbe44a05b4c290e6ce85b11266270dd799",
+      "original_bytes": 858,
+      "export_sha256": "a4120ea71bf4f1e15769e06f8495d07c8ae530eee6d813dbf0fc85a4957ea4c1",
+      "export_bytes": 774
+    },
+    "measurements/round-05/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "550532a6d43c8905bec8f6d3770a0e1084765179322796b9fbbb3ce21eb58023",
+      "original_bytes": 844,
+      "export_sha256": "373f27fb4375accde0b1494cf2cde67827a052b6eb5ee04b9e240c0cd8742921",
+      "export_bytes": 760
+    },
+    "measurements/round-05/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "f856c1c4bef50198807388e5c87f9b1562ffbe3c750c47a6a681041a2a988d2a",
+      "original_bytes": 849,
+      "export_sha256": "46befdf2cf86dc65d065effacd5a781071c3155e84ec8c0e03ad22f26ca0638b",
+      "export_bytes": 765
+    },
+    "measurements/round-05/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "0b16d391a5609231eab975c33cce334850f634f359cd4c47d05685b6b44b0a50",
+      "original_bytes": 863,
+      "export_sha256": "9ea06bf708bb490c4eff83e8bcf62033b04d1d298ffd57296d7fc7e69575b54c",
+      "export_bytes": 779
+    },
+    "measurements/round-05/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "b1d3330165139ee5d7c006be034fb0f07d188d250dd2894c002c7fced30e64de",
+      "original_bytes": 853,
+      "export_sha256": "735d4a7243e1238057031afbf7e64eb6028ea14a09a21510a249845201cddf84",
+      "export_bytes": 769
+    },
+    "measurements/round-05/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "dae8709a4ef772ffb9a21f0c6a4d63c113d300ab7c3c9769b4b92f73ce464c78",
+      "original_bytes": 867,
+      "export_sha256": "ccf7447982a32e3d0f984244ea1b60f0a53b74abef80ac47e7734de4ca9d6ffd",
+      "export_bytes": 783
+    },
+    "measurements/round-05/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-05/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "eb85f04bec18a0221ebd1498c7fd80612a04e844453478a7e0629bb4a9ba0591",
+      "original_bytes": 874,
+      "export_sha256": "2a8c01cf25f83801e3aa016ef8c5191077db445385dce14c71c7e922ba197b3f",
+      "export_bytes": 790
+    },
+    "measurements/round-05/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-05/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "0035b3c278e8196963c12050fc14d3bbd3f24a13da6f820446928ef761238f15",
+      "original_bytes": 858,
+      "export_sha256": "0e8adb19394e8e80f31dba3c6fdc5607bf9a55f78defad4774630c2acefd5be6",
+      "export_bytes": 774
+    },
+    "measurements/round-05/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-05/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "8a769c75cfab25248f951393c04d193fc8b2c05730edfd1b04ee1c3f647a8d3c",
+      "original_bytes": 877,
+      "export_sha256": "9d99c7d2687c6add378995caf7dcb4b116a7cca80e300bf6590d654635b4ce22",
+      "export_bytes": 793
+    },
+    "measurements/round-05/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-05/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "d346d0d80746d0f0e33f01250f44cb898b5cb270f9bbdd636287b4421693a58d",
+      "original_bytes": 861,
+      "export_sha256": "9c8f7488a9ff94e0e10d3f6307d419f9079e99d78a4ce6fbe648ab2de9f052d3",
+      "export_bytes": 777
+    },
+    "measurements/round-06/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "ca2a342a70c4c63800427d4ff6960c7f868ab1549f086d8483d35378eb2156af",
+      "original_bytes": 846,
+      "export_sha256": "e5100b5f8cf8d82a974dea194f0445a1d46e3b84bc948cd58c6e724391770761",
+      "export_bytes": 762
+    },
+    "measurements/round-06/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "8257211f87886d43e12d5d1badc671ee6c4741fca1d480b4ce94e7403ecde2f7",
+      "original_bytes": 860,
+      "export_sha256": "818b55ac86c7665ff421befb9268ad07f470852c6658e5827abaf9fd5cd49a65",
+      "export_bytes": 776
+    },
+    "measurements/round-06/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "ccac2e627b5f06b254e6323881574f4b5a008fc4195f92ed464a8f52e75d5c15",
+      "original_bytes": 849,
+      "export_sha256": "e890cc7f314fe036c6ceb737aa30b42cd0d28cf44c990c2e26c83999ef2a3261",
+      "export_bytes": 765
+    },
+    "measurements/round-06/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "1fca9c8b06c4411cbfd21cf9e96c390bdfd14c86f0db9f7b41fa7c5205106ee8",
+      "original_bytes": 864,
+      "export_sha256": "942f928910d3aea9300b8f9cada0b66a0c04c38ff0422e1792a7c3f4828a8ffc",
+      "export_bytes": 780
+    },
+    "measurements/round-06/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "bd509a56b96086d32b35fd28ad5d5978bb95b4c596ffef8dc0cfb9b0d78efcf9",
+      "original_bytes": 847,
+      "export_sha256": "d57b95d4c56f10842a28887f328053250d63a3dd9e934693bc249eaf33599dc6",
+      "export_bytes": 763
+    },
+    "measurements/round-06/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "f3e5ca77cbe8858df980323cfc92d12a27cc8ab2dd650168c280c5b975e41d2b",
+      "original_bytes": 846,
+      "export_sha256": "16696c84f5d818d042af84caa1cebc1c317a7ea3c8fb232763ffee3944c20fa4",
+      "export_bytes": 762
+    },
+    "measurements/round-06/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "a602ce70d62f1754decb8ce002a24d3b5b87352a1af685a1286e8b047ab03ec1",
+      "original_bytes": 851,
+      "export_sha256": "a304da885a5b7b7f46c027bad0a8c3fe44df80b6a4ba599aa27f3f3cec2bec21",
+      "export_bytes": 767
+    },
+    "measurements/round-06/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "35058a1ace149f0359896a735f1cb695c37f04e9725d1c0b658184993d422359",
+      "original_bytes": 866,
+      "export_sha256": "a14318e55e9609d916ee26f5183f29537a559939a88963a0b73b279ed9ba16bb",
+      "export_bytes": 782
+    },
+    "measurements/round-06/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "fe750ab1db048b042507b024330e4dad9e93bd23c685f68071a00659878b5744",
+      "original_bytes": 849,
+      "export_sha256": "cf84ebb652882eaffcca73d8c9c033e627716aa56ef823787187e0265f21ddd1",
+      "export_bytes": 765
+    },
+    "measurements/round-06/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "a9a25f217fbb97b4bc9cd7bcd02bf2c5e6865b6d47f4a83be2295bb3ce894ef9",
+      "original_bytes": 848,
+      "export_sha256": "18117d8b24df7e8ada5c7f14d15f542bfa9b6968de6a543e87d89ce34699909b",
+      "export_bytes": 764
+    },
+    "measurements/round-06/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "32800e7f16db72c442d24619e93b893a155a5bf253c520b115a453515fc2ee8b",
+      "original_bytes": 853,
+      "export_sha256": "53ac9e4b89f7667ae35d5a9f4894b6035c4288eb3088c0a36c63d33a9bf9e79e",
+      "export_bytes": 769
+    },
+    "measurements/round-06/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "3ca61f712f4c90216b17f8e06e2f70d032eddc05af6d4123774e431fdec6f28b",
+      "original_bytes": 853,
+      "export_sha256": "24030d2151e1d233084bf7cf72c979a9a8beafd987c0782156a6fa4ca14c50d9",
+      "export_bytes": 769
+    },
+    "measurements/round-06/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "95d19fcf03df8fb8cfa0360c7b6ed52174b03028da4a216f9ee081e6ebcc3df0",
+      "original_bytes": 840,
+      "export_sha256": "9da4121461a84c41c437b148cfa6ea5e495b4ef0473a87e7844c8b9e7cdbfee8",
+      "export_bytes": 756
+    },
+    "measurements/round-06/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "840ee055159f7b4ad34f748c38b6786ddf712dbc204b17c65726f185de6c602a",
+      "original_bytes": 840,
+      "export_sha256": "27e4b4185007c6d7ae8a06f841436b62a2ea6e80e6402684eea7c108c4640e57",
+      "export_bytes": 756
+    },
+    "measurements/round-06/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "fff33a5b7a08e89a5c16ac3bfb4884f14b2e11c44ae894e5e102ddc33517ac98",
+      "original_bytes": 844,
+      "export_sha256": "f7d3040a98d67b0288f66ded160eb261ad7cdb2b12323fab6dbabd3e98c7910d",
+      "export_bytes": 760
+    },
+    "measurements/round-06/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "b82a852a2b095cf121628432ca0e5e8064b4b33ecdab7e7d2d14a7b9c40be756",
+      "original_bytes": 844,
+      "export_sha256": "dab3ae5cd9793a0f4283102138a4c741ce62b4b52252e4dabad658a512e3560a",
+      "export_bytes": 760
+    },
+    "measurements/round-06/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "7df9881517fa02246c865f95440b8053eedb7454d4013b1462c5d97eecbf9b94",
+      "original_bytes": 849,
+      "export_sha256": "1769679e04c730eb1b23b18c17ebff5e3eef4edff6d571bef75a9999c4b5d1b5",
+      "export_bytes": 765
+    },
+    "measurements/round-06/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "b06ab6215d159edc6b768784bf291edaf656d323a3393dc801e261c14cfcbf74",
+      "original_bytes": 849,
+      "export_sha256": "4802b7d5af26bcd844357cdf0ace557bf2a53d71a372042ca3431415acb46dce",
+      "export_bytes": 765
+    },
+    "measurements/round-06/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "0050517f47042fef4750cd358ed4a92b5f63cf3c9d44bf1bbefe939846cde3d1",
+      "original_bytes": 853,
+      "export_sha256": "ba85e7b32f700f1a98639acbbefe07e7eb72004d7555bb1df0f4cca54f876f1c",
+      "export_bytes": 769
+    },
+    "measurements/round-06/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "1824adbeb810f7d8bf4a6f2b62614f43b70a08718d6e78cb891ad8aeff857932",
+      "original_bytes": 868,
+      "export_sha256": "b2b4de00f5172a46a607a215a962af3e7b5aae1ef19ca57cabf108450eae40ec",
+      "export_bytes": 784
+    },
+    "measurements/round-06/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/round-06/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "d838d121044e2663c70fd0afccea2a64bb65b00cd8a50df12e637a18924de0db",
+      "original_bytes": 874,
+      "export_sha256": "15d5be07f87a79071533b10651f6c4d6a78dedbbf75b38846b64d8c67021fb66",
+      "export_bytes": 790
+    },
+    "measurements/round-06/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/round-06/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "254c1b3c3341930f028fc0dd4787c4bc770b7a53e6a49f1e52ca84e5d4eaafc0",
+      "original_bytes": 858,
+      "export_sha256": "ab6f7cbdd16f43717f7575303de94812fd2951063ac4e274c82cd49fa350952d",
+      "export_bytes": 774
+    },
+    "measurements/round-06/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/round-06/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "f00e6e4669e1bdbf1ea7a581631a8c10474ca1b9fdbe95a4ad7ff2ab60a8b17c",
+      "original_bytes": 877,
+      "export_sha256": "2a75676d31fe159edd306e7866d8464b06e7968ba7e0d73ec4706ac4469bae17",
+      "export_bytes": 793
+    },
+    "measurements/round-06/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/round-06/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "d33e37be49ec5f453414bf05760cf36c8f7a648eb19b68242f13ad8548cb1c60",
+      "original_bytes": 861,
+      "export_sha256": "5669b87b2dee5e7361f8c394dcaa3d43074bd21b0c0f0e2ec5c1297bcde1bc94",
+      "export_bytes": 777
+    },
+    "measurements/warmup/ipv4-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv4-disjoint-cidr/B/sample.json",
+      "original_sha256": "3b58b0d5c57c6756a83e7e78034083751ee365e2bbd0150a29c8003f8a41c28f",
+      "original_bytes": 861,
+      "export_sha256": "15d7ac6b4e27a48016ff24da302e6e5fcbc5ff12a5f0373192404eaff95948c7",
+      "export_bytes": 777
+    },
+    "measurements/warmup/ipv4-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv4-disjoint-cidr/C/sample.json",
+      "original_sha256": "5bc94e6802f7a258a1e9dda24c2a8dcf8f65069d4657c61d77c0c8a68ccd3994",
+      "original_bytes": 860,
+      "export_sha256": "998d065fca8d18d3c92ba9df47260b63bb02dafce6af57f85b3fbca627cfeac8",
+      "export_bytes": 776
+    },
+    "measurements/warmup/ipv4-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv4-disjoint-ranges/B/sample.json",
+      "original_sha256": "9381ac4144dd888f137cd9f601372c9780c64b6e84034a23adca6b25bde7d146",
+      "original_bytes": 849,
+      "export_sha256": "3456d70fa835d381a6faa2a4368086a608292e3b9a8d293ad3624c5d50211da5",
+      "export_bytes": 765
+    },
+    "measurements/warmup/ipv4-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv4-disjoint-ranges/C/sample.json",
+      "original_sha256": "130f1ada7c3761173804ca035c485a3a7a3afcf4f4cb3cece47221c7fd9ddf59",
+      "original_bytes": 864,
+      "export_sha256": "fc89d836127db79cc3dc7f39adb70f7d2fb0a4c02e7406e8b923b68c746c8e6c",
+      "export_bytes": 780
+    },
+    "measurements/warmup/ipv6-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv6-disjoint-cidr/B/sample.json",
+      "original_sha256": "3c748a1a76a49ad5cc01fe985db6d675d2a5c4e32042d4f9ec6fad5cb4dad6ce",
+      "original_bytes": 847,
+      "export_sha256": "dbc2933b53c39123e9dde9b51783016b0a23abc993bb97a90666d7d487767f4d",
+      "export_bytes": 763
+    },
+    "measurements/warmup/ipv6-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv6-disjoint-cidr/C/sample.json",
+      "original_sha256": "b3e1871091941bd6c7782d5642a8bfd6981c8a3e05e81baf4e27ba7a705bc1aa",
+      "original_bytes": 845,
+      "export_sha256": "877b261d24b97d9cb584511b5a22d73b4a407c84a6d8443b4c5b9ecd698598eb",
+      "export_bytes": 761
+    },
+    "measurements/warmup/ipv6-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv6-disjoint-ranges/B/sample.json",
+      "original_sha256": "bab314259d83b1bd7c15f8412f362cf593ea8b2e97e611a0951bb8857853118d",
+      "original_bytes": 851,
+      "export_sha256": "c5225a22bc92d79e4b59748c141952a04d9d4060e8134747c4de06eb6db67668",
+      "export_bytes": 767
+    },
+    "measurements/warmup/ipv6-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/ipv6-disjoint-ranges/C/sample.json",
+      "original_sha256": "2af7fce2fd803c0f2c0a953ce87957e4eec9d5cd58f19625156f40945c3eb95c",
+      "original_bytes": 866,
+      "export_sha256": "2514f3afe471221802161d52d10396c1e5062497face36341c6e38d6b7c98fa5",
+      "export_bytes": 782
+    },
+    "measurements/warmup/mixed-disjoint-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-disjoint-cidr/B/sample.json",
+      "original_sha256": "501d9ce02b7d37f426e96fc0c8486c96b15ebf957eee7eacee1b80771bef801d",
+      "original_bytes": 864,
+      "export_sha256": "17f9a83e6251e3f3e7a7f9b77048362c20f0f062126505bf1e53d7b333ce0651",
+      "export_bytes": 780
+    },
+    "measurements/warmup/mixed-disjoint-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-disjoint-cidr/C/sample.json",
+      "original_sha256": "b3ff7a530710418f248c0840d3cb7fb687adc9ee0ccc092b464d65464ac63fdd",
+      "original_bytes": 848,
+      "export_sha256": "57f5e4a379790da54a1b9697d2ff8e46be24e67ab6e1a8db33549388961b235a",
+      "export_bytes": 764
+    },
+    "measurements/warmup/mixed-disjoint-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-disjoint-ranges/B/sample.json",
+      "original_sha256": "81315ffefc075ed1bc14b1ff2d3ae8e01fa67330ca22317d5a9911b7ffe13506",
+      "original_bytes": 853,
+      "export_sha256": "ac25794fb5018ea95ca4cd4b63dc0666a80a792056523fcfaac4334503cfd568",
+      "export_bytes": 769
+    },
+    "measurements/warmup/mixed-disjoint-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-disjoint-ranges/C/sample.json",
+      "original_sha256": "9774fc9389a81b758298c94d8c77b3cd860c61893f2e429857756701e5af396c",
+      "original_bytes": 852,
+      "export_sha256": "e7c55fe0e2914e9b4d0a2a4ca899c5fa0e58cc88163d17a6ada429cd7d138c67",
+      "export_bytes": 768
+    },
+    "measurements/warmup/mixed-overlap-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-overlap-cidr/B/sample.json",
+      "original_sha256": "0d1cac8b963fd116420607cf4ff7dbe7c9c4b30bd7b1f784e569977fcd4a7a3d",
+      "original_bytes": 840,
+      "export_sha256": "8e3bacc95e893816d73235907a8dc156b6ab4ae7dd0eec2e38f2b7339175b855",
+      "export_bytes": 756
+    },
+    "measurements/warmup/mixed-overlap-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-overlap-cidr/C/sample.json",
+      "original_sha256": "6148a61d4941ff37d6812f26c17614478f88062640f5d06a756a6baf3125aabb",
+      "original_bytes": 840,
+      "export_sha256": "62337a99f77b61c4103d1ee7a32cf019d6cf3de9d1331ddb6472b95c03edb30c",
+      "export_bytes": 756
+    },
+    "measurements/warmup/mixed-overlap-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-overlap-ranges/B/sample.json",
+      "original_sha256": "ff7ea5a36b10e3ce580b82f81812ad78af70ad118abb9df70969bec411050ab6",
+      "original_bytes": 844,
+      "export_sha256": "ef74280950705b621d4c7d587e3e3d7ba79ffd690804c6546472d62e185b6208",
+      "export_bytes": 760
+    },
+    "measurements/warmup/mixed-overlap-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-overlap-ranges/C/sample.json",
+      "original_sha256": "59e5694621ea4a4e71871ada6250c61bd34233348f041ad0f40d29f1277a6672",
+      "original_bytes": 844,
+      "export_sha256": "19f086a40bab04749125664279abc410d132592d9dbf10cb561f607bc833eb0c",
+      "export_bytes": 760
+    },
+    "measurements/warmup/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "db77690cf4fa4b4bbad462dcedfe5731e67b1385db8cbfd1d9cc337d417d7741",
+      "original_bytes": 849,
+      "export_sha256": "6befc0d7b6b1b58f5f6bc01033b4b71561f40e5195bcae01a2c49a1149fa5165",
+      "export_bytes": 765
+    },
+    "measurements/warmup/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "b29700339ac3b46b8323730effbdca8e72ae080f2cf50bbb98aae7bf8cb43103",
+      "original_bytes": 864,
+      "export_sha256": "5ef89a087ddf6d2ef0a4eee41bcad8e825add1189943bd85f3af4be8249e4948",
+      "export_bytes": 780
+    },
+    "measurements/warmup/mixed-permuted-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-permuted-ranges/B/sample.json",
+      "original_sha256": "acee1fd25e9be79a56fa8ab0f4d01a820e8def577a3c961b20ecf41c74eabf67",
+      "original_bytes": 853,
+      "export_sha256": "3fdce7cc88c93992f4f8bcf0b59a3435a9f0ddf84fbdc946286e212f28e338d2",
+      "export_bytes": 769
+    },
+    "measurements/warmup/mixed-permuted-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/mixed-permuted-ranges/C/sample.json",
+      "original_sha256": "350293761adbf88b4ee4b4f9ea10c9dfcaa2a962af25ee478f65204876a89e90",
+      "original_bytes": 867,
+      "export_sha256": "4f7380ccd6a3159ec44abe34962c5b3132c511fafa1b7debe7a85ba7c20aa3e3",
+      "export_bytes": 783
+    },
+    "measurements/warmup/range-derived-mixed-cidr/B/sample.json": {
+      "original_path": "macos/measurements/warmup/range-derived-mixed-cidr/B/sample.json",
+      "original_sha256": "7a7abaf27adaf5be5913175dc929bd686a379ec6a02e0eeb92df2aedf9a1be06",
+      "original_bytes": 874,
+      "export_sha256": "2b8bd1d69d3662ce253d6307324c26e192a7e0759fb6898605e688fcf887edc8",
+      "export_bytes": 790
+    },
+    "measurements/warmup/range-derived-mixed-cidr/C/sample.json": {
+      "original_path": "macos/measurements/warmup/range-derived-mixed-cidr/C/sample.json",
+      "original_sha256": "88813a2d2f8587ce2fd6dab95095a270c423b496a1a1b1d52885e16d93524f79",
+      "original_bytes": 858,
+      "export_sha256": "02c2d15d83c0c4dc44ede51e939182f4ba070ed84dcc5ae2c3696399c504e496",
+      "export_bytes": 774
+    },
+    "measurements/warmup/range-derived-mixed-ranges/B/sample.json": {
+      "original_path": "macos/measurements/warmup/range-derived-mixed-ranges/B/sample.json",
+      "original_sha256": "fac62f7b220f9f79a6f09d2e35555759af2a7bccca71ac172d4c9a5e1eb69ce6",
+      "original_bytes": 877,
+      "export_sha256": "f71f1fdee28ab4d78b710f17526d63cee72454a683581ac15542f812dcbd1cc3",
+      "export_bytes": 793
+    },
+    "measurements/warmup/range-derived-mixed-ranges/C/sample.json": {
+      "original_path": "macos/measurements/warmup/range-derived-mixed-ranges/C/sample.json",
+      "original_sha256": "4cf0a1813cac5366a476920fdc3c1389b15401982300c6bd85a1acf41fd16d28",
+      "original_bytes": 861,
+      "export_sha256": "a63d300921cd275e1a8151373c593f433364044d9a14b97146c0e598e33f35ed",
+      "export_bytes": 777
+    },
+    "measurements/freeze.json": {
+      "original_path": "macos/measurements/freeze.json",
+      "original_sha256": "eb5805bec089f19503589c6175849c8b3fa6da65f7347e7c690b2b9aebe7ee28",
+      "original_bytes": 9688,
+      "export_sha256": "674a3c7a93d58e9f7871e5fa06d6fc932d640fd10faeede46eba1bee60a6a528",
+      "export_bytes": 8722
+    },
+    "followup-01/round-01/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-01/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "b139c02e681fe1a5111578df6f0a46f875db6711e15fd99dca8af5b70a24dcf6",
+      "original_bytes": 849,
+      "export_sha256": "0df38c9c5e49058947372a5d7c98786208018076e7ac9058d588cbade6034355",
+      "export_bytes": 765
+    },
+    "followup-01/round-01/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-01/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "80e24d1cdf68d2f6112fbec17f3cdbd8820a49f17f9dea079c5128ba0f0e40e7",
+      "original_bytes": 848,
+      "export_sha256": "95330cbac3599d8600cd9ac3d3be5c48e5ebace453357b870d23da27510b2e40",
+      "export_bytes": 764
+    },
+    "followup-01/round-02/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-02/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "eecc5bc2f4ba1048178fe6ad322b48c0d2735c41724af8cdcd0dd55d8bbdd0be",
+      "original_bytes": 849,
+      "export_sha256": "5f5ae9fd84d19354341cca9c4cd7cee0f9b50ce378e6016b153aeb277bf386f3",
+      "export_bytes": 765
+    },
+    "followup-01/round-02/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-02/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "f3a9677666295b27bd906c2243db47cda2c8be68e5edde0a1b938376f553a4d9",
+      "original_bytes": 848,
+      "export_sha256": "148e8fa607d8506d651aa25917f71e4dc3eac747b60053f366ba0d1c64eb115f",
+      "export_bytes": 764
+    },
+    "followup-01/round-03/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-03/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "16c7d5d7f2d149b683b832ea7db801c90728145a379f61aa0ca37df527279ea2",
+      "original_bytes": 849,
+      "export_sha256": "d31e090f96faa4b41388628560408bc8d1496afc9bd7866ed3f90f65fc17a160",
+      "export_bytes": 765
+    },
+    "followup-01/round-03/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-03/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "4385f25819999e958f0b8465d1e33565ba67092e5569fc7ef340dbcd77fe1b45",
+      "original_bytes": 864,
+      "export_sha256": "3bee629b2f3e008e942edaad9cf00576fd4f1e3de89133645c41406babf39a5c",
+      "export_bytes": 780
+    },
+    "followup-01/round-04/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-04/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "d597a6a301f3adb4bc8e244d6db5a2148243ee7c2ebd339fd3b92050f4cb5f68",
+      "original_bytes": 849,
+      "export_sha256": "570ceb52917644848d4ceb3529e5316f877f78a7fdb9475718fb9926ca134ad6",
+      "export_bytes": 765
+    },
+    "followup-01/round-04/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-04/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "a6551d0127ab734e1be713fd97a843e9a10145d2c6ea0fec565d04a2ed67f4c4",
+      "original_bytes": 848,
+      "export_sha256": "b3ecd5856c9554e88e0ad541d2d3aee9d1e44368b4c250eb73a79418e1215261",
+      "export_bytes": 764
+    },
+    "followup-01/round-05/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-05/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "ee63dcd4151b38d28ce6a410f19f11e2ccd858e969826f4604c996fdbb816ffc",
+      "original_bytes": 849,
+      "export_sha256": "a17edcb26ba1a4b05f9909bb9926be4d0bf7abba39c430909cc26b31c48c2b1e",
+      "export_bytes": 765
+    },
+    "followup-01/round-05/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-05/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "e0c3883c3aa145d4a3eda5d43c9550ea40d73aa9ffe424f4b766061fdec4bbfa",
+      "original_bytes": 849,
+      "export_sha256": "783eb09ab71feb5fc0c27619199fce6d176128c46dcf3b2f3b1577b0795ab2e2",
+      "export_bytes": 765
+    },
+    "followup-01/round-06/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/round-06/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "b9fa2f43efeb5d34a3e20fb6e56d97ddadc51eb1eb5128cbdbe23c75cdbeee46",
+      "original_bytes": 849,
+      "export_sha256": "1e208106dfb221747eb602a062fc6d7c2f2df53b9795484ba5bbf9edfe8d85b2",
+      "export_bytes": 765
+    },
+    "followup-01/round-06/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/round-06/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "c1e35a940f3ba9995a0f5e8e305565d5e8b9c1374c29cd37e0256f32310b878f",
+      "original_bytes": 849,
+      "export_sha256": "543af129228e2735ee11eb97c0934f17c6e359c0ceb0480560ca891c67a1739c",
+      "export_bytes": 765
+    },
+    "followup-01/warmup/mixed-permuted-cidr/B/sample.json": {
+      "original_path": "macos/followup-01/warmup/mixed-permuted-cidr/B/sample.json",
+      "original_sha256": "89c408cc73fd3ddec332d2671ab0df96836d6103ff32bbf153c3ce566cf46e90",
+      "original_bytes": 849,
+      "export_sha256": "58eb34281fe2b1548425be3f2413e2e2529bccef5492934d2cacf67734e60f3c",
+      "export_bytes": 765
+    },
+    "followup-01/warmup/mixed-permuted-cidr/C/sample.json": {
+      "original_path": "macos/followup-01/warmup/mixed-permuted-cidr/C/sample.json",
+      "original_sha256": "ae98a9321d7318b7dd3c8c90236415b837594bfe697fabb6f5d7f42ed43b2529",
+      "original_bytes": 848,
+      "export_sha256": "bc4a0a1b2f341da77f87eaa20c3cd1c71f78f4502b0cfed1d4cf6fe684cb4b89",
+      "export_bytes": 764
+    },
+    "followup-01/freeze.json": {
+      "original_path": "macos/followup-01/freeze.json",
+      "original_sha256": "6a0086e15b24716d06870eb5cc752e5cd8fdafd21b546ab6defe89f687cc0a07",
+      "original_bytes": 1740,
+      "export_sha256": "19c3f64ae30454a756805583e69fa89b5f1681842ad251e89689ce795216338f",
+      "export_bytes": 1446
+    },
+    "codegen/calls.json": {
+      "original_path": "macos/codegen/calls.json",
+      "original_sha256": "8a94936c8416dd8a7291658ce7f33136b22a4879d254e7bf3661b20778812de1",
+      "original_bytes": 6742,
+      "export_sha256": "8a94936c8416dd8a7291658ce7f33136b22a4879d254e7bf3661b20778812de1",
+      "export_bytes": 6742
+    },
+    "codegen/review.json": {
+      "original_path": "macos/codegen/review.json",
+      "original_sha256": "fd762140adaa3cb34e343ccd3cf584f2b5aba4aca46892d7df2fb12403d5acf5",
+      "original_bytes": 436,
+      "export_sha256": "fd762140adaa3cb34e343ccd3cf584f2b5aba4aca46892d7df2fb12403d5acf5",
+      "export_bytes": 436
+    },
+    "codegen/B-raw-output.txt": {
+      "original_path": "macos/codegen/B-raw-output.txt",
+      "original_sha256": "b7d49cca4481782a02b05adc893e7e7d382a5cfe7a49eea8faaadb41300535d6",
+      "original_bytes": 13017,
+      "export_sha256": "b7d49cca4481782a02b05adc893e7e7d382a5cfe7a49eea8faaadb41300535d6",
+      "export_bytes": 13017
+    },
+    "codegen/C-raw-output.txt": {
+      "original_path": "macos/codegen/C-raw-output.txt",
+      "original_sha256": "a29c42673cc671401bc1657c95726d50f14fea6a163b9a56e7fcb44091abeb39",
+      "original_bytes": 13470,
+      "export_sha256": "a29c42673cc671401bc1657c95726d50f14fea6a163b9a56e7fcb44091abeb39",
+      "export_bytes": 13470
+    }
+  },
+  "table_sha256": "8205b2ac4d866bf56511e6c2e825fa73b19b4bda4e70a7a8f0d8a8d28476f6be"
+}

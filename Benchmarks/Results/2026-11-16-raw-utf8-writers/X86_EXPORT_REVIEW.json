@@ -1,0 +1,83 @@
+{
+  "original_path": "x86_64/control/export-independent-review.json",
+  "original_sha256": "c2591c16dfe5409d2b08f8b2ff26559b4bd3f277b15edb1b56c75c2fd45aa397",
+  "receipt": {
+    "passed": true,
+    "at": "2026-11-16T15:58:05.097887+00:00",
+    "export_manifest_sha256": "1eb8690595464afac201ef9cc89f57c9550ea9608e4072225329cb6112d1da8b",
+    "table_sha256": "83162c46b5c42dd03ebd3979ae88cef9e639eaa6430fd0a9694a5953d2533c99",
+    "export_artifacts": 254,
+    "exact_inventory_files": 256,
+    "all_original_and_export_hashes_sizes_verified": true,
+    "json_files_compared": 254,
+    "numeric_leaves_compared": 8315,
+    "integer_leaves": 5341,
+    "float_leaves": 1625,
+    "boolean_leaves": 1349,
+    "numeric_comparison": "Recursive structure/type equality; each number equal; floating-point hex representation equal. Dict order retained through path redaction.",
+    "export_hash_inventory_sha256": "3611bf55338040f09a08d614d04dca8f73b6f866aaf5f0470ade5822c3b1cf0d",
+    "required_receipts_verified": [
+      "control/build-tests/B-cli-test-debug.json",
+      "control/build-tests/B-cli-test-release.json",
+      "control/build-tests/C-cli-test-debug.json",
+      "control/build-tests/C-cli-test-release.json",
+      "control/build-tests/summary.json",
+      "control/codegen-gate.json",
+      "control/codegen-independent-review.json",
+      "control/codegen-retrieval.json",
+      "control/codegen/B-captures.json",
+      "control/codegen/C-captures.json",
+      "control/codegen/review.json",
+      "control/dedicated-runtime.json",
+      "control/followup-selection.json",
+      "control/functional-phase-complete.json",
+      "control/parent-source-freeze.json",
+      "control/premeasurement-freeze.json",
+      "control/results-audit.json",
+      "control/retrieval/receipt.json",
+      "control/retrieval/stream-receipt.json",
+      "control/source-reference.json",
+      "control/test-artifact-preservation.json",
+      "differential/summary.json"
+    ],
+    "native_audit_checks": 3103,
+    "test_executions": 300,
+    "test_log_counts_rechecked": [
+      72,
+      72,
+      78,
+      78
+    ],
+    "differential_cases": 77,
+    "profiles": {
+      "measurements": {
+        "rows": 12,
+        "measured": 144,
+        "warmups": 24,
+        "selected_for_followup": [
+          "mixed-overlap-ranges",
+          "mixed-overlap-cidr"
+        ],
+        "summary_sha256": "b4db6a326cf631019b03b25f851987a11fb6f051f2afdeda63971ccbc64862c1"
+      },
+      "followup-measurements": {
+        "rows": 2,
+        "measured": 24,
+        "warmups": 4,
+        "selected_for_followup": [
+          "mixed-overlap-ranges"
+        ],
+        "summary_sha256": "c759e055883d0febcd2bfcd434d342195ae082122928af798e5e683b50ada393"
+      }
+    },
+    "measured_samples": 168,
+    "excluded_warmups": 28,
+    "table_rows_recomputed": 14,
+    "table_units": "B/C medians in seconds; changes median of six paired percentages; spread minimum/maximum elapsed paired percentages. CPU raw seconds; Linux wait4 ru_maxrss converted KiB to bytes.",
+    "archive_sha256_from_verified_receipt": "7ecdaeac28804892868c427e832328a21fdbd61a837558af4594ac2136059149",
+    "archive_bytes": 670684938,
+    "archive_files_verified_by_retrieval": 1354,
+    "archive_rehashed_by_this_review": false,
+    "scope": "Read-only local artifact review, plus this new receipt outside the portable report. No target execution, remote calls, builds, new measurements, or overwrite of existing evidence."
+  }
+}

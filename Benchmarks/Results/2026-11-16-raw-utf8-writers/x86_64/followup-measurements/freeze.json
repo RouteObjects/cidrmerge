@@ -1,0 +1,45 @@
+{
+  "files": {
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/control/cases.json": "9f6e02ca25dc59c1d4755794e0761e38951caaad279c3d88e78b33150b9914f3",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/control/run_matched.py": "a0ce0a2f0cb244b15e18af069256299b3f28b3cb0b06105a8efd23ba12358ad7",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/bin/B": "064cbc91cb5ccd4b9e4129d6237ba2419f4253a71f592489bd4b8621dc0508ed",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/bin/C": "55bf506b75af265cee2976ebe03b2bed7b54768d1cddc28e9f4090c789f8ff6e",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/fixtures/mixed-overlap/input.txt": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/fixtures/mixed-overlap/ranges.expected": "6e164a341c4a616601e67e0f56e693bb42e7d665d2698d0e1caf6de0903ccd5f",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/fixtures/mixed-overlap/cidr.expected": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac"
+  },
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "TZ": "UTC",
+    "TMPDIR": "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/followup-measurements/tmp/",
+    "LD_LIBRARY_PATH": "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/runtime/lib"
+  },
+  "host": "Linux-6.14.8-2-pve-x86_64-with-glibc2.39",
+  "configs": [
+    {
+      "id": "mixed-overlap-ranges",
+      "fixture": "mixed-overlap",
+      "representation": "ranges",
+      "input": "fixtures/mixed-overlap/input.txt",
+      "input_sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+      "reference": "fixtures/mixed-overlap/ranges.expected",
+      "output_sha256": "6e164a341c4a616601e67e0f56e693bb42e7d665d2698d0e1caf6de0903ccd5f",
+      "output_bytes": 78,
+      "output_count": 2
+    },
+    {
+      "id": "mixed-overlap-cidr",
+      "fixture": "mixed-overlap",
+      "representation": "cidr",
+      "input": "fixtures/mixed-overlap/input.txt",
+      "input_sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+      "reference": "fixtures/mixed-overlap/cidr.expected",
+      "output_sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "output_bytes": 25,
+      "output_count": 2
+    }
+  ],
+  "deduplicate_after_timed_sample": true
+}

@@ -1,0 +1,243 @@
+{
+  "passed": true,
+  "at": "2026-11-16T15:42:49.918312+00:00",
+  "reviewer": "independent static artifact audit",
+  "variants": {
+    "B": {
+      "binary_sha256": "064cbc91cb5ccd4b9e4129d6237ba2419f4253a71f592489bd4b8621dc0508ed",
+      "binary_bytes": 17716056,
+      "build_receipt_sha256": "530015d380c905dae2be3abd262f160e52de3f12452df41ae27d1c847d554e2f",
+      "captures_sha256": "3ef00ba4066ec4d58b96fad2276a0c000c32511085d18eb6466d077c3d2561ea",
+      "function_count": 10,
+      "instruction_bytes_verified": 7974,
+      "functions": [
+        {
+          "address": "0x1bba60",
+          "size": 417,
+          "instruction_bytes_verified": 417,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbc10",
+          "size": 617,
+          "instruction_bytes_verified": 617,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbe80",
+          "size": 77,
+          "instruction_bytes_verified": 77,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbed0",
+          "size": 275,
+          "instruction_bytes_verified": 275,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1d87a0",
+          "size": 11,
+          "instruction_bytes_verified": 11,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1d9190",
+          "size": 759,
+          "instruction_bytes_verified": 759,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1d9490",
+          "size": 1208,
+          "instruction_bytes_verified": 1208,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1dd5d0",
+          "size": 1946,
+          "instruction_bytes_verified": 1946,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e3400",
+          "size": 282,
+          "instruction_bytes_verified": 282,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e3730",
+          "size": 2382,
+          "instruction_bytes_verified": 2382,
+          "elf_symbol_verified": true
+        }
+      ]
+    },
+    "C": {
+      "binary_sha256": "55bf506b75af265cee2976ebe03b2bed7b54768d1cddc28e9f4090c789f8ff6e",
+      "binary_bytes": 17723328,
+      "build_receipt_sha256": "855c6d80ecd9e9e7e1616318569391154180ba614df5e9f2587d34334602a578",
+      "captures_sha256": "2f53ed1e71da1f7da8016f3de87180d59845fe3a72e8413f0d069a7dbaecd0fb",
+      "function_count": 11,
+      "instruction_bytes_verified": 8284,
+      "functions": [
+        {
+          "address": "0x1bbae0",
+          "size": 417,
+          "instruction_bytes_verified": 417,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbc90",
+          "size": 617,
+          "instruction_bytes_verified": 617,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbf00",
+          "size": 77,
+          "instruction_bytes_verified": 77,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1bbf50",
+          "size": 275,
+          "instruction_bytes_verified": 275,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1d8820",
+          "size": 11,
+          "instruction_bytes_verified": 11,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1dc370",
+          "size": 1872,
+          "instruction_bytes_verified": 1872,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e1f80",
+          "size": 215,
+          "instruction_bytes_verified": 215,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e2060",
+          "size": 1079,
+          "instruction_bytes_verified": 1079,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e24a0",
+          "size": 1057,
+          "instruction_bytes_verified": 1057,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e3540",
+          "size": 282,
+          "instruction_bytes_verified": 282,
+          "elf_symbol_verified": true
+        },
+        {
+          "address": "0x1e3870",
+          "size": 2382,
+          "instruction_bytes_verified": 2382,
+          "elf_symbol_verified": true
+        }
+      ]
+    }
+  },
+  "retrieval_receipt_sha256": "7e8ed4d3f94a4263905d2aa108eb48683136e2666a93fa2a5e4c9023ad3055e4",
+  "retrieval_files_verified": 12,
+  "reviewed_codegen_review_sha256": "9169072560643b9e0bdde2e182ed7313a9b1a7dcdddbd7e5e7d13aa96d42d7d4",
+  "parent_source_freeze_sha256": "6a275152ef055b57244d881e608f3f6718c90d08962906e14b413ebc8d7202b5",
+  "renderer_source_sha256": {
+    "B": "8ae047aaf4e44a7a1b7e9382718c01c2b800ecc3c77d146c35d161807ed09531",
+    "C": "d4103ef6b1edca08979940d2e1897b3f55e292a3a233461cfa0bab175b67573e"
+  },
+  "actual_direct_call_edges": [
+    {
+      "variant": "B",
+      "site": "0x1ddb40",
+      "target": "0x1d9190",
+      "assembly": "call   1d9190 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()>"
+    },
+    {
+      "variant": "B",
+      "site": "0x1ddb4f",
+      "target": "0x1d9490",
+      "assembly": "call   1d9490 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1dc89d",
+      "target": "0x1e1f80",
+      "assembly": "call   1e1f80 <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e2003",
+      "target": "0x1e2060",
+      "assembly": "call   1e2060 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e2017",
+      "target": "0x1e24a0",
+      "assembly": "call   1e24a0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e2133",
+      "target": "0x1bbae0",
+      "assembly": "call   1bbae0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e21bc",
+      "target": "0x1bbae0",
+      "assembly": "call   1bbae0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e2358",
+      "target": "0x1bbc90",
+      "assembly": "call   1bbc90 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e2574",
+      "target": "0x1bbf00",
+      "assembly": "call   1bbf00 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e25f9",
+      "target": "0x1bbf00",
+      "assembly": "call   1bbf00 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    },
+    {
+      "variant": "C",
+      "site": "0x1e278f",
+      "target": "0x1bbf50",
+      "assembly": "call   1bbf50 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>"
+    }
+  ],
+  "observations": [
+    "All captured instruction bytes and function address/size/mangled names match the actual ordinary ELF executables, using ELF load segments and symbol tables. Direct call displacements were independently decoded.",
+    "Baseline CLI calls the typed V4/V6 appendText specializations; candidate CLI calls raw, then the V4/V6 closure bodies.",
+    "At candidate raw 0x1e1f8b, sub $0x80,%rsp reserves 128 additional stack bytes, in addition to saved-register pushes. V4 receives begin rbp-0x7a and end rbp-0x58 (34 bytes); V6 reuses begin rbp-0x7a with end rbp-0x28 (82 bytes).",
+    "The candidate range loops call each family address writer twice, insert three dots and a newline, while CIDR loops call the corresponding CIDR writer and insert a newline. Buffer pointers remain caller-stack-backed.",
+    "No direct String description, appendUTF8, formatCIDR, sharedUTF8 or String.UTF8View calls occur in the two candidate raw-loop closures. Baseline typed appendText contains String-producing/conversion paths.",
+    "Data reserve/uniqueness/storage/allocation calls remain in candidate raw and closures. The four public writers remain generic over the form and can use witness calls; this is not a claim of eliminating all indirect dispatch.",
+    "Renderer source before appendText and helpers from entryDescription onward match baseline, except the removed standalone Data.appendUTF8 extension; this bounds raw-loop changes and does not assert byte-identical unrelated machine code."
+  ],
+  "scope_limits": [
+    "Static ordinary Swift 6.4.2 native x86-64 release executables only. No binaries, builds, tests or remote commands executed by this review.",
+    "No dynamic allocation count, zero-allocation claim, transitive no-allocation proof, measured speedup or whole-process causation is inferred.",
+    "Native functional results and benchmark raw-data auditing are separate gates."
+  ]
+}

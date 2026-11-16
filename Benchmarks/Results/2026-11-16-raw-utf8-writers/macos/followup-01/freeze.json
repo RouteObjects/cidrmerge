@@ -1,0 +1,32 @@
+{
+  "files": {
+    "$EXPERIMENT_ROOT/control/cases.json": "9f6e02ca25dc59c1d4755794e0761e38951caaad279c3d88e78b33150b9914f3",
+    "$EXPERIMENT_ROOT/control/run_matched.py": "a0ce0a2f0cb244b15e18af069256299b3f28b3cb0b06105a8efd23ba12358ad7",
+    "$EXPERIMENT_ROOT/macos/bin/B": "e7a8b8a80d71a1cb8cefaef092f96d0383a33e826e803cfc641af4a9d19b3f9e",
+    "$EXPERIMENT_ROOT/macos/bin/C": "1bd879e7c9e486389ab9c7e40751ad3cd865fcbe4939b083dc843139dfaac1f1",
+    "$EXPERIMENT_ROOT/fixtures/mixed-permuted/input.txt": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+    "$EXPERIMENT_ROOT/fixtures/mixed-permuted/cidr.expected": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c"
+  },
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "TZ": "UTC",
+    "TMPDIR": "$EXPERIMENT_ROOT/macos/followup-01/tmp/"
+  },
+  "host": "macOS-27.2.1-arm64-arm-64bit",
+  "configs": [
+    {
+      "id": "mixed-permuted-cidr",
+      "fixture": "mixed-permuted",
+      "representation": "cidr",
+      "input": "fixtures/mixed-permuted/input.txt",
+      "input_sha256": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+      "reference": "fixtures/mixed-permuted/cidr.expected",
+      "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "output_bytes": 17864212,
+      "output_count": 1000000
+    }
+  ],
+  "deduplicate_after_timed_sample": false
+}

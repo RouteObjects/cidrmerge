@@ -1,0 +1,30 @@
+{
+  "label": "followup",
+  "started_at": "2026-11-16T15:30:46.400104+00:00",
+  "command": [
+    "/validation/python/bin/python3.12",
+    "/experiment/control/run_matched.py",
+    "--platform",
+    "linux",
+    "--fixtures-root",
+    "/experiment",
+    "--cases",
+    "/experiment/control/cases.json",
+    "--baseline",
+    "/validation/bin/B",
+    "--candidate",
+    "/validation/bin/C",
+    "--output",
+    "/validation/followup-01",
+    "--runtime-library-path",
+    "/usr/lib/swift/linux",
+    "--only",
+    "mixed-disjoint-cidr",
+    "mixed-overlap-ranges",
+    "mixed-overlap-cidr"
+  ],
+  "free_bytes": 5698044674048,
+  "exit_code": 0,
+  "finished_at": "2026-11-16T15:31:04.310202+00:00",
+  "log_sha256": "5296ac8c9e1d56b0bcece8ef303ddf26c83757722e11b379a1aabc3f079abaad"
+}

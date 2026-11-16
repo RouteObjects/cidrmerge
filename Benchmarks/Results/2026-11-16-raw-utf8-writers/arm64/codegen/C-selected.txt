@@ -1,0 +1,590 @@
+=== original C-assembly.txt lines 351731-351788 ===
+0000000000198550 <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data>:
+  198550:	d102c3ff 	sub	sp, sp, #0xb0
+  198554:	a9087bfd 	stp	x29, x30, [sp, #128]
+  198558:	f9004bf5 	str	x21, [sp, #144]
+  19855c:	a90a4ff4 	stp	x20, x19, [sp, #160]
+  198560:	910203fd 	add	x29, sp, #0x80
+  198564:	f00009a8 	adrp	x8, 2cf000 <_DYNAMIC+0x1e0>
+  198568:	aa0003f3 	mov	x19, x0
+  19856c:	f9425508 	ldr	x8, [x8, #1192]
+  198570:	f9400108 	ldr	x8, [x8]
+  198574:	f81f83a8 	stur	x8, [x29, #-8]
+  198578:	97fae4a0 	bl	517f8 <FoundationEssentials.__DataStorage.empty.unsafeMutableAddressor : FoundationEssentials.__DataStorage@plt>
+  19857c:	a9442668 	ldp	x8, x9, [x19, #64]
+  198580:	f9400000 	ldr	x0, [x0]
+  198584:	a9017fff 	stp	xzr, xzr, [sp, #16]
+  198588:	f90007e0 	str	x0, [sp, #8]
+  19858c:	ab090108 	adds	x8, x8, x9
+  198590:	540004c6 	b.vs	198628 <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data+0xd8>
+  198594:	52800609 	mov	w9, #0x30                  	// #48
+  198598:	9b497d09 	smulh	x9, x8, x9
+  19859c:	8b080508 	add	x8, x8, x8, lsl #1
+  1985a0:	d37ced15 	lsl	x21, x8, #4
+  1985a4:	eb95fd3f 	cmp	x9, x21, asr #63
+  1985a8:	54000060 	b.eq	1985b4 <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data+0x64>  // b.none
+  1985ac:	97fade5b 	bl	4ff18 <swift_retain@plt>
+  1985b0:	14000005 	b	1985c4 <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data+0x74>
+  1985b4:	97fade59 	bl	4ff18 <swift_retain@plt>
+  1985b8:	910023f4 	add	x20, sp, #0x8
+  1985bc:	aa1503e0 	mov	x0, x21
+  1985c0:	940003a7 	bl	19945c <FoundationEssentials.Data._Representation.reserveCapacity(Swift.Int) -> ()>
+  1985c4:	f9400662 	ldr	x2, [x19, #8]
+  1985c8:	91009bf4 	add	x20, sp, #0x26
+  1985cc:	91009be0 	add	x0, sp, #0x26
+  1985d0:	91008a81 	add	x1, x20, #0x22
+  1985d4:	910023e3 	add	x3, sp, #0x8
+  1985d8:	aa1f03f5 	mov	x21, xzr
+  1985dc:	94000015 	bl	198630 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()>
+  1985e0:	f9400a62 	ldr	x2, [x19, #16]
+  1985e4:	91009be0 	add	x0, sp, #0x26
+  1985e8:	91014a81 	add	x1, x20, #0x52
+  1985ec:	910023e3 	add	x3, sp, #0x8
+  1985f0:	94000115 	bl	198a44 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()>
+  1985f4:	f00009a8 	adrp	x8, 2cf000 <_DYNAMIC+0x1e0>
+  1985f8:	f9425508 	ldr	x8, [x8, #1192]
+  1985fc:	a94087e0 	ldp	x0, x1, [sp, #8]
+  198600:	f9400fe2 	ldr	x2, [sp, #24]
+  198604:	f85f83a9 	ldur	x9, [x29, #-8]
+  198608:	f9400108 	ldr	x8, [x8]
+  19860c:	eb09011f 	cmp	x8, x9
+  198610:	540000e1 	b.ne	19862c <static CIDRMergeCLI.OutputRenderer.raw(CIDRMergeCLI.MergeResult) -> FoundationEssentials.Data+0xdc>  // b.any
+  198614:	a94a4ff4 	ldp	x20, x19, [sp, #160]
+  198618:	f9404bf5 	ldr	x21, [sp, #144]
+  19861c:	a9487bfd 	ldp	x29, x30, [sp, #128]
+  198620:	9102c3ff 	add	sp, sp, #0xb0
+  198624:	d65f03c0 	ret
+  198628:	d4200020 	brk	#0x1
+  19862c:	97fae0b3 	bl	508f8 <__stack_chk_fail@plt>
+
+
+=== original C-assembly.txt lines 351789-352051 ===
+0000000000198630 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()>:
+  198630:	d10243ff 	sub	sp, sp, #0x90
+  198634:	a9037bfd 	stp	x29, x30, [sp, #48]
+  198638:	f90023fc 	str	x28, [sp, #64]
+  19863c:	a9056bfb 	stp	x27, x26, [sp, #80]
+  198640:	a90663f9 	stp	x25, x24, [sp, #96]
+  198644:	a9075bf7 	stp	x23, x22, [sp, #112]
+  198648:	a9084ff4 	stp	x20, x19, [sp, #128]
+  19864c:	9100c3fd 	add	x29, sp, #0x30
+  198650:	aa0303f6 	mov	x22, x3
+  198654:	aa0203f4 	mov	x20, x2
+  198658:	aa0003f8 	mov	x24, x0
+  19865c:	f90007f5 	str	x21, [sp, #8]
+  198660:	f9000fe1 	str	x1, [sp, #24]
+  198664:	b7f80f82 	tbnz	x2, #63, 198854 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x224>
+  198668:	f9400a99 	ldr	x25, [x20, #16]
+  19866c:	b4001af9 	cbz	x25, 1989c8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x398>
+  198670:	f00009a2 	adrp	x2, 2cf000 <_DYNAMIC+0x1e0>
+  198674:	90000da0 	adrp	x0, 34c000 <metadata instantiation cache for protocol conformance descriptor for CIDRMergeCLI.OutputRepresentation : Swift.RawRepresentable in CIDRMergeCLI+0x30>
+  198678:	910e2000 	add	x0, x0, #0x388
+  19867c:	f9452442 	ldr	x2, [x2, #2632]
+  198680:	d00009c1 	adrp	x1, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198684:	9115a021 	add	x1, x1, #0x568
+  198688:	940003b6 	bl	199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>
+  19868c:	f9400fe8 	ldr	x8, [sp, #24]
+  198690:	aa0003fa 	mov	x26, x0
+  198694:	91009297 	add	x23, x20, #0x24
+  198698:	cb180108 	sub	x8, x8, x24
+  19869c:	f9000be8 	str	x8, [sp, #16]
+  1986a0:	14000005 	b	1986b4 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x84>
+  1986a4:	f9000ac8 	str	x8, [x22, #16]
+  1986a8:	f1000739 	subs	x25, x25, #0x1
+  1986ac:	910022f7 	add	x23, x23, #0x8
+  1986b0:	540018c0 	b.eq	1989c8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x398>  // b.none
+  1986b4:	297ff2e8 	ldp	w8, w28, [x23, #-4]
+  1986b8:	d00009c0 	adrp	x0, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  1986bc:	9115a000 	add	x0, x0, #0x568
+  1986c0:	b81f83a8 	stur	w8, [x29, #-8]
+  1986c4:	52800408 	mov	w8, #0x20                  	// #32
+  1986c8:	381fc3a8 	sturb	w8, [x29, #-4]
+  1986cc:	97faf284 	bl	550dc <__swift_instantiateConcreteTypeFromMangledName>
+  1986d0:	aa0003fb 	mov	x27, x0
+  1986d4:	f9400fe1 	ldr	x1, [sp, #24]
+  1986d8:	d10023b4 	sub	x20, x29, #0x8
+  1986dc:	aa1803e0 	mov	x0, x24
+  1986e0:	aa1b03e2 	mov	x2, x27
+  1986e4:	aa1a03e3 	mov	x3, x26
+  1986e8:	97ff6c2d 	bl	17379c <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  1986ec:	b1000408 	adds	x8, x0, #0x1
+  1986f0:	528005ca 	mov	w10, #0x2e                  	// #46
+  1986f4:	38206b0a 	strb	w10, [x24, x0]
+  1986f8:	540017a6 	b.vs	1989ec <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3bc>
+  1986fc:	b1000809 	adds	x9, x0, #0x2
+  198700:	38286b0a 	strb	w10, [x24, x8]
+  198704:	54001766 	b.vs	1989f0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  198708:	b1000c13 	adds	x19, x0, #0x3
+  19870c:	38296b0a 	strb	w10, [x24, x9]
+  198710:	54001726 	b.vs	1989f4 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3c4>
+  198714:	52800408 	mov	w8, #0x20                  	// #32
+  198718:	b81f03bc 	stur	w28, [x29, #-16]
+  19871c:	381f43a8 	sturb	w8, [x29, #-12]
+  198720:	b40000f8 	cbz	x24, 19873c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x10c>
+  198724:	f9400be8 	ldr	x8, [sp, #16]
+  198728:	eb13011f 	cmp	x8, x19
+  19872c:	540016cb 	b.lt	198a04 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3d4>  // b.tstop
+  198730:	f9400fe1 	ldr	x1, [sp, #24]
+  198734:	8b130300 	add	x0, x24, x19
+  198738:	14000005 	b	19874c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x11c>
+  19873c:	f100027f 	cmp	x19, #0x0
+  198740:	5400174c 	b.gt	198a28 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3f8>
+  198744:	aa1f03e1 	mov	x1, xzr
+  198748:	aa1f03e0 	mov	x0, xzr
+  19874c:	d10043b4 	sub	x20, x29, #0x10
+  198750:	aa1b03e2 	mov	x2, x27
+  198754:	aa1a03e3 	mov	x3, x26
+  198758:	97ff6c11 	bl	17379c <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  19875c:	ab000268 	adds	x8, x19, x0
+  198760:	540014c6 	b.vs	1989f8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3c8>
+  198764:	52800149 	mov	w9, #0xa                   	// #10
+  198768:	38286b09 	strb	w9, [x24, x8]
+  19876c:	b4001698 	cbz	x24, 198a3c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x40c>
+  198770:	b100051b 	adds	x27, x8, #0x1
+  198774:	54001446 	b.vs	1989fc <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3cc>
+  198778:	b4fff99b 	cbz	x27, 1986a8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x78>
+  19877c:	b7f8147b 	tbnz	x27, #63, 198a08 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3d8>
+  198780:	f94002c0 	ldr	x0, [x22]
+  198784:	97fade45 	bl	50098 <swift_isUniquelyReferenced_nonNull_native@plt>
+  198788:	37000420 	tbnz	w0, #0, 19880c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x1dc>
+  19878c:	a94052ca 	ldp	x10, x20, [x22]
+  198790:	f9400ac8 	ldr	x8, [x22, #16]
+  198794:	f9400949 	ldr	x9, [x10, #16]
+  198798:	b4000109 	cbz	x9, 1987b8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x188>
+  19879c:	f940154a 	ldr	x10, [x10, #40]
+  1987a0:	eb0a028a 	subs	x10, x20, x10
+  1987a4:	54001486 	b.vs	198a34 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x404>
+  1987a8:	8b09015c 	add	x28, x10, x9
+  1987ac:	eb140113 	subs	x19, x8, x20
+  1987b0:	540000a7 	b.vc	1987c4 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x194>
+  1987b4:	1400009e 	b	198a2c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3fc>
+  1987b8:	aa1f03fc 	mov	x28, xzr
+  1987bc:	eb140113 	subs	x19, x8, x20
+  1987c0:	54001366 	b.vs	198a2c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3fc>
+  1987c4:	aa1f03e0 	mov	x0, xzr
+  1987c8:	97fae41c 	bl	51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  1987cc:	52800821 	mov	w1, #0x41                  	// #65
+  1987d0:	528000e2 	mov	w2, #0x7                   	// #7
+  1987d4:	97faddd9 	bl	4ff38 <swift_allocObject@plt>
+  1987d8:	aa0003e6 	mov	x6, x0
+  1987dc:	aa1c03e0 	mov	x0, x28
+  1987e0:	aa1303e1 	mov	x1, x19
+  1987e4:	52800022 	mov	w2, #0x1                   	// #1
+  1987e8:	aa1f03e3 	mov	x3, xzr
+  1987ec:	aa1f03e4 	mov	x4, xzr
+  1987f0:	aa1403e5 	mov	x5, x20
+  1987f4:	aa0603f4 	mov	x20, x6
+  1987f8:	97fae414 	bl	51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  1987fc:	f94002c8 	ldr	x8, [x22]
+  198800:	f90002c0 	str	x0, [x22]
+  198804:	aa0803e0 	mov	x0, x8
+  198808:	97fadda8 	bl	4fea8 <swift_release@plt>
+  19880c:	f94002d4 	ldr	x20, [x22]
+  198810:	f9400adc 	ldr	x28, [x22, #16]
+  198814:	f9401688 	ldr	x8, [x20, #40]
+  198818:	eb080388 	subs	x8, x28, x8
+  19881c:	54000f86 	b.vs	198a0c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3dc>
+  198820:	f9400e89 	ldr	x9, [x20, #24]
+  198824:	eb080121 	subs	x1, x9, x8
+  198828:	54000f46 	b.vs	198a10 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3e0>
+  19882c:	aa1c03e0 	mov	x0, x28
+  198830:	aa1803e2 	mov	x2, x24
+  198834:	aa1b03e3 	mov	x3, x27
+  198838:	97fae408 	bl	51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  19883c:	ab1b0388 	adds	x8, x28, x27
+  198840:	54000ea6 	b.vs	198a14 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3e4>
+  198844:	f94006c9 	ldr	x9, [x22, #8]
+  198848:	eb09011f 	cmp	x8, x9
+  19884c:	54fff2ca 	b.ge	1986a4 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x74>  // b.tcont
+  198850:	d4200020 	brk	#0x1
+  198854:	9240fa93 	and	x19, x20, #0x7fffffffffffffff
+  198858:	f9400a77 	ldr	x23, [x19, #16]
+  19885c:	b4000b77 	cbz	x23, 1989c8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x398>
+  198860:	f00009a2 	adrp	x2, 2cf000 <_DYNAMIC+0x1e0>
+  198864:	d00009d4 	adrp	x20, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198868:	9115e294 	add	x20, x20, #0x578
+  19886c:	f944e442 	ldr	x2, [x2, #2504]
+  198870:	90000da0 	adrp	x0, 34c000 <metadata instantiation cache for protocol conformance descriptor for CIDRMergeCLI.OutputRepresentation : Swift.RawRepresentable in CIDRMergeCLI+0x30>
+  198874:	910e0000 	add	x0, x0, #0x380
+  198878:	aa1403e1 	mov	x1, x20
+  19887c:	94000339 	bl	199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>
+  198880:	aa0003fa 	mov	x26, x0
+  198884:	91009279 	add	x25, x19, #0x24
+  198888:	aa1403f3 	mov	x19, x20
+  19888c:	14000005 	b	1988a0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x270>
+  198890:	f9000ac8 	str	x8, [x22, #16]
+  198894:	f10006f7 	subs	x23, x23, #0x1
+  198898:	91002339 	add	x25, x25, #0x8
+  19889c:	54000960 	b.eq	1989c8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x398>  // b.none
+  1988a0:	b85fc328 	ldur	w8, [x25, #-4]
+  1988a4:	39400329 	ldrb	w9, [x25]
+  1988a8:	aa1303e0 	mov	x0, x19
+  1988ac:	b9001ba8 	str	w8, [x29, #24]
+  1988b0:	390073a9 	strb	w9, [x29, #28]
+  1988b4:	97faf20a 	bl	550dc <__swift_instantiateConcreteTypeFromMangledName>
+  1988b8:	f9400fe1 	ldr	x1, [sp, #24]
+  1988bc:	aa0003e2 	mov	x2, x0
+  1988c0:	910063b4 	add	x20, x29, #0x18
+  1988c4:	aa1803e0 	mov	x0, x24
+  1988c8:	aa1a03e3 	mov	x3, x26
+  1988cc:	97ff6c35 	bl	1739a0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V4>.writeCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  1988d0:	52800148 	mov	w8, #0xa                   	// #10
+  1988d4:	38206b08 	strb	w8, [x24, x0]
+  1988d8:	b4000b58 	cbz	x24, 198a40 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x410>
+  1988dc:	b100041b 	adds	x27, x0, #0x1
+  1988e0:	54000906 	b.vs	198a00 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3d0>
+  1988e4:	b4fffd9b 	cbz	x27, 198894 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x264>
+  1988e8:	b7f8099b 	tbnz	x27, #63, 198a18 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3e8>
+  1988ec:	f94002c0 	ldr	x0, [x22]
+  1988f0:	97faddea 	bl	50098 <swift_isUniquelyReferenced_nonNull_native@plt>
+  1988f4:	37000460 	tbnz	w0, #0, 198980 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x350>
+  1988f8:	a94052ca 	ldp	x10, x20, [x22]
+  1988fc:	f9400ac8 	ldr	x8, [x22, #16]
+  198900:	f9400949 	ldr	x9, [x10, #16]
+  198904:	b4000109 	cbz	x9, 198924 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x2f4>
+  198908:	f940154a 	ldr	x10, [x10, #40]
+  19890c:	eb0a028a 	subs	x10, x20, x10
+  198910:	54000946 	b.vs	198a38 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x408>
+  198914:	8b09015c 	add	x28, x10, x9
+  198918:	eb140113 	subs	x19, x8, x20
+  19891c:	540000a7 	b.vc	198930 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x300>
+  198920:	14000044 	b	198a30 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x400>
+  198924:	aa1f03fc 	mov	x28, xzr
+  198928:	eb140113 	subs	x19, x8, x20
+  19892c:	54000826 	b.vs	198a30 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x400>
+  198930:	aa1f03e0 	mov	x0, xzr
+  198934:	97fae3c1 	bl	51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  198938:	52800821 	mov	w1, #0x41                  	// #65
+  19893c:	528000e2 	mov	w2, #0x7                   	// #7
+  198940:	97fadd7e 	bl	4ff38 <swift_allocObject@plt>
+  198944:	aa0003e6 	mov	x6, x0
+  198948:	aa1c03e0 	mov	x0, x28
+  19894c:	aa1303e1 	mov	x1, x19
+  198950:	52800022 	mov	w2, #0x1                   	// #1
+  198954:	aa1f03e3 	mov	x3, xzr
+  198958:	aa1f03e4 	mov	x4, xzr
+  19895c:	aa1403e5 	mov	x5, x20
+  198960:	aa0603f4 	mov	x20, x6
+  198964:	97fae3b9 	bl	51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  198968:	f94002c8 	ldr	x8, [x22]
+  19896c:	f90002c0 	str	x0, [x22]
+  198970:	aa0803e0 	mov	x0, x8
+  198974:	97fadd4d 	bl	4fea8 <swift_release@plt>
+  198978:	d00009d3 	adrp	x19, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  19897c:	9115e273 	add	x19, x19, #0x578
+  198980:	f94002d4 	ldr	x20, [x22]
+  198984:	f9400adc 	ldr	x28, [x22, #16]
+  198988:	f9401688 	ldr	x8, [x20, #40]
+  19898c:	eb080388 	subs	x8, x28, x8
+  198990:	54000466 	b.vs	198a1c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3ec>
+  198994:	f9400e89 	ldr	x9, [x20, #24]
+  198998:	eb080121 	subs	x1, x9, x8
+  19899c:	54000426 	b.vs	198a20 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3f0>
+  1989a0:	aa1c03e0 	mov	x0, x28
+  1989a4:	aa1803e2 	mov	x2, x24
+  1989a8:	aa1b03e3 	mov	x3, x27
+  1989ac:	97fae3ab 	bl	51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  1989b0:	ab1b0388 	adds	x8, x28, x27
+  1989b4:	54000386 	b.vs	198a24 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x3f4>
+  1989b8:	f94006c9 	ldr	x9, [x22, #8]
+  1989bc:	eb09011f 	cmp	x8, x9
+  1989c0:	54fff68a 	b.ge	198890 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V4>, to: inout FoundationEssentials.Data) -> ()+0x260>  // b.tcont
+  1989c4:	d4200020 	brk	#0x1
+  1989c8:	a9484ff4 	ldp	x20, x19, [sp, #128]
+  1989cc:	f94007f5 	ldr	x21, [sp, #8]
+  1989d0:	a9475bf7 	ldp	x23, x22, [sp, #112]
+  1989d4:	f94023fc 	ldr	x28, [sp, #64]
+  1989d8:	a94663f9 	ldp	x25, x24, [sp, #96]
+  1989dc:	a9456bfb 	ldp	x27, x26, [sp, #80]
+  1989e0:	a9437bfd 	ldp	x29, x30, [sp, #48]
+  1989e4:	910243ff 	add	sp, sp, #0x90
+  1989e8:	d65f03c0 	ret
+  1989ec:	d4200020 	brk	#0x1
+  1989f0:	d4200020 	brk	#0x1
+  1989f4:	d4200020 	brk	#0x1
+  1989f8:	d4200020 	brk	#0x1
+  1989fc:	d4200020 	brk	#0x1
+  198a00:	d4200020 	brk	#0x1
+  198a04:	d4200020 	brk	#0x1
+  198a08:	d4200020 	brk	#0x1
+  198a0c:	d4200020 	brk	#0x1
+  198a10:	d4200020 	brk	#0x1
+  198a14:	d4200020 	brk	#0x1
+  198a18:	d4200020 	brk	#0x1
+  198a1c:	d4200020 	brk	#0x1
+  198a20:	d4200020 	brk	#0x1
+  198a24:	d4200020 	brk	#0x1
+  198a28:	d4200020 	brk	#0x1
+  198a2c:	d4200020 	brk	#0x1
+  198a30:	d4200020 	brk	#0x1
+  198a34:	d4200020 	brk	#0x1
+  198a38:	d4200020 	brk	#0x1
+  198a3c:	d4200020 	brk	#0x1
+  198a40:	d4200020 	brk	#0x1
+
+
+=== original C-assembly.txt lines 352052-352315 ===
+0000000000198a44 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()>:
+  198a44:	d10283ff 	sub	sp, sp, #0xa0
+  198a48:	a9047bfd 	stp	x29, x30, [sp, #64]
+  198a4c:	f9002bfc 	str	x28, [sp, #80]
+  198a50:	a9066bfb 	stp	x27, x26, [sp, #96]
+  198a54:	a90763f9 	stp	x25, x24, [sp, #112]
+  198a58:	a9085bf7 	stp	x23, x22, [sp, #128]
+  198a5c:	a9094ff4 	stp	x20, x19, [sp, #144]
+  198a60:	910103fd 	add	x29, sp, #0x40
+  198a64:	aa0303f6 	mov	x22, x3
+  198a68:	aa0203f4 	mov	x20, x2
+  198a6c:	aa0003f8 	mov	x24, x0
+  198a70:	f90007f5 	str	x21, [sp, #8]
+  198a74:	f9000fa1 	str	x1, [x29, #24]
+  198a78:	b7f80fa2 	tbnz	x2, #63, 198c6c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x228>
+  198a7c:	f9400a99 	ldr	x25, [x20, #16]
+  198a80:	b4001b19 	cbz	x25, 198de0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x39c>
+  198a84:	f00009a2 	adrp	x2, 2cf000 <_DYNAMIC+0x1e0>
+  198a88:	90000da0 	adrp	x0, 34c000 <metadata instantiation cache for protocol conformance descriptor for CIDRMergeCLI.OutputRepresentation : Swift.RawRepresentable in CIDRMergeCLI+0x30>
+  198a8c:	910de000 	add	x0, x0, #0x378
+  198a90:	f9452442 	ldr	x2, [x2, #2632]
+  198a94:	d00009c1 	adrp	x1, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198a98:	911a8021 	add	x1, x1, #0x6a0
+  198a9c:	940002b1 	bl	199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>
+  198aa0:	f9400fa8 	ldr	x8, [x29, #24]
+  198aa4:	9100c297 	add	x23, x20, #0x30
+  198aa8:	f9000fe0 	str	x0, [sp, #24]
+  198aac:	cb180108 	sub	x8, x8, x24
+  198ab0:	f9000be8 	str	x8, [sp, #16]
+  198ab4:	14000005 	b	198ac8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x84>
+  198ab8:	f9000ac8 	str	x8, [x22, #16]
+  198abc:	f1000739 	subs	x25, x25, #0x1
+  198ac0:	910082f7 	add	x23, x23, #0x20
+  198ac4:	540018e0 	b.eq	198de0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x39c>  // b.none
+  198ac8:	a97f22e9 	ldp	x9, x8, [x23, #-16]
+  198acc:	d00009c0 	adrp	x0, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198ad0:	911a8000 	add	x0, x0, #0x6a0
+  198ad4:	a94072fa 	ldp	x26, x28, [x23]
+  198ad8:	a90223e9 	stp	x9, x8, [sp, #32]
+  198adc:	52801008 	mov	w8, #0x80                  	// #128
+  198ae0:	3900c3e8 	strb	w8, [sp, #48]
+  198ae4:	97faf17e 	bl	550dc <__swift_instantiateConcreteTypeFromMangledName>
+  198ae8:	aa0003fb 	mov	x27, x0
+  198aec:	f9400fa1 	ldr	x1, [x29, #24]
+  198af0:	f9400fe3 	ldr	x3, [sp, #24]
+  198af4:	910083f4 	add	x20, sp, #0x20
+  198af8:	aa1803e0 	mov	x0, x24
+  198afc:	aa1b03e2 	mov	x2, x27
+  198b00:	97ff6c60 	bl	173c80 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  198b04:	b1000408 	adds	x8, x0, #0x1
+  198b08:	528005ca 	mov	w10, #0x2e                  	// #46
+  198b0c:	38206b0a 	strb	w10, [x24, x0]
+  198b10:	540017a6 	b.vs	198e04 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  198b14:	b1000809 	adds	x9, x0, #0x2
+  198b18:	38286b0a 	strb	w10, [x24, x8]
+  198b1c:	54001766 	b.vs	198e08 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3c4>
+  198b20:	b1000c13 	adds	x19, x0, #0x3
+  198b24:	38296b0a 	strb	w10, [x24, x9]
+  198b28:	54001726 	b.vs	198e0c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3c8>
+  198b2c:	52801008 	mov	w8, #0x80                  	// #128
+  198b30:	a90273fa 	stp	x26, x28, [sp, #32]
+  198b34:	3900c3e8 	strb	w8, [sp, #48]
+  198b38:	b40000f8 	cbz	x24, 198b54 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x110>
+  198b3c:	f9400be8 	ldr	x8, [sp, #16]
+  198b40:	eb13011f 	cmp	x8, x19
+  198b44:	540016cb 	b.lt	198e1c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3d8>  // b.tstop
+  198b48:	f9400fa1 	ldr	x1, [x29, #24]
+  198b4c:	8b130300 	add	x0, x24, x19
+  198b50:	14000005 	b	198b64 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x120>
+  198b54:	f100027f 	cmp	x19, #0x0
+  198b58:	5400174c 	b.gt	198e40 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3fc>
+  198b5c:	aa1f03e1 	mov	x1, xzr
+  198b60:	aa1f03e0 	mov	x0, xzr
+  198b64:	f9400fe3 	ldr	x3, [sp, #24]
+  198b68:	910083f4 	add	x20, sp, #0x20
+  198b6c:	aa1b03e2 	mov	x2, x27
+  198b70:	97ff6c44 	bl	173c80 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedAddressLiteralUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  198b74:	ab000268 	adds	x8, x19, x0
+  198b78:	540014c6 	b.vs	198e10 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3cc>
+  198b7c:	52800149 	mov	w9, #0xa                   	// #10
+  198b80:	38286b09 	strb	w9, [x24, x8]
+  198b84:	b4001698 	cbz	x24, 198e54 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x410>
+  198b88:	b100051b 	adds	x27, x8, #0x1
+  198b8c:	54001446 	b.vs	198e14 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3d0>
+  198b90:	b4fff97b 	cbz	x27, 198abc <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x78>
+  198b94:	b7f8147b 	tbnz	x27, #63, 198e20 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3dc>
+  198b98:	f94002c0 	ldr	x0, [x22]
+  198b9c:	97fadd3f 	bl	50098 <swift_isUniquelyReferenced_nonNull_native@plt>
+  198ba0:	37000420 	tbnz	w0, #0, 198c24 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x1e0>
+  198ba4:	a94052ca 	ldp	x10, x20, [x22]
+  198ba8:	f9400ac8 	ldr	x8, [x22, #16]
+  198bac:	f9400949 	ldr	x9, [x10, #16]
+  198bb0:	b4000109 	cbz	x9, 198bd0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x18c>
+  198bb4:	f940154a 	ldr	x10, [x10, #40]
+  198bb8:	eb0a028a 	subs	x10, x20, x10
+  198bbc:	54001486 	b.vs	198e4c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x408>
+  198bc0:	8b09015c 	add	x28, x10, x9
+  198bc4:	eb140113 	subs	x19, x8, x20
+  198bc8:	540000a7 	b.vc	198bdc <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x198>
+  198bcc:	1400009e 	b	198e44 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x400>
+  198bd0:	aa1f03fc 	mov	x28, xzr
+  198bd4:	eb140113 	subs	x19, x8, x20
+  198bd8:	54001366 	b.vs	198e44 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x400>
+  198bdc:	aa1f03e0 	mov	x0, xzr
+  198be0:	97fae316 	bl	51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  198be4:	52800821 	mov	w1, #0x41                  	// #65
+  198be8:	528000e2 	mov	w2, #0x7                   	// #7
+  198bec:	97fadcd3 	bl	4ff38 <swift_allocObject@plt>
+  198bf0:	aa0003e6 	mov	x6, x0
+  198bf4:	aa1c03e0 	mov	x0, x28
+  198bf8:	aa1303e1 	mov	x1, x19
+  198bfc:	52800022 	mov	w2, #0x1                   	// #1
+  198c00:	aa1f03e3 	mov	x3, xzr
+  198c04:	aa1f03e4 	mov	x4, xzr
+  198c08:	aa1403e5 	mov	x5, x20
+  198c0c:	aa0603f4 	mov	x20, x6
+  198c10:	97fae30e 	bl	51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  198c14:	f94002c8 	ldr	x8, [x22]
+  198c18:	f90002c0 	str	x0, [x22]
+  198c1c:	aa0803e0 	mov	x0, x8
+  198c20:	97fadca2 	bl	4fea8 <swift_release@plt>
+  198c24:	f94002d4 	ldr	x20, [x22]
+  198c28:	f9400adc 	ldr	x28, [x22, #16]
+  198c2c:	f9401688 	ldr	x8, [x20, #40]
+  198c30:	eb080388 	subs	x8, x28, x8
+  198c34:	54000f86 	b.vs	198e24 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3e0>
+  198c38:	f9400e89 	ldr	x9, [x20, #24]
+  198c3c:	eb080121 	subs	x1, x9, x8
+  198c40:	54000f46 	b.vs	198e28 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3e4>
+  198c44:	aa1c03e0 	mov	x0, x28
+  198c48:	aa1803e2 	mov	x2, x24
+  198c4c:	aa1b03e3 	mov	x3, x27
+  198c50:	97fae302 	bl	51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  198c54:	ab1b0388 	adds	x8, x28, x27
+  198c58:	54000ea6 	b.vs	198e2c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3e8>
+  198c5c:	f94006c9 	ldr	x9, [x22, #8]
+  198c60:	eb09011f 	cmp	x8, x9
+  198c64:	54fff2aa 	b.ge	198ab8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x74>  // b.tcont
+  198c68:	d4200020 	brk	#0x1
+  198c6c:	9240fa93 	and	x19, x20, #0x7fffffffffffffff
+  198c70:	f9400a77 	ldr	x23, [x19, #16]
+  198c74:	b4000b77 	cbz	x23, 198de0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x39c>
+  198c78:	f00009a2 	adrp	x2, 2cf000 <_DYNAMIC+0x1e0>
+  198c7c:	d00009d4 	adrp	x20, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198c80:	911a4294 	add	x20, x20, #0x690
+  198c84:	f944e442 	ldr	x2, [x2, #2504]
+  198c88:	90000da0 	adrp	x0, 34c000 <metadata instantiation cache for protocol conformance descriptor for CIDRMergeCLI.OutputRepresentation : Swift.RawRepresentable in CIDRMergeCLI+0x30>
+  198c8c:	910dc000 	add	x0, x0, #0x370
+  198c90:	aa1403e1 	mov	x1, x20
+  198c94:	94000233 	bl	199560 <merged lazy protocol witness table accessor for type CIDR.IPNetwork<CIDR.AF.V6> and conformance CIDR.IPNetwork<A> : CIDR.CIDRForm in CIDR>
+  198c98:	aa0003fa 	mov	x26, x0
+  198c9c:	9100c279 	add	x25, x19, #0x30
+  198ca0:	aa1403f3 	mov	x19, x20
+  198ca4:	14000005 	b	198cb8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x274>
+  198ca8:	f9000ac8 	str	x8, [x22, #16]
+  198cac:	f10006f7 	subs	x23, x23, #0x1
+  198cb0:	91008339 	add	x25, x25, #0x20
+  198cb4:	54000960 	b.eq	198de0 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x39c>  // b.none
+  198cb8:	a97f2329 	ldp	x9, x8, [x25, #-16]
+  198cbc:	aa1303e0 	mov	x0, x19
+  198cc0:	3940032a 	ldrb	w10, [x25]
+  198cc4:	a90223e9 	stp	x9, x8, [sp, #32]
+  198cc8:	3900c3ea 	strb	w10, [sp, #48]
+  198ccc:	97faf104 	bl	550dc <__swift_instantiateConcreteTypeFromMangledName>
+  198cd0:	f9400fa1 	ldr	x1, [x29, #24]
+  198cd4:	aa0003e2 	mov	x2, x0
+  198cd8:	910083f4 	add	x20, sp, #0x20
+  198cdc:	aa1803e0 	mov	x0, x24
+  198ce0:	aa1a03e3 	mov	x3, x26
+  198ce4:	97ff6bff 	bl	173ce0 <(extension in CIDR):CIDR.CIDRForm< where A.Family == CIDR.AF.V6>.writeCompressedCIDRNotationUTF8(into: Swift.UnsafeMutableRawBufferPointer) -> Swift.Int>
+  198ce8:	52800148 	mov	w8, #0xa                   	// #10
+  198cec:	38206b08 	strb	w8, [x24, x0]
+  198cf0:	b4000b58 	cbz	x24, 198e58 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x414>
+  198cf4:	b100041b 	adds	x27, x0, #0x1
+  198cf8:	54000906 	b.vs	198e18 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3d4>
+  198cfc:	b4fffd9b 	cbz	x27, 198cac <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x268>
+  198d00:	b7f8099b 	tbnz	x27, #63, 198e30 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3ec>
+  198d04:	f94002c0 	ldr	x0, [x22]
+  198d08:	97fadce4 	bl	50098 <swift_isUniquelyReferenced_nonNull_native@plt>
+  198d0c:	37000460 	tbnz	w0, #0, 198d98 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x354>
+  198d10:	a94052ca 	ldp	x10, x20, [x22]
+  198d14:	f9400ac8 	ldr	x8, [x22, #16]
+  198d18:	f9400949 	ldr	x9, [x10, #16]
+  198d1c:	b4000109 	cbz	x9, 198d3c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x2f8>
+  198d20:	f940154a 	ldr	x10, [x10, #40]
+  198d24:	eb0a028a 	subs	x10, x20, x10
+  198d28:	54000946 	b.vs	198e50 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x40c>
+  198d2c:	8b09015c 	add	x28, x10, x9
+  198d30:	eb140113 	subs	x19, x8, x20
+  198d34:	540000a7 	b.vc	198d48 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x304>
+  198d38:	14000044 	b	198e48 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x404>
+  198d3c:	aa1f03fc 	mov	x28, xzr
+  198d40:	eb140113 	subs	x19, x8, x20
+  198d44:	54000826 	b.vs	198e48 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x404>
+  198d48:	aa1f03e0 	mov	x0, xzr
+  198d4c:	97fae2bb 	bl	51838 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  198d50:	52800821 	mov	w1, #0x41                  	// #65
+  198d54:	528000e2 	mov	w2, #0x7                   	// #7
+  198d58:	97fadc78 	bl	4ff38 <swift_allocObject@plt>
+  198d5c:	aa0003e6 	mov	x6, x0
+  198d60:	aa1c03e0 	mov	x0, x28
+  198d64:	aa1303e1 	mov	x1, x19
+  198d68:	52800022 	mov	w2, #0x1                   	// #1
+  198d6c:	aa1f03e3 	mov	x3, xzr
+  198d70:	aa1f03e4 	mov	x4, xzr
+  198d74:	aa1403e5 	mov	x5, x20
+  198d78:	aa0603f4 	mov	x20, x6
+  198d7c:	97fae2b3 	bl	51848 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  198d80:	f94002c8 	ldr	x8, [x22]
+  198d84:	f90002c0 	str	x0, [x22]
+  198d88:	aa0803e0 	mov	x0, x8
+  198d8c:	97fadc47 	bl	4fea8 <swift_release@plt>
+  198d90:	d00009d3 	adrp	x19, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  198d94:	911a4273 	add	x19, x19, #0x690
+  198d98:	f94002d4 	ldr	x20, [x22]
+  198d9c:	f9400adc 	ldr	x28, [x22, #16]
+  198da0:	f9401688 	ldr	x8, [x20, #40]
+  198da4:	eb080388 	subs	x8, x28, x8
+  198da8:	54000466 	b.vs	198e34 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3f0>
+  198dac:	f9400e89 	ldr	x9, [x20, #24]
+  198db0:	eb080121 	subs	x1, x9, x8
+  198db4:	54000426 	b.vs	198e38 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3f4>
+  198db8:	aa1c03e0 	mov	x0, x28
+  198dbc:	aa1803e2 	mov	x2, x24
+  198dc0:	aa1b03e3 	mov	x3, x27
+  198dc4:	97fae2a5 	bl	51858 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  198dc8:	ab1b0388 	adds	x8, x28, x27
+  198dcc:	54000386 	b.vs	198e3c <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x3f8>
+  198dd0:	f94006c9 	ldr	x9, [x22, #8]
+  198dd4:	eb09011f 	cmp	x8, x9
+  198dd8:	54fff68a 	b.ge	198ca8 <closure #1 (Swift.UnsafeMutableRawBufferPointer) -> () in static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)(_: CIDRMergeCLI.FamilyMergeOutput<CIDR.AF.V6>, to: inout FoundationEssentials.Data) -> ()+0x264>  // b.tcont
+  198ddc:	d4200020 	brk	#0x1
+  198de0:	a9494ff4 	ldp	x20, x19, [sp, #144]
+  198de4:	f94007f5 	ldr	x21, [sp, #8]
+  198de8:	a9485bf7 	ldp	x23, x22, [sp, #128]
+  198dec:	f9402bfc 	ldr	x28, [sp, #80]
+  198df0:	a94763f9 	ldp	x25, x24, [sp, #112]
+  198df4:	a9466bfb 	ldp	x27, x26, [sp, #96]
+  198df8:	a9447bfd 	ldp	x29, x30, [sp, #64]
+  198dfc:	910283ff 	add	sp, sp, #0xa0
+  198e00:	d65f03c0 	ret
+  198e04:	d4200020 	brk	#0x1
+  198e08:	d4200020 	brk	#0x1
+  198e0c:	d4200020 	brk	#0x1
+  198e10:	d4200020 	brk	#0x1
+  198e14:	d4200020 	brk	#0x1
+  198e18:	d4200020 	brk	#0x1
+  198e1c:	d4200020 	brk	#0x1
+  198e20:	d4200020 	brk	#0x1
+  198e24:	d4200020 	brk	#0x1
+  198e28:	d4200020 	brk	#0x1
+  198e2c:	d4200020 	brk	#0x1
+  198e30:	d4200020 	brk	#0x1
+  198e34:	d4200020 	brk	#0x1
+  198e38:	d4200020 	brk	#0x1
+  198e3c:	d4200020 	brk	#0x1
+  198e40:	d4200020 	brk	#0x1
+  198e44:	d4200020 	brk	#0x1
+  198e48:	d4200020 	brk	#0x1
+  198e4c:	d4200020 	brk	#0x1
+  198e50:	d4200020 	brk	#0x1
+  198e54:	d4200020 	brk	#0x1
+  198e58:	d4200020 	brk	#0x1
+

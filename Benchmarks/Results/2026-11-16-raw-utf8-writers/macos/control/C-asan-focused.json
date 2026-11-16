@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT_ROOT/sources/C",
+    "--scratch-path",
+    "$EXPERIMENT_ROOT/macos/asan-build",
+    "--cache-path",
+    "$EXPERIMENT_ROOT/macos/cache",
+    "--config-path",
+    "$EXPERIMENT_ROOT/macos/config",
+    "--security-path",
+    "$EXPERIMENT_ROOT/macos/security",
+    "--disable-netrc",
+    "--disable-sandbox",
+    "--only-use-versions-from-resolved-file",
+    "--skip-update",
+    "-j",
+    "8",
+    "--sanitize",
+    "address",
+    "--filter",
+    "RawUTF8OutputTests"
+  ],
+  "exit_code": 0,
+  "log_sha256": "28225ccc4ca8e74b7fb5b0df5fbbb31d0e2cdd0e09ebce64c6e7f145e76c5bbc"
+}
