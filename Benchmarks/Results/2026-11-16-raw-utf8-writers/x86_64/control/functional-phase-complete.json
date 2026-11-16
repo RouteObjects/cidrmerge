@@ -1,0 +1,22 @@
+{
+  "command": [
+    "systemd-run",
+    "--user",
+    "--scope",
+    "--quiet",
+    "--unit",
+    "cidrmerge-raw-utf8-tests-20261116T145749Z",
+    "--property=MemoryMax=6G",
+    "--property=MemorySwapMax=0",
+    "python3",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/control/build_tests.py"
+  ],
+  "started_at": "2026-11-16T15:23:05.012148+00:00",
+  "unit": "cidrmerge-raw-utf8-tests-20261116T145749Z",
+  "memory_limit_bytes": 6442450944,
+  "swap_limit_bytes": 0,
+  "exit_code": 0,
+  "passed": true,
+  "elapsed_s": 1114.6539494181052,
+  "finished_at": "2026-11-16T15:41:39.666091+00:00"
+}

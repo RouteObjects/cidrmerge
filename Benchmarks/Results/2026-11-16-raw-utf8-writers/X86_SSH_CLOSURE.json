@@ -1,0 +1,29 @@
+{
+  "original_path": "x86_64/control/ssh-closure.json",
+  "original_sha256": "6eadf691fc2f12c5609cd89678d33701e0ff9b9f2a1be52b51cc7c18dd946a3d",
+  "receipt": {
+    "at": "2026-11-16T15:59:06.550756+00:00",
+    "command": [
+      "ssh",
+      "-S",
+      "/tmp/cidr-raw-utf8-20261116.sock",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ControlMaster=no",
+      "-o",
+      "ProxyCommand=false",
+      "-O",
+      "exit",
+      "swift-dev"
+    ],
+    "socket_existed_before": true,
+    "scope": "Only this task-owned SSH master; remote evidence and scratch untouched.",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Exit request sent.\n",
+    "socket_exists_after": false,
+    "passed": true,
+    "remote_cleanup_performed": false
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "variant": "C",
+  "action": "build",
+  "configuration": "release",
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "/validation/sources/C",
+    "--scratch-path",
+    "/validation/build/C",
+    "--cache-path",
+    "/validation/cache",
+    "--config-path",
+    "/validation/config",
+    "--security-path",
+    "/validation/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-16T15:14:04.220415+00:00",
+  "free_bytes_before": 5709901651968,
+  "log": "logs/C-build-release.log",
+  "toolchain": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: aarch64-unknown-linux-gnu\n",
+  "exit_code": 0,
+  "elapsed_s": 49.19258520699805,
+  "finished_at": "2026-11-16T15:14:53.413539+00:00",
+  "log_sha256": "8d94513de39916dcd6a93219de0d061dcd972b7af1431c565a4a9dc1d4370d1f",
+  "dependency_pins": {
+    "swift-argument-parser": {
+      "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+      "version": "1.8.2"
+    },
+    "swift-asn1": {
+      "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+      "version": "1.7.1"
+    },
+    "swift-atomics": {
+      "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+      "version": "1.3.1"
+    },
+    "swift-cidr": {
+      "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+      "version": "0.10.1"
+    },
+    "swift-collections": {
+      "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+      "version": "1.6.0"
+    },
+    "swift-crypto": {
+      "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+      "version": "5.1.1"
+    },
+    "swift-nio": {
+      "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "version": "2.101.2"
+    },
+    "swift-system": {
+      "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+      "version": "1.7.4"
+    }
+  },
+  "binary_sha256": "44152a9aec7d9b14c3b8f7fc73738f0fc143b825158913176ef6d28ca7eb82ac",
+  "binary": "bin/C",
+  "ldd": {
+    "stdout": "\tlinux-vdso.so.1 (0x0000ffffb85e6000)\n\tlibswiftCore.so => /usr/lib/swift/linux/libswiftCore.so (0x0000ffffb7b80000)\n\tlibswiftObservation.so => /usr/lib/swift/linux/libswiftObservation.so (0x0000ffffb7b40000)\n\tlibswift_Concurrency.so => /usr/lib/swift/linux/libswift_Concurrency.so (0x0000ffffb7a90000)\n\tlibswift_StringProcessing.so => /usr/lib/swift/linux/libswift_StringProcessing.so (0x0000ffffb79c0000)\n\tlibswift_RegexParser.so => /usr/lib/swift/linux/libswift_RegexParser.so (0x0000ffffb78b0000)\n\tlibswiftGlibc.so => /usr/lib/swift/linux/libswiftGlibc.so (0x0000ffffb7880000)\n\tlibBlocksRuntime.so => /usr/lib/swift/linux/libBlocksRuntime.so (0x0000ffffb7850000)\n\tlibdispatch.so => /usr/lib/swift/linux/libdispatch.so (0x0000ffffb77d0000)\n\tlibswiftDispatch.so => /usr/lib/swift/linux/libswiftDispatch.so (0x0000ffffb7780000)\n\tlibFoundation.so => /usr/lib/swift/linux/libFoundation.so (0x0000ffffb7170000)\n\tlibFoundationEssentials.so => /usr/lib/swift/linux/libFoundationEssentials.so (0x0000ffffb6b10000)\n\tlibFoundationInternationalization.so => /usr/lib/swift/linux/libFoundationInternationalization.so (0x0000ffffb6930000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffb6880000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffb65f0000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffb65b0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffb63f0000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffb85a0000)\n\tlibswift_Builtin_float.so => /usr/lib/swift/linux/libswift_Builtin_float.so (0x0000ffffb63c0000)\n\tlib_FoundationICU.so => /usr/lib/swift/linux/lib_FoundationICU.so (0x0000ffffb3e30000)\n\tlibswiftSynchronization.so => /usr/lib/swift/linux/libswiftSynchronization.so (0x0000ffffb3e00000)\n",
+    "stderr": "",
+    "exit_code": 0
+  }
+}

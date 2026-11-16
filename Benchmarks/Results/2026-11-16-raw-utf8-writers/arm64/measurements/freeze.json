@@ -1,0 +1,170 @@
+{
+  "files": {
+    "/experiment/control/cases.json": "9f6e02ca25dc59c1d4755794e0761e38951caaad279c3d88e78b33150b9914f3",
+    "/experiment/control/run_matched.py": "a0ce0a2f0cb244b15e18af069256299b3f28b3cb0b06105a8efd23ba12358ad7",
+    "/validation/bin/B": "5dea59f91ced65d4c595bd3d1210cecbd037688a5a9f1c09227f1cefaff86e15",
+    "/validation/bin/C": "44152a9aec7d9b14c3b8f7fc73738f0fc143b825158913176ef6d28ca7eb82ac",
+    "/experiment/fixtures/ipv4-disjoint/input.txt": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+    "/experiment/fixtures/ipv4-disjoint/ranges.expected": "2649c925844fd02bda12cda0c12e4173e88910dd08e0733748228794902e43fc",
+    "/experiment/fixtures/ipv4-disjoint/cidr.expected": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+    "/experiment/fixtures/ipv6-disjoint/input.txt": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+    "/experiment/fixtures/ipv6-disjoint/ranges.expected": "20b7e7ed2f59dad84354e2624b3bf07bcecf6f99913c666875b834f47a12e8ea",
+    "/experiment/fixtures/ipv6-disjoint/cidr.expected": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+    "/experiment/fixtures/mixed-disjoint/input.txt": "8188c5b05fa642d50cf55ed9761117cc01ba37ad7229c55934d024ceb21ae7df",
+    "/experiment/fixtures/mixed-disjoint/ranges.expected": "fe03d7645b8df01c134a95d19544ea06348fea88fb6b10c434dcd0f6d8fbd894",
+    "/experiment/fixtures/mixed-disjoint/cidr.expected": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+    "/experiment/fixtures/mixed-permuted/input.txt": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+    "/experiment/fixtures/mixed-permuted/ranges.expected": "fe03d7645b8df01c134a95d19544ea06348fea88fb6b10c434dcd0f6d8fbd894",
+    "/experiment/fixtures/mixed-permuted/cidr.expected": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+    "/experiment/fixtures/mixed-overlap/input.txt": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+    "/experiment/fixtures/mixed-overlap/ranges.expected": "6e164a341c4a616601e67e0f56e693bb42e7d665d2698d0e1caf6de0903ccd5f",
+    "/experiment/fixtures/mixed-overlap/cidr.expected": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+    "/experiment/fixtures/range-derived-mixed/input.txt": "f5ffadd5048313e0c43d08efa2ec6553d29806c3d7dedfbc534f10611d5751cf",
+    "/experiment/fixtures/range-derived-mixed/ranges.expected": "9a900267b4f90f9ce1a7182887db76b4b2a62df539614e0969fdd3ff240008ae",
+    "/experiment/fixtures/range-derived-mixed/cidr.expected": "2cf1fc5a711552f137327826c72c11e9539656ebade54ae920b257b97a3929cd"
+  },
+  "environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "TZ": "UTC",
+    "TMPDIR": "/validation/measurements/tmp/",
+    "LD_LIBRARY_PATH": "/usr/lib/swift/linux"
+  },
+  "host": "Linux-7.2.12-orbstack-00394-gbecdd6130068-aarch64-with-glibc2.39",
+  "configs": [
+    {
+      "id": "ipv4-disjoint-ranges",
+      "fixture": "ipv4-disjoint",
+      "representation": "ranges",
+      "input": "fixtures/ipv4-disjoint/input.txt",
+      "input_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "reference": "fixtures/ipv4-disjoint/ranges.expected",
+      "output_sha256": "2649c925844fd02bda12cda0c12e4173e88910dd08e0733748228794902e43fc",
+      "output_bytes": 25612250,
+      "output_count": 1000000
+    },
+    {
+      "id": "ipv4-disjoint-cidr",
+      "fixture": "ipv4-disjoint",
+      "representation": "cidr",
+      "input": "fixtures/ipv4-disjoint/input.txt",
+      "input_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "reference": "fixtures/ipv4-disjoint/cidr.expected",
+      "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "output_bytes": 14806125,
+      "output_count": 1000000
+    },
+    {
+      "id": "ipv6-disjoint-ranges",
+      "fixture": "ipv6-disjoint",
+      "representation": "ranges",
+      "input": "fixtures/ipv6-disjoint/input.txt",
+      "input_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "reference": "fixtures/ipv6-disjoint/ranges.expected",
+      "output_sha256": "20b7e7ed2f59dad84354e2624b3bf07bcecf6f99913c666875b834f47a12e8ea",
+      "output_bytes": 36684942,
+      "output_count": 1000000
+    },
+    {
+      "id": "ipv6-disjoint-cidr",
+      "fixture": "ipv6-disjoint",
+      "representation": "cidr",
+      "input": "fixtures/ipv6-disjoint/input.txt",
+      "input_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "reference": "fixtures/ipv6-disjoint/cidr.expected",
+      "output_sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "output_bytes": 21342471,
+      "output_count": 1000000
+    },
+    {
+      "id": "mixed-disjoint-ranges",
+      "fixture": "mixed-disjoint",
+      "representation": "ranges",
+      "input": "fixtures/mixed-disjoint/input.txt",
+      "input_sha256": "8188c5b05fa642d50cf55ed9761117cc01ba37ad7229c55934d024ceb21ae7df",
+      "reference": "fixtures/mixed-disjoint/ranges.expected",
+      "output_sha256": "fe03d7645b8df01c134a95d19544ea06348fea88fb6b10c434dcd0f6d8fbd894",
+      "output_bytes": 40728424,
+      "output_count": 1000000
+    },
+    {
+      "id": "mixed-disjoint-cidr",
+      "fixture": "mixed-disjoint",
+      "representation": "cidr",
+      "input": "fixtures/mixed-disjoint/input.txt",
+      "input_sha256": "8188c5b05fa642d50cf55ed9761117cc01ba37ad7229c55934d024ceb21ae7df",
+      "reference": "fixtures/mixed-disjoint/cidr.expected",
+      "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "output_bytes": 17864212,
+      "output_count": 1000000
+    },
+    {
+      "id": "mixed-permuted-ranges",
+      "fixture": "mixed-permuted",
+      "representation": "ranges",
+      "input": "fixtures/mixed-permuted/input.txt",
+      "input_sha256": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+      "reference": "fixtures/mixed-permuted/ranges.expected",
+      "output_sha256": "fe03d7645b8df01c134a95d19544ea06348fea88fb6b10c434dcd0f6d8fbd894",
+      "output_bytes": 40728424,
+      "output_count": 1000000
+    },
+    {
+      "id": "mixed-permuted-cidr",
+      "fixture": "mixed-permuted",
+      "representation": "cidr",
+      "input": "fixtures/mixed-permuted/input.txt",
+      "input_sha256": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+      "reference": "fixtures/mixed-permuted/cidr.expected",
+      "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "output_bytes": 17864212,
+      "output_count": 1000000
+    },
+    {
+      "id": "mixed-overlap-ranges",
+      "fixture": "mixed-overlap",
+      "representation": "ranges",
+      "input": "fixtures/mixed-overlap/input.txt",
+      "input_sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+      "reference": "fixtures/mixed-overlap/ranges.expected",
+      "output_sha256": "6e164a341c4a616601e67e0f56e693bb42e7d665d2698d0e1caf6de0903ccd5f",
+      "output_bytes": 78,
+      "output_count": 2
+    },
+    {
+      "id": "mixed-overlap-cidr",
+      "fixture": "mixed-overlap",
+      "representation": "cidr",
+      "input": "fixtures/mixed-overlap/input.txt",
+      "input_sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+      "reference": "fixtures/mixed-overlap/cidr.expected",
+      "output_sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "output_bytes": 25,
+      "output_count": 2
+    },
+    {
+      "id": "range-derived-mixed-ranges",
+      "fixture": "range-derived-mixed",
+      "representation": "ranges",
+      "input": "fixtures/range-derived-mixed/input.txt",
+      "input_sha256": "f5ffadd5048313e0c43d08efa2ec6553d29806c3d7dedfbc534f10611d5751cf",
+      "reference": "fixtures/range-derived-mixed/ranges.expected",
+      "output_sha256": "9a900267b4f90f9ce1a7182887db76b4b2a62df539614e0969fdd3ff240008ae",
+      "output_bytes": 15945838,
+      "output_count": 500000
+    },
+    {
+      "id": "range-derived-mixed-cidr",
+      "fixture": "range-derived-mixed",
+      "representation": "cidr",
+      "input": "fixtures/range-derived-mixed/input.txt",
+      "input_sha256": "f5ffadd5048313e0c43d08efa2ec6553d29806c3d7dedfbc534f10611d5751cf",
+      "reference": "fixtures/range-derived-mixed/cidr.expected",
+      "output_sha256": "2cf1fc5a711552f137327826c72c11e9539656ebade54ae920b257b97a3929cd",
+      "output_bytes": 18445838,
+      "output_count": 1000000
+    }
+  ],
+  "deduplicate_after_timed_sample": false
+}

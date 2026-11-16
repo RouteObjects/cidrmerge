@@ -1,0 +1,284 @@
+generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout Foundation.Data) -> ():
+00000001000abc4c	sub	sp, sp, #0x80
+00000001000abc50	stp	x28, x27, [sp, #0x20]
+00000001000abc54	stp	x26, x25, [sp, #0x30]
+00000001000abc58	stp	x24, x23, [sp, #0x40]
+00000001000abc5c	stp	x22, x21, [sp, #0x50]
+00000001000abc60	stp	x20, x19, [sp, #0x60]
+00000001000abc64	stp	x29, x30, [sp, #0x70]
+00000001000abc68	add	x29, sp, #0x70
+00000001000abc6c	mov	x19, x2
+00000001000abc70	and	w8, w1, #0xff
+00000001000abc74	adrp	x9, 61 ; 0x1000e8000
+00000001000abc78	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000abc7c	ldr	x9, [x9]
+00000001000abc80	str	x9, [sp, #0x18]
+00000001000abc84	ldr	x25, [x0, #0x10]
+00000001000abc88	cmp	w8, #0x1
+00000001000abc8c	b.ne	0x1000abd78
+00000001000abc90	cbz	x25, 0x1000abe54
+00000001000abc94	add	x21, x0, #0x20
+00000001000abc98	bl	lazy protocol witness table accessor for type CIDR.AF.V4 and conformance CIDR.AF.V4 : CIDR.IPAddressFamily in CIDR
+00000001000abc9c	mov	x22, x0
+00000001000abca0	ldr	x26, [x0, #0x18]
+00000001000abca4	add	x27, sp, #0x8
+00000001000abca8	adrp	x23, 53 ; 0x1000e0000
+00000001000abcac	add	x23, x23, #0x160
+00000001000abcb0	mov	w28, #0xa
+00000001000abcb4	b	0x1000abce8
+00000001000abcb8	mov	x20, x19
+00000001000abcbc	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abcc0	add	x21, x21, #0x8
+00000001000abcc4	mov	x0, x24
+00000001000abcc8	bl	0x1000be554 ; symbol stub for: _swift_bridgeObjectRelease
+00000001000abccc	strb	w28, [sp, #0x8]
+00000001000abcd0	add	x0, sp, #0x8
+00000001000abcd4	add	x1, x27, #0x1
+00000001000abcd8	mov	x20, x19
+00000001000abcdc	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abce0	subs	x25, x25, #0x1
+00000001000abce4	b.eq	0x1000abe54
+00000001000abce8	ldrb	w1, [x21, #0x4]
+00000001000abcec	mov	x0, x21
+00000001000abcf0	mov	x20, x23
+00000001000abcf4	mov	x2, x23
+00000001000abcf8	mov	x3, x22
+00000001000abcfc	blr	x26
+00000001000abd00	mov	x8, x0
+00000001000abd04	mov	x24, x1
+00000001000abd08	tbnz	x1, #0x3c, 0x1000abd50
+00000001000abd0c	tbnz	x24, #0x3d, 0x1000abd34
+00000001000abd10	tbz	x8, #0x3c, 0x1000abd64
+00000001000abd14	and	x9, x24, #0xfffffffffffffff
+00000001000abd18	add	x0, x9, #0x20
+00000001000abd1c	and	x1, x8, #0xffffffffffff
+00000001000abd20	cbz	x1, 0x1000abcc0
+00000001000abd24	add	x8, x1, x0
+00000001000abd28	cmp	x0, #0x0
+00000001000abd2c	csel	x1, xzr, x8, eq
+00000001000abd30	b	0x1000abcb8
+00000001000abd34	ubfx	x9, x24, #56, #4
+00000001000abd38	and	x10, x24, #0xffffffffffffff
+00000001000abd3c	stp	x8, x10, [sp, #0x8]
+00000001000abd40	cbz	x9, 0x1000abcc0
+00000001000abd44	add	x0, sp, #0x8
+00000001000abd48	add	x1, x27, x9
+00000001000abd4c	b	0x1000abcb8
+00000001000abd50	mov	x0, x8
+00000001000abd54	mov	x1, x24
+00000001000abd58	mov	x20, x19
+00000001000abd5c	bl	generic specialization <Swift.String.UTF8View> of Foundation.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()
+00000001000abd60	b	0x1000abcc0
+00000001000abd64	mov	x0, x8
+00000001000abd68	mov	x1, x24
+00000001000abd6c	bl	0x1000bdc6c ; symbol stub for: Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>
+00000001000abd70	cbnz	x1, 0x1000abd24
+00000001000abd74	b	0x1000abcc0
+00000001000abd78	cbz	x25, 0x1000abe54
+00000001000abd7c	add	x21, x0, #0x20
+00000001000abd80	add	x26, sp, #0x8
+00000001000abd84	adrp	x22, 67 ; 0x1000ee000
+00000001000abd88	add	x22, x22, #0xec8
+00000001000abd8c	mov	w27, #0xa
+00000001000abd90	adrp	x23, 27 ; 0x1000c6000
+00000001000abd94	add	x23, x23, #0x580
+00000001000abd98	b	0x1000abde4
+00000001000abd9c	ubfx	x9, x24, #56, #4
+00000001000abda0	and	x10, x24, #0xffffffffffffff
+00000001000abda4	stp	x8, x10, [sp, #0x8]
+00000001000abda8	cbz	x9, 0x1000abdbc
+00000001000abdac	add	x0, sp, #0x8
+00000001000abdb0	add	x1, x26, x9
+00000001000abdb4	mov	x20, x19
+00000001000abdb8	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abdbc	mov	x0, x24
+00000001000abdc0	bl	0x1000be554 ; symbol stub for: _swift_bridgeObjectRelease
+00000001000abdc4	strb	w27, [sp, #0x8]
+00000001000abdc8	add	x0, sp, #0x8
+00000001000abdcc	add	x1, x26, #0x1
+00000001000abdd0	mov	x20, x19
+00000001000abdd4	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abdd8	add	x21, x21, #0x8
+00000001000abddc	subs	x25, x25, #0x1
+00000001000abde0	b.eq	0x1000abe54
+00000001000abde4	mov	x0, x22
+00000001000abde8	mov	x1, x23
+00000001000abdec	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000abdf0	mov	x20, x21
+00000001000abdf4	bl	CIDR.IPAddressRange.description.getter : Swift.String
+00000001000abdf8	mov	x8, x0
+00000001000abdfc	mov	x24, x1
+00000001000abe00	tbnz	x1, #0x3c, 0x1000abe2c
+00000001000abe04	tbnz	x24, #0x3d, 0x1000abd9c
+00000001000abe08	tbz	x8, #0x3c, 0x1000abe40
+00000001000abe0c	and	x9, x24, #0xfffffffffffffff
+00000001000abe10	add	x0, x9, #0x20
+00000001000abe14	and	x1, x8, #0xffffffffffff
+00000001000abe18	cbz	x1, 0x1000abdbc
+00000001000abe1c	add	x8, x1, x0
+00000001000abe20	cmp	x0, #0x0
+00000001000abe24	csel	x1, xzr, x8, eq
+00000001000abe28	b	0x1000abdb4
+00000001000abe2c	mov	x0, x8
+00000001000abe30	mov	x1, x24
+00000001000abe34	mov	x20, x19
+00000001000abe38	bl	generic specialization <Swift.String.UTF8View> of Foundation.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()
+00000001000abe3c	b	0x1000abdbc
+00000001000abe40	mov	x0, x8
+00000001000abe44	mov	x1, x24
+00000001000abe48	bl	0x1000bdc6c ; symbol stub for: Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>
+00000001000abe4c	cbnz	x1, 0x1000abe1c
+00000001000abe50	b	0x1000abdbc
+00000001000abe54	ldr	x8, [sp, #0x18]
+00000001000abe58	adrp	x9, 61 ; 0x1000e8000
+00000001000abe5c	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000abe60	ldr	x9, [x9]
+00000001000abe64	cmp	x9, x8
+00000001000abe68	b.ne	0x1000abe8c
+00000001000abe6c	ldp	x29, x30, [sp, #0x70]
+00000001000abe70	ldp	x20, x19, [sp, #0x60]
+00000001000abe74	ldp	x22, x21, [sp, #0x50]
+00000001000abe78	ldp	x24, x23, [sp, #0x40]
+00000001000abe7c	ldp	x26, x25, [sp, #0x30]
+00000001000abe80	ldp	x28, x27, [sp, #0x20]
+00000001000abe84	add	sp, sp, #0x80
+00000001000abe88	ret
+00000001000abe8c	bl	0x1000be3c8 ; symbol stub for: ___stack_chk_fail
+generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout Foundation.Data) -> ():
+00000001000abe90	sub	sp, sp, #0x80
+00000001000abe94	stp	x28, x27, [sp, #0x20]
+00000001000abe98	stp	x26, x25, [sp, #0x30]
+00000001000abe9c	stp	x24, x23, [sp, #0x40]
+00000001000abea0	stp	x22, x21, [sp, #0x50]
+00000001000abea4	stp	x20, x19, [sp, #0x60]
+00000001000abea8	stp	x29, x30, [sp, #0x70]
+00000001000abeac	add	x29, sp, #0x70
+00000001000abeb0	mov	x19, x2
+00000001000abeb4	and	w8, w1, #0xff
+00000001000abeb8	adrp	x9, 61 ; 0x1000e8000
+00000001000abebc	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000abec0	ldr	x9, [x9]
+00000001000abec4	str	x9, [sp, #0x18]
+00000001000abec8	ldr	x25, [x0, #0x10]
+00000001000abecc	cmp	w8, #0x1
+00000001000abed0	b.ne	0x1000abf9c
+00000001000abed4	cbz	x25, 0x1000ac078
+00000001000abed8	add	x22, sp, #0x8
+00000001000abedc	add	x23, x0, #0x30
+00000001000abee0	mov	w24, #0xa
+00000001000abee4	b	0x1000abf18
+00000001000abee8	mov	x20, x19
+00000001000abeec	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abef0	add	x23, x23, #0x20
+00000001000abef4	mov	x0, x21
+00000001000abef8	bl	0x1000be554 ; symbol stub for: _swift_bridgeObjectRelease
+00000001000abefc	strb	w24, [sp, #0x8]
+00000001000abf00	add	x0, sp, #0x8
+00000001000abf04	add	x1, x22, #0x1
+00000001000abf08	mov	x20, x19
+00000001000abf0c	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abf10	subs	x25, x25, #0x1
+00000001000abf14	b.eq	0x1000ac078
+00000001000abf18	ldp	x0, x1, [x23, #-0x10]
+00000001000abf1c	ldrb	w2, [x23]
+00000001000abf20	bl	static CIDR.AF.V6.formatCIDR(_: Swift.UInt128, prefixLength: CIDR.PrefixLength<CIDR.AF.V6>) -> Swift.String
+00000001000abf24	mov	x8, x0
+00000001000abf28	mov	x21, x1
+00000001000abf2c	tbnz	x1, #0x3c, 0x1000abf74
+00000001000abf30	tbnz	x21, #0x3d, 0x1000abf58
+00000001000abf34	tbz	x8, #0x3c, 0x1000abf88
+00000001000abf38	and	x9, x21, #0xfffffffffffffff
+00000001000abf3c	add	x0, x9, #0x20
+00000001000abf40	and	x1, x8, #0xffffffffffff
+00000001000abf44	cbz	x1, 0x1000abef0
+00000001000abf48	add	x8, x1, x0
+00000001000abf4c	cmp	x0, #0x0
+00000001000abf50	csel	x1, xzr, x8, eq
+00000001000abf54	b	0x1000abee8
+00000001000abf58	ubfx	x9, x21, #56, #4
+00000001000abf5c	and	x10, x21, #0xffffffffffffff
+00000001000abf60	stp	x8, x10, [sp, #0x8]
+00000001000abf64	cbz	x9, 0x1000abef0
+00000001000abf68	add	x0, sp, #0x8
+00000001000abf6c	add	x1, x22, x9
+00000001000abf70	b	0x1000abee8
+00000001000abf74	mov	x0, x8
+00000001000abf78	mov	x1, x21
+00000001000abf7c	mov	x20, x19
+00000001000abf80	bl	generic specialization <Swift.String.UTF8View> of Foundation.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()
+00000001000abf84	b	0x1000abef0
+00000001000abf88	mov	x0, x8
+00000001000abf8c	mov	x1, x21
+00000001000abf90	bl	0x1000bdc6c ; symbol stub for: Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>
+00000001000abf94	cbnz	x1, 0x1000abf48
+00000001000abf98	b	0x1000abef0
+00000001000abf9c	cbz	x25, 0x1000ac078
+00000001000abfa0	add	x21, x0, #0x20
+00000001000abfa4	add	x26, sp, #0x8
+00000001000abfa8	adrp	x22, 67 ; 0x1000ee000
+00000001000abfac	add	x22, x22, #0xeb0
+00000001000abfb0	mov	w27, #0xa
+00000001000abfb4	adrp	x23, 27 ; 0x1000c6000
+00000001000abfb8	add	x23, x23, #0x268
+00000001000abfbc	b	0x1000ac008
+00000001000abfc0	ubfx	x9, x24, #56, #4
+00000001000abfc4	and	x10, x24, #0xffffffffffffff
+00000001000abfc8	stp	x8, x10, [sp, #0x8]
+00000001000abfcc	cbz	x9, 0x1000abfe0
+00000001000abfd0	add	x0, sp, #0x8
+00000001000abfd4	add	x1, x26, x9
+00000001000abfd8	mov	x20, x19
+00000001000abfdc	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abfe0	mov	x0, x24
+00000001000abfe4	bl	0x1000be554 ; symbol stub for: _swift_bridgeObjectRelease
+00000001000abfe8	strb	w27, [sp, #0x8]
+00000001000abfec	add	x0, sp, #0x8
+00000001000abff0	add	x1, x26, #0x1
+00000001000abff4	mov	x20, x19
+00000001000abff8	bl	0x1000bd3e4 ; symbol stub for: Foundation.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()
+00000001000abffc	add	x21, x21, #0x20
+00000001000ac000	subs	x25, x25, #0x1
+00000001000ac004	b.eq	0x1000ac078
+00000001000ac008	mov	x0, x22
+00000001000ac00c	mov	x1, x23
+00000001000ac010	bl	___swift_instantiateConcreteTypeFromMangledNameV2
+00000001000ac014	mov	x20, x21
+00000001000ac018	bl	CIDR.IPAddressRange.description.getter : Swift.String
+00000001000ac01c	mov	x8, x0
+00000001000ac020	mov	x24, x1
+00000001000ac024	tbnz	x1, #0x3c, 0x1000ac050
+00000001000ac028	tbnz	x24, #0x3d, 0x1000abfc0
+00000001000ac02c	tbz	x8, #0x3c, 0x1000ac064
+00000001000ac030	and	x9, x24, #0xfffffffffffffff
+00000001000ac034	add	x0, x9, #0x20
+00000001000ac038	and	x1, x8, #0xffffffffffff
+00000001000ac03c	cbz	x1, 0x1000abfe0
+00000001000ac040	add	x8, x1, x0
+00000001000ac044	cmp	x0, #0x0
+00000001000ac048	csel	x1, xzr, x8, eq
+00000001000ac04c	b	0x1000abfd8
+00000001000ac050	mov	x0, x8
+00000001000ac054	mov	x1, x24
+00000001000ac058	mov	x20, x19
+00000001000ac05c	bl	generic specialization <Swift.String.UTF8View> of Foundation.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()
+00000001000ac060	b	0x1000abfe0
+00000001000ac064	mov	x0, x8
+00000001000ac068	mov	x1, x24
+00000001000ac06c	bl	0x1000bdc6c ; symbol stub for: Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>
+00000001000ac070	cbnz	x1, 0x1000ac040
+00000001000ac074	b	0x1000abfe0
+00000001000ac078	ldr	x8, [sp, #0x18]
+00000001000ac07c	adrp	x9, 60 ; 0x1000e8000
+00000001000ac080	ldr	x9, [x9, #0x5b8] ; literal pool symbol address: ___stack_chk_guard
+00000001000ac084	ldr	x9, [x9]
+00000001000ac088	cmp	x9, x8
+00000001000ac08c	b.ne	0x1000ac0b0
+00000001000ac090	ldp	x29, x30, [sp, #0x70]
+00000001000ac094	ldp	x20, x19, [sp, #0x60]
+00000001000ac098	ldp	x22, x21, [sp, #0x50]
+00000001000ac09c	ldp	x24, x23, [sp, #0x40]
+00000001000ac0a0	ldp	x26, x25, [sp, #0x30]
+00000001000ac0a4	ldp	x28, x27, [sp, #0x20]
+00000001000ac0a8	add	sp, sp, #0x80
+00000001000ac0ac	ret
+00000001000ac0b0	bl	0x1000be3c8 ; symbol stub for: ___stack_chk_fail

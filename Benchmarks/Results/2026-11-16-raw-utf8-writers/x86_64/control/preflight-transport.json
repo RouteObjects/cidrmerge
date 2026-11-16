@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-11-16T15:09:39.551545+00:00",
+  "command_without_embedded_script": [
+    "ssh",
+    "-o",
+    "BatchMode=yes",
+    "-o",
+    "ConnectTimeout=10",
+    "-o",
+    "StrictHostKeyChecking=yes",
+    "-o",
+    "UpdateHostKeys=no",
+    "-o",
+    "ControlMaster=no",
+    "-o",
+    "ControlPath=none",
+    "swift-dev",
+    "<bounded read-only Python preflight>"
+  ],
+  "remote_script_sha256": "8b59aff0d9d021b2f04ffc65fca8ea16de54d5106c71c0003bb6c1cf12f7ab62",
+  "automatic_auth_retries": 0,
+  "exit_code": 0,
+  "stdout": "BEGIN_RAW_UTF8_READ_ONLY_PREFLIGHT\n{\"at\": \"2026-11-16T15:09:46.161813+00:00\", \"machine\": \"x86_64\", \"kernel\": \"6.14.8-2-pve\", \"affinity\": [3, 8, 9, 14], \"swift\": {\"command\": [\"$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift\", \"--version\"], \"exit_code\": 0, \"stdout\": \"Swift version 6.4.2 (swift-6.4.2-RELEASE)\\nTarget: x86_64-unknown-linux-gnu\\n\", \"stderr\": \"\"}, \"persistent_disk\": {\"total\": 67318259712, \"used\": 59093528576, \"free\": 5008228352}, \"user_tmpfs\": {\"total\": 13506101248, \"used\": 8192, \"free\": 13506093056}, \"memory\": {\"MemTotal\": 8589934592, \"MemAvailable\": 8543388672, \"SwapTotal\": 536870912, \"SwapFree\": 522080256}, \"prior_compact_scratch_exists\": false, \"remote_new_root_exists\": false, \"cpu_max\": \"max 100000\\n\", \"memory_max\": \"max\\n\", \"scope\": \"Read-only host/version/capacity check; no cache deletion, build, measurement or configuration change.\"}\n",
+  "stderr": "",
+  "passed": true,
+  "finished_at": "2026-11-16T15:09:40.145002+00:00"
+}

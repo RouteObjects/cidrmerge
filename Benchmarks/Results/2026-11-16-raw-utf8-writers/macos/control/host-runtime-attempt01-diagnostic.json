@@ -1,0 +1,63 @@
+{
+  "previous_attempt": "Stopped on host-command assertion before writing host-runtime.json; no target measurements ran.",
+  "diagnostic": [
+    {
+      "command": [
+        "sw_vers"
+      ],
+      "exit_code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "xcrun",
+        "swift",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+      "stderr": "swift-driver version: 1.168.6 "
+    },
+    {
+      "command": [
+        "xcodebuild",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "Xcode 27.2\nBuild version 27B52\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "sysctl",
+        "hw.model",
+        "hw.memsize",
+        "hw.ncpu"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    },
+    {
+      "command": [
+        "pmset",
+        "-g",
+        "batt"
+      ],
+      "exit_code": 0,
+      "stdout": "Now drawing from 'AC Power'\n -InternalBattery-0 (id=45744227)\t80%; AC attached; not charging present: true\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pmset",
+        "-g",
+        "therm"
+      ],
+      "exit_code": 0,
+      "stdout": "Note: No thermal warning level has been recorded\nNote: No performance warning level has been recorded\nNote: No CPU power status has been recorded\n",
+      "stderr": ""
+    }
+  ]
+}

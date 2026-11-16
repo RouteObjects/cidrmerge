@@ -1,0 +1,83 @@
+{
+  "variant": "B",
+  "package": "cli",
+  "action": "build",
+  "configuration": "release",
+  "command": [
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/sources/B",
+    "--scratch-path",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/build/B/cli",
+    "--cache-path",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/cache",
+    "--config-path",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/config",
+    "--security-path",
+    "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-16T15:23:05.420679+00:00",
+  "free_bytes_before": 4998742016,
+  "log": "logs/B-cli-build-release.log",
+  "exit_code": 0,
+  "elapsed_s": 240.56235893070698,
+  "log_sha256": "316eadc038257f98bc26f491f70b1bcf5c80cb0f90bcbca20de64c27df669d59",
+  "dependency_pins": {
+    "remote": {
+      "swift-argument-parser": {
+        "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+        "version": "1.8.2"
+      },
+      "swift-asn1": {
+        "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+        "version": "1.7.1"
+      },
+      "swift-atomics": {
+        "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+        "version": "1.3.1"
+      },
+      "swift-cidr": {
+        "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+        "version": "0.10.1"
+      },
+      "swift-collections": {
+        "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+        "version": "1.6.0"
+      },
+      "swift-crypto": {
+        "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+        "version": "5.1.1"
+      },
+      "swift-nio": {
+        "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+        "version": "2.101.2"
+      },
+      "swift-system": {
+        "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+        "version": "1.7.4"
+      }
+    },
+    "local": {}
+  },
+  "show_bin_path_output": "$HOME/Downloads/cidrmerge-raw-utf8-20261116T145749Z/build/B/cli/x86_64-unknown-linux-gnu/release\n",
+  "ldd": {
+    "exit_code": 0,
+    "stdout": "\tlinux-vdso.so.1 (0x00007db734cce000)\n\tlibswiftCore.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftCore.so (0x00007db734000000)\n\tlibswiftObservation.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftObservation.so (0x00007db734ca6000)\n\tlibswift_Concurrency.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Concurrency.so (0x00007db734bfe000)\n\tlibswift_StringProcessing.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_StringProcessing.so (0x00007db734745000)\n\tlibswift_RegexParser.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_RegexParser.so (0x00007db733ef2000)\n\tlibswiftGlibc.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftGlibc.so (0x00007db734bec000)\n\tlibBlocksRuntime.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libBlocksRuntime.so (0x00007db734be8000)\n\tlibdispatch.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libdispatch.so (0x00007db733e93000)\n\tlibswiftDispatch.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftDispatch.so (0x00007db734bb6000)\n\tlibFoundation.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libFoundation.so (0x00007db733800000)\n\tlibFoundationEssentials.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libFoundationEssentials.so (0x00007db733000000)\n\tlibFoundationInternationalization.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libFoundationInternationalization.so (0x00007db732e24000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007db733717000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007db732a00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007db733e65000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007db732600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007db734cd0000)\n\tlibswift_Builtin_float.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Builtin_float.so (0x00007db734ba9000)\n\tlib_FoundationICU.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/lib_FoundationICU.so (0x00007db730000000)\n\tlibswiftSynchronization.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftSynchronization.so (0x00007db734733000)\n",
+    "stderr": ""
+  },
+  "binary": "bin/B",
+  "binary_sha256": "064cbc91cb5ccd4b9e4129d6237ba2419f4253a71f592489bd4b8621dc0508ed"
+}

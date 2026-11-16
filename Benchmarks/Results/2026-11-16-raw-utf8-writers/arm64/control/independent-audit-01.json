@@ -1,0 +1,386 @@
+{
+  "passed": true,
+  "started_at": "2026-11-16T15:31:30.912084+00:00",
+  "auditor_sha256": "bde42d8cf32b340125c4a84eb9abd223c05b623f42ca2e671fe172aba097f610",
+  "full_test_executions": 456,
+  "sets": [
+    {
+      "directory": "measurements",
+      "measured_samples": 144,
+      "warmups": 24,
+      "sample_count": 168,
+      "summary_sha256": "3370e79f0865e6bcdeb102b17293ec4d067482cd431b668578612805b1f7c280",
+      "comparisons": [
+        {
+          "id": "ipv4-disjoint-ranges",
+          "B": {
+            "elapsed_ns": 431369794.0,
+            "cpu_seconds": 0.43119149999999995,
+            "peak_rss_bytes": 55447552.0
+          },
+          "C": {
+            "elapsed_ns": 310816058.5,
+            "cpu_seconds": 0.3105485,
+            "peak_rss_bytes": 55586816.0
+          },
+          "elapsed_change_pct": {
+            "median": -26.89324182186621,
+            "min": -39.18791348896198,
+            "max": -25.71244308329095
+          },
+          "rss_change_pct": {
+            "median": 0.2103373512164608,
+            "min": -0.3394583425577413,
+            "max": 0.45925925925927036
+          }
+        },
+        {
+          "id": "ipv4-disjoint-cidr",
+          "B": {
+            "elapsed_ns": 336417950.0,
+            "cpu_seconds": 0.33608099999999996,
+            "peak_rss_bytes": 45447168.0
+          },
+          "C": {
+            "elapsed_ns": 300825007.5,
+            "cpu_seconds": 0.30055750000000003,
+            "peak_rss_bytes": 45449216.0
+          },
+          "elapsed_change_pct": {
+            "median": -10.228952234012851,
+            "min": -13.04390197882681,
+            "max": -4.3014412138631775
+          },
+          "rss_change_pct": {
+            "median": -0.16199564166732294,
+            "min": -0.6391789701116313,
+            "max": 0.7037805648290263
+          }
+        },
+        {
+          "id": "ipv6-disjoint-ranges",
+          "B": {
+            "elapsed_ns": 655710420.5,
+            "cpu_seconds": 0.655476,
+            "peak_rss_bytes": 117661696.0
+          },
+          "C": {
+            "elapsed_ns": 506856956.5,
+            "cpu_seconds": 0.506648,
+            "peak_rss_bytes": 117608448.0
+          },
+          "elapsed_change_pct": {
+            "median": -22.490399685048445,
+            "min": -24.428442590775955,
+            "max": -16.59143912756903
+          },
+          "rss_change_pct": {
+            "median": -0.045227434562650215,
+            "min": -0.15657620041753528,
+            "max": 0.05924790018472237
+          }
+        },
+        {
+          "id": "ipv6-disjoint-cidr",
+          "B": {
+            "elapsed_ns": 547877454.5,
+            "cpu_seconds": 0.5475835,
+            "peak_rss_bytes": 117592064.0
+          },
+          "C": {
+            "elapsed_ns": 482945071.5,
+            "cpu_seconds": 0.482714,
+            "peak_rss_bytes": 117694464.0
+          },
+          "elapsed_change_pct": {
+            "median": -12.053814824227981,
+            "min": -14.351011008894865,
+            "max": -9.378204996810236
+          },
+          "rss_change_pct": {
+            "median": 0.08360818019818028,
+            "min": -0.09051664113632896,
+            "max": 0.2720993511476921
+          }
+        },
+        {
+          "id": "mixed-disjoint-ranges",
+          "B": {
+            "elapsed_ns": 567206920.5,
+            "cpu_seconds": 0.566983,
+            "peak_rss_bytes": 90497024.0
+          },
+          "C": {
+            "elapsed_ns": 418006249.5,
+            "cpu_seconds": 0.417779,
+            "peak_rss_bytes": 90660864.0
+          },
+          "elapsed_change_pct": {
+            "median": -26.50847751767669,
+            "min": -27.996071484583773,
+            "max": -20.832689595331367
+          },
+          "rss_change_pct": {
+            "median": 0.15383851180218455,
+            "min": -0.10384215991692258,
+            "max": 0.29003897398713896
+          }
+        },
+        {
+          "id": "mixed-disjoint-cidr",
+          "B": {
+            "elapsed_ns": 437584287.5,
+            "cpu_seconds": 0.43736299999999995,
+            "peak_rss_bytes": 81715200.0
+          },
+          "C": {
+            "elapsed_ns": 391827492.5,
+            "cpu_seconds": 0.39159849999999996,
+            "peak_rss_bytes": 81655808.0
+          },
+          "elapsed_change_pct": {
+            "median": -11.310111046541959,
+            "min": -11.986703506346874,
+            "max": 9.238033154365999
+          },
+          "rss_change_pct": {
+            "median": -0.05761098773824913,
+            "min": -0.5207811717576338,
+            "max": 0.12555873637687398
+          }
+        },
+        {
+          "id": "mixed-permuted-ranges",
+          "B": {
+            "elapsed_ns": 669818227.0,
+            "cpu_seconds": 0.6696,
+            "peak_rss_bytes": 98525184.0
+          },
+          "C": {
+            "elapsed_ns": 514773246.5,
+            "cpu_seconds": 0.514464,
+            "peak_rss_bytes": 98506752.0
+          },
+          "elapsed_change_pct": {
+            "median": -23.857616496189628,
+            "min": -32.52433750810351,
+            "max": -20.908679093684235
+          },
+          "rss_change_pct": {
+            "median": 0.01663270511788051,
+            "min": -0.06648107366934441,
+            "max": 0.1876016175428319
+          }
+        },
+        {
+          "id": "mixed-permuted-cidr",
+          "B": {
+            "elapsed_ns": 534104261.5,
+            "cpu_seconds": 0.5338995,
+            "peak_rss_bytes": 89442304.0
+          },
+          "C": {
+            "elapsed_ns": 487627007.5,
+            "cpu_seconds": 0.487243,
+            "peak_rss_bytes": 89546752.0
+          },
+          "elapsed_change_pct": {
+            "median": -8.751555257117493,
+            "min": -10.400563029001342,
+            "max": -4.325744456032254
+          },
+          "rss_change_pct": {
+            "median": 0.09384351044394723,
+            "min": -0.08690879151038722,
+            "max": 0.41777614544118435
+          }
+        },
+        {
+          "id": "mixed-overlap-ranges",
+          "B": {
+            "elapsed_ns": 408933830.5,
+            "cpu_seconds": 0.4087105,
+            "peak_rss_bytes": 71471104.0
+          },
+          "C": {
+            "elapsed_ns": 406496450.0,
+            "cpu_seconds": 0.40626299999999993,
+            "peak_rss_bytes": 71569408.0
+          },
+          "elapsed_change_pct": {
+            "median": -0.3552320150177479,
+            "min": -4.664582352885116,
+            "max": 20.05901417727898
+          },
+          "rss_change_pct": {
+            "median": 0.04297803119192034,
+            "min": -0.017152658662089593,
+            "max": 0.356096720464083
+          }
+        },
+        {
+          "id": "mixed-overlap-cidr",
+          "B": {
+            "elapsed_ns": 399033964.5,
+            "cpu_seconds": 0.39884149999999996,
+            "peak_rss_bytes": 71510016.0
+          },
+          "C": {
+            "elapsed_ns": 395190019.5,
+            "cpu_seconds": 0.3950455,
+            "peak_rss_bytes": 71577600.0
+          },
+          "elapsed_change_pct": {
+            "median": -1.0382075484353381,
+            "min": -8.521899623952722,
+            "max": 5.398348993331958
+          },
+          "rss_change_pct": {
+            "median": 0.034503609685548886,
+            "min": -0.18886281691753437,
+            "max": 0.3445305770887197
+          }
+        },
+        {
+          "id": "range-derived-mixed-ranges",
+          "B": {
+            "elapsed_ns": 464728734.5,
+            "cpu_seconds": 0.464364,
+            "peak_rss_bytes": 71704576.0
+          },
+          "C": {
+            "elapsed_ns": 374783543.5,
+            "cpu_seconds": 0.374428,
+            "peak_rss_bytes": 71608320.0
+          },
+          "elapsed_change_pct": {
+            "median": -18.213144680651276,
+            "min": -26.96491184575337,
+            "max": 0.2426226931922182
+          },
+          "rss_change_pct": {
+            "median": -0.18566487757210592,
+            "min": -0.27963248302231847,
+            "max": 0.45329355060821364
+          }
+        },
+        {
+          "id": "range-derived-mixed-cidr",
+          "B": {
+            "elapsed_ns": 485423565.0,
+            "cpu_seconds": 0.48522599999999994,
+            "peak_rss_bytes": 83673088.0
+          },
+          "C": {
+            "elapsed_ns": 422527217.5,
+            "cpu_seconds": 0.421492,
+            "peak_rss_bytes": 83693568.0
+          },
+          "elapsed_change_pct": {
+            "median": -16.850735861972787,
+            "min": -19.331168543421697,
+            "max": 1.9103731348783626
+          },
+          "rss_change_pct": {
+            "median": 0.04406005899908472,
+            "min": -0.10765842916564683,
+            "max": 0.4614176320439922
+          }
+        }
+      ]
+    },
+    {
+      "directory": "followup-01",
+      "measured_samples": 36,
+      "warmups": 6,
+      "sample_count": 42,
+      "summary_sha256": "ddec434dc4b0b7c51019b694be4ee1358a6fc0ecb9aafa674c507d6e00a2626a",
+      "comparisons": [
+        {
+          "id": "mixed-disjoint-cidr",
+          "B": {
+            "elapsed_ns": 442499498.0,
+            "cpu_seconds": 0.4420935,
+            "peak_rss_bytes": 81666048.0
+          },
+          "C": {
+            "elapsed_ns": 397426225.5,
+            "cpu_seconds": 0.39706949999999996,
+            "peak_rss_bytes": 81688576.0
+          },
+          "elapsed_change_pct": {
+            "median": -8.64672510250261,
+            "min": -12.055780946700978,
+            "max": -5.067619709211268
+          },
+          "rss_change_pct": {
+            "median": 0.012563146272642767,
+            "min": -0.22030843180452786,
+            "max": 0.5796955338239762
+          }
+        },
+        {
+          "id": "mixed-overlap-ranges",
+          "B": {
+            "elapsed_ns": 400938627.5,
+            "cpu_seconds": 0.40075099999999997,
+            "peak_rss_bytes": 71516160.0
+          },
+          "C": {
+            "elapsed_ns": 401024461.0,
+            "cpu_seconds": 0.40076399999999995,
+            "peak_rss_bytes": 71559168.0
+          },
+          "elapsed_change_pct": {
+            "median": 1.058116479874116,
+            "min": -14.43487651620442,
+            "max": 13.159028133272411
+          },
+          "rss_change_pct": {
+            "median": 0.040116805720624704,
+            "min": -0.13172966781214157,
+            "max": 0.23515916260394842
+          }
+        },
+        {
+          "id": "mixed-overlap-cidr",
+          "B": {
+            "elapsed_ns": 415538342.5,
+            "cpu_seconds": 0.41456499999999996,
+            "peak_rss_bytes": 71538688.0
+          },
+          "C": {
+            "elapsed_ns": 396765016.0,
+            "cpu_seconds": 0.3964955,
+            "peak_rss_bytes": 71569408.0
+          },
+          "elapsed_change_pct": {
+            "median": -0.47190005782891675,
+            "min": -12.536562090555048,
+            "max": 10.219565147481791
+          },
+          "rss_change_pct": {
+            "median": 0.00865204243931661,
+            "min": -0.13726050900771947,
+            "max": 0.24665863592037152
+          }
+        }
+      ]
+    }
+  ],
+  "measured_samples": 180,
+  "excluded_warmups": 30,
+  "followup_selection": [
+    "mixed-disjoint-cidr",
+    "mixed-overlap-ranges",
+    "mixed-overlap-cidr"
+  ],
+  "differential_cases": 77,
+  "no_target_or_harness_executed": true,
+  "finished_at": "2026-11-16T15:31:35.739306+00:00",
+  "checks": {
+    "assertions": 3758,
+    "files_hashed": 1214,
+    "bytes_hashed": 5013154382
+  }
+}

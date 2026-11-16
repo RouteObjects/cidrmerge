@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "reviewed_at": "2026-11-16T15:19:23.797348+00:00",
+  "scope": "Read-only source review and configuration/reference-receipt metadata checks. No CLI, benchmark, or fault-injection execution.",
+  "files": {
+    "control/run_matched.py": "a0ce0a2f0cb244b15e18af069256299b3f28b3cb0b06105a8efd23ba12358ad7",
+    "control/prepare_references.py": "346cb1bdccfd08ccbbaa12d8d1dcbba50279855686d1b9630513b3c09a5a1204",
+    "control/cases.json": "9f6e02ca25dc59c1d4755794e0761e38951caaad279c3d88e78b33150b9914f3"
+  },
+  "checks": {
+    "configs": 12,
+    "fixtures": 6,
+    "representations_per_fixture": [
+      "ranges",
+      "cidr"
+    ],
+    "warmups": 24,
+    "measured_samples": 144,
+    "measured_pairs_per_config": 6,
+    "balanced_pair_order": "BC on rounds 1/3/5, CB on rounds 2/4/6; rotating case order",
+    "reference_generation": "Independent Python integer interval union and ipaddress summarization; coverage digest, ranges, minimal CIDR count and per-family address cardinality checked against prior oracle",
+    "complete_output_check": "Byte count and SHA-256 plus shallow=False full file comparison after timing",
+    "native_resources": "Darwin native time CPU and RSS bytes; Linux exact-child wait4 CPU and KiB RSS converted to bytes",
+    "timeout": "180-second timer; only owned process group killed; exit-race ProcessLookupError tolerated and child reaped or already-reaped state retained",
+    "failure_preservation": "Exclusive sample/summary receipts and files; no retry or observation filtering in runner",
+    "deduplication": "After timer and exact-reference validation; verified output linked into content store; temporary hardlink atomically replaces sample path so link/replace failure preserves original",
+    "disk_guard": "Before each sample free space must cover 3 GiB plus next expected stdout; after post-sample operations at least 3 GiB; hardlink dedup adds no second output-sized allocation",
+    "input_freeze": "Cases, both binaries, runner, all selected inputs and references hashed before and after complete measurement",
+    "os_resource_unit_guard": "Actual platform.system() must match selected Darwin/Linux resource semantics",
+    "zero_cpu_summary": "Missing percentage changes are omitted; an entirely empty set produces JSON null instead of median-of-empty failure"
+  },
+  "output_budget_bytes": {
+    "all_stdout_without_dedup": 3500319746,
+    "unique_stdout_content": 191430203,
+    "maximum_next_sample": 40728424
+  },
+  "integration_conditions": [
+    "Pass the experiment directory to --fixtures-root because case paths begin fixtures/.",
+    "Platform owners separately bind successful tests, dependency/source gates, compiler/runtime identities and linked-runtime hashes before/after timing; this runner alone does not enforce those gates.",
+    "macOS elapsed includes its native time wrapper; compare B/C within platform and do not normalize absolute cross-platform times.",
+    "Post-sample comparison/hash/hardlink work can influence cache state between samples and must be disclosed."
+  ],
+  "preserved_prior_harness": "control/harness-drafts/run_matched-before-review.py",
+  "code_changes_by_reviewer": false,
+  "prior_review_receipt": "control/harness-drafts/harness-review-before-final-additions.json"
+}

@@ -1,0 +1,32 @@
+{
+  "command": [
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$EXPERIMENT_ROOT/sources/C",
+    "--scratch-path",
+    "$EXPERIMENT_ROOT/macos/build/C",
+    "--cache-path",
+    "$EXPERIMENT_ROOT/macos/cache",
+    "--config-path",
+    "$EXPERIMENT_ROOT/macos/config",
+    "--security-path",
+    "$EXPERIMENT_ROOT/macos/security",
+    "--disable-netrc",
+    "--disable-sandbox",
+    "--only-use-versions-from-resolved-file",
+    "--skip-update",
+    "-c",
+    "release",
+    "-j",
+    "8",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-16T15:11:35.613357+00:00",
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "exit_code": 0,
+  "elapsed_seconds": 25.091044958040584,
+  "log_sha256": "f25e18872c11b6f236a76350b25e619c7dca6ccc8a75bfbb190aff0212087681",
+  "binary_sha256": "1bd879e7c9e486389ab9c7e40751ad3cd865fcbe4939b083dc843139dfaac1f1"
+}

@@ -1,0 +1,475 @@
+=== original B-assembly.txt lines 343111-343307 ===
+0000000000190358 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()>:
+  190358:	d101c3ff 	sub	sp, sp, #0x70
+  19035c:	a9017bfd 	stp	x29, x30, [sp, #16]
+  190360:	a9026ffc 	stp	x28, x27, [sp, #32]
+  190364:	a90367fa 	stp	x26, x25, [sp, #48]
+  190368:	a9045ff8 	stp	x24, x23, [sp, #64]
+  19036c:	a90557f6 	stp	x22, x21, [sp, #80]
+  190370:	a9064ff4 	stp	x20, x19, [sp, #96]
+  190374:	910043fd 	add	x29, sp, #0x10
+  190378:	f00009e8 	adrp	x8, 2cf000 <_DYNAMIC+0x1d8>
+  19037c:	aa0103f3 	mov	x19, x1
+  190380:	f9425908 	ldr	x8, [x8, #1200]
+  190384:	f9400108 	ldr	x8, [x8]
+  190388:	f90007e8 	str	x8, [sp, #8]
+  19038c:	b7f80960 	tbnz	x0, #63, 1904b8 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x160>
+  190390:	f940081a 	ldr	x26, [x0, #16]
+  190394:	b400133a 	cbz	x26, 1905f8 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a0>
+  190398:	91008015 	add	x21, x0, #0x20
+  19039c:	d0000a16 	adrp	x22, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  1903a0:	911ec2d6 	add	x22, x22, #0x7b0
+  1903a4:	5280015b 	mov	w27, #0xa                   	// #10
+  1903a8:	aa1603e0 	mov	x0, x22
+  1903ac:	97fb132c 	bl	5505c <__swift_instantiateConcreteTypeFromMangledName>
+  1903b0:	aa1503f4 	mov	x20, x21
+  1903b4:	97ffb245 	bl	17ccc8 <CIDR.IPAddressRange.description.getter : Swift.String>
+  1903b8:	aa1303f4 	mov	x20, x19
+  1903bc:	aa0103f7 	mov	x23, x1
+  1903c0:	940022e2 	bl	198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>
+  1903c4:	aa1703e0 	mov	x0, x23
+  1903c8:	97fafec6 	bl	4fee0 <swift_bridgeObjectRelease@plt>
+  1903cc:	f9400260 	ldr	x0, [x19]
+  1903d0:	390003fb 	strb	w27, [sp]
+  1903d4:	97faff13 	bl	50020 <swift_isUniquelyReferenced_nonNull_native@plt>
+  1903d8:	f9400277 	ldr	x23, [x19]
+  1903dc:	37000420 	tbnz	w0, #0, 190460 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x108>
+  1903e0:	a940a274 	ldp	x20, x8, [x19, #8]
+  1903e4:	f9400ae9 	ldr	x9, [x23, #16]
+  1903e8:	b4000109 	cbz	x9, 190408 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0xb0>
+  1903ec:	f94016ea 	ldr	x10, [x23, #40]
+  1903f0:	eb0a028a 	subs	x10, x20, x10
+  1903f4:	54001306 	b.vs	190654 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2fc>
+  1903f8:	8b090158 	add	x24, x10, x9
+  1903fc:	eb140119 	subs	x25, x8, x20
+  190400:	540000a7 	b.vc	190414 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0xbc>
+  190404:	14000093 	b	190650 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2f8>
+  190408:	aa1f03f8 	mov	x24, xzr
+  19040c:	eb140119 	subs	x25, x8, x20
+  190410:	54001206 	b.vs	190650 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2f8>
+  190414:	aa1f03e0 	mov	x0, xzr
+  190418:	97fb04ea 	bl	517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  19041c:	52800821 	mov	w1, #0x41                  	// #65
+  190420:	528000e2 	mov	w2, #0x7                   	// #7
+  190424:	97fafea7 	bl	4fec0 <swift_allocObject@plt>
+  190428:	aa0003e6 	mov	x6, x0
+  19042c:	aa1803e0 	mov	x0, x24
+  190430:	aa1903e1 	mov	x1, x25
+  190434:	52800022 	mov	w2, #0x1                   	// #1
+  190438:	aa1f03e3 	mov	x3, xzr
+  19043c:	aa1f03e4 	mov	x4, xzr
+  190440:	aa1403e5 	mov	x5, x20
+  190444:	aa0603f4 	mov	x20, x6
+  190448:	97fb04e2 	bl	517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  19044c:	aa0003f4 	mov	x20, x0
+  190450:	aa1703e0 	mov	x0, x23
+  190454:	97fafe77 	bl	4fe30 <swift_release@plt>
+  190458:	f9000274 	str	x20, [x19]
+  19045c:	aa1403f7 	mov	x23, x20
+  190460:	f9400a78 	ldr	x24, [x19, #16]
+  190464:	f94016e8 	ldr	x8, [x23, #40]
+  190468:	eb080308 	subs	x8, x24, x8
+  19046c:	54000e26 	b.vs	190630 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2d8>
+  190470:	f9400ee9 	ldr	x9, [x23, #24]
+  190474:	eb080121 	subs	x1, x9, x8
+  190478:	54000de6 	b.vs	190634 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2dc>
+  19047c:	910003e2 	mov	x2, sp
+  190480:	aa1803e0 	mov	x0, x24
+  190484:	52800023 	mov	w3, #0x1                   	// #1
+  190488:	aa1703f4 	mov	x20, x23
+  19048c:	97fb04d5 	bl	517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  190490:	b1000708 	adds	x8, x24, #0x1
+  190494:	54000d26 	b.vs	190638 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2e0>
+  190498:	f9400669 	ldr	x9, [x19, #8]
+  19049c:	eb09011f 	cmp	x8, x9
+  1904a0:	54000ceb 	b.lt	19063c <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2e4>  // b.tstop
+  1904a4:	f100075a 	subs	x26, x26, #0x1
+  1904a8:	910022b5 	add	x21, x21, #0x8
+  1904ac:	f9000a68 	str	x8, [x19, #16]
+  1904b0:	54fff7c1 	b.ne	1903a8 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x50>  // b.any
+  1904b4:	14000051 	b	1905f8 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a0>
+  1904b8:	9240f808 	and	x8, x0, #0x7fffffffffffffff
+  1904bc:	f940091b 	ldr	x27, [x8, #16]
+  1904c0:	b40009db 	cbz	x27, 1905f8 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a0>
+  1904c4:	91008115 	add	x21, x8, #0x20
+  1904c8:	97ff7025 	bl	16c55c <lazy protocol witness table accessor for type CIDR.AF.V4 and conformance CIDR.AF.V4 : CIDR.IPAddressFamily in CIDR>
+  1904cc:	f00009f7 	adrp	x23, 2cf000 <_DYNAMIC+0x1d8>
+  1904d0:	aa0003f6 	mov	x22, x0
+  1904d4:	5280015a 	mov	w26, #0xa                   	// #10
+  1904d8:	f94456f7 	ldr	x23, [x23, #2216]
+  1904dc:	f9400c1c 	ldr	x28, [x0, #24]
+  1904e0:	394012a1 	ldrb	w1, [x21, #4]
+  1904e4:	aa1503e0 	mov	x0, x21
+  1904e8:	aa1703f4 	mov	x20, x23
+  1904ec:	aa1703e2 	mov	x2, x23
+  1904f0:	aa1603e3 	mov	x3, x22
+  1904f4:	d63f0380 	blr	x28
+  1904f8:	aa1303f4 	mov	x20, x19
+  1904fc:	aa0103f8 	mov	x24, x1
+  190500:	94002292 	bl	198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>
+  190504:	aa1803e0 	mov	x0, x24
+  190508:	97fafe76 	bl	4fee0 <swift_bridgeObjectRelease@plt>
+  19050c:	f9400260 	ldr	x0, [x19]
+  190510:	390013fa 	strb	w26, [sp, #4]
+  190514:	97fafec3 	bl	50020 <swift_isUniquelyReferenced_nonNull_native@plt>
+  190518:	f9400278 	ldr	x24, [x19]
+  19051c:	37000440 	tbnz	w0, #0, 1905a4 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x24c>
+  190520:	a940a274 	ldp	x20, x8, [x19, #8]
+  190524:	f9400b09 	ldr	x9, [x24, #16]
+  190528:	b4000109 	cbz	x9, 190548 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x1f0>
+  19052c:	f940170a 	ldr	x10, [x24, #40]
+  190530:	eb0a028a 	subs	x10, x20, x10
+  190534:	54000946 	b.vs	19065c <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x304>
+  190538:	8b090159 	add	x25, x10, x9
+  19053c:	eb14011a 	subs	x26, x8, x20
+  190540:	540000a7 	b.vc	190554 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x1fc>
+  190544:	14000045 	b	190658 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x300>
+  190548:	aa1f03f9 	mov	x25, xzr
+  19054c:	eb14011a 	subs	x26, x8, x20
+  190550:	54000846 	b.vs	190658 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x300>
+  190554:	aa1f03e0 	mov	x0, xzr
+  190558:	97fb049a 	bl	517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  19055c:	52800821 	mov	w1, #0x41                  	// #65
+  190560:	528000e2 	mov	w2, #0x7                   	// #7
+  190564:	97fafe57 	bl	4fec0 <swift_allocObject@plt>
+  190568:	aa0003e6 	mov	x6, x0
+  19056c:	aa1903e0 	mov	x0, x25
+  190570:	aa1a03e1 	mov	x1, x26
+  190574:	52800022 	mov	w2, #0x1                   	// #1
+  190578:	aa1f03e3 	mov	x3, xzr
+  19057c:	aa1f03e4 	mov	x4, xzr
+  190580:	aa1403e5 	mov	x5, x20
+  190584:	aa0603f4 	mov	x20, x6
+  190588:	97fb0492 	bl	517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  19058c:	aa0003f4 	mov	x20, x0
+  190590:	aa1803e0 	mov	x0, x24
+  190594:	97fafe27 	bl	4fe30 <swift_release@plt>
+  190598:	f9000274 	str	x20, [x19]
+  19059c:	aa1403f8 	mov	x24, x20
+  1905a0:	5280015a 	mov	w26, #0xa                   	// #10
+  1905a4:	f9400a79 	ldr	x25, [x19, #16]
+  1905a8:	f9401708 	ldr	x8, [x24, #40]
+  1905ac:	eb080328 	subs	x8, x25, x8
+  1905b0:	54000486 	b.vs	190640 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2e8>
+  1905b4:	f9400f09 	ldr	x9, [x24, #24]
+  1905b8:	eb080121 	subs	x1, x9, x8
+  1905bc:	54000446 	b.vs	190644 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2ec>
+  1905c0:	910013e2 	add	x2, sp, #0x4
+  1905c4:	aa1903e0 	mov	x0, x25
+  1905c8:	52800023 	mov	w3, #0x1                   	// #1
+  1905cc:	aa1803f4 	mov	x20, x24
+  1905d0:	97fb0484 	bl	517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  1905d4:	b1000728 	adds	x8, x25, #0x1
+  1905d8:	54000386 	b.vs	190648 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2f0>
+  1905dc:	f9400669 	ldr	x9, [x19, #8]
+  1905e0:	eb09011f 	cmp	x8, x9
+  1905e4:	5400034b 	b.lt	19064c <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2f4>  // b.tstop
+  1905e8:	f100077b 	subs	x27, x27, #0x1
+  1905ec:	910022b5 	add	x21, x21, #0x8
+  1905f0:	f9000a68 	str	x8, [x19, #16]
+  1905f4:	54fff761 	b.ne	1904e0 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x188>  // b.any
+  1905f8:	f00009e8 	adrp	x8, 2cf000 <_DYNAMIC+0x1d8>
+  1905fc:	f9425908 	ldr	x8, [x8, #1200]
+  190600:	f94007e9 	ldr	x9, [sp, #8]
+  190604:	f9400108 	ldr	x8, [x8]
+  190608:	eb09011f 	cmp	x8, x9
+  19060c:	540002a1 	b.ne	190660 <generic specialization <CIDR.AF.V4> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x308>  // b.any
+  190610:	a9464ff4 	ldp	x20, x19, [sp, #96]
+  190614:	a94557f6 	ldp	x22, x21, [sp, #80]
+  190618:	a9445ff8 	ldp	x24, x23, [sp, #64]
+  19061c:	a94367fa 	ldp	x26, x25, [sp, #48]
+  190620:	a9426ffc 	ldp	x28, x27, [sp, #32]
+  190624:	a9417bfd 	ldp	x29, x30, [sp, #16]
+  190628:	9101c3ff 	add	sp, sp, #0x70
+  19062c:	d65f03c0 	ret
+  190630:	d4200020 	brk	#0x1
+  190634:	d4200020 	brk	#0x1
+  190638:	d4200020 	brk	#0x1
+  19063c:	d4200020 	brk	#0x1
+  190640:	d4200020 	brk	#0x1
+  190644:	d4200020 	brk	#0x1
+  190648:	d4200020 	brk	#0x1
+  19064c:	d4200020 	brk	#0x1
+  190650:	d4200020 	brk	#0x1
+  190654:	d4200020 	brk	#0x1
+  190658:	d4200020 	brk	#0x1
+  19065c:	d4200020 	brk	#0x1
+  190660:	97fb0088 	bl	50880 <__stack_chk_fail@plt>
+
+
+=== original B-assembly.txt lines 343308-343582 ===
+0000000000190664 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()>:
+  190664:	d10203ff 	sub	sp, sp, #0x80
+  190668:	a9027bfd 	stp	x29, x30, [sp, #32]
+  19066c:	a9036ffc 	stp	x28, x27, [sp, #48]
+  190670:	a90467fa 	stp	x26, x25, [sp, #64]
+  190674:	a9055ff8 	stp	x24, x23, [sp, #80]
+  190678:	a90657f6 	stp	x22, x21, [sp, #96]
+  19067c:	a9074ff4 	stp	x20, x19, [sp, #112]
+  190680:	910083fd 	add	x29, sp, #0x20
+  190684:	f00009e8 	adrp	x8, 2cf000 <_DYNAMIC+0x1d8>
+  190688:	aa0103f3 	mov	x19, x1
+  19068c:	f9425908 	ldr	x8, [x8, #1200]
+  190690:	f9400108 	ldr	x8, [x8]
+  190694:	f81f83a8 	stur	x8, [x29, #-8]
+  190698:	b7f80960 	tbnz	x0, #63, 1907c4 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x160>
+  19069c:	f940081a 	ldr	x26, [x0, #16]
+  1906a0:	b4001c3a 	cbz	x26, 190a24 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  1906a4:	91008015 	add	x21, x0, #0x20
+  1906a8:	d0000a16 	adrp	x22, 2d2000 <demangling cache variable for type metadata for ArgumentParser.ArgumentDefinition.Help?+0x10>
+  1906ac:	911e82d6 	add	x22, x22, #0x7a0
+  1906b0:	5280015b 	mov	w27, #0xa                   	// #10
+  1906b4:	aa1603e0 	mov	x0, x22
+  1906b8:	97fb1269 	bl	5505c <__swift_instantiateConcreteTypeFromMangledName>
+  1906bc:	aa1503f4 	mov	x20, x21
+  1906c0:	97ffb182 	bl	17ccc8 <CIDR.IPAddressRange.description.getter : Swift.String>
+  1906c4:	aa1303f4 	mov	x20, x19
+  1906c8:	aa0103f7 	mov	x23, x1
+  1906cc:	9400221f 	bl	198f48 <(extension in CIDRMergeCLI):FoundationEssentials.Data.(appendUTF8 in _7DBE5C09ED815B2851E09048716E8762)(Swift.String) -> ()>
+  1906d0:	aa1703e0 	mov	x0, x23
+  1906d4:	97fafe03 	bl	4fee0 <swift_bridgeObjectRelease@plt>
+  1906d8:	f9400260 	ldr	x0, [x19]
+  1906dc:	390023fb 	strb	w27, [sp, #8]
+  1906e0:	97fafe50 	bl	50020 <swift_isUniquelyReferenced_nonNull_native@plt>
+  1906e4:	f9400277 	ldr	x23, [x19]
+  1906e8:	37000420 	tbnz	w0, #0, 19076c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x108>
+  1906ec:	a940a274 	ldp	x20, x8, [x19, #8]
+  1906f0:	f9400ae9 	ldr	x9, [x23, #16]
+  1906f4:	b4000109 	cbz	x9, 190714 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0xb0>
+  1906f8:	f94016ea 	ldr	x10, [x23, #40]
+  1906fc:	eb0a028a 	subs	x10, x20, x10
+  190700:	54001c06 	b.vs	190a80 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x41c>
+  190704:	8b090158 	add	x24, x10, x9
+  190708:	eb140119 	subs	x25, x8, x20
+  19070c:	540000a7 	b.vc	190720 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0xbc>
+  190710:	140000db 	b	190a7c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x418>
+  190714:	aa1f03f8 	mov	x24, xzr
+  190718:	eb140119 	subs	x25, x8, x20
+  19071c:	54001b06 	b.vs	190a7c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x418>
+  190720:	aa1f03e0 	mov	x0, xzr
+  190724:	97fb0427 	bl	517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  190728:	52800821 	mov	w1, #0x41                  	// #65
+  19072c:	528000e2 	mov	w2, #0x7                   	// #7
+  190730:	97fafde4 	bl	4fec0 <swift_allocObject@plt>
+  190734:	aa0003e6 	mov	x6, x0
+  190738:	aa1803e0 	mov	x0, x24
+  19073c:	aa1903e1 	mov	x1, x25
+  190740:	52800022 	mov	w2, #0x1                   	// #1
+  190744:	aa1f03e3 	mov	x3, xzr
+  190748:	aa1f03e4 	mov	x4, xzr
+  19074c:	aa1403e5 	mov	x5, x20
+  190750:	aa0603f4 	mov	x20, x6
+  190754:	97fb041f 	bl	517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  190758:	aa0003f4 	mov	x20, x0
+  19075c:	aa1703e0 	mov	x0, x23
+  190760:	97fafdb4 	bl	4fe30 <swift_release@plt>
+  190764:	f9000274 	str	x20, [x19]
+  190768:	aa1403f7 	mov	x23, x20
+  19076c:	f9400a78 	ldr	x24, [x19, #16]
+  190770:	f94016e8 	ldr	x8, [x23, #40]
+  190774:	eb080308 	subs	x8, x24, x8
+  190778:	54001726 	b.vs	190a5c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3f8>
+  19077c:	f9400ee9 	ldr	x9, [x23, #24]
+  190780:	eb080121 	subs	x1, x9, x8
+  190784:	540016e6 	b.vs	190a60 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3fc>
+  190788:	910023e2 	add	x2, sp, #0x8
+  19078c:	aa1803e0 	mov	x0, x24
+  190790:	52800023 	mov	w3, #0x1                   	// #1
+  190794:	aa1703f4 	mov	x20, x23
+  190798:	97fb0412 	bl	517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  19079c:	b1000708 	adds	x8, x24, #0x1
+  1907a0:	54001626 	b.vs	190a64 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x400>
+  1907a4:	f9400669 	ldr	x9, [x19, #8]
+  1907a8:	eb09011f 	cmp	x8, x9
+  1907ac:	540015eb 	b.lt	190a68 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x404>  // b.tstop
+  1907b0:	f100075a 	subs	x26, x26, #0x1
+  1907b4:	910082b5 	add	x21, x21, #0x20
+  1907b8:	f9000a68 	str	x8, [x19, #16]
+  1907bc:	54fff7c1 	b.ne	1906b4 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x50>  // b.any
+  1907c0:	14000099 	b	190a24 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  1907c4:	9240f808 	and	x8, x0, #0x7fffffffffffffff
+  1907c8:	f940091a 	ldr	x26, [x8, #16]
+  1907cc:	b40012da 	cbz	x26, 190a24 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  1907d0:	9100c11b 	add	x27, x8, #0x30
+  1907d4:	5280015c 	mov	w28, #0xa                   	// #10
+  1907d8:	a97f0760 	ldp	x0, x1, [x27, #-16]
+  1907dc:	39400362 	ldrb	w2, [x27]
+  1907e0:	97ff64da 	bl	169b48 <static CIDR.AF.V6.formatCIDR(_: Swift.UInt128, prefixLength: CIDR.PrefixLength<CIDR.AF.V6>) -> Swift.String>
+  1907e4:	aa0103f5 	mov	x21, x1
+  1907e8:	aa0003e8 	mov	x8, x0
+  1907ec:	b7e01081 	tbnz	x1, #60, 1909fc <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x398>
+  1907f0:	b7e80195 	tbnz	x21, #61, 190820 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x1bc>
+  1907f4:	b6e010e8 	tbz	x8, #60, 190a10 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3ac>
+  1907f8:	9240eea9 	and	x9, x21, #0xfffffffffffffff
+  1907fc:	9240bd01 	and	x1, x8, #0xffffffffffff
+  190800:	91008120 	add	x0, x9, #0x20
+  190804:	b4000821 	cbz	x1, 190908 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a4>
+  190808:	8b000028 	add	x8, x1, x0
+  19080c:	f100001f 	cmp	x0, #0x0
+  190810:	aa1303f4 	mov	x20, x19
+  190814:	9a8803e1 	csel	x1, xzr, x8, eq	// eq = none
+  190818:	9400013e 	bl	190d10 <FoundationEssentials.Data._Representation.append(contentsOf: Swift.UnsafeRawBufferPointer) -> ()>
+  19081c:	1400003b 	b	190908 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a4>
+  190820:	d378eeb6 	ubfx	x22, x21, #56, #4
+  190824:	9240dea9 	and	x9, x21, #0xffffffffffffff
+  190828:	a900a7e8 	stp	x8, x9, [sp, #8]
+  19082c:	b40006f6 	cbz	x22, 190908 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a4>
+  190830:	f9400260 	ldr	x0, [x19]
+  190834:	97fafdfb 	bl	50020 <swift_isUniquelyReferenced_nonNull_native@plt>
+  190838:	f9400277 	ldr	x23, [x19]
+  19083c:	37000420 	tbnz	w0, #0, 1908c0 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x25c>
+  190840:	a940a274 	ldp	x20, x8, [x19, #8]
+  190844:	f9400ae9 	ldr	x9, [x23, #16]
+  190848:	b4000109 	cbz	x9, 190868 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x204>
+  19084c:	f94016ea 	ldr	x10, [x23, #40]
+  190850:	eb0a028a 	subs	x10, x20, x10
+  190854:	54001266 	b.vs	190aa0 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x43c>
+  190858:	8b090158 	add	x24, x10, x9
+  19085c:	eb140119 	subs	x25, x8, x20
+  190860:	540000a7 	b.vc	190874 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x210>
+  190864:	1400008e 	b	190a9c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x438>
+  190868:	aa1f03f8 	mov	x24, xzr
+  19086c:	eb140119 	subs	x25, x8, x20
+  190870:	54001166 	b.vs	190a9c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x438>
+  190874:	aa1f03e0 	mov	x0, xzr
+  190878:	97fb03d2 	bl	517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  19087c:	52800821 	mov	w1, #0x41                  	// #65
+  190880:	528000e2 	mov	w2, #0x7                   	// #7
+  190884:	97fafd8f 	bl	4fec0 <swift_allocObject@plt>
+  190888:	aa0003e6 	mov	x6, x0
+  19088c:	aa1803e0 	mov	x0, x24
+  190890:	aa1903e1 	mov	x1, x25
+  190894:	52800022 	mov	w2, #0x1                   	// #1
+  190898:	aa1f03e3 	mov	x3, xzr
+  19089c:	aa1f03e4 	mov	x4, xzr
+  1908a0:	aa1403e5 	mov	x5, x20
+  1908a4:	aa0603f4 	mov	x20, x6
+  1908a8:	97fb03ca 	bl	517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  1908ac:	aa0003f4 	mov	x20, x0
+  1908b0:	aa1703e0 	mov	x0, x23
+  1908b4:	97fafd5f 	bl	4fe30 <swift_release@plt>
+  1908b8:	f9000274 	str	x20, [x19]
+  1908bc:	aa1403f7 	mov	x23, x20
+  1908c0:	f9400a78 	ldr	x24, [x19, #16]
+  1908c4:	f94016e8 	ldr	x8, [x23, #40]
+  1908c8:	eb080308 	subs	x8, x24, x8
+  1908cc:	54000e06 	b.vs	190a8c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x428>
+  1908d0:	f9400ee9 	ldr	x9, [x23, #24]
+  1908d4:	eb080121 	subs	x1, x9, x8
+  1908d8:	54000dc6 	b.vs	190a90 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x42c>
+  1908dc:	910023e2 	add	x2, sp, #0x8
+  1908e0:	aa1803e0 	mov	x0, x24
+  1908e4:	aa1603e3 	mov	x3, x22
+  1908e8:	aa1703f4 	mov	x20, x23
+  1908ec:	97fb03bd 	bl	517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  1908f0:	ab160308 	adds	x8, x24, x22
+  1908f4:	54000d06 	b.vs	190a94 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x430>
+  1908f8:	f9400669 	ldr	x9, [x19, #8]
+  1908fc:	eb09011f 	cmp	x8, x9
+  190900:	54000ccb 	b.lt	190a98 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x434>  // b.tstop
+  190904:	f9000a68 	str	x8, [x19, #16]
+  190908:	aa1503e0 	mov	x0, x21
+  19090c:	97fafd75 	bl	4fee0 <swift_bridgeObjectRelease@plt>
+  190910:	f9400260 	ldr	x0, [x19]
+  190914:	390023fc 	strb	w28, [sp, #8]
+  190918:	97fafdc2 	bl	50020 <swift_isUniquelyReferenced_nonNull_native@plt>
+  19091c:	f9400275 	ldr	x21, [x19]
+  190920:	37000420 	tbnz	w0, #0, 1909a4 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x340>
+  190924:	a940a274 	ldp	x20, x8, [x19, #8]
+  190928:	f9400aa9 	ldr	x9, [x21, #16]
+  19092c:	b4000109 	cbz	x9, 19094c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2e8>
+  190930:	f94016aa 	ldr	x10, [x21, #40]
+  190934:	eb0a028a 	subs	x10, x20, x10
+  190938:	54000a86 	b.vs	190a88 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x424>
+  19093c:	8b090156 	add	x22, x10, x9
+  190940:	eb140117 	subs	x23, x8, x20
+  190944:	540000a7 	b.vc	190958 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2f4>
+  190948:	1400004f 	b	190a84 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x420>
+  19094c:	aa1f03f6 	mov	x22, xzr
+  190950:	eb140117 	subs	x23, x8, x20
+  190954:	54000986 	b.vs	190a84 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x420>
+  190958:	aa1f03e0 	mov	x0, xzr
+  19095c:	97fb0399 	bl	517c0 <type metadata accessor for FoundationEssentials.__DataStorage@plt>
+  190960:	52800821 	mov	w1, #0x41                  	// #65
+  190964:	528000e2 	mov	w2, #0x7                   	// #7
+  190968:	97fafd56 	bl	4fec0 <swift_allocObject@plt>
+  19096c:	aa0003e6 	mov	x6, x0
+  190970:	aa1603e0 	mov	x0, x22
+  190974:	aa1703e1 	mov	x1, x23
+  190978:	52800022 	mov	w2, #0x1                   	// #1
+  19097c:	aa1f03e3 	mov	x3, xzr
+  190980:	aa1f03e4 	mov	x4, xzr
+  190984:	aa1403e5 	mov	x5, x20
+  190988:	aa0603f4 	mov	x20, x6
+  19098c:	97fb0391 	bl	517d0 <FoundationEssentials.__DataStorage.init(bytes: Swift.UnsafeMutableRawPointer?, length: Swift.Int, copy: Swift.Bool, deallocator: ((Swift.UnsafeMutableRawPointer, Swift.Int) -> ())?, offset: Swift.Int) -> FoundationEssentials.__DataStorage@plt>
+  190990:	aa0003f4 	mov	x20, x0
+  190994:	aa1503e0 	mov	x0, x21
+  190998:	97fafd26 	bl	4fe30 <swift_release@plt>
+  19099c:	f9000274 	str	x20, [x19]
+  1909a0:	aa1403f5 	mov	x21, x20
+  1909a4:	f9400a76 	ldr	x22, [x19, #16]
+  1909a8:	f94016a8 	ldr	x8, [x21, #40]
+  1909ac:	eb0802c8 	subs	x8, x22, x8
+  1909b0:	540005e6 	b.vs	190a6c <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x408>
+  1909b4:	f9400ea9 	ldr	x9, [x21, #24]
+  1909b8:	eb080121 	subs	x1, x9, x8
+  1909bc:	540005a6 	b.vs	190a70 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x40c>
+  1909c0:	910023e2 	add	x2, sp, #0x8
+  1909c4:	aa1603e0 	mov	x0, x22
+  1909c8:	52800023 	mov	w3, #0x1                   	// #1
+  1909cc:	aa1503f4 	mov	x20, x21
+  1909d0:	97fb0384 	bl	517e0 <FoundationEssentials.__DataStorage.replaceBytes(in: (location: Swift.Int, length: Swift.Int), with: Swift.UnsafeRawPointer?, length: Swift.Int) -> ()@plt>
+  1909d4:	b10006c8 	adds	x8, x22, #0x1
+  1909d8:	540004e6 	b.vs	190a74 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x410>
+  1909dc:	f9400669 	ldr	x9, [x19, #8]
+  1909e0:	eb09011f 	cmp	x8, x9
+  1909e4:	540004ab 	b.lt	190a78 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x414>  // b.tstop
+  1909e8:	f100075a 	subs	x26, x26, #0x1
+  1909ec:	9100837b 	add	x27, x27, #0x20
+  1909f0:	f9000a68 	str	x8, [x19, #16]
+  1909f4:	54ffef21 	b.ne	1907d8 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x174>  // b.any
+  1909f8:	1400000b 	b	190a24 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x3c0>
+  1909fc:	aa0803e0 	mov	x0, x8
+  190a00:	aa1503e1 	mov	x1, x21
+  190a04:	aa1303f4 	mov	x20, x19
+  190a08:	94000028 	bl	190aa8 <generic specialization <Swift.String.UTF8View> of FoundationEssentials.Data.append<A where A: Swift.Sequence, A.Element == Swift.UInt8>(contentsOf: A) -> ()>
+  190a0c:	17ffffbf 	b	190908 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a4>
+  190a10:	aa0803e0 	mov	x0, x8
+  190a14:	aa1503e1 	mov	x1, x21
+  190a18:	97fafd6a 	bl	4ffc0 <Swift._StringObject.sharedUTF8.getter : Swift.UnsafeBufferPointer<Swift.UInt8>@plt>
+  190a1c:	b5ffef61 	cbnz	x1, 190808 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x1a4>
+  190a20:	17ffffba 	b	190908 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x2a4>
+  190a24:	f00009e8 	adrp	x8, 2cf000 <_DYNAMIC+0x1d8>
+  190a28:	f9425908 	ldr	x8, [x8, #1200]
+  190a2c:	f85f83a9 	ldur	x9, [x29, #-8]
+  190a30:	f9400108 	ldr	x8, [x8]
+  190a34:	eb09011f 	cmp	x8, x9
+  190a38:	54000361 	b.ne	190aa4 <generic specialization <CIDR.AF.V6> of static CIDRMergeCLI.OutputRenderer.(appendText in _7DBE5C09ED815B2851E09048716E8762)<A where A: CIDR.IPAddressFamily>(_: CIDRMergeCLI.FamilyMergeOutput<A>, to: inout FoundationEssentials.Data) -> ()+0x440>  // b.any
+  190a3c:	a9474ff4 	ldp	x20, x19, [sp, #112]
+  190a40:	a94657f6 	ldp	x22, x21, [sp, #96]
+  190a44:	a9455ff8 	ldp	x24, x23, [sp, #80]
+  190a48:	a94467fa 	ldp	x26, x25, [sp, #64]
+  190a4c:	a9436ffc 	ldp	x28, x27, [sp, #48]
+  190a50:	a9427bfd 	ldp	x29, x30, [sp, #32]
+  190a54:	910203ff 	add	sp, sp, #0x80
+  190a58:	d65f03c0 	ret
+  190a5c:	d4200020 	brk	#0x1
+  190a60:	d4200020 	brk	#0x1
+  190a64:	d4200020 	brk	#0x1
+  190a68:	d4200020 	brk	#0x1
+  190a6c:	d4200020 	brk	#0x1
+  190a70:	d4200020 	brk	#0x1
+  190a74:	d4200020 	brk	#0x1
+  190a78:	d4200020 	brk	#0x1
+  190a7c:	d4200020 	brk	#0x1
+  190a80:	d4200020 	brk	#0x1
+  190a84:	d4200020 	brk	#0x1
+  190a88:	d4200020 	brk	#0x1
+  190a8c:	d4200020 	brk	#0x1
+  190a90:	d4200020 	brk	#0x1
+  190a94:	d4200020 	brk	#0x1
+  190a98:	d4200020 	brk	#0x1
+  190a9c:	d4200020 	brk	#0x1
+  190aa0:	d4200020 	brk	#0x1
+  190aa4:	97faff77 	bl	50880 <__stack_chk_fail@plt>
+

@@ -81,22 +81,62 @@ enum OutputRenderer {
         )
     }
 
-    private static func appendText<Family: IPAddressFamily>(
-        _ output: FamilyMergeOutput<Family>,
-        to data: inout Data
-    ) {
-        switch output {
-        case .ranges(let ranges):
-            for range in ranges {
-                data.appendUTF8(range.description)
-                data.append(0x0A)
-            }
-        case .cidr(let networks):
-            for network in networks {
-                data.appendUTF8(network.description)
-                data.append(0x0A)
+    private static func appendText(_ output: FamilyMergeOutput<V4>, to data: inout Data) {
+        // Reuse enough storage for two maximum-width endpoints, "...", and a newline.
+        let capacity = 2 * CIDRUTF8Formatting.maximumIPv4AddressLiteralUTF8Count + 4
+        withUnsafeTemporaryAllocation(byteCount: capacity, alignment: 1) { buffer in
+            switch output {
+            case .ranges(let ranges):
+                for range in ranges {
+                    var count = range.lowerBound.writeAddressLiteralUTF8(into: buffer)
+                    buffer[count] = 0x2E
+                    buffer[count + 1] = 0x2E
+                    buffer[count + 2] = 0x2E
+                    count += 3
+                    count += range.upperBound.writeAddressLiteralUTF8(
+                        into: UnsafeMutableRawBufferPointer(rebasing: buffer[count...])
+                    )
+                    appendLine(buffer, count: count, to: &data)
+                }
+            case .cidr(let networks):
+                for network in networks {
+                    let count = network.writeCIDRNotationUTF8(into: buffer)
+                    appendLine(buffer, count: count, to: &data)
+                }
             }
         }
+    }
+
+    private static func appendText(_ output: FamilyMergeOutput<V6>, to data: inout Data) {
+        // Reuse enough storage for two maximum-width endpoints, "...", and a newline.
+        let capacity = 2 * CIDRUTF8Formatting.maximumCompressedIPv6AddressLiteralUTF8Count + 4
+        withUnsafeTemporaryAllocation(byteCount: capacity, alignment: 1) { buffer in
+            switch output {
+            case .ranges(let ranges):
+                for range in ranges {
+                    var count = range.lowerBound.writeCompressedAddressLiteralUTF8(into: buffer)
+                    buffer[count] = 0x2E
+                    buffer[count + 1] = 0x2E
+                    buffer[count + 2] = 0x2E
+                    count += 3
+                    count += range.upperBound.writeCompressedAddressLiteralUTF8(
+                        into: UnsafeMutableRawBufferPointer(rebasing: buffer[count...])
+                    )
+                    appendLine(buffer, count: count, to: &data)
+                }
+            case .cidr(let networks):
+                for network in networks {
+                    let count = network.writeCompressedCIDRNotationUTF8(into: buffer)
+                    appendLine(buffer, count: count, to: &data)
+                }
+            }
+        }
+    }
+
+    private static func appendLine(_ buffer: UnsafeMutableRawBufferPointer, count: Int, to data: inout Data) {
+        // Append only the initialized text and newline; the reusable suffix is unspecified.
+        buffer[count] = 0x0A
+        data.append(buffer.baseAddress!.assumingMemoryBound(to: UInt8.self), count: count + 1)
     }
 
     private static func entryDescription(_ count: Int) -> String {
@@ -127,10 +167,4 @@ private struct JSONOutput: Encodable {
     let representation: String
     let ipv4: [String]
     let ipv6: [String]
-}
-
-extension Data {
-    fileprivate mutating func appendUTF8(_ string: String) {
-        append(contentsOf: string.utf8)
-    }
 }
