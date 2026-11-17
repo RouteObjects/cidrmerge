@@ -1,0 +1,21 @@
+{
+  "label": "format",
+  "command": [
+    "/usr/bin/swift",
+    "format",
+    "lint",
+    "--configuration",
+    "$PLATFORM/final-validation/source/.swift-format.json",
+    "--recursive",
+    "--strict",
+    "$PLATFORM/final-validation/source/Package.swift",
+    "$PLATFORM/final-validation/source/Sources",
+    "$PLATFORM/final-validation/source/Tests",
+    "$PLATFORM/final-validation/source/Benchmarks"
+  ],
+  "cwd": "$PLATFORM/final-validation",
+  "started_at": "2026-11-17T17:33:19.247950+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-17T17:33:19.682054+00:00",
+  "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

@@ -1,0 +1,371 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T17:27:11.664006+00:00",
+  "host_free_bytes": 5633318678528,
+  "scratch_seeds": [
+    {
+      "target": "$EXPERIMENT/arm64/build/B",
+      "source": "$PRIOR_EXPERIMENT/arm64/build/B",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/build/P",
+      "source": "$PRIOR_EXPERIMENT/arm64/build/B",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/floor-6.2.4/build/P",
+      "source": "$PRIOR_EXPERIMENT/arm64/build/B",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    }
+  ],
+  "containers": [
+    {
+      "name": "cidrmerge-span-arm642-20261117T172402Z",
+      "image": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+      "id": "ae28c548f4dde898a0ae831e4903233b5516afdc68ba9cddc5542e50c0ff6f44",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "create",
+        "--name",
+        "cidrmerge-span-arm642-20261117T172402Z",
+        "--pull=never",
+        "--platform",
+        "linux/arm64",
+        "--network",
+        "none",
+        "--init",
+        "--workdir",
+        "$PLATFORM",
+        "--env",
+        "PYTHONHOME=$PLATFORM/python",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=bind,source=$EXPERIMENT/arm64,target=$PLATFORM",
+        "--mount",
+        "type=bind,source=$EXPERIMENT,target=$EXPERIMENT,readonly",
+        "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+        "sleep",
+        "infinity"
+      ],
+      "image_inspection": {
+        "Id": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+        "RepoTags": [
+          "swift:6.4.2-noble"
+        ],
+        "RepoDigests": [
+          "swift@sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-11T23:46:05.164002821Z",
+        "Config": {
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "SWIFT_SIGNING_KEY=52BB7E3DE28A71BE22EC05FFEF80A866B47A981F",
+            "SWIFT_PLATFORM=ubuntu24.04",
+            "SWIFT_BRANCH=swift-6.4.2-release",
+            "SWIFT_VERSION=swift-6.4.2-RELEASE",
+            "SWIFT_WEBROOT=https://download.swift.org"
+          ],
+          "Cmd": [
+            "/bin/bash"
+          ],
+          "Labels": {
+            "description": "Docker Container for the Swift programming language",
+            "maintainer": "Swift Infrastructure <swift-infrastructure@forums.swift.org>",
+            "org.opencontainers.image.version": "24.04"
+          }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 5489661918,
+        "RootFS": {
+          "Type": "layers",
+          "Layers": [
+            "sha256:d367816f799f33f5cbdd0a4cdb59a8c432f8d63bfcead9b880672c404202007a",
+            "sha256:bd26bc43fbd8f50d855fdb4554ee19214d7aa0d5285bb047fe5e95a7f0e57cf1",
+            "sha256:b564cb75ed5ed72771d9c2c6824bef2ace144327c1efd9b014c36a409472f9fe",
+            "sha256:8d644eeb8b5589faeb46cf2ad3463a6ba95fe268ea34e6209e044dc4384806a3"
+          ]
+        },
+        "Metadata": {
+          "LastTagTime": "2026-11-14T02:18:02.348915841Z"
+        },
+        "Descriptor": {
+          "mediaType": "application/vnd.oci.image.index.v1+json",
+          "digest": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+          "size": 2629
+        },
+        "Identity": {
+          "Pull": [
+            {
+              "Repository": "docker.io/library/swift"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cidrmerge-span-arm624-20261117T172402Z",
+      "image": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+      "id": "93cebcf7058f4d12a0d3a24392624e250ab2c5b9f0d8d8850bdf926a53bac0a1",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "create",
+        "--name",
+        "cidrmerge-span-arm624-20261117T172402Z",
+        "--pull=never",
+        "--platform",
+        "linux/arm64",
+        "--network",
+        "none",
+        "--init",
+        "--workdir",
+        "$PLATFORM",
+        "--env",
+        "PYTHONHOME=$PLATFORM/python",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=bind,source=$EXPERIMENT/arm64,target=$PLATFORM",
+        "--mount",
+        "type=bind,source=$EXPERIMENT,target=$EXPERIMENT,readonly",
+        "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+        "sleep",
+        "infinity"
+      ],
+      "image_inspection": {
+        "Id": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+        "RepoTags": [
+          "swift:6.2.4-noble"
+        ],
+        "RepoDigests": [
+          "swift@sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-26T23:47:44.663090098Z",
+        "Config": {
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "SWIFT_SIGNING_KEY=52BB7E3DE28A71BE22EC05FFEF80A866B47A981F",
+            "SWIFT_PLATFORM=ubuntu24.04",
+            "SWIFT_BRANCH=swift-6.2.4-release",
+            "SWIFT_VERSION=swift-6.2.4-RELEASE",
+            "SWIFT_WEBROOT=https://download.swift.org"
+          ],
+          "Cmd": [
+            "/bin/bash"
+          ],
+          "Labels": {
+            "description": "Docker Container for the Swift programming language",
+            "maintainer": "Swift Infrastructure <swift-infrastructure@forums.swift.org>",
+            "org.opencontainers.image.version": "24.04"
+          }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 5041041443,
+        "RootFS": {
+          "Type": "layers",
+          "Layers": [
+            "sha256:107ffca6dcd3fc87a7bed8c062f5ddc0d6a4b107205c82c0b49efdb7c1aff967",
+            "sha256:28986bae759af8dfe18472504b8291c8a969ba046831ee0b970abfb382d2388f",
+            "sha256:41cf0fc25df344258064d815f709c9cbdbda24b359bba0391687919ac27b9c99",
+            "sha256:cb390ad00a93723187d8aa973c3801c4d204b4ede7ee43716046f5b9cb0214ed"
+          ]
+        },
+        "Metadata": {
+          "LastTagTime": "2026-10-30T04:25:49.406458545Z"
+        },
+        "Descriptor": {
+          "mediaType": "application/vnd.oci.image.index.v1+json",
+          "digest": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+          "size": 2617
+        },
+        "Identity": {
+          "Pull": [
+            {
+              "Repository": "docker.io/library/swift"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "alternate_relocations": [
+    {
+      "file": "arm64/build/B/checkouts/swift-argument-parser/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "after": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-system/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "after": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-atomics/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "after": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-nio/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "after": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-crypto/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "after": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-asn1/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "after": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-collections/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "after": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/B/checkouts/swift-cidr/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "after": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-argument-parser/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "after": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-system/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "after": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-atomics/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "after": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-nio/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "after": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-crypto/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "after": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-asn1/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "after": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-collections/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "after": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/build/P/checkouts/swift-cidr/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "after": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-argument-parser/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "after": "../../../../repositories/swift-argument-parser-54a11a8d/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-system/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "after": "../../../../repositories/swift-system-5815d4b7/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-atomics/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "after": "../../../../repositories/swift-atomics-7429e549/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-nio/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "after": "../../../../repositories/swift-nio-a9bb6d62/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-crypto/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "after": "../../../../repositories/swift-crypto-7e0614ea/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-asn1/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "after": "../../../../repositories/swift-asn1-7065ad2c/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-collections/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "after": "../../../../repositories/swift-collections-9a58d5cf/objects\n",
+      "original_mode_restored": true
+    },
+    {
+      "file": "arm64/floor-6.2.4/build/P/checkouts/swift-cidr/.git/objects/info/alternates",
+      "before": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "after": "../../../../repositories/swift-cidr-a7456387/objects\n",
+      "original_mode_restored": true
+    }
+  ],
+  "python_source": "$PRIOR_EXPERIMENT/arm64/python",
+  "script_sha256": "808fb6346d78427c3c31f4d6a990df978f09e05e22fd7ed40fea4f2e07f92fb0",
+  "network_access": "disabled; cached pinned images; empty Docker config",
+  "finished_at": "2026-11-17T17:27:20.000781+00:00"
+}

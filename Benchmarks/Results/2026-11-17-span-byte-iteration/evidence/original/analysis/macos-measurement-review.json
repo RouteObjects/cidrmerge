@@ -1,0 +1,541 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T17:38:10.339714+00:00",
+  "platform": "macos",
+  "scope": "Metadata-only independent arithmetic and inventory reconciliation from passed phase audits. No new product execution, measurement, corpus hashing, or excluded observations.",
+  "audits": 3,
+  "phases": [
+    {
+      "kind": "throughput",
+      "phase": "primary",
+      "receipt": "macos/audits-01/throughput-primary/audit.json",
+      "measured_samples": 96,
+      "warmups": 16
+    },
+    {
+      "kind": "throughput",
+      "phase": "followup",
+      "receipt": "macos/audits-01/throughput-followup/audit.json",
+      "measured_samples": 12,
+      "warmups": 2
+    },
+    {
+      "kind": "stdin",
+      "phase": "primary",
+      "receipt": "macos/audits-01/stdin-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  ],
+  "totals": {
+    "primary": {
+      "measured_samples": 120,
+      "warmups": 20
+    },
+    "followup": {
+      "measured_samples": 12,
+      "warmups": 2
+    }
+  },
+  "measured_samples": 132,
+  "warmups": 22,
+  "row_count": 11,
+  "rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.158532271,
+          "cpu_seconds": 0.14,
+          "peak_rss_bytes": 58974208.0
+        },
+        "P": {
+          "elapsed_seconds": 0.1545897085,
+          "cpu_seconds": 0.14,
+          "peak_rss_bytes": 58826752.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.8312093934289018,
+        "cpu": 0.0,
+        "rss": -0.11109182634453374
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -4.4236270674457785,
+          -0.36388462620334794
+        ],
+        "cpu": [
+          -6.666666666666677,
+          0.0
+        ],
+        "rss": [
+          -1.19677150013916,
+          0.16764459346185756
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.1747494165,
+          "cpu_seconds": 0.16,
+          "peak_rss_bytes": 60170240.0
+        },
+        "P": {
+          "elapsed_seconds": 0.1700084375,
+          "cpu_seconds": 0.16,
+          "peak_rss_bytes": 60162048.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.9117345848442056,
+        "cpu": 0.0,
+        "rss": -0.027218290691344293
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.3707621430246304,
+          -1.4734826967468528
+        ],
+        "cpu": [
+          -5.882352941176472,
+          0.0
+        ],
+        "rss": [
+          -0.16344320348679053,
+          0.4927456884752157
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.28850172900000004,
+          "cpu_seconds": 0.27,
+          "peak_rss_bytes": 153976832.0
+        },
+        "P": {
+          "elapsed_seconds": 0.284659854,
+          "cpu_seconds": 0.27,
+          "peak_rss_bytes": 153886720.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.2425513093825344,
+        "cpu": -1.785714285714285,
+        "rss": -0.05852309001915246
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.945017389870081,
+          -0.492873442600017
+        ],
+        "cpu": [
+          -3.703703703703709,
+          0.0
+        ],
+        "rss": [
+          -0.1700861060912051,
+          0.42762454564893027
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.35930181299999997,
+          "cpu_seconds": 0.34500000000000003,
+          "peak_rss_bytes": 155222016.0
+        },
+        "P": {
+          "elapsed_seconds": 0.3509704585,
+          "cpu_seconds": 0.33,
+          "peak_rss_bytes": 155189248.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.04577138737303,
+        "cpu": -4.327731092436976,
+        "rss": -0.015832805573151587
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -16.548437596025433,
+          10.003817752100709
+        ],
+        "cpu": [
+          -8.333333333333325,
+          0.0
+        ],
+        "rss": [
+          -0.10547410610695085,
+          0.4666949512091678
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.276187687,
+          "cpu_seconds": 0.25,
+          "peak_rss_bytes": 107790336.0
+        },
+        "P": {
+          "elapsed_seconds": 0.268935375,
+          "cpu_seconds": 0.25,
+          "peak_rss_bytes": 108240896.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.353845835832108,
+        "cpu": 0.0,
+        "rss": 7.960165331333258e-05
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -14.066718769600161,
+          4.192121489877154
+        ],
+        "cpu": [
+          -7.407407407407418,
+          4.0000000000000036
+        ],
+        "rss": [
+          -1.0647870425914863,
+          2.146580803434528
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.3247501665,
+          "cpu_seconds": 0.3,
+          "peak_rss_bytes": 109625344.0
+        },
+        "P": {
+          "elapsed_seconds": 0.31829589550000004,
+          "cpu_seconds": 0.29000000000000004,
+          "peak_rss_bytes": 109273088.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.6213281067416763,
+        "cpu": -3.3333333333333215,
+        "rss": -0.5841768889555676
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -2.9809390052009,
+          0.6936441837487317
+        ],
+        "cpu": [
+          -6.45161290322579,
+          2.220446049250313e-14
+        ],
+        "rss": [
+          -1.5131286159323576,
+          0.7528986598403842
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 2.849010687,
+          "cpu_seconds": 2.775,
+          "peak_rss_bytes": 121847808.0
+        },
+        "P": {
+          "elapsed_seconds": 2.8119658335,
+          "cpu_seconds": 2.77,
+          "peak_rss_bytes": 121683968.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -0.9549403591126104,
+        "cpu": -0.5382836587872475,
+        "rss": -0.2630285237780805
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.12454064314992,
+          1.2879249708968699
+        ],
+        "cpu": [
+          -1.0714285714285676,
+          0.3610108303248927
+        ],
+        "rss": [
+          -0.7866666666666688,
+          0.14775016789791984
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 2.952211167,
+          "cpu_seconds": 2.905,
+          "peak_rss_bytes": 124051456.0
+        },
+        "P": {
+          "elapsed_seconds": 2.9426940625,
+          "cpu_seconds": 2.8949999999999996,
+          "peak_rss_bytes": 123011072.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 0.27482742336659705,
+        "cpu": -0.17301038062283447,
+        "rss": -0.7197965562457054
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.1368621932704177,
+          2.934465841847511
+        ],
+        "cpu": [
+          -1.7006802721088565,
+          0.0
+        ],
+        "rss": [
+          -1.5443505807814173,
+          -0.03994141925176553
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-ipv6-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.35978727050000003,
+          "cpu_seconds": 0.34,
+          "peak_rss_bytes": 155189248.0
+        },
+        "P": {
+          "elapsed_seconds": 0.3480391045,
+          "cpu_seconds": 0.33,
+          "peak_rss_bytes": 155181056.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -3.4450476305649236,
+        "cpu": -2.941176470588236,
+        "rss": -0.005278158978150316
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -12.861450141023735,
+          3.5846750331446797
+        ],
+        "cpu": [
+          -5.714285714285716,
+          -2.941176470588236
+        ],
+        "rss": [
+          -0.010559662090814381,
+          0.021121554546410515
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.158199771,
+          "cpu_seconds": 0.14,
+          "peak_rss_bytes": 58933248.0
+        },
+        "P": {
+          "elapsed_seconds": 0.1522809585,
+          "cpu_seconds": 0.14,
+          "peak_rss_bytes": 58875904.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -3.641796620095467,
+        "cpu": -3.3333333333333384,
+        "rss": -0.08340283569641116
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -6.391179716299844,
+          0.861512069919268
+        ],
+        "cpu": [
+          -7.142857142857151,
+          0.0
+        ],
+        "rss": [
+          -1.2788434806783378,
+          1.1539544047284078
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/stdin-primary/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.3209655415,
+          "cpu_seconds": 0.3,
+          "peak_rss_bytes": 109264896.0
+        },
+        "P": {
+          "elapsed_seconds": 0.313962,
+          "cpu_seconds": 0.29000000000000004,
+          "peak_rss_bytes": 108724224.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.505355417399735,
+        "cpu": -3.3333333333333215,
+        "rss": -0.658536512668928
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -2.709771251419313,
+          -1.3852158575054174
+        ],
+        "cpu": [
+          -3.3333333333333215,
+          -3.3333333333333215
+        ],
+        "rss": [
+          -1.435192106443417,
+          0.3612825530633801
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "macos/audits-01/stdin-primary/audit.json"
+    }
+  ],
+  "numeric_checks": 264,
+  "primary_trigger_configs": {
+    "throughput": [
+      "text-ipv6-canonical-stats"
+    ],
+    "stdin": []
+  },
+  "repeated_primary_followup_median_regressions_over5_percent": [],
+  "text_primary_elapsed_median_range_percent": [
+    -2.9117345848442056,
+    0.27482742336659705
+  ],
+  "text_primary_rss_median_range_percent": [
+    -0.7197965562457054,
+    7.960165331333258e-05
+  ],
+  "limitations": [
+    "Paired min/max ranges are observed extrema, not confidence intervals.",
+    "Ratios of absolute medians may differ from paired median changes.",
+    "Fixed primary-triggered followups are separate and nonrecursive.",
+    "Small/noisy changes require cautious interpretation; absence of a repeated median regression is not proof of equivalence.",
+    "No startup/Searchbot timing or static shipping-artifact comparison was performed."
+  ]
+}

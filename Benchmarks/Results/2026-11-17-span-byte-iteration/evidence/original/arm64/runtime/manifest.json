@@ -1,0 +1,486 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T17:32:47.892302+00:00",
+  "artifacts": {
+    "B": {
+      "binary": "bin/B",
+      "binary_sha256": "e9f7d130382c0bd5bb4c7b339e3506a63ea6f228ccc68633b7b27adb2938a5c4",
+      "binary_bytes": 17306240,
+      "stripped_binary": "bin/stripped/B",
+      "stripped_sha256": "bffd5294bf72a4caad1b43f5142f4b77676978b35d4a96ff3e44d8e113e57a30",
+      "stripped_bytes": 3322808,
+      "DT_NEEDED": [
+        "libswiftCore.so",
+        "libswiftObservation.so",
+        "libswift_Concurrency.so",
+        "libswift_StringProcessing.so",
+        "libswift_RegexParser.so",
+        "libswiftGlibc.so",
+        "libBlocksRuntime.so",
+        "libdispatch.so",
+        "libswiftDispatch.so",
+        "libFoundation.so",
+        "libFoundationEssentials.so",
+        "libFoundationInternationalization.so",
+        "libm.so.6",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ldd_original": "\tlinux-vdso.so.1 (0x0000ffff924fc000)\n\tlibswiftCore.so => /usr/lib/swift/linux/libswiftCore.so (0x0000ffff91aa0000)\n\tlibswiftObservation.so => /usr/lib/swift/linux/libswiftObservation.so (0x0000ffff91a60000)\n\tlibswift_Concurrency.so => /usr/lib/swift/linux/libswift_Concurrency.so (0x0000ffff919b0000)\n\tlibswift_StringProcessing.so => /usr/lib/swift/linux/libswift_StringProcessing.so (0x0000ffff918e0000)\n\tlibswift_RegexParser.so => /usr/lib/swift/linux/libswift_RegexParser.so (0x0000ffff917d0000)\n\tlibswiftGlibc.so => /usr/lib/swift/linux/libswiftGlibc.so (0x0000ffff917a0000)\n\tlibBlocksRuntime.so => /usr/lib/swift/linux/libBlocksRuntime.so (0x0000ffff91770000)\n\tlibdispatch.so => /usr/lib/swift/linux/libdispatch.so (0x0000ffff916f0000)\n\tlibswiftDispatch.so => /usr/lib/swift/linux/libswiftDispatch.so (0x0000ffff916a0000)\n\tlibFoundation.so => /usr/lib/swift/linux/libFoundation.so (0x0000ffff91090000)\n\tlibFoundationEssentials.so => /usr/lib/swift/linux/libFoundationEssentials.so (0x0000ffff90a30000)\n\tlibFoundationInternationalization.so => /usr/lib/swift/linux/libFoundationInternationalization.so (0x0000ffff90850000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffff907a0000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffff90510000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffff904d0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffff90310000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffff924c0000)\n\tlibswift_Builtin_float.so => /usr/lib/swift/linux/libswift_Builtin_float.so (0x0000ffff902e0000)\n\tlib_FoundationICU.so => /usr/lib/swift/linux/lib_FoundationICU.so (0x0000ffff8dd50000)\n\tlibswiftSynchronization.so => /usr/lib/swift/linux/libswiftSynchronization.so (0x0000ffff8dd20000)\n",
+      "linked_files": [
+        {
+          "path": "/usr/lib/swift/linux/libswiftCore.so",
+          "resolved": "/usr/lib/swift/linux/libswiftCore.so",
+          "sha256": "247baf3da05c8a44b7fdcbdcc841ff6c2f2747392a7524ee00e2ecd667645f55",
+          "bytes": 9936096,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftCore.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftObservation.so",
+          "resolved": "/usr/lib/swift/linux/libswiftObservation.so",
+          "sha256": "11b06216d1cbbdf885953a4f9100c9732737b14eafae8a8e254fd411fcc62cfc",
+          "bytes": 258320,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftObservation.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_Concurrency.so",
+          "resolved": "/usr/lib/swift/linux/libswift_Concurrency.so",
+          "sha256": "a270ac90db8104df6d7d78cff55786a25c92478be95195d8a3147a6dfa59f3ac",
+          "bytes": 1079328,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_Concurrency.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_StringProcessing.so",
+          "resolved": "/usr/lib/swift/linux/libswift_StringProcessing.so",
+          "sha256": "24946bad0323a6745b993ba2aa588f6ccdee4daf41c7b1925eaf74ebd300dc0d",
+          "bytes": 1197880,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_StringProcessing.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_RegexParser.so",
+          "resolved": "/usr/lib/swift/linux/libswift_RegexParser.so",
+          "sha256": "81f9f739ccccd313d973e6c378bef2c9de3b1c94665eb14e7fb8bb78ef98b8ff",
+          "bytes": 1606384,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_RegexParser.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftGlibc.so",
+          "resolved": "/usr/lib/swift/linux/libswiftGlibc.so",
+          "sha256": "5f712b01fdacf5085b0c8add8ccef8cee12b51b1fe178b70148f379ed8b2c9c2",
+          "bytes": 105648,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftGlibc.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libBlocksRuntime.so",
+          "resolved": "/usr/lib/swift/linux/libBlocksRuntime.so",
+          "sha256": "179cf0e89b600085f33daf90af4166e7d7120df35ccda34afb5d7a104d557cb4",
+          "bytes": 71056,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libBlocksRuntime.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libdispatch.so",
+          "resolved": "/usr/lib/swift/linux/libdispatch.so",
+          "sha256": "bfe328f3fbdc28fbadd4468d65039f46a6727c9080135eff2f550d19adf876c3",
+          "bytes": 465728,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libdispatch.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftDispatch.so",
+          "resolved": "/usr/lib/swift/linux/libswiftDispatch.so",
+          "sha256": "b0aead6e3694016758d3b262152b6f9107a70fbeb9a7caf715f0b2165d0cbba1",
+          "bytes": 375984,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftDispatch.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundation.so",
+          "resolved": "/usr/lib/swift/linux/libFoundation.so",
+          "sha256": "ae893bf49eb4fc6c81fad8dc3aa7618bfbdfa0a255bb0174de61ccc14037dd6d",
+          "bytes": 8988608,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundation.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundationEssentials.so",
+          "resolved": "/usr/lib/swift/linux/libFoundationEssentials.so",
+          "sha256": "7241b671b6af1ba05f54a9625e62a33282e5a1b155eaed19eb621a200f8315d2",
+          "bytes": 10507440,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundationEssentials.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundationInternationalization.so",
+          "resolved": "/usr/lib/swift/linux/libFoundationInternationalization.so",
+          "sha256": "85ce4d0844be0c6350d43810378ff08741b08f7dbaa154f87792a657beb82206",
+          "bytes": 3830232,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundationInternationalization.so"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libm.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libm.so.6",
+          "sha256": "5e0391562de36de323fb9cb0f2c1b6bd6d034c840b1dac018499f5fe4ded1b4a",
+          "bytes": 591800,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libm.so.6"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libstdc++.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+          "sha256": "6e3112d35cfc86db7ee85b27e1746f67408e2837ff8628b46386c3eabd5682a4",
+          "bytes": 2633224,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libstdc++.so.6"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libgcc_s.so.1",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+          "sha256": "f2d3ad2bf0b61f6bc944cc37d7b6ab7f88d2582b41ff989ca164803f56cc5f20",
+          "bytes": 133696,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libgcc_s.so.1"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libc.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libc.so.6",
+          "sha256": "0f1905dc27dbc6715875c70527bc8da846a10084c9c483e9d8ff76dce8d69d0e",
+          "bytes": 1722920,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libc.so.6"
+        },
+        {
+          "path": "/lib/ld-linux-aarch64.so.1",
+          "resolved": "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+          "sha256": "390027e5f45f236bd1838bc54bf464c5ff01d260ab9f8b415ea8276641bce505",
+          "bytes": 203968,
+          "preserved_copy": "runtime/linked-files/lib/ld-linux-aarch64.so.1"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_Builtin_float.so",
+          "resolved": "/usr/lib/swift/linux/libswift_Builtin_float.so",
+          "sha256": "1f7521821bd5372e24b6d28f56d9efde1be4485cf925afb1ae6b1156b8756252",
+          "bytes": 74056,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_Builtin_float.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/lib_FoundationICU.so",
+          "resolved": "/usr/lib/swift/linux/lib_FoundationICU.so",
+          "sha256": "1c381afa3b3cb1ef1bcf50a3d37ff6f37d69881a35911d3f868a9b230fd70d7b",
+          "bytes": 40616272,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/lib_FoundationICU.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftSynchronization.so",
+          "resolved": "/usr/lib/swift/linux/libswiftSynchronization.so",
+          "sha256": "2d006a877fe4e26f96b960f2c010872d1f889e1dde59878dc633d68e3debd254",
+          "bytes": 136936,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftSynchronization.so"
+        }
+      ],
+      "linked_file_byte_sum": 84535576,
+      "ldd_preserved_runtime": "\tlinux-vdso.so.1 (0x0000ffffab55c000)\n\tlibswiftCore.so => $PLATFORM/runtime/lib/libswiftCore.so (0x0000ffffaaaf0000)\n\tlibswiftObservation.so => $PLATFORM/runtime/lib/libswiftObservation.so (0x0000ffffaaab0000)\n\tlibswift_Concurrency.so => $PLATFORM/runtime/lib/libswift_Concurrency.so (0x0000ffffaaa00000)\n\tlibswift_StringProcessing.so => $PLATFORM/runtime/lib/libswift_StringProcessing.so (0x0000ffffaa930000)\n\tlibswift_RegexParser.so => $PLATFORM/runtime/lib/libswift_RegexParser.so (0x0000ffffaa820000)\n\tlibswiftGlibc.so => $PLATFORM/runtime/lib/libswiftGlibc.so (0x0000ffffaa7f0000)\n\tlibBlocksRuntime.so => $PLATFORM/runtime/lib/libBlocksRuntime.so (0x0000ffffaa7c0000)\n\tlibdispatch.so => $PLATFORM/runtime/lib/libdispatch.so (0x0000ffffaa740000)\n\tlibswiftDispatch.so => $PLATFORM/runtime/lib/libswiftDispatch.so (0x0000ffffaa6f0000)\n\tlibFoundation.so => $PLATFORM/runtime/lib/libFoundation.so (0x0000ffffaa0e0000)\n\tlibFoundationEssentials.so => $PLATFORM/runtime/lib/libFoundationEssentials.so (0x0000ffffa9a80000)\n\tlibFoundationInternationalization.so => $PLATFORM/runtime/lib/libFoundationInternationalization.so (0x0000ffffa98a0000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffa97f0000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffa9560000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffa9520000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffa9360000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffab510000)\n\tlibswift_Builtin_float.so => $PLATFORM/runtime/lib/libswift_Builtin_float.so (0x0000ffffa9330000)\n\tlib_FoundationICU.so => $PLATFORM/runtime/lib/lib_FoundationICU.so (0x0000ffffa6da0000)\n\tlibswiftSynchronization.so => $PLATFORM/runtime/lib/libswiftSynchronization.so (0x0000ffffa6d70000)\n",
+      "version_with_preserved_runtime": "0.4.1\n"
+    },
+    "P": {
+      "binary": "bin/P",
+      "binary_sha256": "385637e1020431eee95363b1cb7b00d5cae4650ea18efa493907f8aa8a55d35c",
+      "binary_bytes": 17305344,
+      "stripped_binary": "bin/stripped/P",
+      "stripped_sha256": "0208142727d0783d09672680e183e2976343cf6ac145d40d9e5b290bbcd9bd91",
+      "stripped_bytes": 3322808,
+      "DT_NEEDED": [
+        "libswiftCore.so",
+        "libswiftObservation.so",
+        "libswift_Concurrency.so",
+        "libswift_StringProcessing.so",
+        "libswift_RegexParser.so",
+        "libswiftGlibc.so",
+        "libBlocksRuntime.so",
+        "libdispatch.so",
+        "libswiftDispatch.so",
+        "libFoundation.so",
+        "libFoundationEssentials.so",
+        "libFoundationInternationalization.so",
+        "libm.so.6",
+        "libstdc++.so.6",
+        "libgcc_s.so.1",
+        "libc.so.6",
+        "ld-linux-aarch64.so.1"
+      ],
+      "ldd_original": "\tlinux-vdso.so.1 (0x0000ffffab22c000)\n\tlibswiftCore.so => /usr/lib/swift/linux/libswiftCore.so (0x0000ffffaa7d0000)\n\tlibswiftObservation.so => /usr/lib/swift/linux/libswiftObservation.so (0x0000ffffaa790000)\n\tlibswift_Concurrency.so => /usr/lib/swift/linux/libswift_Concurrency.so (0x0000ffffaa6e0000)\n\tlibswift_StringProcessing.so => /usr/lib/swift/linux/libswift_StringProcessing.so (0x0000ffffaa610000)\n\tlibswift_RegexParser.so => /usr/lib/swift/linux/libswift_RegexParser.so (0x0000ffffaa500000)\n\tlibswiftGlibc.so => /usr/lib/swift/linux/libswiftGlibc.so (0x0000ffffaa4d0000)\n\tlibBlocksRuntime.so => /usr/lib/swift/linux/libBlocksRuntime.so (0x0000ffffaa4a0000)\n\tlibdispatch.so => /usr/lib/swift/linux/libdispatch.so (0x0000ffffaa420000)\n\tlibswiftDispatch.so => /usr/lib/swift/linux/libswiftDispatch.so (0x0000ffffaa3d0000)\n\tlibFoundation.so => /usr/lib/swift/linux/libFoundation.so (0x0000ffffa9dc0000)\n\tlibFoundationEssentials.so => /usr/lib/swift/linux/libFoundationEssentials.so (0x0000ffffa9760000)\n\tlibFoundationInternationalization.so => /usr/lib/swift/linux/libFoundationInternationalization.so (0x0000ffffa9580000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffa94d0000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffa9240000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffa9200000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffa9040000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffab1f0000)\n\tlibswift_Builtin_float.so => /usr/lib/swift/linux/libswift_Builtin_float.so (0x0000ffffa9010000)\n\tlib_FoundationICU.so => /usr/lib/swift/linux/lib_FoundationICU.so (0x0000ffffa6a80000)\n\tlibswiftSynchronization.so => /usr/lib/swift/linux/libswiftSynchronization.so (0x0000ffffa6a50000)\n",
+      "linked_files": [
+        {
+          "path": "/usr/lib/swift/linux/libswiftCore.so",
+          "resolved": "/usr/lib/swift/linux/libswiftCore.so",
+          "sha256": "247baf3da05c8a44b7fdcbdcc841ff6c2f2747392a7524ee00e2ecd667645f55",
+          "bytes": 9936096,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftCore.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftObservation.so",
+          "resolved": "/usr/lib/swift/linux/libswiftObservation.so",
+          "sha256": "11b06216d1cbbdf885953a4f9100c9732737b14eafae8a8e254fd411fcc62cfc",
+          "bytes": 258320,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftObservation.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_Concurrency.so",
+          "resolved": "/usr/lib/swift/linux/libswift_Concurrency.so",
+          "sha256": "a270ac90db8104df6d7d78cff55786a25c92478be95195d8a3147a6dfa59f3ac",
+          "bytes": 1079328,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_Concurrency.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_StringProcessing.so",
+          "resolved": "/usr/lib/swift/linux/libswift_StringProcessing.so",
+          "sha256": "24946bad0323a6745b993ba2aa588f6ccdee4daf41c7b1925eaf74ebd300dc0d",
+          "bytes": 1197880,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_StringProcessing.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_RegexParser.so",
+          "resolved": "/usr/lib/swift/linux/libswift_RegexParser.so",
+          "sha256": "81f9f739ccccd313d973e6c378bef2c9de3b1c94665eb14e7fb8bb78ef98b8ff",
+          "bytes": 1606384,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_RegexParser.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftGlibc.so",
+          "resolved": "/usr/lib/swift/linux/libswiftGlibc.so",
+          "sha256": "5f712b01fdacf5085b0c8add8ccef8cee12b51b1fe178b70148f379ed8b2c9c2",
+          "bytes": 105648,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftGlibc.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libBlocksRuntime.so",
+          "resolved": "/usr/lib/swift/linux/libBlocksRuntime.so",
+          "sha256": "179cf0e89b600085f33daf90af4166e7d7120df35ccda34afb5d7a104d557cb4",
+          "bytes": 71056,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libBlocksRuntime.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libdispatch.so",
+          "resolved": "/usr/lib/swift/linux/libdispatch.so",
+          "sha256": "bfe328f3fbdc28fbadd4468d65039f46a6727c9080135eff2f550d19adf876c3",
+          "bytes": 465728,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libdispatch.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftDispatch.so",
+          "resolved": "/usr/lib/swift/linux/libswiftDispatch.so",
+          "sha256": "b0aead6e3694016758d3b262152b6f9107a70fbeb9a7caf715f0b2165d0cbba1",
+          "bytes": 375984,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftDispatch.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundation.so",
+          "resolved": "/usr/lib/swift/linux/libFoundation.so",
+          "sha256": "ae893bf49eb4fc6c81fad8dc3aa7618bfbdfa0a255bb0174de61ccc14037dd6d",
+          "bytes": 8988608,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundation.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundationEssentials.so",
+          "resolved": "/usr/lib/swift/linux/libFoundationEssentials.so",
+          "sha256": "7241b671b6af1ba05f54a9625e62a33282e5a1b155eaed19eb621a200f8315d2",
+          "bytes": 10507440,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundationEssentials.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libFoundationInternationalization.so",
+          "resolved": "/usr/lib/swift/linux/libFoundationInternationalization.so",
+          "sha256": "85ce4d0844be0c6350d43810378ff08741b08f7dbaa154f87792a657beb82206",
+          "bytes": 3830232,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libFoundationInternationalization.so"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libm.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libm.so.6",
+          "sha256": "5e0391562de36de323fb9cb0f2c1b6bd6d034c840b1dac018499f5fe4ded1b4a",
+          "bytes": 591800,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libm.so.6"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libstdc++.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+          "sha256": "6e3112d35cfc86db7ee85b27e1746f67408e2837ff8628b46386c3eabd5682a4",
+          "bytes": 2633224,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libstdc++.so.6"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libgcc_s.so.1",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+          "sha256": "f2d3ad2bf0b61f6bc944cc37d7b6ab7f88d2582b41ff989ca164803f56cc5f20",
+          "bytes": 133696,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libgcc_s.so.1"
+        },
+        {
+          "path": "/lib/aarch64-linux-gnu/libc.so.6",
+          "resolved": "/usr/lib/aarch64-linux-gnu/libc.so.6",
+          "sha256": "0f1905dc27dbc6715875c70527bc8da846a10084c9c483e9d8ff76dce8d69d0e",
+          "bytes": 1722920,
+          "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libc.so.6"
+        },
+        {
+          "path": "/lib/ld-linux-aarch64.so.1",
+          "resolved": "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+          "sha256": "390027e5f45f236bd1838bc54bf464c5ff01d260ab9f8b415ea8276641bce505",
+          "bytes": 203968,
+          "preserved_copy": "runtime/linked-files/lib/ld-linux-aarch64.so.1"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswift_Builtin_float.so",
+          "resolved": "/usr/lib/swift/linux/libswift_Builtin_float.so",
+          "sha256": "1f7521821bd5372e24b6d28f56d9efde1be4485cf925afb1ae6b1156b8756252",
+          "bytes": 74056,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswift_Builtin_float.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/lib_FoundationICU.so",
+          "resolved": "/usr/lib/swift/linux/lib_FoundationICU.so",
+          "sha256": "1c381afa3b3cb1ef1bcf50a3d37ff6f37d69881a35911d3f868a9b230fd70d7b",
+          "bytes": 40616272,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/lib_FoundationICU.so"
+        },
+        {
+          "path": "/usr/lib/swift/linux/libswiftSynchronization.so",
+          "resolved": "/usr/lib/swift/linux/libswiftSynchronization.so",
+          "sha256": "2d006a877fe4e26f96b960f2c010872d1f889e1dde59878dc633d68e3debd254",
+          "bytes": 136936,
+          "preserved_copy": "runtime/linked-files/usr/lib/swift/linux/libswiftSynchronization.so"
+        }
+      ],
+      "linked_file_byte_sum": 84535576,
+      "ldd_preserved_runtime": "\tlinux-vdso.so.1 (0x0000ffffa3a6c000)\n\tlibswiftCore.so => $PLATFORM/runtime/lib/libswiftCore.so (0x0000ffffa3010000)\n\tlibswiftObservation.so => $PLATFORM/runtime/lib/libswiftObservation.so (0x0000ffffa2fd0000)\n\tlibswift_Concurrency.so => $PLATFORM/runtime/lib/libswift_Concurrency.so (0x0000ffffa2f20000)\n\tlibswift_StringProcessing.so => $PLATFORM/runtime/lib/libswift_StringProcessing.so (0x0000ffffa2e50000)\n\tlibswift_RegexParser.so => $PLATFORM/runtime/lib/libswift_RegexParser.so (0x0000ffffa2d40000)\n\tlibswiftGlibc.so => $PLATFORM/runtime/lib/libswiftGlibc.so (0x0000ffffa2d10000)\n\tlibBlocksRuntime.so => $PLATFORM/runtime/lib/libBlocksRuntime.so (0x0000ffffa2ce0000)\n\tlibdispatch.so => $PLATFORM/runtime/lib/libdispatch.so (0x0000ffffa2c60000)\n\tlibswiftDispatch.so => $PLATFORM/runtime/lib/libswiftDispatch.so (0x0000ffffa2c10000)\n\tlibFoundation.so => $PLATFORM/runtime/lib/libFoundation.so (0x0000ffffa2600000)\n\tlibFoundationEssentials.so => $PLATFORM/runtime/lib/libFoundationEssentials.so (0x0000ffffa1fa0000)\n\tlibFoundationInternationalization.so => $PLATFORM/runtime/lib/libFoundationInternationalization.so (0x0000ffffa1dc0000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffa1d10000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffa1a80000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffa1a40000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffa1880000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffa3a30000)\n\tlibswift_Builtin_float.so => $PLATFORM/runtime/lib/libswift_Builtin_float.so (0x0000ffffa1850000)\n\tlib_FoundationICU.so => $PLATFORM/runtime/lib/lib_FoundationICU.so (0x0000ffff9f2c0000)\n\tlibswiftSynchronization.so => $PLATFORM/runtime/lib/libswiftSynchronization.so (0x0000ffff9f290000)\n",
+      "version_with_preserved_runtime": "0.4.1\n"
+    }
+  },
+  "swift_copies": {
+    "libswiftCore.so": {
+      "original_path": "/usr/lib/swift/linux/libswiftCore.so",
+      "path": "runtime/lib/libswiftCore.so",
+      "sha256": "247baf3da05c8a44b7fdcbdcc841ff6c2f2747392a7524ee00e2ecd667645f55",
+      "bytes": 9936096
+    },
+    "libswiftObservation.so": {
+      "original_path": "/usr/lib/swift/linux/libswiftObservation.so",
+      "path": "runtime/lib/libswiftObservation.so",
+      "sha256": "11b06216d1cbbdf885953a4f9100c9732737b14eafae8a8e254fd411fcc62cfc",
+      "bytes": 258320
+    },
+    "libswift_Concurrency.so": {
+      "original_path": "/usr/lib/swift/linux/libswift_Concurrency.so",
+      "path": "runtime/lib/libswift_Concurrency.so",
+      "sha256": "a270ac90db8104df6d7d78cff55786a25c92478be95195d8a3147a6dfa59f3ac",
+      "bytes": 1079328
+    },
+    "libswift_StringProcessing.so": {
+      "original_path": "/usr/lib/swift/linux/libswift_StringProcessing.so",
+      "path": "runtime/lib/libswift_StringProcessing.so",
+      "sha256": "24946bad0323a6745b993ba2aa588f6ccdee4daf41c7b1925eaf74ebd300dc0d",
+      "bytes": 1197880
+    },
+    "libswift_RegexParser.so": {
+      "original_path": "/usr/lib/swift/linux/libswift_RegexParser.so",
+      "path": "runtime/lib/libswift_RegexParser.so",
+      "sha256": "81f9f739ccccd313d973e6c378bef2c9de3b1c94665eb14e7fb8bb78ef98b8ff",
+      "bytes": 1606384
+    },
+    "libswiftGlibc.so": {
+      "original_path": "/usr/lib/swift/linux/libswiftGlibc.so",
+      "path": "runtime/lib/libswiftGlibc.so",
+      "sha256": "5f712b01fdacf5085b0c8add8ccef8cee12b51b1fe178b70148f379ed8b2c9c2",
+      "bytes": 105648
+    },
+    "libBlocksRuntime.so": {
+      "original_path": "/usr/lib/swift/linux/libBlocksRuntime.so",
+      "path": "runtime/lib/libBlocksRuntime.so",
+      "sha256": "179cf0e89b600085f33daf90af4166e7d7120df35ccda34afb5d7a104d557cb4",
+      "bytes": 71056
+    },
+    "libdispatch.so": {
+      "original_path": "/usr/lib/swift/linux/libdispatch.so",
+      "path": "runtime/lib/libdispatch.so",
+      "sha256": "bfe328f3fbdc28fbadd4468d65039f46a6727c9080135eff2f550d19adf876c3",
+      "bytes": 465728
+    },
+    "libswiftDispatch.so": {
+      "original_path": "/usr/lib/swift/linux/libswiftDispatch.so",
+      "path": "runtime/lib/libswiftDispatch.so",
+      "sha256": "b0aead6e3694016758d3b262152b6f9107a70fbeb9a7caf715f0b2165d0cbba1",
+      "bytes": 375984
+    },
+    "libFoundation.so": {
+      "original_path": "/usr/lib/swift/linux/libFoundation.so",
+      "path": "runtime/lib/libFoundation.so",
+      "sha256": "ae893bf49eb4fc6c81fad8dc3aa7618bfbdfa0a255bb0174de61ccc14037dd6d",
+      "bytes": 8988608
+    },
+    "libFoundationEssentials.so": {
+      "original_path": "/usr/lib/swift/linux/libFoundationEssentials.so",
+      "path": "runtime/lib/libFoundationEssentials.so",
+      "sha256": "7241b671b6af1ba05f54a9625e62a33282e5a1b155eaed19eb621a200f8315d2",
+      "bytes": 10507440
+    },
+    "libFoundationInternationalization.so": {
+      "original_path": "/usr/lib/swift/linux/libFoundationInternationalization.so",
+      "path": "runtime/lib/libFoundationInternationalization.so",
+      "sha256": "85ce4d0844be0c6350d43810378ff08741b08f7dbaa154f87792a657beb82206",
+      "bytes": 3830232
+    },
+    "libswift_Builtin_float.so": {
+      "original_path": "/usr/lib/swift/linux/libswift_Builtin_float.so",
+      "path": "runtime/lib/libswift_Builtin_float.so",
+      "sha256": "1f7521821bd5372e24b6d28f56d9efde1be4485cf925afb1ae6b1156b8756252",
+      "bytes": 74056
+    },
+    "lib_FoundationICU.so": {
+      "original_path": "/usr/lib/swift/linux/lib_FoundationICU.so",
+      "path": "runtime/lib/lib_FoundationICU.so",
+      "sha256": "1c381afa3b3cb1ef1bcf50a3d37ff6f37d69881a35911d3f868a9b230fd70d7b",
+      "bytes": 40616272
+    },
+    "libswiftSynchronization.so": {
+      "original_path": "/usr/lib/swift/linux/libswiftSynchronization.so",
+      "path": "runtime/lib/libswiftSynchronization.so",
+      "sha256": "2d006a877fe4e26f96b960f2c010872d1f889e1dde59878dc633d68e3debd254",
+      "bytes": 136936
+    }
+  },
+  "system_libraries": {
+    "/lib/aarch64-linux-gnu/libm.so.6": {
+      "path": "/lib/aarch64-linux-gnu/libm.so.6",
+      "resolved": "/usr/lib/aarch64-linux-gnu/libm.so.6",
+      "sha256": "5e0391562de36de323fb9cb0f2c1b6bd6d034c840b1dac018499f5fe4ded1b4a",
+      "bytes": 591800,
+      "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libm.so.6"
+    },
+    "/lib/aarch64-linux-gnu/libstdc++.so.6": {
+      "path": "/lib/aarch64-linux-gnu/libstdc++.so.6",
+      "resolved": "/usr/lib/aarch64-linux-gnu/libstdc++.so.6.0.33",
+      "sha256": "6e3112d35cfc86db7ee85b27e1746f67408e2837ff8628b46386c3eabd5682a4",
+      "bytes": 2633224,
+      "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libstdc++.so.6"
+    },
+    "/lib/aarch64-linux-gnu/libgcc_s.so.1": {
+      "path": "/lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "resolved": "/usr/lib/aarch64-linux-gnu/libgcc_s.so.1",
+      "sha256": "f2d3ad2bf0b61f6bc944cc37d7b6ab7f88d2582b41ff989ca164803f56cc5f20",
+      "bytes": 133696,
+      "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libgcc_s.so.1"
+    },
+    "/lib/aarch64-linux-gnu/libc.so.6": {
+      "path": "/lib/aarch64-linux-gnu/libc.so.6",
+      "resolved": "/usr/lib/aarch64-linux-gnu/libc.so.6",
+      "sha256": "0f1905dc27dbc6715875c70527bc8da846a10084c9c483e9d8ff76dce8d69d0e",
+      "bytes": 1722920,
+      "preserved_copy": "runtime/linked-files/lib/aarch64-linux-gnu/libc.so.6"
+    },
+    "/lib/ld-linux-aarch64.so.1": {
+      "path": "/lib/ld-linux-aarch64.so.1",
+      "resolved": "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1",
+      "sha256": "390027e5f45f236bd1838bc54bf464c5ff01d260ab9f8b415ea8276641bce505",
+      "bytes": 203968,
+      "preserved_copy": "runtime/linked-files/lib/ld-linux-aarch64.so.1"
+    }
+  },
+  "closure_file_bytes_are_not_RSS": true,
+  "same_direct_linkage": true,
+  "load_path": "$PLATFORM/runtime/lib",
+  "script_sha256": "0db55e5d0505fd5c9f23990ffebe342244dc82cd38cc5cefd2af3fceed0ad4a3",
+  "finished_at": "2026-11-17T17:32:48.481456+00:00"
+}

@@ -1,0 +1,322 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T17:47:46.650561+00:00",
+  "platform": "arm64",
+  "path_base": "experiment root",
+  "scope": "Native ARM64 Linux ordinary B/P Data.span versus withUnsafeBytes experiment. Primary and fixed six-pair follow-ups remain separate. No startup or Searchbot timing.",
+  "baseline": "B",
+  "baseline_commit": "b570de5ce1b0ba2dce5a5bba70c9dccd5f3dc3b9",
+  "retained_candidate": "P",
+  "passed_audits": {
+    "throughput": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "arm64/audits-01/throughput-primary/audit.json",
+          "followup": "arm64/audits-01/throughput-followup/audit.json"
+        }
+      }
+    },
+    "stdin": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "arm64/audits-01/stdin-primary/audit.json"
+        }
+      }
+    }
+  },
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "arm64/audits-01/throughput-primary/audit.json",
+      "measured_samples": 96,
+      "warmups": 16,
+      "case_count": 8,
+      "rounds": 6
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "arm64/audits-01/throughput-followup/audit.json",
+      "measured_samples": 48,
+      "warmups": 8,
+      "case_count": 4,
+      "rounds": 6
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "arm64/audits-01/stdin-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "case_count": 2,
+      "rounds": 6
+    }
+  ],
+  "audit_totals": {
+    "phases": 3,
+    "measured_samples": 168,
+    "warmups": 28
+  },
+  "audit_summaries": [
+    "arm64/audits-01/summary.json"
+  ],
+  "snapshots": {
+    "B": "control/B-freeze.json",
+    "P": "control/P-freeze.json",
+    "dependency_freeze": "control/dependency-freeze.json"
+  },
+  "qualification": {
+    "B": {
+      "summary": "arm64/control/qualification-B/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-B/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-B/test-debug.json",
+          "log": "arm64/control/qualification-B/test-debug.log",
+          "swift_testing_count": 85,
+          "reported_test_summaries": [
+            [
+              "85",
+              "11"
+            ]
+          ]
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-B/test-release.json",
+          "log": "arm64/control/qualification-B/test-release.log",
+          "swift_testing_count": 85,
+          "reported_test_summaries": [
+            [
+              "85",
+              "11"
+            ]
+          ]
+        }
+      },
+      "runtime": "arm64/control/qualification-B/runtime.json"
+    },
+    "P": {
+      "summary": "arm64/control/qualification-P/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-P/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-P/test-debug.json",
+          "log": "arm64/control/qualification-P/test-debug.log",
+          "swift_testing_count": 85,
+          "reported_test_summaries": [
+            [
+              "85",
+              "11"
+            ]
+          ]
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-P/test-release.json",
+          "log": "arm64/control/qualification-P/test-release.log",
+          "swift_testing_count": 85,
+          "reported_test_summaries": [
+            [
+              "85",
+              "11"
+            ]
+          ]
+        }
+      },
+      "runtime": "arm64/control/qualification-P/runtime.json",
+      "standard_differential": {
+        "receipt": "arm64/behavior/differential/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "arm64/behavior/io/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "summary": "arm64/final-validation/summary.json",
+        "steps": {
+          "source-git-init": "arm64/final-validation/source-git-init.json",
+          "source-git-index": "arm64/final-validation/source-git-index.json",
+          "whitespace": "arm64/final-validation/whitespace.json",
+          "content-audit": "arm64/final-validation/content-audit.json",
+          "format": "arm64/final-validation/format.json",
+          "documentation-symbol-graph": "arm64/final-validation/documentation-symbol-graph.json",
+          "core-consumer-build": "arm64/final-validation/core-consumer-build.json",
+          "core-consumer-run": "arm64/final-validation/core-consumer-run.json",
+          "cli-smoke": "arm64/final-validation/cli-smoke.json"
+        },
+        "core_boundary": "arm64/final-validation/core-boundary.json",
+        "dependency_pin_count": 8,
+        "forbidden_compiled_modules": [
+          "Crypto.swiftmodule",
+          "SystemPackage.swiftmodule"
+        ]
+      },
+      "compiler_floor": {
+        "swift": "6.2.4",
+        "summary": "arm64/floor-6.2.4/control/qualification-P/summary.json",
+        "runtime": "arm64/floor-6.2.4/control/qualification-P/runtime.json",
+        "tests": {
+          "debug": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-P/test-debug.json",
+            "log": "arm64/floor-6.2.4/control/qualification-P/test-debug.log",
+            "swift_testing_count": 85,
+            "reported_test_summaries": [
+              [
+                "85",
+                "11"
+              ]
+            ]
+          },
+          "release": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-P/test-release.json",
+            "log": "arm64/floor-6.2.4/control/qualification-P/test-release.log",
+            "swift_testing_count": 85,
+            "reported_test_summaries": [
+              [
+                "85",
+                "11"
+              ]
+            ]
+          }
+        }
+      },
+      "strict_memory_safety_probes": {
+        "6.4.2": {
+          "receipt": "arm64/control/strict-span-probe/summary.json",
+          "flags": [
+            "-O",
+            "-strict-memory-safety",
+            "-warnings-as-errors"
+          ],
+          "scope": "Standalone Foundation Data.span checksum over full, empty and nonzero-index sliced Data; not package-wide strict memory safety."
+        },
+        "6.2.4": {
+          "receipt": "arm64/floor-6.2.4/control/strict-span-probe/summary.json",
+          "flags": [
+            "-O",
+            "-strict-memory-safety",
+            "-warnings-as-errors"
+          ],
+          "scope": "Standalone Foundation Data.span checksum over full, empty and nonzero-index sliced Data; not package-wide strict memory safety."
+        }
+      },
+      "negative_controls": {
+        "negative-files": "arm64/controls/negative-files/summary.json",
+        "negative-stdin": "arm64/controls/negative-stdin/summary.json"
+      }
+    }
+  },
+  "artifacts": {
+    "ordinary": {
+      "metadata": "arm64/runtime/manifest.json",
+      "variants": {
+        "B": {
+          "binary": "arm64/bin/B",
+          "binary_sha256": "e9f7d130382c0bd5bb4c7b339e3506a63ea6f228ccc68633b7b27adb2938a5c4",
+          "binary_bytes": 17306240,
+          "stripped_binary": "arm64/bin/stripped/B",
+          "stripped_sha256": "bffd5294bf72a4caad1b43f5142f4b77676978b35d4a96ff3e44d8e113e57a30",
+          "stripped_bytes": 3322808,
+          "DT_NEEDED": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ]
+        },
+        "P": {
+          "binary": "arm64/bin/P",
+          "binary_sha256": "385637e1020431eee95363b1cb7b00d5cae4650ea18efa493907f8aa8a55d35c",
+          "binary_bytes": 17305344,
+          "stripped_binary": "arm64/bin/stripped/P",
+          "stripped_sha256": "0208142727d0783d09672680e183e2976343cf6ac145d40d9e5b290bbcd9bd91",
+          "stripped_bytes": 3322808,
+          "DT_NEEDED": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ]
+        }
+      }
+    },
+    "stripped_byte_counts": {
+      "ordinary": {
+        "B": 3322808,
+        "P": 3322808
+      }
+    },
+    "runtime": {
+      "manifest": "arm64/runtime/manifest.json",
+      "copied_libraries": "arm64/runtime/linked-files",
+      "load_path": "arm64/runtime/lib",
+      "same_direct_linkage": true
+    },
+    "final_hash_verification": "arm64/control/final-preservation.json"
+  },
+  "environment": {
+    "preparation": "arm64/control/preparation.json",
+    "baseline_runtime": "arm64/control/qualification-B/runtime.json",
+    "candidate_runtime": "arm64/control/qualification-P/runtime.json",
+    "compiler_floor_runtime": "arm64/floor-6.2.4/control/qualification-P/runtime.json",
+    "before_timing_idle": "arm64/control/qualification-idle.json",
+    "after_timing_resources": "arm64/control/final-preservation.json",
+    "final_idle": "arm64/control/final-idle.json",
+    "memory_events_all_zero_before_and_after": true,
+    "minimum_measurement_free_bytes": 3221225472,
+    "final_free_bytes": 5620526493696
+  },
+  "protocols": [
+    "control/measurement-protocol.json",
+    "control/common-harness-freeze.json",
+    "control/harness-adaptation.json",
+    "control/fixture-reuse.json",
+    "arm64/control/build-driver-freeze.json",
+    "arm64/control/measurement-plan.json",
+    "arm64/measurement-control/summary.json"
+  ],
+  "failure_and_limitation_ledgers": [
+    "arm64/control/preserved-failures.json"
+  ],
+  "limitations_for_report": [
+    "Six paired samples per configuration and phase; no startup or cold-cache claims.",
+    "Native ARM64 execution uses OrbStack.",
+    "Linux documentation qualification is the Core symbol graph; Mac supplies DocC.",
+    "Both B/P retain Foundation and the same direct shared-library dependencies.",
+    "Standalone strict-memory-safety probe is not package-wide strict-memory-safety qualification."
+  ]
+}

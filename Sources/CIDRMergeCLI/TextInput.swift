@@ -217,21 +217,21 @@ enum TextInputLoader {
         guard let data = try handle.read(upToCount: chunkSize), !data.isEmpty else {
             return false
         }
-        // CHANGE: Borrow each Foundation chunk's bytes without changing its read or lifetime.
-        try data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) in
-            for byte in bytes {
-                if byte == 0x0A {
-                    try consumeLine(
-                        pending,
-                        source: source,
-                        lineNumber: lineNumber,
-                        collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
-                    )
-                    pending.removeAll(keepingCapacity: true)
-                    lineNumber += 1
-                } else {
-                    pending.append(byte)
-                }
+        // Bind the borrowed byte view's lifetime to its Foundation chunk.
+        let bytes = data.span
+        for index in bytes.indices {
+            let byte = bytes[index]
+            if byte == 0x0A {
+                try consumeLine(
+                    pending,
+                    source: source,
+                    lineNumber: lineNumber,
+                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+                )
+                pending.removeAll(keepingCapacity: true)
+                lineNumber += 1
+            } else {
+                pending.append(byte)
             }
         }
         return true

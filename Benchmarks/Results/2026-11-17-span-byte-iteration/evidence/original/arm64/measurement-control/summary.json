@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T17:38:40.401045+00:00",
+  "driver_sha256": "71f2c447c3e428c83eee3714d083f375f5a612f908c8e04fdf6f51beb068fec7",
+  "comparison": "B-vs-P",
+  "artifact_profile": "ordinary",
+  "kinds": [
+    "throughput",
+    "stdin"
+  ],
+  "observations": [
+    {
+      "kind": "throughput",
+      "phase": "primary",
+      "started_at": "2026-11-17T17:38:40.406148+00:00",
+      "command": [
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/control/run_comparison.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$PLATFORM",
+        "--platform",
+        "linux",
+        "--comparison",
+        "B-vs-P",
+        "--artifact-profile",
+        "ordinary",
+        "--runtime-library-path",
+        "$PLATFORM/runtime/lib",
+        "--phase",
+        "primary"
+      ],
+      "finished_at": "2026-11-17T17:40:44.990736+00:00",
+      "exit_code": 0
+    },
+    {
+      "kind": "throughput",
+      "phase": "followup",
+      "started_at": "2026-11-17T17:40:44.992236+00:00",
+      "command": [
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/control/run_comparison.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$PLATFORM",
+        "--platform",
+        "linux",
+        "--comparison",
+        "B-vs-P",
+        "--artifact-profile",
+        "ordinary",
+        "--runtime-library-path",
+        "$PLATFORM/runtime/lib",
+        "--phase",
+        "followup",
+        "--only",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-ranges-no-stats"
+      ],
+      "finished_at": "2026-11-17T17:41:48.872362+00:00",
+      "exit_code": 0
+    },
+    {
+      "kind": "stdin",
+      "phase": "primary",
+      "started_at": "2026-11-17T17:41:48.873131+00:00",
+      "command": [
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/control/run_stdin_comparison.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$PLATFORM",
+        "--platform",
+        "linux",
+        "--comparison",
+        "B-vs-P",
+        "--artifact-profile",
+        "ordinary",
+        "--runtime-library-path",
+        "$PLATFORM/runtime/lib",
+        "--phase",
+        "primary"
+      ],
+      "finished_at": "2026-11-17T17:41:58.430289+00:00",
+      "exit_code": 0
+    }
+  ],
+  "policy": "Only primary paired elapsed/RSS increases above5% trigger one fixed follow-up of the same pair count; no recursive third phase, no pooled observations.",
+  "primary_expected_measured": 120,
+  "primary_expected_warmups": 20,
+  "finished_at": "2026-11-17T17:41:58.431607+00:00"
+}

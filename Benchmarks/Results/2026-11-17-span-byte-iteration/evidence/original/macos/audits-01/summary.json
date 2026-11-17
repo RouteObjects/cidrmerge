@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T17:37:51.450923+00:00",
+  "scope": "Independent post-timing phase audits and primary/follow-up inventory reconciliation; no product execution.",
+  "script_sha256": "bed7986fd5167501ab97425d00e315deb93c60e13b153dd1e104075631fe36c0",
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "macos/audits-01/throughput-primary/audit.json",
+      "measured_samples": 96,
+      "warmups": 16,
+      "case_count": 8,
+      "rounds": 6
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "macos/audits-01/throughput-followup/audit.json",
+      "measured_samples": 12,
+      "warmups": 2,
+      "case_count": 1,
+      "rounds": 6
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "macos/audits-01/stdin-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "case_count": 2,
+      "rounds": 6
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "primary": {
+      "measured_samples": 120,
+      "warmups": 20
+    },
+    "followup": {
+      "measured_samples": 12,
+      "warmups": 2
+    }
+  },
+  "audit_count": 3,
+  "finished_at": "2026-11-17T17:37:51.996905+00:00"
+}

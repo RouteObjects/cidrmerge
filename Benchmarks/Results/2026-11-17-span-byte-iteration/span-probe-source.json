@@ -1,0 +1,7 @@
+{
+  "source": "macos/control/span-probe.swift",
+  "sha256": "51a69f6668015e41abcc5123e7453ae618b26d0361366ce75f827bb91cfecd34",
+  "encoding": "UTF-8",
+  "source_text": "import Foundation\nfunc checksum(_ data: Data) -> UInt64 {\n    let bytes = data.span\n    var result: UInt64 = 0\n    for index in bytes.indices { result &+= UInt64(bytes[index]) }\n    return result\n}\nprecondition(checksum(Data()) == 0)\nprecondition(checksum(Data([0, 1, 127, 128, 255])) == 511)\nprecondition(checksum(Data(repeating: 171, count: 65536)) == 11206656)\nprint(\"Data.span strict-memory-safety checks passed\")\n",
+  "scope": "Exact standalone Mac and x86 probe source; native ARM probes and their provenance are recorded separately."
+}

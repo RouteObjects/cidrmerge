@@ -1,0 +1,32 @@
+{
+  "label": "core-consumer-build",
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "build",
+    "--package-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation/consumer",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation/consumer-build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation/cache",
+    "--config-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation/config",
+    "--security-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-j",
+    "2",
+    "--product",
+    "CoreConsumer"
+  ],
+  "cwd": "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/final-validation",
+  "started_at": "2026-11-17T17:54:18.557189+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-17T17:54:38.918425+00:00",
+  "log_sha256": "e0a1b62416da88be2081d90202b5fffe6af52e4be8660e7c043e7974e060c95b"
+}

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "xcrun",
+    "swiftc",
+    "-swift-version",
+    "6",
+    "-strict-memory-safety",
+    "-warnings-as-errors",
+    "-target",
+    "arm64-apple-macosx15.0",
+    "-module-cache-path",
+    "$EXPERIMENT/macos/clang-cache",
+    "-O",
+    "$EXPERIMENT/macos/control/span-probe.swift",
+    "-o",
+    "$EXPERIMENT/macos/control/span-probe"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "51a69f6668015e41abcc5123e7453ae618b26d0361366ce75f827bb91cfecd34",
+  "run_exit_code": 0,
+  "run_stdout": "Data.span strict-memory-safety checks passed\n",
+  "run_stderr": "",
+  "passed": true
+}

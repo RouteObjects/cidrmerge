@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T18:06:19.036601+00:00",
+  "platform": "x86_64",
+  "display": "Linux x86-64 / swift-dev",
+  "path_base": "experiment root",
+  "scope": "Native x86-64 Swift6.4.2 Data.span versus withUnsafeBytes focused B/P measurements; all received outputs independently audited. No startup or Searchbot timing.",
+  "baseline": "B",
+  "baseline_commit": "b570de5ce1b0ba2dce5a5bba70c9dccd5f3dc3b9",
+  "retained_candidate": "P",
+  "candidate": "P",
+  "passed_audits": {
+    "throughput": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json",
+          "followup": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json"
+        }
+      }
+    },
+    "stdin": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json",
+          "followup": "x86_64/local-audits/stdin-ordinary-B-vs-P-followup/audit.json"
+        }
+      }
+    }
+  },
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 96,
+      "warmups": 16
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-followup/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  ],
+  "audit_totals": {
+    "phases": 4,
+    "measured_samples": 168,
+    "warmups": 28
+  },
+  "audit_summaries": [
+    "x86_64/local-audits/summary.json"
+  ],
+  "snapshots": {
+    "B": "control/B-freeze.json",
+    "P": "control/P-freeze.json"
+  },
+  "qualification": {
+    "B": {
+      "summary": "x86_64/retrieved/final-attempt01/control/build-tests-B/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-attempt01/control/build-tests-B/B-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-attempt01/control/build-tests-B/B-test-debug.json",
+          "log": "x86_64/retrieved/final-attempt01/logs/B-test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-attempt01/control/build-tests-B/B-test-release.json",
+          "log": "x86_64/retrieved/final-attempt01/logs/B-test-release.log",
+          "swift_testing_count": 85
+        }
+      }
+    },
+    "P": {
+      "summary": "x86_64/retrieved/final-attempt01/control/build-tests-P/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-attempt01/control/build-tests-P/P-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-attempt01/control/build-tests-P/P-test-debug.json",
+          "log": "x86_64/retrieved/final-attempt01/logs/P-test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-attempt01/control/build-tests-P/P-test-release.json",
+          "log": "x86_64/retrieved/final-attempt01/logs/P-test-release.log",
+          "swift_testing_count": 85
+        }
+      },
+      "standard_differential": {
+        "receipt": "x86_64/retrieved/final-attempt01/behavior/differential/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "x86_64/retrieved/final-attempt01/behavior/io/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "x86_64/retrieved/final-attempt01/final-validation/summary.json",
+        "summary": "x86_64/retrieved/final-attempt01/final-validation/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "documentation-symbol-graph": "x86_64/retrieved/final-attempt01/final-validation/documentation-symbol-graph.json",
+          "whitespace": "x86_64/retrieved/final-attempt01/final-validation/whitespace.json",
+          "source-git-init": "x86_64/retrieved/final-attempt01/final-validation/source-git-init.json",
+          "content-audit-started": "x86_64/retrieved/final-attempt01/final-validation/content-audit-started.json",
+          "core-boundary": "x86_64/retrieved/final-attempt01/final-validation/core-boundary.json",
+          "core-consumer-build": "x86_64/retrieved/final-attempt01/final-validation/core-consumer-build.json",
+          "whitespace-started": "x86_64/retrieved/final-attempt01/final-validation/whitespace-started.json",
+          "cli-smoke": "x86_64/retrieved/final-attempt01/final-validation/cli-smoke.json",
+          "core-consumer-build-started": "x86_64/retrieved/final-attempt01/final-validation/core-consumer-build-started.json",
+          "source-git-index-started": "x86_64/retrieved/final-attempt01/final-validation/source-git-index-started.json",
+          "source-git-init-started": "x86_64/retrieved/final-attempt01/final-validation/source-git-init-started.json",
+          "source-reference": "x86_64/retrieved/final-attempt01/final-validation/source-reference.json",
+          "cli-smoke-started": "x86_64/retrieved/final-attempt01/final-validation/cli-smoke-started.json",
+          "documentation-symbol-graph-started": "x86_64/retrieved/final-attempt01/final-validation/documentation-symbol-graph-started.json",
+          "source-git-index": "x86_64/retrieved/final-attempt01/final-validation/source-git-index.json",
+          "content-audit": "x86_64/retrieved/final-attempt01/final-validation/content-audit.json",
+          "format": "x86_64/retrieved/final-attempt01/final-validation/format.json",
+          "core-consumer-run-started": "x86_64/retrieved/final-attempt01/final-validation/core-consumer-run-started.json",
+          "format-started": "x86_64/retrieved/final-attempt01/final-validation/format-started.json",
+          "smoke-adaptation": "x86_64/retrieved/final-attempt01/final-validation/smoke-adaptation.json",
+          "core-consumer-run": "x86_64/retrieved/final-attempt01/final-validation/core-consumer-run.json"
+        },
+        "dependency_pin_count": 8,
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "whitespace_note": "git diff --no-index --check exits1 because snapshots differ, with no whitespace diagnostics."
+      },
+      "strict_memory_safety_probe": {
+        "build_receipt": "x86_64/retrieved/final-attempt01/control/build-pipeline-v2/span-probe-build.json",
+        "run_receipt": "x86_64/retrieved/final-attempt01/control/build-pipeline-v2/span-probe-run.json",
+        "source": "x86_64/retrieved/final-attempt01/control/span-probe.swift",
+        "binary": "x86_64/retrieved/final-attempt01/bin/span-probe",
+        "flags": [
+          "-swift-version",
+          "6",
+          "-strict-memory-safety",
+          "-warnings-as-errors",
+          "-O"
+        ],
+        "scope": "Standalone exact Mac-supplied Foundation Data.span checksum source, with empty Data, five-byte high-bit data and 64-KiB repeated data. Not package-wide strict-memory-safety qualification."
+      },
+      "negative_controls": {
+        "negative-files": "x86_64/retrieved/final-attempt01/controls/negative-files",
+        "negative-stdin": "x86_64/retrieved/final-attempt01/controls/negative-stdin"
+      }
+    }
+  },
+  "artifacts": {
+    "ordinary": {
+      "metadata": "x86_64/artifact-summary.json",
+      "variants": {
+        "B": {
+          "metadata": "x86_64/retrieved/final-attempt01/control/build-tests-B/B-build-release.json",
+          "binary": "x86_64/retrieved/final-attempt01/bin/B",
+          "unstripped_bytes": 17699032,
+          "stripped_bytes": 3721800,
+          "unstripped_sha256": "401bb1d8114f82a9e18bb7068f29c67df71b6707bf0012efc272decc168f74f8",
+          "stripped_sha256": "f7bf2b02e23fd43dd2717585b299a5a885a0b0939bb66daa245e82d71bb811e3",
+          "resolved_library_file_bytes": 85108832,
+          "DT_NEEDED": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ]
+        },
+        "P": {
+          "metadata": "x86_64/retrieved/final-attempt01/control/build-tests-P/P-build-release.json",
+          "binary": "x86_64/retrieved/final-attempt01/bin/P",
+          "unstripped_bytes": 17698384,
+          "stripped_bytes": 3721800,
+          "unstripped_sha256": "6cc5cc9b5cf64bb4f982470b6f00ff23ca957e18be2ebf913a52b72d154c40ff",
+          "stripped_sha256": "a0768ff3b11f912c023512ef0c7487afa18700eea0d816ff93bedbff8866be70",
+          "resolved_library_file_bytes": 85108832,
+          "DT_NEEDED": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ]
+        }
+      },
+      "stripped_byte_counts": {
+        "B": 3721800,
+        "P": 3721800
+      }
+    },
+    "stripped_byte_counts": {
+      "ordinary": {
+        "B": 3721800,
+        "P": 3721800
+      }
+    },
+    "runtime": {
+      "metadata": "x86_64/retrieved/final-attempt01/control/actual-runtime-closure.json",
+      "read_only_reference_links": "x86_64/retrieved/final-attempt01/runtime/lib",
+      "same_direct_linkage": true,
+      "linked_file_bytes_sum_is_not_rss": true,
+      "historical_content_ctime_mode_nlink_unchanged": true
+    }
+  },
+  "environment": {
+    "preparation": "x86_64/retrieved/final-attempt01/control/platform-preflight.json",
+    "baseline_runtime": "x86_64/retrieved/final-attempt01/control/build-tests-B/start.json",
+    "capacity_forecast": "x86_64/retrieved/final-attempt01/control/platform-pipeline/capacity-forecast.json",
+    "capacity_forecast_values": {
+      "at": "2026-11-17T17:54:49.146677+00:00",
+      "free_bytes": 3610169344,
+      "minimum_free_bytes": 3221225472,
+      "worst_case_remaining_output_and_metadata_bytes": 335571370,
+      "largest_single_output_bytes": 31606052,
+      "phases": [
+        {
+          "cases": "cases.json",
+          "unique_output_bytes_per_phase": 85688516,
+          "maximum_phases": 2
+        },
+        {
+          "cases": "stdin-cases.json",
+          "unique_output_bytes_per_phase": 32739711,
+          "maximum_phases": 2
+        }
+      ],
+      "passed": true
+    },
+    "minimum_required_measurement_free_bytes": 3221225472,
+    "minimum_observed_measurement_free_bytes": 3434823680,
+    "after_timing_free_bytes": 3434655744,
+    "after_timing_resources": "x86_64/retrieved/final-attempt01/control/actual-runtime-closure.json"
+  },
+  "failure_and_limitation_ledgers": [
+    {
+      "category": "source-archive-transport-metadata",
+      "description": "Original P BSD-tar archive included 3466 AppleDouble metadata sidecars. All1945 actual source files matched the frozen snapshot; source staging stopped before compilation. Exact sidecars were archived and hash-verified, then removed only from the new extraction. Both original archive and failure remain; no source or timed candidate changed.",
+      "paths": [
+        "x86_64/retrieved/final-attempt01/control/build-pipeline/failed.json",
+        "x86_64/retrieved/final-attempt01/control/P-appledouble-sidecars.tar.gz",
+        "x86_64/retrieved/final-attempt01/control/build-pipeline-v2/transport-sidecars-preservation.json",
+        "x86_64/retrieved/final-attempt01/control/build-pipeline-v2/P-source.json"
+      ]
+    },
+    {
+      "category": "common-harness-staging",
+      "description": "Initial flat SCP placed analysis/audit_report.py under control. Freeze verification rejected the wrong path before fixture work. The unchanged file was copied to the frozen path and all23 common paths reverified; misplaced original and failed receipt remain.",
+      "paths": [
+        "x86_64/retrieved/final-attempt01/control/harness-staging-attempt01-failed.json",
+        "x86_64/retrieved/final-attempt01/control/x86-harness-staging.json"
+      ]
+    },
+    {
+      "category": "expected-negative-controls",
+      "description": "Expected rejection of deliberately incorrect output/statistics verifies both timing harnesses; these are not application failures.",
+      "paths": [
+        "x86_64/retrieved/final-attempt01/controls/negative-files",
+        "x86_64/retrieved/final-attempt01/controls/negative-stdin"
+      ]
+    }
+  ],
+  "limitations_for_report": [
+    "One native x86-64 host, six pairs per configuration and phase; fixed separate nonrecursive followups for any individual >5% elapsed/RSS observation.",
+    "Only ordinary dynamic release CLI artifacts measured; no startup, Searchbot, shipping/static-stdlib or cold-cache claim.",
+    "Both variants retain Foundation and identical direct shared-library dependencies. Linked file byte sums are not RSS.",
+    "Runtime and fixture bytes and historical inode identities are verified unchanged. New runtime symlinks point to preserved historical libraries; original artifacts were not hardlinked or mutated.",
+    "Standalone Data.span strict-memory-safety probe is not whole-package qualification.",
+    "No historical cache deletion. Only new scratch removed after preserving binaries, resources, workspace metadata and verification receipts."
+  ],
+  "preservation": {
+    "retrieval_receipt": "x86_64/retrieved/final-evidence-attempt01.receipt.json",
+    "archive": "x86_64/retrieved/final-evidence-attempt01.tar.gz",
+    "archive_sha256": "1f54377128cbd9d4b4dfcb0bc957f24e3ccb3c3f96862b1bca8664690e8ed59b",
+    "test_artifact_archive": "x86_64/retrieved/final-attempt01/preserved-test-artifacts.tar.gz",
+    "test_artifact_verification": "x86_64/retrieved/final-attempt01/control/platform-pipeline/test-artifact-compression.json",
+    "scratch_preservation": "x86_64/retrieved/final-attempt01/control/platform-pipeline/scratch-preservation.json",
+    "scratch_removal": "x86_64/retrieved/final-attempt01/control/platform-pipeline/scratch-removal.json",
+    "final_validation_source_reference": "x86_64/retrieved/final-attempt01/final-validation/source-reference.json",
+    "historical_fixture_runtime_provenance": "x86_64/retrieved/final-attempt01/control/actual-runtime-closure.json"
+  }
+}

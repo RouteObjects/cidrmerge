@@ -1,0 +1,23 @@
+{
+  "experiment_root": "$EXPERIMENT",
+  "container": "cidrmerge-span-arm642-20261117T172402Z",
+  "steps": [
+    {
+      "label": "measurement",
+      "arguments": [
+        "$EXPERIMENT/control/run_platform.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$PLATFORM",
+        "--platform",
+        "linux",
+        "--runtime-library-path",
+        "$PLATFORM/runtime/lib",
+        "--output-control",
+        "$PLATFORM/measurement-control"
+      ]
+    }
+  ],
+  "timing_requires_parent_clearance": true
+}

@@ -1,0 +1,681 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T18:06:42.479769+00:00",
+  "platform": "x86_64",
+  "scope": "Metadata-only independent arithmetic and inventory reconciliation from passed phase audits. No new product execution, measurement, corpus hashing, or excluded observations.",
+  "audits": 4,
+  "phases": [
+    {
+      "kind": "throughput",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 96,
+      "warmups": 16
+    },
+    {
+      "kind": "throughput",
+      "phase": "followup",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "phase": "followup",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-followup/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  ],
+  "totals": {
+    "primary": {
+      "measured_samples": 120,
+      "warmups": 20
+    },
+    "followup": {
+      "measured_samples": 48,
+      "warmups": 8
+    }
+  },
+  "measured_samples": 168,
+  "warmups": 28,
+  "row_count": 14,
+  "rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.595626154,
+          "cpu_seconds": 0.5926085000000001,
+          "peak_rss_bytes": 45570048.0
+        },
+        "P": {
+          "elapsed_seconds": 0.5649650365,
+          "cpu_seconds": 0.562135,
+          "peak_rss_bytes": 45469696.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -5.118254449757947,
+        "cpu": -5.101584884928051,
+        "rss": -0.2380032165141599
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -14.938819871169962,
+          -1.8697544223164608
+        ],
+        "cpu": [
+          -14.96919692639559,
+          -1.8400963143349491
+        ],
+        "rss": [
+          -0.29641606036109325,
+          0.018018018018017834
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.6971330394999999,
+          "cpu_seconds": 0.6940789999999999,
+          "peak_rss_bytes": 48945152.0
+        },
+        "P": {
+          "elapsed_seconds": 0.6604808875,
+          "cpu_seconds": 0.6577649999999999,
+          "peak_rss_bytes": 48922624.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -4.484179474260864,
+        "cpu": -4.492817004186145,
+        "rss": 0.03347245318405245
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.29168430024163,
+          4.487648642634423
+        ],
+        "cpu": [
+          -8.249158961555569,
+          4.444912297232451
+        ],
+        "rss": [
+          -0.3176991890310177,
+          0.22668121904121374
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.10364546,
+          "cpu_seconds": 1.1005395,
+          "peak_rss_bytes": 117557248.0
+        },
+        "P": {
+          "elapsed_seconds": 1.072821243,
+          "cpu_seconds": 1.0696364999999999,
+          "peak_rss_bytes": 117581824.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.438275834456677,
+        "cpu": -2.5037537602908166,
+        "rss": -0.015643354778677176
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.677869881185817,
+          5.869155511602919
+        ],
+        "cpu": [
+          -8.707341676925184,
+          5.8686607834256055
+        ],
+        "rss": [
+          -0.1670262370380704,
+          0.21611823759062343
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.451024708,
+          "cpu_seconds": 1.447573,
+          "peak_rss_bytes": 117485568.0
+        },
+        "P": {
+          "elapsed_seconds": 1.416050032,
+          "cpu_seconds": 1.4127714999999998,
+          "peak_rss_bytes": 117524480.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.7774480979764036,
+        "cpu": -2.787617410696008,
+        "rss": 0.04184100509962985
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.086534678888235,
+          5.056879557480576
+        ],
+        "cpu": [
+          -8.085616035835974,
+          5.074505069474733
+        ],
+        "rss": [
+          -0.05573359342343487,
+          0.15341701534170582
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.0278375195,
+          "cpu_seconds": 1.024637,
+          "peak_rss_bytes": 81563648.0
+        },
+        "P": {
+          "elapsed_seconds": 0.999244502,
+          "cpu_seconds": 0.9960944999999999,
+          "peak_rss_bytes": 81596416.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.8858566858308956,
+        "cpu": -2.896751329438124,
+        "rss": 0.030094064404528886
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.8054996830752863,
+          0.1865604196235049
+        ],
+        "cpu": [
+          -3.8452045813890723,
+          0.23697214406108724
+        ],
+        "rss": [
+          -0.10036130068246107,
+          0.19581262238288488
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.303620441,
+          "cpu_seconds": 1.300285,
+          "peak_rss_bytes": 81539072.0
+        },
+        "P": {
+          "elapsed_seconds": 1.2582742605,
+          "cpu_seconds": 1.2550575,
+          "peak_rss_bytes": 81625088.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.2966884686675404,
+        "cpu": -2.2688649516109436,
+        "rss": 0.1004734863349066
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -7.113949185296864,
+          3.01940888248331
+        ],
+        "cpu": [
+          -7.152323745369616,
+          3.065249678715176
+        ],
+        "rss": [
+          -0.01004823151125045,
+          0.23624026137221144
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 13.8583501365,
+          "cpu_seconds": 13.849598499999999,
+          "peak_rss_bytes": 81653760.0
+        },
+        "P": {
+          "elapsed_seconds": 13.699922522,
+          "cpu_seconds": 13.691422,
+          "peak_rss_bytes": 81639424.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.4994350743343599,
+        "cpu": -1.4968186754143686,
+        "rss": -0.007515771795013615
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.1165542784656663,
+          1.3267486764838576
+        ],
+        "cpu": [
+          -3.11449147905537,
+          1.3275779031076018
+        ],
+        "rss": [
+          -0.3552309000850573,
+          0.1103808138076312
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 14.9268559345,
+          "cpu_seconds": 14.917562,
+          "peak_rss_bytes": 85977088.0
+        },
+        "P": {
+          "elapsed_seconds": 14.77509088,
+          "cpu_seconds": 14.765988,
+          "peak_rss_bytes": 85921792.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -0.41171491375745495,
+        "cpu": -0.4042321400300031,
+        "rss": -0.04045872015076002
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -1.3230680376839832,
+          1.8362891981253515
+        ],
+        "cpu": [
+          -1.319664871488302,
+          1.831836333694925
+        ],
+        "rss": [
+          -0.2618922908432908,
+          0.09062291328818528
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-ipv6-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.12317584,
+          "cpu_seconds": 1.1201314999999998,
+          "peak_rss_bytes": 117465088.0
+        },
+        "P": {
+          "elapsed_seconds": 1.074715833,
+          "cpu_seconds": 1.071443,
+          "peak_rss_bytes": 117530624.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -4.55071547665899,
+        "cpu": -4.591023086261608,
+        "rss": 0.0017473260235323362
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.76783833315633,
+          -0.8587799977787136
+        ],
+        "cpu": [
+          -8.773664747499577,
+          -0.869901285759711
+        ],
+        "rss": [
+          -0.07661234155175167,
+          0.16745743790120837
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-ipv6-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.4440244925,
+          "cpu_seconds": 1.4404184999999998,
+          "peak_rss_bytes": 117499904.0
+        },
+        "P": {
+          "elapsed_seconds": 1.4177559235000001,
+          "cpu_seconds": 1.4140215,
+          "peak_rss_bytes": 117604352.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.1394834142725019,
+        "cpu": -1.150072597281071,
+        "rss": 0.03486629236205685
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -5.512232419845664,
+          2.632996184256675
+        ],
+        "cpu": [
+          -5.526904671738908,
+          2.6559371054761582
+        ],
+        "rss": [
+          -0.04872276745319093,
+          0.2442428471737701
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.5998076395,
+          "cpu_seconds": 0.5969804999999999,
+          "peak_rss_bytes": 44988416.0
+        },
+        "P": {
+          "elapsed_seconds": 0.568521037,
+          "cpu_seconds": 0.5655714999999999,
+          "peak_rss_bytes": 44978176.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -5.260805404850877,
+        "cpu": -5.310017253151517,
+        "rss": 0.01367407155405953
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.472862016091698,
+          8.778864417056798
+        ],
+        "cpu": [
+          -8.50341523257352,
+          8.856294189861668
+        ],
+        "rss": [
+          -0.2637802437693293,
+          0.32810791104629367
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.3080950735,
+          "cpu_seconds": 1.3044959999999999,
+          "peak_rss_bytes": 81111040.0
+        },
+        "P": {
+          "elapsed_seconds": 1.272761796,
+          "cpu_seconds": 1.269425,
+          "peak_rss_bytes": 81098752.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.9375312165782421,
+        "cpu": -1.9154892982806537,
+        "rss": -0.010072571640984407
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -8.384066337030905,
+          10.364368396235136
+        ],
+        "cpu": [
+          -8.403733986347483,
+          10.3701905290418
+        ],
+        "rss": [
+          -0.2571342139759958,
+          0.1666835033841796
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.5915873615,
+          "cpu_seconds": 0.5885079999999999,
+          "peak_rss_bytes": 45070336.0
+        },
+        "P": {
+          "elapsed_seconds": 0.567245099,
+          "cpu_seconds": 0.564199,
+          "peak_rss_bytes": 45107200.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -4.038975885704743,
+        "cpu": -4.058581614584206,
+        "rss": 0.11369762743892453
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -5.170930811013353,
+          -2.786505684866003
+        ],
+        "cpu": [
+          -5.156641561457953,
+          -2.818243819266819
+        ],
+        "rss": [
+          -0.0907852927825692,
+          0.4736746219712096
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-followup/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.282885582,
+          "cpu_seconds": 1.279427,
+          "peak_rss_bytes": 81129472.0
+        },
+        "P": {
+          "elapsed_seconds": 1.2802408415,
+          "cpu_seconds": 1.276938,
+          "peak_rss_bytes": 81074176.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 0.18416253149094453,
+        "cpu": 0.20078663557741572,
+        "rss": -0.10854812736950104
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -5.16033346533008,
+          9.570132589965198
+        ],
+        "cpu": [
+          -5.197965018790041,
+          9.580124099482546
+        ],
+        "rss": [
+          -0.17157852240613503,
+          0.24753725688304584
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-followup/audit.json"
+    }
+  ],
+  "numeric_checks": 336,
+  "primary_trigger_configs": {
+    "throughput": [
+      "text-ipv6-canonical-no-stats",
+      "text-ipv6-canonical-stats"
+    ],
+    "stdin": [
+      "text-ipv4-canonical-no-stats",
+      "text-mixed-noncanonical-stats"
+    ]
+  },
+  "repeated_primary_followup_median_regressions_over5_percent": [],
+  "text_primary_elapsed_median_range_percent": [
+    -5.118254449757947,
+    -0.41171491375745495
+  ],
+  "text_primary_rss_median_range_percent": [
+    -0.2380032165141599,
+    0.1004734863349066
+  ],
+  "limitations": [
+    "Paired min/max ranges are observed extrema, not confidence intervals.",
+    "Ratios of absolute medians may differ from paired median changes.",
+    "Fixed primary-triggered followups are separate and nonrecursive.",
+    "Small/noisy changes require cautious interpretation; absence of a repeated median regression is not proof of equivalence.",
+    "No startup/Searchbot timing or static shipping-artifact comparison was performed."
+  ]
+}

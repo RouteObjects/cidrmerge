@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T17:27:20.393465+00:00",
+  "prior_experiment": "cidrmerge-foundation-byte-iteration-20261117T154127Z",
+  "new_experiment": "cidrmerge-span-byte-iteration-20261117T172402Z",
+  "scripts": {
+    "run_matched.py": {
+      "source_sha256": "7d0e38b24d21ea75fb584a6a7d809a059a4ad7796e414a2d340b930fb8577d20",
+      "new_sha256": "7d0e38b24d21ea75fb584a6a7d809a059a4ad7796e414a2d340b930fb8577d20",
+      "byte_identical": true
+    },
+    "run_stdin.py": {
+      "source_sha256": "a906347a20cc3e988a78b326e44df97e5e16dfffbec119860b3a312592661e0c",
+      "new_sha256": "a906347a20cc3e988a78b326e44df97e5e16dfffbec119860b3a312592661e0c",
+      "byte_identical": true
+    },
+    "run_comparison.py": {
+      "source_sha256": "3a73b8b55c085c9785af618e96649af4348d2e0bff767f5e6622fc86140be680",
+      "new_sha256": "720439a7b410330960893c024fe3f41cd130a2742f2db65e48c471b04e60df8f",
+      "byte_identical": false
+    },
+    "run_stdin_comparison.py": {
+      "source_sha256": "315f7b5386390a6e5eeaa1cd7993789bc1eb8f6feb87d948181fe9f3c8f02465",
+      "new_sha256": "315f7b5386390a6e5eeaa1cd7993789bc1eb8f6feb87d948181fe9f3c8f02465",
+      "byte_identical": true
+    },
+    "audit_comparison.py": {
+      "source_sha256": "4d72ed79bce926ddbd8580ccd70278c57a4cad1cb49749be7830613b8d4fb614",
+      "new_sha256": "4d72ed79bce926ddbd8580ccd70278c57a4cad1cb49749be7830613b8d4fb614",
+      "byte_identical": true
+    },
+    "audit_stdin_comparison.py": {
+      "source_sha256": "9e07d2b2d32d5178400ea496c207a2d17dbdc1e8ecf322b210b1cb26c143afd0",
+      "new_sha256": "9e07d2b2d32d5178400ea496c207a2d17dbdc1e8ecf322b210b1cb26c143afd0",
+      "byte_identical": true
+    },
+    "differential.py": {
+      "source_sha256": "4c5ff17c5e9f73356f6b90b2ef630bd6e49b077b30ce3f3fc92dd0f41bc4d768",
+      "new_sha256": "4c5ff17c5e9f73356f6b90b2ef630bd6e49b077b30ce3f3fc92dd0f41bc4d768",
+      "byte_identical": true
+    },
+    "io_differential_v2.py": {
+      "source_sha256": "685bf760fd954d150f720144ff3c6e0112adda728924c5fafe12d6b61576b8dc",
+      "new_sha256": "685bf760fd954d150f720144ff3c6e0112adda728924c5fafe12d6b61576b8dc",
+      "byte_identical": true
+    },
+    "final_validation_v2.py": {
+      "source_sha256": "dddee01847d4e4cfc3e2b1bf5119079e45364f443edfb267fea2d8ae2df9d70a",
+      "new_sha256": "dddee01847d4e4cfc3e2b1bf5119079e45364f443edfb267fea2d8ae2df9d70a",
+      "byte_identical": true
+    },
+    "negative_control_v2.py": {
+      "source_sha256": "6fb702099b91cd499ac08debe8513c6149a19058e47350e54c9c1dae62749e3b",
+      "new_sha256": "6fb702099b91cd499ac08debe8513c6149a19058e47350e54c9c1dae62749e3b",
+      "byte_identical": true
+    },
+    "negative_control_stdin.py": {
+      "source_sha256": "1a4088d9255fa886cda53b0b7830219f2a23a39c062ddb7d423141c774be1468",
+      "new_sha256": "1a4088d9255fa886cda53b0b7830219f2a23a39c062ddb7d423141c774be1468",
+      "byte_identical": true
+    },
+    "slow_stdout.py": {
+      "source_sha256": "d270bdeac4f4173b140fb3c9f4f7cc6dc80046adafb4a424dc31b19a4849abf7",
+      "new_sha256": "d270bdeac4f4173b140fb3c9f4f7cc6dc80046adafb4a424dc31b19a4849abf7",
+      "byte_identical": true
+    },
+    "rss_fork_floor.py": {
+      "source_sha256": "1567cb20b9ba7af177ce29b0489b291fb3e46b7f01cc1abc3ec365583adce60c",
+      "new_sha256": "1567cb20b9ba7af177ce29b0489b291fb3e46b7f01cc1abc3ec365583adce60c",
+      "byte_identical": true
+    },
+    "run_platform.py": {
+      "source_sha256": "25774d4226f48c5da5eca714dd45cea3d617f856f217e394b355f94f4a30757a",
+      "new_sha256": "71f2c447c3e428c83eee3714d083f375f5a612f908c8e04fdf6f51beb068fec7",
+      "byte_identical": false
+    }
+  },
+  "aggregate_auditor": {
+    "source_sha256": "77ec8fb70e96c69285e66b9932c92cea1c570f1c3830ff64b802b2b66861e6c4",
+    "new_sha256": "bed7986fd5167501ab97425d00e315deb93c60e13b153dd1e104075631fe36c0",
+    "changes": "Omit startup group; throughput primary96/16; all-primary120/20. Existing independent auditors unchanged."
+  },
+  "case_selection": "Four named text corpora, stats off/on; individual configuration definitions unchanged. Existing stdin cases unchanged.",
+  "source_snapshots_unchanged": true,
+  "source_file_count_each": 1945,
+  "timing_policy_unchanged": "Six alternating pairs, one warmup per variant, separate nonrecursive follow-up for primary individual elapsed/RSS>5%.",
+  "excluded_timing_groups": [
+    "startup",
+    "Searchbot"
+  ],
+  "all_prior_files_read_only": true
+}
