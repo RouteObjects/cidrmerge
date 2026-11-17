@@ -1,0 +1,56 @@
+{
+  "platform": "macos",
+  "baseline": "B",
+  "candidate": "P",
+  "baseline_commit": "b570de5ce1b0ba2dce5a5bba70c9dccd5f3dc3b9",
+  "source_manifests": [
+    "control/B-freeze.json",
+    "control/P-freeze.json"
+  ],
+  "environment": "macos/control/environment.json",
+  "build_tests": "macos/control/build-tests-summary.json",
+  "qualification": "macos/control/qualification-summary.json",
+  "artifacts": "macos/control/artifacts.json",
+  "strict_memory_safety_probe": "macos/control/span-probe.json",
+  "differential": {
+    "receipt": "macos/behavior/differential/summary.json",
+    "cases": 254
+  },
+  "io": {
+    "receipt": "macos/behavior/io/summary.json",
+    "cases": 84
+  },
+  "final_validation": "macos/final-validation/summary.json",
+  "negative_controls": [
+    "control/negative-files-selfcheck-01/summary.json",
+    "control/negative-stdin-selfcheck-01/summary.json"
+  ],
+  "tests": {
+    "B": {
+      "debug": {
+        "receipt": "macos/control/B-test-debug.json",
+        "log": "macos/logs/B-test-debug.log",
+        "count": 85
+      },
+      "release": {
+        "receipt": "macos/control/B-test-release.json",
+        "log": "macos/logs/B-test-release.log",
+        "count": 85
+      }
+    },
+    "P": {
+      "debug": {
+        "receipt": "macos/control/P-test-debug.json",
+        "log": "macos/logs/P-test-debug.log",
+        "count": 85
+      },
+      "release": {
+        "receipt": "macos/control/P-test-release.json",
+        "log": "macos/logs/P-test-release.log",
+        "count": 85
+      }
+    }
+  },
+  "deployment_target": "15.0",
+  "deployment_note": "Ordinary B/P Release binaries record macOS15.0 in LC_BUILD_VERSION. Runtime execution was on macOS27.2.1, not an actual macOS15 host."
+}

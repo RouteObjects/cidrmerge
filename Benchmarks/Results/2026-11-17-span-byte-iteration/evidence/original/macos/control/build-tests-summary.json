@@ -1,0 +1,248 @@
+{
+  "started_at": "2026-11-17T17:26:49.725838+00:00",
+  "passed": true,
+  "steps": [
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "build",
+        "--package-path",
+        "$EXPERIMENT/sources/B",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/B",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6",
+        "--product",
+        "cidrmerge"
+      ],
+      "started_at": "2026-11-17T17:26:53.105624+00:00",
+      "variant": "B",
+      "action": "build",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 23.54674308304675,
+      "finished_at": "2026-11-17T17:27:16.652579+00:00",
+      "log_sha256": "532439e42de6365d0b37b0ea258d5f737d1e7349329ac9f966c9319d7466f883",
+      "binary_sha256": "4e946fa516b05e7859a048a345311b2646b2f5f7adf37ab6dafdaa08ffc5da28",
+      "binary_bytes": 2443592
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "build",
+        "--package-path",
+        "$EXPERIMENT/sources/P",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/P",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6",
+        "--product",
+        "cidrmerge"
+      ],
+      "started_at": "2026-11-17T17:27:19.798312+00:00",
+      "variant": "P",
+      "action": "build",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 17.48521716700634,
+      "finished_at": "2026-11-17T17:27:37.283781+00:00",
+      "log_sha256": "a8f05fb854a6b26f919e9391f0bedfb525085b394875314b84972e48bfa92e7f",
+      "binary_sha256": "350fd2c1b7fedf863e3c2e2c9dc43bcd30746ff71dea78ae1663f6b1befa11e4",
+      "binary_bytes": 2443736
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/B",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/B",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "debug",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T17:27:38.219829+00:00",
+      "variant": "B",
+      "action": "test",
+      "configuration": "debug",
+      "exit_code": 0,
+      "elapsed_seconds": 15.447401624987833,
+      "finished_at": "2026-11-17T17:27:53.667438+00:00",
+      "log_sha256": "5e3e598483b4439678bdabaac7daf63d1cfad016161f4c879942ccde4781777c",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/B",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/B",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T17:27:53.880955+00:00",
+      "variant": "B",
+      "action": "test",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 22.811126165965106,
+      "finished_at": "2026-11-17T17:28:16.692417+00:00",
+      "log_sha256": "1efa0526e8a40943dd24228a02e2464317ac780365b5b7b600c0a41027fc4214",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/P",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/P",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "debug",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T17:28:16.907155+00:00",
+      "variant": "P",
+      "action": "test",
+      "configuration": "debug",
+      "exit_code": 0,
+      "elapsed_seconds": 12.288749292027205,
+      "finished_at": "2026-11-17T17:28:29.196207+00:00",
+      "log_sha256": "8529669743a0f8450f50523e0c06e58de146f37d9b295640dedf98d8419b9887",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/P",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/P",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T17:28:29.416990+00:00",
+      "variant": "P",
+      "action": "test",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 26.597639958024956,
+      "finished_at": "2026-11-17T17:28:56.014978+00:00",
+      "log_sha256": "ec66e677abaa387ba269b5592aaedf87f78b3be60d4c01bfa0009d050fa50b36",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    }
+  ],
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "finished_at": "2026-11-17T17:28:56.254072+00:00"
+}

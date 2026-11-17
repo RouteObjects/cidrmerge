@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "at": "2026-11-17T18:08:35.158999+00:00",
+  "scope": "Visual inspection of rendered PNGs plus final artifact review; no new measurements.",
+  "charts": {
+    "text-elapsed.png": {
+      "sha256": "0608bf727d0ac96177220c45b67d78dbe3c3c2b5779023a9dba94507d5c16069",
+      "bytes": 149827,
+      "width": 3240,
+      "height": 1350,
+      "visually_inspected": true
+    },
+    "text-rss.png": {
+      "sha256": "33a7663120089e0fbe87a87980ae2bc7f97d0b989b6f2f12cb41a2f8173175e4",
+      "bytes": 154977,
+      "width": 3240,
+      "height": 1350,
+      "visually_inspected": true
+    }
+  },
+  "observations": [
+    "All eight file configurations appear in the same order across three platform panels.",
+    "Titles identify Data.span(P) versus withUnsafeBytes(B).",
+    "Negative percentage direction and zero line are explicit.",
+    "Median dots and full observed min/max whiskers are visible without clipping; common per-chart x limits preserve comparisons.",
+    "Footer explains six alternating pairs, whiskers are not confidence intervals, and separate follow-ups/all observations remain in tables/CSVs.",
+    "Axis labels, workload labels, titles and footer are readable and do not overlap.",
+    "Tables/CSVs include both stdin configurations and all separate follow-ups; PNGs intentionally show eight primary file configurations only."
+  ],
+  "arithmetic_receipt": "analysis/report-artifact-review.json",
+  "render_receipt": "analysis/report-data-01/render.json",
+  "source_metadata_unchanged": true
+}

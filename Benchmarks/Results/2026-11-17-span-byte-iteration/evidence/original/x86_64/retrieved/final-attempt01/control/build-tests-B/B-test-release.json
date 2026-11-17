@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/B",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T17:47:38.862910+00:00",
+  "log": "logs/B-test-release.log",
+  "free_bytes_before": 3663179776,
+  "exit_code": 0,
+  "elapsed_s": 112.21069448674098,
+  "log_sha256": "ff3c8b60a2342f737d7c0ec5c9d127c5a144331186a72bc26c5b7de636fcde66",
+  "tests": 85,
+  "summaries": [
+    [
+      "85",
+      "11"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/build/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest",
+      "sha256": "161cd560d646b25740e8e8cce1da44cc1166fd0cba15170de93b123c85a09abf",
+      "bytes": 22640960
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-span-byte-iteration-20261117T172402Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    }
+  }
+}

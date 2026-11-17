@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "created_at": "2026-11-17T17:27:20.390849+00:00",
+  "scope": "Data.span indexed byte iteration versus the merged Foundation Data.withUnsafeBytes implementation. FileHandle reads, chunk Data creation, error handling, pending-line ownership and all parsers remain unchanged.",
+  "variants": [
+    "B",
+    "P"
+  ],
+  "internal_sample_role_mapping": {
+    "B": "B",
+    "C": "P"
+  },
+  "artifact_profiles": [
+    "ordinary"
+  ],
+  "binary_paths": {
+    "throughput": "<platform-root>/bin/{B,P}",
+    "stdin": "<platform-root>/bin/{B,P}"
+  },
+  "excluded_timing_groups": [
+    "startup",
+    "Searchbot"
+  ],
+  "matrices": {
+    "throughput": {
+      "config_ids": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats"
+      ],
+      "pairs": 6,
+      "warmups_per_configuration_per_variant": 1,
+      "measured_samples": 96,
+      "warmups": 16
+    },
+    "stdin": {
+      "config_ids": [
+        "text-ipv4-canonical-no-stats",
+        "text-mixed-noncanonical-stats"
+      ],
+      "pairs": 6,
+      "warmups_per_configuration_per_variant": 1,
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  },
+  "minimum_free_bytes": 3221225472,
+  "verification": "Every stdout/stderr byte must match preserved independent references; outputs preserved and identical content hardlinked within each phase only after timing and exact verification.",
+  "followup": "Any individual PRIMARY paired elapsed or RSS increase >5% triggers one separate fixed six-pair follow-up for that configuration. No recursive follow-up and no pooling or deletion.",
+  "measurement_separation": "Run Mac and native ARM64 Linux timing separately; no builds/tests/profiling/hash audits during timed phases. x86 uses separate host.",
+  "historical_results": "Copied selected fixtures/references with exact hashes; prior results are untouched and not pooled."
+}

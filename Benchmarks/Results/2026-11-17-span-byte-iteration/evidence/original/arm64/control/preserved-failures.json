@@ -1,0 +1,22 @@
+{
+  "scope": "ARM64 Data.span isolated experiment qualification and timing",
+  "product_failures": [],
+  "harness_failures": [],
+  "setup_failures": [],
+  "controls": "Intentional wrong-output/statistics controls are preserved under arm64/controls/negative-{files,stdin}; those expected rejections are successful harness qualification.",
+  "all_observations_preserved": true,
+  "no_rerun_or_discard": "All fixed six-pair follow-ups remain separate from primary measurements.",
+  "limitations": [
+    "Six paired samples per configuration and phase; no startup or cold-cache claims.",
+    "Native ARM64 execution uses OrbStack.",
+    "Linux documentation qualification is the Core symbol graph; Mac supplies DocC.",
+    "Both B/P retain Foundation and the same direct shared-library dependencies.",
+    "Standalone strict-memory-safety probe is not package-wide strict-memory-safety qualification."
+  ],
+  "reporting_failures": [
+    {
+      "receipt": "arm64/control/report-index-attempt01-failure.json",
+      "resolution": "Read actual label field in final-validation step receipts; no source, qualification, audit or measurement changed."
+    }
+  ]
+}

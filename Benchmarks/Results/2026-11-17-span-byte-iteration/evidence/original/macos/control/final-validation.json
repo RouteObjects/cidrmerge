@@ -1,0 +1,25 @@
+{
+  "name": "final-validation",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+    "$EXPERIMENT/control/final_validation_v2.py",
+    "--source",
+    "$EXPERIMENT/sources/P",
+    "--baseline-source",
+    "$EXPERIMENT/sources/B",
+    "--seed",
+    "$EXPERIMENT/macos/build/P",
+    "--binary",
+    "$EXPERIMENT/macos/bin/P",
+    "--swift",
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "--jobs",
+    "6",
+    "--output",
+    "$EXPERIMENT/macos/final-validation"
+  ],
+  "started_at": "2026-11-17T17:29:52.607238+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-17T17:30:20.842320+00:00",
+  "log_sha256": "b97ae34ddbb7d3e50ae37fb95f8a19626d74ea1e87d5bb8fd46c6425a87e039a"
+}

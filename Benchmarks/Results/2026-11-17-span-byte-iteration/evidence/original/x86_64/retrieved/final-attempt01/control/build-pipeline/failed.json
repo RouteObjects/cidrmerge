@@ -1,0 +1,5 @@
+{
+  "at": "2026-11-17T17:35:11.856422+00:00",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/control/qualify_builds.py\", line 20, in <module>\n    freeze=json.loads((R/'control'/(variant+'-freeze.json')).read_text());actual={str(p.relative_to(source)):sha(p) for p in source.rglob('*') if p.is_file()};assert actual==freeze['files'];assert {x['identity']:x['state'] for x in json.loads((source/'Package.resolved').read_text())['pins']}==pins\n                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}
