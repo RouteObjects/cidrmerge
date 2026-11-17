@@ -1,0 +1,22 @@
+{
+  "experiment_root": "$EXPERIMENT",
+  "container": "cidrmerge-byte-iteration-arm642-20261117T154127Z",
+  "steps": [
+    {
+      "label": "measurements",
+      "arguments": [
+        "$EXPERIMENT/control/run_platform.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$PLATFORM",
+        "--platform",
+        "linux",
+        "--runtime-library-path",
+        "$PLATFORM/runtime/lib",
+        "--output-control",
+        "$PLATFORM/measurement-control"
+      ]
+    }
+  ]
+}

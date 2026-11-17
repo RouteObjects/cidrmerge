@@ -1,0 +1,48 @@
+{
+  "prior_failure": "Sandbox blocked native time hardware metrics before wrong-reference assertions; prior failures retained.",
+  "at": "2026-11-17T15:50:25.683374+00:00",
+  "attempt02": [
+    {
+      "kind": "files",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/negative_control_v2.py",
+        "--runner",
+        "run_matched.py",
+        "--output",
+        "$EXPERIMENT/macos/controls/negative-files-attempt02"
+      ],
+      "exit_code": 0,
+      "log": "$EXPERIMENT/macos/control/negative-files-attempt02.log",
+      "prior_directory": "$EXPERIMENT/macos/controls/negative-files"
+    },
+    {
+      "kind": "startup",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/negative_control_v2.py",
+        "--runner",
+        "run_startup.py",
+        "--output",
+        "$EXPERIMENT/macos/controls/negative-startup-attempt02"
+      ],
+      "exit_code": 0,
+      "log": "$EXPERIMENT/macos/control/negative-startup-attempt02.log",
+      "prior_directory": "$EXPERIMENT/macos/controls/negative-startup"
+    },
+    {
+      "kind": "stdin",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/negative_control_stdin.py",
+        "--runner",
+        "run_stdin.py",
+        "--output",
+        "$EXPERIMENT/macos/controls/negative-stdin-attempt02"
+      ],
+      "exit_code": 0,
+      "log": "$EXPERIMENT/macos/control/negative-stdin-attempt02.log",
+      "prior_directory": "$EXPERIMENT/macos/controls/negative-stdin"
+    }
+  ]
+}

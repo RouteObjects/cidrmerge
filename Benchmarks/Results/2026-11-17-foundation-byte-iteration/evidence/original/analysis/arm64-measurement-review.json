@@ -1,0 +1,1370 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T16:11:35.979209+00:00",
+  "scope": "Metadata-only extraction from independently passed ARM audits; phases separate, no new measurements or sample exclusions.",
+  "audits": 5,
+  "totals": {
+    "primary": {
+      "measured_samples": 376,
+      "warmups": 44
+    },
+    "followup": {
+      "measured_samples": 220,
+      "warmups": 18
+    }
+  },
+  "measured_samples": 596,
+  "warmups": 62,
+  "row_count": 31,
+  "rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.25999203449999997,
+          "cpu_seconds": 0.25970249999999995,
+          "peak_rss_bytes": 44269568.0
+        },
+        "P": {
+          "elapsed_seconds": 0.208292841,
+          "cpu_seconds": 0.208117,
+          "peak_rss_bytes": 44283904.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -21.159145545676047,
+        "cpu": -21.157346333978587,
+        "rss": 0.07411524921252521
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -29.538969546850314,
+          -8.018795335136986
+        ],
+        "cpu": [
+          -30.13624687022405,
+          -8.007865316119267
+        ],
+        "rss": [
+          -0.055488763525390894,
+          0.24058480614417288
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.301604632,
+          "cpu_seconds": 0.3013895,
+          "peak_rss_bytes": 47478784.0
+        },
+        "P": {
+          "elapsed_seconds": 0.248560103,
+          "cpu_seconds": 0.248356,
+          "peak_rss_bytes": 47493120.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -17.899535139204666,
+        "cpu": -17.905348181011504,
+        "rss": 0.04745209770027348
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -26.51608966746799,
+          -16.57491315215488
+        ],
+        "cpu": [
+          -26.522020821191596,
+          -16.563736241890926
+        ],
+        "rss": [
+          -0.025870989996545912,
+          0.14688094003800778
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.407639065,
+          "cpu_seconds": 0.407458,
+          "peak_rss_bytes": 116299776.0
+        },
+        "P": {
+          "elapsed_seconds": 0.3240256415,
+          "cpu_seconds": 0.3232465,
+          "peak_rss_bytes": 116303872.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -19.733868068405997,
+        "cpu": -19.906336725278283,
+        "rss": 0.0035219328378355286
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -32.157053849576364,
+          -7.5433643208984495
+        ],
+        "cpu": [
+          -32.171854069978956,
+          -7.577788232900584
+        ],
+        "rss": [
+          -0.007043245527538211,
+          0.021132713440397133
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv6-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.4718676725,
+          "cpu_seconds": 0.47167699999999996,
+          "peak_rss_bytes": 116299776.0
+        },
+        "P": {
+          "elapsed_seconds": 0.4154449925,
+          "cpu_seconds": 0.41523199999999993,
+          "peak_rss_bytes": 116293632.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -11.988929108066426,
+        "cpu": -11.994864012762978,
+        "rss": -0.003521808810830196
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -31.03744900086729,
+          3.7432523017782104
+        ],
+        "cpu": [
+          -31.046042733469026,
+          3.305971370925742
+        ],
+        "rss": [
+          -0.014086491055076422,
+          0.021139414438220427
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.39637617599999997,
+          "cpu_seconds": 0.39620299999999997,
+          "peak_rss_bytes": 80336896.0
+        },
+        "P": {
+          "elapsed_seconds": 0.3170775695,
+          "cpu_seconds": 0.31689349999999994,
+          "peak_rss_bytes": 80371712.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -19.8450305506462,
+        "cpu": -19.866160363183255,
+        "rss": 0.04079668545013959
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -28.357761014980564,
+          -17.34667558901958
+        ],
+        "cpu": [
+          -28.36257698318878,
+          -17.3502362672045
+        ],
+        "rss": [
+          -0.15799398603536519,
+          0.08160767112108669
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.4696231695,
+          "cpu_seconds": 0.4694395,
+          "peak_rss_bytes": 80369664.0
+        },
+        "P": {
+          "elapsed_seconds": 0.38889554000000004,
+          "cpu_seconds": 0.38871599999999995,
+          "peak_rss_bytes": 80375808.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -17.217373481142012,
+        "cpu": -17.219060793061566,
+        "rss": 0.0
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -26.158259842330047,
+          -13.788970173346659
+        ],
+        "cpu": [
+          -26.098873962860523,
+          -13.790769509332446
+        ],
+        "rss": [
+          -0.08154112730608398,
+          0.10200958890136391
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-addresses-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.390924251,
+          "cpu_seconds": 0.39066499999999993,
+          "peak_rss_bytes": 80238592.0
+        },
+        "P": {
+          "elapsed_seconds": 0.32038915749999997,
+          "cpu_seconds": 0.3202045,
+          "peak_rss_bytes": 80297984.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -18.11116310391198,
+        "cpu": -18.137250573153185,
+        "rss": 0.06636195147702306
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -34.63854990952574,
+          8.515038367009463
+        ],
+        "cpu": [
+          -32.50434459835665,
+          8.248797336274617
+        ],
+        "rss": [
+          0.0,
+          0.481828899482295
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-addresses-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.4619001165,
+          "cpu_seconds": 0.4616825,
+          "peak_rss_bytes": 83120128.0
+        },
+        "P": {
+          "elapsed_seconds": 0.39003679199999997,
+          "cpu_seconds": 0.38983049999999997,
+          "peak_rss_bytes": 83118080.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -15.712250024764568,
+        "cpu": -15.704495118357514,
+        "rss": -0.0024637823987372354
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -19.40920396272595,
+          -10.776329207349121
+        ],
+        "cpu": [
+          -19.40218386147351,
+          -10.814774357110757
+        ],
+        "rss": [
+          -0.04433934377771065,
+          0.019714144898963504
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 3.2836421355,
+          "cpu_seconds": 3.2825125,
+          "peak_rss_bytes": 80316416.0
+        },
+        "P": {
+          "elapsed_seconds": 3.2374115110000004,
+          "cpu_seconds": 3.2350505,
+          "peak_rss_bytes": 80314368.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.444185767494205,
+        "cpu": -1.4482898262037525,
+        "rss": 3.901238665449114e-07
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.547371500841068,
+          0.8956917165700018
+        ],
+        "cpu": [
+          -3.537148940416379,
+          1.0759772362352038
+        ],
+        "rss": [
+          -0.06625554253095745,
+          0.17881775915802312
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-ranges-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 3.5899923315,
+          "cpu_seconds": 3.58925,
+          "peak_rss_bytes": 84441088.0
+        },
+        "P": {
+          "elapsed_seconds": 3.4256544289999997,
+          "cpu_seconds": 3.424729,
+          "peak_rss_bytes": 84443136.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -4.0772117224815325,
+        "cpu": -4.067272250671588,
+        "rss": -0.021827941896152003
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -6.948117987735703,
+          -2.578036711222176
+        ],
+        "cpu": [
+          -6.97204195747112,
+          -2.62688692782419
+        ],
+        "rss": [
+          -0.10671840892554352,
+          0.014553922282045662
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-overlap-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.332204069,
+          "cpu_seconds": 0.332043,
+          "peak_rss_bytes": 70199296.0
+        },
+        "P": {
+          "elapsed_seconds": 0.27420897050000004,
+          "cpu_seconds": 0.27403449999999996,
+          "peak_rss_bytes": 70197248.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -17.64848492006834,
+        "cpu": -17.673793000616698,
+        "rss": -0.008751798987521875
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -18.38909988708529,
+          -12.698336781440878
+        ],
+        "cpu": [
+          -18.413943038032265,
+          -12.696957494023808
+        ],
+        "rss": [
+          -0.03499970833575894,
+          0.10511562718991119
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-overlap-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.3991722425,
+          "cpu_seconds": 0.39899049999999997,
+          "peak_rss_bytes": 70197248.0
+        },
+        "P": {
+          "elapsed_seconds": 0.3465647335,
+          "cpu_seconds": 0.34638800000000003,
+          "peak_rss_bytes": 70199296.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -13.188351277725364,
+        "cpu": -13.194463840667748,
+        "rss": -0.005834475923166549
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -13.559160479400633,
+          -8.629623099782647
+        ],
+        "cpu": [
+          -13.560957515332428,
+          -8.59683340396311
+        ],
+        "rss": [
+          -0.029197080291976096,
+          0.023341308280322437
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "searchbot-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9043345404999998,
+          "cpu_seconds": 1.903131,
+          "peak_rss_bytes": 188334080.0
+        },
+        "P": {
+          "elapsed_seconds": 1.9397294895,
+          "cpu_seconds": 1.939133,
+          "peak_rss_bytes": 188327936.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 3.8203203425358767,
+        "cpu": 3.8297755338894013,
+        "rss": 0.0
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.9757534285512097,
+          38.33133111106437
+        ],
+        "cpu": [
+          -3.882490587845988,
+          38.14589857886737
+        ],
+        "rss": [
+          -0.006524434005350521,
+          0.006524434005350521
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "searchbot-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 2.0540597849999997,
+          "cpu_seconds": 2.0537989999999997,
+          "peak_rss_bytes": 188340224.0
+        },
+        "P": {
+          "elapsed_seconds": 2.0115376864999996,
+          "cpu_seconds": 2.0113085,
+          "peak_rss_bytes": 188338176.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.259804739462784,
+        "cpu": -2.2446030165828468,
+        "rss": 0.001087452967662994
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -14.10473840615072,
+          16.13945113435442
+        ],
+        "cpu": [
+          -14.10521577915189,
+          16.237217885079723
+        ],
+        "rss": [
+          -0.006524434005350521,
+          0.0761680920980945
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "searchbot-noncanonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9061814835,
+          "cpu_seconds": 1.905945,
+          "peak_rss_bytes": 199368704.0
+        },
+        "P": {
+          "elapsed_seconds": 2.0210139495,
+          "cpu_seconds": 2.0200835,
+          "peak_rss_bytes": 199370752.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 4.305043720130531,
+        "cpu": 4.3297203641477715,
+        "rss": 0.0020544849406167742
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -2.8330498611720434,
+          15.678260076043715
+        ],
+        "cpu": [
+          -2.7716229551306926,
+          15.682094863327833
+        ],
+        "rss": [
+          0.0,
+          0.06990131578947789
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "searchbot-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9949053129999998,
+          "cpu_seconds": 1.9946475000000001,
+          "peak_rss_bytes": 199376896.0
+        },
+        "P": {
+          "elapsed_seconds": 2.0254520979999997,
+          "cpu_seconds": 2.025234,
+          "peak_rss_bytes": 199374848.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.4096059630443303,
+        "cpu": -1.3985974364650433,
+        "rss": -0.0030815585850052507
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -10.476883301650197,
+          9.2783953621961
+        ],
+        "cpu": [
+          -10.47382383408555,
+          9.26164731994048
+        ],
+        "rss": [
+          -0.010271369584424761,
+          0.026709401709412717
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-primary/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "text-mixed-addresses-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.391321232,
+          "cpu_seconds": 0.39110049999999996,
+          "peak_rss_bytes": 80300032.0
+        },
+        "P": {
+          "elapsed_seconds": 0.315221922,
+          "cpu_seconds": 0.315034,
+          "peak_rss_bytes": 80310272.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -18.6695853794506,
+        "cpu": -18.686762853628082,
+        "rss": 0.012752109206826123
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -26.044757836675338,
+          4.62631384203076
+        ],
+        "cpu": [
+          -26.045944392978182,
+          4.630734943771286
+        ],
+        "rss": [
+          -0.01020199959191892,
+          0.07656576999641729
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "searchbot-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9333356259999999,
+          "cpu_seconds": 1.9330305,
+          "peak_rss_bytes": 188323840.0
+        },
+        "P": {
+          "elapsed_seconds": 1.9777081855,
+          "cpu_seconds": 1.9768065,
+          "peak_rss_bytes": 188334080.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 2.008009044339809,
+        "cpu": 1.9732776955681541,
+        "rss": 0.02392585819821491
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -4.3542433909125045,
+          12.399078357537974
+        ],
+        "cpu": [
+          -4.411223062663239,
+          12.401146916094818
+        ],
+        "rss": [
+          -0.034796981361862045,
+          0.05002610057420753
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "searchbot-canonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9937984985,
+          "cpu_seconds": 1.9934954999999999,
+          "peak_rss_bytes": 188332032.0
+        },
+        "P": {
+          "elapsed_seconds": 1.9869360724999998,
+          "cpu_seconds": 1.9862194999999998,
+          "peak_rss_bytes": 188342272.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -0.8751967632731561,
+        "cpu": -0.8823361587575296,
+        "rss": -0.0021749532364501167
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -5.3373931481776715,
+          22.324064564531
+        ],
+        "cpu": [
+          -5.38947021927767,
+          22.33464425813938
+        ],
+        "rss": [
+          -0.04130434782608772,
+          0.050030453319416246
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "searchbot-noncanonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 1.9531926314999999,
+          "cpu_seconds": 1.9528109999999999,
+          "peak_rss_bytes": 199374848.0
+        },
+        "P": {
+          "elapsed_seconds": 2.031271861,
+          "cpu_seconds": 2.031033,
+          "peak_rss_bytes": 199370752.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.5769168799815212,
+        "cpu": -1.5714594710503627,
+        "rss": -0.0071891150145775295
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -7.663768040280194,
+          8.425860979613198
+        ],
+        "cpu": [
+          -7.640720412752,
+          8.42660873242831
+        ],
+        "rss": [
+          -0.010272002629629906,
+          0.01027263575288373
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "searchbot-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 2.00222203,
+          "cpu_seconds": 2.0019975,
+          "peak_rss_bytes": 199360512.0
+        },
+        "P": {
+          "elapsed_seconds": 2.018080635,
+          "cpu_seconds": 2.0174975,
+          "peak_rss_bytes": 199374848.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 1.4648179245461246,
+        "cpu": 1.46357808867551,
+        "rss": 0.01130089139470547
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -3.6217486138292565,
+          5.877705363663921
+        ],
+        "cpu": [
+          -3.621890438225195,
+          5.875434595423634
+        ],
+        "rss": [
+          -0.05136001314816063,
+          0.049330949004122715
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/throughput-followup/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-ipv4-canonical-no-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.2574439275,
+          "cpu_seconds": 0.2572005,
+          "peak_rss_bytes": 43749376.0
+        },
+        "P": {
+          "elapsed_seconds": 0.208430362,
+          "cpu_seconds": 0.20823149999999999,
+          "peak_rss_bytes": 43753472.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -19.43456210829521,
+        "cpu": -19.415369836980357,
+        "rss": 0.02340648660247302
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -20.70921401920085,
+          -5.689148235482088
+        ],
+        "cpu": [
+          -20.67945325246091,
+          -5.714673018455052
+        ],
+        "rss": [
+          -0.05614823133071045,
+          0.1593550806149313
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/stdin-primary/audit.json"
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "text-mixed-noncanonical-stats",
+      "n": 6,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.4739490085,
+          "cpu_seconds": 0.4737475,
+          "peak_rss_bytes": 79833088.0
+        },
+        "P": {
+          "elapsed_seconds": 0.391104314,
+          "cpu_seconds": 0.390928,
+          "peak_rss_bytes": 79831040.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -17.469590852822535,
+        "cpu": -17.474760717822097,
+        "rss": -0.007692569678330319
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -20.19385002141404,
+          -14.14466354446886
+        ],
+        "cpu": [
+          -20.22022604553334,
+          -14.577784590622544
+        ],
+        "rss": [
+          -0.09234557767289209,
+          0.06159848057081252
+        ]
+      },
+      "all_elapsed_pairs_improved": true,
+      "elapsed_pairs_above_5_percent": 0,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/stdin-primary/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "empty-stdin",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.005287444,
+          "cpu_seconds": 0.005154000000000001,
+          "peak_rss_bytes": 20127744.0
+        },
+        "P": {
+          "elapsed_seconds": 0.0053483405,
+          "cpu_seconds": 0.005134,
+          "peak_rss_bytes": 20129792.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -0.5444490151966186,
+        "cpu": -1.4150799149839854,
+        "rss": -0.01017501017501199
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -32.3129421622386,
+          13.561327898243313
+        ],
+        "cpu": [
+          -31.72263172263172,
+          13.481298808055907
+        ],
+        "rss": [
+          -0.6672058228871847,
+          0.6106248727864916
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 5,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-primary/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "version",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.0054373615,
+          "cpu_seconds": 0.005294,
+          "peak_rss_bytes": 19529728.0
+        },
+        "P": {
+          "elapsed_seconds": 0.005233089999999999,
+          "cpu_seconds": 0.005107499999999999,
+          "peak_rss_bytes": 19533824.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -4.76193348882123,
+        "cpu": -4.698599210873944,
+        "rss": 0.010486577181212375
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -54.40510370362874,
+          54.32469024034459
+        ],
+        "cpu": [
+          -55.051492634597835,
+          54.814222932481016
+        ],
+        "rss": [
+          -0.6710002096875667,
+          0.14687368862777994
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 4,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-primary/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "mixed-100",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.0058752995,
+          "cpu_seconds": 0.0057304999999999995,
+          "peak_rss_bytes": 20713472.0
+        },
+        "P": {
+          "elapsed_seconds": 0.0056616115,
+          "cpu_seconds": 0.0055295,
+          "peak_rss_bytes": 20709376.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -2.2606110532947032,
+        "cpu": -2.0887503680203867,
+        "rss": 0.0
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -14.652322915599814,
+          22.308246029335788
+        ],
+        "cpu": [
+          -14.887831407205965,
+          21.950753960679513
+        ],
+        "rss": [
+          -0.6525608068024491,
+          0.6764822920811708
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 6,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-primary/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "case": "mixed-10000",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.0091037205,
+          "cpu_seconds": 0.0089345,
+          "peak_rss_bytes": 21299200.0
+        },
+        "P": {
+          "elapsed_seconds": 0.008448574,
+          "cpu_seconds": 0.0082605,
+          "peak_rss_bytes": 21299200.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -6.471770303646485,
+        "cpu": -6.614682586149511,
+        "rss": -0.009609840476648701
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -16.624570810125526,
+          305.62449054340834
+        ],
+        "cpu": [
+          -15.437659882104315,
+          310.57545925098947
+        ],
+        "rss": [
+          -0.672430355427478,
+          0.5800464037122977
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 2,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-primary/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "empty-stdin",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.00530157,
+          "cpu_seconds": 0.0051515,
+          "peak_rss_bytes": 20133888.0
+        },
+        "P": {
+          "elapsed_seconds": 0.0052471524999999995,
+          "cpu_seconds": 0.0051164999999999995,
+          "peak_rss_bytes": 20131840.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 1.8276343113588056,
+        "cpu": 1.7679860100374922,
+        "rss": -0.010170870626524664
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -9.580062766548503,
+          10.165918160124466
+        ],
+        "cpu": [
+          -9.229908633227668,
+          10.276101663923942
+        ],
+        "rss": [
+          -0.6266424095411338,
+          0.671414038657181
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 6,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-followup/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "version",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.0052150700000000005,
+          "cpu_seconds": 0.0050705,
+          "peak_rss_bytes": 19537920.0
+        },
+        "P": {
+          "elapsed_seconds": 0.005227840500000001,
+          "cpu_seconds": 0.0050565,
+          "peak_rss_bytes": 19533824.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": 0.9141797215464487,
+        "cpu": 0.7994941330476235,
+        "rss": -0.020966558569873728
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -15.482098025822587,
+          23.754591183009733
+        ],
+        "cpu": [
+          -15.8436944937833,
+          23.40757238307347
+        ],
+        "rss": [
+          -0.12570710245128902,
+          0.6330449461911858
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 6,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-followup/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "mixed-100",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.005754382000000001,
+          "cpu_seconds": 0.0056105,
+          "peak_rss_bytes": 20713472.0
+        },
+        "P": {
+          "elapsed_seconds": 0.005805383000000001,
+          "cpu_seconds": 0.005663499999999999,
+          "peak_rss_bytes": 20709376.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -1.2250615801102815,
+        "cpu": -1.6920030707760048,
+        "rss": -0.019770660340057145
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -81.3157964935465,
+          19.402074975716598
+        ],
+        "cpu": [
+          -81.66326071144054,
+          19.32215234102026
+        ],
+        "rss": [
+          -0.6718039913060636,
+          0.5967774020290362
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 6,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-followup/audit.json"
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "case": "mixed-10000",
+      "n": 20,
+      "absolute_medians": {
+        "B": {
+          "elapsed_seconds": 0.009090012,
+          "cpu_seconds": 0.008934,
+          "peak_rss_bytes": 21299200.0
+        },
+        "P": {
+          "elapsed_seconds": 0.0085793655,
+          "cpu_seconds": 0.008376000000000001,
+          "peak_rss_bytes": 21301248.0
+        }
+      },
+      "paired_change_medians": {
+        "elapsed": -6.985690730978844,
+        "cpu": -6.858930112752981,
+        "rss": 0.00961538461538014
+      },
+      "paired_change_ranges": {
+        "elapsed": [
+          -69.74945116973397,
+          5.429297325838234
+        ],
+        "cpu": [
+          -69.08626733729614,
+          5.6241279381775255
+        ],
+        "rss": [
+          -0.6344933666602603,
+          0.6191950464396356
+        ]
+      },
+      "all_elapsed_pairs_improved": false,
+      "elapsed_pairs_above_5_percent": 1,
+      "rss_pairs_above_5_percent": 0,
+      "audit_receipt": "arm64/audits-01/startup-followup/audit.json"
+    }
+  ],
+  "repeated_primary_followup_median_regressions_over5_percent": [],
+  "text_primary_elapsed_median_range_percent": [
+    -21.159145545676047,
+    -1.444185767494205
+  ],
+  "text_primary_rss_median_range_percent": [
+    -0.021827941896152003,
+    0.07411524921252521
+  ],
+  "limitations": [
+    "Ranges are per-pair extrema, not confidence intervals.",
+    "Searchbot file path is an unchanged control; mixed-sign changes do not establish a JSON speedup.",
+    "The +305.624% startup observation remains preserved; no outliers discarded.",
+    "Fixed primary-triggered follow-ups are nonrecursive.",
+    "No repeated above5% median regression is an inventory statement, not proof of equivalence."
+  ]
+}

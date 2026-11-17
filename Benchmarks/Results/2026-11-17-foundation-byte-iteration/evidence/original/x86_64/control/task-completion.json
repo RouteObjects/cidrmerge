@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "at": "2026-11-17T16:40:24.670121+00:00",
+  "local_receipts": {
+    "analysis/x86_64-report-index.json": {
+      "sha256": "535a494f17991f50c9d3568e45547268e48b9402d7f64daf5c8452f483e8a254",
+      "bytes": 10221
+    },
+    "analysis/x86_64-measurement-review.json": {
+      "sha256": "29da108e5061db9dd5e86bfaa51c69d5b871e1e367fa8e959c923402b7ae5614",
+      "bytes": 32192
+    },
+    "x86_64/local-audits/summary.json": {
+      "sha256": "d663d8a5898589fc4d3df30a349c72aed8629f150990cb48608c0e5127e1cb6c",
+      "bytes": 1209
+    },
+    "x86_64/retrieved/final-evidence-attempt02.tar.receipt.json": {
+      "sha256": "f67b7906d0151f879a6ace75d2f705bb754268bf1945d8d90b9fb067cdb238dc",
+      "bytes": 1969
+    },
+    "x86_64/retrieved/fixture-mode-verification.json": {
+      "sha256": "bfa860ba4c01e6ccf65b77afb838b1fde4e880a3f05c27f2e3cb99a2a6da7394",
+      "bytes": 615
+    }
+  },
+  "remote_completion": {
+    "passed": true,
+    "at": "2026-11-17T16:40:07.438247+00:00",
+    "scope": "Task completion and task-specific SSH master shutdown; no historical changes or new full artifact hashing",
+    "remote_root": "$EXPERIMENT",
+    "active_task_processes": [],
+    "task_scratch_absent": true,
+    "disk": {
+      "total": 67318259712,
+      "used": 60115234816,
+      "free": 3986522112
+    },
+    "audit_totals": {
+      "phases": 4,
+      "measured_samples": 424,
+      "warmups": 52
+    },
+    "preserved_metadata": {
+      "control/platform-pipeline/complete.json": {
+        "sha256": "c4eec9f48073ce396560a6299b69e152da39a020319b87769c697cd711b27c2a",
+        "bytes": 1121
+      },
+      "control/actual-runtime-closure.json": {
+        "sha256": "855721decb3ec36b6e854647a504e39d0cc1d84d94a429c82887f0b1a695cf5f",
+        "bytes": 31872
+      },
+      "control/platform-pipeline/scratch-removal.json": {
+        "sha256": "65b99d1aa465edd6c6beaddff73a509541800631891aacb39d009384380649fe",
+        "bytes": 189
+      },
+      "control/platform-pipeline/test-artifact-compression.json": {
+        "sha256": "82b12740842797b21ea52c9f7c122288a8645a677108586088764e63fa647463",
+        "bytes": 2415
+      }
+    },
+    "preserved_state": "Sources, dependency/source archives, frozen binaries, test artifact archive, fixtures, runtime libraries, all observations, logs, audits and failures remain in this experiment; local hash-verified preservation already complete",
+    "next_action": "Close only /private/tmp/cidrmerge-foundation-ssh-20261117T154127Z.sock"
+  },
+  "ssh_master_socket": "/private/tmp/cidrmerge-foundation-ssh-20261117T154127Z.sock",
+  "ssh_master_closed": true,
+  "ssh_shutdown": {
+    "command": [
+      "ssh",
+      "-S",
+      "/private/tmp/cidrmerge-foundation-ssh-20261117T154127Z.sock",
+      "-o",
+      "BatchMode=yes",
+      "-o",
+      "ProxyCommand=false",
+      "-O",
+      "exit",
+      "swift-dev"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "Exit request sent.\n",
+    "socket_absent": true
+  },
+  "historical_files_changed": false
+}

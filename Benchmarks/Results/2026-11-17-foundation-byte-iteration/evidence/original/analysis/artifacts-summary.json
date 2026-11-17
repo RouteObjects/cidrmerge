@@ -1,0 +1,50 @@
+{
+  "macos": {
+    "B": {
+      "ordinary_bytes": 2444920,
+      "stripped_bytes": 1290512
+    },
+    "P": {
+      "ordinary_bytes": 2444680,
+      "stripped_bytes": 1290272
+    },
+    "same_linkage": true,
+    "evidence": "macos/ordinary-artifacts/receipts.json",
+    "environment": {
+      "machine": "Apple M1 Max, 10 cores, 64 GiB; macOS 27.2.1 (26B131)",
+      "toolchain": "Xcode 27.2 (27B52), Apple Swift 6.4.2"
+    }
+  },
+  "arm64": {
+    "B": {
+      "ordinary_bytes": 17304928,
+      "stripped_bytes": 3322808
+    },
+    "P": {
+      "ordinary_bytes": 17306240,
+      "stripped_bytes": 3322808
+    },
+    "same_linkage": true,
+    "evidence": "arm64/runtime/manifest.json",
+    "environment": {
+      "machine": "Native OrbStack on the same M1 Max; 10 CPUs visible, about 16 GiB; Ubuntu 24.04.5, kernel 7.2.12-orbstack",
+      "toolchain": "Swift 6.4.2 release; separate Swift 6.2.4 floor checks"
+    }
+  },
+  "x86_64": {
+    "B": {
+      "ordinary_bytes": 17706856,
+      "stripped_bytes": 3721800
+    },
+    "P": {
+      "ordinary_bytes": 17708176,
+      "stripped_bytes": 3721800
+    },
+    "same_linkage": true,
+    "evidence": "x86_64/artifact-summary.json",
+    "environment": {
+      "machine": "swift-dev: Xeon E5520 at 2.27 GHz, 4 CPUs visible, 8 GiB reported RAM; Ubuntu 24.04.5, kernel 6.14.8-2-pve",
+      "toolchain": "Swift 6.4.2 release"
+    }
+  }
+}

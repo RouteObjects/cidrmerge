@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/B",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "debug",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T15:53:18.279358+00:00",
+  "log": "logs/B-test-debug.log",
+  "free_bytes_before": 4315996160,
+  "exit_code": 0,
+  "elapsed_s": 222.31690621981397,
+  "log_sha256": "4d2721ca2160fd7233df3ad63d84a4fd550bb608cb309808d16c359bf91d6268",
+  "tests": 85,
+  "summaries": [
+    [
+      "85",
+      "11"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest",
+      "sha256": "41b1444e3f6293aa94f2f620242cdac00672c89914e04b94fa8bbcac82f372a0",
+      "bytes": 24971224
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    }
+  }
+}

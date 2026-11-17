@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/P",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "debug",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T16:00:28.701764+00:00",
+  "log": "logs/P-test-debug.log",
+  "free_bytes_before": 4246061056,
+  "exit_code": 0,
+  "elapsed_s": 26.564656642265618,
+  "log_sha256": "ce2484967bb9b63f2ffa6805482e6b4200cf25cb684c34e673c6bd3446a836af",
+  "tests": 85,
+  "summaries": [
+    [
+      "85",
+      "11"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest",
+      "sha256": "3c39bad2c1b031f55f0968054addea9fe7cb4e689599e59ffc88cec84709d9ca",
+      "bytes": 24977552
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    }
+  }
+}

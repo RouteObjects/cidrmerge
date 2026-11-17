@@ -1,0 +1,28 @@
+from pathlib import Path
+import datetime,json,statistics
+r=Path('$EXPERIMENT')
+summary=json.loads((r/'arm64/audits-01/summary.json').read_text());assert summary['passed'];rows=[]
+for a in summary['audit_rows']:
+    result=json.loads((r/a['receipt']).read_text());assert result['passed']
+    for case,values in result['result']['recomputed'].items():
+        absolute={variant:{'elapsed_seconds':statistics.median(p[variant]['elapsed_ns']/1e9 for p in values['pairs']),'cpu_seconds':statistics.median(p[variant]['cpu_seconds'] for p in values['pairs']),'peak_rss_bytes':statistics.median(p[variant]['peak_rss_bytes'] for p in values['pairs'])} for variant in ['B','C']};absolute['P']=absolute.pop('C')
+        rows.append({'kind':a['kind'],'profile':'ordinary','comparison':'B-vs-P','phase':a['phase'],'case':case,'n':len(values['pairs']),'absolute_medians':absolute,'paired_change_medians':values['paired_change_medians'],'paired_change_ranges':values['paired_change_ranges'],'all_elapsed_pairs_improved':all(p['elapsed_change_pct']<0 for p in values['pairs']),'elapsed_pairs_above_5_percent':sum(p['elapsed_change_pct']>5 for p in values['pairs']),'rss_pairs_above_5_percent':sum(p['rss_change_pct']>5 for p in values['pairs']),'audit_receipt':a['receipt']})
+repeated=[]
+for row in rows:
+    if not row['phase'].startswith('primary'):continue
+    follow=[q for q in rows if q['kind']==row['kind'] and q['case']==row['case'] and q['phase'].startswith('followup')]
+    for metric in ['elapsed','rss']:
+        if row['paired_change_medians'][metric]>5 and follow and follow[0]['paired_change_medians'][metric]>5:repeated.append({'kind':row['kind'],'case':row['case'],'metric':metric})
+text=[x for x in rows if x['kind']=='throughput' and x['phase']=='primary' and x['case'].startswith('text-')];assert len(text)==12 and not repeated
+record={'passed':True,'created_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Metadata-only extraction from independently passed ARM audits; phases separate, no new measurements or sample exclusions.','audits':5,'totals':summary['totals'],'measured_samples':596,'warmups':62,'row_count':len(rows),'rows':rows,'repeated_primary_followup_median_regressions_over5_percent':repeated,'text_primary_elapsed_median_range_percent':[min(x['paired_change_medians']['elapsed'] for x in text),max(x['paired_change_medians']['elapsed'] for x in text)],'text_primary_rss_median_range_percent':[min(x['paired_change_medians']['rss'] for x in text),max(x['paired_change_medians']['rss'] for x in text)],'limitations':['Ranges are per-pair extrema, not confidence intervals.','Searchbot file path is an unchanged control; mixed-sign changes do not establish a JSON speedup.','The +305.624% startup observation remains preserved; no outliers discarded.','Fixed primary-triggered follow-ups are nonrecursive.','No repeated above5% median regression is an inventory statement, not proof of equivalence.']}
+with (r/'analysis/arm64-measurement-review.json').open('x') as f:json.dump(record,f,indent=2);f.write('\n')
+def fmt(row,metric):
+    median=row['paired_change_medians'][metric];spread=row['paired_change_ranges'][metric]
+    return 'n/a' if median is None else f'{median:+.3f}% [{spread[0]:+.3f}, {spread[1]:+.3f}]'
+lines=['# Independent ARM64 measurement review','','All five phases passed independent hashes, complete output checks, metric reconciliation and sample-order/inventory audits. Primary 376 measured/44 warmups; fixed follow-ups 220/18; total 596 measured/62 warmups. No repeated primary/follow-up elapsed or RSS median regression above 5%.','','| Kind / case | Phase | n | B / P elapsed median (ms) | Paired elapsed median [min,max] | Paired CPU median [min,max] | Paired RSS median [min,max] |','|---|---|---:|---:|---|---|---|']
+for row in rows:
+    b=row['absolute_medians']['B']['elapsed_seconds']*1000;p=row['absolute_medians']['P']['elapsed_seconds']*1000
+    lines.append(f'| {row["kind"]} / {row["case"]} | {row["phase"]} | {row["n"]} | {b:.3f} / {p:.3f} | {fmt(row,"elapsed")} | {fmt(row,"cpu")} | {fmt(row,"rss")} |')
+lines += ['', 'All twelve text-file elapsed medians improve 1.444–21.159%, with matching CPU direction; range-derived gains at the low end remain modest. Text RSS medians change −0.022% to +0.074%. IPv4 canonical/no-stats is 259.992→208.293 ms; paired median −21.159%. The separate text-stdin medians improve 19.435% and 17.470%, every pair improved.', '', 'Five file configurations received fixed follow-ups. Mixed-addresses/no-stats remains improved: −18.111% primary and −18.670% follow-up. The four unchanged Searchbot controls have noisy, mixed-sign pairs; follow-up medians range −1.577% to +2.008%. These controls do not establish a general JSON speedup or sustained regression.', '', 'All four startup configurations received fixed twenty-pair follow-ups. Tiny calls are noisy. The 10,000-entry median improves −6.472% primary and −6.986% follow-up, while the primary includes a +305.624% elapsed pair. This and all other extrema remain preserved. The follow-up has no repeated >5% median regression, and the protocol does not call for recursive extra runs.', '', 'Spreads are paired minima/maxima, not confidence intervals. Absolute median ratios can differ from paired median changes. Linux lifetime RSS is interpreted with the separate inherited-parent-memory control; no corrected or subtracted RSS is introduced.']
+(r/'analysis/arm64-measurement-review.md').write_text('\n'.join(lines)+'\n')
+print(json.dumps({'passed':True,'rows':len(rows),'text_elapsed_range':record['text_primary_elapsed_median_range_percent'],'repeated':repeated}))

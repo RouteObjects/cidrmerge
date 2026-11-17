@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T15:49:28.278558+00:00",
+  "scope": "Deterministic in-memory auditor identity/reference controls and frozen syntax/protocol checks; no product execution or measurement.",
+  "observations": [
+    {
+      "auditor": "audit_comparison.py",
+      "change": null,
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_atime_ns",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_dev",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_ino",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_size",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_mtime_ns",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "st_ctime_ns",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_comparison.py",
+      "change": "wrong reference content hash",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": null,
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_atime_ns",
+      "expected": "accept",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_dev",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_ino",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_size",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_mtime_ns",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "st_ctime_ns",
+      "expected": "reject",
+      "passed": true
+    },
+    {
+      "auditor": "audit_stdin_comparison.py",
+      "change": "wrong reference content hash",
+      "expected": "reject",
+      "passed": true
+    }
+  ],
+  "frozen_control_files_verified": 22,
+  "protocol_measured": 376,
+  "protocol_warmups": 44,
+  "script_sha256": "48c86429fa869bf37c2578baef035689f4229b120b3ad17fc0137f5d825b1022"
+}

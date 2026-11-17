@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "scope": "warm-cache process startup; separate fresh process each sample; no page-cache eviction and no cold-start claim",
+  "configs": [
+    {
+      "id": "empty-stdin",
+      "flags": [],
+      "input": null,
+      "reference": "startup-fixtures/empty-stdin/stdout.expected",
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "output_bytes": 0,
+      "stderr_reference": "startup-fixtures/empty-stdin/stderr.expected",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "input_count": 0,
+      "reference_method": "Existing fixed CLI version or empty-input contract"
+    },
+    {
+      "id": "version",
+      "flags": [
+        "--version"
+      ],
+      "input": null,
+      "reference": "startup-fixtures/version/stdout.expected",
+      "output_sha256": "f62184cee8787f2f6941c82041a5725d4edc9aa293ebe5dbf664406e82ec1fe1",
+      "output_bytes": 6,
+      "stderr_reference": "startup-fixtures/version/stderr.expected",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "input_count": 0,
+      "reference_method": "Existing fixed CLI version or empty-input contract"
+    },
+    {
+      "id": "mixed-100",
+      "flags": [
+        "--raw",
+        "--representation",
+        "cidr"
+      ],
+      "input": "startup-fixtures/mixed-100/input.txt",
+      "input_sha256": "82f78be0c4582061c1761b85b9096c68de2931f1ed82d9c561e09f0566c910c4",
+      "reference": "startup-fixtures/mixed-100/stdout.expected",
+      "output_sha256": "3b7221aaf5ea43aa511fb4ce9b7e74bcb22d09c1aa9f17c1550968f73a099264",
+      "output_bytes": 1558,
+      "stderr_reference": "startup-fixtures/mixed-100/empty.expected",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "input_count": 100,
+      "reference_method": "Python ipaddress union and canonical formatting"
+    },
+    {
+      "id": "mixed-10000",
+      "flags": [
+        "--raw",
+        "--representation",
+        "cidr"
+      ],
+      "input": "startup-fixtures/mixed-10000/input.txt",
+      "input_sha256": "8b3d579deba75c67214426fddfbf46ee850eb6ec6b6e337fd8cd21a0a18d118f",
+      "reference": "startup-fixtures/mixed-10000/stdout.expected",
+      "output_sha256": "a5eff1f236dfb972cbe8685c1e263423a4b1483d6df4f2b43d47b021831c1921",
+      "output_bytes": 171942,
+      "stderr_reference": "startup-fixtures/mixed-10000/empty.expected",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "input_count": 10000,
+      "reference_method": "Python ipaddress union and canonical formatting"
+    }
+  ],
+  "warmups_per_variant": 1,
+  "measured_pairs": 20,
+  "pair_order": "alternating B/C then C/B with rotating case order",
+  "followup_policy": "One separate 20-pair follow-up for any case with an individual elapsed/RSS regression >5%; preserve all observations."
+}
