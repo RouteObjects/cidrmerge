@@ -28,7 +28,8 @@ import Foundation
 enum SearchbotInputLoader {
     static func load(
         inputs: [String],
-        standardInput: FileHandle = .standardInput
+        standardInput: FileHandle = .standardInput,
+        collectNormalizationStatistics: Bool = true
     ) throws -> ParsedInput {
         let sources = try InputSources.validated(inputs)
         var parsedInput = ParsedInput()
@@ -36,15 +37,21 @@ enum SearchbotInputLoader {
         for source in sources {
             let label = source == "-" ? InputSources.standardInputLabel : source
             let data = try read(source: source, label: label, standardInput: standardInput)
-            try decode(data, source: label, into: &parsedInput)
+            try decode(
+                data, source: label, collectNormalizationStatistics: collectNormalizationStatistics, into: &parsedInput)
         }
 
         return parsedInput
     }
 
-    static func load(data: Data, source: String = "<memory>") throws -> ParsedInput {
+    static func load(
+        data: Data,
+        source: String = "<memory>",
+        collectNormalizationStatistics: Bool = true
+    ) throws -> ParsedInput {
         var parsedInput = ParsedInput()
-        try decode(data, source: source, into: &parsedInput)
+        try decode(
+            data, source: source, collectNormalizationStatistics: collectNormalizationStatistics, into: &parsedInput)
         return parsedInput
     }
 
@@ -69,6 +76,7 @@ enum SearchbotInputLoader {
     private static func decode(
         _ data: Data,
         source: String,
+        collectNormalizationStatistics: Bool,
         into parsedInput: inout ParsedInput
     ) throws {
         guard String(data: data, encoding: .utf8) != nil else {
@@ -86,11 +94,23 @@ enum SearchbotInputLoader {
             )
         }
 
-        let document: SearchbotDocument
         do {
             // Searchbot operands are complete documents by contract. Decoding the whole
             // value also rejects malformed or trailing JSON before any output can be committed.
-            document = try JSONDecoder().decode(SearchbotDocument.self, from: data)
+            // CHANGE: Select counting once per document, keeping per-prefix decoding free of
+            // context dictionary lookups and retaining ordinary JSONDecoder array decoding.
+            let decoder = JSONDecoder()
+            if collectNormalizationStatistics {
+                let document = try decoder.decode(SearchbotDocument<CountedSearchbotPrefix>.self, from: data)
+                for prefix in document.prefixes {
+                    parsedInput.append(prefix.value.range, normalized: prefix.value.normalized)
+                }
+            } else {
+                let document = try decoder.decode(SearchbotDocument<UncountedSearchbotPrefix>.self, from: data)
+                for prefix in document.prefixes {
+                    parsedInput.append(prefix.value.range, normalized: false)
+                }
+            }
         } catch let issue as SearchbotDecodingIssue {
             throw CIDRMergeError.invalidSearchbotInput(
                 source: source,
@@ -112,9 +132,6 @@ enum SearchbotInputLoader {
             )
         }
 
-        for prefix in document.prefixes {
-            parsedInput.append(prefix.range, normalized: prefix.normalized)
-        }
     }
 
     private static func decodingDiagnostic(
@@ -143,11 +160,27 @@ enum SearchbotInputLoader {
 /// Synthesized decoding requires the `prefixes` member while intentionally ignoring descriptive
 /// fields such as `creationTime`. Prefix validation and swift-cidr conversion are delegated to
 /// `SearchbotPrefix`.
-private struct SearchbotDocument: Decodable {
-    let prefixes: [SearchbotPrefix]
+private struct SearchbotDocument<Prefix: Decodable>: Decodable {
+    let prefixes: [Prefix]
 }
 
-private struct SearchbotPrefix: Decodable {
+private struct CountedSearchbotPrefix: Decodable {
+    let value: SearchbotPrefix
+
+    init(from decoder: any Decoder) throws {
+        value = try SearchbotPrefix(from: decoder, collectNormalizationStatistics: true)
+    }
+}
+
+private struct UncountedSearchbotPrefix: Decodable {
+    let value: SearchbotPrefix
+
+    init(from decoder: any Decoder) throws {
+        value = try SearchbotPrefix(from: decoder, collectNormalizationStatistics: false)
+    }
+}
+
+private struct SearchbotPrefix {
     let range: AnyIPAddressRange
     let normalized: Bool
 
@@ -156,7 +189,7 @@ private struct SearchbotPrefix: Decodable {
         case ipv6Prefix
     }
 
-    init(from decoder: any Decoder) throws {
+    init(from decoder: any Decoder, collectNormalizationStatistics: Bool) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let hasIPv4 = container.contains(.ipv4Prefix)
         let hasIPv6 = container.contains(.ipv6Prefix)
@@ -179,7 +212,7 @@ private struct SearchbotPrefix: Decodable {
                 )
             }
             range = AnyIPAddressRange(IPv4AddressRange(covering: network))
-            normalized = network.description != value
+            normalized = collectNormalizationStatistics && network.description != value
         } else {
             let value = try container.decode(String.self, forKey: .ipv6Prefix)
             guard let network = IPv6Network(value) else {
@@ -189,7 +222,7 @@ private struct SearchbotPrefix: Decodable {
                 )
             }
             range = AnyIPAddressRange(IPv6AddressRange(covering: network))
-            normalized = network.description != value
+            normalized = collectNormalizationStatistics && network.description != value
         }
     }
 }

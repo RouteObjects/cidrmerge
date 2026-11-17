@@ -14,18 +14,21 @@
 import Foundation
 
 struct CIDRMergeApplication: Sendable {
-    typealias InputLoader = @Sendable (_ inputs: [String], _ format: InputFormat) throws -> ParsedInput
+    typealias InputLoader =
+        @Sendable (_ inputs: [String], _ format: InputFormat, _ collectNormalizationStatistics: Bool) throws ->
+        ParsedInput
     typealias OutputWriter =
         @Sendable (_ output: Data, _ path: String?, _ includeChecksum: Bool) throws -> Void
     typealias DiagnosticWriter = @Sendable (_ diagnostics: Data) throws -> Void
 
     static let live = CIDRMergeApplication(
-        inputLoader: { inputs, format in
+        inputLoader: { inputs, format, collectNormalizationStatistics in
             switch format {
             case .text:
-                try TextInputLoader.load(inputs: inputs)
+                try TextInputLoader.load(inputs: inputs, collectNormalizationStatistics: collectNormalizationStatistics)
             case .searchbot:
-                try SearchbotInputLoader.load(inputs: inputs)
+                try SearchbotInputLoader.load(
+                    inputs: inputs, collectNormalizationStatistics: collectNormalizationStatistics)
             }
         },
         outputWriter: { output, path, includeChecksum in
@@ -59,7 +62,8 @@ struct CIDRMergeApplication: Sendable {
             outputPath: outputPath
         )
 
-        let parsedInput = try inputLoader(inputs, inputFormat)
+        // CHANGE: Canonical formatting is needed only when normalization statistics will be emitted.
+        let parsedInput = try inputLoader(inputs, inputFormat, includeStatistics)
         let result = parsedInput.merged(representation: representation)
         let output = try OutputRenderer.render(result, format: outputFormat)
 

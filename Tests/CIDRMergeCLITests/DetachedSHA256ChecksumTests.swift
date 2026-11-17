@@ -88,7 +88,7 @@ struct DetachedSHA256ChecksumTests {
     func rejectsStandardOutputBeforeInput() {
         let recorder = ChecksumApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _, _ in
+            inputLoader: { _, _, _ in
                 recorder.recordInput()
                 return ParsedInput()
             },
@@ -118,7 +118,7 @@ struct DetachedSHA256ChecksumTests {
         for path in ["directory/policy\r.txt", "directory/policy\n.txt"] {
             let recorder = ChecksumApplicationRecorder()
             let application = CIDRMergeApplication(
-                inputLoader: { _, _ in
+                inputLoader: { _, _, _ in
                     recorder.recordInput()
                     return ParsedInput()
                 },
@@ -240,7 +240,7 @@ struct DetachedSHA256ChecksumTests {
             standardOutputWriter: { _ in }
         )
         let application = CIDRMergeApplication(
-            inputLoader: { _, _ in
+            inputLoader: { _, _, _ in
                 try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
             outputWriter: { output, path, includeChecksum in
