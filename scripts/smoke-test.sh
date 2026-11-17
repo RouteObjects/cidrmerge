@@ -27,8 +27,8 @@ BINARY="$BINARY_DIRECTORY/cidrmerge"
 [[ -x "$BINARY" ]] || fail "release executable was not found at $BINARY"
 
 # Lock the user-visible release identity and basic help wiring before a tag is created.
-[[ "$("$BINARY" --version)" == "0.4.1" ]] \
-    || fail "--version did not report 0.4.1"
+[[ "$("$BINARY" --version)" == "0.4.2" ]] \
+    || fail "--version did not report 0.4.2"
 
 set +e
 "$BINARY" -v >"$TEMPORARY_DIRECTORY/short-version.stdout" \
