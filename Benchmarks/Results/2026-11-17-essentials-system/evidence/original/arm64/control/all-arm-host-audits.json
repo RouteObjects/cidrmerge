@@ -1,0 +1,516 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T08:11:32.526691+00:00",
+  "preexisting_passed_audits": [
+    "arm64/audits-v3/throughput-ordinary-B-vs-E4-primary/audit.json",
+    "arm64/audits-v3/throughput-ordinary-B-vs-E4-followup-01/audit.json"
+  ],
+  "new_audits": [
+    {
+      "label": "throughput-ordinary-E4-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/E4-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-E4-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-E4-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-R3-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/R3-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-R3-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-R3-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-R3-vs-S2-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/R3-vs-S2/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-R3-vs-S2-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-R3-vs-S2-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-B-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/B-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-B-vs-S2-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/B-vs-S2/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-S2-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-S2-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-B-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/B-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "throughput-ordinary-B-vs-R3-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/comparisons/ordinary/B-vs-R3/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-R3-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/throughput-ordinary-B-vs-R3-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-B-vs-E4-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/B-vs-E4/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-E4-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-E4-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-E4-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/E4-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-E4-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-E4-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-E4-vs-R3-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/E4-vs-R3/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-E4-vs-R3-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-E4-vs-R3-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-R3-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/R3-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-R3-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-R3-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-R3-vs-S2-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/R3-vs-S2/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-R3-vs-S2-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-R3-vs-S2-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-B-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/B-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-ordinary-B-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/ordinary/B-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-ordinary-B-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-release-style-B-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/release-style/B-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-release-style-B-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/release-style/B-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "startup-release-style-B-vs-R3-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/startup/release-style/B-vs-R3/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-R3-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/startup-release-style-B-vs-R3-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-E4-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-E4/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-E4-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-E4-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-E4-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-E4/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-E4-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-E4-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-E4-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/E4-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-E4-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-E4-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-S2-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-S2/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-S2-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-S2-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-S2-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-S2/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-S2-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-S2-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-R3-primary",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-R3/primary",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-R3-primary",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-R3-primary/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    },
+    {
+      "label": "stdin-ordinary-B-vs-R3-followup-01",
+      "command": [
+        "python3",
+        "$EXPERIMENT/control/audit_stdin_comparison_arm_v3.py",
+        "--root",
+        "$EXPERIMENT",
+        "--platform-root",
+        "$EXPERIMENT/arm64",
+        "--directory",
+        "$EXPERIMENT/arm64/stdin/ordinary/B-vs-R3/followup-01",
+        "--platform",
+        "linux",
+        "--output",
+        "$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-R3-followup-01",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"$EXPERIMENT/arm64/audits-v3/stdin-ordinary-B-vs-R3-followup-01/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    }
+  ],
+  "total_phases": 26,
+  "timed_targets_executed": false
+}

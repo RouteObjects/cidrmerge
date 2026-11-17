@@ -9,7 +9,7 @@ Release product target closure
 
 The cidrmerge executable compiles and links code from the following packages.
 CIDRMergeCore itself depends only on swift-cidr; checksum generation and Swift
-Crypto remain confined to the CIDRMergeCLI executable closure.
+Crypto and Swift System remain confined to the CIDRMergeCLI executable closure.
 
 swift-argument-parser 1.8.2
   Revision: 6a52f3251125d74daf04fcbd5e6f08a75d074382
@@ -26,6 +26,18 @@ swift-crypto 5.1.1
   Source: https://github.com/apple/swift-crypto
   License: Apache License 2.0
   Vendored BoringSSL revision: 0226f30467f540a3f62ef48d453f93927da199b6
+
+swift-system 1.7.4
+  Revision: b5544ba79a70a0cb3563e75bf26dc198d6b40ed3
+  Source: https://github.com/apple/swift-system
+  License: Apache License 2.0 with Runtime Library Exception
+
+Swift Foundation compatibility code
+  Sources/CIDRMergeCLI/CLICompatibility.swift adapts error mappings and
+  diagnostic strings from swift-corelibs-foundation.
+  Source: https://github.com/swiftlang/swift-corelibs-foundation
+  Copyright (c) 2014 - 2017 Apple Inc. and the Swift project authors
+  License: Apache License 2.0 with Runtime Library Exception
 
 Resolved-only package graph
 ---------------------------
@@ -59,11 +71,6 @@ swift-nio 2.101.2
   Revision: cd3e1152083706d77b223fb29110e590efcc70c0
   Source: https://github.com/apple/swift-nio
   License: Apache License 2.0
-
-swift-system 1.7.4
-  Revision: b5544ba79a70a0cb3563e75bf26dc198d6b40ed3
-  Source: https://github.com/apple/swift-system
-  License: Apache License 2.0 with Runtime Library Exception
 
 SwiftNIO's NOTICE and bundled component terms are intentionally not reproduced
 here because no SwiftNIO product or component is linked into cidrmerge.

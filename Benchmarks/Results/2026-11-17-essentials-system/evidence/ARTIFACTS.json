@@ -1,0 +1,1022 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T08:23:39.398413+00:00",
+  "scope": "Existing receipt metadata only; no new builds, measurements or hashes. Artifact byte counts are file sizes; runtime closure sums are dependent files, not resident memory or executable contents. Final artifact, qualification, runtime-resolution and RSS-method-control receipts are available for all three platforms; performance comparisons remain in the separate report dataset.",
+  "platforms": {
+    "macos": {
+      "artifacts": {
+        "ordinary_unstripped": {
+          "B": {
+            "bytes": 2443496,
+            "sha256": "f059a6959635aea6a48b69a8e673a2c16aba3729a043bf82828845c3b32dc839",
+            "receipt": "macos/ordinary-artifacts/receipts.json",
+            "selector": "B.ordinary"
+          },
+          "R3": {
+            "bytes": 2955992,
+            "sha256": "188ca25b9243584fbe38273aed2e136cbc63f50d0ab860ff8015b0a48a97aeec",
+            "receipt": "macos/ordinary-artifacts/receipts.json",
+            "selector": "R3.ordinary"
+          }
+        },
+        "ordinary_stripped": {
+          "B": {
+            "bytes": 1290512,
+            "sha256": "7a994c73c5b464548df5f9aed9a5b55fd7ecf7b94c404d017cf6fba58c49f0d4",
+            "receipt": "macos/ordinary-artifacts/receipts.json",
+            "selector": "B.stripped_copy"
+          },
+          "R3": {
+            "bytes": 1515776,
+            "sha256": "089ed5ca52c1587e83e101e46da9aad12160941058cb2f5692e69d104b59f888",
+            "receipt": "macos/ordinary-artifacts/receipts.json",
+            "selector": "R3.stripped_copy"
+          }
+        },
+        "shipping_stripped": {
+          "B": {
+            "bytes": 1290512,
+            "sha256": "02987a3ca131498aa0414919b6e68f350131981b9436251d22fd7794f6f2106e",
+            "receipt": "macos/release-style/control/artifacts.json",
+            "selector": "B.stripped"
+          },
+          "R3": {
+            "bytes": 1515776,
+            "sha256": "e5af4e71a7513e11ed1152b357ea0d6293db709e05e7342aee5ce9d120e7ae52",
+            "receipt": "macos/release-style/control/artifacts-R3.json",
+            "selector": "R3.stripped"
+          }
+        }
+      },
+      "runtime_closures": {
+        "ordinary": {
+          "B": {
+            "file_bytes_sum": null,
+            "reason": "No dependent-file byte sum recorded for system/shared-cache dylibs."
+          },
+          "R3": {
+            "file_bytes_sum": null,
+            "reason": "No dependent-file byte sum recorded for system/shared-cache dylibs."
+          }
+        },
+        "shipping": {
+          "B": {
+            "file_bytes_sum": null,
+            "reason": "No dependent-file byte sum recorded for system/shared-cache dylibs."
+          },
+          "R3": {
+            "file_bytes_sum": null,
+            "reason": "No dependent-file byte sum recorded for system/shared-cache dylibs."
+          }
+        }
+      },
+      "libraries": {
+        "ordinary": {
+          "scope": "Direct otool load commands, not a complete transitive closure.",
+          "receipt": "macos/ordinary-artifacts/receipts.json",
+          "B": [
+            "Foundation",
+            "libobjc.A.dylib",
+            "libSystem.B.dylib",
+            "CryptoKit",
+            "libc++.1.dylib",
+            "libswiftCore.dylib",
+            "libswiftCoreFoundation.dylib",
+            "libswiftDarwin.dylib",
+            "libswiftDispatch.dylib",
+            "libswiftIOKit.dylib",
+            "libswiftObjectiveC.dylib",
+            "libswiftXPC.dylib",
+            "libswift_Builtin_float.dylib",
+            "libswift_Concurrency.dylib",
+            "libswift_StringProcessing.dylib",
+            "libswiftos.dylib",
+            "libswift_stdio.dylib"
+          ],
+          "R3": [
+            "Foundation",
+            "libobjc.A.dylib",
+            "libSystem.B.dylib",
+            "CryptoKit",
+            "libc++.1.dylib",
+            "libswiftCore.dylib",
+            "libswiftCoreFoundation.dylib",
+            "libswiftDarwin.dylib",
+            "libswiftDispatch.dylib",
+            "libswiftIOKit.dylib",
+            "libswiftObjectiveC.dylib",
+            "libswiftXPC.dylib",
+            "libswift_Builtin_float.dylib",
+            "libswift_Concurrency.dylib",
+            "libswift_StringProcessing.dylib",
+            "libswiftos.dylib",
+            "libswift_errno.dylib",
+            "libswift_stdio.dylib"
+          ],
+          "removed": [],
+          "added": [
+            "libswift_errno.dylib"
+          ]
+        },
+        "shipping": {
+          "scope": "Direct otool load commands, not a complete transitive closure.",
+          "receipts": [
+            "macos/release-style/logs/B-libraries.log",
+            "macos/release-style/logs/R3-libraries.log"
+          ],
+          "B": [
+            "Foundation",
+            "libobjc.A.dylib",
+            "libSystem.B.dylib",
+            "CryptoKit",
+            "libc++.1.dylib",
+            "libswiftCore.dylib",
+            "libswiftCoreFoundation.dylib",
+            "libswiftDarwin.dylib",
+            "libswiftDispatch.dylib",
+            "libswiftIOKit.dylib",
+            "libswiftObjectiveC.dylib",
+            "libswiftXPC.dylib",
+            "libswift_Builtin_float.dylib",
+            "libswift_Concurrency.dylib",
+            "libswift_StringProcessing.dylib",
+            "libswiftos.dylib",
+            "libswift_stdio.dylib"
+          ],
+          "R3": [
+            "Foundation",
+            "libobjc.A.dylib",
+            "libSystem.B.dylib",
+            "CryptoKit",
+            "libc++.1.dylib",
+            "libswiftCore.dylib",
+            "libswiftCoreFoundation.dylib",
+            "libswiftDarwin.dylib",
+            "libswiftDispatch.dylib",
+            "libswiftIOKit.dylib",
+            "libswiftObjectiveC.dylib",
+            "libswiftXPC.dylib",
+            "libswift_Builtin_float.dylib",
+            "libswift_Concurrency.dylib",
+            "libswift_StringProcessing.dylib",
+            "libswiftos.dylib",
+            "libswift_errno.dylib",
+            "libswift_stdio.dylib"
+          ],
+          "removed": [],
+          "added": [
+            "libswift_errno.dylib"
+          ]
+        }
+      },
+      "strip_options": {
+        "ordinary": [
+          "-S",
+          "-x"
+        ],
+        "shipping": [
+          "-S",
+          "-x"
+        ]
+      }
+    },
+    "arm64": {
+      "artifacts": {
+        "ordinary_unstripped": {
+          "B": {
+            "bytes": 17304928,
+            "sha256": "221bd0b8cc8b05e0628bc0d0d91ba3d3628fccf7bfa0b47f851eb5676a94e5e1",
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/B"
+          },
+          "R3": {
+            "bytes": 19099072,
+            "sha256": "a7e94f1b2c1865dba428c0ffca9e3572fd04dfc66cd061b1e35b1cc95863573a",
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/R3"
+          }
+        },
+        "ordinary_stripped": {
+          "B": {
+            "bytes": 3322808,
+            "sha256": "f5d8983b28638e4612a251e7e4398e2412e2f85d3e5b159b0fbe8690cf39d99d",
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/B",
+            "bytes_field": "stripped_bytes",
+            "sha256_field": "stripped_sha256"
+          },
+          "R3": {
+            "bytes": 3608192,
+            "sha256": "bf20bef07df9259f519dc1847f7ff2dc6230eba7a35fcd91e95bbcccd8ad40e7",
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/R3",
+            "bytes_field": "stripped_bytes",
+            "sha256_field": "stripped_sha256"
+          }
+        },
+        "shipping_stripped": {
+          "B": {
+            "bytes": 60849832,
+            "sha256": "c9b20a076281bf29338f24c8d42926978568a693856f8773e5b02df1a51eb03d",
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.release-style/B"
+          },
+          "R3": {
+            "bytes": 17260632,
+            "sha256": "78443f3b289302c800187f0419d4c9e46d40abb37e087f82bc0bb4381edf178e",
+            "receipt": "arm64/runtime/release-style-R3.json",
+            "selector": "binary_bytes/binary_sha256"
+          }
+        }
+      },
+      "runtime_closures": {
+        "ordinary": {
+          "B": {
+            "file_bytes_sum": 84535576,
+            "file_count": 20,
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/B.linked_file_bytes_sum"
+          },
+          "R3": {
+            "file_bytes_sum": 30724480,
+            "file_count": 16,
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.ordinary/R3.linked_file_bytes_sum"
+          }
+        },
+        "shipping": {
+          "B": {
+            "file_bytes_sum": 5285608,
+            "file_count": 5,
+            "receipt": "arm64/runtime/manifest.json",
+            "selector": "artifacts.release-style/B.linked_file_bytes_sum"
+          },
+          "R3": {
+            "file_bytes_sum": 5285608,
+            "file_count": 5,
+            "receipt": "arm64/runtime/release-style-R3.json",
+            "selector": "linked_file_bytes_sum"
+          }
+        }
+      },
+      "libraries": {
+        "ordinary_direct": {
+          "scope": "ELF DT_NEEDED",
+          "receipt": "arm64/runtime/manifest.json",
+          "B": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ],
+          "R3": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftSynchronization.so",
+            "libswiftGlibc.so",
+            "libFoundationEssentials.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ],
+          "removed": [
+            "libBlocksRuntime.so",
+            "libFoundation.so",
+            "libFoundationInternationalization.so",
+            "libdispatch.so",
+            "libswiftDispatch.so"
+          ],
+          "added": [
+            "libswiftSynchronization.so"
+          ]
+        },
+        "ordinary_closure": {
+          "scope": "Resolved ldd dependent files",
+          "receipt": "arm64/runtime/manifest.json",
+          "B": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1",
+            "libswift_Builtin_float.so",
+            "lib_FoundationICU.so",
+            "libswiftSynchronization.so"
+          ],
+          "R3": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftSynchronization.so",
+            "libswiftGlibc.so",
+            "libFoundationEssentials.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1",
+            "libdispatch.so",
+            "libswift_Builtin_float.so",
+            "libBlocksRuntime.so"
+          ],
+          "removed": [
+            "libFoundation.so",
+            "libFoundationInternationalization.so",
+            "lib_FoundationICU.so",
+            "libswiftDispatch.so"
+          ],
+          "added": []
+        },
+        "shipping_direct": {
+          "scope": "ELF DT_NEEDED",
+          "receipts": [
+            "arm64/runtime/manifest.json",
+            "arm64/runtime/release-style-R3.json"
+          ],
+          "B": [
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ],
+          "R3": [
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-aarch64.so.1"
+          ],
+          "removed": [],
+          "added": []
+        }
+      },
+      "strip_options": {
+        "ordinary": [
+          "--strip-unneeded"
+        ],
+        "shipping": [
+          "--strip-unneeded"
+        ]
+      }
+    },
+    "x86_64": {
+      "artifacts": {
+        "ordinary_unstripped": {
+          "B": {
+            "bytes": 17694808,
+            "sha256": "758607f9c67e4a4aafd10b33526916c1f99dd35f76c8aa1950d13a2155155922",
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-B/B-build-release.json",
+            "selector": "binary"
+          },
+          "R3": {
+            "bytes": 19479048,
+            "sha256": "7c002a7e7cc9fcba75795b0399efadc8c446e41df97055f46099fd937306c310",
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-R3/R3-build-release.json",
+            "selector": "binary"
+          }
+        },
+        "ordinary_stripped": {
+          "B": {
+            "bytes": 3721800,
+            "sha256": "d2fba00bfd1dca33fa2f87afee1bee07a07b91fd20df528afb7a797d1b3fe069",
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-B/B-build-release.json",
+            "selector": "stripped"
+          },
+          "R3": {
+            "bytes": 4024520,
+            "sha256": "01c63da2297dddd18193c06efb4a59398d8275830ed1c4cfa58478b0e491c296",
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-R3/R3-build-release.json",
+            "selector": "stripped"
+          }
+        },
+        "shipping_stripped": {
+          "R3": {
+            "bytes": 18837680,
+            "sha256": "3f1974e3f7ff1358c60d1c24ca7acfe6b1caf6c8d9167b9de7ecb5710e8e59f7",
+            "receipt": "x86_64/retrieved/metadata-02/control/release-style-R3/complete.json",
+            "selector": "stripped"
+          },
+          "B": {
+            "bytes": 62619384,
+            "sha256": "c7f463182d168cb31260bed47bde6843cdba6dc1c743d274b215b2965a54fb5b",
+            "receipt": "x86_64/retrieved/metadata-01/control/release-style-B/complete.json",
+            "selector": "stripped"
+          }
+        },
+        "shipping_unstripped": {
+          "B": {
+            "bytes": 89338824,
+            "sha256": "c88db053a0bfb83f70e06b664a8560875706c9f32ecda50f286149152fa67761",
+            "receipt": "x86_64/retrieved/metadata-01/control/release-style-B/complete.json",
+            "selector": "unstripped"
+          },
+          "R3": {
+            "bytes": 41791264,
+            "sha256": "82cd163892c646e15437f26373819ff73c5bdaf09084a9d9c78e132c1df56fd5",
+            "receipt": "x86_64/retrieved/metadata-02/control/release-style-R3/complete.json",
+            "selector": "unstripped"
+          }
+        }
+      },
+      "runtime_closures": {
+        "ordinary": {
+          "B": {
+            "file_bytes_sum": 85108832,
+            "file_count": 20,
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-B/B-build-release.json",
+            "selector": "sum(runtime_libraries.*.bytes)",
+            "method": "Sum of per-file preserved sizes in this exact ordinary binary build receipt; no filesystem scan.",
+            "actual_resolution_receipt": "x86_64/retrieved/final-v2/control/actual-runtime-closure.json"
+          },
+          "R3": {
+            "file_bytes_sum": 31621792,
+            "file_count": 16,
+            "receipt": "x86_64/retrieved/metadata-01/control/build-tests-R3/R3-build-release.json",
+            "selector": "sum(runtime_libraries.*.bytes)",
+            "method": "Sum of per-file preserved sizes in this exact ordinary binary build receipt; no filesystem scan.",
+            "actual_resolution_receipt": "x86_64/retrieved/final-v2/control/actual-runtime-closure.json"
+          }
+        },
+        "shipping": {
+          "B": {
+            "file_bytes_sum": null,
+            "reason": "Shipping ldd names recorded, but no shipping dependent-file size sum in this retrieved receipt."
+          },
+          "R3": {
+            "file_bytes_sum": null,
+            "reason": "Shipping ldd names recorded, but no shipping dependent-file size sum in this retrieved receipt.",
+            "receipt": "x86_64/retrieved/metadata-02/control/release-style-R3/complete.json"
+          }
+        }
+      },
+      "libraries": {
+        "ordinary_direct": {
+          "scope": "ELF DT_NEEDED",
+          "receipts": [
+            "x86_64/retrieved/metadata-01/control/build-tests-B/B-build-release.json",
+            "x86_64/retrieved/metadata-01/control/build-tests-R3/R3-build-release.json"
+          ],
+          "B": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "R3": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftSynchronization.so",
+            "libswiftGlibc.so",
+            "libFoundationEssentials.so",
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6"
+          ],
+          "removed": [
+            "libBlocksRuntime.so",
+            "libFoundation.so",
+            "libFoundationInternationalization.so",
+            "libdispatch.so",
+            "libswiftDispatch.so"
+          ],
+          "added": [
+            "libswiftSynchronization.so"
+          ]
+        },
+        "ordinary_closure": {
+          "scope": "Resolved ldd files preserved in runtime_libraries",
+          "receipts": [
+            "x86_64/retrieved/metadata-01/control/build-tests-B/B-build-release.json",
+            "x86_64/retrieved/metadata-01/control/build-tests-R3/R3-build-release.json"
+          ],
+          "B": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftGlibc.so",
+            "libBlocksRuntime.so",
+            "libdispatch.so",
+            "libswiftDispatch.so",
+            "libFoundation.so",
+            "libFoundationEssentials.so",
+            "libFoundationInternationalization.so",
+            "libm.so.6",
+            "libstdc++.so.6.0.33",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2",
+            "libswift_Builtin_float.so",
+            "lib_FoundationICU.so",
+            "libswiftSynchronization.so"
+          ],
+          "R3": [
+            "libswiftCore.so",
+            "libswiftObservation.so",
+            "libswift_Concurrency.so",
+            "libswift_StringProcessing.so",
+            "libswift_RegexParser.so",
+            "libswiftSynchronization.so",
+            "libswiftGlibc.so",
+            "libFoundationEssentials.so",
+            "libm.so.6",
+            "libstdc++.so.6.0.33",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2",
+            "libdispatch.so",
+            "libswift_Builtin_float.so",
+            "libBlocksRuntime.so"
+          ],
+          "removed": [
+            "libFoundation.so",
+            "libFoundationInternationalization.so",
+            "lib_FoundationICU.so",
+            "libswiftDispatch.so"
+          ],
+          "added": []
+        },
+        "shipping_direct": {
+          "scope": "ELF DT_NEEDED",
+          "receipts": [
+            "x86_64/retrieved/metadata-01/control/release-style-B/complete.json",
+            "x86_64/retrieved/metadata-02/control/release-style-R3/complete.json"
+          ],
+          "B": [
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "R3": [
+            "libm.so.6",
+            "libstdc++.so.6",
+            "libgcc_s.so.1",
+            "libc.so.6",
+            "ld-linux-x86-64.so.2"
+          ],
+          "removed": [],
+          "added": [],
+          "ldd_success_both": true,
+          "note": "The same five system libraries are recorded; neither shipping executable dynamically requires Swift, Foundation, dispatch, BlocksRuntime, crypto or ssl libraries."
+        }
+      },
+      "strip_options": {
+        "ordinary": [
+          "--strip-all"
+        ],
+        "shipping": [
+          "--strip-unneeded"
+        ]
+      },
+      "pending": [],
+      "artifact_build_status": "Shipping B/R3 build, version, offline smoke and recorded linkage succeeded. Final R3 qualification passed, and all 24 matched-result phases have independent passed audits in analysis/x86_64-report-index.json.",
+      "qualification_index": "analysis/x86_64-report-index.json",
+      "actual_runtime_loading": {
+        "receipt": "x86_64/retrieved/final-v2/control/actual-runtime-closure.json",
+        "passed": true,
+        "scope": "Post-timing resolution under the unchanged measurement LD_LIBRARY_PATH; all resolved libraries match premeasurement original and preserved-copy SHA256. Versioned system library SONAME and ELF interpreter may resolve to host paths.",
+        "variants": {
+          "B": {
+            "file_count": 20,
+            "unique_library_file_bytes": 85108832,
+            "all_match_original_and_preserved_hashes": true,
+            "loaded_libraries": [
+              {
+                "name": "libswiftCore.so",
+                "resolved_name": "libswiftCore.so",
+                "bytes": 10010352,
+                "sha256": "c6aa1b71de9ca9d7c332b7570410fbd78824aa6a81f3d114a2fd4f8aed234495",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftObservation.so",
+                "resolved_name": "libswiftObservation.so",
+                "bytes": 248464,
+                "sha256": "28f659fac470ab439aa8a702b4f0c442b423b9ef407a276604d1fec64e23b49d",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_Concurrency.so",
+                "resolved_name": "libswift_Concurrency.so",
+                "bytes": 1074480,
+                "sha256": "9674ef95465d75dcd9db322b9aaf2dd165dd3c1552ba4297f86984eb280a82f3",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_StringProcessing.so",
+                "resolved_name": "libswift_StringProcessing.so",
+                "bytes": 1171024,
+                "sha256": "74d6f891a5e73ebe9495e14f99e9705324e8f74ba6e0c11ab1d41240b4a47b40",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_RegexParser.so",
+                "resolved_name": "libswift_RegexParser.so",
+                "bytes": 1619712,
+                "sha256": "fec1ba16f36bddd0587160b58db8d83fa96ec4b389075a64085ff8dfe5ad9653",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftGlibc.so",
+                "resolved_name": "libswiftGlibc.so",
+                "bytes": 91080,
+                "sha256": "6785a4f432afb81dd71c5601546987738b263e7a6ac9b4b3729eec35afc11352",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libBlocksRuntime.so",
+                "resolved_name": "libBlocksRuntime.so",
+                "bytes": 12968,
+                "sha256": "63817f148114684199a286c14e91acc2685e18be54b0777ddd6f974f9c2d2498",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libdispatch.so",
+                "resolved_name": "libdispatch.so",
+                "bytes": 436272,
+                "sha256": "28c33251625914f84eba5eac5251c046e4b48fd7aedb34aefe083802d5fb4f41",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftDispatch.so",
+                "resolved_name": "libswiftDispatch.so",
+                "bytes": 347104,
+                "sha256": "ba854ffcd2471bb6b825ba31ab75d6bb4d4754f4368d6ec9c44dd90b4bf6327a",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libFoundation.so",
+                "resolved_name": "libFoundation.so",
+                "bytes": 8879584,
+                "sha256": "f9f6cdf28af10976349f6e19ce934d3c84255df3b5f51ad5284120cf0992613c",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libFoundationEssentials.so",
+                "resolved_name": "libFoundationEssentials.so",
+                "bytes": 10720840,
+                "sha256": "859d4a1ed4be8f883fa2321afb239d505502137f4b570d73320c7836e1b3db8c",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libFoundationInternationalization.so",
+                "resolved_name": "libFoundationInternationalization.so",
+                "bytes": 3791928,
+                "sha256": "e001628d3341edaa5873d920bad73b3f9f4b77dcfeb95d99011d57926d2faee9",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libm.so.6",
+                "resolved_name": "libm.so.6",
+                "bytes": 952616,
+                "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libstdc++.so.6",
+                "resolved_name": "libstdc++.so.6.0.33",
+                "bytes": 2592224,
+                "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+                "loaded_from_frozen_directory": false
+              },
+              {
+                "name": "libgcc_s.so.1",
+                "resolved_name": "libgcc_s.so.1",
+                "bytes": 183024,
+                "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libc.so.6",
+                "resolved_name": "libc.so.6",
+                "bytes": 2129424,
+                "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "ld-linux-x86-64.so.2",
+                "resolved_name": "ld-linux-x86-64.so.2",
+                "bytes": 236616,
+                "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da",
+                "loaded_from_frozen_directory": false
+              },
+              {
+                "name": "libswift_Builtin_float.so",
+                "resolved_name": "libswift_Builtin_float.so",
+                "bytes": 16680,
+                "sha256": "21e198f17e8e4ae1b200dbef73e592d3aab82f08e8f19affd8c91c4adf5a8a44",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "lib_FoundationICU.so",
+                "resolved_name": "lib_FoundationICU.so",
+                "bytes": 40468424,
+                "sha256": "f42e81dc36a0e8c208e4de15b2b6a2cccfed6bc55a87472914708025728a584a",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftSynchronization.so",
+                "resolved_name": "libswiftSynchronization.so",
+                "bytes": 126016,
+                "sha256": "a603dace2ffbf26122e6b15d908e4e09ade945c4036fc251ef07f754ff83b3ea",
+                "loaded_from_frozen_directory": true
+              }
+            ]
+          },
+          "R3": {
+            "file_count": 16,
+            "unique_library_file_bytes": 31621792,
+            "all_match_original_and_preserved_hashes": true,
+            "loaded_libraries": [
+              {
+                "name": "libswiftCore.so",
+                "resolved_name": "libswiftCore.so",
+                "bytes": 10010352,
+                "sha256": "c6aa1b71de9ca9d7c332b7570410fbd78824aa6a81f3d114a2fd4f8aed234495",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftObservation.so",
+                "resolved_name": "libswiftObservation.so",
+                "bytes": 248464,
+                "sha256": "28f659fac470ab439aa8a702b4f0c442b423b9ef407a276604d1fec64e23b49d",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_Concurrency.so",
+                "resolved_name": "libswift_Concurrency.so",
+                "bytes": 1074480,
+                "sha256": "9674ef95465d75dcd9db322b9aaf2dd165dd3c1552ba4297f86984eb280a82f3",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_StringProcessing.so",
+                "resolved_name": "libswift_StringProcessing.so",
+                "bytes": 1171024,
+                "sha256": "74d6f891a5e73ebe9495e14f99e9705324e8f74ba6e0c11ab1d41240b4a47b40",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_RegexParser.so",
+                "resolved_name": "libswift_RegexParser.so",
+                "bytes": 1619712,
+                "sha256": "fec1ba16f36bddd0587160b58db8d83fa96ec4b389075a64085ff8dfe5ad9653",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftSynchronization.so",
+                "resolved_name": "libswiftSynchronization.so",
+                "bytes": 126016,
+                "sha256": "a603dace2ffbf26122e6b15d908e4e09ade945c4036fc251ef07f754ff83b3ea",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswiftGlibc.so",
+                "resolved_name": "libswiftGlibc.so",
+                "bytes": 91080,
+                "sha256": "6785a4f432afb81dd71c5601546987738b263e7a6ac9b4b3729eec35afc11352",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libFoundationEssentials.so",
+                "resolved_name": "libFoundationEssentials.so",
+                "bytes": 10720840,
+                "sha256": "859d4a1ed4be8f883fa2321afb239d505502137f4b570d73320c7836e1b3db8c",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libm.so.6",
+                "resolved_name": "libm.so.6",
+                "bytes": 952616,
+                "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libstdc++.so.6",
+                "resolved_name": "libstdc++.so.6.0.33",
+                "bytes": 2592224,
+                "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+                "loaded_from_frozen_directory": false
+              },
+              {
+                "name": "libgcc_s.so.1",
+                "resolved_name": "libgcc_s.so.1",
+                "bytes": 183024,
+                "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libc.so.6",
+                "resolved_name": "libc.so.6",
+                "bytes": 2129424,
+                "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "ld-linux-x86-64.so.2",
+                "resolved_name": "ld-linux-x86-64.so.2",
+                "bytes": 236616,
+                "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da",
+                "loaded_from_frozen_directory": false
+              },
+              {
+                "name": "libdispatch.so",
+                "resolved_name": "libdispatch.so",
+                "bytes": 436272,
+                "sha256": "28c33251625914f84eba5eac5251c046e4b48fd7aedb34aefe083802d5fb4f41",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libswift_Builtin_float.so",
+                "resolved_name": "libswift_Builtin_float.so",
+                "bytes": 16680,
+                "sha256": "21e198f17e8e4ae1b200dbef73e592d3aab82f08e8f19affd8c91c4adf5a8a44",
+                "loaded_from_frozen_directory": true
+              },
+              {
+                "name": "libBlocksRuntime.so",
+                "resolved_name": "libBlocksRuntime.so",
+                "bytes": 12968,
+                "sha256": "63817f148114684199a286c14e91acc2685e18be54b0777ddd6f974f9c2d2498",
+                "loaded_from_frozen_directory": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "startup_rss_control": {
+    "receipt": "arm64/harness-controls/rss-fork-floor/summary.json",
+    "platform": "arm64",
+    "target": "/bin/true",
+    "groups": [
+      {
+        "allocated_parent_mib": 0,
+        "n": 3,
+        "child_peak_rss_bytes": [
+          18092032,
+          18092032,
+          18092032
+        ],
+        "median_child_peak_rss_bytes": 18092032
+      },
+      {
+        "allocated_parent_mib": 32,
+        "n": 3,
+        "child_peak_rss_bytes": [
+          51695616,
+          51781632,
+          51781632
+        ],
+        "median_child_peak_rss_bytes": 51781632
+      },
+      {
+        "allocated_parent_mib": 96,
+        "n": 3,
+        "child_peak_rss_bytes": [
+          118812672,
+          118882304,
+          118882304
+        ],
+        "median_child_peak_rss_bytes": 118882304
+      }
+    ],
+    "interpretation": "Unchanged /bin/true reports larger lifetime peak RSS when parent Python memory is increased, confirming inherited/pre-exec parent-memory influence in this Popen/wait4 method on this Linux host. Tiny-process peaks are not isolated application-only RSS. Do not subtract the control floor or correct, pool, or discard original samples. This is a measurement-method control, not cidrmerge performance; it does not invalidate elapsed measurements or establish equality of application-only peaks.",
+    "legacy_field_note": "Retained for compatibility; startup_rss_controls includes both independently controlled Linux hosts."
+  },
+  "updated_at": "2026-11-17T09:30:18.527069+00:00",
+  "startup_rss_controls": {
+    "arm64": {
+      "receipt": "arm64/harness-controls/rss-fork-floor/summary.json",
+      "platform": "arm64",
+      "target": "/bin/true",
+      "groups": [
+        {
+          "allocated_parent_mib": 0,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            18092032,
+            18092032,
+            18092032
+          ],
+          "median_child_peak_rss_bytes": 18092032
+        },
+        {
+          "allocated_parent_mib": 32,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            51695616,
+            51781632,
+            51781632
+          ],
+          "median_child_peak_rss_bytes": 51781632
+        },
+        {
+          "allocated_parent_mib": 96,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            118812672,
+            118882304,
+            118882304
+          ],
+          "median_child_peak_rss_bytes": 118882304
+        }
+      ],
+      "interpretation": "Unchanged /bin/true reports larger lifetime peak RSS when parent Python memory is increased, confirming inherited/pre-exec parent-memory influence in this Popen/wait4 method on this Linux host. Tiny-process peaks are not isolated application-only RSS. Do not subtract the control floor or correct, pool, or discard original samples. This is a measurement-method control, not cidrmerge performance; it does not invalidate elapsed measurements or establish equality of application-only peaks.",
+      "legacy_field_note": "Retained for compatibility; startup_rss_controls includes both independently controlled Linux hosts."
+    },
+    "x86_64": {
+      "receipt": "x86_64/retrieved/final-v2/correctness/rss-fork-floor/summary.json",
+      "platform": "x86_64",
+      "target": "/bin/true",
+      "passed": true,
+      "runner_sha256": "1159ca885797f7704c824fb9cd43dfff91d18bb830c8d8f0343f27310e3dd764",
+      "groups": [
+        {
+          "allocated_parent_mib": 0,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            20402176,
+            20402176,
+            20402176
+          ],
+          "median_child_peak_rss_bytes": 20402176
+        },
+        {
+          "allocated_parent_mib": 32,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            52670464,
+            52670464,
+            52801536
+          ],
+          "median_child_peak_rss_bytes": 52670464
+        },
+        {
+          "allocated_parent_mib": 96,
+          "n": 3,
+          "child_peak_rss_bytes": [
+            119832576,
+            119832576,
+            119963648
+          ],
+          "median_child_peak_rss_bytes": 119832576
+        }
+      ],
+      "interpretation": "Unchanged /bin/true reports larger lifetime peak RSS when parent Python memory is increased, confirming inherited/pre-exec parent-memory influence in this Popen/wait4 method on this Linux host. Tiny-process peaks are not isolated application-only RSS. Do not subtract the control floor or correct, pool, or discard original samples. This is a measurement-method control, not cidrmerge performance; it does not invalidate elapsed measurements or establish equality of application-only peaks."
+    }
+  }
+}

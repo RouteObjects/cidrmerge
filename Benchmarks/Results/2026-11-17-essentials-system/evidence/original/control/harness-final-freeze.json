@@ -1,0 +1,74 @@
+{
+  "at": "2026-11-17T06:18:34.840578+00:00",
+  "files": {
+    "run_matched.py": "94880fb6cca26a3409fc228ca96a0fd3b0140aee9729b46e66d4b50e128646c6",
+    "run_startup.py": "1159ca885797f7704c824fb9cd43dfff91d18bb830c8d8f0343f27310e3dd764",
+    "run_comparison.py": "e859140f12735f2b79ad6a34557ef088ec3ac1088d822db0c99fca84760e8fc5",
+    "audit_comparison.py": "8b2858a808f2c4bc311339148ca9f08caf9c8a1ae95039d1a67769afb5b7173f",
+    "cases.json": "bae598212ea4db7ca99bb9292efb76a099eb52ba51b64a4240fd16c1bf13cf16",
+    "startup-cases.json": "43123b5256bd87e2f3e6bc117d502586dc13a1882f2909e3c7a7f175c11d6f98",
+    "prepare_fixtures.py": "853eb237d5e561edecc428ab8cc94e32cf31726d0c3c82ee9b61724e9e5fa524",
+    "comparison-protocol-final.json": "74de5f8e686e472b06fad0affa2e5ac845f2cdcd49f3bdbc5b6bebaf65172a36",
+    "release-style-protocol-addendum.json": "d225ee66dcbc5670c6e02229f0d815c8e846a2b04f57423c30a946a28390bb22",
+    "negative_control_v2.py": "6fb702099b91cd499ac08debe8513c6149a19058e47350e54c9c1dae62749e3b"
+  },
+  "final_fake_child_smoke_and_audit": [
+    {
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/control/docker-config",
+        "--host",
+        "unix://$HOME/.orbstack/run/docker.sock",
+        "exec",
+        "cidrmerge-essentials-arm642-20261117T053919Z",
+        "/validation/python/bin/python3",
+        "/experiment/control/run_comparison.py",
+        "--root",
+        "/experiment",
+        "--platform-root",
+        "/validation/harness-controls/wrapper",
+        "--platform",
+        "linux",
+        "--comparison",
+        "F1-vs-F2",
+        "--phase",
+        "smoke-02",
+        "--startup",
+        "--only",
+        "version"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"comparison\": \"F1-vs-F2\", \"phase\": \"smoke-02\", \"startup\": true, \"exit_code\": 0, \"output\": \"/validation/harness-controls/wrapper/startup/ordinary/F1-vs-F2/smoke-02\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/control/docker-config",
+        "--host",
+        "unix://$HOME/.orbstack/run/docker.sock",
+        "exec",
+        "cidrmerge-essentials-arm642-20261117T053919Z",
+        "/validation/python/bin/python3",
+        "/experiment/control/audit_comparison.py",
+        "--root",
+        "/experiment",
+        "--platform-root",
+        "/validation/harness-controls/wrapper",
+        "--directory",
+        "/validation/harness-controls/wrapper/startup/ordinary/F1-vs-F2/smoke-02",
+        "--platform",
+        "linux",
+        "--output",
+        "/validation/harness-controls/wrapper/audit-02",
+        "--timing-finished"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": true, \"receipt\": \"/validation/harness-controls/wrapper/audit-02/audit.json\", \"error\": null}\n",
+      "stderr": ""
+    }
+  ],
+  "target_benchmarks_started": false
+}

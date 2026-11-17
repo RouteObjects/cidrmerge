@@ -12,7 +12,12 @@
 //===----------------------------------------------------------------------===//
 
 import ArgumentParser
-import Foundation
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 // Package access lets the thin executable invoke Argument Parser while the command remains in the
 // regular CIDRMergeCLI module used by SwiftPM and Xcode tests.

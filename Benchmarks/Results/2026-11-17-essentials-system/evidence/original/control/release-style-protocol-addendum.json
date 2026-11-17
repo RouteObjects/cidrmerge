@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-11-17T05:57:04.325019+00:00",
+  "ordinary_protocol": "comparison-protocol.json",
+  "additional_linux_release_style": {
+    "variants": [
+      "B",
+      "S"
+    ],
+    "build": "swift build -c release --product cidrmerge --static-swift-stdlib, matching release path remapping",
+    "strip": "strip --strip-unneeded",
+    "startup_comparison": "B-vs-S",
+    "warmups": 8,
+    "measured_samples": 160,
+    "ordinary_throughput_unchanged": true
+  },
+  "limitation": "Warm-cache startup; no cold-cache claim, no pooling ordinary and release-style observations"
+}

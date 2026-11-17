@@ -1,0 +1,712 @@
+{
+  "recorded_at": "2026-11-17T07:11:08.607803+00:00",
+  "all_passed": true,
+  "groups": {
+    "audits": {
+      "phases": 7,
+      "all_passed": true,
+      "measured_samples": 1104,
+      "warmups": 184
+    },
+    "startup-audits": {
+      "phases": 14,
+      "all_passed": true,
+      "measured_samples": 2200,
+      "warmups": 110
+    },
+    "stdin-audits": {
+      "phases": 4,
+      "all_passed": true,
+      "measured_samples": 96,
+      "warmups": 16
+    }
+  },
+  "total_phases": 25,
+  "total_measured_samples": 3400,
+  "total_warmups": 310,
+  "retained_B_vs_R3": [
+    {
+      "receipt": "audits/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-R3/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-R3/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "release-style",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "release-style",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "stdin-audits/ordinary/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    }
+  ],
+  "all_audits": [
+    {
+      "receipt": "audits/B-vs-E4/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-E4",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "text-ipv4-canonical-stats",
+        "text-mixed-overlap-no-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "audits/B-vs-E4/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-E4",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": [
+        "text-ipv4-canonical-stats",
+        "text-mixed-overlap-no-stats"
+      ]
+    },
+    {
+      "receipt": "audits/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "audits/B-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "audits/E4-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "E4-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "audits/R3-vs-S2/followup/audit.json",
+      "passed": true,
+      "comparison": "R3-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 120,
+      "warmups": 20,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats"
+      ],
+      "followup_required": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats"
+      ]
+    },
+    {
+      "receipt": "audits/R3-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "R3-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 192,
+      "warmups": 32,
+      "configs": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-E4/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-E4",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-E4/primary-02/audit.json",
+      "passed": true,
+      "comparison": "B-vs-E4",
+      "artifact_profile": "ordinary",
+      "phase": "primary-02",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-R3/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-S2/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/B-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/E4-vs-R3/followup/audit.json",
+      "passed": true,
+      "comparison": "E4-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 120,
+      "warmups": 6,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/E4-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "E4-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/R3-vs-S2/followup/audit.json",
+      "passed": true,
+      "comparison": "R3-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/ordinary/R3-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "R3-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-R3/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "release-style",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "release-style",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-S2/followup/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "release-style",
+      "phase": "followup",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "startup-audits/release-style/B-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "release-style",
+      "phase": "primary",
+      "measured_samples": 160,
+      "warmups": 8,
+      "configs": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "receipt": "stdin-audits/ordinary/B-vs-E4/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-E4",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "stdin-audits/ordinary/B-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "stdin-audits/ordinary/B-vs-S2/primary/audit.json",
+      "passed": true,
+      "comparison": "B-vs-S2",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    },
+    {
+      "receipt": "stdin-audits/ordinary/E4-vs-R3/primary/audit.json",
+      "passed": true,
+      "comparison": "E4-vs-R3",
+      "artifact_profile": "ordinary",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "configs": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "followup_required": []
+    }
+  ],
+  "startup_preflight_failure": {
+    "receipt": "measurement-control/startup-preflight-failure.json",
+    "timed_samples": 0,
+    "product_failures": 0,
+    "replacement_phase": "startup/ordinary/B-vs-E4/primary-02"
+  },
+  "scope": "Read-only aggregation of all independent successful audits; no additional corpus/binary hashing. Each audit verified complete stdout/stderr bytes and independent references, role mapping, inventory/order, resource units, frozen artifacts and recomputed pairs."
+}

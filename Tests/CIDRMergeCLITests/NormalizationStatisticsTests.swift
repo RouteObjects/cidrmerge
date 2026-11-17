@@ -73,7 +73,8 @@ struct NormalizationStatisticsTests {
                 let handle = try FileHandle(forReadingFrom: file)
                 defer { try? handle.close() }
                 let fromStandardInput = try TextInputLoader.load(
-                    inputs: ["-"], standardInput: handle, collectNormalizationStatistics: collect
+                    inputs: ["-"], standardInput: .init(rawValue: handle.fileDescriptor),
+                    collectNormalizationStatistics: collect
                 )
                 try expectEquivalentOutput(fromFile, expected, collecting: collect)
                 try expectEquivalentOutput(fromStandardInput, expected, collecting: collect)
@@ -92,7 +93,7 @@ struct NormalizationStatisticsTests {
                 let handle = try FileHandle(forReadingFrom: file)
                 defer { try? handle.close() }
                 let actual = try SearchbotInputLoader.load(
-                    inputs: [file.path, "-"], standardInput: handle,
+                    inputs: [file.path, "-"], standardInput: .init(rawValue: handle.fileDescriptor),
                     collectNormalizationStatistics: collect
                 )
                 var expectedStatistics = expected.merged().statistics

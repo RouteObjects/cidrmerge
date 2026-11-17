@@ -154,6 +154,7 @@ jobs:
           swift package resolve swift-cidr --version 0.10.1
           swift package resolve swift-argument-parser --version 1.7.0
           swift package resolve swift-crypto --version 5.1.1
+          swift package resolve swift-system --version 1.7.4
 
           awk -F '"' '
             /"identity"/ { identity = $4 }
@@ -162,6 +163,7 @@ jobs:
           grep -qx 'swift-cidr 0.10.1' resolved-versions.txt
           grep -qx 'swift-argument-parser 1.7.0' resolved-versions.txt
           grep -qx 'swift-crypto 5.1.1' resolved-versions.txt
+          grep -qx 'swift-system 1.7.4' resolved-versions.txt
 
           swift build --product cidrmerge
           ./scripts/test.sh

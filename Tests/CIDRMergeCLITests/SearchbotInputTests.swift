@@ -97,7 +97,7 @@ struct SearchbotInputTests {
 
         let parsedInput = try SearchbotInputLoader.load(
             inputs: [first.path, "-", second.path],
-            standardInput: pipe.fileHandleForReading
+            standardInput: .init(rawValue: pipe.fileHandleForReading.fileDescriptor)
         )
         let result = parsedInput.merged(representation: .cidr)
 

@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-11-17T06:17:54.295916+00:00",
+  "commands": {
+    "os": {
+      "command": [
+        "sw_vers"
+      ],
+      "exit_code": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+      "stderr": ""
+    },
+    "kernel": {
+      "command": [
+        "uname",
+        "-smr"
+      ],
+      "exit_code": 0,
+      "stdout": "Darwin 27.2.0 arm64\n",
+      "stderr": ""
+    },
+    "xcode": {
+      "command": [
+        "xcodebuild",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "Xcode 27.2\nBuild version 27B52\n",
+      "stderr": ""
+    },
+    "developer_directory": {
+      "command": [
+        "xcode-select",
+        "-p"
+      ],
+      "exit_code": 0,
+      "stdout": "/Applications/Xcode-27.2.0.app/Contents/Developer\n",
+      "stderr": ""
+    },
+    "hardware": {
+      "command": [
+        "sysctl",
+        "hw.model",
+        "machdep.cpu.brand_string",
+        "hw.memsize",
+        "hw.ncpu",
+        "hw.physicalcpu",
+        "hw.logicalcpu"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    },
+    "power": {
+      "command": [
+        "pmset",
+        "-g"
+      ],
+      "exit_code": 0,
+      "stdout": "System-wide power settings:\nCurrently in use:\n standby              1\n Sleep On Power Button 1\n hibernatefile        /var/vm/sleepimage\n powernap             1\n networkoversleep     0\n disksleep            10\n sleep                0 (sleep prevented by coreaudiod, ChatGPT)\n hibernatemode        3\n ttyskeepawake        1\n displaysleep         20\n tcpkeepalive         1\n powermode            0\n womp                 1\n",
+      "stderr": ""
+    },
+    "sdk": {
+      "command": [
+        "xcrun",
+        "--sdk",
+        "macosx",
+        "--show-sdk-version"
+      ],
+      "exit_code": 0,
+      "stdout": "27.2\n",
+      "stderr": ""
+    }
+  },
+  "compiler_sha256": {
+    "swift-driver": "51e35b74f76fe8df9d2a203a9edddf4b10fbd2e94e3036137babacc390d9901e",
+    "swift-frontend": "020a521df9efc127b6817a2ed2f1560155108f0a0ead1ee1fa98147f5944eb4f",
+    "clang": "04988adaddb282c8c074a1a55f8221452f18f64df3ca0006135f62031710377b"
+  },
+  "disk_free_bytes": 5652480000000
+}

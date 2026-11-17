@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T09:24:53.600273+00:00",
+  "platform": "x86_64",
+  "display": "Linux x86-64 / swift-dev",
+  "path_base": "experiment root",
+  "scope": "Native x86-64 Linux Swift 6.4.2 matched measurements; full received outputs independently re-audited locally. No history deleted or failed observations replaced.",
+  "baseline": "B",
+  "baseline_commit": "9fe30dde3fd5ad50944064f912fad8c19cfcec62",
+  "retained_candidate": "R3",
+  "passed_audits": {
+    "throughput": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "x86_64/local-audits/throughput-ordinary-B-vs-E4-primary/audit.json",
+          "followup-01": "x86_64/local-audits/throughput-ordinary-B-vs-E4-followup-01/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "x86_64/local-audits/throughput-ordinary-E4-vs-R3-primary/audit.json",
+          "followup-01": "x86_64/local-audits/throughput-ordinary-E4-vs-R3-followup-01/audit.json"
+        },
+        "R3-vs-S2": {
+          "primary": "x86_64/local-audits/throughput-ordinary-R3-vs-S2-primary/audit.json",
+          "followup-01": "x86_64/local-audits/throughput-ordinary-R3-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "x86_64/local-audits/throughput-ordinary-B-vs-S2-primary/audit.json",
+          "followup-01": "x86_64/local-audits/throughput-ordinary-B-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "x86_64/local-audits/throughput-ordinary-B-vs-R3-primary/audit.json",
+          "followup-01": "x86_64/local-audits/throughput-ordinary-B-vs-R3-followup-01/audit.json"
+        }
+      }
+    },
+    "startup": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "x86_64/local-audits/startup-ordinary-B-vs-E4-primary/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "x86_64/local-audits/startup-ordinary-E4-vs-R3-primary/audit.json",
+          "followup-01": "x86_64/local-audits/startup-ordinary-E4-vs-R3-followup-01/audit.json"
+        },
+        "R3-vs-S2": {
+          "primary": "x86_64/local-audits/startup-ordinary-R3-vs-S2-primary/audit.json",
+          "followup-01": "x86_64/local-audits/startup-ordinary-R3-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "x86_64/local-audits/startup-ordinary-B-vs-S2-primary/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "x86_64/local-audits/startup-ordinary-B-vs-R3-primary/audit.json"
+        }
+      },
+      "release-style": {
+        "B-vs-S2": {
+          "primary": "x86_64/local-audits/startup-release-style-B-vs-S2-primary/audit.json",
+          "followup-01": "x86_64/local-audits/startup-release-style-B-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "x86_64/local-audits/startup-release-style-B-vs-R3-primary/audit.json"
+        }
+      }
+    },
+    "stdin": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "x86_64/local-audits/stdin-ordinary-B-vs-E4-primary/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "x86_64/local-audits/stdin-ordinary-E4-vs-R3-primary/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "x86_64/local-audits/stdin-ordinary-B-vs-S2-primary/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "x86_64/local-audits/stdin-ordinary-B-vs-R3-primary/audit.json"
+        }
+      }
+    }
+  },
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-E4-followup-01/audit.json",
+      "measured_samples": 120,
+      "warmups": 20
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/throughput-ordinary-E4-vs-R3-followup-01/audit.json",
+      "measured_samples": 12,
+      "warmups": 2
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-R3-vs-S2-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/throughput-ordinary-R3-vs-S2-followup-01/audit.json",
+      "measured_samples": 168,
+      "warmups": 28
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-S2-followup-01/audit.json",
+      "measured_samples": 132,
+      "warmups": 22
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/startup-ordinary-E4-vs-R3-followup-01/audit.json",
+      "measured_samples": 40,
+      "warmups": 2
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-R3-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/startup-ordinary-R3-vs-S2-followup-01/audit.json",
+      "measured_samples": 40,
+      "warmups": 2
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-release-style-B-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/startup-release-style-B-vs-S2-followup-01/audit.json",
+      "measured_samples": 40,
+      "warmups": 2
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-R3-followup-01/audit.json",
+      "measured_samples": 36,
+      "warmups": 6
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-release-style-B-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  ],
+  "audit_totals": {
+    "phases": 24,
+    "measured_samples": 2764,
+    "warmups": 316
+  },
+  "audit_summaries": [
+    "x86_64/local-audits/summary.json"
+  ],
+  "snapshots": {
+    "B": "control/baseline-freeze.json",
+    "E4": "control/E4-freeze.json",
+    "R3": "control/R3-freeze.json",
+    "S2": "control/S2-freeze.json"
+  },
+  "qualification": {
+    "B": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-B/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-B/B-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-B/B-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/B-test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-B/B-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/B-test-release.log",
+          "swift_testing_count": 85
+        }
+      },
+      "io_harness_self_control": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/io-v2-self-control/summary.json",
+        "cases": 86
+      }
+    },
+    "E4": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-E4/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-E4/E4-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-E4/E4-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/E4-test-debug.log",
+          "swift_testing_count": 95
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-E4/E4-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/E4-test-release.log",
+          "swift_testing_count": 95
+        }
+      },
+      "standard_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/B-vs-E4/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/io-B-vs-E4/summary.json",
+        "cases": 86
+      }
+    },
+    "R3": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-R3/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-R3/R3-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-R3/R3-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/R3-test-debug.log",
+          "swift_testing_count": 95
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-R3/R3-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/R3-test-release.log",
+          "swift_testing_count": 95
+        }
+      },
+      "standard_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/B-vs-R3/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/io-B-vs-R3/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "x86_64/retrieved/final-v2/final-validation-R3/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "documentation-symbol-graph": "x86_64/retrieved/final-v2/final-validation-R3/documentation-symbol-graph.json",
+          "whitespace": "x86_64/retrieved/final-v2/final-validation-R3/whitespace.json",
+          "source-git-init": "x86_64/retrieved/final-v2/final-validation-R3/source-git-init.json",
+          "content-audit-started": "x86_64/retrieved/final-v2/final-validation-R3/content-audit-started.json",
+          "core-boundary": "x86_64/retrieved/final-v2/final-validation-R3/core-boundary.json",
+          "release-style-binary-audit-started": "x86_64/retrieved/final-v2/final-validation-R3/release-style-binary-audit-started.json",
+          "core-consumer-build": "x86_64/retrieved/final-v2/final-validation-R3/core-consumer-build.json",
+          "whitespace-started": "x86_64/retrieved/final-v2/final-validation-R3/whitespace-started.json",
+          "cli-smoke": "x86_64/retrieved/final-v2/final-validation-R3/cli-smoke.json",
+          "core-consumer-build-started": "x86_64/retrieved/final-v2/final-validation-R3/core-consumer-build-started.json",
+          "source-git-index-started": "x86_64/retrieved/final-v2/final-validation-R3/source-git-index-started.json",
+          "source-git-init-started": "x86_64/retrieved/final-v2/final-validation-R3/source-git-init-started.json",
+          "release-style-binary-audit": "x86_64/retrieved/final-v2/final-validation-R3/release-style-binary-audit.json",
+          "cli-smoke-started": "x86_64/retrieved/final-v2/final-validation-R3/cli-smoke-started.json",
+          "documentation-symbol-graph-started": "x86_64/retrieved/final-v2/final-validation-R3/documentation-symbol-graph-started.json",
+          "source-git-index": "x86_64/retrieved/final-v2/final-validation-R3/source-git-index.json",
+          "content-audit": "x86_64/retrieved/final-v2/final-validation-R3/content-audit.json",
+          "format": "x86_64/retrieved/final-v2/final-validation-R3/format.json",
+          "core-consumer-run-started": "x86_64/retrieved/final-v2/final-validation-R3/core-consumer-run-started.json",
+          "format-started": "x86_64/retrieved/final-v2/final-validation-R3/format-started.json",
+          "smoke-adaptation": "x86_64/retrieved/final-v2/final-validation-R3/smoke-adaptation.json",
+          "core-consumer-run": "x86_64/retrieved/final-v2/final-validation-R3/core-consumer-run.json"
+        },
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "dependency_pin_count": 8,
+        "whitespace_note": "git diff --no-index --check returned 1 because snapshots differ, with no whitespace diagnostics."
+      },
+      "slow_stdout": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/slow-stdout-B-vs-R3/summary.json",
+        "entries": 60000,
+        "independent_reference_bytes": 1020812
+      }
+    },
+    "S2": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-S2/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-S2/S2-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-S2/S2-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/S2-test-debug.log",
+          "swift_testing_count": 96
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-S2/S2-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/S2-test-release.log",
+          "swift_testing_count": 96
+        }
+      },
+      "standard_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/B-vs-S2/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/io-B-vs-S2/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "x86_64/retrieved/final-v2/final-validation/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "documentation-symbol-graph": "x86_64/retrieved/final-v2/final-validation/documentation-symbol-graph.json",
+          "whitespace": "x86_64/retrieved/final-v2/final-validation/whitespace.json",
+          "source-git-init": "x86_64/retrieved/final-v2/final-validation/source-git-init.json",
+          "content-audit-started": "x86_64/retrieved/final-v2/final-validation/content-audit-started.json",
+          "core-boundary": "x86_64/retrieved/final-v2/final-validation/core-boundary.json",
+          "release-style-binary-audit-started": "x86_64/retrieved/final-v2/final-validation/release-style-binary-audit-started.json",
+          "core-consumer-build": "x86_64/retrieved/final-v2/final-validation/core-consumer-build.json",
+          "whitespace-started": "x86_64/retrieved/final-v2/final-validation/whitespace-started.json",
+          "cli-smoke": "x86_64/retrieved/final-v2/final-validation/cli-smoke.json",
+          "core-consumer-build-started": "x86_64/retrieved/final-v2/final-validation/core-consumer-build-started.json",
+          "source-git-index-started": "x86_64/retrieved/final-v2/final-validation/source-git-index-started.json",
+          "source-git-init-started": "x86_64/retrieved/final-v2/final-validation/source-git-init-started.json",
+          "release-style-binary-audit": "x86_64/retrieved/final-v2/final-validation/release-style-binary-audit.json",
+          "cli-smoke-started": "x86_64/retrieved/final-v2/final-validation/cli-smoke-started.json",
+          "documentation-symbol-graph-started": "x86_64/retrieved/final-v2/final-validation/documentation-symbol-graph-started.json",
+          "source-git-index": "x86_64/retrieved/final-v2/final-validation/source-git-index.json",
+          "content-audit": "x86_64/retrieved/final-v2/final-validation/content-audit.json",
+          "format": "x86_64/retrieved/final-v2/final-validation/format.json",
+          "core-consumer-run-started": "x86_64/retrieved/final-v2/final-validation/core-consumer-run-started.json",
+          "format-started": "x86_64/retrieved/final-v2/final-validation/format-started.json",
+          "smoke-adaptation": "x86_64/retrieved/final-v2/final-validation/smoke-adaptation.json",
+          "core-consumer-run": "x86_64/retrieved/final-v2/final-validation/core-consumer-run.json"
+        },
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "dependency_pin_count": 8,
+        "whitespace_note": "git diff --no-index --check returned 1 because snapshots differ, with no whitespace diagnostics."
+      },
+      "slow_stdout": {
+        "receipt": "x86_64/retrieved/final-v2/correctness/slow-stdout-B-vs-S2/summary.json",
+        "entries": 60000,
+        "independent_reference_bytes": 1020812
+      }
+    }
+  },
+  "artifacts": {
+    "ordinary": {
+      "metadata": "x86_64/artifact-summary.json",
+      "variant_keys": [
+        "B",
+        "E4",
+        "R3",
+        "S2"
+      ],
+      "stripped_byte_counts": {
+        "B": 3721800,
+        "E4": 4024520,
+        "R3": 4024520,
+        "S2": 4028616
+      }
+    },
+    "shipping": {
+      "B": {
+        "metadata": "x86_64/retrieved/final-v2/control/release-style-B/complete.json",
+        "stripped_bytes": 62619384,
+        "stripped_sha256": "c7f463182d168cb31260bed47bde6843cdba6dc1c743d274b215b2965a54fb5b",
+        "unstripped_bytes": 89338824
+      },
+      "R3": {
+        "metadata": "x86_64/retrieved/final-v2/control/release-style-R3/complete.json",
+        "stripped_bytes": 18837680,
+        "stripped_sha256": "3f1974e3f7ff1358c60d1c24ca7acfe6b1caf6c8d9167b9de7ecb5710e8e59f7",
+        "unstripped_bytes": 41791264
+      },
+      "S2": {
+        "metadata": "x86_64/retrieved/final-v2/control/release-style-S2/complete.json",
+        "stripped_bytes": 18845872,
+        "stripped_sha256": "04e54be0a747c536545ec01406bd4a37e46529285dcd9fd1780b390a15e184af",
+        "unstripped_bytes": 41822240
+      }
+    },
+    "stripped_byte_counts": {
+      "ordinary": {
+        "B": 3721800,
+        "E4": 4024520,
+        "R3": 4024520,
+        "S2": 4028616
+      },
+      "shipping": {
+        "B": 62619384,
+        "R3": 18837680,
+        "S2": 18845872
+      }
+    },
+    "runtime": {
+      "metadata": "x86_64/retrieved/final-v2/control/actual-runtime-closure.json",
+      "copied_libraries": "x86_64/retrieved/final-v2/runtime/lib",
+      "linked_file_bytes_sum_is_not_rss": true
+    }
+  },
+  "environment": [
+    "x86_64/retrieved/final-v2/control/platform-preflight.json",
+    "x86_64/retrieved/final-v2/control/retained-R3-pipeline-v3/freeze.json"
+  ],
+  "failure_and_limitation_ledgers": [
+    {
+      "category": "audit-atime",
+      "description": "Original strict auditor rejected a read-induced atime change after all measurements. Separately versioned auditor excludes only atime while retaining dev/inode/size/mtime/ctime and complete SHA verification; 13 controls include changed-content and mtime rejection. Original failure preserved; no measurements rerun.",
+      "paths": [
+        "x86_64/retrieved/final-v2/control/measurement-pipeline/failed.json",
+        "x86_64/retrieved/final-v2/audits/throughput-ordinary-B-vs-E4-primary/audit.json",
+        "x86_64/retrieved/final-v2/control/auditor-v2-change.json",
+        "x86_64/retrieved/final-v2/correctness/auditor-metadata-control-v2/summary.json",
+        "x86_64/retrieved/final-v2/control/measurement-recovery-v2/complete.json"
+      ]
+    },
+    {
+      "category": "new-artifact-space",
+      "description": "Frozen harness left redundant stdout.link inode aliases. At completed phase boundaries, only hash- and byte-identical new-experiment aliases were relinked, preserving every path, byte, measurement and frozen harness. Historical caches were not deleted.",
+      "paths": [
+        "x86_64/retrieved/final-v2/control/dedup-aliases-boundary-01.json",
+        "x86_64/retrieved/final-v2/control/dedup-aliases-boundary-02.json",
+        "x86_64/retrieved/final-v2/control/dedup-aliases-boundary-03.json",
+        "x86_64/retrieved/final-v2/control/dedup-aliases-boundary-04.json"
+      ]
+    },
+    {
+      "category": "startup-rss-method",
+      "description": "Post-timing unchanged /bin/true control varies parent allocation at 0/32/96 MiB through the frozen startup runner. Original metrics preserved, not corrected or pooled.",
+      "paths": [
+        "x86_64/retrieved/final-v2/correctness/rss-fork-floor/summary.json"
+      ]
+    },
+    {
+      "category": "runtime-resolution",
+      "description": "Actual unchanged measurement LD_LIBRARY_PATH resolves Swift libraries from preserved copies; versioned system-library and interpreter paths may resolve on host. Every resolved hash matches its premeasurement original and preserved copy.",
+      "paths": [
+        "x86_64/retrieved/final-v2/control/actual-runtime-closure.json"
+      ]
+    },
+    {
+      "category": "preserved-negative-controls",
+      "description": "Expected harness rejections for wrong output/statistics and changed content are controls, not application failures.",
+      "paths": [
+        "x86_64/retrieved/final-v2/correctness/negative-control-linux",
+        "x86_64/retrieved/final-v2/correctness/negative-control-stdin"
+      ]
+    },
+    {
+      "category": "superseded-untimed",
+      "description": "E completed tests but was superseded without timing. E2 and earlier coordinator versions were cancelled before their queued work; original failed audit and cancelled queues remain preserved.",
+      "paths": [
+        "x86_64/retrieved/final-v2/control/build-tests-E/complete.json",
+        "x86_64/retrieved/final-v2/control/E2-pipeline/cancelled-before-build.json",
+        "x86_64/retrieved/final-v2/control/stdin-measurement-pipeline/failed.json"
+      ]
+    },
+    {
+      "category": "preservation-transfer",
+      "description": "First archive stopped at an intentionally unreadable mode-000 test fixture; partial archive and error preserved. Second archive preserved bytes and original modes; twelve fixture modes were temporarily readable for archive verification and restored remotely and locally. No measurement rerun.",
+      "paths": [
+        "x86_64/retrieved/transfer-attempt01-failed.json",
+        "x86_64/retrieved/final-evidence-attempt02.tar.receipt.json",
+        "x86_64/retrieved/fixture-mode-verification.json"
+      ]
+    }
+  ],
+  "limitations_for_report": [
+    "Single native x86-64 host, warm filesystem cache; no cold-start claim.",
+    "Ordinary dynamic Release throughput and shipping static-stdlib startup are separate experiments; shipping throughput was not measured.",
+    "Linux wait4 tiny-process RSS can include a parent-memory floor; use preserved method control and do not interpret equal startup RSS as equal application memory.",
+    "Full Foundation/Internationalization/ICU/swiftDispatch leave the ordinary resolved closure; libdispatch and BlocksRuntime remain transitively.",
+    "No historical cache deletion occurred. At least 3 GiB free was independently verified for every timed observation."
+  ],
+  "retrieval_receipt": "x86_64/retrieved/final-evidence-attempt02.tar.receipt.json"
+}

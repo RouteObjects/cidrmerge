@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/S2",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "debug",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T06:26:00.362801+00:00",
+  "log": "logs/S2-test-debug.log",
+  "free_bytes_before": 4004061184,
+  "exit_code": 0,
+  "elapsed_s": 38.00057145021856,
+  "log_sha256": "10fe2ba3a1934cc5b72c303c5382fe1ea3f1af2b704295311a73f0806134ec9b",
+  "tests": 96,
+  "summaries": [
+    [
+      "96",
+      "13"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest",
+      "sha256": "e434729469e3e6ecd38c256ce5ba12cfba1f09c7527a7e6c37d056d3602cd70e",
+      "bytes": 28379744
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    }
+  }
+}

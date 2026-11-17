@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-11-17T08:22:31.872205+00:00",
+  "product_test_failures": [],
+  "measurement_product_failures": [],
+  "preserved_setup_and_harness_failures": [
+    {
+      "category": "setup",
+      "description": "Initial release compile succeeded, but copied Git alternates referenced unavailable Mac paths during post-build pin validation. Corrected only new experiment metadata; successful attempt03 retained separately.",
+      "paths": [
+        "arm64/control/qualification-B/summary.json",
+        "arm64/control/B-host.log",
+        "arm64/control/checkout-alternates-relocation.json"
+      ]
+    },
+    {
+      "category": "setup",
+      "description": "Attempt02 launcher referenced an absent retry script after a prior metadata edit failed on read-only Git files. No tests or timing ran in this launch.",
+      "paths": [
+        "arm64/control/B-attempt02-host-complete.json",
+        "arm64/control/B-attempt02-host.log"
+      ]
+    },
+    {
+      "category": "setup",
+      "description": "Wildcard Git safe.directory readiness command was rejected before execution. Exact experiment checkout allowlists were used instead; no authorization remained blocked.",
+      "paths": [
+        "arm64/control/scoped-git-trust.json"
+      ]
+    },
+    {
+      "category": "validation-harness",
+      "description": "Original final-validation script treated historical preserved patch text as new whitespace additions; corrected v2 checks only baseline/candidate source changes.",
+      "paths": [
+        "arm64/final-validation-S2/summary.json",
+        "arm64/final-validation-S2/whitespace.log",
+        "arm64/final-validation-S2-attempt02/summary.json"
+      ]
+    },
+    {
+      "category": "post-timing-postprocessing",
+      "description": "Container stat transiently failed during optional cross-comparison hardlink replacement after B-vs-E4 follow-up completed. Every output path was present on host and full independent audits passed. No observations changed or targets reran; optional cross-phase relinking omitted only in new ARM wrappers.",
+      "paths": [
+        "arm64/control/measurement-summary.json",
+        "arm64/control/measure-retained-r3-host.log",
+        "arm64/comparisons/ordinary/B-vs-E4/followup-01-postprocessing-recovery.json",
+        "arm64/comparisons/ordinary/B-vs-E4/followup-01-postprocessing-recovery-complete.json",
+        "control/arm-wrapper-v2-change.json"
+      ]
+    },
+    {
+      "category": "audit-metadata-guard",
+      "description": "First host audits reported full-stat changes on B/E4. Frozen binary hashes remained exact. v3 guards device/inode/size/mtime/ctime and excludes read-updated access time; original failed audits and new passing audits remain separate.",
+      "paths": [
+        "arm64/audits-v2/throughput-ordinary-B-vs-E4-primary/audit.json",
+        "arm64/audits-v2/throughput-ordinary-B-vs-E4-followup-01/audit.json",
+        "control/arm-auditor-v3-change.json"
+      ]
+    }
+  ],
+  "superseded_untimed": [
+    {
+      "variant": "E",
+      "description": "Linux qualification passed, but common migration was superseded before timing by cross-platform compatibility fixes. No measurements pooled with final E4.",
+      "paths": [
+        "arm64/control/qualification-E/summary.json"
+      ]
+    },
+    {
+      "variant": "E2",
+      "description": "Linux qualification passed, but common migration was superseded before timing by cross-platform compatibility fixes. No measurements pooled with final E4.",
+      "paths": [
+        "arm64/control/qualification-E2/summary.json"
+      ]
+    }
+  ],
+  "intentional_harness_controls": [
+    "arm64/control/harness-negative-controls.json",
+    "arm64/control/harness-wrapper-smoke.json",
+    "arm64/control/harness-auditor-negative.json",
+    "arm64/control/stdin-negative-control.json",
+    "arm64/control/stdin-wrapper-control.json",
+    "arm64/control/arm-wrapper-v2-controls.json"
+  ],
+  "rss_method_control": "arm64/harness-controls/rss-fork-floor/summary.json",
+  "unchanged_historical_experiments": true,
+  "source_or_output_deletions": false
+}

@@ -12,7 +12,13 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
-import Foundation
+import SystemPackage
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 enum CIDRMergeError: Error, Equatable, CustomStringConvertible {
     case invalidInput(source: String, line: Int, value: String)
@@ -82,7 +88,7 @@ enum TextInputLoader {
 
     static func load(
         inputs: [String],
-        standardInput: FileHandle = .standardInput,
+        standardInput: FileDescriptor = .standardInput,
         collectNormalizationStatistics: Bool = true
     ) throws -> ParsedInput {
         let sources = try InputSources.validated(inputs)
@@ -98,13 +104,13 @@ enum TextInputLoader {
                 continue
             }
 
-            let handle: FileHandle
+            let handle: FileDescriptor
             do {
-                handle = try FileHandle(forReadingFrom: URL(fileURLWithPath: source))
+                handle = try DescriptorIO.openForReading(source)
             } catch {
                 throw CIDRMergeError.inputReadFailed(
                     source: source,
-                    reason: error.localizedDescription
+                    reason: CLICompatibility.errorDescription(error)
                 )
             }
             defer { try? handle.close() }
@@ -155,11 +161,14 @@ enum TextInputLoader {
     }
 
     private static func consume(
-        _ handle: FileHandle,
+        _ handle: FileDescriptor,
         source: String,
         collectNormalizationStatistics: Bool,
         into collection: inout ParsedInput
     ) throws {
+        // CHANGE: Reuse one bounded read allocation for this source; only its valid prefix is consumed.
+        let buffer = UnsafeMutableRawBufferPointer.allocate(byteCount: chunkSize, alignment: 16)
+        defer { buffer.deallocate() }
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
         var lineNumber = 1
@@ -171,14 +180,14 @@ enum TextInputLoader {
                     // Only owned pending bytes and parsed values survive into the next chunk.
                     let hasData = try autoreleasepool {
                         try consumeChunk(
-                            handle, source: source, pending: &pending,
+                            handle, buffer: buffer, source: source, pending: &pending,
                             lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
                             into: &collection
                         )
                     }
                 #else
                     let hasData = try consumeChunk(
-                        handle, source: source, pending: &pending,
+                        handle, buffer: buffer, source: source, pending: &pending,
                         lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
                         into: &collection
                     )
@@ -201,23 +210,23 @@ enum TextInputLoader {
         } catch {
             throw CIDRMergeError.inputReadFailed(
                 source: source,
-                reason: error.localizedDescription
+                reason: CLICompatibility.errorDescription(error)
             )
         }
     }
 
     private static func consumeChunk(
-        _ handle: FileHandle,
+        _ handle: FileDescriptor,
+        buffer: UnsafeMutableRawBufferPointer,
         source: String,
         pending: inout [UInt8],
         lineNumber: inout Int,
         collectNormalizationStatistics: Bool,
         into collection: inout ParsedInput
     ) throws -> Bool {
-        guard let data = try handle.read(upToCount: chunkSize), !data.isEmpty else {
-            return false
-        }
-        for byte in data {
+        let count = try DescriptorIO.read(from: handle, into: buffer)
+        guard count > 0 else { return false }
+        for byte in buffer[..<count] {
             if byte == 0x0A {
                 try consumeLine(
                     pending,
@@ -288,7 +297,7 @@ enum TextInputLoader {
                     maxSplits: 1,
                     omittingEmptySubsequences: false
                 ).first ?? ""
-            token = uncommented.trimmingCharacters(in: .whitespacesAndNewlines)
+            token = CLICompatibility.trimBoundaryWhitespace(uncommented)
         }
         guard !token.isEmpty else { return }
 

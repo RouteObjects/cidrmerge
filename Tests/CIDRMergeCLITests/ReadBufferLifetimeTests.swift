@@ -74,7 +74,7 @@ struct ReadBufferLifetimeTests {
             defer { try? handle.close() }
 
             do {
-                _ = try TextInputLoader.load(inputs: ["-"], standardInput: handle)
+                _ = try TextInputLoader.load(inputs: ["-"], standardInput: .init(rawValue: handle.fileDescriptor))
                 Issue.record("Expected reading a write-only handle to fail")
             } catch let error as CIDRMergeError {
                 guard case .inputReadFailed(let source, let reason) = error else {

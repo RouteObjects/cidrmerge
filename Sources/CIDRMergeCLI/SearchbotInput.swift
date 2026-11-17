@@ -12,7 +12,13 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
-import Foundation
+import SystemPackage
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 /// Loads the crawler-prefix JSON grammar currently used by Google, Bing, Apple, and OpenAI.
 ///
@@ -28,7 +34,7 @@ import Foundation
 enum SearchbotInputLoader {
     static func load(
         inputs: [String],
-        standardInput: FileHandle = .standardInput,
+        standardInput: FileDescriptor = .standardInput,
         collectNormalizationStatistics: Bool = true
     ) throws -> ParsedInput {
         let sources = try InputSources.validated(inputs)
@@ -58,17 +64,17 @@ enum SearchbotInputLoader {
     private static func read(
         source: String,
         label: String,
-        standardInput: FileHandle
+        standardInput: FileDescriptor
     ) throws -> Data {
         do {
             if source == "-" {
-                return try standardInput.readToEnd() ?? Data()
+                return try DescriptorIO.readToEnd(from: standardInput)
             }
             return try Data(contentsOf: URL(fileURLWithPath: source))
         } catch {
             throw CIDRMergeError.inputReadFailed(
                 source: label,
-                reason: error.localizedDescription
+                reason: CLICompatibility.errorDescription(error)
             )
         }
     }

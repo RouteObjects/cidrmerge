@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T08:22:31.872966+00:00",
+  "platform": "arm64",
+  "path_base": "experiment root",
+  "scope": "Native ARM64 Linux Swift6.4.2 matched measurements through OrbStack; all paths experiment-relative. Index uses preserved metadata, no new target execution.",
+  "baseline": "B",
+  "baseline_commit": "9fe30dde3fd5ad50944064f912fad8c19cfcec62",
+  "retained_candidate": "R3",
+  "passed_audits": {
+    "throughput": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "arm64/audits-v3/throughput-ordinary-B-vs-E4-primary/audit.json",
+          "followup-01": "arm64/audits-v3/throughput-ordinary-B-vs-E4-followup-01/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "arm64/audits-v3/throughput-ordinary-E4-vs-R3-primary/audit.json"
+        },
+        "R3-vs-S2": {
+          "primary": "arm64/audits-v3/throughput-ordinary-R3-vs-S2-primary/audit.json",
+          "followup-01": "arm64/audits-v3/throughput-ordinary-R3-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "arm64/audits-v3/throughput-ordinary-B-vs-S2-primary/audit.json",
+          "followup-01": "arm64/audits-v3/throughput-ordinary-B-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "arm64/audits-v3/throughput-ordinary-B-vs-R3-primary/audit.json",
+          "followup-01": "arm64/audits-v3/throughput-ordinary-B-vs-R3-followup-01/audit.json"
+        }
+      }
+    },
+    "startup": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "arm64/audits-v3/startup-ordinary-B-vs-E4-primary/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "arm64/audits-v3/startup-ordinary-E4-vs-R3-primary/audit.json",
+          "followup-01": "arm64/audits-v3/startup-ordinary-E4-vs-R3-followup-01/audit.json"
+        },
+        "R3-vs-S2": {
+          "primary": "arm64/audits-v3/startup-ordinary-R3-vs-S2-primary/audit.json",
+          "followup-01": "arm64/audits-v3/startup-ordinary-R3-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "arm64/audits-v3/startup-ordinary-B-vs-S2-primary/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "arm64/audits-v3/startup-ordinary-B-vs-R3-primary/audit.json"
+        }
+      },
+      "release-style": {
+        "B-vs-S2": {
+          "primary": "arm64/audits-v3/startup-release-style-B-vs-S2-primary/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "arm64/audits-v3/startup-release-style-B-vs-R3-primary/audit.json",
+          "followup-01": "arm64/audits-v3/startup-release-style-B-vs-R3-followup-01/audit.json"
+        }
+      }
+    },
+    "stdin": {
+      "ordinary": {
+        "B-vs-E4": {
+          "primary": "arm64/audits-v3/stdin-ordinary-B-vs-E4-primary/audit.json",
+          "followup-01": "arm64/audits-v3/stdin-ordinary-B-vs-E4-followup-01/audit.json"
+        },
+        "E4-vs-R3": {
+          "primary": "arm64/audits-v3/stdin-ordinary-E4-vs-R3-primary/audit.json"
+        },
+        "B-vs-S2": {
+          "primary": "arm64/audits-v3/stdin-ordinary-B-vs-S2-primary/audit.json",
+          "followup-01": "arm64/audits-v3/stdin-ordinary-B-vs-S2-followup-01/audit.json"
+        },
+        "B-vs-R3": {
+          "primary": "arm64/audits-v3/stdin-ordinary-B-vs-R3-primary/audit.json",
+          "followup-01": "arm64/audits-v3/stdin-ordinary-B-vs-R3-followup-01/audit.json"
+        }
+      }
+    }
+  },
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-E4-followup-01/audit.json",
+      "measured_samples": 108,
+      "warmups": 18
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/throughput-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/throughput-ordinary-R3-vs-S2-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/throughput-ordinary-R3-vs-S2-followup-01/audit.json",
+      "measured_samples": 96,
+      "warmups": 16
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-S2-followup-01/audit.json",
+      "measured_samples": 36,
+      "warmups": 6
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/throughput-ordinary-B-vs-R3-followup-01/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/startup-ordinary-E4-vs-R3-followup-01/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-ordinary-R3-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/startup-ordinary-R3-vs-S2-followup-01/audit.json",
+      "measured_samples": 120,
+      "warmups": 6
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-release-style-B-vs-S2-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/startup-release-style-B-vs-R3-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    },
+    {
+      "kind": "startup",
+      "profile": "release-style",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/startup-release-style-B-vs-R3-followup-01/audit.json",
+      "measured_samples": 40,
+      "warmups": 2
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-E4-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-E4-followup-01/audit.json",
+      "measured_samples": 12,
+      "warmups": 2
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/stdin-ordinary-E4-vs-R3-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-S2-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-S2-followup-01/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-R3-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "receipt": "arm64/audits-v3/stdin-ordinary-B-vs-R3-followup-01/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    }
+  ],
+  "audit_totals": {
+    "phases": 26,
+    "measured_samples": 2820,
+    "warmups": 302
+  },
+  "audit_summaries": [
+    "arm64/control/all-arm-host-audits.json"
+  ],
+  "snapshots": {
+    "B": "control/baseline-freeze.json",
+    "E4": "control/E4-freeze.json",
+    "R3": "control/R3-freeze.json",
+    "S2": "control/S2-freeze.json"
+  },
+  "qualification": {
+    "B": {
+      "summary": "arm64/control/qualification-B-attempt03/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-B-attempt03/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-B-attempt03/test-debug.json",
+          "log": "arm64/control/qualification-B-attempt03/test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-B-attempt03/test-release.json",
+          "log": "arm64/control/qualification-B-attempt03/test-release.log",
+          "swift_testing_count": 85
+        }
+      },
+      "io_harness_self_control": {
+        "receipt": "arm64/behavior/io-B-control/summary.json",
+        "cases": 76,
+        "version": "Original I/O harness v1"
+      }
+    },
+    "E4": {
+      "summary": "arm64/control/qualification-E4/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-E4/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-E4/test-debug.json",
+          "log": "arm64/control/qualification-E4/test-debug.log",
+          "swift_testing_count": 95
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-E4/test-release.json",
+          "log": "arm64/control/qualification-E4/test-release.log",
+          "swift_testing_count": 95
+        }
+      },
+      "standard_differential": {
+        "receipt": "arm64/behavior/differential-E4/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "arm64/behavior/io-v2-E4/summary.json",
+        "cases": 86
+      }
+    },
+    "R3": {
+      "summary": "arm64/control/qualification-R3/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-R3/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-R3/test-debug.json",
+          "log": "arm64/control/qualification-R3/test-debug.log",
+          "swift_testing_count": 95
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-R3/test-release.json",
+          "log": "arm64/control/qualification-R3/test-release.log",
+          "swift_testing_count": 95
+        }
+      },
+      "standard_differential": {
+        "receipt": "arm64/behavior/differential-R3/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "arm64/behavior/io-v2-R3/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "arm64/final-validation-R3/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "source-git-init": "arm64/final-validation-R3/source-git-init.json",
+          "source-git-index": "arm64/final-validation-R3/source-git-index.json",
+          "whitespace": "arm64/final-validation-R3/whitespace.json",
+          "content-audit": "arm64/final-validation-R3/content-audit.json",
+          "format": "arm64/final-validation-R3/format.json",
+          "documentation-symbol-graph": "arm64/final-validation-R3/documentation-symbol-graph.json",
+          "core-consumer-build": "arm64/final-validation-R3/core-consumer-build.json",
+          "core-consumer-run": "arm64/final-validation-R3/core-consumer-run.json",
+          "cli-smoke": "arm64/final-validation-R3/cli-smoke.json",
+          "release-style-binary-audit": "arm64/final-validation-R3/release-style-binary-audit.json"
+        },
+        "core_boundary": "arm64/final-validation-R3/core-boundary.json",
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "dependency_pin_count": 8
+      },
+      "slow_stdout": {
+        "receipt": "arm64/behavior/slow-stdout-R3/summary.json",
+        "entries": 60000,
+        "independent_reference_bytes": 1020812
+      },
+      "compiler_floor": {
+        "swift": "6.2.4",
+        "summary": "arm64/floor-6.2.4/control/qualification-R3/summary.json",
+        "environment": "arm64/floor-6.2.4/control/qualification-R3/runtime.json",
+        "tests": {
+          "debug": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-R3/test-debug.json",
+            "log": "arm64/floor-6.2.4/control/qualification-R3/test-debug.log",
+            "swift_testing_count": 95
+          },
+          "release": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-R3/test-release.json",
+            "log": "arm64/floor-6.2.4/control/qualification-R3/test-release.log",
+            "swift_testing_count": 95
+          }
+        }
+      }
+    },
+    "S2": {
+      "summary": "arm64/control/qualification-S2/summary.json",
+      "ordinary_release_build": "arm64/control/qualification-S2/build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "arm64/control/qualification-S2/test-debug.json",
+          "log": "arm64/control/qualification-S2/test-debug.log",
+          "swift_testing_count": 96
+        },
+        "release": {
+          "receipt": "arm64/control/qualification-S2/test-release.json",
+          "log": "arm64/control/qualification-S2/test-release.log",
+          "swift_testing_count": 96
+        }
+      },
+      "standard_differential": {
+        "receipt": "arm64/behavior/differential-S2/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "arm64/behavior/io-v2-S2/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "arm64/final-validation-S2-attempt02/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "source-git-init": "arm64/final-validation-S2-attempt02/source-git-init.json",
+          "source-git-index": "arm64/final-validation-S2-attempt02/source-git-index.json",
+          "whitespace": "arm64/final-validation-S2-attempt02/whitespace.json",
+          "content-audit": "arm64/final-validation-S2-attempt02/content-audit.json",
+          "format": "arm64/final-validation-S2-attempt02/format.json",
+          "documentation-symbol-graph": "arm64/final-validation-S2-attempt02/documentation-symbol-graph.json",
+          "core-consumer-build": "arm64/final-validation-S2-attempt02/core-consumer-build.json",
+          "core-consumer-run": "arm64/final-validation-S2-attempt02/core-consumer-run.json",
+          "cli-smoke": "arm64/final-validation-S2-attempt02/cli-smoke.json",
+          "release-style-binary-audit": "arm64/final-validation-S2-attempt02/release-style-binary-audit.json"
+        },
+        "core_boundary": "arm64/final-validation-S2-attempt02/core-boundary.json",
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "dependency_pin_count": 8
+      },
+      "slow_stdout": {
+        "receipt": "arm64/behavior/slow-stdout-S2/summary.json",
+        "entries": 60000,
+        "independent_reference_bytes": 1020812
+      },
+      "compiler_floor": {
+        "swift": "6.2.4",
+        "summary": "arm64/floor-6.2.4/control/qualification-S2/summary.json",
+        "environment": "arm64/floor-6.2.4/control/qualification-S2/runtime.json",
+        "tests": {
+          "debug": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-S2/test-debug.json",
+            "log": "arm64/floor-6.2.4/control/qualification-S2/test-debug.log",
+            "swift_testing_count": 96
+          },
+          "release": {
+            "receipt": "arm64/floor-6.2.4/control/qualification-S2/test-release.json",
+            "log": "arm64/floor-6.2.4/control/qualification-S2/test-release.log",
+            "swift_testing_count": 96
+          }
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "ordinary": {
+      "metadata": "arm64/control/artifact-summary.json",
+      "variant_keys": [
+        "B",
+        "E4",
+        "R3",
+        "S2"
+      ],
+      "stripped_byte_counts": {
+        "B": 3322808,
+        "E4": 3608192,
+        "R3": 3608192,
+        "S2": 3608192
+      },
+      "note": "Ordinary release binaries and stripped copies were frozen before test builds."
+    },
+    "shipping": {
+      "B": {
+        "metadata": "arm64/control/qualification-B-release-style/build-release.json",
+        "variant_key": "B",
+        "stripped_bytes": 60849832
+      },
+      "R3": {
+        "metadata": "arm64/control/qualification-R3-release-style/build-release.json",
+        "variant_key": "R3",
+        "stripped_bytes": 17260632
+      },
+      "S2": {
+        "metadata": "arm64/control/qualification-S2-release-style/build-release.json",
+        "variant_key": "S2",
+        "stripped_bytes": 17260632
+      }
+    },
+    "stripped_byte_counts": {
+      "ordinary": {
+        "B": 3322808,
+        "E4": 3608192,
+        "R3": 3608192,
+        "S2": 3608192
+      },
+      "shipping": {
+        "B": 60849832,
+        "R3": 17260632,
+        "S2": 17260632
+      }
+    },
+    "runtime": {
+      "metadata": "arm64/runtime/manifest.json",
+      "retained_R3_addendum": "arm64/runtime/release-style-R3.json",
+      "copied_libraries": "arm64/runtime/linked-files",
+      "load_path": "arm64/runtime/lib",
+      "linked_file_bytes_sum_is_not_rss": true
+    }
+  },
+  "environment": {
+    "toolchain_os_cpu_memory": "arm64/control/qualification-B-attempt03/runtime.json",
+    "retained_toolchain_snapshot": "arm64/control/qualification-R3/runtime.json",
+    "container_images_and_creation": "arm64/control/preparation.json",
+    "physical_host_hardware": "macos/control/hardware-verified.json",
+    "measurement_preflight": "arm64/control/measurement-preflight.json",
+    "continuation_preflight": "arm64/control/measurement-continuation-01-preflight.json",
+    "floor_R3": "arm64/floor-6.2.4/control/qualification-R3/runtime.json",
+    "final_idle": "arm64/control/final-idle.json"
+  },
+  "protocols": [
+    "control/comparison-protocol-final.json",
+    "control/stdin-protocol-addendum.json",
+    "control/harness-final-freeze.json",
+    "control/retained-stdin-harness-freeze.json",
+    "control/arm-postprocessing-harness-freeze.json",
+    "arm64/control/retained-measurement-protocol.json",
+    "arm64/control/measurement-continuation-01-summary.json"
+  ],
+  "failure_and_limitation_ledgers": [
+    {
+      "path": "arm64/control/preserved-failures.json",
+      "scope": "Setup, superseded candidates, intentional controls, post-timing recovery and audit-guard corrections."
+    },
+    {
+      "path": "arm64/harness-controls/rss-fork-floor/summary.json",
+      "scope": "Same frozen Popen/wait4 route on unchanged /bin/true with 0/32/96MiB resident parent allocations; no original metric corrected or pooled."
+    },
+    {
+      "path": "arm64/control/rss-fork-floor-host.json",
+      "scope": "Confirms method control ran only after all timing."
+    },
+    {
+      "path": "control/retained-candidate.json",
+      "scope": "R3 retained; S2 negative performance experiment remains preserved."
+    }
+  ],
+  "limitations_for_report": [
+    "All startup observations are warm-cache fresh-process results, not cold-start measurements.",
+    "Tiny Linux startup maxRSS includes pre-exec Python memory. Control /bin/true peak RSS increased with only parent allocation (0/32/96MiB); original startup RSS is preserved without subtraction/correction and cannot distinguish application peaks below the launcher floor.",
+    "Million-entry measured RSS is well above the startup launcher floor.",
+    "Native ARM64 execution uses OrbStack virtualization and its filesystem; compare paired variants within platform, not absolute cross-platform throughput.",
+    "New ARM wrappers omit only optional post-timing cross-comparison relinking. Frozen timed runners and per-sample full-byte verification are unchanged.",
+    "S2 borrowed complete-line scanning is an unretained negative experiment; no S2-only behavior or throughput claim belongs to retained R3.",
+    "Linux documentation qualification emits and verifies the public Core symbol graph; full DocC conversion is qualified on macOS."
+  ]
+}

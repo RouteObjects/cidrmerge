@@ -83,6 +83,11 @@ if find .build -name 'Crypto.swiftmodule' -print -quit | grep -q .; then
     fail "a Core-only consumer compiled the CLI-only Crypto module"
 fi
 
+# CHANGE: Making descriptor I/O a CLI dependency must not expand the Core product closure.
+if find .build -name 'SystemPackage.swiftmodule' -print -quit | grep -q .; then
+    fail "a Core-only consumer compiled the CLI-only SystemPackage module"
+fi
+
 consumer_binary="$(swift build --show-bin-path)/CoreConsumer"
 actual_output="${CONSUMER_ROOT}/actual.txt"
 expected_output="${CONSUMER_ROOT}/expected.txt"

@@ -12,7 +12,13 @@
 //===----------------------------------------------------------------------===//
 
 import Crypto
-import Foundation
+import SystemPackage
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 /// A detached SHA-256 checksum file for one exact rendered output artifact.
 struct DetachedSHA256Checksum: Equatable, Sendable {
@@ -64,7 +70,7 @@ struct OutputCommitter: Sendable {
             try data.write(to: URL(fileURLWithPath: path), options: .atomic)
         },
         standardOutputWriter: { data in
-            try FileHandle.standardOutput.write(contentsOf: data)
+            try DescriptorIO.write(data, to: .standardOutput)
         }
     )
 
@@ -104,7 +110,7 @@ struct OutputCommitter: Sendable {
         } catch {
             throw CIDRMergeError.outputWriteFailed(
                 destination: path,
-                reason: error.localizedDescription
+                reason: CLICompatibility.errorDescription(error)
             )
         }
     }
@@ -115,7 +121,7 @@ struct OutputCommitter: Sendable {
         } catch {
             throw CIDRMergeError.outputWriteFailed(
                 destination: "<stdout>",
-                reason: error.localizedDescription
+                reason: CLICompatibility.errorDescription(error)
             )
         }
     }

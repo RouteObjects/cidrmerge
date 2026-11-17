@@ -1,0 +1,87 @@
+{
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "/experiment/sources/B",
+    "--scratch-path",
+    "/validation/build/B",
+    "--cache-path",
+    "/validation/cache",
+    "--config-path",
+    "/validation/config",
+    "--security-path",
+    "/validation/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8",
+    "--product",
+    "cidrmerge",
+    "--static-swift-stdlib",
+    "-Xswiftc",
+    "-debug-prefix-map",
+    "-Xswiftc",
+    "/experiment/sources/B=Source",
+    "-Xcc",
+    "-ffile-prefix-map=/validation/build/B=SwiftPMBuild"
+  ],
+  "started_at": "2026-11-17T05:57:48.806308+00:00",
+  "free_before": 5660954140672,
+  "exit_code": 0,
+  "elapsed_s": 33.41236020199722,
+  "finished_at": "2026-11-17T05:58:22.218897+00:00",
+  "log_sha256": "6e03bce7ead87073e0eaa21a070a08209ef590b7fee8bb418c1deb5268c2e72c",
+  "dependency_pins": {
+    "swift-argument-parser": {
+      "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+      "version": "1.8.2"
+    },
+    "swift-asn1": {
+      "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+      "version": "1.7.1"
+    },
+    "swift-atomics": {
+      "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+      "version": "1.3.1"
+    },
+    "swift-cidr": {
+      "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+      "version": "0.10.1"
+    },
+    "swift-collections": {
+      "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+      "version": "1.6.0"
+    },
+    "swift-crypto": {
+      "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+      "version": "5.1.1"
+    },
+    "swift-nio": {
+      "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "version": "2.101.2"
+    },
+    "swift-system": {
+      "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+      "version": "1.7.4"
+    }
+  },
+  "unstripped_sha256": "02ec94d128366dcc8471813baa5cca171b7184bf3060a282d44b5285c8dec7b7",
+  "unstripped_bytes": 88838568,
+  "binary_sha256": "c9b20a076281bf29338f24c8d42926978568a693856f8773e5b02df1a51eb03d",
+  "binary_bytes": 60849832,
+  "binary": "bin/release-style/B",
+  "ldd": {
+    "exit_code": 0,
+    "stdout": "\tlinux-vdso.so.1 (0x0000ffffb8989000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffb4da0000)\n\tlibstdc++.so.6 => /lib/aarch64-linux-gnu/libstdc++.so.6 (0x0000ffffb4b10000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffb4ad0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffb4910000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffb8940000)\n",
+    "stderr": ""
+  },
+  "readelf_dynamic": "\nDynamic section at offset 0x15da888 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000003 (PLTGOT)             0x15effe8\n 0x0000000000000002 (PLTRELSZ)           9816 (bytes)\n 0x0000000000000017 (JMPREL)             0x284128\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000007 (RELA)               0x8b408\n 0x0000000000000008 (RELASZ)             2067744 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          85363\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000006 (SYMTAB)             0x2d0\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000005 (STRTAB)             0x299b8\n 0x000000000000000a (STRSZ)              334157 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x7b308\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-aarch64.so.1]\n 0x000000000000000c (INIT)               0x286780\n 0x000000000000000d (FINI)               0x119ffc4\n 0x000000000000001a (FINI_ARRAY)         0x1541818\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x0000000000000019 (INIT_ARRAY)         0x1541820\n 0x000000000000001b (INIT_ARRAYSZ)       96 (bytes)\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000006ffffffb (FLAGS_1)            Flags: PIE\n 0x000000006ffffff0 (VERSYM)             0x87ac8\n 0x000000006ffffffe (VERNEED)            0x8b208\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x0000000000000000 (NULL)               0x0\n",
+  "version": "0.4.1\n"
+}

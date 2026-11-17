@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T08:52:55.661278+00:00",
+  "scope": "Read-only frozen shipping artifact load commands/symbols, installed Apple SDK metadata, locked Swift System source, and primary linker-source review. No build, product execution, performance measurement or new hashing.",
+  "conclusion": "The new strong errno-library dependency is consistent with declared macOS 15.0 deployment under Apple SDK back-deployment metadata; no higher deployment floor is indicated. This is static compatibility evidence, not macOS 15 execution qualification.",
+  "load_commands": {
+    "B": {
+      "receipt": "macos/release-style/logs/B-load-commands.log",
+      "blocks": [
+        "11\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 15.0\n      sdk 15.0\n   ntools 1\n     tool 3\n  version 27106.1"
+      ]
+    },
+    "R3": {
+      "receipt": "macos/release-style/logs/R3-load-commands.log",
+      "blocks": [
+        "11\n      cmd LC_BUILD_VERSION\n  cmdsize 32\n platform 1\n    minos 15.0\n      sdk 15.0\n   ntools 1\n     tool 3\n  version 27106.1",
+        "30\n          cmd LC_LOAD_DYLIB\n      cmdsize 64\n         name /usr/lib/swift/libswift_errno.dylib (offset 24)\n   time stamp 2 Wed Dec 31 19:00:02 1969\n      current version 428.40.1\ncompatibility version 1.0.0"
+      ]
+    }
+  },
+  "undefined_errno_symbols": {
+    "B": {
+      "command": [
+        "xcrun",
+        "nm",
+        "-m",
+        "-u",
+        "macos/release-style/bin/B"
+      ],
+      "exit_code": 0,
+      "filtered_lines": [],
+      "filter": "errno or ___error",
+      "note": "Read-only symbol inspection; product was not launched."
+    },
+    "R3": {
+      "command": [
+        "xcrun",
+        "nm",
+        "-m",
+        "-u",
+        "macos/release-style/bin/R3"
+      ],
+      "exit_code": 0,
+      "filtered_lines": [
+        "                 (undefined) external _$s6Darwin5errnos5Int32Vvg (from libswift_errno)",
+        "                 (undefined) external ___error (from libSystem)"
+      ],
+      "filter": "errno or ___error",
+      "note": "Read-only symbol inspection; product was not launched."
+    }
+  },
+  "sdk": {
+    "root": "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk",
+    "files": {
+      "errno_stub": {
+        "sdk_relative_path": "usr/lib/swift/libswift_errno.tbd",
+        "excerpts": [
+          {
+            "line": 5,
+            "text": "install-name:    '/usr/lib/swift/libswift_errno.dylib'"
+          },
+          {
+            "line": 6,
+            "text": "current-version: 428.40.1"
+          },
+          {
+            "line": 14,
+            "text": "    symbols:         [ '$ld$previous$/usr/lib/swift/libswiftDarwin.dylib$$1$10.14.4$15.0$$', "
+          },
+          {
+            "line": 15,
+            "text": "                       '$ld$previous$/usr/lib/swift/libswiftDarwin.dylib$$6$13.1$18.0$$', "
+          },
+          {
+            "line": 16,
+            "text": "                       '$ld$previous$@rpath/libswiftDarwin.dylib$$1$10.9$10.14.4$$', "
+          }
+        ]
+      },
+      "moved_symbols_stub": {
+        "sdk_relative_path": "usr/lib/swift/libswift_DarwinFoundation1.tbd",
+        "excerpts": [
+          {
+            "line": 162,
+            "text": "                       '$ld$previous$/usr/lib/swift/libswift_errno.dylib$$1$15.0$26.0$_$s6Darwin5errnos5Int32VvM$', "
+          },
+          {
+            "line": 163,
+            "text": "                       '$ld$previous$/usr/lib/swift/libswift_errno.dylib$$1$15.0$26.0$_$s6Darwin5errnos5Int32Vvg$', "
+          },
+          {
+            "line": 164,
+            "text": "                       '$ld$previous$/usr/lib/swift/libswift_errno.dylib$$1$15.0$26.0$_$s6Darwin5errnos5Int32Vvs$', "
+          }
+        ]
+      },
+      "interface": {
+        "sdk_relative_path": "usr/lib/swift/_DarwinFoundation1.swiftmodule/arm64e-apple-macos.swiftinterface",
+        "excerpts": [
+          {
+            "line": 9,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 10,
+            "text": "public var errno: Swift::Int32 {"
+          },
+          {
+            "line": 14,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 133,
+            "text": "  @available(macOS 10.9, iOS 7.0, tvOS 9.0, watchOS 2.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 139,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 142,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 145,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 148,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 151,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          },
+          {
+            "line": 154,
+            "text": "@available(macOS 10.9, iOS 7.0, watchOS 2.0, tvOS 9.0, visionOS 1.0, *)"
+          }
+        ]
+      }
+    }
+  },
+  "interpretation": {
+    "strong_load": "R3 uses LC_LOAD_DYLIB, not LC_LOAD_WEAK_DYLIB; required compatibility version is 1.0.0. B has no direct errno dylib load. Both frozen shipping artifacts have minos 15.0.",
+    "symbol": "R3 references the Darwin.errno getter _$s6Darwin5errnos5Int32Vvg from libswift_errno.",
+    "macos_15_to_25": "SDK _DarwinFoundation1 metadata redirects errno getter/setter/modify symbols to libswift_errno for platform 1 minimum versions >=15.0 and <26.0.",
+    "older_targets": "libswift_errno.tbd redirects the install name to libswiftDarwin for macOS >=10.14.4 and <15.0, with an older @rpath route for >=10.9 and <10.14.4.",
+    "range_semantics": "Apple ld64 generic_dylib_file.cpp rejects a previous-location directive when minimum OS is below start or >=end; start inclusive, end exclusive.",
+    "compatibility_version": "The recorded current-version 428.40.1 is library-version metadata; the executable compatibility requirement is 1.0.0, not a macOS version."
+  },
+  "swift_system": {
+    "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+    "version": "1.7.4",
+    "checkout": "macos/build/R3/checkouts/swift-system",
+    "errno_wrapper": {
+      "path": "Sources/System/Internals/Exports.swift",
+      "lines": "39-43",
+      "behavior": "SYSTEM_PACKAGE_DARWIN uses Darwin.errno getter/setter."
+    },
+    "package_availability": {
+      "path": "Package.swift",
+      "lines": "23-40,81-104",
+      "behavior": "Normal source package defines SYSTEM_PACKAGE and uses source availability macOS 10.10; macOS 26 platform declarations are under SYSTEM_ABI_STABLE and do not set the normal SystemPackage deployment floor."
+    }
+  },
+  "primary_sources": [
+    {
+      "url": "https://github.com/apple-oss-distributions/ld64/blob/main/src/ld/parsers/generic_dylib_file.cpp#L249-L296",
+      "purpose": "Official Apple linker implementation of previous-location range and install-name overrides.",
+      "retrieved_on": "2026-11-17",
+      "revision_note": "Main branch reference, not immutable; exact installed SDK excerpts are retained here."
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/DynamicLibraryDesignGuidelines.html",
+      "purpose": "Dependent-library launch compatibility and weak-import distinction."
+    }
+  ],
+  "limits": [
+    "No launch or tests on macOS 15 were performed; host was macOS 27.2.1.",
+    "This is a new strong dependency: a system lacking the library/symbol would fail to load; SDK metadata explicitly provides the macOS 15 target route.",
+    "No claim that every deployment/loader difference is proved by minos or source availability alone.",
+    "No source change, weak-link workaround or deployment-floor increase is justified by this finding."
+  ]
+}

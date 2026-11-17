@@ -1,0 +1,11 @@
+{
+  "passed": false,
+  "started_at": "2026-11-17T08:21:32.355983+00:00",
+  "scope": "Independent hashes, role mapping, exact sample inventory/order, native resource units, retained output bytes, pair medians/spread and follow-up threshold. Build/source qualification is separate.",
+  "error": "ValueError('Changed while hashing: $EXPERIMENT/comparisons/ordinary/B-vs-E4/primary/round-03/searchbot-canonical-stats/C/stdout')",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/control/audit_comparison.py\", line 101, in main\n    try:receipt['result']=auditor.run();receipt['passed']=True\n                          ^^^^^^^^^^^^^\n  File \"$EXPERIMENT/control/audit_comparison.py\", line 77, in run\n    output=p.parent/filename;require(output.stat().st_size==q[nkey]==c[nkey],'Output size mismatch');require(q[hkey]==c[hkey],'Recorded output hash mismatch');self.check_hash(output,c[hkey]);self.check_hash(self.root/c[rkey],c[hkey])\n                                                                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/control/audit_comparison.py\", line 21, in check_hash\n    def check_hash(self,p,h):require(self.digest(p)==h,'Hash mismatch: '+str(p))\n                                     ^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/control/audit_comparison.py\", line 19, in digest\n    require(p.stat()==s,'Changed while hashing: '+str(p));self.hash_bytes+=s.st_size\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/control/audit_comparison.py\", line 7, in require\n    if not value: raise ValueError(message)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Changed while hashing: $EXPERIMENT/comparisons/ordinary/B-vs-E4/primary/round-03/searchbot-canonical-stats/C/stdout\n",
+  "finished_at": "2026-11-17T08:21:35.111046+00:00",
+  "auditor_sha256": "8b2858a808f2c4bc311339148ca9f08caf9c8a1ae95039d1a67769afb5b7173f",
+  "unique_files_hashed": 40,
+  "bytes_hashed": 434080167
+}

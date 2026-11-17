@@ -1,0 +1,37 @@
+{
+  "variants": [
+    "B",
+    "E4",
+    "R3",
+    "S2"
+  ],
+  "comparisons": [
+    "B-vs-E4",
+    "E4-vs-R3",
+    "R3-vs-S2",
+    "B-vs-S2"
+  ],
+  "primary_measured_per_comparison": 192,
+  "primary_warmups_per_comparison": 32,
+  "primary_per_platform": {
+    "measured": 768,
+    "warmups": 128
+  },
+  "startup_per_comparison": {
+    "measured": 160,
+    "warmups": 8
+  },
+  "startup_per_platform": {
+    "measured": 640,
+    "warmups": 32
+  },
+  "runner_role_mapping": "Each separate comparison maps preserved runner B/C roles to its named left/right variant; mappings and exact binary hashes are written before launch. Never pool candidates or comparisons.",
+  "production_runner_unchanged": true,
+  "startup_derived_from": "run_matched.py; 20 pairs and optional file input only; sources frozen separately",
+  "startup_uses": "stripped copies of ordinary Release binaries; main throughput uses original ordinary Release binaries",
+  "created_at": "2026-11-17T06:14:27.601405+00:00",
+  "supersedes": "comparison-protocol-v2.json; E/E2 attempts preserved untimed",
+  "wrapper_sha256": "e859140f12735f2b79ad6a34557ef088ec3ac1088d822db0c99fca84760e8fc5",
+  "release_style_comparison": "B-vs-S2",
+  "updated_at": "2026-11-17T06:17:45.822206+00:00"
+}

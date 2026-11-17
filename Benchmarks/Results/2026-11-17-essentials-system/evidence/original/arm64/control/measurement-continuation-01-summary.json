@@ -1,0 +1,410 @@
+{
+  "scope": "Timing continuation; independent final audits run separately on host",
+  "audits_complete": false,
+  "passed": true,
+  "started_at": "2026-11-17T07:36:57.656049+00:00",
+  "script_sha256": "83aafb8380b599ddaed236c2192aeb6214ad66464600f90762d8ab8d08a1c4e2",
+  "phases": [
+    {
+      "label": "throughput-ordinary-B-vs-E4-primary",
+      "directory": "/validation/comparisons/ordinary/B-vs-E4/primary",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "measured": 192,
+      "warmups": 32,
+      "followup_required": [
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "already_completed": true,
+      "postprocessing_recovered": false
+    },
+    {
+      "label": "throughput-ordinary-B-vs-E4-followup-01",
+      "directory": "/validation/comparisons/ordinary/B-vs-E4/followup-01",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "followup-01",
+      "measured": 108,
+      "warmups": 18,
+      "followup_required": [
+        "text-ipv6-canonical-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "already_completed": true,
+      "postprocessing_recovered": true
+    },
+    {
+      "label": "throughput-ordinary-E4-vs-R3-primary",
+      "directory": "/validation/comparisons/ordinary/E4-vs-R3/primary",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "measured": 192,
+      "warmups": 32,
+      "followup_required": []
+    },
+    {
+      "label": "throughput-ordinary-R3-vs-S2-primary",
+      "directory": "/validation/comparisons/ordinary/R3-vs-S2/primary",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "measured": 192,
+      "warmups": 32,
+      "followup_required": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-stats"
+      ]
+    },
+    {
+      "label": "throughput-ordinary-R3-vs-S2-followup-01",
+      "directory": "/validation/comparisons/ordinary/R3-vs-S2/followup-01",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "measured": 96,
+      "warmups": 16,
+      "followup_required": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-stats"
+      ]
+    },
+    {
+      "label": "throughput-ordinary-B-vs-S2-primary",
+      "directory": "/validation/comparisons/ordinary/B-vs-S2/primary",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "measured": 192,
+      "warmups": 32,
+      "followup_required": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "throughput-ordinary-B-vs-S2-followup-01",
+      "directory": "/validation/comparisons/ordinary/B-vs-S2/followup-01",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "measured": 36,
+      "warmups": 6,
+      "followup_required": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "throughput-ordinary-B-vs-R3-primary",
+      "directory": "/validation/comparisons/ordinary/B-vs-R3/primary",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "measured": 192,
+      "warmups": 32,
+      "followup_required": [
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "throughput-ordinary-B-vs-R3-followup-01",
+      "directory": "/validation/comparisons/ordinary/B-vs-R3/followup-01",
+      "mode": "throughput",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": [
+        "searchbot-canonical-stats"
+      ]
+    },
+    {
+      "label": "startup-ordinary-B-vs-E4-primary",
+      "directory": "/validation/startup/ordinary/B-vs-E4/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": []
+    },
+    {
+      "label": "startup-ordinary-E4-vs-R3-primary",
+      "directory": "/validation/startup/ordinary/E4-vs-R3/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ]
+    },
+    {
+      "label": "startup-ordinary-E4-vs-R3-followup-01",
+      "directory": "/validation/startup/ordinary/E4-vs-R3/followup-01",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "followup-01",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-100"
+      ]
+    },
+    {
+      "label": "startup-ordinary-R3-vs-S2-primary",
+      "directory": "/validation/startup/ordinary/R3-vs-S2/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-10000"
+      ]
+    },
+    {
+      "label": "startup-ordinary-R3-vs-S2-followup-01",
+      "directory": "/validation/startup/ordinary/R3-vs-S2/followup-01",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "R3-vs-S2",
+      "phase": "followup-01",
+      "measured": 120,
+      "warmups": 6,
+      "followup_required": [
+        "empty-stdin",
+        "version",
+        "mixed-10000"
+      ]
+    },
+    {
+      "label": "startup-ordinary-B-vs-S2-primary",
+      "directory": "/validation/startup/ordinary/B-vs-S2/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": []
+    },
+    {
+      "label": "startup-ordinary-B-vs-R3-primary",
+      "directory": "/validation/startup/ordinary/B-vs-R3/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": []
+    },
+    {
+      "label": "startup-release-style-B-vs-S2-primary",
+      "directory": "/validation/startup/release-style/B-vs-S2/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "release-style",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": []
+    },
+    {
+      "label": "startup-release-style-B-vs-R3-primary",
+      "directory": "/validation/startup/release-style/B-vs-R3/primary",
+      "mode": "startup",
+      "startup": true,
+      "profile": "release-style",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "measured": 160,
+      "warmups": 8,
+      "followup_required": [
+        "mixed-10000"
+      ]
+    },
+    {
+      "label": "startup-release-style-B-vs-R3-followup-01",
+      "directory": "/validation/startup/release-style/B-vs-R3/followup-01",
+      "mode": "startup",
+      "startup": true,
+      "profile": "release-style",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "measured": 40,
+      "warmups": 2,
+      "followup_required": []
+    },
+    {
+      "label": "stdin-ordinary-B-vs-E4-primary",
+      "directory": "/validation/stdin/ordinary/B-vs-E4/primary",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "primary",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": [
+        "searchbot-canonical-no-stats"
+      ]
+    },
+    {
+      "label": "stdin-ordinary-B-vs-E4-followup-01",
+      "directory": "/validation/stdin/ordinary/B-vs-E4/followup-01",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-E4",
+      "phase": "followup-01",
+      "measured": 12,
+      "warmups": 2,
+      "followup_required": [
+        "searchbot-canonical-no-stats"
+      ]
+    },
+    {
+      "label": "stdin-ordinary-E4-vs-R3-primary",
+      "directory": "/validation/stdin/ordinary/E4-vs-R3/primary",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "E4-vs-R3",
+      "phase": "primary",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": []
+    },
+    {
+      "label": "stdin-ordinary-B-vs-S2-primary",
+      "directory": "/validation/stdin/ordinary/B-vs-S2/primary",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "primary",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "stdin-ordinary-B-vs-S2-followup-01",
+      "directory": "/validation/stdin/ordinary/B-vs-S2/followup-01",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-S2",
+      "phase": "followup-01",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": [
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "stdin-ordinary-B-vs-R3-primary",
+      "directory": "/validation/stdin/ordinary/B-vs-R3/primary",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "primary",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": [
+        "searchbot-canonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ]
+    },
+    {
+      "label": "stdin-ordinary-B-vs-R3-followup-01",
+      "directory": "/validation/stdin/ordinary/B-vs-R3/followup-01",
+      "mode": "stdin",
+      "startup": false,
+      "profile": "ordinary",
+      "comparison": "B-vs-R3",
+      "phase": "followup-01",
+      "measured": 24,
+      "warmups": 4,
+      "followup_required": []
+    }
+  ],
+  "audits": [
+    "/validation/audits-v3/throughput-ordinary-B-vs-E4-primary/audit.json",
+    "/validation/audits-v3/throughput-ordinary-B-vs-E4-followup-01/audit.json"
+  ],
+  "timing_finished_at": "2026-11-17T08:04:14.681195+00:00",
+  "runtime_and_binaries_unchanged_after_timing": true,
+  "total_measured": 2820,
+  "total_warmups": 302,
+  "finished_at": "2026-11-17T08:04:14.891066+00:00"
+}

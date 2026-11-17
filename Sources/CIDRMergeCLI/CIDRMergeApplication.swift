@@ -11,7 +11,13 @@
 //
 //===----------------------------------------------------------------------===//
 
-import Foundation
+import SystemPackage
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 struct CIDRMergeApplication: Sendable {
     typealias InputLoader =
@@ -39,7 +45,7 @@ struct CIDRMergeApplication: Sendable {
             )
         },
         diagnosticWriter: { diagnostics in
-            try FileHandle.standardError.write(contentsOf: diagnostics)
+            try DescriptorIO.write(diagnostics, to: .standardError)
         }
     )
 

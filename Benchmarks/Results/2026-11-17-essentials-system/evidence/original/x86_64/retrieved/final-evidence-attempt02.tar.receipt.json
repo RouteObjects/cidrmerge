@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "at": "2026-11-17T09:23:20.440672+00:00",
+  "remote_root": "$EXPERIMENT",
+  "archive": "x86_64/retrieved/final-evidence-attempt02.tar.gz",
+  "archive_sha256": "977efbda608075becf5c45d209f9048f32e20595b520974a520d0ae17f059d34",
+  "archive_bytes": 309236853,
+  "included": [
+    "verified-content",
+    "control",
+    "logs",
+    "bin",
+    "runtime",
+    "comparisons",
+    "startup",
+    "stdin",
+    "audits",
+    "audits-v2",
+    "correctness",
+    "final-validation",
+    "final-validation-R3",
+    "preserved-test-artifacts.tar.gz",
+    "startup-fixtures"
+  ],
+  "regular_files": 25590,
+  "hardlinks": 3252,
+  "skipped_symlinks_preserved_in_archive": [
+    {
+      "name": "correctness/io-B-vs-E4/work/searchbot-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896358.2972274
+    },
+    {
+      "name": "correctness/io-B-vs-E4/work/text-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896357.3958204
+    },
+    {
+      "name": "correctness/io-B-vs-R3/work/searchbot-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896648.0021534
+    },
+    {
+      "name": "correctness/io-B-vs-R3/work/text-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896647.0989132
+    },
+    {
+      "name": "correctness/io-B-vs-S2/work/searchbot-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896938.2064235
+    },
+    {
+      "name": "correctness/io-B-vs-S2/work/text-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794896937.316777
+    },
+    {
+      "name": "correctness/io-v2-self-control/work/searchbot-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794895950.156368
+    },
+    {
+      "name": "correctness/io-v2-self-control/work/text-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794895949.0594034
+    }
+  ],
+  "fixture_link": "$EXPERIMENT/fixtures",
+  "mode_restorations": [
+    {
+      "path": "correctness/io-B-vs-E/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-E/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-E4/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-E4/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-R3/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-R3/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-S2/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-B-vs-S2/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-self-control/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-self-control/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-v2-self-control/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "correctness/io-v2-self-control/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    }
+  ],
+  "scope": "Complete selected evidence, original tar preserves intentional I/O fixture symlinks; extraction skips all symlinks to avoid following remote absolute paths. All remote evidence remains unchanged."
+}

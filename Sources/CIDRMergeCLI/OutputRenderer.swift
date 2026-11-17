@@ -12,7 +12,12 @@
 //===----------------------------------------------------------------------===//
 
 import CIDR
-import Foundation
+
+#if canImport(FoundationEssentials)
+    import FoundationEssentials
+#else
+    import Foundation
+#endif
 
 enum OutputRenderer {
     static func render(_ result: MergeResult, format: OutputFormat) throws -> Data {
@@ -54,11 +59,7 @@ enum OutputRenderer {
             let magnitude =
                 abs(Double(statistics.countChange))
                 / Double(statistics.inputCount) * 100
-            percentage = String(
-                format: "%.1f%%",
-                locale: Locale(identifier: "en_US_POSIX"),
-                magnitude
-            )
+            percentage = CLICompatibility.percentage(magnitude)
         }
 
         let changeDescription: String

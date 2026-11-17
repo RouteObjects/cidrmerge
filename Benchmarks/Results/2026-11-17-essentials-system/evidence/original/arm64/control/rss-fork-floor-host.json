@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-17T08:12:13.870451+00:00",
+  "command": [
+    "/usr/local/bin/docker",
+    "--config",
+    "$EXPERIMENT/control/docker-config",
+    "--host",
+    "unix://$HOME/.orbstack/run/docker.sock",
+    "exec",
+    "cidrmerge-essentials-arm642-20261117T053919Z",
+    "/validation/python/bin/python3",
+    "/experiment/control/rss_fork_floor.py",
+    "--output",
+    "/validation/harness-controls/rss-fork-floor"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"passed\": true, \"groups\": 3, \"receipt\": \"/validation/harness-controls/rss-fork-floor/summary.json\"}\n",
+  "stderr": "",
+  "ran_after_all_timing": true
+}

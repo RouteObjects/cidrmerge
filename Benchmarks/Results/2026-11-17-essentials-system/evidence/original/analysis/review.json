@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T06:30:52.377051+00:00",
+  "scope": "Read-only final B-to-S2 implementation review and inspected Mac qualification evidence; no new tests/builds/timings performed while writing this review.",
+  "reviewer_scope": "Reviewer implemented CLICompatibility and its tests and independently reviewed parent-authored descriptor/buffer changes; this is not an independent audit of every authored line.",
+  "conclusion": "No additional current CLI ownership or behavior defect found in the reviewed scope; limitations below remain.",
+  "snapshots": {
+    "B": {
+      "path": "control/baseline-freeze.json",
+      "sha256": "9694ecb0d482b6e1d01e3723de2d4b0e150164a394eed9e207de21883d7a76ed",
+      "patch_sha256": null,
+      "baseline": "9fe30dde3fd5ad50944064f912fad8c19cfcec62",
+      "archive_sha256": "f81fc9f99e1a2a2514768d77ee5c9a911b5169ff7a99b41a712eb5da488df838"
+    },
+    "E4": {
+      "path": "control/E4-freeze.json",
+      "sha256": "a4901b68a2650461125aa19a76f17e7467a9ad93e7ef3810411168d734e30e69",
+      "patch_sha256": "bf0b28b2044aafb70247995b902c4b48d720d00a3685deff7e4a9a929d9bd816",
+      "baseline": "9fe30dde3fd5ad50944064f912fad8c19cfcec62"
+    },
+    "R3": {
+      "path": "control/R3-freeze.json",
+      "sha256": "cafb978a71d5f47547e2f0554f08e21a0c81b444ef780fcd58f9733c2cdb62b7",
+      "patch_sha256": "a05791d8b63b632a04181f1ab823280287071126877290fe48afa1ec2c920f01",
+      "baseline": "9fe30dde3fd5ad50944064f912fad8c19cfcec62"
+    },
+    "S2": {
+      "path": "control/S2-freeze.json",
+      "sha256": "f4e173ef7aaa12d7218d0cd2f2f42546f09d57c3a509bb2ad9554fd99e74f1b4",
+      "patch_sha256": "ecc3f3386501a8d8f1fe286b973fe427352464584286e5b95e0776302010ee68",
+      "baseline": "9fe30dde3fd5ad50944064f912fad8c19cfcec62"
+    }
+  },
+  "macos_qualification": {
+    "B": {
+      "ordinary_build": {
+        "path": "macos/control/B-build-release.json",
+        "sha256": "87453110cf826dfc7687f5e6ed90fe9edb87b0c6cfe9e43c6b5ba218e81d5f54",
+        "exit_code": 0,
+        "binary_sha256": "f059a6959635aea6a48b69a8e673a2c16aba3729a043bf82828845c3b32dc839"
+      },
+      "tests": {
+        "debug": {
+          "path": "macos/control/B-test-debug.json",
+          "sha256": "1b26039e868216fd8907c9a18ac2229e8ed2f027f47838fe41462e966e665ff8",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 78,
+              "suites": 10
+            }
+          ],
+          "total_tests": 85,
+          "log": "macos/logs/B-test-debug.log"
+        },
+        "release": {
+          "path": "macos/control/B-test-release.json",
+          "sha256": "2b495e6ff9ff99bfbffa203e52e56ffaff19d6e4bf3533e4b0c741b015bf546d",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 78,
+              "suites": 10
+            }
+          ],
+          "total_tests": 85,
+          "log": "macos/logs/B-test-release.log"
+        }
+      }
+    },
+    "E4": {
+      "ordinary_build": {
+        "path": "macos/control/E4-build-release.json",
+        "sha256": "770e928578c33d98e92bec6b48a419729227ac3db613f77704a5c572286c19ca",
+        "exit_code": 0,
+        "binary_sha256": "4c28b74e61474ba4bc76545326174f7cc0eb4c33e819b952dc9263a77269e50e"
+      },
+      "tests": {
+        "debug": {
+          "path": "macos/control/E4-test-debug.json",
+          "sha256": "f73ff4e92beda3b41f8f05fe45c5eac95ce6bd61ce22ff2a60fafeb69dc986e1",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 88,
+              "suites": 12
+            }
+          ],
+          "total_tests": 95,
+          "log": "macos/logs/E4-test-debug.log"
+        },
+        "release": {
+          "path": "macos/control/E4-test-release.json",
+          "sha256": "73fc0e3c79c8b93a26cb5850e3beef7f9a1c9c81801fd58c11b7958d08479563",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 88,
+              "suites": 12
+            }
+          ],
+          "total_tests": 95,
+          "log": "macos/logs/E4-test-release.log"
+        }
+      },
+      "standard_differential": {
+        "path": "macos/differential-E4/summary.json",
+        "sha256": "0def33548e7c7a3659568d3d31a5c4d6ec28cb1d03067959356434dbc0758d5e",
+        "passed": true,
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "path": "macos/io-v2-E4-01/summary.json",
+        "sha256": "e5f35dd2e6ebf9b9def1ccedd29e054327bbe78597bca182ab4e411bd21754ca",
+        "failed": 0,
+        "failures": [],
+        "passed": 84,
+        "total": 84
+      },
+      "slow_stdout": {
+        "path": "macos/slow-stdout-E4-01/summary.json",
+        "sha256": "aa942ba9280bfb33f9bb213fefc54df1e4b9229db3e0d5e14f8eb0ca93fef41b",
+        "baseline_status": 0,
+        "candidate_status": 0,
+        "entries": 60000,
+        "equal": true,
+        "passed": true,
+        "reference_bytes": 1020812
+      }
+    },
+    "R3": {
+      "ordinary_build": {
+        "path": "macos/control/R3-build-release.json",
+        "sha256": "3a82166f7af52dcf7c5bfd0b339eefa9c1c2a6e14f5f2ec7848e4c1e8ba42a3e",
+        "exit_code": 0,
+        "binary_sha256": "188ca25b9243584fbe38273aed2e136cbc63f50d0ab860ff8015b0a48a97aeec"
+      },
+      "tests": {
+        "debug": {
+          "path": "macos/control/R3-test-debug.json",
+          "sha256": "61b6bbf0608243f89450c75d53966c4c37b28f7d0f98563b5f7d95160f089fce",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 88,
+              "suites": 12
+            }
+          ],
+          "total_tests": 95,
+          "log": "macos/logs/R3-test-debug.log"
+        },
+        "release": {
+          "path": "macos/control/R3-test-release.json",
+          "sha256": "f356f45539c9b0e48f56e3666bb7e2f8f7b0c28e3e2cb2e9e89604e47e51f5f2",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 88,
+              "suites": 12
+            }
+          ],
+          "total_tests": 95,
+          "log": "macos/logs/R3-test-release.log"
+        }
+      },
+      "standard_differential": {
+        "path": "macos/differential-R3/summary.json",
+        "sha256": "5e0ad761cb49e841e514c386dc1e8939566debf6666020a0dfdc7a56a11494ee",
+        "passed": true,
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "path": "macos/io-v2-R3-01/summary.json",
+        "sha256": "e5f35dd2e6ebf9b9def1ccedd29e054327bbe78597bca182ab4e411bd21754ca",
+        "failed": 0,
+        "failures": [],
+        "passed": 84,
+        "total": 84
+      }
+    },
+    "S2": {
+      "ordinary_build": {
+        "path": "macos/control/S2-build-release.json",
+        "sha256": "8ef41fea0968910f9224d6712c7a49003bf70305d37124d92018ed54ca32d4de",
+        "exit_code": 0,
+        "binary_sha256": "1bb9796e2cb43abb2767fb575002d0e268eda73c0f6b74b7c98a97b8538af5cd"
+      },
+      "tests": {
+        "debug": {
+          "path": "macos/control/S2-test-debug.json",
+          "sha256": "933b22ff2d4b2aeb22941919d372c8197d08b0c4530eb7e7f0f56e770d9718c2",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 89,
+              "suites": 12
+            }
+          ],
+          "total_tests": 96,
+          "log": "macos/logs/S2-test-debug.log"
+        },
+        "release": {
+          "path": "macos/control/S2-test-release.json",
+          "sha256": "972e1dcf86c11d76d7625b73b216fbbfe81f97250c2c786a9d10a32a982cdd1f",
+          "exit_code": 0,
+          "swift_testing_suites": [
+            {
+              "tests": 7,
+              "suites": 1
+            },
+            {
+              "tests": 89,
+              "suites": 12
+            }
+          ],
+          "total_tests": 96,
+          "log": "macos/logs/S2-test-release.log"
+        }
+      },
+      "standard_differential": {
+        "path": "macos/differential-S2/summary.json",
+        "sha256": "8c52f48b3a513ff73ba8e4fce65c17546dea7c012b8cc78c2529cf4becf20cc1",
+        "passed": true,
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "path": "macos/io-v2-S2-01/summary.json",
+        "sha256": "e5f35dd2e6ebf9b9def1ccedd29e054327bbe78597bca182ab4e411bd21754ca",
+        "failed": 0,
+        "failures": [],
+        "passed": 84,
+        "total": 84
+      },
+      "slow_stdout": {
+        "path": "macos/slow-stdout-S2-01/summary.json",
+        "sha256": "aa942ba9280bfb33f9bb213fefc54df1e4b9229db3e0d5e14f8eb0ca93fef41b",
+        "baseline_status": 0,
+        "candidate_status": 0,
+        "entries": 60000,
+        "equal": true,
+        "passed": true,
+        "reference_bytes": 1020812
+      }
+    },
+    "final_validation": {
+      "path": "macos/final-validation-02/summary.json",
+      "sha256": "13c1816c37038c587544ded7e80cb16c8f1e461424a41dc0bc62aa985423fcfb",
+      "passed": true,
+      "steps": [
+        {
+          "label": "source-git-init",
+          "exit_code": 0
+        },
+        {
+          "label": "source-git-index",
+          "exit_code": 0
+        },
+        {
+          "label": "whitespace",
+          "exit_code": 1
+        },
+        {
+          "label": "content-audit",
+          "exit_code": 0
+        },
+        {
+          "label": "format",
+          "exit_code": 0
+        },
+        {
+          "label": "documentation-symbol-graph",
+          "exit_code": 0
+        },
+        {
+          "label": "documentation-convert",
+          "exit_code": 0
+        },
+        {
+          "label": "core-consumer-build",
+          "exit_code": 0
+        },
+        {
+          "label": "core-consumer-run",
+          "exit_code": 0
+        },
+        {
+          "label": "cli-smoke",
+          "exit_code": 0
+        },
+        {
+          "label": "release-style-binary-audit",
+          "exit_code": 0
+        }
+      ],
+      "whitespace_exit_one_explanation": "git diff --no-index --check reports that snapshots differ; empty whitespace log, not a whitespace error.",
+      "frozen_source_unchanged": true,
+      "frozen_binary_unchanged": true,
+      "core_boundary": {
+        "passed": true,
+        "forbidden_compiled_modules": [
+          "Crypto.swiftmodule",
+          "SystemPackage.swiftmodule"
+        ],
+        "found": [],
+        "lockfile_pins_equal": true,
+        "dependency_pin_count": 8,
+        "program_sha256": "f9ed6a379ed7dcdc9d925df3e135123214cb3d6cc04f94cb5456247a8b24fc7a"
+      }
+    }
+  },
+  "macos_artifacts": {
+    "B": {
+      "ordinary": {
+        "path": "$EXPERIMENT/macos/bin/B",
+        "bytes": 2443496,
+        "sha256": "f059a6959635aea6a48b69a8e673a2c16aba3729a043bf82828845c3b32dc839"
+      },
+      "ordinary_stripped_copy": {
+        "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B",
+        "bytes": 1290512,
+        "sha256": "7a994c73c5b464548df5f9aed9a5b55fd7ecf7b94c404d017cf6fba58c49f0d4"
+      },
+      "direct_libraries": [
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Builtin_float.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswift_StringProcessing.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswift_stdio.dylib"
+      ],
+      "original_unchanged": true,
+      "release_style": {
+        "source": "$EXPERIMENT/sources/B",
+        "package_resolved_sha256": "9e705cb7bc4e4ea030e252229e499e3bc023477636b8e5b77a33150c264728e5",
+        "unstripped": {
+          "path": "$EXPERIMENT/macos/release-style/unstripped-bin/B",
+          "bytes": 2445352,
+          "sha256": "fae1942cee80e8f30020df9a9dd58b0d7d514248c1ce1e3dcfd297de020b84a1"
+        },
+        "stripped": {
+          "path": "$EXPERIMENT/macos/release-style/bin/B",
+          "bytes": 1290512,
+          "sha256": "02987a3ca131498aa0414919b6e68f350131981b9436251d22fd7794f6f2106e"
+        }
+      }
+    },
+    "E4": {
+      "ordinary": {
+        "path": "$EXPERIMENT/macos/bin/E4",
+        "bytes": 2957336,
+        "sha256": "4c28b74e61474ba4bc76545326174f7cc0eb4c33e819b952dc9263a77269e50e"
+      },
+      "ordinary_stripped_copy": {
+        "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/E4",
+        "bytes": 1516768,
+        "sha256": "80ef4034834ecd89cea3a508dbb6ae5995a5624de18c113a9571e05081e45169"
+      },
+      "direct_libraries": [
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Builtin_float.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswift_StringProcessing.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswift_errno.dylib",
+        "/usr/lib/swift/libswift_stdio.dylib"
+      ],
+      "original_unchanged": true
+    },
+    "R3": {
+      "ordinary": {
+        "path": "$EXPERIMENT/macos/bin/R3",
+        "bytes": 2955992,
+        "sha256": "188ca25b9243584fbe38273aed2e136cbc63f50d0ab860ff8015b0a48a97aeec"
+      },
+      "ordinary_stripped_copy": {
+        "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/R3",
+        "bytes": 1515776,
+        "sha256": "089ed5ca52c1587e83e101e46da9aad12160941058cb2f5692e69d104b59f888"
+      },
+      "direct_libraries": [
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Builtin_float.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswift_StringProcessing.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswift_errno.dylib",
+        "/usr/lib/swift/libswift_stdio.dylib"
+      ],
+      "original_unchanged": true
+    },
+    "S2": {
+      "ordinary": {
+        "path": "$EXPERIMENT/macos/bin/S2",
+        "bytes": 2975848,
+        "sha256": "1bb9796e2cb43abb2767fb575002d0e268eda73c0f6b74b7c98a97b8538af5cd"
+      },
+      "ordinary_stripped_copy": {
+        "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/S2",
+        "bytes": 1532816,
+        "sha256": "ea578e7725215e7bcfccdda08c690a2e48d32ec2ec6474a6c5a337331cc47d82"
+      },
+      "direct_libraries": [
+        "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "/usr/lib/libobjc.A.dylib",
+        "/usr/lib/libSystem.B.dylib",
+        "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+        "/usr/lib/libc++.1.dylib",
+        "/usr/lib/swift/libswiftCore.dylib",
+        "/usr/lib/swift/libswiftCoreFoundation.dylib",
+        "/usr/lib/swift/libswiftDarwin.dylib",
+        "/usr/lib/swift/libswiftDispatch.dylib",
+        "/usr/lib/swift/libswiftIOKit.dylib",
+        "/usr/lib/swift/libswiftObjectiveC.dylib",
+        "/usr/lib/swift/libswiftXPC.dylib",
+        "/usr/lib/swift/libswift_Builtin_float.dylib",
+        "/usr/lib/swift/libswift_Concurrency.dylib",
+        "/usr/lib/swift/libswift_StringProcessing.dylib",
+        "/usr/lib/swift/libswiftos.dylib",
+        "/usr/lib/swift/libswift_errno.dylib",
+        "/usr/lib/swift/libswift_stdio.dylib"
+      ],
+      "original_unchanged": true,
+      "release_style": {
+        "source": "$EXPERIMENT/sources/S2",
+        "package_resolved_sha256": "9e705cb7bc4e4ea030e252229e499e3bc023477636b8e5b77a33150c264728e5",
+        "unstripped": {
+          "path": "$EXPERIMENT/macos/release-style/unstripped-bin/S2",
+          "bytes": 2978136,
+          "sha256": "21af1b15f362856425180d69f38afd5a0d2d8346bfd112537ef2ee9d41038e57"
+        },
+        "stripped": {
+          "path": "$EXPERIMENT/macos/release-style/bin/S2",
+          "bytes": 1532816,
+          "sha256": "ff272372b687f738c67664cc792d81ecd7e023928281e2c652c6d48aec231490"
+        }
+      }
+    }
+  },
+  "shipping_hardlink_receipt": {
+    "path": "macos/control/release-style-hardlinks.json",
+    "sha256": "e017b237a846a4f2ae4d535f23479e8419c5f34f5e5ff38922d74fdcec4694ad"
+  },
+  "discarded_candidates": [
+    {
+      "variant": "draftE01",
+      "disposition": "discarded after failed Mac I/O gate",
+      "reason": "72/74 real-I/O cases matched; directory input returned the wrong Cocoa error and relative permission diagnostics omitted the parent folder. Debug/Release88 tests and standard254-case differential had passed.",
+      "evidence": [
+        "macos/io-draftE01-01/summary.json",
+        "macos/logs/draftE01-test-debug.log",
+        "macos/logs/draftE01-test-release.log",
+        "control/draftE01-freeze.json"
+      ]
+    },
+    {
+      "variant": "E",
+      "disposition": "superseded common implementation",
+      "reason": "94-test Debug/Release suites passed, but this snapshot still opened raw FilePath(path), had no Darwin directory-open check, and retained the pre-correction relative-path helper. Superseded by E2 based on the observed draftE01 defects; no separate E Mac I/O failure is claimed.",
+      "evidence": [
+        "control/E2-freeze.json",
+        "sources/E/Sources/CIDRMergeCLI/DescriptorIO.swift",
+        "macos/control/E-test-debug.json",
+        "macos/control/E-test-release.json"
+      ]
+    },
+    {
+      "variant": "E2",
+      "disposition": "build failed",
+      "reason": "Swift System Errno has no operationNotPermitted member; replaced with raw EPERM in E3.",
+      "evidence": [
+        "macos/control/E2-build-release.json",
+        "macos/logs/E2-build-release.log",
+        "control/E3-freeze.json"
+      ]
+    },
+    {
+      "variant": "E3",
+      "disposition": "controlled compatibility test failed",
+      "reason": "Ordinary254-case and expanded84-case CLI gates passed, but relative-directory unit oracle failed: fixed EPERM did not reproduce Darwin FileHandle inherited errno. E4 captures errno before close and resets oracle/candidate errno independently.",
+      "evidence": [
+        "macos/logs/E3-test-debug.log",
+        "macos/io-v2-E3-01/summary.json",
+        "control/compatibility-probes/errno-dir.log",
+        "control/E4-freeze.json"
+      ]
+    },
+    {
+      "variant": "R",
+      "disposition": "superseded before independent Mac qualification",
+      "reason": "Initial buffer-reuse snapshot contained the E2 invalid Errno.operationNotPermitted spelling and raw path open. R2 incorporated E3 common corrections. No independent R build result is claimed.",
+      "evidence": [
+        "sources/R/Sources/CIDRMergeCLI/DescriptorIO.swift",
+        "control/R2-freeze.json"
+      ]
+    },
+    {
+      "variant": "R2",
+      "disposition": "superseded common implementation",
+      "reason": "Ordinary release build succeeded; directory rejection still forced EPERM. R3 incorporated E4 inherited-errno compatibility and the final CLI dependency audits. No independent R2 failed test is claimed.",
+      "evidence": [
+        "macos/control/R2-build-release.json",
+        "sources/R2/Sources/CIDRMergeCLI/DescriptorIO.swift",
+        "control/R3-freeze.json"
+      ]
+    },
+    {
+      "variant": "S",
+      "disposition": "superseded common implementation",
+      "reason": "Early borrowed-line release and254-case differential passed. Its common directory branch still forced EPERM; S2 incorporates the final inherited-errno helper/tests/audits. No independent S failed test is claimed.",
+      "evidence": [
+        "macos/control/S-build-release.json",
+        "macos/differential-S/summary.json",
+        "sources/S/Sources/CIDRMergeCLI/DescriptorIO.swift",
+        "control/S2-freeze.json"
+      ]
+    }
+  ],
+  "discarded_feasibility_or_harness_attempts": [
+    {
+      "attempt": "C vsnprintf percentage replacement",
+      "reason": "Disagrees with Foundation decimal ties and large magnitudes; rejected.",
+      "evidence": [
+        "control/compatibility-probes/format.swift",
+        "control/compatibility-probes/format-run.log"
+      ]
+    },
+    {
+      "attempt": "Initial Decimal probe",
+      "reason": "Included zero.nextDown outside the nonnegative count-derived caller domain and exited133; subsequent valid-domain probes excluded that value.",
+      "evidence": [
+        "control/compatibility-probes/decimal.swift",
+        "control/compatibility-probes/decimal-mac-rerun.log"
+      ]
+    },
+    {
+      "attempt": "NSDecimalRound production replacement",
+      "reason": "Matches tested Foundation results but NSDecimalRound is not available from FoundationEssentials alone.",
+      "evidence": [
+        "control/compatibility-probes/decimalessentials-build.log"
+      ]
+    },
+    {
+      "attempt": "Initial pure-decimal carry routine",
+      "reason": "117 retained mismatches from an implementation carry bug; corrected digit2 and digit3 controls passed.",
+      "evidence": [
+        "control/compatibility-probes/digit-mac.log",
+        "control/compatibility-probes/digit3-mac.log"
+      ]
+    },
+    {
+      "attempt": "final-validation-01",
+      "reason": "Harness indexed entire historical tree as newly added, so whitespace check rejected preserved historical patch-file whitespace. final-validation-02 checks B-to-S2 delta; no source or historical result was rewritten.",
+      "evidence": [
+        "macos/final-validation-01/summary.json",
+        "macos/final-validation-01/whitespace.log",
+        "macos/final-validation-02/whitespace.json",
+        "macos/final-validation-02/whitespace.log"
+      ]
+    }
+  ],
+  "limitations": [
+    "Mac retains Foundation and gains libswift_errno; stripped shipping S2 is larger.",
+    "Error._domain/_code are underscored stdlib witnesses.",
+    "Essentials cannot inspect custom-domain Foundation NSError userInfo overrides; actual CLI I/O paths use explicitly covered descriptor/Cocoa errors.",
+    "Darwin directory diagnostics depend on inherited errno; controlled and observed CLI parity do not guarantee process-state-independent text.",
+    "Decimal formatting controls cover the nonnegative finite count-derived domain; they do not prove equivalence for every Double or future Foundation release.",
+    "Input scratch is bounded; longest-line pending storage, Searchbot document, merged collections and whole-output Data still scale.",
+    "Slow pipe validates complete successful delayed output; individual kernel write return counts were not instrumented.",
+    "Full ARM64/x86 Linux qualification is outside this review; only independently inspected isolated compatibility probes are discussed."
+  ]
+}

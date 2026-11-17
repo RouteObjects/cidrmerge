@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/E4",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T06:17:00.617531+00:00",
+  "log": "logs/E4-test-release.log",
+  "free_bytes_before": 4275126272,
+  "exit_code": 0,
+  "elapsed_s": 124.44231588300318,
+  "log_sha256": "bd1aff198ec3458cb766f293b10e6f51dd5381558f276644b8aa643e0ebbc009",
+  "tests": 95,
+  "summaries": [
+    [
+      "95",
+      "13"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest",
+      "sha256": "8f3fff1eac34bebc37aa3c99426473856d2aa689dd1dab8c85c6a3f72f779ac0",
+      "bytes": 25090016
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    }
+  }
+}

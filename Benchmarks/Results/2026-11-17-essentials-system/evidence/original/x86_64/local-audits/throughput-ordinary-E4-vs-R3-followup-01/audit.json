@@ -1,0 +1,154 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T09:23:57.467448+00:00",
+  "scope": "Independent hashes, role mapping, exact sample inventory/order, native resource units, retained output bytes, pair medians/spread and follow-up threshold. Build/source qualification is separate.",
+  "result": {
+    "passed": true,
+    "comparison": "E4-vs-R3",
+    "artifact_profile": "ordinary",
+    "startup": false,
+    "phase": "followup-01",
+    "role_mapping": {
+      "B": "E4",
+      "C": "R3"
+    },
+    "configs": [
+      "text-mixed-addresses-no-stats"
+    ],
+    "rounds": 6,
+    "measured_samples": 12,
+    "warmups": 2,
+    "binary_sha256": {
+      "E4": "b6e204b680b5b142847fc04c5fb0a08b5a93ae1bb2e19f6e7d807b6bce0fc0b0",
+      "R3": "7c002a7e7cc9fcba75795b0399efadc8c446e41df97055f46099fd937306c310"
+    },
+    "started_at": "2026-11-17T07:20:33.899780+00:00",
+    "finished_at": "2026-11-17T07:20:53.735873+00:00",
+    "followup_required": [],
+    "recomputed": {
+      "text-mixed-addresses-no-stats": {
+        "pairs": [
+          {
+            "round": 1,
+            "B": {
+              "elapsed_ns": 1214908064,
+              "cpu_seconds": 1.212456,
+              "peak_rss_bytes": 75833344
+            },
+            "C": {
+              "elapsed_ns": 1038277612,
+              "cpu_seconds": 1.036231,
+              "peak_rss_bytes": 75599872
+            },
+            "elapsed_change_pct": -14.53858585961283,
+            "cpu_change_pct": -14.534548057826434,
+            "rss_change_pct": -0.3078751215296549
+          },
+          {
+            "round": 2,
+            "B": {
+              "elapsed_ns": 1223831385,
+              "cpu_seconds": 1.2215369999999999,
+              "peak_rss_bytes": 75776000
+            },
+            "C": {
+              "elapsed_ns": 1063650304,
+              "cpu_seconds": 1.061131,
+              "peak_rss_bytes": 75534336
+            },
+            "elapsed_change_pct": -13.088492660285878,
+            "cpu_change_pct": -13.131489263116869,
+            "rss_change_pct": -0.3189189189189201
+          },
+          {
+            "round": 3,
+            "B": {
+              "elapsed_ns": 1221733502,
+              "cpu_seconds": 1.21989,
+              "peak_rss_bytes": 75665408
+            },
+            "C": {
+              "elapsed_ns": 1046237787,
+              "cpu_seconds": 1.0441639999999999,
+              "peak_rss_bytes": 75718656
+            },
+            "elapsed_change_pct": -14.364484129534826,
+            "cpu_change_pct": -14.405069309527917,
+            "rss_change_pct": 0.07037297677692234
+          },
+          {
+            "round": 4,
+            "B": {
+              "elapsed_ns": 1219454404,
+              "cpu_seconds": 1.217126,
+              "peak_rss_bytes": 75759616
+            },
+            "C": {
+              "elapsed_ns": 1063925691,
+              "cpu_seconds": 1.0615569999999999,
+              "peak_rss_bytes": 75489280
+            },
+            "elapsed_change_pct": -12.753958859785296,
+            "cpu_change_pct": -12.781667633424975,
+            "rss_change_pct": -0.3568339100346041
+          },
+          {
+            "round": 5,
+            "B": {
+              "elapsed_ns": 1290984173,
+              "cpu_seconds": 1.2885920000000002,
+              "peak_rss_bytes": 75706368
+            },
+            "C": {
+              "elapsed_ns": 1062267408,
+              "cpu_seconds": 1.0597459999999999,
+              "peak_rss_bytes": 75653120
+            },
+            "elapsed_change_pct": -17.716465451974216,
+            "cpu_change_pct": -17.75938388566748,
+            "rss_change_pct": -0.07033490234269468
+          },
+          {
+            "round": 6,
+            "B": {
+              "elapsed_ns": 1237411042,
+              "cpu_seconds": 1.23571,
+              "peak_rss_bytes": 75669504
+            },
+            "C": {
+              "elapsed_ns": 1032624149,
+              "cpu_seconds": 1.030129,
+              "peak_rss_bytes": 75591680
+            },
+            "elapsed_change_pct": -16.54962547198605,
+            "cpu_change_pct": -16.636670416197973,
+            "rss_change_pct": -0.10284724477643836
+          }
+        ],
+        "paired_change_ranges": {
+          "elapsed": [
+            -17.716465451974216,
+            -12.753958859785296
+          ],
+          "cpu": [
+            -17.75938388566748,
+            -12.781667633424975
+          ],
+          "rss": [
+            -0.3568339100346041,
+            0.07037297677692234
+          ]
+        },
+        "paired_change_medians": {
+          "elapsed": -14.451534994573828,
+          "cpu": -14.469808683677176,
+          "rss": -0.20536118315304663
+        }
+      }
+    }
+  },
+  "finished_at": "2026-11-17T09:23:57.540404+00:00",
+  "auditor_sha256": "ec13c6e129c11e065fc282d8753aa8de153761fbaf57d1d0831805e75eacf44a",
+  "unique_files_hashed": 25,
+  "bytes_hashed": 125277532
+}

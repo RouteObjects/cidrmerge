@@ -1,0 +1,93 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T09:27:47.010208+00:00",
+  "scope": "Independent final report review of all3 platforms from preserved audits; no product execution, measurements, existing report mutation, or source changes.",
+  "arithmetic_receipt": "analysis/review-final-independent.json",
+  "main_report_reviewed": "analysis/RESULTS-final.md",
+  "main_report_sha256": "ccccbf1dc85c8ab1e37bf19b9ebdd4017268b5dfdddc9cb9a38dbb78370d0ab8",
+  "main_report_numeric_checks": [
+    {
+      "kind": "results_range_row",
+      "platform": "macos",
+      "matched": "| macOS ARM64 | -24.6% to -4.7% | -0.7% to +0.5% | -1.2% to -0.4% |"
+    },
+    {
+      "kind": "counts_row",
+      "platform": "macos",
+      "matched": "| macOS ARM64 | 25 | 3,400 | 310 |"
+    },
+    {
+      "kind": "results_range_row",
+      "platform": "arm64",
+      "matched": "| Linux ARM64 | -21.4% to -3.7% | -19.0% to -5.1% | +1.5% to +2.8% |"
+    },
+    {
+      "kind": "counts_row",
+      "platform": "arm64",
+      "matched": "| Linux ARM64 | 26 | 2,820 | 302 |"
+    },
+    {
+      "kind": "results_range_row",
+      "platform": "x86_64",
+      "matched": "| Linux x86-64 | -12.9% to -1.9% | -19.3% to -5.1% | -3.0% to -0.4% |"
+    },
+    {
+      "kind": "counts_row",
+      "platform": "x86_64",
+      "matched": "| Linux x86-64 | 24 | 2,764 | 316 |"
+    }
+  ],
+  "total_counts": {
+    "phases": 75,
+    "measured_samples": 8984,
+    "warmups": 928
+  },
+  "all12_primary_S2_text_medians_slower_than_R3_on_each_platform": true,
+  "direct_R3_repeated_over_5_percent_median_regressions": [],
+  "CPU_direction_or_arithmetic_inconsistencies_found": false,
+  "x86_direct_followups": [
+    {
+      "case": "searchbot-canonical-no-stats",
+      "phase": "followup-01",
+      "n": 6,
+      "elapsed_change_pct_median": -1.6901848128407115,
+      "elapsed_change_pct_min": -3.193367557829563,
+      "elapsed_change_pct_max": 1.9129786252921166,
+      "cpu_change_pct_median": -1.678187990987523,
+      "rss_change_pct_median": -3.10596579521637
+    },
+    {
+      "case": "searchbot-noncanonical-stats",
+      "phase": "followup-01",
+      "n": 6,
+      "elapsed_change_pct_median": -0.28592231985580807,
+      "elapsed_change_pct_min": -2.7252100281870417,
+      "elapsed_change_pct_max": 3.6817852740512524,
+      "cpu_change_pct_median": -0.27933059688812767,
+      "rss_change_pct_median": -2.911670250063975
+    },
+    {
+      "case": "text-ipv4-canonical-stats",
+      "phase": "followup-01",
+      "n": 6,
+      "elapsed_change_pct_median": -13.440029234779576,
+      "elapsed_change_pct_min": -19.311491642080913,
+      "elapsed_change_pct_max": -7.947344232210273,
+      "cpu_change_pct_median": -13.367932198198918,
+      "rss_change_pct_median": -19.005465655931964
+    }
+  ],
+  "caveats": [
+    "Retained R3 has no repeated greater-than-5% elapsed or RSS median regression across the three platforms. This is descriptive, not a significance test, and does not erase individual regressing observations.",
+    "x86-64 direct text medians improve 1.88\u201312.88%; mixed-range changes near 2% are small. Searchbot file/stdin changes remain small, so do not claim a general JSON speedup.",
+    "x86-64 primary observations include +30.00% IPv4/stats, +67.24% canonical Searchbot/no-stats, +32.39% noncanonical Searchbot/stats. Their separate follow-up medians are \u221213.44%, \u22121.69%, \u22120.29%; all observations stay preserved.",
+    "Mac ordinary --version follow-up median +5.35% follows primary +3.68%; small warm-cache startup increases remain a limitation, despite no repeated greater-than-5% median.",
+    "Linux startup RSS is constrained by the preserved fork/exec floor; all original values remain uncorrected. Mac tiny-call CPU is quantized and cannot substantiate percentage claims.",
+    "Ordinary dynamic throughput and static shipping startup/size remain different profiles; no static-profile million-entry throughput claim is supported."
+  ],
+  "optional_editorial_clarifications": [
+    "In the protocol paragraph, say any primary paired observation triggers a follow-up; the fixed follow-up is not recursively repeated when it contains further >5% observations.",
+    "Consider stating the small Mac startup increase explicitly in the main report, not solely its detailed companion table."
+  ],
+  "preservation": "All prior reviewer attempts, data, audits, observations, and source snapshots remain intact."
+}

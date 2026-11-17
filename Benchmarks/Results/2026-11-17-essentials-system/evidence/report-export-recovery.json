@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-17T09:33:43.981321+00:00",
+  "first_export": "validation/report-export-attempt01",
+  "failed_preflight": "validation/deliverables-final-01/summary.json",
+  "cause": "CSV CRLF endings flagged by git diff --check; content audit passed",
+  "recovery": "Only public CSV copies normalized to LF with csv.reader equality checks; originals preserved",
+  "source_changes": false,
+  "measurement_changes": false,
+  "additional_validator_correction": "Ignore Finder metadata in source-code allowlist while continuing to hash the full frozen inventory",
+  "second_export": "validation/report-export-attempt02",
+  "second_failed_preflight": "validation/deliverables-final-02/summary.json",
+  "second_cause": "Matplotlib SVG path whitespace flagged by git diff --check; all other report paths and new source whitespace passed",
+  "second_recovery": "Identical PNG exports retained in repository report; original SVG exports remain under Downloads without modification"
+}

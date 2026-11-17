@@ -38,6 +38,8 @@ let package = Package(
             url: "https://github.com/apple/swift-crypto.git",
             .upToNextMajor(from: "5.1.1")
         ),
+        // CHANGE: Use the already-locked System package for synchronous descriptor I/O.
+        .package(url: "https://github.com/apple/swift-system.git", from: "1.7.4"),
     ],
     targets: [
         .target(
@@ -56,6 +58,7 @@ let package = Package(
                 .product(name: "CIDR", package: "swift-cidr"),
                 // Exact-byte integrity belongs to the CLI artifact boundary, not Core.
                 .product(name: "Crypto", package: "swift-crypto"),
+                .product(name: "SystemPackage", package: "swift-system"),
             ]
         ),
         // The executable target owns only process startup and delegates to CIDRMergeCLI.

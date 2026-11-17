@@ -174,7 +174,7 @@ struct TextInputTests {
 
         let collection = try TextInputLoader.load(
             inputs: [first.path, "-", second.path],
-            standardInput: pipe.fileHandleForReading
+            standardInput: .init(rawValue: pipe.fileHandleForReading.fileDescriptor)
         )
         let result = collection.merged()
 

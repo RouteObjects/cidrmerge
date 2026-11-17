@@ -1,0 +1,59 @@
+{
+  "at": "2026-11-17T05:52:44.281260+00:00",
+  "host": "swift-dev",
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "uname": {
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "exit_code": 0,
+    "stdout": "Linux swift-dev 6.14.8-2-pve #1 SMP PREEMPT_DYNAMIC PMX 6.14.8-2 (2025-07-22T10:04Z) x86_64 x86_64 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "lscpu": {
+    "command": [
+      "lscpu",
+      "--json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n   \"lscpu\": [\n      {\n         \"field\": \"Architecture:\",\n         \"data\": \"x86_64\"\n      },{\n         \"field\": \"CPU op-mode(s):\",\n         \"data\": \"32-bit, 64-bit\"\n      },{\n         \"field\": \"Address sizes:\",\n         \"data\": \"40 bits physical, 48 bits virtual\"\n      },{\n         \"field\": \"Byte Order:\",\n         \"data\": \"Little Endian\"\n      },{\n         \"field\": \"CPU(s):\",\n         \"data\": \"16\"\n      },{\n         \"field\": \"On-line CPU(s) list:\",\n         \"data\": \"3,8,9,14\"\n      },{\n         \"field\": \"Off-line CPU(s) list:\",\n         \"data\": \"0-2,4-7,10-13,15\"\n      },{\n         \"field\": \"Vendor ID:\",\n         \"data\": \"GenuineIntel\"\n      },{\n         \"field\": \"Model name:\",\n         \"data\": \"Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz\"\n      },{\n         \"field\": \"CPU family:\",\n         \"data\": \"6\"\n      },{\n         \"field\": \"Model:\",\n         \"data\": \"26\"\n      },{\n         \"field\": \"Thread(s) per core:\",\n         \"data\": \"2\"\n      },{\n         \"field\": \"Core(s) per socket:\",\n         \"data\": \"4\"\n      },{\n         \"field\": \"Socket(s):\",\n         \"data\": \"2\"\n      },{\n         \"field\": \"Stepping:\",\n         \"data\": \"5\"\n      },{\n         \"field\": \"Frequency boost:\",\n         \"data\": \"enabled\"\n      },{\n         \"field\": \"CPU(s) scaling MHz:\",\n         \"data\": \"97%\"\n      },{\n         \"field\": \"CPU max MHz:\",\n         \"data\": \"2394.0000\"\n      },{\n         \"field\": \"CPU min MHz:\",\n         \"data\": \"1596.0000\"\n      },{\n         \"field\": \"BogoMIPS:\",\n         \"data\": \"4521.96\"\n      },{\n         \"field\": \"Flags:\",\n         \"data\": \"fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts nopl xtopology nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm dca sse4_1 sse4_2 popcnt lahf_lm pti ssbd ibrs ibpb stibp tpr_shadow flexpriority ept vpid dtherm ida vnmi flush_l1d\"\n      },{\n         \"field\": \"Virtualization:\",\n         \"data\": \"VT-x\"\n      },{\n         \"field\": \"L1d cache:\",\n         \"data\": \"256 KiB (8 instances)\"\n      },{\n         \"field\": \"L1i cache:\",\n         \"data\": \"256 KiB (8 instances)\"\n      },{\n         \"field\": \"L2 cache:\",\n         \"data\": \"2 MiB (8 instances)\"\n      },{\n         \"field\": \"L3 cache:\",\n         \"data\": \"16 MiB (2 instances)\"\n      },{\n         \"field\": \"NUMA node(s):\",\n         \"data\": \"1\"\n      },{\n         \"field\": \"NUMA node0 CPU(s):\",\n         \"data\": \"0-15\"\n      },{\n         \"field\": \"Vulnerability Gather data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Ghostwrite:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Indirect target selection:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Itlb multihit:\",\n         \"data\": \"KVM: Mitigation: Split huge pages\"\n      },{\n         \"field\": \"Vulnerability L1tf:\",\n         \"data\": \"Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable\"\n      },{\n         \"field\": \"Vulnerability Mds:\",\n         \"data\": \"Vulnerable: Clear CPU buffers attempted, no microcode; SMT vulnerable\"\n      },{\n         \"field\": \"Vulnerability Meltdown:\",\n         \"data\": \"Mitigation; PTI\"\n      },{\n         \"field\": \"Vulnerability Mmio stale data:\",\n         \"data\": \"Unknown: No mitigations\"\n      },{\n         \"field\": \"Vulnerability Reg file data sampling:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Retbleed:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec rstack overflow:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Spec store bypass:\",\n         \"data\": \"Mitigation; Speculative Store Bypass disabled via prctl\"\n      },{\n         \"field\": \"Vulnerability Spectre v1:\",\n         \"data\": \"Mitigation; usercopy/swapgs barriers and __user pointer sanitization\"\n      },{\n         \"field\": \"Vulnerability Spectre v2:\",\n         \"data\": \"Mitigation; Retpolines; IBPB conditional; IBRS_FW; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\"\n      },{\n         \"field\": \"Vulnerability Srbds:\",\n         \"data\": \"Not affected\"\n      },{\n         \"field\": \"Vulnerability Tsx async abort:\",\n         \"data\": \"Not affected\"\n      }\n   ]\n}\n",
+    "stderr": ""
+  },
+  "swift": {
+    "command": [
+      "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-linux-gnu\n",
+    "stderr": ""
+  },
+  "target_info": {
+    "command": [
+      "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+      "-print-target-info"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"compilerVersion\": \"Swift version 6.4.2 (swift-6.4.2-RELEASE)\",\n  \"swiftCompilerTag\": \"swift-6.4.2-RELEASE\",\n  \"target\": {\n    \"triple\": \"x86_64-unknown-linux-gnu\",\n    \"unversionedTriple\": \"x86_64-unknown-linux-gnu\",\n    \"moduleTriple\": \"x86_64-unknown-linux-gnu\",\n    \"platform\": \"linux\",\n    \"arch\": \"x86_64\",\n    \"pointerWidthInBits\": 64,\n    \"pointerWidthInBytes\": 8,\n    \"compatibilityLibraries\": [ ],\n    \"openbsdBTCFIEnabled\": false,\n    \"librariesRequireRPath\": false\n  },\n  \"paths\": {\n    \"runtimeLibraryPaths\": [\n      \"$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux\"\n    ],\n    \"runtimeLibraryImportPaths\": [\n      \"$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux\",\n      \"$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/x86_64\"\n    ],\n    \"runtimeResourcePath\": \"$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift\"\n  }\n}\n",
+    "stderr": ""
+  },
+  "toolchain_sha256": {
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift-driver": "044feadf281f95806a5df85211f22fa7920efa25492a104bbd19ae33a6eb7be1",
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift-frontend": "76db9f3dd8487a14ae39374509620e33af02f10da5dc42247406657832e4e9da",
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/clang-21": "94e9998dcdb45d7caeb6afdabddc273e8720e97ffeffbdf3c9b01d386ac7089a"
+  },
+  "cpu_affinity": [
+    3,
+    8,
+    9,
+    14
+  ],
+  "memory_max": "max\n",
+  "cpu_max": "max 100000\n",
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n",
+  "disk_free_bytes": 4620984320,
+  "shared_scratch": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z",
+  "build_jobs": 2,
+  "measurement_min_free_bytes": 3221225472
+}

@@ -51,7 +51,7 @@ audit_tracked_tree() {
 
     # Allowlist the public dependency graph rather than merely rejecting
     # path and SSH forms; an unexpected HTTPS fork must fail the release audit too.
-    expected_direct_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser\nhttps://github.com/apple/swift-crypto.git'
+    expected_direct_dependencies=$'https://github.com/RouteObjects/swift-cidr.git\nhttps://github.com/apple/swift-argument-parser\nhttps://github.com/apple/swift-crypto.git\nhttps://github.com/apple/swift-system.git'
     actual_direct_dependencies="$(
         sed -nE 's/.*url:[[:space:]]*"([^"]+)".*/\1/p' \
             "${PACKAGE_ROOT}/Package.swift" | LC_ALL=C sort
@@ -77,6 +77,15 @@ audit_tracked_tree() {
         "${PACKAGE_ROOT}/Package.swift" \
         | grep -Fq '.product(name: "Crypto", package: "swift-crypto")' ||
         fail "Crypto must belong to CIDRMergeCLI."
+    # CHANGE: Descriptor I/O is confined to the CLI; Core remains dependent only on CIDR.
+    [[ "$(grep -Fc '.product(name: "SystemPackage", package: "swift-system")' \
+        "${PACKAGE_ROOT}/Package.swift")" -eq 1 ]] ||
+        fail "Package.swift must declare exactly one SystemPackage product dependency."
+    sed -n \
+        '/name: "CIDRMergeCLI"/,/name: "CIDRMergeExecutable"/p' \
+        "${PACKAGE_ROOT}/Package.swift" \
+        | grep -Fq '.product(name: "SystemPackage", package: "swift-system")' ||
+        fail "SystemPackage must belong to CIDRMergeCLI."
     # CHANGE: Keep the linked dependency's NOTICE and CXKCP binary terms in every archive.
     grep -Fq 'Copyright 2019 The SwiftCrypto Project' \
         "${PACKAGE_ROOT}/THIRD_PARTY_NOTICES.txt" ||

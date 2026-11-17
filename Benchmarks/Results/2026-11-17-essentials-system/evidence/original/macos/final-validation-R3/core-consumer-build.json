@@ -1,0 +1,32 @@
+{
+  "label": "core-consumer-build",
+  "command": [
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$EXPERIMENT/macos/final-validation-R3/consumer",
+    "--scratch-path",
+    "$EXPERIMENT/macos/final-validation-R3/consumer-build",
+    "--cache-path",
+    "$EXPERIMENT/macos/final-validation-R3/cache",
+    "--config-path",
+    "$EXPERIMENT/macos/final-validation-R3/config",
+    "--security-path",
+    "$EXPERIMENT/macos/final-validation-R3/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-j",
+    "8",
+    "--product",
+    "CoreConsumer"
+  ],
+  "cwd": "$EXPERIMENT/macos/final-validation-R3",
+  "started_at": "2026-11-17T06:50:04.072110+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-17T06:50:10.495620+00:00",
+  "log_sha256": "0eb3fc658e5dd597eb39c6825752da84f5fec9c29e8f7d5bdf9bb87b4084f797"
+}

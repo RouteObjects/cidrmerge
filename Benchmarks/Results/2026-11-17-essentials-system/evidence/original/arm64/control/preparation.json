@@ -1,0 +1,272 @@
+{
+  "passed": true,
+  "at": "2026-11-17T05:49:32.148822+00:00",
+  "scratch_seeds": [
+    {
+      "target": "$EXPERIMENT/arm64/build/B",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/build/E",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/build/R",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/build/S",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/floor-6.2.4/build/B",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/floor-6.2.4/build/E",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/floor-6.2.4/build/R",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    },
+    {
+      "target": "$EXPERIMENT/arm64/floor-6.2.4/build/S",
+      "source": "$REPOSITORY/.build",
+      "content": [
+        "checkouts",
+        "repositories",
+        "workspace-state.json"
+      ],
+      "compiled_products_reused": false
+    }
+  ],
+  "containers": [
+    {
+      "name": "cidrmerge-essentials-arm642-20261117T053919Z",
+      "image": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+      "id": "0975880da5b2127b0e6f880becb50b89894e93f66eb828380fef6f39100797b9",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/control/docker-config",
+        "--host",
+        "unix://$HOME/.orbstack/run/docker.sock",
+        "create",
+        "--name",
+        "cidrmerge-essentials-arm642-20261117T053919Z",
+        "--pull=never",
+        "--platform",
+        "linux/arm64",
+        "--network",
+        "none",
+        "--init",
+        "--workdir",
+        "/validation",
+        "--env",
+        "PYTHONHOME=/validation/python",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=bind,source=$EXPERIMENT/arm64,target=/validation",
+        "--mount",
+        "type=bind,source=$EXPERIMENT,target=/experiment,readonly",
+        "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+        "sleep",
+        "infinity"
+      ],
+      "image_inspection": {
+        "Id": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+        "RepoTags": [
+          "swift:6.4.2-noble"
+        ],
+        "RepoDigests": [
+          "swift@sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-11T23:46:05.164002821Z",
+        "Config": {
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "SWIFT_SIGNING_KEY=52BB7E3DE28A71BE22EC05FFEF80A866B47A981F",
+            "SWIFT_PLATFORM=ubuntu24.04",
+            "SWIFT_BRANCH=swift-6.4.2-release",
+            "SWIFT_VERSION=swift-6.4.2-RELEASE",
+            "SWIFT_WEBROOT=https://download.swift.org"
+          ],
+          "Cmd": [
+            "/bin/bash"
+          ],
+          "Labels": {
+            "description": "Docker Container for the Swift programming language",
+            "maintainer": "Swift Infrastructure <swift-infrastructure@forums.swift.org>",
+            "org.opencontainers.image.version": "24.04"
+          }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 5489661918,
+        "RootFS": {
+          "Type": "layers",
+          "Layers": [
+            "sha256:d367816f799f33f5cbdd0a4cdb59a8c432f8d63bfcead9b880672c404202007a",
+            "sha256:bd26bc43fbd8f50d855fdb4554ee19214d7aa0d5285bb047fe5e95a7f0e57cf1",
+            "sha256:b564cb75ed5ed72771d9c2c6824bef2ace144327c1efd9b014c36a409472f9fe",
+            "sha256:8d644eeb8b5589faeb46cf2ad3463a6ba95fe268ea34e6209e044dc4384806a3"
+          ]
+        },
+        "Metadata": {
+          "LastTagTime": "2026-11-14T02:18:02.348915841Z"
+        },
+        "Descriptor": {
+          "mediaType": "application/vnd.oci.image.index.v1+json",
+          "digest": "sha256:23d9b28ad97fb1cf1999edc3a0cb265ee915ed42299a9344e7173d5a6d2b05f4",
+          "size": 2629
+        },
+        "Identity": {
+          "Pull": [
+            {
+              "Repository": "docker.io/library/swift"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "cidrmerge-essentials-arm624-20261117T053919Z",
+      "image": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+      "id": "02d383398e30e6ea950efd27a65288691768e9a1791047936bfee1708508d661",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/control/docker-config",
+        "--host",
+        "unix://$HOME/.orbstack/run/docker.sock",
+        "create",
+        "--name",
+        "cidrmerge-essentials-arm624-20261117T053919Z",
+        "--pull=never",
+        "--platform",
+        "linux/arm64",
+        "--network",
+        "none",
+        "--init",
+        "--workdir",
+        "/validation",
+        "--env",
+        "PYTHONHOME=/validation/python",
+        "--env",
+        "PYTHONDONTWRITEBYTECODE=1",
+        "--mount",
+        "type=bind,source=$EXPERIMENT/arm64,target=/validation",
+        "--mount",
+        "type=bind,source=$EXPERIMENT,target=/experiment,readonly",
+        "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+        "sleep",
+        "infinity"
+      ],
+      "image_inspection": {
+        "Id": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+        "RepoTags": [
+          "swift:6.2.4-noble"
+        ],
+        "RepoDigests": [
+          "swift@sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-10-26T23:47:44.663090098Z",
+        "Config": {
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "SWIFT_SIGNING_KEY=52BB7E3DE28A71BE22EC05FFEF80A866B47A981F",
+            "SWIFT_PLATFORM=ubuntu24.04",
+            "SWIFT_BRANCH=swift-6.2.4-release",
+            "SWIFT_VERSION=swift-6.2.4-RELEASE",
+            "SWIFT_WEBROOT=https://download.swift.org"
+          ],
+          "Cmd": [
+            "/bin/bash"
+          ],
+          "Labels": {
+            "description": "Docker Container for the Swift programming language",
+            "maintainer": "Swift Infrastructure <swift-infrastructure@forums.swift.org>",
+            "org.opencontainers.image.version": "24.04"
+          }
+        },
+        "Architecture": "arm64",
+        "Variant": "v8",
+        "Os": "linux",
+        "Size": 5041041443,
+        "RootFS": {
+          "Type": "layers",
+          "Layers": [
+            "sha256:107ffca6dcd3fc87a7bed8c062f5ddc0d6a4b107205c82c0b49efdb7c1aff967",
+            "sha256:28986bae759af8dfe18472504b8291c8a969ba046831ee0b970abfb382d2388f",
+            "sha256:41cf0fc25df344258064d815f709c9cbdbda24b359bba0391687919ac27b9c99",
+            "sha256:cb390ad00a93723187d8aa973c3801c4d204b4ede7ee43716046f5b9cb0214ed"
+          ]
+        },
+        "Metadata": {
+          "LastTagTime": "2026-10-30T04:25:49.406458545Z"
+        },
+        "Descriptor": {
+          "mediaType": "application/vnd.oci.image.index.v1+json",
+          "digest": "sha256:e508ef1e4be68087f720de622b91cbf1e32799a7aa96134b35e6f1a1d656db7a",
+          "size": 2617
+        },
+        "Identity": {
+          "Pull": [
+            {
+              "Repository": "docker.io/library/swift"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "python_source": "$HOME/Downloads/cidrmerge-normalization-c2-20261117T020633Z/arm64/python",
+  "script_sha256": "562f2bf6d391aea74faf0c8a2a93b144f18a5623ecfc3661ad6066f51fc7548a"
+}

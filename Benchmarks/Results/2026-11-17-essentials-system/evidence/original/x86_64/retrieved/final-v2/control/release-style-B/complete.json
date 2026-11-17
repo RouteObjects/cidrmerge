@@ -1,0 +1,134 @@
+{
+  "at": "2026-11-17T05:57:22.322418+00:00",
+  "variant": "B",
+  "command": [
+    "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$EXPERIMENT/sources/B",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2",
+    "--static-swift-stdlib",
+    "--product",
+    "cidrmerge",
+    "-Xswiftc",
+    "-debug-prefix-map",
+    "-Xswiftc",
+    "$EXPERIMENT=Source",
+    "-Xcc",
+    "-ffile-prefix-map=/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build=SwiftPMBuild"
+  ],
+  "sources": {
+    "LICENSE": "0358a68ca6566eba535aa9ac340acc11bd69c30710af0db8a1ce330a73fa3f8c",
+    "Package.swift": "fda6f560037054bfb6252844720241bd55f14106a8150402f3cd4821aeac61b0",
+    ".swift-format.json": "8379721e25be313a22ee04900d50392501f7aa3c6de52285dc7755f85f4fc4b5",
+    "Package.resolved": "9e705cb7bc4e4ea030e252229e499e3bc023477636b8e5b77a33150c264728e5",
+    "README.md": "a6c455b11789ba0fba37c6524173f27a00e8d16d136632d98d7d96ec58c1fa33",
+    "scripts/smoke-test.sh": "7f0cedbc96a7c246b09ff59de797a1002d07ae235f1ef68f45ec00b487072765",
+    "scripts/swift-testing-support.sh": "ba112e4f5943ea54c1e63df0df3b9e38e3f6e0f1cac233b2ea1751fb6858c049",
+    "scripts/check-core-consumer.sh": "2e41e050545b0f6435adbbf0a5452119084e23e66e8ed869f025c94af6a7db0d",
+    "scripts/check-documentation.sh": "042483265f01d19c061fcd8227763cb1cadd42500be596c6aad6ae3712f5cd05",
+    "scripts/audit-release-content.sh": "562c918ebe00033def39b7cf08dc3d28c5981d1068feabfe0eaa339ac4aaa48b",
+    "scripts/benchmark.sh": "36c885ace73d46952e82871128df30ccf8c13c81bcd3d4c016f1ed3a624f27a4",
+    "scripts/check-release.sh": "2d1a9942bae1eabdc0b0e205f9b0b09187ca4eccfd3086a94b4c0de3f26eeb35",
+    "scripts/test.sh": "79e10dab07647b101882d264fc17b05fb3298d5037f6342495361dc0eed75ec2",
+    "Sources/CIDRMergeExecutable/CIDRMergeMain.swift": "a1dd96afa3cfcf3bf42adffb9f9fac361220419ded232d7d8facd985f76c3e7d",
+    "Sources/CIDRMergeCore/CIDRMergeCoverage.swift": "607d2e75174d900b205815b620e795fee6c3248c66bd7b10206195e0381289d8",
+    "Sources/CIDRMergeCLI/CIDRMergeApplication.swift": "93c9793cd47b1e1babb340aaa96d43e9fb9d4dec92849141bb03383aca556cdc",
+    "Sources/CIDRMergeCLI/SearchbotInput.swift": "652ec1d093e84ed94c38d7f6419acb151e5ed5b36a2da94b4ce32c2eae9c8136",
+    "Sources/CIDRMergeCLI/MergeModels.swift": "bb15543ce6bb86deb0b024cfab49782cd51f68782d7c385e84f44fb1fbad3c70",
+    "Sources/CIDRMergeCLI/TextInput.swift": "52ce44bf8affdcb146f11a99d1027efb65acb26d71c595d07edb90b33e272237",
+    "Sources/CIDRMergeCLI/DetachedSHA256Checksum.swift": "24c37a7cac51fcb079b8d7efc34d2c72bfc6dd51b6e5c3bc3e579ba9a5a9740a",
+    "Sources/CIDRMergeCLI/OutputRenderer.swift": "cd24517b0916d5a644053d4267c3e7ba4f750ff8a0a938234652587a1bb91503",
+    "Sources/CIDRMergeCLI/CIDRMergeCommand.swift": "ce1a18d304b064c9c85054bb091693125da759332240bdfe7c8f319197443329",
+    "Sources/CIDRMergeCore/CIDRMergeCore.docc/CIDRMergeCore.md": "e67ce5bfb791033ec4542aaed81c50ac2011d2afc361ba827009f7b1c0b07b90",
+    "Sources/CIDRMergeCore/CIDRMergeCore.docc/CompilingSearchbotPrefixLists.md": "b3fbf921949156bdbd4662dce4e5f5eda8593dbadb4661be94fee31952b062c0",
+    "Documentation/Assets/cidrmerge-icon.png": "3893eeabd9344d3d389d28cc62e32ae3f616c425b20492da6d664a5eaf0d7003",
+    "Tests/CIDRMergeCLITests/RawUTF8OutputTests.swift": "a62087487cc7a16b77adc97bf6757dc5e5b34837d5bf9267191b755f6cdfb63d",
+    "Tests/CIDRMergeCLITests/SearchbotInputTests.swift": "e97c8bf08468926fccdafc39e9676b2f667a1daf675ac317a57566824f39ba85",
+    "Tests/CIDRMergeCLITests/TextInputASCIITests.swift": "1ab4d4a91e21584e33a592a7fe694bcfa3843306da6df2c6e64ae6cb9b47229b",
+    "Tests/CIDRMergeCLITests/NormalizationStatisticsTests.swift": "37430a57aa2c55c50f5d64996795013f80f2594e1465921bfb1fdbf921a0f899",
+    "Tests/CIDRMergeCLITests/DetachedSHA256ChecksumTests.swift": "55b1c9109f75bb79c521863388fb67bba6409800c1e04c8513f1f30b666e0792",
+    "Tests/CIDRMergeCLITests/CLIBehaviorTests.swift": "904d27197d8e22b3cb2b6557b2a8e03d8fbf1099cbe9d703a83649579abd8408",
+    "Tests/CIDRMergeCLITests/ReadBufferLifetimeTests.swift": "192c2fa63a3ef11375e0f65a8b93f762a9bbda7ccbfb86462254df1abfc9720e",
+    "Tests/CIDRMergeCoreTests/CIDRMergeCoverageTests.swift": "db02998ff3a8d587b7daab835d4387f05260d8b1d8f05579363f07c57d5727fd",
+    "Tests/CIDRMergeCLITests/Fixtures/searchbot-projected.txt": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+    "Tests/CIDRMergeCLITests/Fixtures/searchbot-valid.json": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b"
+  },
+  "free_bytes_before": 4573216768,
+  "ordinary_binary_sha256": "758607f9c67e4a4aafd10b33526916c1f99dd35f76c8aa1950d13a2155155922",
+  "log": "logs/release-style-B.log",
+  "exit_code": 0,
+  "elapsed_s": 251.2164278710261,
+  "log_sha256": "6ffe5de97616381ab5df28fa179688a3a560bd86ce0e23983deb2453a0aae0fc",
+  "unstripped": {
+    "sha256": "c88db053a0bfb83f70e06b664a8560875706c9f32ecda50f286149152fa67761",
+    "bytes": 89338824,
+    "gzip_file": "bin/release-style-unstripped/B.gz",
+    "gzip_sha256": "95153ce3c82b9c18536638a1180444f550ec8e26c8db27e2d9804617156f89de",
+    "gzip_bytes": 33180138
+  },
+  "stripped": {
+    "sha256": "c7f463182d168cb31260bed47bde6843cdba6dc1c743d274b215b2965a54fb5b",
+    "bytes": 62619384,
+    "path": "bin/release-style/B",
+    "strip": {
+      "command": [
+        "strip",
+        "--strip-unneeded",
+        "$EXPERIMENT/bin/release-style/B"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  },
+  "elf_dynamic": {
+    "command": [
+      "readelf",
+      "-d",
+      "$EXPERIMENT/bin/release-style/B"
+    ],
+    "exit_code": 0,
+    "stdout": "\nDynamic section at offset 0x176b938 contains 31 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000003 (PLTGOT)             0x176cfe8\n 0x0000000000000002 (PLTRELSZ)           11208 (bytes)\n 0x0000000000000017 (JMPREL)             0x2742f8\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000007 (RELA)               0x8bfe8\n 0x0000000000000008 (RELASZ)             1999632 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          82525\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000006 (SYMTAB)             0x330\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000005 (STRTAB)             0x2a090\n 0x000000000000000a (STRSZ)              335071 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x7bd70\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [ld-linux-x86-64.so.2]\n 0x000000000000000c (INIT)               0x276ec0\n 0x000000000000000d (FINI)               0x1316368\n 0x000000000000001a (FINI_ARRAY)         0x16c40a0\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x0000000000000019 (INIT_ARRAY)         0x16c40a8\n 0x000000000000001b (INIT_ARRAYSZ)       88 (bytes)\n 0x000000000000001d (RUNPATH)            Library runpath: [$ORIGIN]\n 0x000000006ffffffb (FLAGS_1)            Flags: PIE\n 0x000000006ffffff0 (VERSYM)             0x8855c\n 0x000000006ffffffe (VERNEED)            0x8bd24\n 0x000000006fffffff (VERNEEDNUM)         5\n 0x0000000000000000 (NULL)               0x0\n",
+    "stderr": ""
+  },
+  "ldd": {
+    "command": [
+      "ldd",
+      "$EXPERIMENT/bin/release-style/B"
+    ],
+    "exit_code": 0,
+    "stdout": "\tlinux-vdso.so.1 (0x0000792112b4c000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000079210ed17000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000079210ea00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x0000792112b13000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000079210e600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x0000792112b4e000)\n",
+    "stderr": ""
+  },
+  "version": {
+    "command": [
+      "$EXPERIMENT/bin/release-style/B",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "0.4.1\n",
+    "stderr": ""
+  },
+  "offline_smoke_passed": true,
+  "passed": true,
+  "finished_at": "2026-11-17T06:01:38.644805+00:00",
+  "free_bytes_after": 4468051968
+}

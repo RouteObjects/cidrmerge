@@ -1,0 +1,329 @@
+{
+  "passed": true,
+  "at": "2026-11-17T08:30:16.871304+00:00",
+  "controls": [
+    {
+      "auditor": "original",
+      "case": "read-only-atime-change",
+      "expected_rejection": true,
+      "error": "Changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/original-atime-only",
+      "changed_fields": [
+        "st_atime_ns"
+      ],
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930412,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216634215870,
+        "st_ctime_ns": 1794904216634418758,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930412,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216634215870,
+        "st_ctime_ns": 1794904216634418758,
+        "st_atime_ns": 1794904216634909388
+      },
+      "content_unchanged": true
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "read-only-atime-change",
+      "passed": true,
+      "changed_fields": [
+        "st_atime_ns"
+      ]
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "wrong-content-hash",
+      "expected_rejection": true,
+      "error": "Hash mismatch: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_comparison_x86_v2.py-wrong-content-hash"
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "mtime-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_comparison_x86_v2.py-mtime",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930416,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216647409370,
+        "st_ctime_ns": 1794904216647597916,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930416,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216657409370,
+        "st_ctime_ns": 1794904216657993680,
+        "st_atime_ns": 0
+      }
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "content-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_comparison_x86_v2.py-content",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930417,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216659333103,
+        "st_ctime_ns": 1794904216659518760,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930417,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216671201723,
+        "st_ctime_ns": 1794904216671201723,
+        "st_atime_ns": 1794904216659960923
+      }
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "inode-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_comparison_x86_v2.py-inode",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930418,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216671613875,
+        "st_ctime_ns": 1794904216671786127,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930419,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216683400877,
+        "st_ctime_ns": 1794904216683400877,
+        "st_atime_ns": 1794904216681994564
+      }
+    },
+    {
+      "auditor": "audit_comparison_x86_v2.py",
+      "case": "size-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_comparison_x86_v2.py-size",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930418,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216683887384,
+        "st_ctime_ns": 1794904216684045205,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930418,
+        "st_size": 151553,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216694995043,
+        "st_ctime_ns": 1794904216694995043,
+        "st_atime_ns": 1794904216684502777
+      }
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "read-only-atime-change",
+      "passed": true,
+      "changed_fields": [
+        "st_atime_ns"
+      ]
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "wrong-content-hash",
+      "expected_rejection": true,
+      "error": "Hash mismatch: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_stdin_comparison_x86_v2.py-wrong-content-hash"
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "mtime-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_stdin_comparison_x86_v2.py-mtime",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930423,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216705801408,
+        "st_ctime_ns": 1794904216705976371,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930423,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216715801408,
+        "st_ctime_ns": 1794904216716995854,
+        "st_atime_ns": 0
+      }
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "content-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_stdin_comparison_x86_v2.py-content",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930424,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216717690762,
+        "st_ctime_ns": 1794904216717867955,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930424,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216729516775,
+        "st_ctime_ns": 1794904216729516775,
+        "st_atime_ns": 1794904216718308276
+      }
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "inode-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_stdin_comparison_x86_v2.py-inode",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930425,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216729878001,
+        "st_ctime_ns": 1794904216730054387,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930426,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216741697030,
+        "st_ctime_ns": 1794904216741697030,
+        "st_atime_ns": 1794904216740996738
+      }
+    },
+    {
+      "auditor": "audit_stdin_comparison_x86_v2.py",
+      "case": "size-during-hash",
+      "expected_rejection": true,
+      "error": "Content identity changed while hashing: $EXPERIMENT/correctness/auditor-metadata-control-v2/audit_stdin_comparison_x86_v2.py-size",
+      "before": {
+        "st_dev": 64525,
+        "st_ino": 2930425,
+        "st_size": 151552,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216742190908,
+        "st_ctime_ns": 1794904216742351308,
+        "st_atime_ns": 0
+      },
+      "after": {
+        "st_dev": 64525,
+        "st_ino": 2930425,
+        "st_size": 151553,
+        "st_nlink": 1,
+        "st_mode": 33204,
+        "st_uid": 1000,
+        "st_gid": 1000,
+        "st_mtime_ns": 1794904216752997180,
+        "st_ctime_ns": 1794904216752997180,
+        "st_atime_ns": 1794904216742810457
+      }
+    }
+  ],
+  "control_count": 13,
+  "original_failed_output_content_still_matches": true,
+  "original_failed_output": "comparisons/ordinary/B-vs-E4/primary/round-03/searchbot-canonical-stats/C/stdout",
+  "original_failed_output_stat": {
+    "st_dev": 64525,
+    "st_ino": 2930018,
+    "st_size": 17933431,
+    "st_nlink": 460,
+    "st_mode": 33060,
+    "st_uid": 1000,
+    "st_gid": 1000,
+    "st_mtime_ns": 1794897302065250014,
+    "st_ctime_ns": 1794903668957681170,
+    "st_atime_ns": 1794903694991774745
+  },
+  "scripts": {
+    "audit_comparison.py": "8b2858a808f2c4bc311339148ca9f08caf9c8a1ae95039d1a67769afb5b7173f",
+    "audit_comparison_x86_v2.py": "ec13c6e129c11e065fc282d8753aa8de153761fbaf57d1d0831805e75eacf44a",
+    "audit_stdin_comparison.py": "e2971171532565e8eddbcc99d5f168bf8d8a5cde161ca16fc458391e1d33c312",
+    "audit_stdin_comparison_x86_v2.py": "38612c4e887c8eb856bab4866b973de1795df213dbd7ccad494fc8aa4cddc090"
+  }
+}

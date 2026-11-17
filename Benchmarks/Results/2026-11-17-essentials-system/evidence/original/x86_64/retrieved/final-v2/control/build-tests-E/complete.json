@@ -1,0 +1,333 @@
+{
+  "passed": true,
+  "at": "2026-11-17T06:08:59.715881+00:00",
+  "variant": "E",
+  "expected_tests": 94,
+  "test_executions": 188,
+  "results": [
+    {
+      "command": [
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+        "build",
+        "--package-path",
+        "$EXPERIMENT/sources/E",
+        "--scratch-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+        "--cache-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+        "--config-path",
+        "$EXPERIMENT/config",
+        "--security-path",
+        "$EXPERIMENT/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "release",
+        "-j",
+        "2",
+        "--product",
+        "cidrmerge"
+      ],
+      "started_at": "2026-11-17T06:01:39.595508+00:00",
+      "log": "logs/E-build-release.log",
+      "free_bytes_before": 4468011008,
+      "exit_code": 0,
+      "elapsed_s": 255.7434914461337,
+      "log_sha256": "4f1823baea65b0a93355ec22aa132f515204a8f94f0c45667c6707e2c1296cfc",
+      "binary": {
+        "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmerge",
+        "sha256": "5a63acbedf10bc00417929a5cd3dcd5aef0d5094181bce1630cba47090335e1f",
+        "bytes": 19478880
+      },
+      "ldd": {
+        "command": [
+          "ldd",
+          "$EXPERIMENT/bin/E"
+        ],
+        "exit_code": 0,
+        "stdout": "\tlinux-vdso.so.1 (0x00007b7a6a493000)\n\tlibswiftCore.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftCore.so (0x00007b7a69800000)\n\tlibswiftObservation.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftObservation.so (0x00007b7a6a46b000)\n\tlibswift_Concurrency.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Concurrency.so (0x00007b7a69f58000)\n\tlibswift_StringProcessing.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_StringProcessing.so (0x00007b7a69745000)\n\tlibswift_RegexParser.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_RegexParser.so (0x00007b7a69637000)\n\tlibswiftSynchronization.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftSynchronization.so (0x00007b7a6a457000)\n\tlibswiftGlibc.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftGlibc.so (0x00007b7a6a447000)\n\tlibFoundationEssentials.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libFoundationEssentials.so (0x00007b7a68e00000)\n\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007b7a6954e000)\n\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007b7a68a00000)\n\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007b7a6a412000)\n\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007b7a68600000)\n\t/lib64/ld-linux-x86-64.so.2 (0x00007b7a6a495000)\n\tlibdispatch.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libdispatch.so (0x00007b7a694ef000)\n\tlibswift_Builtin_float.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Builtin_float.so (0x00007b7a6a40e000)\n\tlibBlocksRuntime.so => $HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libBlocksRuntime.so (0x00007b7a6a408000)\n",
+        "stderr": ""
+      },
+      "elf_dynamic": {
+        "command": [
+          "readelf",
+          "-d",
+          "$EXPERIMENT/bin/E"
+        ],
+        "exit_code": 0,
+        "stdout": "\nDynamic section at offset 0x3606b0 contains 38 entries:\n  Tag        Type                         Name/Value\n 0x0000000000000003 (PLTGOT)             0x361fe8\n 0x0000000000000002 (PLTRELSZ)           13152 (bytes)\n 0x0000000000000017 (JMPREL)             0x52fb8\n 0x0000000000000014 (PLTREL)             RELA\n 0x0000000000000007 (RELA)               0x11b58\n 0x0000000000000008 (RELASZ)             267360 (bytes)\n 0x0000000000000009 (RELAENT)            24 (bytes)\n 0x000000006ffffff9 (RELACOUNT)          8067\n 0x0000000000000015 (DEBUG)              0x0\n 0x0000000000000006 (SYMTAB)             0x2f8\n 0x000000000000000b (SYMENT)             24 (bytes)\n 0x0000000000000005 (STRTAB)             0x6a78\n 0x000000000000000a (STRSZ)              42750 (bytes)\n 0x000000006ffffef5 (GNU_HASH)           0x11178\n 0x0000000000000001 (NEEDED)             Shared library: [libswiftCore.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswiftObservation.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswift_Concurrency.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswift_StringProcessing.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswift_RegexParser.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswiftSynchronization.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libswiftGlibc.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libFoundationEssentials.so]\n 0x0000000000000001 (NEEDED)             Shared library: [libm.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libstdc++.so.6]\n 0x0000000000000001 (NEEDED)             Shared library: [libgcc_s.so.1]\n 0x0000000000000001 (NEEDED)             Shared library: [libc.so.6]\n 0x000000000000000c (INIT)               0x56318\n 0x000000000000000d (FINI)               0x294278\n 0x000000000000001a (FINI_ARRAY)         0x345110\n 0x000000000000001c (FINI_ARRAYSZ)       8 (bytes)\n 0x0000000000000019 (INIT_ARRAY)         0x345118\n 0x000000000000001b (INIT_ARRAYSZ)       16 (bytes)\n 0x000000000000001d (RUNPATH)            Library runpath: [$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux:$ORIGIN]\n 0x000000006ffffffb (FLAGS_1)            Flags: PIE\n 0x000000006ffffff0 (VERSYM)             0x111a8\n 0x000000006ffffffe (VERNEED)            0x11a48\n 0x000000006fffffff (VERNEEDNUM)         4\n 0x0000000000000000 (NULL)               0x0\n",
+        "stderr": ""
+      },
+      "elf_sections": {
+        "command": [
+          "readelf",
+          "-SW",
+          "$EXPERIMENT/bin/E"
+        ],
+        "exit_code": 0,
+        "stdout": "There are 66 section headers, starting at offset 0x12928e0:\n\nSection Headers:\n  [Nr] Name              Type            Address          Off    Size   ES Flg Lk Inf Al\n  [ 0]                   NULL            0000000000000000 000000 000000 00      0   0  0\n  [ 1] .interp           PROGBITS        0000000000000270 000270 00001c 00   A  0   0  1\n  [ 2] .note.gnu.property NOTE            0000000000000290 000290 000020 00   A  0   0  8\n  [ 3] .note.ABI-tag     NOTE            00000000000002b0 0002b0 000020 00   A  0   0  4\n  [ 4] .note.gnu.build-id NOTE            00000000000002d0 0002d0 000024 00   A  0   0  4\n  [ 5] .dynsym           DYNSYM          00000000000002f8 0002f8 006780 18   A  6   1  8\n  [ 6] .dynstr           STRTAB          0000000000006a78 006a78 00a6fe 00   A  0   0  1\n  [ 7] .gnu.hash         GNU_HASH        0000000000011178 011178 000030 00   A  5   0  8\n  [ 8] .gnu.version      VERSYM          00000000000111a8 0111a8 0008a0 02   A  5   0  2\n  [ 9] .gnu.version_r    VERNEED         0000000000011a48 011a48 000110 00   A  6   4  4\n  [10] .rela.dyn         RELA            0000000000011b58 011b58 041460 18   A  5   0  8\n  [11] .rela.plt         RELA            0000000000052fb8 052fb8 003360 18  AI  5  13  8\n  [12] .init             PROGBITS        0000000000056318 056318 00001b 00  AX  0   0  4\n  [13] .plt              PROGBITS        0000000000056340 056340 002250 10  AX  0   0 16\n  [14] .text             PROGBITS        00000000000585c0 0585c0 23bcb5 00  AX  0   0 64\n  [15] .fini             PROGBITS        0000000000294278 294278 00000d 00  AX  0   0  4\n  [16] swift5_protocols  PROGBITS        0000000000294288 294288 000114 00   A  0   0  4\n  [17] swift5_protocol_conformances PROGBITS        000000000029439c 29439c 001278 00   A  0   0  4\n  [18] swift5_type_metadata PROGBITS        0000000000295614 295614 000694 00   A  0   0  4\n  [19] swift5_fieldmd    PROGBITS        0000000000295ca8 295ca8 004874 00   A  0   0  4\n  [20] swift5_builtin    PROGBITS        000000000029a51c 29a51c 0004c4 00   A  0   0  4\n  [21] swift5_assocty    PROGBITS        000000000029a9e0 29a9e0 001d40 00   A  0   0  4\n  [22] swift5_capture    PROGBITS        000000000029c720 29c720 000a58 00   A  0   0  4\n  [23] swift5_reflstr    PROGBITS        000000000029d180 29d180 002a6d 00   A  0   0 16\n  [24] swift5_typeref    PROGBITS        000000000029fbf0 29fbf0 0063f9 00   A  0   0 16\n  [25] swift5_mpenum     PROGBITS        00000000002a5fec 2a5fec 000140 00   A  0   0  4\n  [26] swift5_replace    PROGBITS        00000000002a612c 2a612c 000000 00   A  0   0  1\n  [27] swift5_replac2    PROGBITS        00000000002a612c 2a612c 000000 00   A  0   0  1\n  [28] swift5_accessible_functions PROGBITS        00000000002a612c 2a612c 000000 00   A  0   0  1\n  [29] swift5_runtime_attributes PROGBITS        00000000002a612c 2a612c 000000 00   A  0   0  1\n  [30] swift5_tests      PROGBITS        00000000002a612c 2a612c 000000 00   A  0   0  1\n  [31] .swift_modhash    PROGBITS        00000000002a612c 2a612c 000f00 00   A  0   0  1\n  [32] .gcc_except_table PROGBITS        00000000002a702c 2a702c 002c1c 00   A  0   0  4\n  [33] swift5_entry      PROGBITS        00000000002a9c48 2a9c48 000008 00   A  0   0  4\n  [34] swift5_type_metadata_2 PROGBITS        00000000002a9c50 2a9c50 000020 00   A  0   0  4\n  [35] .eh_frame         X86_64_UNWIND   00000000002a9c70 2a9c70 07e234 00   A  0   0  8\n  [36] .eh_frame_hdr     X86_64_UNWIND   0000000000327ea4 327ea4 01b784 00   A  0   0  4\n  [37] .fini_array       FINI_ARRAY      0000000000345110 344110 000008 08  WA  0   0  8\n  [38] .init_array       INIT_ARRAY      0000000000345118 344118 000010 00  WA  0   0  8\n  [39] .data.rel.ro      PROGBITS        0000000000345130 344130 01c580 00  WA  0   0 16\n  [40] .dynamic          DYNAMIC         00000000003616b0 3606b0 0002b0 10  WA  6   0  8\n  [41] .got              PROGBITS        0000000000361968 360968 000680 00  WA  0   0  8\n  [42] .got.plt          PROGBITS        0000000000361fe8 360fe8 001138 00  WA  0   0  8\n  [43] .tm_clone_table   PROGBITS        0000000000363120 362120 000000 00  WA  0   0  8\n  [44] .data             PROGBITS        0000000000363120 362120 004598 00  WA  0   0  8\n  [45] .rodata           PROGBITS        0000000000368000 367000 06e904 00  WA  0   0 4096\n  [46] .bss              NOBITS          00000000003d6910 3d5904 0231e0 00  WA  0   0 16\n  [47] .comment          PROGBITS        0000000000000000 3d5904 00009c 01  MS  0   0  1\n  [48] .debug_loc        PROGBITS        0000000000000000 3d59a0 125354 00      0   0  1\n  [49] .debug_abbrev     PROGBITS        0000000000000000 4facf4 0733fd 00      0   0  1\n  [50] .debug_info       PROGBITS        0000000000000000 56e0f1 46edf2 00      0   0  1\n  [51] .debug_ranges     PROGBITS        0000000000000000 9dcee3 0999a0 00      0   0  1\n  [52] .debug_str        PROGBITS        0000000000000000 a76883 204d76 01  MS  0   0  1\n  [53] .debug_names      PROGBITS        0000000000000000 c7b5fc 10c580 00      0   0  4\n  [54] .debug_line       PROGBITS        0000000000000000 d87b7c 1128c5 00      0   0  1\n  [55] .debug_frame      PROGBITS        0000000000000000 e9a448 0012b0 00      0   0  8\n  [56] .debug_loclists   PROGBITS        0000000000000000 e9b6f8 122eaa 00      0   0  1\n  [57] .debug_str_offsets PROGBITS        0000000000000000 fbe5a2 067a0c 00      0   0  1\n  [58] .debug_addr       PROGBITS        0000000000000000 1025fae 046de8 00      0   0  1\n  [59] .debug_line_str   PROGBITS        0000000000000000 106cd96 013231 01  MS  0   0  1\n  [60] .debug_rnglists   PROGBITS        0000000000000000 107ffc7 0185b2 00      0   0  1\n  [61] .debug_aranges    PROGBITS        0000000000000000 1098579 0004b0 00      0   0  1\n  [62] .note.gnu.gold-version NOTE            0000000000000000 1098a2c 00001c 00      0   0  4\n  [63] .symtab           SYMTAB          0000000000000000 1098a48 090480 18     64 17344  8\n  [64] .strtab           STRTAB          0000000000000000 1128ec8 1696b7 00      0   0  1\n  [65] .shstrtab         STRTAB          0000000000000000 129257f 00035d 00      0   0  1\nKey to Flags:\n  W (write), A (alloc), X (execute), M (merge), S (strings), I (info),\n  L (link order), O (extra OS processing required), G (group), T (TLS),\n  C (compressed), x (unknown), o (OS specific), E (exclude),\n  D (mbind), l (large), p (processor specific)\n",
+        "stderr": ""
+      },
+      "runtime_libraries": {
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftCore.so": {
+          "bytes": 10010352,
+          "sha256": "c6aa1b71de9ca9d7c332b7570410fbd78824aa6a81f3d114a2fd4f8aed234495",
+          "frozen": "runtime/lib/libswiftCore.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftObservation.so": {
+          "bytes": 248464,
+          "sha256": "28f659fac470ab439aa8a702b4f0c442b423b9ef407a276604d1fec64e23b49d",
+          "frozen": "runtime/lib/libswiftObservation.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Concurrency.so": {
+          "bytes": 1074480,
+          "sha256": "9674ef95465d75dcd9db322b9aaf2dd165dd3c1552ba4297f86984eb280a82f3",
+          "frozen": "runtime/lib/libswift_Concurrency.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_StringProcessing.so": {
+          "bytes": 1171024,
+          "sha256": "74d6f891a5e73ebe9495e14f99e9705324e8f74ba6e0c11ab1d41240b4a47b40",
+          "frozen": "runtime/lib/libswift_StringProcessing.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_RegexParser.so": {
+          "bytes": 1619712,
+          "sha256": "fec1ba16f36bddd0587160b58db8d83fa96ec4b389075a64085ff8dfe5ad9653",
+          "frozen": "runtime/lib/libswift_RegexParser.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftSynchronization.so": {
+          "bytes": 126016,
+          "sha256": "a603dace2ffbf26122e6b15d908e4e09ade945c4036fc251ef07f754ff83b3ea",
+          "frozen": "runtime/lib/libswiftSynchronization.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswiftGlibc.so": {
+          "bytes": 91080,
+          "sha256": "6785a4f432afb81dd71c5601546987738b263e7a6ac9b4b3729eec35afc11352",
+          "frozen": "runtime/lib/libswiftGlibc.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libFoundationEssentials.so": {
+          "bytes": 10720840,
+          "sha256": "859d4a1ed4be8f883fa2321afb239d505502137f4b570d73320c7836e1b3db8c",
+          "frozen": "runtime/lib/libFoundationEssentials.so"
+        },
+        "/usr/lib/x86_64-linux-gnu/libm.so.6": {
+          "bytes": 952616,
+          "sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+          "frozen": "runtime/lib/libm.so.6"
+        },
+        "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33": {
+          "bytes": 2592224,
+          "sha256": "1fd75fe70354a416d75aef22bcae68c47bd25d20e2d0568c30b1a9838cf62f11",
+          "frozen": "runtime/lib/libstdc++.so.6.0.33"
+        },
+        "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1": {
+          "bytes": 183024,
+          "sha256": "d93224d2b0dab4247598be683adca02f5cf00586f99c187579cd7e92058fb7cb",
+          "frozen": "runtime/lib/libgcc_s.so.1"
+        },
+        "/usr/lib/x86_64-linux-gnu/libc.so.6": {
+          "bytes": 2129424,
+          "sha256": "3a15d66867d83762c7f2f1e37359cb8f6c5743edb369c65285cb0b1c4f7498bf",
+          "frozen": "runtime/lib/libc.so.6"
+        },
+        "/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2": {
+          "bytes": 236616,
+          "sha256": "c20a2dc8917c755f02b94049356320fe1f62ac7d9f8994731f807d9df39302da",
+          "frozen": "runtime/lib/ld-linux-x86-64.so.2"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libdispatch.so": {
+          "bytes": 436272,
+          "sha256": "28c33251625914f84eba5eac5251c046e4b48fd7aedb34aefe083802d5fb4f41",
+          "frozen": "runtime/lib/libdispatch.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libswift_Builtin_float.so": {
+          "bytes": 16680,
+          "sha256": "21e198f17e8e4ae1b200dbef73e592d3aab82f08e8f19affd8c91c4adf5a8a44",
+          "frozen": "runtime/lib/libswift_Builtin_float.so"
+        },
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/lib/swift/linux/libBlocksRuntime.so": {
+          "bytes": 12968,
+          "sha256": "63817f148114684199a286c14e91acc2685e18be54b0777ddd6f974f9c2d2498",
+          "frozen": "runtime/lib/libBlocksRuntime.so"
+        }
+      },
+      "stripped": {
+        "sha256": "f61eea003cd7ac5c26f619058c3457c4d5871b646ef4037d882fecd2555acb71",
+        "bytes": 4024520,
+        "strip": {
+          "command": [
+            "strip",
+            "--strip-all",
+            "$EXPERIMENT/bin/stripped/E"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "command": [
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/E",
+        "--scratch-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+        "--cache-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+        "--config-path",
+        "$EXPERIMENT/config",
+        "--security-path",
+        "$EXPERIMENT/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "debug",
+        "-j",
+        "2"
+      ],
+      "started_at": "2026-11-17T06:05:56.294404+00:00",
+      "log": "logs/E-test-debug.log",
+      "free_bytes_before": 4443557888,
+      "exit_code": 0,
+      "elapsed_s": 50.8867376698181,
+      "log_sha256": "67e0284f4833a7dcac250fec8f4449bd5ef687c47877ada28de24c5c467abbf8",
+      "tests": 94,
+      "summaries": [
+        [
+          "94",
+          "13"
+        ]
+      ],
+      "test_artifacts": {
+        "cidrmergePackageTests.xctest": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmergePackageTests.xctest",
+          "sha256": "f8283687813bbf6e5b57f0fd3b49a96c621da00f006a50929bb198e5d6017cd9",
+          "bytes": 28296752
+        },
+        "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+          "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+          "bytes": 288
+        },
+        "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/debug/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+          "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+          "bytes": 43
+        }
+      }
+    },
+    {
+      "command": [
+        "$HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/E",
+        "--scratch-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build",
+        "--cache-path",
+        "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/cache",
+        "--config-path",
+        "$EXPERIMENT/config",
+        "--security-path",
+        "$EXPERIMENT/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "release",
+        "-j",
+        "2"
+      ],
+      "started_at": "2026-11-17T06:06:47.829628+00:00",
+      "log": "logs/E-test-release.log",
+      "free_bytes_before": 4415197184,
+      "exit_code": 0,
+      "elapsed_s": 130.89908187603578,
+      "log_sha256": "1c1454a10368bbb3c5da908dc7d0dab608552528fa03e74e9e5b902dd611cc14",
+      "tests": 94,
+      "summaries": [
+        [
+          "94",
+          "13"
+        ]
+      ],
+      "test_artifacts": {
+        "cidrmergePackageTests.xctest": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest",
+          "sha256": "a79261a971cd8fee48b86d361c40ac3163f3cf353f8ed715fd1c995315a5c486",
+          "bytes": 25076480
+        },
+        "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+          "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+          "bytes": 288
+        },
+        "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+          "source": "/dev/shm/cidrmerge-essentials-system-20261117T053919Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+          "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+          "bytes": 43
+        }
+      }
+    }
+  ],
+  "source_files": {
+    "LICENSE": "0358a68ca6566eba535aa9ac340acc11bd69c30710af0db8a1ce330a73fa3f8c",
+    "RELEASING.md": "22d7199aed22ee73648afbd336cdd3f02b0e2ec603ab51d370be9e80a50261f4",
+    "Package.swift": "f69c3e0888a8fcb49e31872411dc56b0a2154d0c005c66319d95188c84bbca7c",
+    ".swift-format.json": "8379721e25be313a22ee04900d50392501f7aa3c6de52285dc7755f85f4fc4b5",
+    "Package.resolved": "9e705cb7bc4e4ea030e252229e499e3bc023477636b8e5b77a33150c264728e5",
+    "README.md": "a6c455b11789ba0fba37c6524173f27a00e8d16d136632d98d7d96ec58c1fa33",
+    "THIRD_PARTY_NOTICES.txt": "391b47c37c9f61b7901e9191a243e062c6c7a3afdcc07d9887a59d929da8e850",
+    ".github/dependabot.yml": "dd086816ade7917bab4c12c9bb5f479c777d07e35dd9ae6e79b3727291992e73",
+    "Sources/.DS_Store": "004e337c67bb89cd33f17cb320adb393b5ed76fc71fc2f3f8f60d990f000555b",
+    "scripts/smoke-test.sh": "7f0cedbc96a7c246b09ff59de797a1002d07ae235f1ef68f45ec00b487072765",
+    "scripts/swift-testing-support.sh": "ba112e4f5943ea54c1e63df0df3b9e38e3f6e0f1cac233b2ea1751fb6858c049",
+    "scripts/check-core-consumer.sh": "2e41e050545b0f6435adbbf0a5452119084e23e66e8ed869f025c94af6a7db0d",
+    "scripts/check-documentation.sh": "042483265f01d19c061fcd8227763cb1cadd42500be596c6aad6ae3712f5cd05",
+    "scripts/audit-release-content.sh": "6e07a966f00ec97e9fedaef91f58b51bf88a44197b3bfe36c502cf671e4a7cec",
+    "scripts/benchmark.sh": "36c885ace73d46952e82871128df30ccf8c13c81bcd3d4c016f1ed3a624f27a4",
+    "scripts/check-release.sh": "2d1a9942bae1eabdc0b0e205f9b0b09187ca4eccfd3086a94b4c0de3f26eeb35",
+    "scripts/test.sh": "79e10dab07647b101882d264fc17b05fb3298d5037f6342495361dc0eed75ec2",
+    ".github/workflows/ci.yml": "b986f2a2cee0713fa056963a388ad0f85b0f9862301d53a611f8f3732fee3176",
+    ".github/workflows/release.yml": "efc1134cf970e996488dce033e8e68d5dcbfc5e0c0541c042781e42adca15789",
+    "Sources/CIDRMergeExecutable/CIDRMergeMain.swift": "a1dd96afa3cfcf3bf42adffb9f9fac361220419ded232d7d8facd985f76c3e7d",
+    "Sources/CIDRMergeCore/CIDRMergeCoverage.swift": "607d2e75174d900b205815b620e795fee6c3248c66bd7b10206195e0381289d8",
+    "Sources/CIDRMergeCLI/CIDRMergeApplication.swift": "099afc1979da78b80a7f6f68f89a637ba03f6bba47dbf76b6cd6baa3f4a55390",
+    "Sources/CIDRMergeCLI/SearchbotInput.swift": "d6de3355a796b65d27d8c3c3023c85accce9ac43bf27956c0b08b6c3076985d5",
+    "Sources/CIDRMergeCLI/MergeModels.swift": "bb15543ce6bb86deb0b024cfab49782cd51f68782d7c385e84f44fb1fbad3c70",
+    "Sources/CIDRMergeCLI/TextInput.swift": "56b0efbeaf60e1111ea05bc57bedb7fa805776a6a8287d916aa3003059ad2210",
+    "Sources/CIDRMergeCLI/DetachedSHA256Checksum.swift": "487480c2e104de2146a4d7dc7f65fba3983dc5305d772ddc334b6216243665ab",
+    "Sources/CIDRMergeCLI/OutputRenderer.swift": "2977876d650565998cd0edde2f2aa3f5ec1873e2e6f4b06041ce5e55a0985877",
+    "Sources/CIDRMergeCLI/DescriptorIO.swift": "c8ae3a77abb9b7c13138e7432f0bd726dc834e3b9437b09304552e97f19679dd",
+    "Sources/CIDRMergeCLI/CLICompatibility.swift": "e02aeadf73cc31411d4e0574fb82b99ebb4995aaa12f97afc78e8ced9e7d77ff",
+    "Sources/CIDRMergeCLI/CIDRMergeCommand.swift": "9b90deb9b65e4ea1f6b894c097ae4c5262e0658ea9d8224e6c9784689624c737",
+    "Sources/CIDRMergeCore/CIDRMergeCore.docc/CIDRMergeCore.md": "e67ce5bfb791033ec4542aaed81c50ac2011d2afc361ba827009f7b1c0b07b90",
+    "Sources/CIDRMergeCore/CIDRMergeCore.docc/CompilingSearchbotPrefixLists.md": "b3fbf921949156bdbd4662dce4e5f5eda8593dbadb4661be94fee31952b062c0",
+    "Documentation/Assets/cidrmerge-icon.png": "3893eeabd9344d3d389d28cc62e32ae3f616c425b20492da6d664a5eaf0d7003",
+    "Tests/CIDRMergeCLITests/RawUTF8OutputTests.swift": "a62087487cc7a16b77adc97bf6757dc5e5b34837d5bf9267191b755f6cdfb63d",
+    "Tests/CIDRMergeCLITests/DescriptorIOTests.swift": "307d05039c4e3cfc9bddd1a24baa6d5020544e0ef3403e2d7846af236a6be347",
+    "Tests/CIDRMergeCLITests/SearchbotInputTests.swift": "80e80433a47f62f4a046ba6f5504ac59cba56684de4c7beb254c61f33fe4c635",
+    "Tests/CIDRMergeCLITests/TextInputASCIITests.swift": "1ab4d4a91e21584e33a592a7fe694bcfa3843306da6df2c6e64ae6cb9b47229b",
+    "Tests/CIDRMergeCLITests/NormalizationStatisticsTests.swift": "2c8966ae61d352ec300864694de1f43d1b60faf8a3a038a05cf7189b0b78a0af",
+    "Tests/CIDRMergeCLITests/DetachedSHA256ChecksumTests.swift": "55b1c9109f75bb79c521863388fb67bba6409800c1e04c8513f1f30b666e0792",
+    "Tests/CIDRMergeCLITests/CLIBehaviorTests.swift": "ceb7f5bdd2a8bb96505753f2e28897d74d77481dddffe8cb1fa2aca62504e381",
+    "Tests/CIDRMergeCLITests/CLICompatibilityTests.swift": "7faa9aeb264ad004e79062629f6138f1ea3f0b6611d38a6d70bb292f127261ea",
+    "Tests/CIDRMergeCLITests/ReadBufferLifetimeTests.swift": "be68d14ea16b372ade49528c45afda9854185282c34b1b3a99583799ccd62c05",
+    "Tests/CIDRMergeCoreTests/CIDRMergeCoverageTests.swift": "db02998ff3a8d587b7daab835d4387f05260d8b1d8f05579363f07c57d5727fd",
+    "Tests/CIDRMergeCLITests/Fixtures/searchbot-projected.txt": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+    "Tests/CIDRMergeCLITests/Fixtures/searchbot-valid.json": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b"
+  },
+  "free_bytes": 4390064128
+}

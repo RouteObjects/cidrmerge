@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-11-17T06:33:43.640660+00:00",
+  "purpose": "Cover Searchbot stdin readToEnd buffer changes; original large Searchbot cases use named-file Data(contentsOf:)",
+  "comparisons": [
+    "B-vs-E4",
+    "E4-vs-R3",
+    "B-vs-S2"
+  ],
+  "configs": [
+    "searchbot-canonical-no-stats",
+    "searchbot-noncanonical-stats"
+  ],
+  "primary_per_comparison": {
+    "measured_samples": 24,
+    "warmups": 4
+  },
+  "primary_per_platform": {
+    "measured_samples": 72,
+    "warmups": 12
+  },
+  "timing": "Same platform-specific elapsed/CPU/peakRSS harness. Redirect stdin directly from preserved fixture file; no input operand or feeder process. Input file open excluded from timing.",
+  "verification": "Identical full stdout/stderr independent reference bytes and source input hashes as primary cases",
+  "output_path": "PLATFORM_ROOT/stdin/ordinary/COMPARISON/PHASE",
+  "revisions": [
+    {
+      "derived": "run_stdin.py",
+      "source": "run_matched.py",
+      "source_sha256": "94880fb6cca26a3409fc228ca96a0fd3b0140aee9729b46e66d4b50e128646c6",
+      "derived_sha256": "9166aa3afea3420155b8d7a3cccd0114499890a35e87e6e90cfec7ab47676c55"
+    },
+    {
+      "derived": "run_stdin_comparison.py",
+      "source": "run_comparison.py",
+      "source_sha256": "e859140f12735f2b79ad6a34557ef088ec3ac1088d822db0c99fca84760e8fc5",
+      "derived_sha256": "81805cecfa7b0935f31d8dedd706ec68a71b8be9f80785a938e7d7f2866555e0"
+    },
+    {
+      "derived": "audit_stdin_comparison.py",
+      "source": "audit_comparison.py",
+      "source_sha256": "8b2858a808f2c4bc311339148ca9f08caf9c8a1ae95039d1a67769afb5b7173f",
+      "derived_sha256": "e2971171532565e8eddbcc99d5f168bf8d8a5cde161ca16fc458391e1d33c312"
+    },
+    {
+      "derived": "negative_control_stdin.py",
+      "source": "negative_control_v2.py",
+      "source_sha256": "6fb702099b91cd499ac08debe8513c6149a19058e47350e54c9c1dae62749e3b",
+      "derived_sha256": "1a4088d9255fa886cda53b0b7830219f2a23a39c062ddb7d423141c774be1468"
+    }
+  ],
+  "primary_scripts_unchanged": true,
+  "tests_not_yet_run": "Code prepared during Mac primary timing; controls wait until that measurement window ends"
+}
