@@ -1,0 +1,339 @@
+diff --git a/Sources/CIDRMergeCLI/CIDRMergeApplication.swift b/Sources/CIDRMergeCLI/CIDRMergeApplication.swift
+index 22275c3..c8f2401 100644
+--- a/Sources/CIDRMergeCLI/CIDRMergeApplication.swift
++++ b/Sources/CIDRMergeCLI/CIDRMergeApplication.swift
+@@ -14,18 +14,21 @@
+ import Foundation
+ 
+ struct CIDRMergeApplication: Sendable {
+-    typealias InputLoader = @Sendable (_ inputs: [String], _ format: InputFormat) throws -> ParsedInput
++    typealias InputLoader =
++        @Sendable (_ inputs: [String], _ format: InputFormat, _ collectNormalizationStatistics: Bool) throws ->
++        ParsedInput
+     typealias OutputWriter =
+         @Sendable (_ output: Data, _ path: String?, _ includeChecksum: Bool) throws -> Void
+     typealias DiagnosticWriter = @Sendable (_ diagnostics: Data) throws -> Void
+ 
+     static let live = CIDRMergeApplication(
+-        inputLoader: { inputs, format in
++        inputLoader: { inputs, format, collectNormalizationStatistics in
+             switch format {
+             case .text:
+-                try TextInputLoader.load(inputs: inputs)
++                try TextInputLoader.load(inputs: inputs, collectNormalizationStatistics: collectNormalizationStatistics)
+             case .searchbot:
+-                try SearchbotInputLoader.load(inputs: inputs)
++                try SearchbotInputLoader.load(
++                    inputs: inputs, collectNormalizationStatistics: collectNormalizationStatistics)
+             }
+         },
+         outputWriter: { output, path, includeChecksum in
+@@ -59,7 +62,8 @@ struct CIDRMergeApplication: Sendable {
+             outputPath: outputPath
+         )
+ 
+-        let parsedInput = try inputLoader(inputs, inputFormat)
++        // CHANGE: Canonical formatting is needed only when normalization statistics will be emitted.
++        let parsedInput = try inputLoader(inputs, inputFormat, includeStatistics)
+         let result = parsedInput.merged(representation: representation)
+         let output = try OutputRenderer.render(result, format: outputFormat)
+ 
+diff --git a/Sources/CIDRMergeCLI/SearchbotInput.swift b/Sources/CIDRMergeCLI/SearchbotInput.swift
+index acf68a8..3e85ba2 100644
+--- a/Sources/CIDRMergeCLI/SearchbotInput.swift
++++ b/Sources/CIDRMergeCLI/SearchbotInput.swift
+@@ -28,7 +28,8 @@ import Foundation
+ enum SearchbotInputLoader {
+     static func load(
+         inputs: [String],
+-        standardInput: FileHandle = .standardInput
++        standardInput: FileHandle = .standardInput,
++        collectNormalizationStatistics: Bool = true
+     ) throws -> ParsedInput {
+         let sources = try InputSources.validated(inputs)
+         var parsedInput = ParsedInput()
+@@ -36,15 +37,21 @@ enum SearchbotInputLoader {
+         for source in sources {
+             let label = source == "-" ? InputSources.standardInputLabel : source
+             let data = try read(source: source, label: label, standardInput: standardInput)
+-            try decode(data, source: label, into: &parsedInput)
++            try decode(
++                data, source: label, collectNormalizationStatistics: collectNormalizationStatistics, into: &parsedInput)
+         }
+ 
+         return parsedInput
+     }
+ 
+-    static func load(data: Data, source: String = "<memory>") throws -> ParsedInput {
++    static func load(
++        data: Data,
++        source: String = "<memory>",
++        collectNormalizationStatistics: Bool = true
++    ) throws -> ParsedInput {
+         var parsedInput = ParsedInput()
+-        try decode(data, source: source, into: &parsedInput)
++        try decode(
++            data, source: source, collectNormalizationStatistics: collectNormalizationStatistics, into: &parsedInput)
+         return parsedInput
+     }
+ 
+@@ -69,6 +76,7 @@ enum SearchbotInputLoader {
+     private static func decode(
+         _ data: Data,
+         source: String,
++        collectNormalizationStatistics: Bool,
+         into parsedInput: inout ParsedInput
+     ) throws {
+         guard String(data: data, encoding: .utf8) != nil else {
+@@ -86,11 +94,23 @@ enum SearchbotInputLoader {
+             )
+         }
+ 
+-        let document: SearchbotDocument
+         do {
+             // Searchbot operands are complete documents by contract. Decoding the whole
+             // value also rejects malformed or trailing JSON before any output can be committed.
+-            document = try JSONDecoder().decode(SearchbotDocument.self, from: data)
++            // CHANGE: Select counting once per document, keeping per-prefix decoding free of
++            // context dictionary lookups and retaining ordinary JSONDecoder array decoding.
++            let decoder = JSONDecoder()
++            if collectNormalizationStatistics {
++                let document = try decoder.decode(SearchbotDocument<CountedSearchbotPrefix>.self, from: data)
++                for prefix in document.prefixes {
++                    parsedInput.append(prefix.value.range, normalized: prefix.value.normalized)
++                }
++            } else {
++                let document = try decoder.decode(SearchbotDocument<UncountedSearchbotPrefix>.self, from: data)
++                for prefix in document.prefixes {
++                    parsedInput.append(prefix.value.range, normalized: false)
++                }
++            }
+         } catch let issue as SearchbotDecodingIssue {
+             throw CIDRMergeError.invalidSearchbotInput(
+                 source: source,
+@@ -112,9 +132,6 @@ enum SearchbotInputLoader {
+             )
+         }
+ 
+-        for prefix in document.prefixes {
+-            parsedInput.append(prefix.range, normalized: prefix.normalized)
+-        }
+     }
+ 
+     private static func decodingDiagnostic(
+@@ -143,11 +160,27 @@ enum SearchbotInputLoader {
+ /// Synthesized decoding requires the `prefixes` member while intentionally ignoring descriptive
+ /// fields such as `creationTime`. Prefix validation and swift-cidr conversion are delegated to
+ /// `SearchbotPrefix`.
+-private struct SearchbotDocument: Decodable {
+-    let prefixes: [SearchbotPrefix]
++private struct SearchbotDocument<Prefix: Decodable>: Decodable {
++    let prefixes: [Prefix]
++}
++
++private struct CountedSearchbotPrefix: Decodable {
++    let value: SearchbotPrefix
++
++    init(from decoder: any Decoder) throws {
++        value = try SearchbotPrefix(from: decoder, collectNormalizationStatistics: true)
++    }
+ }
+ 
+-private struct SearchbotPrefix: Decodable {
++private struct UncountedSearchbotPrefix: Decodable {
++    let value: SearchbotPrefix
++
++    init(from decoder: any Decoder) throws {
++        value = try SearchbotPrefix(from: decoder, collectNormalizationStatistics: false)
++    }
++}
++
++private struct SearchbotPrefix {
+     let range: AnyIPAddressRange
+     let normalized: Bool
+ 
+@@ -156,7 +189,7 @@ private struct SearchbotPrefix: Decodable {
+         case ipv6Prefix
+     }
+ 
+-    init(from decoder: any Decoder) throws {
++    init(from decoder: any Decoder, collectNormalizationStatistics: Bool) throws {
+         let container = try decoder.container(keyedBy: CodingKeys.self)
+         let hasIPv4 = container.contains(.ipv4Prefix)
+         let hasIPv6 = container.contains(.ipv6Prefix)
+@@ -179,7 +212,7 @@ private struct SearchbotPrefix: Decodable {
+                 )
+             }
+             range = AnyIPAddressRange(IPv4AddressRange(covering: network))
+-            normalized = network.description != value
++            normalized = collectNormalizationStatistics && network.description != value
+         } else {
+             let value = try container.decode(String.self, forKey: .ipv6Prefix)
+             guard let network = IPv6Network(value) else {
+@@ -189,7 +222,7 @@ private struct SearchbotPrefix: Decodable {
+                 )
+             }
+             range = AnyIPAddressRange(IPv6AddressRange(covering: network))
+-            normalized = network.description != value
++            normalized = collectNormalizationStatistics && network.description != value
+         }
+     }
+ }
+diff --git a/Sources/CIDRMergeCLI/TextInput.swift b/Sources/CIDRMergeCLI/TextInput.swift
+index 77599d0..574a721 100644
+--- a/Sources/CIDRMergeCLI/TextInput.swift
++++ b/Sources/CIDRMergeCLI/TextInput.swift
+@@ -82,7 +82,8 @@ enum TextInputLoader {
+ 
+     static func load(
+         inputs: [String],
+-        standardInput: FileHandle = .standardInput
++        standardInput: FileHandle = .standardInput,
++        collectNormalizationStatistics: Bool = true
+     ) throws -> ParsedInput {
+         let sources = try InputSources.validated(inputs)
+ 
+@@ -92,7 +93,7 @@ enum TextInputLoader {
+                 try consume(
+                     standardInput,
+                     source: InputSources.standardInputLabel,
+-                    into: &collection
++                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+                 )
+                 continue
+             }
+@@ -108,13 +109,19 @@ enum TextInputLoader {
+             }
+             defer { try? handle.close() }
+ 
+-            try consume(handle, source: source, into: &collection)
++            try consume(
++                handle, source: source, collectNormalizationStatistics: collectNormalizationStatistics,
++                into: &collection)
+         }
+ 
+         return collection
+     }
+ 
+-    static func load(data: Data, source: String = "<memory>") throws -> ParsedInput {
++    static func load(
++        data: Data,
++        source: String = "<memory>",
++        collectNormalizationStatistics: Bool = true
++    ) throws -> ParsedInput {
+         var collection = ParsedInput()
+         var pending: [UInt8] = []
+         pending.reserveCapacity(128)
+@@ -126,7 +133,7 @@ enum TextInputLoader {
+                     pending,
+                     source: source,
+                     lineNumber: lineNumber,
+-                    into: &collection
++                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+                 )
+                 pending.removeAll(keepingCapacity: true)
+                 lineNumber += 1
+@@ -140,7 +147,7 @@ enum TextInputLoader {
+                 pending,
+                 source: source,
+                 lineNumber: lineNumber,
+-                into: &collection
++                collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+             )
+         }
+ 
+@@ -150,6 +157,7 @@ enum TextInputLoader {
+     private static func consume(
+         _ handle: FileHandle,
+         source: String,
++        collectNormalizationStatistics: Bool,
+         into collection: inout ParsedInput
+     ) throws {
+         var pending: [UInt8] = []
+@@ -164,13 +172,15 @@ enum TextInputLoader {
+                     let hasData = try autoreleasepool {
+                         try consumeChunk(
+                             handle, source: source, pending: &pending,
+-                            lineNumber: &lineNumber, into: &collection
++                            lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
++                            into: &collection
+                         )
+                     }
+                 #else
+                     let hasData = try consumeChunk(
+                         handle, source: source, pending: &pending,
+-                        lineNumber: &lineNumber, into: &collection
++                        lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
++                        into: &collection
+                     )
+                 #endif
+                 if !hasData {
+@@ -183,7 +193,7 @@ enum TextInputLoader {
+                     pending,
+                     source: source,
+                     lineNumber: lineNumber,
+-                    into: &collection
++                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+                 )
+             }
+         } catch let error as CIDRMergeError {
+@@ -201,6 +211,7 @@ enum TextInputLoader {
+         source: String,
+         pending: inout [UInt8],
+         lineNumber: inout Int,
++        collectNormalizationStatistics: Bool,
+         into collection: inout ParsedInput
+     ) throws -> Bool {
+         guard let data = try handle.read(upToCount: chunkSize), !data.isEmpty else {
+@@ -212,7 +223,7 @@ enum TextInputLoader {
+                     pending,
+                     source: source,
+                     lineNumber: lineNumber,
+-                    into: &collection
++                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
+                 )
+                 pending.removeAll(keepingCapacity: true)
+                 lineNumber += 1
+@@ -227,6 +238,7 @@ enum TextInputLoader {
+         _ rawBytes: [UInt8],
+         source: String,
+         lineNumber: Int,
++        collectNormalizationStatistics: Bool,
+         into collection: inout ParsedInput
+     ) throws {
+         var isASCII = true
+@@ -282,6 +294,7 @@ enum TextInputLoader {
+ 
+         let range: AnyIPAddressRange
+         let normalized: Bool
++        // CHANGE: Short-circuit before canonical formatting when the caller will not use its count.
+         switch inputKind(of: token) {
+         case .network:
+             guard let parsed = AnyIPNetwork(token) else {
+@@ -292,7 +305,7 @@ enum TextInputLoader {
+                 )
+             }
+             range = AnyIPAddressRange(covering: parsed)
+-            normalized = parsed.description != token
++            normalized = collectNormalizationStatistics && parsed.description != token
+         case .range:
+             guard let parsed = AnyIPAddressRange(token) else {
+                 throw CIDRMergeError.invalidInput(
+@@ -302,7 +315,7 @@ enum TextInputLoader {
+                 )
+             }
+             range = parsed
+-            normalized = parsed.description != token
++            normalized = collectNormalizationStatistics && parsed.description != token
+         case .address:
+             guard let address = AnyIPAddress(token) else {
+                 throw CIDRMergeError.invalidInput(
+@@ -312,7 +325,7 @@ enum TextInputLoader {
+                 )
+             }
+             range = AnyIPAddressRange(address)
+-            normalized = address.description != token
++            normalized = collectNormalizationStatistics && address.description != token
+         }
+ 
+         // Compare after comment/whitespace removal so stats count semantic canonicalization only.

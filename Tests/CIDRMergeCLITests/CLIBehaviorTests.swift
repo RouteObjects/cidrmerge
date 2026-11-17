@@ -484,11 +484,65 @@ struct CommandSurfaceTests {
 
 @Suite("Application Boundary Tests")
 struct ApplicationBoundaryTests {
+    @Test("The application requests normalization accounting only with statistics")
+    func requestsNormalizationOnlyForStatistics() throws {
+        for inputFormat in [InputFormat.text, .searchbot] {
+            for includeStatistics in [false, true] {
+                let recorder = ApplicationRecorder()
+                let application = CIDRMergeApplication(
+                    inputLoader: { _, format, collectNormalizationStatistics in
+                        #expect(format == inputFormat)
+                        #expect(collectNormalizationStatistics == includeStatistics)
+                        switch format {
+                        case .text:
+                            return try TextInputLoader.load(
+                                data: Data("192.0.2.129/24\n".utf8),
+                                collectNormalizationStatistics: collectNormalizationStatistics
+                            )
+                        case .searchbot:
+                            return try SearchbotInputLoader.load(
+                                data: Data(#"{"prefixes":[{"ipv4Prefix":"192.0.2.129/24"}]}"#.utf8),
+                                collectNormalizationStatistics: collectNormalizationStatistics
+                            )
+                        }
+                    },
+                    outputWriter: { output, path, includeChecksum in
+                        recorder.recordOutput(output, path: path, includeChecksum: includeChecksum)
+                    },
+                    diagnosticWriter: { diagnostics in
+                        recorder.recordDiagnostics(diagnostics)
+                    }
+                )
+
+                try application.run(
+                    inputs: ["injected-input"],
+                    inputFormat: inputFormat,
+                    outputFormat: .raw,
+                    representation: .cidr,
+                    includeStatistics: includeStatistics,
+                    outputPath: nil
+                )
+
+                #expect(recorder.outputString == "192.0.2.0/24\n")
+                #expect(recorder.outputWriteCount == 1)
+                #expect(recorder.diagnosticWriteCount == (includeStatistics ? 1 : 0))
+                if includeStatistics {
+                    #expect(recorder.diagnosticsString.contains("normalized: 1 entry"))
+                    #expect(recorder.events == ["output", "diagnostics"])
+                } else {
+                    #expect(recorder.diagnosticsString.isEmpty)
+                    #expect(recorder.events == ["output"])
+                }
+            }
+        }
+    }
+
     @Test("The application buffers output and writes statistics after one output commit")
     func commitsOutputBeforeDiagnostics() throws {
         let recorder = ApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _, format in
+            inputLoader: { _, format, collectNormalizationStatistics in
+                #expect(collectNormalizationStatistics)
                 #expect(format == .searchbot)
                 return try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
@@ -527,7 +581,7 @@ struct ApplicationBoundaryTests {
     func outputFailurePreventsDiagnostics() {
         let recorder = ApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _, _ in
+            inputLoader: { _, _, _ in
                 try TextInputLoader.load(data: Data("192.0.2.0/24\n".utf8))
             },
             outputWriter: { _, _, _ in
@@ -554,7 +608,7 @@ struct ApplicationBoundaryTests {
     func inputFailurePreventsWrites() {
         let recorder = ApplicationRecorder()
         let application = CIDRMergeApplication(
-            inputLoader: { _, _ in
+            inputLoader: { _, _, _ in
                 throw ExpectedInputFailure()
             },
             outputWriter: { output, path, includeChecksum in

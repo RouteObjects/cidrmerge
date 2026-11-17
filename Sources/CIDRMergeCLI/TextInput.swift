@@ -82,7 +82,8 @@ enum TextInputLoader {
 
     static func load(
         inputs: [String],
-        standardInput: FileHandle = .standardInput
+        standardInput: FileHandle = .standardInput,
+        collectNormalizationStatistics: Bool = true
     ) throws -> ParsedInput {
         let sources = try InputSources.validated(inputs)
 
@@ -92,7 +93,7 @@ enum TextInputLoader {
                 try consume(
                     standardInput,
                     source: InputSources.standardInputLabel,
-                    into: &collection
+                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
                 )
                 continue
             }
@@ -108,13 +109,19 @@ enum TextInputLoader {
             }
             defer { try? handle.close() }
 
-            try consume(handle, source: source, into: &collection)
+            try consume(
+                handle, source: source, collectNormalizationStatistics: collectNormalizationStatistics,
+                into: &collection)
         }
 
         return collection
     }
 
-    static func load(data: Data, source: String = "<memory>") throws -> ParsedInput {
+    static func load(
+        data: Data,
+        source: String = "<memory>",
+        collectNormalizationStatistics: Bool = true
+    ) throws -> ParsedInput {
         var collection = ParsedInput()
         var pending: [UInt8] = []
         pending.reserveCapacity(128)
@@ -126,7 +133,7 @@ enum TextInputLoader {
                     pending,
                     source: source,
                     lineNumber: lineNumber,
-                    into: &collection
+                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
                 )
                 pending.removeAll(keepingCapacity: true)
                 lineNumber += 1
@@ -140,7 +147,7 @@ enum TextInputLoader {
                 pending,
                 source: source,
                 lineNumber: lineNumber,
-                into: &collection
+                collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
             )
         }
 
@@ -150,6 +157,7 @@ enum TextInputLoader {
     private static func consume(
         _ handle: FileHandle,
         source: String,
+        collectNormalizationStatistics: Bool,
         into collection: inout ParsedInput
     ) throws {
         var pending: [UInt8] = []
@@ -164,13 +172,15 @@ enum TextInputLoader {
                     let hasData = try autoreleasepool {
                         try consumeChunk(
                             handle, source: source, pending: &pending,
-                            lineNumber: &lineNumber, into: &collection
+                            lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
+                            into: &collection
                         )
                     }
                 #else
                     let hasData = try consumeChunk(
                         handle, source: source, pending: &pending,
-                        lineNumber: &lineNumber, into: &collection
+                        lineNumber: &lineNumber, collectNormalizationStatistics: collectNormalizationStatistics,
+                        into: &collection
                     )
                 #endif
                 if !hasData {
@@ -183,7 +193,7 @@ enum TextInputLoader {
                     pending,
                     source: source,
                     lineNumber: lineNumber,
-                    into: &collection
+                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
                 )
             }
         } catch let error as CIDRMergeError {
@@ -201,6 +211,7 @@ enum TextInputLoader {
         source: String,
         pending: inout [UInt8],
         lineNumber: inout Int,
+        collectNormalizationStatistics: Bool,
         into collection: inout ParsedInput
     ) throws -> Bool {
         guard let data = try handle.read(upToCount: chunkSize), !data.isEmpty else {
@@ -212,7 +223,7 @@ enum TextInputLoader {
                     pending,
                     source: source,
                     lineNumber: lineNumber,
-                    into: &collection
+                    collectNormalizationStatistics: collectNormalizationStatistics, into: &collection
                 )
                 pending.removeAll(keepingCapacity: true)
                 lineNumber += 1
@@ -227,6 +238,7 @@ enum TextInputLoader {
         _ rawBytes: [UInt8],
         source: String,
         lineNumber: Int,
+        collectNormalizationStatistics: Bool,
         into collection: inout ParsedInput
     ) throws {
         var isASCII = true
@@ -282,6 +294,7 @@ enum TextInputLoader {
 
         let range: AnyIPAddressRange
         let normalized: Bool
+        // CHANGE: Short-circuit before canonical formatting when the caller will not use its count.
         switch inputKind(of: token) {
         case .network:
             guard let parsed = AnyIPNetwork(token) else {
@@ -292,7 +305,7 @@ enum TextInputLoader {
                 )
             }
             range = AnyIPAddressRange(covering: parsed)
-            normalized = parsed.description != token
+            normalized = collectNormalizationStatistics && parsed.description != token
         case .range:
             guard let parsed = AnyIPAddressRange(token) else {
                 throw CIDRMergeError.invalidInput(
@@ -302,7 +315,7 @@ enum TextInputLoader {
                 )
             }
             range = parsed
-            normalized = parsed.description != token
+            normalized = collectNormalizationStatistics && parsed.description != token
         case .address:
             guard let address = AnyIPAddress(token) else {
                 throw CIDRMergeError.invalidInput(
@@ -312,7 +325,7 @@ enum TextInputLoader {
                 )
             }
             range = AnyIPAddressRange(address)
-            normalized = address.description != token
+            normalized = collectNormalizationStatistics && address.description != token
         }
 
         // Compare after comment/whitespace removal so stats count semantic canonicalization only.
