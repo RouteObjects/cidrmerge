@@ -1,0 +1,17 @@
+{
+  "id": "intentional-wrong-statistics",
+  "variant": "B",
+  "started_at": "2026-11-17T15:49:50.525898+00:00",
+  "command": [
+    "$EXPERIMENT/macos/controls/negative-stdin/statistics/fake-cli"
+  ],
+  "stdin_file": "$EXPERIMENT/macos/controls/negative-stdin/statistics/input",
+  "stdin_transport": "regular-file-redirection",
+  "free_bytes_before": 5611520000000,
+  "passed": false,
+  "stdin_opened_before_timing": true,
+  "elapsed_ns": 44622375,
+  "exit_code": 1,
+  "error": "AssertionError('Missing native time metrics')",
+  "finished_at": "2026-11-17T15:49:50.572588+00:00"
+}

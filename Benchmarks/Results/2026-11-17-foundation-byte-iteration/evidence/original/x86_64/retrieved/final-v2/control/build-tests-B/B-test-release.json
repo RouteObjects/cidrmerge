@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/B",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T15:57:02.104201+00:00",
+  "log": "logs/B-test-release.log",
+  "free_bytes_before": 4290924544,
+  "exit_code": 0,
+  "elapsed_s": 111.83207340259105,
+  "log_sha256": "6562b389d86c8f1af03ff86f16185651b40e9a8e0b816500634e245f6d5f14dc",
+  "tests": 85,
+  "summaries": [
+    [
+      "85",
+      "11"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest",
+      "sha256": "64006cf99f1196d7a1b8a72c76c7e1835ace68e5d56bb056908a43f65d5fed55",
+      "bytes": 22648936
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "os": {
+    "command": [
+      "sw_vers"
+    ],
+    "exit_code": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+    "stderr": ""
+  },
+  "xcode": {
+    "command": [
+      "xcodebuild",
+      "-version"
+    ],
+    "exit_code": 0,
+    "stdout": "Xcode 27.2\nBuild version 27B52\n",
+    "stderr": ""
+  },
+  "swift": {
+    "command": [
+      "xcrun",
+      "swift",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+    "stderr": "swift-driver version: 1.168.6 "
+  },
+  "hardware": {
+    "command": [
+      "sysctl",
+      "-n",
+      "machdep.cpu.brand_string",
+      "hw.physicalcpu",
+      "hw.logicalcpu",
+      "hw.memsize"
+    ],
+    "exit_code": 0,
+    "stdout": "Apple M1 Max\n10\n10\n68719476736\n",
+    "stderr": ""
+  },
+  "developer_directory": {
+    "command": [
+      "xcode-select",
+      "-p"
+    ],
+    "exit_code": 0,
+    "stdout": "/Applications/Xcode-27.2.0.app/Contents/Developer\n",
+    "stderr": ""
+  },
+  "disk": {
+    "command": [
+      "df",
+      "-k",
+      "$EXPERIMENT"
+    ],
+    "exit_code": 0,
+    "stdout": "Filesystem   1024-blocks       Used  Available Capacity  iused       ifree %iused  Mounted on\n/dev/disk3s5  7811085600 2279395908 5504179828    30% 32117979 55041798280    0%   /System/Volumes/Data\n",
+    "stderr": ""
+  },
+  "at": "2026-11-17T15:49:34.697974+00:00",
+  "main_remote_verified": "9fe30dde3fd5ad50944064f912fad8c19cfcec62"
+}

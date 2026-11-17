@@ -1,0 +1,179 @@
+{
+  "started_at": "2026-11-17T15:48:10.664098+00:00",
+  "passed": true,
+  "steps": [
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/B",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/B",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T15:48:11.310700+00:00",
+      "variant": "B",
+      "action": "test",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 40.24040066602174,
+      "finished_at": "2026-11-17T15:48:51.551465+00:00",
+      "log_sha256": "b3929bec91277e4284291e81bf3e1ce190150f4716d9499bc97d2c2dddb1f7f3",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/P",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/P",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "debug",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T15:48:52.127678+00:00",
+      "variant": "P",
+      "action": "test",
+      "configuration": "debug",
+      "exit_code": 0,
+      "elapsed_seconds": 18.84634200000437,
+      "finished_at": "2026-11-17T15:49:10.974372+00:00",
+      "log_sha256": "b060e0df12799282a16ba89698a413a17a4eca0c78cc2859b3b0b99bf8db394f",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    },
+    {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$EXPERIMENT/sources/P",
+        "--scratch-path",
+        "$EXPERIMENT/macos/build/P",
+        "--cache-path",
+        "$EXPERIMENT/macos/cache",
+        "--config-path",
+        "$EXPERIMENT/macos/config",
+        "--security-path",
+        "$EXPERIMENT/macos/security",
+        "--disable-netrc",
+        "--disable-sandbox",
+        "--only-use-versions-from-resolved-file",
+        "--skip-update",
+        "-c",
+        "release",
+        "-j",
+        "6"
+      ],
+      "started_at": "2026-11-17T15:49:11.202573+00:00",
+      "variant": "P",
+      "action": "test",
+      "configuration": "release",
+      "exit_code": 0,
+      "elapsed_seconds": 28.253921124967746,
+      "finished_at": "2026-11-17T15:49:39.456828+00:00",
+      "log_sha256": "4611f4416a75857577cb42e4f80d894f86801867d22748591c182f99c37e42fa",
+      "test_summaries": [
+        [
+          "7",
+          "1"
+        ],
+        [
+          "78",
+          "10"
+        ]
+      ]
+    }
+  ],
+  "swift": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "recovery": "Original B Debug passed; the old driver incorrectly required one 85-test summary instead of summing 7 Core and 78 CLI tests.",
+  "prior_baseline_debug": {
+    "command": [
+      "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+      "test",
+      "--package-path",
+      "$EXPERIMENT/sources/B",
+      "--scratch-path",
+      "$EXPERIMENT/macos/build/B",
+      "--cache-path",
+      "$EXPERIMENT/macos/cache",
+      "--config-path",
+      "$EXPERIMENT/macos/config",
+      "--security-path",
+      "$EXPERIMENT/macos/security",
+      "--disable-netrc",
+      "--disable-sandbox",
+      "--only-use-versions-from-resolved-file",
+      "--skip-update",
+      "-c",
+      "debug",
+      "-j",
+      "6"
+    ],
+    "started_at": "2026-11-17T15:46:22.858803+00:00",
+    "variant": "B",
+    "action": "test",
+    "configuration": "debug",
+    "exit_code": 0,
+    "elapsed_seconds": 17.707598084001802,
+    "finished_at": "2026-11-17T15:46:40.566577+00:00",
+    "log_sha256": "2c4426c4ad6532467f0c8d7a7e7db67637f7bdac01e31658d1206e42d2811418",
+    "test_summaries": [
+      [
+        "7",
+        "1"
+      ],
+      [
+        "78",
+        "10"
+      ]
+    ],
+    "recovered_from": "build-tests-summary.json",
+    "validation": "Both Swift Testing bundle counts sum to 85; original process exit status was zero."
+  },
+  "finished_at": "2026-11-17T15:49:39.870355+00:00"
+}

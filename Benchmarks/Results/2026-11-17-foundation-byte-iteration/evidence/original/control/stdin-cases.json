@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "scope": "Separate TEXT input via regular-file stdin redirection; fixture opened by harness before timing; no feeder or generator process",
+  "configs": [
+    {
+      "id": "text-ipv4-canonical-no-stats",
+      "fixture": "text-ipv4-canonical",
+      "input_format": "text",
+      "representation": "cidr",
+      "statistics": false,
+      "flags": [
+        "--raw",
+        "--representation",
+        "cidr",
+        "--input-format",
+        "text"
+      ],
+      "input": "fixtures/text-ipv4-canonical/input.txt",
+      "input_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "reference": "fixtures/text-ipv4-canonical/stdout.expected",
+      "output_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "output_bytes": 14806125,
+      "stderr_reference": "fixtures/text-ipv4-canonical/empty.expected",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "input_count": 1000000,
+      "output_count": 1000000,
+      "normalized_input_count": 0
+    },
+    {
+      "id": "text-mixed-noncanonical-stats",
+      "fixture": "text-mixed-noncanonical",
+      "input_format": "text",
+      "representation": "cidr",
+      "statistics": true,
+      "flags": [
+        "--raw",
+        "--representation",
+        "cidr",
+        "--input-format",
+        "text",
+        "--stats"
+      ],
+      "input": "fixtures/text-mixed-noncanonical/input.txt",
+      "input_sha256": "b393750cea37a106da9ef8b9e601ad4ba09a3403d73dd136533f292abfabd57d",
+      "reference": "fixtures/text-mixed-noncanonical/stdout.expected",
+      "output_sha256": "d5d9be158de8e3129b781f2c8f54eada11b2e70ca49ac29707efd64b4cfe4f33",
+      "output_bytes": 17933431,
+      "stderr_reference": "fixtures/text-mixed-noncanonical/stats.expected",
+      "stderr_sha256": "0eddc0c29d36bd7065f08c26cec9efe1b08b628f2f430d14833b141896e3d84e",
+      "stderr_bytes": 155,
+      "input_count": 1000000,
+      "output_count": 1000000,
+      "normalized_input_count": 1000000
+    }
+  ],
+  "warmups_per_variant": 1,
+  "measured_pairs": 6,
+  "pair_order": "alternating B/C then C/B with rotating case order; internal C role maps only to P",
+  "followup_policy": "One separate fixed six-pair follow-up for each primary configuration with any paired elapsed/RSS increase greater than 5%; never recursively follow up or pool phases."
+}

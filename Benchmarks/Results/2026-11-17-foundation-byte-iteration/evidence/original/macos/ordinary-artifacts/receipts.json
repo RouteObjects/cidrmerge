@@ -1,0 +1,222 @@
+{
+  "B": {
+    "ordinary": {
+      "path": "$EXPERIMENT/macos/bin/B",
+      "bytes": 2444920,
+      "sha256": "4415f11c2607cd45b5760fc3dc0e700d08fc90eca42be776e445eef2cd3af0b8"
+    },
+    "stripped_copy": {
+      "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B",
+      "bytes": 1290512,
+      "sha256": "7e43d621f6c208ad5cf44d6e6b0dd349bbe2d7a422da9a022c7d476c27905e0f"
+    },
+    "direct_libraries": [
+      "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftIOKit.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Builtin_float.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswift_StringProcessing.dylib",
+      "/usr/lib/swift/libswiftos.dylib",
+      "/usr/lib/swift/libswift_stdio.dylib"
+    ],
+    "operations": [
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-L",
+          "$EXPERIMENT/macos/bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "77deb707ae52a51b4c12c141312e0420b697fad53fd286b5bc0b1cff3d246436",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-l",
+          "$EXPERIMENT/macos/bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "4f316c23397bb259072ec033856a143add936b606f8cc2524c0d40eef7d70e78",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "codesign",
+          "--verify",
+          "--strict",
+          "$EXPERIMENT/macos/bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "strip",
+          "-S",
+          "-x",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "codesign",
+          "--verify",
+          "--strict",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B",
+          "--version"
+        ],
+        "status": 0,
+        "stdout_sha256": "f62184cee8787f2f6941c82041a5725d4edc9aa293ebe5dbf664406e82ec1fe1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-L",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/B"
+        ],
+        "status": 0,
+        "stdout_sha256": "8c54a2cef53024b55e5cf70c8696a7e4b8f2667c0147c228caab3f7faa40b71b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "original_unchanged": true
+  },
+  "P": {
+    "ordinary": {
+      "path": "$EXPERIMENT/macos/bin/P",
+      "bytes": 2444680,
+      "sha256": "f2b5708e29e7ced61be34c233bc4d077759931e3ea8181f160529297cb72b0ba"
+    },
+    "stripped_copy": {
+      "path": "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/P",
+      "bytes": 1290272,
+      "sha256": "983dc2600d7af9354ec022547d1eb0435eeb2e57331f5f3bb55a8eead631da41"
+    },
+    "direct_libraries": [
+      "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftIOKit.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Builtin_float.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswift_StringProcessing.dylib",
+      "/usr/lib/swift/libswiftos.dylib",
+      "/usr/lib/swift/libswift_stdio.dylib"
+    ],
+    "operations": [
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-L",
+          "$EXPERIMENT/macos/bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "8b02bfa392115c14adf28a5ef53009d7b7d8eebc290ec059453fea9adf66dd34",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-l",
+          "$EXPERIMENT/macos/bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "d8b644aaae6de7e7d653c1eeb57ccdf8799c7eebc0785e4bda17f7185dbd8826",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "codesign",
+          "--verify",
+          "--strict",
+          "$EXPERIMENT/macos/bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "strip",
+          "-S",
+          "-x",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "codesign",
+          "--verify",
+          "--strict",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/P",
+          "--version"
+        ],
+        "status": 0,
+        "stdout_sha256": "f62184cee8787f2f6941c82041a5725d4edc9aa293ebe5dbf664406e82ec1fe1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "xcrun",
+          "otool",
+          "-L",
+          "$EXPERIMENT/macos/ordinary-artifacts/stripped-bin/P"
+        ],
+        "status": 0,
+        "stdout_sha256": "9a5f76335362ae036e0b8b54699b9e740415b51ed82241c25f7e0d733d6f25f9",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "original_unchanged": true
+  }
+}

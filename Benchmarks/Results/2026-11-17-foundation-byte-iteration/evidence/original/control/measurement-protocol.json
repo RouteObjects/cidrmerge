@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "created_at": "2026-11-17T15:48:20.020444+00:00",
+  "scope": "Foundation FileHandle read retained; replace Data.Iterator only with synchronous data.withUnsafeBytes iteration. No POSIX/SystemPackage/error adapters.",
+  "variants": [
+    "B",
+    "P"
+  ],
+  "internal_sample_role_mapping": {
+    "B": "B",
+    "C": "P"
+  },
+  "artifact_profiles": [
+    "ordinary"
+  ],
+  "binary_paths": {
+    "throughput": "<platform-root>/bin/{B,P}",
+    "stdin": "<platform-root>/bin/{B,P}",
+    "startup": "<platform-root>/bin/stripped/{B,P}"
+  },
+  "matrices": {
+    "throughput": {
+      "config_ids": [
+        "text-ipv4-canonical-no-stats",
+        "text-ipv4-canonical-stats",
+        "text-ipv6-canonical-no-stats",
+        "text-ipv6-canonical-stats",
+        "text-mixed-noncanonical-no-stats",
+        "text-mixed-noncanonical-stats",
+        "text-mixed-addresses-no-stats",
+        "text-mixed-addresses-stats",
+        "text-mixed-ranges-no-stats",
+        "text-mixed-ranges-stats",
+        "text-mixed-overlap-no-stats",
+        "text-mixed-overlap-stats",
+        "searchbot-canonical-no-stats",
+        "searchbot-canonical-stats",
+        "searchbot-noncanonical-no-stats",
+        "searchbot-noncanonical-stats"
+      ],
+      "pairs": 6,
+      "warmups_per_configuration_per_variant": 1,
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    "stdin": {
+      "config_ids": [
+        "text-ipv4-canonical-no-stats",
+        "text-mixed-noncanonical-stats"
+      ],
+      "pairs": 6,
+      "warmups_per_configuration_per_variant": 1,
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    "startup": {
+      "config_ids": [
+        "empty-stdin",
+        "version",
+        "mixed-100",
+        "mixed-10000"
+      ],
+      "pairs": 20,
+      "warmups_per_configuration_per_variant": 1,
+      "measured_samples": 160,
+      "warmups": 8
+    }
+  },
+  "minimum_free_bytes": 3221225472,
+  "verification": "Every stdout/stderr byte must match preserved independent references; outputs preserved and identical content hardlinked within each phase only after timing and exact verification.",
+  "followup": "Any individual PRIMARY paired elapsed or RSS increase >5% triggers one separate fixed follow-up for that configuration: six pairs for file/stdin, twenty for startup. No recursive follow-up and no pooling or deletion.",
+  "measurement_separation": "Run Mac and native ARM64 Linux timing separately; no builds/tests/profiling/hash audits during timed phases. x86 uses separate host.",
+  "historical_results": "Copied fixtures/references with exact hashes; prior results are untouched and not pooled."
+}

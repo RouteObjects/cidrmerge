@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T16:35:05.357682+00:00",
+  "platform": "x86_64",
+  "display": "Linux x86-64 / swift-dev",
+  "path_base": "experiment root",
+  "scope": "Native x86-64 Swift6.4.2 B/P matched measurements with full received outputs independently audited locally.",
+  "baseline": "B",
+  "baseline_commit": "9fe30dde3fd5ad50944064f912fad8c19cfcec62",
+  "retained_candidate": "P",
+  "candidate": "P",
+  "passed_audits": {
+    "throughput": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json",
+          "followup": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json"
+        }
+      }
+    },
+    "stdin": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json"
+        }
+      }
+    },
+    "startup": {
+      "ordinary": {
+        "B-vs-P": {
+          "primary": "x86_64/local-audits/startup-ordinary-B-vs-P-primary/audit.json"
+        }
+      }
+    }
+  },
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "x86_64/local-audits/throughput-ordinary-B-vs-P-followup/audit.json",
+      "measured_samples": 48,
+      "warmups": 8
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/stdin-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "x86_64/local-audits/startup-ordinary-B-vs-P-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8
+    }
+  ],
+  "audit_totals": {
+    "phases": 4,
+    "measured_samples": 424,
+    "warmups": 52
+  },
+  "audit_summaries": [
+    "x86_64/local-audits/summary.json"
+  ],
+  "snapshots": {
+    "B": "control/B-freeze.json",
+    "P": "control/P-freeze.json"
+  },
+  "qualification": {
+    "B": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-B/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-B/B-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-B/B-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/B-test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-B/B-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/B-test-release.log",
+          "swift_testing_count": 85
+        }
+      }
+    },
+    "P": {
+      "summary": "x86_64/retrieved/final-v2/control/build-tests-P/complete.json",
+      "ordinary_release_build": "x86_64/retrieved/final-v2/control/build-tests-P/P-build-release.json",
+      "tests": {
+        "debug": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-P/P-test-debug.json",
+          "log": "x86_64/retrieved/final-v2/logs/P-test-debug.log",
+          "swift_testing_count": 85
+        },
+        "release": {
+          "receipt": "x86_64/retrieved/final-v2/control/build-tests-P/P-test-release.json",
+          "log": "x86_64/retrieved/final-v2/logs/P-test-release.log",
+          "swift_testing_count": 85
+        }
+      },
+      "standard_differential": {
+        "receipt": "x86_64/retrieved/final-v2/behavior/differential/summary.json",
+        "cases": 254,
+        "processes": 508
+      },
+      "io_differential": {
+        "receipt": "x86_64/retrieved/final-v2/behavior/io/summary.json",
+        "cases": 86
+      },
+      "final_validation": {
+        "receipt": "x86_64/retrieved/final-v2/final-validation/summary.json",
+        "passed": true,
+        "individual_receipts": {
+          "documentation-symbol-graph": "x86_64/retrieved/final-v2/final-validation/documentation-symbol-graph.json",
+          "whitespace": "x86_64/retrieved/final-v2/final-validation/whitespace.json",
+          "source-git-init": "x86_64/retrieved/final-v2/final-validation/source-git-init.json",
+          "content-audit-started": "x86_64/retrieved/final-v2/final-validation/content-audit-started.json",
+          "core-boundary": "x86_64/retrieved/final-v2/final-validation/core-boundary.json",
+          "core-consumer-build": "x86_64/retrieved/final-v2/final-validation/core-consumer-build.json",
+          "whitespace-started": "x86_64/retrieved/final-v2/final-validation/whitespace-started.json",
+          "cli-smoke": "x86_64/retrieved/final-v2/final-validation/cli-smoke.json",
+          "core-consumer-build-started": "x86_64/retrieved/final-v2/final-validation/core-consumer-build-started.json",
+          "source-git-index-started": "x86_64/retrieved/final-v2/final-validation/source-git-index-started.json",
+          "source-git-init-started": "x86_64/retrieved/final-v2/final-validation/source-git-init-started.json",
+          "cli-smoke-started": "x86_64/retrieved/final-v2/final-validation/cli-smoke-started.json",
+          "documentation-symbol-graph-started": "x86_64/retrieved/final-v2/final-validation/documentation-symbol-graph-started.json",
+          "source-git-index": "x86_64/retrieved/final-v2/final-validation/source-git-index.json",
+          "content-audit": "x86_64/retrieved/final-v2/final-validation/content-audit.json",
+          "format": "x86_64/retrieved/final-v2/final-validation/format.json",
+          "core-consumer-run-started": "x86_64/retrieved/final-v2/final-validation/core-consumer-run-started.json",
+          "format-started": "x86_64/retrieved/final-v2/final-validation/format-started.json",
+          "smoke-adaptation": "x86_64/retrieved/final-v2/final-validation/smoke-adaptation.json",
+          "core-consumer-run": "x86_64/retrieved/final-v2/final-validation/core-consumer-run.json"
+        },
+        "dependency_pin_count": 8,
+        "core_consumer_compiled_neither_crypto_nor_systempackage": true,
+        "whitespace_note": "git diff --no-index --check exits1 because snapshots differ, with no whitespace diagnostics."
+      }
+    }
+  },
+  "artifacts": {
+    "ordinary": {
+      "metadata": "x86_64/artifact-summary.json",
+      "variant_keys": [
+        "B",
+        "P"
+      ],
+      "stripped_byte_counts": {
+        "B": 3721800,
+        "P": 3721800
+      }
+    },
+    "stripped_byte_counts": {
+      "ordinary": {
+        "B": 3721800,
+        "P": 3721800
+      }
+    },
+    "runtime": {
+      "metadata": "x86_64/retrieved/final-v2/control/actual-runtime-closure.json",
+      "copied_libraries": "x86_64/retrieved/final-v2/runtime/lib",
+      "linked_file_bytes_sum_is_not_rss": true
+    }
+  },
+  "environment": [
+    "x86_64/retrieved/final-v2/control/platform-preflight.json",
+    "x86_64/retrieved/final-v2/control/build-tests-B/start.json"
+  ],
+  "failure_and_limitation_ledgers": [
+    {
+      "category": "dependency-seed-portability",
+      "description": "Initial staging stopped before builds because copied Git alternate-object paths referred to the Mac. Only task-owned copied Git metadata paths were relocated to the copied bare repositories; all eight exact revisions and clean working trees reverified. Original source/dependency archives and failure retained. No timing rerun.",
+      "paths": [
+        "x86_64/retrieved/final-v2/control/build-pipeline/failed.json",
+        "x86_64/retrieved/final-v2/control/build-pipeline-v2/git-alternate-relocation.json",
+        "x86_64/retrieved/final-v2/control/build-pipeline-v2/complete.json"
+      ]
+    },
+    {
+      "category": "expected-negative-controls",
+      "description": "Expected rejection of deliberately wrong outputs/statistics verifies the three timing harnesses; these are not application failures.",
+      "paths": [
+        "x86_64/retrieved/final-v2/controls/negative-files",
+        "x86_64/retrieved/final-v2/controls/negative-stdin",
+        "x86_64/retrieved/final-v2/controls/negative-startup"
+      ]
+    },
+    {
+      "category": "preservation-transport",
+      "description": "Local retrieval initialization required its missing parent directory; first transport then failed with zero bytes because an adapted script referenced an obsolete control socket. Both errors and the empty archive were retained. A fresh second archive uses the already-authenticated task-specific master. No remote data or measured result changed.",
+      "paths": [
+        "x86_64/control/retrieval-initialization-recovery.json",
+        "x86_64/retrieved/transport-attempt01-failed.json"
+      ]
+    }
+  ],
+  "limitations_for_report": [
+    "One native x86-64 host, six throughput/stdin pairs and20 warm-cache startup pairs per configuration; fixed separate nonrecursive followups for individual >5% elapsed/RSS observations.",
+    "Only ordinary dynamic release artifacts measured; no shipping/static-stdlib comparison or cold-cache startup claim.",
+    "wait4 lifetime maxRSS can include inherited pre-exec parent memory for tiny processes; small or identical startup RSS is not evidence of equal application memory. No historical numeric control results are treated as new measurements.",
+    "Library resolution is verified under unchanged measured LD_LIBRARY_PATH; on-disk library byte sums are not RSS.",
+    "No historical cache deletion occurred for this experiment. Only new task-owned scratch was removed after hash-preserving executable/resource artifacts."
+  ],
+  "preservation": {
+    "retrieval_receipt": "x86_64/retrieved/final-evidence-attempt02.tar.receipt.json",
+    "fixture_mode_verification": "x86_64/retrieved/fixture-mode-verification.json",
+    "test_artifact_archive": "x86_64/retrieved/final-v2/preserved-test-artifacts.tar.gz",
+    "test_artifact_verification": "x86_64/retrieved/final-v2/control/platform-pipeline/test-artifact-compression.json"
+  }
+}

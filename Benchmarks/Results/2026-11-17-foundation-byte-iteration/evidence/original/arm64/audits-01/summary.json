@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "started_at": "2026-11-17T16:09:22.537862+00:00",
+  "scope": "Independent post-timing phase audits and primary/follow-up inventory reconciliation; no product execution.",
+  "script_sha256": "77ec8fb70e96c69285e66b9932c92cea1c570f1c3830ff64b802b2b66861e6c4",
+  "audit_rows": [
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "arm64/audits-01/throughput-primary/audit.json",
+      "measured_samples": 192,
+      "warmups": 32,
+      "case_count": 16,
+      "rounds": 6
+    },
+    {
+      "kind": "throughput",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "arm64/audits-01/throughput-followup/audit.json",
+      "measured_samples": 60,
+      "warmups": 10,
+      "case_count": 5,
+      "rounds": 6
+    },
+    {
+      "kind": "stdin",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "arm64/audits-01/stdin-primary/audit.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "case_count": 2,
+      "rounds": 6
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "primary",
+      "receipt": "arm64/audits-01/startup-primary/audit.json",
+      "measured_samples": 160,
+      "warmups": 8,
+      "case_count": 4,
+      "rounds": 20
+    },
+    {
+      "kind": "startup",
+      "profile": "ordinary",
+      "comparison": "B-vs-P",
+      "phase": "followup",
+      "receipt": "arm64/audits-01/startup-followup/audit.json",
+      "measured_samples": 160,
+      "warmups": 8,
+      "case_count": 4,
+      "rounds": 20
+    }
+  ],
+  "errors": [],
+  "totals": {
+    "primary": {
+      "measured_samples": 376,
+      "warmups": 44
+    },
+    "followup": {
+      "measured_samples": 220,
+      "warmups": 18
+    }
+  },
+  "audit_count": 5,
+  "finished_at": "2026-11-17T16:09:23.840110+00:00"
+}

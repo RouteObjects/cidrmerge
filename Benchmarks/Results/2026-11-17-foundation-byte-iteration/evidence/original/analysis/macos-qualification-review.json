@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T15:52:32.427525+00:00",
+  "scope": "Independent metadata/log reconciliation; no tests, product execution, or bulk corpus/binary hashing.",
+  "tests": [
+    {
+      "variant": "B",
+      "configuration": "debug",
+      "receipt": "macos/control/B-test-debug-recovered.json",
+      "log": "macos/logs/B-test-debug.log",
+      "log_sha256": "2c4426c4ad6532467f0c8d7a7e7db67637f7bdac01e31658d1206e42d2811418",
+      "counts": [
+        7,
+        78
+      ],
+      "swift_testing_total": 85,
+      "exit_code": 0
+    },
+    {
+      "variant": "B",
+      "configuration": "release",
+      "receipt": "macos/control/B-test-release.json",
+      "log": "macos/logs/B-test-release.log",
+      "log_sha256": "b3929bec91277e4284291e81bf3e1ce190150f4716d9499bc97d2c2dddb1f7f3",
+      "counts": [
+        7,
+        78
+      ],
+      "swift_testing_total": 85,
+      "exit_code": 0
+    },
+    {
+      "variant": "P",
+      "configuration": "debug",
+      "receipt": "macos/control/P-test-debug.json",
+      "log": "macos/logs/P-test-debug.log",
+      "log_sha256": "b060e0df12799282a16ba89698a413a17a4eca0c78cc2859b3b0b99bf8db394f",
+      "counts": [
+        7,
+        78
+      ],
+      "swift_testing_total": 85,
+      "exit_code": 0
+    },
+    {
+      "variant": "P",
+      "configuration": "release",
+      "receipt": "macos/control/P-test-release.json",
+      "log": "macos/logs/P-test-release.log",
+      "log_sha256": "4611f4416a75857577cb42e4f80d894f86801867d22748591c182f99c37e42fa",
+      "counts": [
+        7,
+        78
+      ],
+      "swift_testing_total": 85,
+      "exit_code": 0
+    }
+  ],
+  "standard_differential": {
+    "receipt": "macos/differential-P/summary.json",
+    "cases": 254,
+    "processes": 508
+  },
+  "real_io_differential": {
+    "receipt": "macos/io-P/summary.json",
+    "passed": 84,
+    "failed": 0
+  },
+  "final_validation": {
+    "receipt": "macos/final-validation-P/summary.json",
+    "steps": [
+      "source-git-init",
+      "source-git-index",
+      "whitespace",
+      "content-audit",
+      "format",
+      "documentation-symbol-graph",
+      "documentation-convert",
+      "core-consumer-build",
+      "core-consumer-run",
+      "cli-smoke"
+    ],
+    "core_boundary": "macos/final-validation-P/core-boundary.json",
+    "pins": 8
+  },
+  "negative_controls": [
+    {
+      "kind": "files",
+      "passed_receipt": "macos/controls/negative-files-attempt02/summary.json",
+      "expected_rejections": 2,
+      "prior_failed_sample": "macos/controls/negative-files/statistics/sample/sample.json"
+    },
+    {
+      "kind": "startup",
+      "passed_receipt": "macos/controls/negative-startup-attempt02/summary.json",
+      "expected_rejections": 2,
+      "prior_failed_sample": "macos/controls/negative-startup/statistics/sample/sample.json"
+    },
+    {
+      "kind": "stdin",
+      "passed_receipt": "macos/controls/negative-stdin-attempt02/summary.json",
+      "expected_rejections": 2,
+      "prior_failed_sample": "macos/controls/negative-stdin/statistics/sample/sample.json"
+    }
+  ],
+  "preserved_failures": [
+    {
+      "receipt": "macos/control/build-tests-summary.json",
+      "reason": "Driver incorrectly expected one85-test summary; original B Debug process passed7Core+78CLI and was not rerun."
+    },
+    {
+      "receipt": "macos/control/negative-controls-recovery.json",
+      "reason": "Sandbox prevented native resource metrics before intended wrong-reference checks; new attempt02 fake-child controls passed."
+    },
+    {
+      "receipt": "macos/control/environment-attempt01-failed.json",
+      "reason": "Sandbox denied hardware query before any timing."
+    }
+  ],
+  "script_sha256": "6434c18cb72b9412bce4900e75f6a36d0d22ec9f421b5b8f30c1b945e7584b82"
+}

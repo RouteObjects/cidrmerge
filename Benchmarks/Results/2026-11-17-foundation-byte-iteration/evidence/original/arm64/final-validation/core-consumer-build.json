@@ -1,0 +1,32 @@
+{
+  "label": "core-consumer-build",
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$PLATFORM/final-validation/consumer",
+    "--scratch-path",
+    "$PLATFORM/final-validation/consumer-build",
+    "--cache-path",
+    "$PLATFORM/final-validation/cache",
+    "--config-path",
+    "$PLATFORM/final-validation/config",
+    "--security-path",
+    "$PLATFORM/final-validation/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-j",
+    "4",
+    "--product",
+    "CoreConsumer"
+  ],
+  "cwd": "$PLATFORM/final-validation",
+  "started_at": "2026-11-17T15:51:16.536315+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-17T15:51:22.942492+00:00",
+  "log_sha256": "304c989123c68475f4576268cbe7ab5eeb3259a3e37b3b9a3ed1813559f12c29"
+}

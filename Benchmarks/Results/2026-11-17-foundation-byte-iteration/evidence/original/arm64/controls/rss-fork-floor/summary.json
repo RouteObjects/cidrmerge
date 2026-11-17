@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "created_at": "2026-11-17T16:10:08.140426+00:00",
+  "architecture": "aarch64",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "script_sha256": "1567cb20b9ba7af177ce29b0489b291fb3e46b7f01cc1abc3ec365583adce60c",
+  "runner_sha256": "42969035c0a1c22852b36d112e21bbfaa7c11986f2a389b0c63d01ebc7c57f96",
+  "groups": [
+    {
+      "passed": true,
+      "allocated_parent_mib": 0,
+      "target": "/bin/true",
+      "target_sha256": "a82c1b5fd392d72148d53992a860224ff3753cb2dc8909e9bdd1620e54ee1b88",
+      "observations": [
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 17740,
+            "VmHWM": 17740
+          },
+          "parent_self_maxrss_kib": 17712,
+          "child_peak_rss_bytes": 18075648,
+          "sample": "run-01/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 17820,
+            "VmHWM": 17820
+          },
+          "parent_self_maxrss_kib": 17712,
+          "child_peak_rss_bytes": 18137088,
+          "sample": "run-02/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 17820,
+            "VmHWM": 17820
+          },
+          "parent_self_maxrss_kib": 17712,
+          "child_peak_rss_bytes": 18137088,
+          "sample": "run-03/sample.json"
+        }
+      ],
+      "runner_sha256": "42969035c0a1c22852b36d112e21bbfaa7c11986f2a389b0c63d01ebc7c57f96",
+      "scope": "Measurement-method control, not cidrmerge performance"
+    },
+    {
+      "passed": true,
+      "allocated_parent_mib": 32,
+      "target": "/bin/true",
+      "target_sha256": "a82c1b5fd392d72148d53992a860224ff3753cb2dc8909e9bdd1620e54ee1b88",
+      "observations": [
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 50540,
+            "VmHWM": 50540
+          },
+          "parent_self_maxrss_kib": 50560,
+          "child_peak_rss_bytes": 51703808,
+          "sample": "run-01/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 50620,
+            "VmHWM": 50620
+          },
+          "parent_self_maxrss_kib": 50560,
+          "child_peak_rss_bytes": 51773440,
+          "sample": "run-02/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 50620,
+            "VmHWM": 50620
+          },
+          "parent_self_maxrss_kib": 50560,
+          "child_peak_rss_bytes": 51773440,
+          "sample": "run-03/sample.json"
+        }
+      ],
+      "runner_sha256": "42969035c0a1c22852b36d112e21bbfaa7c11986f2a389b0c63d01ebc7c57f96",
+      "scope": "Measurement-method control, not cidrmerge performance"
+    },
+    {
+      "passed": true,
+      "allocated_parent_mib": 96,
+      "target": "/bin/true",
+      "target_sha256": "a82c1b5fd392d72148d53992a860224ff3753cb2dc8909e9bdd1620e54ee1b88",
+      "observations": [
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 116088,
+            "VmHWM": 116088
+          },
+          "parent_self_maxrss_kib": 116108,
+          "child_peak_rss_bytes": 118857728,
+          "sample": "run-01/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 116168,
+            "VmHWM": 116168
+          },
+          "parent_self_maxrss_kib": 116108,
+          "child_peak_rss_bytes": 118894592,
+          "sample": "run-02/sample.json"
+        },
+        {
+          "parent_memory_kib_before": {
+            "VmRSS": 116168,
+            "VmHWM": 116168
+          },
+          "parent_self_maxrss_kib": 116108,
+          "child_peak_rss_bytes": 118894592,
+          "sample": "run-03/sample.json"
+        }
+      ],
+      "runner_sha256": "42969035c0a1c22852b36d112e21bbfaa7c11986f2a389b0c63d01ebc7c57f96",
+      "scope": "Measurement-method control, not cidrmerge performance"
+    }
+  ],
+  "limitations": "Controls identify parent-memory influence on direct Popen/wait4 lifetime maxRSS; do not correct or pool any original startup observation."
+}

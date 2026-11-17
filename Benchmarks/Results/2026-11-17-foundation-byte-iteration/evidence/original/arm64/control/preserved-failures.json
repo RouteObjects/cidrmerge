@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-11-17T16:13:14.847871+00:00",
+  "product_build_or_test_failures": [],
+  "behavior_failures": [],
+  "measurement_failures": [],
+  "audit_failures": [],
+  "preserved_metadata_probe_failures": [
+    {
+      "receipt": "arm64/control/qualification-idle-attempt01-failure.json",
+      "recovery_receipt": "arm64/control/qualification-idle.json",
+      "description": "Post-qualification docker top format used unsupported pcpu field; supported pid/stat/args retry passed. Product tests and all timings unaffected."
+    }
+  ],
+  "intentional_negative_harness_controls": [
+    "arm64/controls/negative-files/summary.json",
+    "arm64/controls/negative-stdin/summary.json",
+    "arm64/controls/negative-startup/summary.json"
+  ],
+  "old_experiments_modified": false,
+  "observations_removed_or_pooled": false
+}

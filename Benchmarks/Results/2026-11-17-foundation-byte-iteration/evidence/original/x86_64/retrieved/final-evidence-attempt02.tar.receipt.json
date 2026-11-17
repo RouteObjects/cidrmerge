@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "at": "2026-11-17T16:33:18.852183+00:00",
+  "remote_root": "$EXPERIMENT",
+  "archive": "x86_64/retrieved/final-evidence-attempt02.tar.gz",
+  "archive_sha256": "064ce053f8b969dc4f8dde63b7d59f9e7fa17327a3c3d35f29051cee3b6e7bd2",
+  "archive_bytes": 121322882,
+  "included": [
+    "control",
+    "logs",
+    "bin",
+    "runtime",
+    "comparisons",
+    "startup",
+    "stdin",
+    "audits",
+    "behavior",
+    "controls",
+    "measurement-control",
+    "final-validation",
+    "preserved-test-artifacts.tar.gz",
+    "startup-fixtures"
+  ],
+  "regular_files": 7223,
+  "hardlinks": 476,
+  "skipped_symlinks_preserved_in_archive": [
+    {
+      "name": "behavior/io/work/searchbot-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794931375.1423805
+    },
+    {
+      "name": "behavior/io/work/text-input-symlink-dotdot/link",
+      "linkname": "other/nested",
+      "mode": 511,
+      "mtime": 1794931374.0804927
+    }
+  ],
+  "fixture_link": "$EXPERIMENT/fixtures",
+  "runtime_aliases_restored": [
+    {
+      "name": "runtime/lib/libstdc++.so.6",
+      "linkname": "libstdc++.so.6.0.33",
+      "mode": 511,
+      "mtime": 1794930796.770244
+    }
+  ],
+  "mode_restorations": [
+    {
+      "path": "behavior/io/work/searchbot-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    },
+    {
+      "path": "behavior/io/work/text-input-permissions/input.txt",
+      "original_and_restored_mode": 0
+    }
+  ],
+  "excluded_existing_local_archives": [
+    "control/B-source.tar",
+    "control/P-source.tar",
+    "x86_64/control/dependency-seed.tar.gz"
+  ],
+  "scope": "Complete selected evidence, original tar preserves intentional I/O fixture symlinks; extraction skips all symlinks to avoid following remote absolute paths. All remote evidence remains unchanged."
+}

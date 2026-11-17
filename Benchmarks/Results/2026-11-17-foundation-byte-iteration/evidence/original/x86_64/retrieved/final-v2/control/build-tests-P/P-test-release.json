@@ -1,0 +1,56 @@
+{
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$EXPERIMENT/sources/P",
+    "--scratch-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build",
+    "--cache-path",
+    "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/cache",
+    "--config-path",
+    "$EXPERIMENT/config",
+    "--security-path",
+    "$EXPERIMENT/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "2"
+  ],
+  "started_at": "2026-11-17T16:00:56.775627+00:00",
+  "log": "logs/P-test-release.log",
+  "free_bytes_before": 4221022208,
+  "exit_code": 0,
+  "elapsed_s": 103.25282492442057,
+  "log_sha256": "e80d9e9eee57e2d775ba393d1267bb408c182604e495ae2c594cf753aaf3bd6f",
+  "tests": 85,
+  "summaries": [
+    [
+      "85",
+      "11"
+    ]
+  ],
+  "test_artifacts": {
+    "cidrmergePackageTests.xctest": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmergePackageTests.xctest",
+      "sha256": "2ac2c98f4b4f22dcd94b819fa05cb787fa602c9c38965a2d0e97c13ed94bb181",
+      "bytes": 22650072
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-valid.json",
+      "sha256": "801d77680fa36e9dae3879217de1b16b3015d27d4adfc653dd522bc30d9a726b",
+      "bytes": 288
+    },
+    "cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt": {
+      "source": "/dev/shm/cidrmerge-foundation-byte-iteration-20261117T154127Z/build/x86_64-unknown-linux-gnu/release/cidrmerge_CIDRMergeCLITests.resources/searchbot-projected.txt",
+      "sha256": "95770e34a216953d38810547e6a0707c69f3633dde44739e67c6018f2aec550c",
+      "bytes": 43
+    }
+  }
+}
