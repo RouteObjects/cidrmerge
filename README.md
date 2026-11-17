@@ -38,7 +38,7 @@ x86-64. Select the archive for the current host, download it together with the
 published checksum file, and verify it before installation:
 
 ```sh
-version=0.4.1
+version=0.4.2
 case "$(uname -s)-$(uname -m)" in
   Darwin-arm64)  platform=darwin-aarch64 ;;
   Darwin-x86_64) platform=darwin-x86_64 ;;
@@ -292,7 +292,7 @@ Add `cidrmerge` and `swift-cidr` to another Swift package:
 dependencies: [
     .package(
         url: "https://github.com/RouteObjects/cidrmerge.git",
-        .upToNextMinor(from: "0.4.1")
+        .upToNextMinor(from: "0.4.2")
     ),
     .package(
         url: "https://github.com/RouteObjects/swift-cidr.git",
