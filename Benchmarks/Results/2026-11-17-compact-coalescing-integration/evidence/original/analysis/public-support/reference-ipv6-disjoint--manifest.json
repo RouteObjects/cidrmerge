@@ -1,0 +1,25 @@
+{
+  "name": "ipv6-disjoint",
+  "input_count": 1000000,
+  "recipe": "2001:db8:: + index*2 as IPv6 /128 for index 0..<1,000,000",
+  "generator_sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+  "oracle_sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+  "files": {
+    "input.txt": {
+      "lines": 1000000,
+      "bytes": 21342471,
+      "sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85"
+    },
+    "ipv4.txt": {
+      "lines": 0,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "ipv6.txt": {
+      "lines": 1000000,
+      "bytes": 21342471,
+      "sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85"
+    }
+  },
+  "conversion_scope": "All tools receive identical CIDR records. Native arbitrary-range parsing is outside this comparison; range-derived-mixed expansion occurs before timing."
+}

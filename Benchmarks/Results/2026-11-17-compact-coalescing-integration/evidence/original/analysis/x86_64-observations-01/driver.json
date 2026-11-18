@@ -1,0 +1,102 @@
+{
+  "original_relative_path": "downstream/x86_64/retrieved-01/measurements-01/driver-summary.json",
+  "raw_sha256": "e91d8a1db4ce6fa74d5ae3fe4a20bc6ce3387e07e9e85b688a2014d1f1d12a95",
+  "raw_bytes": 4528,
+  "record": {
+    "passed": true,
+    "started_at": "2026-11-18T04:13:38.971500+00:00",
+    "steps": [
+      {
+        "group": "original",
+        "phase": "primary",
+        "command": [
+          "/usr/bin/python3",
+          "$EXPERIMENT/downstream/shared/control/run_matched.py",
+          "--platform",
+          "linux",
+          "--shared",
+          "$EXPERIMENT/downstream/shared",
+          "--baseline",
+          "$EXPERIMENT/downstream/x86_64/bin/B",
+          "--candidate",
+          "$EXPERIMENT/downstream/x86_64/bin/C",
+          "--bindings",
+          "$EXPERIMENT/downstream/x86_64/control/premeasurement-v2.json",
+          "--group",
+          "original",
+          "--output",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/original/primary",
+          "--content-store",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/content",
+          "--runtime-library-path",
+          "$EXPERIMENT/downstream/x86_64/runtime/lib"
+        ],
+        "started_at": "2026-11-18T04:13:38.971888+00:00",
+        "exit_code": 0,
+        "elapsed_s": 181.8133558211848,
+        "finished_at": "2026-11-18T04:16:40.785247+00:00"
+      },
+      {
+        "group": "scale",
+        "phase": "primary",
+        "command": [
+          "/usr/bin/python3",
+          "$EXPERIMENT/downstream/shared/control/run_matched.py",
+          "--platform",
+          "linux",
+          "--shared",
+          "$EXPERIMENT/downstream/shared",
+          "--baseline",
+          "$EXPERIMENT/downstream/x86_64/bin/B",
+          "--candidate",
+          "$EXPERIMENT/downstream/x86_64/bin/C",
+          "--bindings",
+          "$EXPERIMENT/downstream/x86_64/control/premeasurement-v2.json",
+          "--group",
+          "scale",
+          "--output",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/scale/primary",
+          "--content-store",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/content",
+          "--runtime-library-path",
+          "$EXPERIMENT/downstream/x86_64/runtime/lib"
+        ],
+        "started_at": "2026-11-18T04:16:40.787375+00:00",
+        "exit_code": 0,
+        "elapsed_s": 18.731299504637718,
+        "finished_at": "2026-11-18T04:16:59.518679+00:00"
+      },
+      {
+        "group": "sparse",
+        "phase": "primary",
+        "command": [
+          "/usr/bin/python3",
+          "$EXPERIMENT/downstream/shared/control/run_matched.py",
+          "--platform",
+          "linux",
+          "--shared",
+          "$EXPERIMENT/downstream/shared",
+          "--baseline",
+          "$EXPERIMENT/downstream/x86_64/bin/B",
+          "--candidate",
+          "$EXPERIMENT/downstream/x86_64/bin/C",
+          "--bindings",
+          "$EXPERIMENT/downstream/x86_64/control/premeasurement-v2.json",
+          "--group",
+          "sparse",
+          "--output",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/sparse/primary",
+          "--content-store",
+          "$EXPERIMENT/downstream/x86_64/measurements-01/content",
+          "--runtime-library-path",
+          "$EXPERIMENT/downstream/x86_64/runtime/lib"
+        ],
+        "started_at": "2026-11-18T04:16:59.520610+00:00",
+        "exit_code": 0,
+        "elapsed_s": 24.914354406762868,
+        "finished_at": "2026-11-18T04:17:24.434969+00:00"
+      }
+    ],
+    "finished_at": "2026-11-18T04:17:24.435787+00:00"
+  }
+}

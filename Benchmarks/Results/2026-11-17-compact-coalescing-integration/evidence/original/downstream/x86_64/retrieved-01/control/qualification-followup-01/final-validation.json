@@ -1,0 +1,25 @@
+{
+  "label": "final-validation",
+  "command": [
+    "/usr/bin/python3",
+    "$EXPERIMENT/downstream/shared/control/final_validation_v2.py",
+    "--source",
+    "$EXPERIMENT/downstream/sources/C",
+    "--baseline-source",
+    "$EXPERIMENT/downstream/sources/B",
+    "--seed",
+    "$EXPERIMENT/downstream/x86_64/build/C",
+    "--output",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01",
+    "--binary",
+    "$EXPERIMENT/downstream/x86_64/bin/C",
+    "--swift",
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "--jobs",
+    "4"
+  ],
+  "started_at": "2026-11-18T04:10:40.798713+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-18T04:11:36.259550+00:00",
+  "log_sha256": "c7603f28eb7341cf91f577e194b2a27dd7797528861e9c100097a182b8223c06"
+}

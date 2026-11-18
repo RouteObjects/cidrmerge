@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "platform": "macos",
+  "audit_rows": [
+    {
+      "group": "original",
+      "phase": "primary",
+      "receipt": "downstream/macos/audits-01/original-primary.json",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32
+    },
+    {
+      "group": "scale",
+      "phase": "primary",
+      "receipt": "downstream/macos/audits-01/scale-primary.json",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24
+    },
+    {
+      "group": "scale",
+      "phase": "followup",
+      "receipt": "downstream/macos/audits-01/scale-followup.json",
+      "measured_samples": 36,
+      "warmups": 6,
+      "measured_processes": 36,
+      "warmup_processes": 6
+    },
+    {
+      "group": "sparse",
+      "phase": "primary",
+      "receipt": "downstream/macos/audits-01/sparse-primary.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4
+    }
+  ],
+  "audit_totals": {
+    "measured_samples": 336,
+    "warmups": 56,
+    "measured_processes": 396,
+    "warmup_processes": 66
+  },
+  "measurement_review": "downstream/macos/analysis/measurement-review.json",
+  "qualification_gate": "downstream/macos/control/qualification-summary.json",
+  "bindings": "downstream/macos/control/premeasurement.json",
+  "sources": {
+    "B": "control/cidrmerge-baseline-freeze.json",
+    "C": "control/cidrmerge-candidate-freeze.json"
+  },
+  "publication": "control/upstream-publication.json",
+  "qualification": {
+    "B": "downstream/macos/control/B-qualification/summary.json",
+    "C": "downstream/macos/control/C-qualification/summary.json",
+    "cli_differential": "downstream/macos/differential-01/summary.json",
+    "io_differential": "downstream/macos/io-differential-01/summary.json",
+    "io_boolean_adapter": "downstream/macos/control/C-gates/C-io-differential.json",
+    "final_validation": "downstream/macos/final-validation-01/summary.json"
+  },
+  "artifacts": {
+    "B": "downstream/macos/metadata/B-ordinary.json",
+    "C": "downstream/macos/metadata/C-ordinary.json"
+  },
+  "environment": {
+    "B": "downstream/macos/metadata/B-runtime-identity.json",
+    "C": "downstream/macos/metadata/C-runtime-identity.json"
+  },
+  "postmeasurement_identity": {
+    "passed": true,
+    "runtime_receipt": "downstream/macos/metadata/postmeasurement-runtime-identity.json",
+    "runtime_receipt_sha256": "70615d7b4843ede24e8d815278133824c218fd23d45f4f845efa6a0b052952ac",
+    "os_compiler_cache_and_all17_linked_images_match": true,
+    "all_source_binary_and_bound_file_hashes_verified_by_all4_audits": true
+  },
+  "preserved_failures": {
+    "product_failures": [],
+    "timing_failures": [],
+    "preparation": [
+      "downstream/macos/control/C-runner-preparation.json"
+    ],
+    "notes": [
+      "The unexecuted C runner draft had a B-output path; corrected before launch. No product tests or timings were rerun."
+    ]
+  },
+  "no_new_measurements": true
+}

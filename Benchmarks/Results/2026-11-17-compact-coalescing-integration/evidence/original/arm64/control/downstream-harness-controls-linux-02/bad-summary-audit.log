@@ -1,0 +1,18 @@
+{"passed": false}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 76, in <module>
+    compare(value,summary['pairs'][case['id']]);recomputed[case['id']]=value
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 27, in compare
+    if isinstance(x,dict):assert set(x)==set(y),(set(x),set(y));[compare(x[k],y[k]) for k in x]
+                                                                 ^^^^^^^^^^^^^^^^^^
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 27, in compare
+    if isinstance(x,dict):assert set(x)==set(y),(set(x),set(y));[compare(x[k],y[k]) for k in x]
+                                                                 ^^^^^^^^^^^^^^^^^^
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 29, in compare
+    elif isinstance(x,(float,int)) and not isinstance(x,bool):close(x,y)
+                                                              ^^^^^^^^^^
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 25, in close
+    def close(x,y):assert math.isclose(x,y,rel_tol=1e-12,abs_tol=1e-12),(x,y)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: (-2.6973032421021284, -0.6973032421021284)

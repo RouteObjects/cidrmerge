@@ -1,0 +1,29 @@
+{
+  "configuration": "debug",
+  "command": [
+    "/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$PLATFORM/upstream-source",
+    "--scratch-path",
+    "$PLATFORM/upstream-6.2.4/build",
+    "--cache-path",
+    "$PLATFORM/upstream-6.2.4/cache",
+    "--config-path",
+    "$PLATFORM/upstream-6.2.4/config",
+    "--security-path",
+    "$PLATFORM/upstream-6.2.4/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "debug",
+    "-j",
+    "8"
+  ],
+  "started_at": "2026-11-18T03:19:31.207631+00:00",
+  "disk_free_before": 5619662700544
+}

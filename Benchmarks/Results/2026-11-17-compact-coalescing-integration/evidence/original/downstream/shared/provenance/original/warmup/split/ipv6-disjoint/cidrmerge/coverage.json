@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "fixture": "$PRIOR_EXPERIMENT/fixtures/ipv6-disjoint",
+  "started_at": "2026-11-14T21:18:16.532613+00:00",
+  "expected_sha256": "321417e238cde81b5e15666ea6dcee69542a2efcdca0bbd849301c0ff24121cf",
+  "output_files": [
+    {
+      "path": "$PRIOR_EXPERIMENT/warmup/split/ipv6-disjoint/cidrmerge/6.stdout",
+      "bytes": 21342471,
+      "line_count": 1000000,
+      "blank_lines": 0,
+      "sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85"
+    }
+  ],
+  "actual": {
+    "input_count": 1000000,
+    "family_counts": {
+      "ipv4": 0,
+      "ipv6": 1000000
+    },
+    "coverage_sha256": "7569660dd4e371291c04d2b10870e55560001a75756b7be41d5b88bb9a2647bd",
+    "coverage_serialization": "concatenated records: family uint8 (4 or 6), start uint128 big-endian, end uint128 big-endian; IPv4 records first, sorted/coalesced per family",
+    "range_count": 1000000,
+    "range_count_by_family": {
+      "ipv4": 0,
+      "ipv6": 1000000
+    },
+    "minimal_cidr_count": 1000000,
+    "minimal_cidr_count_by_family": {
+      "ipv4": 0,
+      "ipv6": 1000000
+    },
+    "addresses_covered": {
+      "ipv4": "0",
+      "ipv6": "1000000"
+    }
+  },
+  "expected_coverage_sha256": "7569660dd4e371291c04d2b10870e55560001a75756b7be41d5b88bb9a2647bd",
+  "expected_minimal_cidr_count": 1000000,
+  "finished_at": "2026-11-14T21:18:23.088586+00:00"
+}

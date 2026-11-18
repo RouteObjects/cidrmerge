@@ -1,0 +1,31 @@
+{
+  "label": "build-release",
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$PLATFORM/sources/C",
+    "--scratch-path",
+    "$PLATFORM/build/C-ordinary",
+    "--cache-path",
+    "$PLATFORM/cache",
+    "--config-path",
+    "$PLATFORM/config",
+    "--security-path",
+    "$PLATFORM/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-18T04:02:07.583909+00:00",
+  "disk_free_before": 5615601803264
+}

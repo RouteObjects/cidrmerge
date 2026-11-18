@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "created_at": "2026-11-18T04:34:25.648601+00:00",
+  "destination": "reports/public-01",
+  "manifest_sha256": "4d0aa9f7456d18de91ff5c3168cb2a5d2721db40db091cfdac77730d3f3d6526",
+  "manifest_bytes": 396978,
+  "file_count": 634,
+  "source_bytes": 30800177,
+  "export_bytes": 29601235,
+  "report_total_bytes_at_review": 30116280,
+  "checks": {
+    "verified_files": 634,
+    "json_scalar_bool": 17190,
+    "json_scalar_int": 810110,
+    "json_strings": 163373,
+    "json_scalar_float": 24142,
+    "json_scalar_NoneType": 638,
+    "json_files": 429,
+    "csv_files": 2,
+    "csv_rows": 555,
+    "csv_cells": 8490
+  },
+  "observation_bundle_files": 23,
+  "all_three_report_indices": true,
+  "source_and_export_hashes_verified": true,
+  "exact_literal_path_transformations_only": true,
+  "json_scalar_types_and_values_preserved": true,
+  "all_csv_cells_equal_after_path_redaction": true,
+  "candidate_patch_bytes_verified": 4163,
+  "patch_sha256": "44e18183f22c04b29273e10b34964a590b3614eef421c0dab3ee4b9036d76c02",
+  "path_credential_matches": [],
+  "csv_crlf_files": [
+    "evidence/original/analysis/all-measurements-01/pairs.csv",
+    "evidence/original/analysis/all-measurements-01/summaries.csv"
+  ],
+  "limitations": [
+    "Raw output/fixtures/binaries/runtime/build trees remain in Downloads, with hashes in exported metadata.",
+    "One successful ARM baseline Debug test log contains invalid UTF8 and is represented by its raw identity and passed qualification summary.",
+    "Public-path substitutions necessarily change text hashes; original and exported hashes are both preserved.",
+    "This verifies the evidence export, not subsequent narrative edits."
+  ]
+}

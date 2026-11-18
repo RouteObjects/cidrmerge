@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:41:14.087640+00:00",
+  "run": "$PLATFORM/control/downstream-harness-controls-linux-02/audit-wrong-order",
+  "path_mapping": [
+    [
+      "$PLATFORM/control/downstream-harness-controls-linux-02/valid/measurements",
+      "$PLATFORM/control/downstream-harness-controls-linux-02/audit-wrong-order"
+    ]
+  ],
+  "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 46, in <module>\n    d=a.run/phase/case['id']/v;sfile=d/'sample.json';expected_sample_paths.add(sfile);row=load(sfile);assert row['passed'] and (row['id'],row['group'],row['suite'],row['variant'],row['round'],row['sequence'])==(case['id'],case['group'],case['suite'],v,rnd,sequence);sequence+=1;assert len(row['parts'])==len(case['parts']);timeline.append((row['started_at'],row['finished_at']));assert row['started_at']<=row['finished_at']\n                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_at": "2026-11-18T03:41:14.093548+00:00"
+}

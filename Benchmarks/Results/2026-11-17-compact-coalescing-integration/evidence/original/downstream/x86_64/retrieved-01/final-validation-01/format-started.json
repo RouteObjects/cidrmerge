@@ -1,0 +1,18 @@
+{
+  "label": "format",
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "format",
+    "lint",
+    "--configuration",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01/source/.swift-format.json",
+    "--recursive",
+    "--strict",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01/source/Package.swift",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01/source/Sources",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01/source/Tests",
+    "$EXPERIMENT/downstream/x86_64/final-validation-01/source/Benchmarks"
+  ],
+  "cwd": "$EXPERIMENT/downstream/x86_64/final-validation-01",
+  "started_at": "2026-11-18T04:10:47.202006+00:00"
+}

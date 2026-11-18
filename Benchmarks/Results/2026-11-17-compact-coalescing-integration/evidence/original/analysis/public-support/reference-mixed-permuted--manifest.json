@@ -1,0 +1,25 @@
+{
+  "name": "mixed-permuted",
+  "input_count": 1000000,
+  "recipe": "same records as mixed-disjoint, emitted in index j=(i*104729+7919)%1,000,000 order; multiplier coprime to count",
+  "generator_sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+  "oracle_sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+  "files": {
+    "input.txt": {
+      "lines": 1000000,
+      "bytes": 17864212,
+      "sha256": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61"
+    },
+    "ipv4.txt": {
+      "lines": 500000,
+      "bytes": 7399156,
+      "sha256": "a5d1910f2eb68ad35664f3680d41b9de0c972364fddef6b22e1b4aa8996949c7"
+    },
+    "ipv6.txt": {
+      "lines": 500000,
+      "bytes": 10465056,
+      "sha256": "c1f373b9257707946597e2c29dab7a0d442658db58f9f486e81d72fe9ed9a7af"
+    }
+  },
+  "conversion_scope": "All tools receive identical CIDR records. Native arbitrary-range parsing is outside this comparison; range-derived-mixed expansion occurs before timing."
+}

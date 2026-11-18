@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:41:14.285709+00:00",
+  "run": "$PLATFORM/control/downstream-harness-controls-linux-02/audit-wrong-output",
+  "path_mapping": [
+    [
+      "$PLATFORM/control/downstream-harness-controls-linux-02/valid/measurements",
+      "$PLATFORM/control/downstream-harness-controls-linux-02/audit-wrong-output"
+    ]
+  ],
+  "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 53, in <module>\n    out=pd/'stdout';err=pd/'stderr';assert out.stat().st_size==part['output_bytes']==expected['output_bytes'];assert sha(out)==part['output_sha256']==expected['output_sha256'];assert err.stat().st_size==0 and sha(err)==part['stderr_sha256']==hashlib.sha256(b'').hexdigest();assert equal(out,path(Path(frozen['shared'])/expected['reference']));assert part['complete_reference_bytes_match'];assert part['free_bytes_before']>=3*1024**3+expected['output_bytes'] and part['free_bytes_after']>=3*1024**3\n                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_at": "2026-11-18T03:41:14.291557+00:00"
+}

@@ -1,0 +1,6 @@
+{"passed": false}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 59, in <module>
+    assert all(parts[i]['finished_at']<=parts[i+1]['started_at'] for i in range(len(parts)-1)),'Split-family process intervals overlap'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Split-family process intervals overlap

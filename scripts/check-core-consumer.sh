@@ -32,7 +32,7 @@ let package = Package(
         .package(name: "cidrmerge", path: "${PACKAGE_ROOT}"),
         .package(
             url: "https://github.com/RouteObjects/swift-cidr.git",
-            .upToNextMinor(from: "0.10.1")
+            .upToNextMinor(from: "0.11.0")
         ),
     ],
     targets: [

@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:01:46.963497+00:00",
+  "steps": [
+    {
+      "name": "C-runtime-identity",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/macos/control/capture_runtime.py",
+        "--binary",
+        "$EXPERIMENT/downstream/macos/bin/C",
+        "--output",
+        "$EXPERIMENT/downstream/macos/metadata/C-runtime-identity.json"
+      ],
+      "started_at": "2026-11-18T04:01:46.964539+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:01:47.641285+00:00",
+      "receipt": "downstream/macos/metadata/C-runtime-identity.json",
+      "receipt_sha256": "d1aa36bcb6d17815697fb6b5ea49ade6f59b661b2f02c09aa319ab4bfcc3e50e",
+      "case_count": null
+    },
+    {
+      "name": "C-differential",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/differential.py",
+        "--baseline",
+        "$EXPERIMENT/downstream/macos/bin/B",
+        "--candidate",
+        "$EXPERIMENT/downstream/macos/bin/C",
+        "--output",
+        "$EXPERIMENT/downstream/macos/differential-01"
+      ],
+      "started_at": "2026-11-18T04:01:47.642467+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:01:52.802761+00:00",
+      "receipt": "downstream/macos/differential-01/summary.json",
+      "receipt_sha256": "40c8d887cb5006aa7c265a4fd424361dd21e73336f577ba58bba8eeabca10997",
+      "case_count": 254
+    },
+    {
+      "name": "C-io-differential",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/io_differential_v2.py",
+        "--baseline",
+        "$EXPERIMENT/downstream/macos/bin/B",
+        "--candidate",
+        "$EXPERIMENT/downstream/macos/bin/C",
+        "--output",
+        "$EXPERIMENT/downstream/macos/io-differential-01"
+      ],
+      "started_at": "2026-11-18T04:01:52.803632+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:01:56.231172+00:00",
+      "receipt": "downstream/macos/io-differential-01/summary.json",
+      "receipt_sha256": "e5f35dd2e6ebf9b9def1ccedd29e054327bbe78597bca182ab4e411bd21754ca",
+      "case_count": 84
+    },
+    {
+      "name": "C-final-validation",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/final_validation_v2.py",
+        "--source",
+        "$EXPERIMENT/downstream/macos/sources/C",
+        "--baseline-source",
+        "$EXPERIMENT/downstream/macos/sources/B",
+        "--seed",
+        "$EXPERIMENT/downstream/macos/build/C-ordinary",
+        "--output",
+        "$EXPERIMENT/downstream/macos/final-validation-01",
+        "--binary",
+        "$EXPERIMENT/downstream/macos/bin/C",
+        "--swift",
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "--jobs",
+        "6"
+      ],
+      "started_at": "2026-11-18T04:01:56.231648+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:02:30.539696+00:00",
+      "receipt": "downstream/macos/final-validation-01/summary.json",
+      "receipt_sha256": "363e22b1f6eed4d10b899655ff5f3517f877d968b73917d54ec290ac50a628f5",
+      "case_count": null
+    }
+  ],
+  "timed_measurements_started": false,
+  "runtime_and_compiler_matched": true,
+  "ordinary_backend_and_commands_matched": true,
+  "preservation": {
+    "B": {
+      "source_files": 2152,
+      "binary_sha256": "539fe7144515b3475d6cb60d564ec1732b4ef359eb266c8c14ea079a08713061",
+      "source_and_binary_unchanged": true
+    },
+    "C": {
+      "source_files": 2152,
+      "binary_sha256": "3de1ceba044a7fd817ca74334288c262d38cae55807c39d0ad85dc71e90eb085",
+      "source_and_binary_unchanged": true
+    }
+  },
+  "finished_at": "2026-11-18T04:02:30.940662+00:00"
+}

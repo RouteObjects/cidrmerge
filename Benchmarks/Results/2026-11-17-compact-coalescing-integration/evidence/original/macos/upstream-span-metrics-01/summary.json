@@ -1,0 +1,34 @@
+{
+  "started_at": "2026-11-18T03:27:04.366956+00:00",
+  "command": [
+    "swift",
+    "package",
+    "--package-path",
+    "$EXPERIMENT/sources/upstream-validation/Benchmarks",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+    "--disable-automatic-resolution",
+    "benchmark",
+    "--target",
+    "CIDRBenchmarkTarget",
+    "--filter",
+    "^currency\\.ipAddress\\.(v4|v6)\\.initOctetSpan\\.(aligned|offset1)$",
+    "--no-progress"
+  ],
+  "entry": {
+    "changed_files": [],
+    "git_status": "",
+    "threshold_count": 79
+  },
+  "source_freeze": "control/upstream-source-freeze.json",
+  "toolchain": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:27:46.916307+00:00",
+  "exit": {
+    "changed_files": [],
+    "git_status": "",
+    "threshold_count": 79
+  },
+  "log_sha256": "3b77a0d58db6f9fb7f8bba0b911eff12ef62f23e03975ff04e75e6728d5351ec"
+}

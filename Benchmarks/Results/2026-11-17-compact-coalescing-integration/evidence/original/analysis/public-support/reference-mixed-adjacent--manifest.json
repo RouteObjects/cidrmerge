@@ -1,0 +1,25 @@
+{
+  "name": "mixed-adjacent",
+  "input_count": 1000000,
+  "recipe": "alternate 500,000 consecutive IPv4 /32 hosts beginning at 0.0.0.0 and 500,000 consecutive IPv6 /128 hosts beginning at 2001:db8::",
+  "generator_sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+  "oracle_sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+  "files": {
+    "input.txt": {
+      "lines": 1000000,
+      "bytes": 17393831,
+      "sha256": "97a9a7086f737ae188e2dc49888e13943f9a8490074703756e405c651ab9bdce"
+    },
+    "ipv4.txt": {
+      "lines": 500000,
+      "bytes": 7059848,
+      "sha256": "d4165228a09cc2a6db8d68193754cfdd17dfe420dce171f8919c98de2332ab13"
+    },
+    "ipv6.txt": {
+      "lines": 500000,
+      "bytes": 10333983,
+      "sha256": "64654afabdfadbd219b871dead8001fdfdc9da961f755836ec61d25f34e0f482"
+    }
+  },
+  "conversion_scope": "All tools receive identical CIDR records. Native arbitrary-range parsing is outside this comparison; range-derived-mixed expansion occurs before timing."
+}

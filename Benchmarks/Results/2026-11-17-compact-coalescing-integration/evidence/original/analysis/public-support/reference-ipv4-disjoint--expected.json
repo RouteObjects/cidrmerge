@@ -1,0 +1,26 @@
+{
+  "input_count": 1000000,
+  "family_counts": {
+    "ipv4": 1000000,
+    "ipv6": 0
+  },
+  "coverage_sha256": "cb99f73e676decc558271dea259da1aa13347bb0bccde3a039f74274799d066e",
+  "coverage_serialization": "concatenated records: family uint8 (4 or 6), start uint128 big-endian, end uint128 big-endian; IPv4 records first, sorted/coalesced per family",
+  "range_count": 1000000,
+  "range_count_by_family": {
+    "ipv4": 1000000,
+    "ipv6": 0
+  },
+  "minimal_cidr_count": 1000000,
+  "minimal_cidr_count_by_family": {
+    "ipv4": 1000000,
+    "ipv6": 0
+  },
+  "addresses_covered": {
+    "ipv4": "1000000",
+    "ipv6": "0"
+  },
+  "fixture": "ipv4-disjoint",
+  "input_file_sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+  "oracle": "Python stdlib ipaddress strict parser plus independent numeric interval union and power-of-two cover counting"
+}

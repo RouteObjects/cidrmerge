@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:13:32.971261+00:00",
+  "steps": [
+    {
+      "label": "original-primary",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/downstream/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "exec",
+        "coalescing-downstream-arm642-20261118T031137Z",
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$PLATFORM/measurements-01/original/primary",
+        "--output",
+        "$PLATFORM/audits-01/original-primary.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 5.507198291015811
+    },
+    {
+      "label": "scale-primary",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/downstream/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "exec",
+        "coalescing-downstream-arm642-20261118T031137Z",
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$PLATFORM/measurements-01/scale/primary",
+        "--output",
+        "$PLATFORM/audits-01/scale-primary.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.8267074999748729
+    },
+    {
+      "label": "scale-followup",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/downstream/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "exec",
+        "coalescing-downstream-arm642-20261118T031137Z",
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$PLATFORM/measurements-01/scale/followup",
+        "--output",
+        "$PLATFORM/audits-01/scale-followup.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 0.5291815000236966
+    },
+    {
+      "label": "sparse-primary",
+      "command": [
+        "/usr/local/bin/docker",
+        "--config",
+        "$EXPERIMENT/downstream/arm64/control/docker-config",
+        "--host",
+        "unix://$USER_HOME/.orbstack/run/docker.sock",
+        "exec",
+        "coalescing-downstream-arm642-20261118T031137Z",
+        "$PLATFORM/python/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$PLATFORM/measurements-01/sparse/primary",
+        "--output",
+        "$PLATFORM/audits-01/sparse-primary.json"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 1.0418279999867082
+    }
+  ],
+  "finished_at": "2026-11-18T04:13:40.876783+00:00"
+}

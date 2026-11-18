@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "at": "2026-11-18T03:50:16.865648+00:00",
+  "pr": 25,
+  "merge": "ae956313ebbcb5a6f9d20b74626ce5b6e2e69839",
+  "tree": "1accd436987a65bcfe0660c1d62d602b4fe96b92",
+  "validated_tree_identical": true,
+  "github_signature_verification": {
+    "verified": true,
+    "reason": "valid",
+    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJq/SBBCRC1aQ7uu5UhlAAAtdwQAKq/cx4sJhOfpzTi4V4adJio\nOq3BRi5+pOIx8Rk+4GG0NBGPtpVvBseY481z6r0h3CQjSmyL+nVcKf8yFR+1494M\ntM9dj8g2WfwSDT+o5llUKl4m7IXlm+Z5cAPJYC8Ov+W0oAcEDdEw+ydTh+1X/LEw\nvawQUSe87MLdmVZsuh7JzaKwXofVLewCBdR8skCCe3jPXvJ7nmqn/NcB5NLP6jlw\n0o+FYSqFGooq186mcnTBpui6HaVDsTLPZVwdShp0Nhr6FFgAQhpiMA9wMcU8ZJlS\nuS0AkmewDiFtf6fA5W8d8YvAynBzwB3lKwrxAHQzWlgaM/eBzHwpnr3bM1NzsZd7\nrFJ4gqMYo8whhBBV7KJl22+kD/m4n6iWBkAC0pIP7nzQoAQCQikrcOYHPCdeLho/\nIrrjqZY1p1SOe6GH9Xj+yr+9MYbFI0YHlD37UXZnTtRm+Cb7AObfO5i8eWwLAb2o\nlj4zI++XkWdxSLZXhgSAkuD7ugYRnonYfBwGxz9o8KZo7L4Ggc+2F3EoEq3qFHNj\nAz3awtrlioTA4hbSqDr2Sq1W4GOO2QOs+uOUSCnPqpyVXSJpthB6gzs4GGJlwS8r\nMoAiln/2QO49LJ5IaHuQX88P8HnA18weENXK3R1wkDvWX0aTIV2ZouYoGtJVCUTm\nFXfx/v80IYbmFgZX9+Vb\n=r2Id\n-----END PGP SIGNATURE-----\n",
+    "payload": "tree 1accd436987a65bcfe0660c1d62d602b4fe96b92\nparent 9d1a17be1c613342be0ab1784ebf3f62841bcd1e\nparent f4b673b0834699b713c1a460cc8ad700e7d0278d\nauthor Craig Munro <camunro@users.noreply.github.com> 1794973761 -0500\ncommitter GitHub <noreply@github.com> 1794973761 -0500\n\nMerge pull request #25 from RouteObjects/perf/coalescing-compact-storage\n\nIntegrate compact coalescing storage with preserved historical evidence and fresh three-platform qualification.",
+    "verified_at": "2026-11-18T03:49:22Z"
+  },
+  "qualification_evidence_sha256": {
+    "macos/upstream-qualification/qualification-review.json": "772a83093003eec1d351a0e87462cbd66772fdcc8a6acb2f218948da5aee455d",
+    "arm64/control/upstream-qualification-complete.json": "4563f23380d63bef28fe173732d0724b06ac801ff85f84aeb66a67bae387d42a",
+    "x86_64/upstream-qualification/qualification-review.json": "a301c2bd92e62f8c604cadab8be948e253691b09244fff4ae98734e6a21030b1",
+    "control/upstream-pr-ci.json": "e4c2756dbbfaf8986b96cb523e889e757392d27d12d92c15c9a6c9e578b9c289",
+    "control/preservation-after-upstream-merge.json": "48729a6cae06601d9c0a68b2e3a4a09b1c5572f79c09d7e91c2f5400ab6ed903"
+  },
+  "fresh_full_suite_executions": 2488,
+  "platforms": [
+    "macOS ARM64 Swift6.4.2",
+    "ARM64 Linux Swift6.4.2",
+    "ARM64 Linux Swift6.2.4",
+    "x86-64 Linux Swift6.4.2"
+  ],
+  "remaining_release_ci": 44233125016,
+  "release_published": false,
+  "limitations": [
+    "Default macOS threshold exit1 reports improvements, not regressions; all79 committed thresholds unchanged",
+    "Four Span cases have zero allocation/ARC p50/p75/p90 but isolated malloc samples; no unconditional zero allocation claim",
+    "Optional CPU/NIO research benchmark targets fail underSwift6.4.2 due to existing actor-isolation declarations",
+    "x86 artifact-helper failures preserved separately; tests not repeated"
+  ]
+}

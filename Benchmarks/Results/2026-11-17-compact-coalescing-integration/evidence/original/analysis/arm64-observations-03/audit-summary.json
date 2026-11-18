@@ -1,0 +1,53 @@
+{
+  "original_relative_path": "downstream/arm64/audits-01/summary.json",
+  "raw_sha256": "c8457a5737e41bcd79d82496bdb19fa1f1239a2557254c4b5b21f574ecdacfa8",
+  "raw_bytes": 1186,
+  "record": {
+    "passed": true,
+    "audit_rows": [
+      {
+        "group": "original",
+        "phase": "primary",
+        "receipt": "downstream/arm64/audits-01/original-primary.json",
+        "measured_samples": 132,
+        "warmups": 22,
+        "measured_processes": 192,
+        "warmup_processes": 32
+      },
+      {
+        "group": "scale",
+        "phase": "primary",
+        "receipt": "downstream/arm64/audits-01/scale-primary.json",
+        "measured_samples": 144,
+        "warmups": 24,
+        "measured_processes": 144,
+        "warmup_processes": 24
+      },
+      {
+        "group": "scale",
+        "phase": "followup",
+        "receipt": "downstream/arm64/audits-01/scale-followup.json",
+        "measured_samples": 12,
+        "warmups": 2,
+        "measured_processes": 12,
+        "warmup_processes": 2
+      },
+      {
+        "group": "sparse",
+        "phase": "primary",
+        "receipt": "downstream/arm64/audits-01/sparse-primary.json",
+        "measured_samples": 24,
+        "warmups": 4,
+        "measured_processes": 24,
+        "warmup_processes": 4
+      }
+    ],
+    "totals": {
+      "measured_samples": 312,
+      "warmups": 52,
+      "measured_processes": 372,
+      "warmup_processes": 62
+    },
+    "all_phases_independently_audited": true
+  }
+}

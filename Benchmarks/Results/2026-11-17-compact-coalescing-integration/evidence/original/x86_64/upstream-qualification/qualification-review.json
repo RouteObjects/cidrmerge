@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "at": "2026-11-18T03:48:28.205686+00:00",
+  "scope": "Functional upstream qualification only; source and pins matched after all successful builds/tests. Artifact preservation helper repair does not change these results.",
+  "merge": "35003688c139adea9a6dcf17f2748fa3c2b0348a",
+  "tree": "1accd436987a65bcfe0660c1d62d602b4fe96b92",
+  "swift": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-linux-gnu\n",
+  "debug_tests": 311,
+  "release_tests": 311,
+  "four_products_each_debug_release": true,
+  "source_files": 1462,
+  "five_exact_pins": {
+    "swift-argument-parser": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+    "swift-atomics": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+    "swift-collections": "03cc312c2c933ed87abace34044a5dff7a3117c1",
+    "swift-nio": "77b84ac2cd2ac9e4ac67d19f045fd5b434f56967",
+    "swift-system": "7c6ad0fc39d0763e0b699210e4124afd5041c5df"
+  },
+  "all_source_checks_unchanged": true,
+  "all_resolved_checkouts_clean": true,
+  "build_system": "Swift Build default; no timing claims",
+  "steps": [
+    {
+      "name": "debug-build-CIDR",
+      "receipt": "x86_64/upstream-qualification/debug-build-CIDR.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "debug-build-CIDRArgumentParser",
+      "receipt": "x86_64/upstream-qualification/debug-build-CIDRArgumentParser.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "debug-build-CIDRPOSIX",
+      "receipt": "x86_64/upstream-qualification/debug-build-CIDRPOSIX.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "debug-build-CIDRNIO",
+      "receipt": "x86_64/upstream-qualification/debug-build-CIDRNIO.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "release-build-CIDR",
+      "receipt": "x86_64/upstream-qualification/release-build-CIDR.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "release-build-CIDRArgumentParser",
+      "receipt": "x86_64/upstream-qualification/release-build-CIDRArgumentParser.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "release-build-CIDRPOSIX",
+      "receipt": "x86_64/upstream-qualification/release-build-CIDRPOSIX.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "release-build-CIDRNIO",
+      "receipt": "x86_64/upstream-qualification/release-build-CIDRNIO.json",
+      "passed": true,
+      "total_tests": null
+    },
+    {
+      "name": "test-debug",
+      "receipt": "x86_64/upstream-qualification/test-debug.json",
+      "passed": true,
+      "total_tests": 311
+    },
+    {
+      "name": "test-release",
+      "receipt": "x86_64/upstream-qualification/test-release.json",
+      "passed": true,
+      "total_tests": 311
+    }
+  ],
+  "artifact_helper_failures": {
+    "original_summary": "x86_64/upstream-qualification/summary.json",
+    "original_failure": "FileNotFoundError(2, 'No such file or directory')",
+    "original_traceback": "x86_64/control/upstream-launch.log",
+    "first_preservation_guard_failure": "x86_64/control/upstream-artifact-recovery.log",
+    "repair": "Separate v2 helper handles the actual product layout and finds the filename in traceback; no successful test repeated. Final archive receipt will be separate."
+  },
+  "retrieval": {
+    "upstream-qualification/debug-build-CIDR.json": {
+      "sha256": "fd1fb190c4705b03dfe52d48b4e0b03376150fc33321c6462f9c192efee742b0",
+      "bytes": 3384
+    },
+    "upstream-qualification/debug-build-CIDRArgumentParser.json": {
+      "sha256": "92f668bca67b536a86d7b9ab8f066f43f9279c44f195270f826b8c2daa72f2f4",
+      "bytes": 3427
+    },
+    "upstream-qualification/debug-build-CIDRPOSIX.json": {
+      "sha256": "a4f865e4a0514cc40cc2e252718484f2f95c43d32deecb41c243cea1522fe535",
+      "bytes": 3399
+    },
+    "upstream-qualification/debug-build-CIDRNIO.json": {
+      "sha256": "097e137c8cb2af48d09f31be9b0233853c7429b71ee5a24cf361de4ec1caad7c",
+      "bytes": 3394
+    },
+    "upstream-qualification/release-build-CIDR.json": {
+      "sha256": "bb736f01077a023f39a9729ca2cd151da2d476313230dac9777ed9e388de285d",
+      "bytes": 3390
+    },
+    "upstream-qualification/release-build-CIDRArgumentParser.json": {
+      "sha256": "26a474fc7f0f68f5ac240c0fae825e3e9aa6188fe3ce2ac70b80e8d4bf71b310",
+      "bytes": 3432
+    },
+    "upstream-qualification/release-build-CIDRPOSIX.json": {
+      "sha256": "daf1495b152e6ea872ec36776672983bcd560d15a1a76c474f80ffde313ea1b1",
+      "bytes": 3405
+    },
+    "upstream-qualification/release-build-CIDRNIO.json": {
+      "sha256": "2750ead31f836ea497f96538a3825f02abbd777eca3a30979b35c27890a50ed7",
+      "bytes": 3399
+    },
+    "upstream-qualification/test-debug.json": {
+      "sha256": "d9fca1f4fe40946155c22c7b1134fbf72d34c4434ad0dc7d4b711413fc805841",
+      "bytes": 3354
+    },
+    "upstream-qualification/test-release.json": {
+      "sha256": "f685384a6b39b31e2e05ac76c3bfaa73bdc433946f684930660b89f6db0a2954",
+      "bytes": 3360
+    },
+    "upstream-qualification/summary.json": {
+      "sha256": "9ba29380094fd7aa6e41492fc79b70f16f82ea94e9149a4f0b707fbe61efd583",
+      "bytes": 41520
+    },
+    "upstream-qualification/test-debug.log": {
+      "sha256": "13253ebda9def4c64754afb7afaac40c39878bde7e45bfc29151f724f26bf6d3",
+      "bytes": 117504
+    },
+    "upstream-qualification/test-release.log": {
+      "sha256": "8571c00d53d7475254410d1762bca314a53b086b742be60973c36f80992943c7",
+      "bytes": 116200
+    },
+    "control/upstream-launch.log": {
+      "sha256": "c42b62a3354fd69c6842b44014285669731abefabc7fdf27b560003b16a379d4",
+      "bytes": 1337
+    },
+    "control/upstream-artifact-recovery.log": {
+      "sha256": "12df3d1c803ac8ae2f2ecd78fa17ab0705a18fbde40324dda0cdc5a4a9d2ee80",
+      "bytes": 592
+    }
+  }
+}

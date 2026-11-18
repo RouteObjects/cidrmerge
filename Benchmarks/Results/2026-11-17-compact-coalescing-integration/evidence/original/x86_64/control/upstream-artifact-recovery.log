@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "$EXPERIMENT/control/preserve_upstream_swiftbuild.py", line 9, in <module>
+    summary=json.loads((O/'summary.json').read_text());assert not summary['passed'] and 'FileNotFoundError' in summary['error'] and 'debug.yaml' in summary['error'],summary.get('error')
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: FileNotFoundError(2, 'No such file or directory')

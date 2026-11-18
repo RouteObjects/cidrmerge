@@ -1,0 +1,38 @@
+{
+  "upstream_version": "0.11.0",
+  "cidrmerge_version": "0.4.3",
+  "upstream_pr": 25,
+  "upstream_candidate": "f4b673b0834699b713c1a460cc8ad700e7d0278d",
+  "upstream_merged_validation_commit": "35003688c139adea9a6dcf17f2748fa3c2b0348a",
+  "upstream_validation_tree": "1accd436987a65bcfe0660c1d62d602b4fe96b92",
+  "downstream_baseline_commit": "5ab794a5a0578c03fd7b52f3b72889de201c09f8",
+  "downstream_baseline_dependency": {
+    "version": "0.10.1",
+    "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0"
+  },
+  "platforms": [
+    "macOS ARM64 Xcode27.2 Swift6.4.2",
+    "native ARM64 Linux OrbStack Swift6.4.2",
+    "swift-dev x86-64 Linux Swift6.4.2"
+  ],
+  "primary_measurement_matrix": {
+    "million_entry_configurations": 11,
+    "scale_configurations": 12,
+    "sparse_duplicate_configurations": 2,
+    "total_configurations": 25,
+    "paired_rounds": 6,
+    "excluded_warmups_per_variant_per_configuration": 1,
+    "measured_executions_per_platform": 300,
+    "warmups_per_platform": 50,
+    "order": "alternate baseline/candidate per paired round; rotate case order"
+  },
+  "followups": "One independent six-pair follow-up for each primary paired-median elapsed or peak-RSS increase above 5%; preserve primary and follow-up phases, all observations and failures; retain documented accepted sparse CPU tradeoff.",
+  "correctness": "Full baseline/candidate Debug+Release suites on all3Swift6.4.2 platforms, candidateSwift6.2.4 ARMcompatibility, reuse CLI differential and IO suites, verify every measured full output against hash-verified independent references.",
+  "preservation": "Preserve all existing sources/reports/thresholds/rawresults; freeze ordinary release binaries separately from tests, fixture/reference hashes, sourcepatches, toolchains/runtime/harness identities. No historicalcachedeletion authorized.",
+  "measurement_isolation": "Do not overlap macOS and native OrbStack timed runs or builds/tests/profiling with timed runs. Maintain at least3GiB free during measurement and enough headroom for builds/output.",
+  "release_order": "Validate and merge upstream; publish signed0.11.0; onlythen change canonical cidrmerge requirement/lockfile. Qualify dependency and shipping0.4.3 before signedtag/fourplatformdraftassets/publication.",
+  "baseline_archive": "control/cidrmerge-baseline-portable.tar",
+  "baseline_archive_sha256": "17b550797da0292f42759b83929b9f6dda1489334ad5f9a9417e23a84efdcf80",
+  "upstream_archive": "control/upstream-source-portable.tar",
+  "upstream_archive_sha256": "d7fca910ac4e6261bc6b12f2dbaade60a971466e1a871f1abd96a831e8bef5d6"
+}

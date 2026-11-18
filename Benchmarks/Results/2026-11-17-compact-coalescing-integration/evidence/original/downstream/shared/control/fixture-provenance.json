@@ -1,0 +1,688 @@
+{
+  "passed": true,
+  "at": "2026-11-18T03:19:27.598960+00:00",
+  "files": {
+    "provenance/compact-original-reference.json": {
+      "source": "$PRIOR_EXPERIMENT/shared/reference.json",
+      "sha256": "aa892aabae87fdc9bff34421bcacccac9f3546ab058086c63250333427b2cecd",
+      "bytes": 33495,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/compact-original-protocol.json": {
+      "source": "$PRIOR_EXPERIMENT/shared/matched-protocol.json",
+      "sha256": "808ab2e5ccd2f3275e93a09052d0e576238d374fc203abf9342e8aefa388dde0",
+      "bytes": 1403,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/ipv4-disjoint/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/ipv4-disjoint/ipv4.txt",
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "bytes": 14806125,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/ipv4-disjoint/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv4-disjoint/cidrmerge/4.stdout",
+      "sha256": "cfe05140183d748b0ecf27f40a5f9240cc8929188c3fb7b2ba9e0c13ebb462d7",
+      "bytes": 14806125,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/ipv6-disjoint/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/ipv6-disjoint/ipv6.txt",
+      "sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "bytes": 21342471,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/ipv6-disjoint/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv6-disjoint/cidrmerge/6.stdout",
+      "sha256": "970a3eea2cb210a9e3e1957e7f1837ddc36f0e3f78e5261f2188d571f2fdbf85",
+      "bytes": 21342471,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-disjoint/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-disjoint/ipv4.txt",
+      "sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+      "bytes": 7399156,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-disjoint/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/4.stdout",
+      "sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+      "bytes": 7399156,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-disjoint/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-disjoint/ipv6.txt",
+      "sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+      "bytes": 10465056,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-disjoint/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/6.stdout",
+      "sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+      "bytes": 10465056,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-permuted/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-permuted/ipv4.txt",
+      "sha256": "a5d1910f2eb68ad35664f3680d41b9de0c972364fddef6b22e1b4aa8996949c7",
+      "bytes": 7399156,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-permuted/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-permuted/cidrmerge/4.stdout",
+      "sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e",
+      "bytes": 7399156,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-permuted/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-permuted/ipv6.txt",
+      "sha256": "c1f373b9257707946597e2c29dab7a0d442658db58f9f486e81d72fe9ed9a7af",
+      "bytes": 10465056,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-permuted/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-permuted/cidrmerge/6.stdout",
+      "sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd",
+      "bytes": 10465056,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-overlap/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-overlap/ipv4.txt",
+      "sha256": "591a9e86c965dca39473f7958f0dde8e5aef4f9a4ff122fc1fc2823016832a3a",
+      "bytes": 7275958,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-overlap/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-overlap/cidrmerge/4.stdout",
+      "sha256": "9b4e456139331a2ec582ecfbc9ccf436bd32b34742440d649f0f086b0ea84df0",
+      "bytes": 11,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-overlap/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-overlap/ipv6.txt",
+      "sha256": "43a1abca074298cb2e1d3cc0acae1026477fe616396274ca6d6e1a974eae8164",
+      "bytes": 10039783,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-overlap/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-overlap/cidrmerge/6.stdout",
+      "sha256": "986242db0490c02b38325ff8a1789a24612f4c4281233867b7764a69060e2bb7",
+      "bytes": 14,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-adjacent/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-adjacent/ipv4.txt",
+      "sha256": "d4165228a09cc2a6db8d68193754cfdd17dfe420dce171f8919c98de2332ab13",
+      "bytes": 7059848,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-adjacent/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-adjacent/cidrmerge/4.stdout",
+      "sha256": "7f39dfd925b900c038386ce3c211b0ee72dc62875e751e82dbfc6d5a748c36a0",
+      "bytes": 83,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-adjacent/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-adjacent/ipv6.txt",
+      "sha256": "64654afabdfadbd219b871dead8001fdfdc9da961f755836ec61d25f34e0f482",
+      "bytes": 10333983,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/mixed-adjacent/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-adjacent/cidrmerge/6.stdout",
+      "sha256": "b8a2b2728c96407d642e4885f5d0c2a41d450cdb43c5bb0f209206da2341d0a1",
+      "bytes": 132,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/bgp-like-ipv4/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/bgp-like-ipv4/ipv4.txt",
+      "sha256": "580b51a0c723a6d372f105f757b42775d657cfcdaf0ad1c3327057e22b21e7e1",
+      "bytes": 15911042,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/bgp-like-ipv4/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/bgp-like-ipv4/cidrmerge/4.stdout",
+      "sha256": "23e12791525edcd3c6bd2b372e2684713c5c1550811530a3f4357991c2f8ea01",
+      "bytes": 3691176,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/range-derived-mixed/ipv4.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/range-derived-mixed/ipv4.txt",
+      "sha256": "53db427e9aee7d9817f2384521f688751c2cfff9c78f9156380a96441e242c8c",
+      "bytes": 7553022,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/range-derived-mixed/4.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/range-derived-mixed/cidrmerge/4.stdout",
+      "sha256": "53db427e9aee7d9817f2384521f688751c2cfff9c78f9156380a96441e242c8c",
+      "bytes": 7553022,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/range-derived-mixed/ipv6.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/range-derived-mixed/ipv6.txt",
+      "sha256": "68d161443d998ee9008d43c58214729c163ccb94e6cf4724e6a3957c2896d2d6",
+      "bytes": 10892816,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/split/range-derived-mixed/6.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/range-derived-mixed/cidrmerge/6.stdout",
+      "sha256": "68d161443d998ee9008d43c58214729c163ccb94e6cf4724e6a3957c2896d2d6",
+      "bytes": 10892816,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-disjoint/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-disjoint/input.txt",
+      "sha256": "8188c5b05fa642d50cf55ed9761117cc01ba37ad7229c55934d024ceb21ae7df",
+      "bytes": 17864212,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/native/mixed-disjoint/mixed.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-disjoint/cidrmerge/mixed.stdout",
+      "sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "bytes": 17864212,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-permuted/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-permuted/input.txt",
+      "sha256": "8cf4de70c72d98e5b54e217b6f0f532ddaaab18919e95c9103cf26b2cab7ca61",
+      "bytes": 17864212,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/native/mixed-permuted/mixed.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-permuted/cidrmerge/mixed.stdout",
+      "sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "bytes": 17864212,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "fixtures/mixed-overlap/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/arm64/fixtures/mixed-overlap/input.txt",
+      "sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01",
+      "bytes": 17315741,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "references/original/native/mixed-overlap/mixed.txt": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-overlap/cidrmerge/mixed.stdout",
+      "sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "bytes": 25,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/ipv4-disjoint/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv4-disjoint/cidrmerge/sample.json",
+      "sha256": "11436944d472e20990e691b5f61103c9b7ca9e361fefd17c843a7de468ff8a5e",
+      "bytes": 1163,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/ipv4-disjoint/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv4-disjoint/cidrmerge/coverage.json",
+      "sha256": "cd5f0e3a7b4150cfb75b7a46b24d77962d13e8c48ac20de1138c2b26fb64bcca",
+      "bytes": 1462,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/ipv6-disjoint/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv6-disjoint/cidrmerge/sample.json",
+      "sha256": "172fdf8140442c04c72512cda5484d820f130a18f25fbb70219bb1bb4d41a42f",
+      "bytes": 1180,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/ipv6-disjoint/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/ipv6-disjoint/cidrmerge/coverage.json",
+      "sha256": "22ed42b4517cf1aadef0bd038c416f24320cf38a320890a79ded420b3938c6b0",
+      "bytes": 1462,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-disjoint/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/sample.json",
+      "sha256": "8d26645be04049fdc5a64dbc1e9bfc2d875cdf11facbdc0fccb2f237783bef6d",
+      "bytes": 1938,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-disjoint/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/coverage.json",
+      "sha256": "156a38e1ec6d6178d0d605b5a882ba56ba823b571dd64a65fc4f44bbb2c75a89",
+      "bytes": 1796,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-permuted/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-permuted/cidrmerge/sample.json",
+      "sha256": "3673f0d6db703bb70358b37fd69d37c9ba6fc984c7b2abc93cabb5f2990a164c",
+      "bytes": 1926,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-permuted/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-permuted/cidrmerge/coverage.json",
+      "sha256": "64bb1b061313909c8c45a0afde5f825dae6be8cb74be4e598aeffb706024abf9",
+      "bytes": 1796,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-overlap/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-overlap/cidrmerge/sample.json",
+      "sha256": "58240c0bdc77cff4b1767bdd9694442be571931c5a2e1187fcd65430c7c4a3ee",
+      "bytes": 1899,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-overlap/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-overlap/cidrmerge/coverage.json",
+      "sha256": "5098f7055ab8c897be5bae628e6283afebf0e88c22eb32d079f9099a9b1128c2",
+      "bytes": 1724,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-adjacent/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-adjacent/cidrmerge/sample.json",
+      "sha256": "11d6b768f2cf43c9cf17c78c22e1d3a13f3448617590daac923700628ebd60a0",
+      "bytes": 1908,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/mixed-adjacent/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/mixed-adjacent/cidrmerge/coverage.json",
+      "sha256": "192018637b0d7d61c57a8f78535610d1ff43313b35c939d3d68adc35ef65e25f",
+      "bytes": 1706,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/bgp-like-ipv4/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/bgp-like-ipv4/cidrmerge/sample.json",
+      "sha256": "2361587b402e83a4c895765a8e687e6a5c1d91bcd160735fc5147f85d2aeaadb",
+      "bytes": 1163,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/bgp-like-ipv4/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/bgp-like-ipv4/cidrmerge/coverage.json",
+      "sha256": "635c38afc86c855d7f6cc687f3e7f5ae5ac747d8967c5646f27aeeba6dce8a73",
+      "bytes": 1456,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/range-derived-mixed/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/range-derived-mixed/cidrmerge/sample.json",
+      "sha256": "107b7409740e60460d13b36c7b2f5ce36a06016e508121c9317f2c6ed28d61f3",
+      "bytes": 1965,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/split/range-derived-mixed/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/split/range-derived-mixed/cidrmerge/coverage.json",
+      "sha256": "5795ac193d40bd682b71fbddf2a4fe3362ef2b49526f38670594f73c08564e68",
+      "bytes": 1793,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-disjoint/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-disjoint/cidrmerge/sample.json",
+      "sha256": "0c98bb94beebc7784db01cc717dea1931068582847cfaf7ff1c7eec2c5e7c299",
+      "bytes": 1184,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-disjoint/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-disjoint/cidrmerge/coverage.json",
+      "sha256": "5fcc7e2b4add33a500176064266559e51f5d0ef7d80b4332b7019c4a43f1eccd",
+      "bytes": 1504,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-permuted/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-permuted/cidrmerge/sample.json",
+      "sha256": "37887a160ee9770a4bc65d887e64d1fbe6c7be55113a13dc4008f79ee62d45e1",
+      "bytes": 1183,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-permuted/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-permuted/cidrmerge/coverage.json",
+      "sha256": "4fbad117975218a24e2532cfa9c93f12369c078c86ac8d10427aa3ba78bd59ee",
+      "bytes": 1504,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-overlap/cidrmerge/sample.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-overlap/cidrmerge/sample.json",
+      "sha256": "cf1ba4a9d0064d84777144bb43121e64643bea473ac12735d9aebd6fb96815b5",
+      "bytes": 1164,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/warmup/native/mixed-overlap/cidrmerge/coverage.json": {
+      "source": "$PRIOR_EXPERIMENT/warmup/native/mixed-overlap/cidrmerge/coverage.json",
+      "sha256": "497fbe9660ee41673317b4b7862fb7c6efbe0c0392eb2fa6c6c9c393dbde9384",
+      "bytes": 1442,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/control/generate_fixtures.py": {
+      "source": "$PRIOR_EXPERIMENT/control/generate_fixtures.py",
+      "sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+      "bytes": 10189,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/control/verify_coverage.py": {
+      "source": "$PRIOR_EXPERIMENT/control/verify_coverage.py",
+      "sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+      "bytes": 6676,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/control/independent-coverage-audit.json": {
+      "source": "$PRIOR_EXPERIMENT/control/independent-coverage-audit.json",
+      "sha256": "6a40607135d42ff38ecb00709b78d8e28d503225eff148bc3f35ef8023cef465",
+      "bytes": 3670,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/ipv4-disjoint/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/ipv4-disjoint/expected.json",
+      "sha256": "1e318342d3b4fec026cf4a9e849329c1263df01ce974e3e2fadc8d8ca6fb6233",
+      "bytes": 872,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/ipv4-disjoint/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/ipv4-disjoint/manifest.json",
+      "sha256": "bcc27e22d73bc73c8a1d746f15ffb881cfc8cb8c817b687ad95523a26b1f3133",
+      "bytes": 986,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/ipv6-disjoint/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/ipv6-disjoint/expected.json",
+      "sha256": "321417e238cde81b5e15666ea6dcee69542a2efcdca0bbd849301c0ff24121cf",
+      "bytes": 872,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/ipv6-disjoint/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/ipv6-disjoint/manifest.json",
+      "sha256": "fd9b5d0d4146a404183316bbf19b5007a38fec6096730d445e00480046c6a2af",
+      "bytes": 960,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-disjoint/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-disjoint/expected.json",
+      "sha256": "2d88b6e30a35ea7c9813839551d2c2171e61b7b4cfc1ee13202f815cf28c5bae",
+      "bytes": 908,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-disjoint/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-disjoint/manifest.json",
+      "sha256": "dfdea52780332db3bf326801c1b92e27cec42fb185dadef2450be74e0630f24e",
+      "bytes": 1029,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-permuted/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-permuted/expected.json",
+      "sha256": "8678e5e11814c126818422278c6341ca9af41b7f1d6275e46a8da3331f735bc2",
+      "bytes": 908,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-permuted/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-permuted/manifest.json",
+      "sha256": "50e905748e1951d7779384a3fedd40312fc37adda29c2f7b031c2ef0b939229c",
+      "bytes": 1025,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-overlap/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-overlap/expected.json",
+      "sha256": "df4d5bff67b41ec08fb5db793e84a837cd7ab214fbf2c954441f46b733dba864",
+      "bytes": 881,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-overlap/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-overlap/manifest.json",
+      "sha256": "9634c7b8cca11d4927a35651d529457ca2f93373debab9ad6b48b38e339f79ee",
+      "bytes": 1075,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-adjacent/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-adjacent/expected.json",
+      "sha256": "248040536f81f3c90e370d1ad543f0146a903da4e68c99716c63095766b9d2e5",
+      "bytes": 858,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/mixed-adjacent/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/mixed-adjacent/manifest.json",
+      "sha256": "bf885e89dfd1b6e4feecf82c2278890cff6468358ec93828a451fbd704ca1956",
+      "bytes": 1043,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/bgp-like-ipv4/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/bgp-like-ipv4/expected.json",
+      "sha256": "2b43575b733a10a022970d56e0b7e3457e31f559b66286dd434a5a087bdc5bff",
+      "bytes": 871,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/bgp-like-ipv4/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/bgp-like-ipv4/manifest.json",
+      "sha256": "f9580c469ddfed91581921e4a1d975d3c11f62cb02bcc7765bd162112659ce0e",
+      "bytes": 1005,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/range-derived-mixed/expected.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/range-derived-mixed/expected.json",
+      "sha256": "07d5afa1559620724634f64cbece5dc4b5e691d84b85ec7279673b92da23f797",
+      "bytes": 895,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/original/fixtures/range-derived-mixed/manifest.json": {
+      "source": "$PRIOR_EXPERIMENT/fixtures/range-derived-mixed/manifest.json",
+      "sha256": "9ada47efa4793d635cd3c588623270d8529282139547a520cf0abc4582a1d8ac",
+      "bytes": 1121,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/scale-reference.json": {
+      "source": "$PRIOR_EXPERIMENT/scale/reference.json",
+      "sha256": "7bb293dc1d39510fd9d2ebb82ed08e0d0f8c9825ba4b522257393b65262b6246",
+      "bytes": 5927,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-1000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-1000/input.txt",
+      "sha256": "0c994d2830359c1823a6eea339afb9bf015e3af694c0d36407cc7fc8eb46e84d",
+      "bytes": 16140,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-1000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-1000/reference.txt",
+      "sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+      "bytes": 16140,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-10000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-10000/input.txt",
+      "sha256": "11571040354a7f185755a0568f501c3a9331aedad488bca027c388c82e493010",
+      "bytes": 169981,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-10000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-10000/reference.txt",
+      "sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+      "bytes": 169981,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-100000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-100000/input.txt",
+      "sha256": "bf3116ff0af5923c221671ea35dd60b7622f13401a1a958b4abc604fb473e274",
+      "bytes": 1751137,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-disjoint-100000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-disjoint-100000/reference.txt",
+      "sha256": "5e197d3f63130d1c0d2bb1fd3b7b3048a27f2bef488711bb46157a0c194e0c59",
+      "bytes": 1751137,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-1000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-1000/input.txt",
+      "sha256": "a29a9498b4217e095ce993783611bec3ff388c181b4a548e67eb4a524a9eeefe",
+      "bytes": 17869,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-1000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-1000/reference.txt",
+      "sha256": "d913bd19461a2692cf2942863ad9339330c871211a3fd03e92f53f1080ce1dd4",
+      "bytes": 17869,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-10000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-10000/input.txt",
+      "sha256": "db1b67661c99f7e123cb7c7e623f30a452bb973b2a82b55ec6303df852218a58",
+      "bytes": 178651,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-10000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-10000/reference.txt",
+      "sha256": "6a31e3539f703d2509d3cd3789762673886d0cf32be6a1b15c98f0309a5d8f6d",
+      "bytes": 178651,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-100000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-100000/input.txt",
+      "sha256": "e8027fb8786ce10594964faedaec6947a4f0f646e0014ccaefadd56fa44fd383",
+      "bytes": 1786391,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-permuted-100000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-permuted-100000/reference.txt",
+      "sha256": "cffe8fc059474a546f4dc1bc019b65525dec193eaaaa369a71fb4c9759874d0d",
+      "bytes": 1786391,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-1000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-1000/input.txt",
+      "sha256": "408fbb6eb1bdb013e7b50aae8653be2791154db38f5e032dc359a81afc012695",
+      "bytes": 15791,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-1000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-1000/reference.txt",
+      "sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "bytes": 25,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-10000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-10000/input.txt",
+      "sha256": "7a68f6caa0e9a94ad190437120fb2c79361846a089fc2ec887256c88b7699207",
+      "bytes": 162809,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-10000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-10000/reference.txt",
+      "sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "bytes": 25,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-100000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-100000/input.txt",
+      "sha256": "dc1717658f3d40ebf235d6fb3f2cbc9fa0f03130a728c3ab878a176250682586",
+      "bytes": 1698449,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-overlap-100000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-overlap-100000/reference.txt",
+      "sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac",
+      "bytes": 25,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-1000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-1000/input.txt",
+      "sha256": "3952779c8823a974967292f74bc262cbd7b70036d62cecca57da9d033ab1c472",
+      "bytes": 15007,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-1000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-1000/reference.txt",
+      "sha256": "f96c95b5a8965b9e9926776b695e805a2fa655a90f275427548b170d77d751f3",
+      "bytes": 179,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-10000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-10000/input.txt",
+      "sha256": "dd226d7eee24ec7f33622522ac3612c04978b1d70940b7449b5b8dd96f4d8e46",
+      "bytes": 155871,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-10000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-10000/reference.txt",
+      "sha256": "cdf82e1048acb286e43712107f74d8522907bf95156cd44f664294db78c72b9c",
+      "bytes": 152,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-100000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-100000/input.txt",
+      "sha256": "bd7c148f44f9c9b2672b5913be5b30354b2bc11eef3b27bd2dccab846b77caad",
+      "bytes": 1645931,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "scale/mixed-adjacent-100000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/scale/mixed-adjacent-100000/reference.txt",
+      "sha256": "7a2de6bae1cc53a7bca155a5f0e48598b81c02cbe1fa2cc5999a29fbcf3f38ab",
+      "bytes": 187,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/sparse-reference.json": {
+      "source": "$PRIOR_EXPERIMENT/sparse/reference.json",
+      "sha256": "e55c759160d197f233b7ce7175d3cf455a64dac152e7b56ad27ee15f20533e7d",
+      "bytes": 1485,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "sparse/mixed-sparse-duplicate-10000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/sparse/mixed-sparse-duplicate-10000/input.txt",
+      "sha256": "c7b98ccb1a499919a4d6726da858640abdd8ad738f5a1ec260e7c43d4f26a133",
+      "bytes": 170010,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "sparse/mixed-sparse-duplicate-10000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/sparse/mixed-sparse-duplicate-10000/reference.txt",
+      "sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+      "bytes": 169981,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "sparse/mixed-sparse-duplicate-1000000/input.txt": {
+      "source": "$PRIOR_EXPERIMENT/sparse/mixed-sparse-duplicate-1000000/input.txt",
+      "sha256": "6abaaad6e5e2848b78c58aa3bfbf2f5e8d52f9a65a000e54b64922cdaf740af6",
+      "bytes": 17864241,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "sparse/mixed-sparse-duplicate-1000000/reference.txt": {
+      "source": "$PRIOR_EXPERIMENT/sparse/mixed-sparse-duplicate-1000000/reference.txt",
+      "sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+      "bytes": 17864212,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/compact/control/prepare_scale.py": {
+      "source": "$PRIOR_EXPERIMENT/control/prepare_scale.py",
+      "sha256": "ec299af844206db0a0d2804a3fe216e9af6f939d250bcac4673f17f78e1f9dd4",
+      "bytes": 1389,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/compact/control/reused-scale-reference-provenance.json": {
+      "source": "$PRIOR_EXPERIMENT/control/reused-scale-reference-provenance.json",
+      "sha256": "07d90a70abb6f8025d08a84b1704e10c8389cf3ab96bbbd5ad9b771ff51998fa",
+      "bytes": 425,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/compact/sparse/prepare.py": {
+      "source": "$PRIOR_EXPERIMENT/sparse/prepare.py",
+      "sha256": "c9ce9cada67388fa9e2d8f73b9af233339f10ee586d18210ee68e5f7798d3a46",
+      "bytes": 5145,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "provenance/compact/sparse/provenance.json": {
+      "source": "$PRIOR_EXPERIMENT/sparse/provenance.json",
+      "sha256": "8e86a464d4f2954efd39b2b2f636355f2b3d148cdfa6e325524089d798338985",
+      "bytes": 2244,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "control/differential.py": {
+      "source": "$PRIOR_EXPERIMENT/control/differential.py",
+      "sha256": "4c5ff17c5e9f73356f6b90b2ef630bd6e49b077b30ce3f3fc92dd0f41bc4d768",
+      "bytes": 14687,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "control/io_differential_v2.py": {
+      "source": "$PRIOR_EXPERIMENT/control/io_differential_v2.py",
+      "sha256": "685bf760fd954d150f720144ff3c6e0112adda728924c5fafe12d6b61576b8dc",
+      "bytes": 14717,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "control/final_validation_v2.py": {
+      "source": "$PRIOR_EXPERIMENT/control/final_validation_v2.py",
+      "sha256": "dddee01847d4e4cfc3e2b1bf5119079e45364f443edfb267fea2d8ae2df9d70a",
+      "bytes": 9272,
+      "copy": "APFS clone, separate inode; original never modified"
+    },
+    "control/slow_stdout.py": {
+      "source": "$PRIOR_EXPERIMENT/control/slow_stdout.py",
+      "sha256": "d270bdeac4f4173b140fb3c9f4f7cc6dc80046adafb4a424dc31b19a4849abf7",
+      "bytes": 5568,
+      "copy": "APFS clone, separate inode; original never modified"
+    }
+  },
+  "copied_file_count": 113,
+  "total_bytes": 371499512,
+  "original_results_unchanged": true,
+  "script_sha256": "b28f91910bd2f50a8b80a4ac4ca03b01fcb66c94b7505170d5c3126fabae1a8f"
+}

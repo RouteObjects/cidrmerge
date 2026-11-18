@@ -1,0 +1,25 @@
+{
+  "name": "release-build-CIDRNIO",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-c",
+    "release",
+    "--target",
+    "CIDRNIO"
+  ],
+  "environment": {
+    "MACOSX_DEPLOYMENT_TARGET": "15.0"
+  },
+  "started_at": "2026-11-18T03:17:19.519067+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:17:34.901764+00:00",
+  "log": "macos/upstream-qualification/release-build-CIDRNIO.log",
+  "log_sha256": "f6c2da71ae4aa07d65c31fa7cb1802db5503e4deb194248e94514ab5ef710074"
+}

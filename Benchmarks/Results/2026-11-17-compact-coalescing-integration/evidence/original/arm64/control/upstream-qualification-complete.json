@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "at": "2026-11-18T03:22:28.113291+00:00",
+  "containers": [
+    {
+      "container": "coalescing-release-arm642-20261118T031137Z",
+      "version": "6.4.2",
+      "test_count_debug_release": 311,
+      "processes_before_stop": "PID                 STAT                COMMAND\n285770              S                   /sbin/docker-init -- sleep infinity\n285781              S                   sleep infinity\n",
+      "stop_output": "coalescing-release-arm642-20261118T031137Z\n",
+      "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n"
+    },
+    {
+      "container": "coalescing-release-arm624-20261118T031137Z",
+      "version": "6.2.4",
+      "test_count_debug_release": 311,
+      "processes_before_stop": "PID                 STAT                COMMAND\n285807              S                   /sbin/docker-init -- sleep infinity\n285819              S                   sleep infinity\n",
+      "stop_output": "coalescing-release-arm624-20261118T031137Z\n",
+      "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n"
+    }
+  ],
+  "all_four_suites_passed": true,
+  "containers_stopped_preserved": true
+}

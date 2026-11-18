@@ -1,0 +1,6 @@
+{"passed": false}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 49, in <module>
+    pd=d/expected['label'];pf=pd/'process.json';expected_process_paths.add(pf);assert load(pf)==part;assert part['passed'] and part['variant']==v and part['label']==expected['label'];assert pd==a.run/part['directory'];assert part['exit_code']==0 and part['stderr_bytes']==0;assert part['elapsed_ns']>0 and part['cpu_seconds']>=0 and part['peak_rss_bytes']>0
+                                                                                      ^^^^^^^^^^^^^^
+AssertionError

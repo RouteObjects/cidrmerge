@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:33:11.036529+00:00",
+  "run": "$PLATFORM/control/downstream-harness-controls-linux-01/audit-bad-resource",
+  "path_mapping": [
+    [
+      "$PLATFORM/control/downstream-harness-controls-linux-01/valid/measurements",
+      "$PLATFORM/control/downstream-harness-controls-linux-01/audit-bad-resource"
+    ]
+  ],
+  "auditor_sha256": "5a7f00d8b0808a668420d8fd6392c1d4d15edab27a0c287a330e617e3dafaf9d",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 49, in <module>\n    pd=d/expected['label'];pf=pd/'process.json';expected_process_paths.add(pf);assert load(pf)==part;assert part['passed'] and part['variant']==v and part['label']==expected['label'];assert pd==a.run/part['directory'];assert part['exit_code']==0 and part['stderr_bytes']==0;assert part['elapsed_ns']>0 and part['cpu_seconds']>=0 and part['peak_rss_bytes']>0\n                                                                                      ^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_at": "2026-11-18T03:33:11.041215+00:00"
+}

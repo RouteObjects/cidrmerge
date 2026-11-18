@@ -1,0 +1,3846 @@
+{
+  "platform": "arm64",
+  "group": "sparse",
+  "phase": "primary",
+  "phase_summary": {
+    "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/summary.json",
+    "raw_sha256": "a265e728a876ed4c1a5ce92e08134fd5fb9599f1c7ddfd723b06ea0d01fa0783",
+    "raw_bytes": 7040,
+    "record": {
+      "passed": true,
+      "started_at": "2026-11-18T04:11:22.406202+00:00",
+      "group": "sparse",
+      "platform": "linux",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "pairs": {
+        "mixed-sparse-duplicate-10000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 8821862,
+                "cpu_seconds": 0.008657999999999999,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 9011738,
+                "cpu_seconds": 0.008874,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": 2.15233473386911,
+              "cpu_change_pct": 2.494802494802495,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 8659944,
+                "cpu_seconds": 0.008501,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 8461110,
+                "cpu_seconds": 0.008322,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": -2.296019466176691,
+              "cpu_change_pct": -2.105634631219866,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 9337531,
+                "cpu_seconds": 0.009131,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 8312943,
+                "cpu_seconds": 0.008173,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": -10.972793557526073,
+              "cpu_change_pct": -10.491731464242694,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 8641487,
+                "cpu_seconds": 0.008509,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 8832487,
+                "cpu_seconds": 0.008698,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": 2.210267746743133,
+              "cpu_change_pct": 2.2211775766835196,
+              "rss_change_pct": -0.5399932500843696
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 8213777,
+                "cpu_seconds": 0.008081,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 9191488,
+                "cpu_seconds": 0.009056999999999999,
+                "peak_rss_bytes": 24272896
+              },
+              "elapsed_change_pct": 11.90330587256021,
+              "cpu_change_pct": 12.077713154312587,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 8761153,
+                "cpu_seconds": 0.008607,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 9089446,
+                "cpu_seconds": 0.008926,
+                "peak_rss_bytes": 24272896
+              },
+              "elapsed_change_pct": 3.74714378347234,
+              "cpu_change_pct": 3.7062855815034323,
+              "rss_change_pct": 0.0
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.1813012403061216,
+            "cpu": 2.3579900357430073,
+            "rss": 0.0
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -10.972793557526073,
+              11.90330587256021
+            ],
+            "cpu": [
+              -10.491731464242694,
+              12.077713154312587
+            ],
+            "rss": [
+              -0.5399932500843696,
+              0.0
+            ]
+          }
+        },
+        "mixed-sparse-duplicate-1000000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 267884988,
+                "cpu_seconds": 0.267575,
+                "peak_rss_bytes": 80371712
+              },
+              "C": {
+                "elapsed_ns": 316324477,
+                "cpu_seconds": 0.316125,
+                "peak_rss_bytes": 80379904
+              },
+              "elapsed_change_pct": 18.082196155015605,
+              "cpu_change_pct": 18.144445482574966,
+              "rss_change_pct": 0.010192640913264661
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 271156874,
+                "cpu_seconds": 0.270973,
+                "peak_rss_bytes": 80334848
+              },
+              "C": {
+                "elapsed_ns": 273532756,
+                "cpu_seconds": 0.273335,
+                "peak_rss_bytes": 80375808
+              },
+              "elapsed_change_pct": 0.8762020172868645,
+              "cpu_change_pct": 0.8716735615725391,
+              "rss_change_pct": 0.05098659052669152
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 269792911,
+                "cpu_seconds": 0.268916,
+                "peak_rss_bytes": 80375808
+              },
+              "C": {
+                "elapsed_ns": 287113050,
+                "cpu_seconds": 0.286912,
+                "peak_rss_bytes": 80347136
+              },
+              "elapsed_change_pct": 6.419790251642299,
+              "cpu_change_pct": 6.692052536851656,
+              "rss_change_pct": -0.035672425215305115
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 269870702,
+                "cpu_seconds": 0.26969,
+                "peak_rss_bytes": 80338944
+              },
+              "C": {
+                "elapsed_ns": 272309961,
+                "cpu_seconds": 0.272082,
+                "peak_rss_bytes": 80375808
+              },
+              "elapsed_change_pct": 0.9038621020817539,
+              "cpu_change_pct": 0.8869442693462792,
+              "rss_change_pct": 0.045885591924132996
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 302039723,
+                "cpu_seconds": 0.30161499999999997,
+                "peak_rss_bytes": 80330752
+              },
+              "C": {
+                "elapsed_ns": 272003626,
+                "cpu_seconds": 0.27184099999999994,
+                "peak_rss_bytes": 80347136
+              },
+              "elapsed_change_pct": -9.94441946299891,
+              "cpu_change_pct": -9.871524957313138,
+              "rss_change_pct": 0.020395676116669037
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 273747465,
+                "cpu_seconds": 0.27355799999999997,
+                "peak_rss_bytes": 80375808
+              },
+              "C": {
+                "elapsed_ns": 271820751,
+                "cpu_seconds": 0.271636,
+                "peak_rss_bytes": 80371712
+              },
+              "elapsed_change_pct": -0.7038289834026434,
+              "cpu_change_pct": -0.7025932343415198,
+              "rss_change_pct": -0.00509606074504676
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 0.8900320596843092,
+            "cpu": 0.8793089154594091,
+            "rss": 0.015294158514966849
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -9.94441946299891,
+              18.082196155015605
+            ],
+            "cpu": [
+              -9.871524957313138,
+              18.144445482574966
+            ],
+            "rss": [
+              -0.035672425215305115,
+              0.05098659052669152
+            ]
+          }
+        }
+      },
+      "followup_required": [],
+      "freeze_unchanged": true,
+      "finished_at": "2026-11-18T04:11:27.766273+00:00"
+    }
+  },
+  "independent_audit": {
+    "original_relative_path": "downstream/arm64/audits-01/sparse-primary.json",
+    "raw_sha256": "8da1fbeb08d93de5bd49c4afb24b7dca78d00ba86ad4bc3c25b95d64271d2441",
+    "raw_bytes": 7310,
+    "record": {
+      "passed": true,
+      "started_at": "2026-11-18T04:13:39.910610+00:00",
+      "run": "$PLATFORM/measurements-01/sparse/primary",
+      "path_mapping": [],
+      "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "platform": "linux",
+      "group": "sparse",
+      "case_count": 2,
+      "recomputed": {
+        "mixed-sparse-duplicate-10000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 8821862,
+                "cpu_seconds": 0.008657999999999999,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 9011738,
+                "cpu_seconds": 0.008874,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": 2.15233473386911,
+              "cpu_change_pct": 2.494802494802495,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 8659944,
+                "cpu_seconds": 0.008501,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 8461110,
+                "cpu_seconds": 0.008322,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": -2.296019466176691,
+              "cpu_change_pct": -2.105634631219866,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 9337531,
+                "cpu_seconds": 0.009131,
+                "peak_rss_bytes": 24141824
+              },
+              "C": {
+                "elapsed_ns": 8312943,
+                "cpu_seconds": 0.008173,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": -10.972793557526073,
+              "cpu_change_pct": -10.491731464242694,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 8641487,
+                "cpu_seconds": 0.008509,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 8832487,
+                "cpu_seconds": 0.008698,
+                "peak_rss_bytes": 24141824
+              },
+              "elapsed_change_pct": 2.210267746743133,
+              "cpu_change_pct": 2.2211775766835196,
+              "rss_change_pct": -0.5399932500843696
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 8213777,
+                "cpu_seconds": 0.008081,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 9191488,
+                "cpu_seconds": 0.009056999999999999,
+                "peak_rss_bytes": 24272896
+              },
+              "elapsed_change_pct": 11.90330587256021,
+              "cpu_change_pct": 12.077713154312587,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 8761153,
+                "cpu_seconds": 0.008607,
+                "peak_rss_bytes": 24272896
+              },
+              "C": {
+                "elapsed_ns": 9089446,
+                "cpu_seconds": 0.008926,
+                "peak_rss_bytes": 24272896
+              },
+              "elapsed_change_pct": 3.74714378347234,
+              "cpu_change_pct": 3.7062855815034323,
+              "rss_change_pct": 0.0
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.1813012403061216,
+            "cpu": 2.3579900357430073,
+            "rss": 0.0
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -10.972793557526073,
+              11.90330587256021
+            ],
+            "cpu": [
+              -10.491731464242694,
+              12.077713154312587
+            ],
+            "rss": [
+              -0.5399932500843696,
+              0.0
+            ]
+          }
+        },
+        "mixed-sparse-duplicate-1000000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 267884988,
+                "cpu_seconds": 0.267575,
+                "peak_rss_bytes": 80371712
+              },
+              "C": {
+                "elapsed_ns": 316324477,
+                "cpu_seconds": 0.316125,
+                "peak_rss_bytes": 80379904
+              },
+              "elapsed_change_pct": 18.082196155015605,
+              "cpu_change_pct": 18.144445482574966,
+              "rss_change_pct": 0.010192640913264661
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 271156874,
+                "cpu_seconds": 0.270973,
+                "peak_rss_bytes": 80334848
+              },
+              "C": {
+                "elapsed_ns": 273532756,
+                "cpu_seconds": 0.273335,
+                "peak_rss_bytes": 80375808
+              },
+              "elapsed_change_pct": 0.8762020172868645,
+              "cpu_change_pct": 0.8716735615725391,
+              "rss_change_pct": 0.05098659052669152
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 269792911,
+                "cpu_seconds": 0.268916,
+                "peak_rss_bytes": 80375808
+              },
+              "C": {
+                "elapsed_ns": 287113050,
+                "cpu_seconds": 0.286912,
+                "peak_rss_bytes": 80347136
+              },
+              "elapsed_change_pct": 6.419790251642299,
+              "cpu_change_pct": 6.692052536851656,
+              "rss_change_pct": -0.035672425215305115
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 269870702,
+                "cpu_seconds": 0.26969,
+                "peak_rss_bytes": 80338944
+              },
+              "C": {
+                "elapsed_ns": 272309961,
+                "cpu_seconds": 0.272082,
+                "peak_rss_bytes": 80375808
+              },
+              "elapsed_change_pct": 0.9038621020817539,
+              "cpu_change_pct": 0.8869442693462792,
+              "rss_change_pct": 0.045885591924132996
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 302039723,
+                "cpu_seconds": 0.30161499999999997,
+                "peak_rss_bytes": 80330752
+              },
+              "C": {
+                "elapsed_ns": 272003626,
+                "cpu_seconds": 0.27184099999999994,
+                "peak_rss_bytes": 80347136
+              },
+              "elapsed_change_pct": -9.94441946299891,
+              "cpu_change_pct": -9.871524957313138,
+              "rss_change_pct": 0.020395676116669037
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 273747465,
+                "cpu_seconds": 0.27355799999999997,
+                "peak_rss_bytes": 80375808
+              },
+              "C": {
+                "elapsed_ns": 271820751,
+                "cpu_seconds": 0.271636,
+                "peak_rss_bytes": 80371712
+              },
+              "elapsed_change_pct": -0.7038289834026434,
+              "cpu_change_pct": -0.7025932343415198,
+              "rss_change_pct": -0.00509606074504676
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 0.8900320596843092,
+            "cpu": 0.8793089154594091,
+            "rss": 0.015294158514966849
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -9.94441946299891,
+              18.082196155015605
+            ],
+            "cpu": [
+              -9.871524957313138,
+              18.144445482574966
+            ],
+            "rss": [
+              -0.035672425215305115,
+              0.05098659052669152
+            ]
+          }
+        }
+      },
+      "followup_required": [],
+      "frozen_files_verified": 4367,
+      "all_output_bytes_verified": true,
+      "resource_metrics_reconciled": true,
+      "finished_at": "2026-11-18T04:13:40.866411+00:00"
+    }
+  },
+  "original_freeze_identity": {
+    "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/freeze.json",
+    "raw_sha256": "4ad1c16188f545b50feab5b6dcd2b15fcb7b04d3ecbbdebe15b27e1d1f32df84",
+    "raw_bytes": 888499
+  },
+  "counts": {
+    "measured_samples": 24,
+    "warmups": 4,
+    "measured_processes": 24,
+    "warmup_processes": 4
+  },
+  "sample_records": [
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "baf61fb347490248389cde959a9067e26afa9927fe4bbecdf7f4dc655762a8b5",
+      "raw_bytes": 1910,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 1,
+        "sequence": 4,
+        "started_at": "2026-11-18T04:11:23.456995+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:23.457126+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613364076544,
+            "directory": "round-01/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 8821862,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.007575999999999999,
+              "ru_stime": 0.0010819999999999998,
+              "ru_maxrss": 23576,
+              "ru_minflt": 851,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008657999999999999,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364076544,
+            "finished_at": "2026-11-18T04:11:23.468448+00:00"
+          }
+        ],
+        "elapsed_ns": 8821862,
+        "cpu_seconds": 0.008657999999999999,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:23.468749+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "ab5b855bcd6ef86a33899efc4775f4d38d7bf6760e55b8ddf08194886d888cbb",
+      "raw_bytes": 1873,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 1,
+        "sequence": 5,
+        "started_at": "2026-11-18T04:11:23.469065+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:23.469187+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613364064256,
+            "directory": "round-01/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 9011738,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.006901999999999999,
+              "ru_stime": 0.001972,
+              "ru_maxrss": 23576,
+              "ru_minflt": 847,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008874,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364064256,
+            "finished_at": "2026-11-18T04:11:23.480634+00:00"
+          }
+        ],
+        "elapsed_ns": 9011738,
+        "cpu_seconds": 0.008874,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:23.480895+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "881d8caf5a99ae42a6c13e6ecee686a02924cded95e0cb449c8233ab2f850c89",
+      "raw_bytes": 1878,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 1,
+        "sequence": 6,
+        "started_at": "2026-11-18T04:11:23.481285+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:23.481391+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364056064,
+            "directory": "round-01/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 267884988,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.247607,
+              "ru_stime": 0.019968,
+              "ru_maxrss": 78488,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 4
+            },
+            "cpu_seconds": 0.267575,
+            "peak_rss_bytes": 80371712,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364051968,
+            "finished_at": "2026-11-18T04:11:23.788057+00:00"
+          }
+        ],
+        "elapsed_ns": 267884988,
+        "cpu_seconds": 0.267575,
+        "peak_rss_bytes": 80371712,
+        "finished_at": "2026-11-18T04:11:23.788490+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "c170b5e39808ce503d168b904cca43e32a3f5b1fe6d858a645be52ce445b1d8d",
+      "raw_bytes": 1901,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 1,
+        "sequence": 7,
+        "started_at": "2026-11-18T04:11:23.788808+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:23.788935+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364039680,
+            "directory": "round-01/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 316324477,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.29278699999999996,
+              "ru_stime": 0.023337999999999998,
+              "ru_maxrss": 78496,
+              "ru_minflt": 7568,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 1
+            },
+            "cpu_seconds": 0.316125,
+            "peak_rss_bytes": 80379904,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364031488,
+            "finished_at": "2026-11-18T04:11:24.144356+00:00"
+          }
+        ],
+        "elapsed_ns": 316324477,
+        "cpu_seconds": 0.316125,
+        "peak_rss_bytes": 80379904,
+        "finished_at": "2026-11-18T04:11:24.144767+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "a581cb64f9daf601af21647062b8f9f13a737929248a99fbf29439892fe68320",
+      "raw_bytes": 1874,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 2,
+        "sequence": 11,
+        "started_at": "2026-11-18T04:11:24.778155+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:24.778268+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363986432,
+            "directory": "round-02/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 8659944,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.007438999999999999,
+              "ru_stime": 0.001062,
+              "ru_maxrss": 23576,
+              "ru_minflt": 847,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008501,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363986432,
+            "finished_at": "2026-11-18T04:11:24.789708+00:00"
+          }
+        ],
+        "elapsed_ns": 8659944,
+        "cpu_seconds": 0.008501,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:24.790038+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "8aff4fd1e226002944131f9b1d990f6047145498cab4027621afe33e75811cb6",
+      "raw_bytes": 1875,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 2,
+        "sequence": 10,
+        "started_at": "2026-11-18T04:11:24.766828+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:24.766939+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363994624,
+            "directory": "round-02/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 8461110,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.005201,
+              "ru_stime": 0.0031209999999999996,
+              "ru_maxrss": 23576,
+              "ru_minflt": 850,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008322,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363994624,
+            "finished_at": "2026-11-18T04:11:24.777627+00:00"
+          }
+        ],
+        "elapsed_ns": 8461110,
+        "cpu_seconds": 0.008322,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:24.777839+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "4566ffedfd92e7c2075e586e4e7855f7dc85a7af72ab10f7042ac9394d6e718c",
+      "raw_bytes": 1878,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 2,
+        "sequence": 9,
+        "started_at": "2026-11-18T04:11:24.457645+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:24.457766+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364011008,
+            "directory": "round-02/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 271156874,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.254975,
+              "ru_stime": 0.015998,
+              "ru_maxrss": 78452,
+              "ru_minflt": 7566,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.270973,
+            "peak_rss_bytes": 80334848,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364002816,
+            "finished_at": "2026-11-18T04:11:24.766120+00:00"
+          }
+        ],
+        "elapsed_ns": 271156874,
+        "cpu_seconds": 0.270973,
+        "peak_rss_bytes": 80334848,
+        "finished_at": "2026-11-18T04:11:24.766449+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "4c2162eb3996206d4bd66fcb42cbfc1f342978f3fd1839c2bdd34927b5a3d608",
+      "raw_bytes": 1878,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 2,
+        "sequence": 8,
+        "started_at": "2026-11-18T04:11:24.146126+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:24.146272+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364019200,
+            "directory": "round-02/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 273532756,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.253311,
+              "ru_stime": 0.020024,
+              "ru_maxrss": 78492,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.273335,
+            "peak_rss_bytes": 80375808,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364019200,
+            "finished_at": "2026-11-18T04:11:24.456796+00:00"
+          }
+        ],
+        "elapsed_ns": 273532756,
+        "cpu_seconds": 0.273335,
+        "peak_rss_bytes": 80375808,
+        "finished_at": "2026-11-18T04:11:24.457218+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "15d338763195be6c2807fde59333c9701a4e64b5f641869e9fc5e3085e75d228",
+      "raw_bytes": 1874,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 3,
+        "sequence": 12,
+        "started_at": "2026-11-18T04:11:24.790705+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:24.790855+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363970048,
+            "directory": "round-03/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 9337531,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.005072999999999999,
+              "ru_stime": 0.004058,
+              "ru_maxrss": 23576,
+              "ru_minflt": 848,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.009131,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363970048,
+            "finished_at": "2026-11-18T04:11:24.802683+00:00"
+          }
+        ],
+        "elapsed_ns": 9337531,
+        "cpu_seconds": 0.009131,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:24.803002+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "199876059df8033f228ef7fefe6a71ff7b9d8f452895fc039f355c4e045226fc",
+      "raw_bytes": 1861,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 3,
+        "sequence": 13,
+        "started_at": "2026-11-18T04:11:24.803318+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:24.803434+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363961856,
+            "directory": "round-03/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 8312943,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.00613,
+              "ru_stime": 0.002043,
+              "ru_maxrss": 23576,
+              "ru_minflt": 850,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008173,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363961856,
+            "finished_at": "2026-11-18T04:11:24.814012+00:00"
+          }
+        ],
+        "elapsed_ns": 8312943,
+        "cpu_seconds": 0.008173,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:24.814282+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "bd9a7470d1938dc6da440ca6422c2b5bf5df309f92cba125bfac2c502443b0ea",
+      "raw_bytes": 1891,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 3,
+        "sequence": 14,
+        "started_at": "2026-11-18T04:11:24.814714+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:24.814835+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363953664,
+            "directory": "round-03/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 269792911,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.24992199999999998,
+              "ru_stime": 0.018994,
+              "ru_maxrss": 78492,
+              "ru_minflt": 7567,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 10
+            },
+            "cpu_seconds": 0.268916,
+            "peak_rss_bytes": 80375808,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363949568,
+            "finished_at": "2026-11-18T04:11:25.124071+00:00"
+          }
+        ],
+        "elapsed_ns": 269792911,
+        "cpu_seconds": 0.268916,
+        "peak_rss_bytes": 80375808,
+        "finished_at": "2026-11-18T04:11:25.124472+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "1af6266bb7b8a24271e13a0e573cf3ab0490b99c719a6aee3c4620d522eb7221",
+      "raw_bytes": 1879,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 3,
+        "sequence": 15,
+        "started_at": "2026-11-18T04:11:25.124807+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:25.124930+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363941376,
+            "directory": "round-03/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 287113050,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.264919,
+              "ru_stime": 0.021993,
+              "ru_maxrss": 78464,
+              "ru_minflt": 7562,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.286912,
+            "peak_rss_bytes": 80347136,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363937280,
+            "finished_at": "2026-11-18T04:11:25.451172+00:00"
+          }
+        ],
+        "elapsed_ns": 287113050,
+        "cpu_seconds": 0.286912,
+        "peak_rss_bytes": 80347136,
+        "finished_at": "2026-11-18T04:11:25.451591+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "40eb95e53cb4f74da6f4f3f50dd850b19b9b986e3bde02015bd9ff56ed1c3e6e",
+      "raw_bytes": 1875,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 4,
+        "sequence": 19,
+        "started_at": "2026-11-18T04:11:26.083425+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:26.083528+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363867648,
+            "directory": "round-04/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 8641487,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.006618,
+              "ru_stime": 0.0018909999999999999,
+              "ru_maxrss": 23704,
+              "ru_minflt": 853,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008509,
+            "peak_rss_bytes": 24272896,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363867648,
+            "finished_at": "2026-11-18T04:11:26.094695+00:00"
+          }
+        ],
+        "elapsed_ns": 8641487,
+        "cpu_seconds": 0.008509,
+        "peak_rss_bytes": 24272896,
+        "finished_at": "2026-11-18T04:11:26.094982+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "e9416b450e8752ae9b3726065df260a4d898d69f06b94204aee0f0a957a03320",
+      "raw_bytes": 1888,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 4,
+        "sequence": 18,
+        "started_at": "2026-11-18T04:11:26.071656+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:26.071766+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363900416,
+            "directory": "round-04/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 8832487,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0048319999999999995,
+              "ru_stime": 0.0038659999999999996,
+              "ru_maxrss": 23576,
+              "ru_minflt": 851,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008698,
+            "peak_rss_bytes": 24141824,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363879936,
+            "finished_at": "2026-11-18T04:11:26.082875+00:00"
+          }
+        ],
+        "elapsed_ns": 8832487,
+        "cpu_seconds": 0.008698,
+        "peak_rss_bytes": 24141824,
+        "finished_at": "2026-11-18T04:11:26.083134+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "9f99a0030092e2be8748ed3be76e1c6871568e592b44ed56e4a051f2e4d9afe3",
+      "raw_bytes": 1888,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 4,
+        "sequence": 17,
+        "started_at": "2026-11-18T04:11:25.763609+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:25.763712+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363916800,
+            "directory": "round-04/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 269870702,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.25171099999999996,
+              "ru_stime": 0.017979,
+              "ru_maxrss": 78456,
+              "ru_minflt": 7562,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 1
+            },
+            "cpu_seconds": 0.26969,
+            "peak_rss_bytes": 80338944,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363908608,
+            "finished_at": "2026-11-18T04:11:26.070855+00:00"
+          }
+        ],
+        "elapsed_ns": 269870702,
+        "cpu_seconds": 0.26969,
+        "peak_rss_bytes": 80338944,
+        "finished_at": "2026-11-18T04:11:26.071227+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "6d27124252cee49e129d322ac8ef2e4f507ee434a38c8c78108afc88427d6b84",
+      "raw_bytes": 1879,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 4,
+        "sequence": 16,
+        "started_at": "2026-11-18T04:11:25.452201+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:25.452354+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363929088,
+            "directory": "round-04/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 272309961,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.254077,
+              "ru_stime": 0.018005,
+              "ru_maxrss": 78492,
+              "ru_minflt": 7570,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.272082,
+            "peak_rss_bytes": 80375808,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363924992,
+            "finished_at": "2026-11-18T04:11:25.763004+00:00"
+          }
+        ],
+        "elapsed_ns": 272309961,
+        "cpu_seconds": 0.272082,
+        "peak_rss_bytes": 80375808,
+        "finished_at": "2026-11-18T04:11:25.763332+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "95615248422c67327a86dd6d96e05c20c651856b54e6f98a1817a38b2cce6517",
+      "raw_bytes": 1875,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 5,
+        "sequence": 20,
+        "started_at": "2026-11-18T04:11:26.095477+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:26.095606+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363859456,
+            "directory": "round-05/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 8213777,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.005051,
+              "ru_stime": 0.0030299999999999997,
+              "ru_maxrss": 23704,
+              "ru_minflt": 851,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008081,
+            "peak_rss_bytes": 24272896,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363843072,
+            "finished_at": "2026-11-18T04:11:26.106144+00:00"
+          }
+        ],
+        "elapsed_ns": 8213777,
+        "cpu_seconds": 0.008081,
+        "peak_rss_bytes": 24272896,
+        "finished_at": "2026-11-18T04:11:26.106428+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "e4dac32a836a773336766c3fe0555571a198ea32de25c4671efff6a6759fab8a",
+      "raw_bytes": 1886,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 5,
+        "sequence": 21,
+        "started_at": "2026-11-18T04:11:26.106722+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:26.106834+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363830784,
+            "directory": "round-05/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 9191488,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.006038,
+              "ru_stime": 0.003019,
+              "ru_maxrss": 23704,
+              "ru_minflt": 853,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.009056999999999999,
+            "peak_rss_bytes": 24272896,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363830784,
+            "finished_at": "2026-11-18T04:11:26.118504+00:00"
+          }
+        ],
+        "elapsed_ns": 9191488,
+        "cpu_seconds": 0.009056999999999999,
+        "peak_rss_bytes": 24272896,
+        "finished_at": "2026-11-18T04:11:26.119012+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "99ebeea9e391b9739300e61b21ef1e1a407dd64eada2a3f8437532f4649e0f94",
+      "raw_bytes": 1913,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 5,
+        "sequence": 22,
+        "started_at": "2026-11-18T04:11:26.119485+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:26.119594+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363822592,
+            "directory": "round-05/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 302039723,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.28963099999999997,
+              "ru_stime": 0.011984,
+              "ru_maxrss": 78448,
+              "ru_minflt": 7566,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 54
+            },
+            "cpu_seconds": 0.30161499999999997,
+            "peak_rss_bytes": 80330752,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363802112,
+            "finished_at": "2026-11-18T04:11:26.459572+00:00"
+          }
+        ],
+        "elapsed_ns": 302039723,
+        "cpu_seconds": 0.30161499999999997,
+        "peak_rss_bytes": 80330752,
+        "finished_at": "2026-11-18T04:11:26.459892+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "65ae00833428aa6522ab81cf63c12b76850ff931cc740e7b23784be5b5b3c5c7",
+      "raw_bytes": 1924,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 5,
+        "sequence": 23,
+        "started_at": "2026-11-18T04:11:26.460180+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:26.460282+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363793920,
+            "directory": "round-05/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 272003626,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.25684999999999997,
+              "ru_stime": 0.014990999999999999,
+              "ru_maxrss": 78464,
+              "ru_minflt": 7561,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.27184099999999994,
+            "peak_rss_bytes": 80347136,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363785728,
+            "finished_at": "2026-11-18T04:11:26.770293+00:00"
+          }
+        ],
+        "elapsed_ns": 272003626,
+        "cpu_seconds": 0.27184099999999994,
+        "peak_rss_bytes": 80347136,
+        "finished_at": "2026-11-18T04:11:26.770685+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "a62b76f334ac99aab10c5c809c08a9ec0b7b987e9e3624c9de171bebc1a0b640",
+      "raw_bytes": 1862,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 6,
+        "sequence": 27,
+        "started_at": "2026-11-18T04:11:27.405333+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:27.405441+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363744768,
+            "directory": "round-06/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 8761153,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.005738,
+              "ru_stime": 0.002869,
+              "ru_maxrss": 23704,
+              "ru_minflt": 852,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008607,
+            "peak_rss_bytes": 24272896,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363744768,
+            "finished_at": "2026-11-18T04:11:27.416913+00:00"
+          }
+        ],
+        "elapsed_ns": 8761153,
+        "cpu_seconds": 0.008607,
+        "peak_rss_bytes": 24272896,
+        "finished_at": "2026-11-18T04:11:27.417207+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "1ebef8fb204a47cf505f521bb3504df3b1616ac2071c9ecb05bfd0ee297b5a96",
+      "raw_bytes": 1875,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 6,
+        "sequence": 26,
+        "started_at": "2026-11-18T04:11:27.393045+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:27.393187+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613363757056,
+            "directory": "round-06/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 9089446,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0069429999999999995,
+              "ru_stime": 0.001983,
+              "ru_maxrss": 23704,
+              "ru_minflt": 853,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008926,
+            "peak_rss_bytes": 24272896,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363752960,
+            "finished_at": "2026-11-18T04:11:27.404739+00:00"
+          }
+        ],
+        "elapsed_ns": 9089446,
+        "cpu_seconds": 0.008926,
+        "peak_rss_bytes": 24272896,
+        "finished_at": "2026-11-18T04:11:27.405022+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "23e6468716f26ba90e3e4b4472366e12564415cda15d7cb69bda3f521174f57e",
+      "raw_bytes": 1913,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 6,
+        "sequence": 25,
+        "started_at": "2026-11-18T04:11:27.080254+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:27.080359+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363769344,
+            "directory": "round-06/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 273747465,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.251594,
+              "ru_stime": 0.021963999999999997,
+              "ru_maxrss": 78492,
+              "ru_minflt": 7567,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.27355799999999997,
+            "peak_rss_bytes": 80375808,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363769344,
+            "finished_at": "2026-11-18T04:11:27.392153+00:00"
+          }
+        ],
+        "elapsed_ns": 273747465,
+        "cpu_seconds": 0.27355799999999997,
+        "peak_rss_bytes": 80375808,
+        "finished_at": "2026-11-18T04:11:27.392582+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "8064a70d460e6e6f390c3bc62374003c444983a272fbad3b964d825c4b03d656",
+      "raw_bytes": 1890,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 6,
+        "sequence": 24,
+        "started_at": "2026-11-18T04:11:26.771262+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:26.771388+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613363777536,
+            "directory": "round-06/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 271820751,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.25465899999999997,
+              "ru_stime": 0.016977,
+              "ru_maxrss": 78488,
+              "ru_minflt": 7569,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 1
+            },
+            "cpu_seconds": 0.271636,
+            "peak_rss_bytes": 80371712,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613363777536,
+            "finished_at": "2026-11-18T04:11:27.079652+00:00"
+          }
+        ],
+        "elapsed_ns": 271820751,
+        "cpu_seconds": 0.271636,
+        "peak_rss_bytes": 80371712,
+        "finished_at": "2026-11-18T04:11:27.079973+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-10000/B/sample.json",
+      "raw_sha256": "05b778ae7006e735f101f9d45a76b27c7f3b362e72150bb0501c444d22f3cd72",
+      "raw_bytes": 1859,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 0,
+        "sequence": 0,
+        "started_at": "2026-11-18T04:11:22.794757+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:22.794905+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613364162560,
+            "directory": "warmup/mixed-sparse-duplicate-10000/B/mixed",
+            "elapsed_ns": 9089654,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.006441,
+              "ru_stime": 0.002147,
+              "ru_maxrss": 22244,
+              "ru_minflt": 847,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.008588,
+            "peak_rss_bytes": 22777856,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364162560,
+            "finished_at": "2026-11-18T04:11:22.806375+00:00"
+          }
+        ],
+        "elapsed_ns": 9089654,
+        "cpu_seconds": 0.008588,
+        "peak_rss_bytes": 22777856,
+        "finished_at": "2026-11-18T04:11:22.806683+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-10000/C/sample.json",
+      "raw_sha256": "a42bdfdbdbca10c4d42f57289649b82c5cd58ee00829cb7beb94aced069f25f6",
+      "raw_bytes": 1859,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-10000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 0,
+        "sequence": 1,
+        "started_at": "2026-11-18T04:11:22.807081+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:22.807195+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+            ],
+            "free_bytes_before": 5613364150272,
+            "directory": "warmup/mixed-sparse-duplicate-10000/C/mixed",
+            "elapsed_ns": 8106860,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.004983,
+              "ru_stime": 0.002989,
+              "ru_maxrss": 22244,
+              "ru_minflt": 847,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 331,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.007972,
+            "peak_rss_bytes": 22777856,
+            "output_bytes": 169981,
+            "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364150272,
+            "finished_at": "2026-11-18T04:11:22.817889+00:00"
+          }
+        ],
+        "elapsed_ns": 8106860,
+        "cpu_seconds": 0.007972,
+        "peak_rss_bytes": 22777856,
+        "finished_at": "2026-11-18T04:11:22.818153+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-1000000/B/sample.json",
+      "raw_sha256": "799deee52924d0503f7a35f9e3e45febc2dadea8cc61c3c69f618642191d3bfa",
+      "raw_bytes": 1898,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "B",
+        "round": 0,
+        "sequence": 2,
+        "started_at": "2026-11-18T04:11:22.818578+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:22.818686+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364142080,
+            "directory": "warmup/mixed-sparse-duplicate-1000000/B/mixed",
+            "elapsed_ns": 278721356,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.253532,
+              "ru_stime": 0.024954,
+              "ru_maxrss": 78508,
+              "ru_minflt": 7566,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.27848599999999996,
+            "peak_rss_bytes": 80392192,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364133888,
+            "finished_at": "2026-11-18T04:11:23.139251+00:00"
+          }
+        ],
+        "elapsed_ns": 278721356,
+        "cpu_seconds": 0.27848599999999996,
+        "peak_rss_bytes": 80392192,
+        "finished_at": "2026-11-18T04:11:23.139594+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-1000000/C/sample.json",
+      "raw_sha256": "d751c68df3497552a44562029a8090cac76a907ebf97b54ea45dea3825f24cbc",
+      "raw_bytes": 1875,
+      "record": {
+        "passed": true,
+        "id": "mixed-sparse-duplicate-1000000",
+        "group": "sparse",
+        "suite": "native",
+        "variant": "C",
+        "round": 0,
+        "sequence": 3,
+        "started_at": "2026-11-18T04:11:23.139919+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:23.140034+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+            ],
+            "free_bytes_before": 5613364121600,
+            "directory": "warmup/mixed-sparse-duplicate-1000000/C/mixed",
+            "elapsed_ns": 278068187,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.25288,
+              "ru_stime": 0.024988,
+              "ru_maxrss": 78496,
+              "ru_minflt": 7569,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 34891,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.277868,
+            "peak_rss_bytes": 80379904,
+            "output_bytes": 17864212,
+            "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613364084736,
+            "finished_at": "2026-11-18T04:11:23.456006+00:00"
+          }
+        ],
+        "elapsed_ns": 278068187,
+        "cpu_seconds": 0.277868,
+        "peak_rss_bytes": 80379904,
+        "finished_at": "2026-11-18T04:11:23.456409+00:00"
+      }
+    }
+  ],
+  "process_records": [
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "5453665c9cc2504390e566e6d62eef6bcb8a785fc3f1fd5a627a2b9aacea98dd",
+      "raw_bytes": 1357,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:23.457126+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613364076544,
+        "directory": "round-01/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 8821862,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.007575999999999999,
+          "ru_stime": 0.0010819999999999998,
+          "ru_maxrss": 23576,
+          "ru_minflt": 851,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008657999999999999,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364076544,
+        "finished_at": "2026-11-18T04:11:23.468448+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "dae2b1fd153a8167d806a86982a9d45f5d65035751f384c26f6dfb2fc83f93e8",
+      "raw_bytes": 1332,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:23.469187+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613364064256,
+        "directory": "round-01/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 9011738,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.006901999999999999,
+          "ru_stime": 0.001972,
+          "ru_maxrss": 23576,
+          "ru_minflt": 847,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008874,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364064256,
+        "finished_at": "2026-11-18T04:11:23.480634+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "f50205f938aaed0919a85335d600394aad5242dee01a9b65e4f1dd5bc23d1742",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:23.481391+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364056064,
+        "directory": "round-01/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 267884988,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.247607,
+          "ru_stime": 0.019968,
+          "ru_maxrss": 78488,
+          "ru_minflt": 7570,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 4
+        },
+        "cpu_seconds": 0.267575,
+        "peak_rss_bytes": 80371712,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364051968,
+        "finished_at": "2026-11-18T04:11:23.788057+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-01/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "ddb1956acb16c696997a6a6a3c1e8870a65ad03193cc7f1dae21c155949cd51b",
+      "raw_bytes": 1356,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:23.788935+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364039680,
+        "directory": "round-01/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 316324477,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.29278699999999996,
+          "ru_stime": 0.023337999999999998,
+          "ru_maxrss": 78496,
+          "ru_minflt": 7568,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 1
+        },
+        "cpu_seconds": 0.316125,
+        "peak_rss_bytes": 80379904,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364031488,
+        "finished_at": "2026-11-18T04:11:24.144356+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "852b5e891b7f3bd7d6f35370932b21f0b8f9caebaefb4e2969a48e2b643656da",
+      "raw_bytes": 1332,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:24.778268+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363986432,
+        "directory": "round-02/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 8659944,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.007438999999999999,
+          "ru_stime": 0.001062,
+          "ru_maxrss": 23576,
+          "ru_minflt": 847,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008501,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363986432,
+        "finished_at": "2026-11-18T04:11:24.789708+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "88b7e9d6366a1d021a2c4fa9418c8df0acac6ee98393d13c32213e0595b7329a",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:24.766939+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363994624,
+        "directory": "round-02/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 8461110,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.005201,
+          "ru_stime": 0.0031209999999999996,
+          "ru_maxrss": 23576,
+          "ru_minflt": 850,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008322,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363994624,
+        "finished_at": "2026-11-18T04:11:24.777627+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "ae25a00c921ced856825e53238e0bd368a0bb672c1002724fc28b96f35f85ce0",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:24.457766+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364011008,
+        "directory": "round-02/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 271156874,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.254975,
+          "ru_stime": 0.015998,
+          "ru_maxrss": 78452,
+          "ru_minflt": 7566,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.270973,
+        "peak_rss_bytes": 80334848,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364002816,
+        "finished_at": "2026-11-18T04:11:24.766120+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-02/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "c6705e0e40efed4b4921e7178f74db135871ddb3dd89d3eb8a85b572c802936e",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:24.146272+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364019200,
+        "directory": "round-02/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 273532756,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.253311,
+          "ru_stime": 0.020024,
+          "ru_maxrss": 78492,
+          "ru_minflt": 7570,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.273335,
+        "peak_rss_bytes": 80375808,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364019200,
+        "finished_at": "2026-11-18T04:11:24.456796+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "d6e99e749a322af2f573206e6602697a2de941347c497860e86579eb0375b5c5",
+      "raw_bytes": 1332,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:24.790855+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363970048,
+        "directory": "round-03/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 9337531,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.005072999999999999,
+          "ru_stime": 0.004058,
+          "ru_maxrss": 23576,
+          "ru_minflt": 848,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.009131,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363970048,
+        "finished_at": "2026-11-18T04:11:24.802683+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "9273111b1b75f93b39fb83dce691b087a18185a8891c33bbbc7c43e005f6b1b8",
+      "raw_bytes": 1319,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:24.803434+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363961856,
+        "directory": "round-03/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 8312943,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.00613,
+          "ru_stime": 0.002043,
+          "ru_maxrss": 23576,
+          "ru_minflt": 850,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008173,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363961856,
+        "finished_at": "2026-11-18T04:11:24.814012+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "a670bc5dba71daae80ac0ee7e5cf3170c30b0d0fcdd0b9334997747ac40b7016",
+      "raw_bytes": 1345,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:24.814835+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363953664,
+        "directory": "round-03/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 269792911,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.24992199999999998,
+          "ru_stime": 0.018994,
+          "ru_maxrss": 78492,
+          "ru_minflt": 7567,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 10
+        },
+        "cpu_seconds": 0.268916,
+        "peak_rss_bytes": 80375808,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363949568,
+        "finished_at": "2026-11-18T04:11:25.124071+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-03/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "d768a7b64701afc11a17d37458cdd8cee1c579a18bf2edbe183fa42aa5a49b75",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:25.124930+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363941376,
+        "directory": "round-03/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 287113050,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.264919,
+          "ru_stime": 0.021993,
+          "ru_maxrss": 78464,
+          "ru_minflt": 7562,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.286912,
+        "peak_rss_bytes": 80347136,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363937280,
+        "finished_at": "2026-11-18T04:11:25.451172+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "a9c4b3fb607af74a790218d6bab1c79892a51b84e26fdaacc1e025d555c57cea",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:26.083528+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363867648,
+        "directory": "round-04/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 8641487,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.006618,
+          "ru_stime": 0.0018909999999999999,
+          "ru_maxrss": 23704,
+          "ru_minflt": 853,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008509,
+        "peak_rss_bytes": 24272896,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363867648,
+        "finished_at": "2026-11-18T04:11:26.094695+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "5969c2bdaca6f5df5678ed367d969d006faff4af516006f279593ee157e55073",
+      "raw_bytes": 1346,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:26.071766+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363900416,
+        "directory": "round-04/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 8832487,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0048319999999999995,
+          "ru_stime": 0.0038659999999999996,
+          "ru_maxrss": 23576,
+          "ru_minflt": 851,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008698,
+        "peak_rss_bytes": 24141824,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363879936,
+        "finished_at": "2026-11-18T04:11:26.082875+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "e538d427b872e4aed1c7cf82ec5c3244cec206bb4b82c51faa4aa35d037b949e",
+      "raw_bytes": 1343,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:25.763712+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363916800,
+        "directory": "round-04/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 269870702,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.25171099999999996,
+          "ru_stime": 0.017979,
+          "ru_maxrss": 78456,
+          "ru_minflt": 7562,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 1
+        },
+        "cpu_seconds": 0.26969,
+        "peak_rss_bytes": 80338944,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363908608,
+        "finished_at": "2026-11-18T04:11:26.070855+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-04/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "ac117d2a37718b82fbd97c5a2eaa516820da71822f100ab1a905a2d742b92361",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:25.452354+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363929088,
+        "directory": "round-04/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 272309961,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.254077,
+          "ru_stime": 0.018005,
+          "ru_maxrss": 78492,
+          "ru_minflt": 7570,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.272082,
+        "peak_rss_bytes": 80375808,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363924992,
+        "finished_at": "2026-11-18T04:11:25.763004+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "96f2a6b34ebc27d6e59a729b356d83b92ec28971f626913e1bedcec9eebeb921",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:26.095606+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363859456,
+        "directory": "round-05/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 8213777,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.005051,
+          "ru_stime": 0.0030299999999999997,
+          "ru_maxrss": 23704,
+          "ru_minflt": 851,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008081,
+        "peak_rss_bytes": 24272896,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363843072,
+        "finished_at": "2026-11-18T04:11:26.106144+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "50c6eb306ec83b47b48374b2254f70e4fe594d5cac8998f96687200164657759",
+      "raw_bytes": 1332,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:26.106834+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363830784,
+        "directory": "round-05/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 9191488,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.006038,
+          "ru_stime": 0.003019,
+          "ru_maxrss": 23704,
+          "ru_minflt": 853,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.009056999999999999,
+        "peak_rss_bytes": 24272896,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363830784,
+        "finished_at": "2026-11-18T04:11:26.118504+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "837d8d4ecc753f6ad589299f542f7377f14396bcdb7ed24d7db64b8d46e7e432",
+      "raw_bytes": 1356,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:26.119594+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363822592,
+        "directory": "round-05/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 302039723,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.28963099999999997,
+          "ru_stime": 0.011984,
+          "ru_maxrss": 78448,
+          "ru_minflt": 7566,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 54
+        },
+        "cpu_seconds": 0.30161499999999997,
+        "peak_rss_bytes": 80330752,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363802112,
+        "finished_at": "2026-11-18T04:11:26.459572+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-05/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "16854a27dc2dcd567d13c2d86acd4eda6108515f72fd6fcb4e6430c97f0dd154",
+      "raw_bytes": 1367,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:26.460282+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363793920,
+        "directory": "round-05/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 272003626,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.25684999999999997,
+          "ru_stime": 0.014990999999999999,
+          "ru_maxrss": 78464,
+          "ru_minflt": 7561,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.27184099999999994,
+        "peak_rss_bytes": 80347136,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363785728,
+        "finished_at": "2026-11-18T04:11:26.770293+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "5c1ffbe5a47b67538e2fed853452d143d7a131fb8f64a0831bba58eb038cde8b",
+      "raw_bytes": 1320,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:27.405441+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363744768,
+        "directory": "round-06/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 8761153,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.005738,
+          "ru_stime": 0.002869,
+          "ru_maxrss": 23704,
+          "ru_minflt": 852,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008607,
+        "peak_rss_bytes": 24272896,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363744768,
+        "finished_at": "2026-11-18T04:11:27.416913+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "b636b50fa6e4c3c8f8e2cb15b5321c16ab973d615e990f5a420dde2ca5ddb59c",
+      "raw_bytes": 1333,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:27.393187+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613363757056,
+        "directory": "round-06/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 9089446,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0069429999999999995,
+          "ru_stime": 0.001983,
+          "ru_maxrss": 23704,
+          "ru_minflt": 853,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008926,
+        "peak_rss_bytes": 24272896,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363752960,
+        "finished_at": "2026-11-18T04:11:27.404739+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "0dceb4531461277b4a07752b7652a0a5d0e55ca0a5675676e14c4abf3af448f9",
+      "raw_bytes": 1356,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:27.080359+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363769344,
+        "directory": "round-06/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 273747465,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.251594,
+          "ru_stime": 0.021963999999999997,
+          "ru_maxrss": 78492,
+          "ru_minflt": 7567,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.27355799999999997,
+        "peak_rss_bytes": 80375808,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363769344,
+        "finished_at": "2026-11-18T04:11:27.392153+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/round-06/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "5632cf60b8bc3351cf05bda725cc6e344620d52b7ae9aeb745b644531685cc9f",
+      "raw_bytes": 1344,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:26.771388+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613363777536,
+        "directory": "round-06/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 271820751,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.25465899999999997,
+          "ru_stime": 0.016977,
+          "ru_maxrss": 78488,
+          "ru_minflt": 7569,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 1
+        },
+        "cpu_seconds": 0.271636,
+        "peak_rss_bytes": 80371712,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613363777536,
+        "finished_at": "2026-11-18T04:11:27.079652+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-10000/B/mixed/process.json",
+      "raw_sha256": "399e0de606586478e8806b42aaab3185fd79a4667c3b752afae36f578346dbd6",
+      "raw_bytes": 1318,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:22.794905+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613364162560,
+        "directory": "warmup/mixed-sparse-duplicate-10000/B/mixed",
+        "elapsed_ns": 9089654,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.006441,
+          "ru_stime": 0.002147,
+          "ru_maxrss": 22244,
+          "ru_minflt": 847,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.008588,
+        "peak_rss_bytes": 22777856,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364162560,
+        "finished_at": "2026-11-18T04:11:22.806375+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-10000/C/mixed/process.json",
+      "raw_sha256": "21519747b75246588541836724af6cfb463bcdc7fd6f17ca5f861fbd661bb771",
+      "raw_bytes": 1318,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:22.807195+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-10000/input.txt"
+        ],
+        "free_bytes_before": 5613364150272,
+        "directory": "warmup/mixed-sparse-duplicate-10000/C/mixed",
+        "elapsed_ns": 8106860,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.004983,
+          "ru_stime": 0.002989,
+          "ru_maxrss": 22244,
+          "ru_minflt": 847,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 331,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.007972,
+        "peak_rss_bytes": 22777856,
+        "output_bytes": 169981,
+        "output_sha256": "ca36ed4822dc1c9125e7c2453588c6c0e9a95395f719ae345063b338c3c8ab84",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364150272,
+        "finished_at": "2026-11-18T04:11:22.817889+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-1000000/B/mixed/process.json",
+      "raw_sha256": "6198dc1ab4ca08515895a2b4b50c45ef2831d34e69604bec6e1816fc8444f4e7",
+      "raw_bytes": 1342,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:22.818686+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364142080,
+        "directory": "warmup/mixed-sparse-duplicate-1000000/B/mixed",
+        "elapsed_ns": 278721356,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.253532,
+          "ru_stime": 0.024954,
+          "ru_maxrss": 78508,
+          "ru_minflt": 7566,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.27848599999999996,
+        "peak_rss_bytes": 80392192,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364133888,
+        "finished_at": "2026-11-18T04:11:23.139251+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/sparse/primary/warmup/mixed-sparse-duplicate-1000000/C/mixed/process.json",
+      "raw_sha256": "63276540cbe1c01bfb517439d11330c47478d45c352c7df11e8d843d8169dffd",
+      "raw_bytes": 1330,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:23.140034+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/sparse/mixed-sparse-duplicate-1000000/input.txt"
+        ],
+        "free_bytes_before": 5613364121600,
+        "directory": "warmup/mixed-sparse-duplicate-1000000/C/mixed",
+        "elapsed_ns": 278068187,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.25288,
+          "ru_stime": 0.024988,
+          "ru_maxrss": 78496,
+          "ru_minflt": 7569,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 34891,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.277868,
+        "peak_rss_bytes": 80379904,
+        "output_bytes": 17864212,
+        "output_sha256": "b0194fd5feaaaa11937718ff0ecce4b50590ab4dd41d47111ca559e02f0b067c",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613364084736,
+        "finished_at": "2026-11-18T04:11:23.456006+00:00"
+      }
+    }
+  ]
+}

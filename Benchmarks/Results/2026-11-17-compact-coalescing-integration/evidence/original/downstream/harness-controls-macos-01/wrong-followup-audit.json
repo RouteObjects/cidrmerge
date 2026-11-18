@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:32:13.511662+00:00",
+  "run": "$EXPERIMENT/downstream/harness-controls-macos-01/audit-wrong-followup",
+  "path_mapping": [
+    [
+      "$EXPERIMENT/downstream/harness-controls-macos-01/valid/measurements",
+      "$EXPERIMENT/downstream/harness-controls-macos-01/audit-wrong-followup"
+    ]
+  ],
+  "auditor_sha256": "5a7f00d8b0808a668420d8fd6392c1d4d15edab27a0c287a330e617e3dafaf9d",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 77, in <module>\n    assert expected_followup==summary['followup_required'];assert set(summary['pairs'])=={c['id'] for c in cases}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_at": "2026-11-18T03:32:13.523351+00:00"
+}

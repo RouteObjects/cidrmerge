@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "comparison": "current cidrmerge, published swift-cidr 0.10.1 versus new published upstream release; no local path overrides; seven other pins identical",
+  "variants": [
+    "B",
+    "C"
+  ],
+  "cli_version_before_release_bump": "0.4.2",
+  "groups": {
+    "original": {
+      "configurations": 11,
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32
+    },
+    "scale": {
+      "configurations": 12,
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24
+    },
+    "sparse": {
+      "configurations": 2,
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4
+    }
+  },
+  "total": {
+    "configurations": 25,
+    "measured_samples": 300,
+    "warmups": 50,
+    "measured_processes": 360,
+    "warmup_processes": 60
+  },
+  "pairs": 6,
+  "warmup": "one excluded warmup per variant/configuration, B then C",
+  "schedule": "each group separately; round 1 B,C then alternate; rotate configuration order by round index",
+  "aggregation": "split observations sum elapsed and CPU; maximum constituent-process peak RSS",
+  "followup": "one separate fixed six-pair phase per group for configurations with primary paired-median elapsed or RSS increase above 5%; retain all individual outliers and samples; no recursive follow-ups or pooling",
+  "output": "full bytes and SHA256 matched to independent preserved references after timing; stderr must be empty",
+  "resource_measurement": "perf_counter_ns around child launch/wait; macOS /usr/bin/time -p -l; Linux exact-child wait4 ru_maxrss KiB times1024",
+  "disk_minimum_bytes": 3221225472,
+  "timeout_seconds": 180,
+  "deduplication": "after timing and complete-byte/hash verification, outputs hardlinked only to a fresh platform-local content store; never links to historical reference files",
+  "isolation": "serialize macOS and OrbStack timed windows; no concurrent builds/tests/profiling/transfers/corpus hashing; swift-dev independent"
+}

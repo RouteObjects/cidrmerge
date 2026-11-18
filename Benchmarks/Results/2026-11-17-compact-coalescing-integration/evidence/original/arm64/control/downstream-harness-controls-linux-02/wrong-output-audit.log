@@ -1,0 +1,6 @@
+{"passed": false}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 53, in <module>
+    out=pd/'stdout';err=pd/'stderr';assert out.stat().st_size==part['output_bytes']==expected['output_bytes'];assert sha(out)==part['output_sha256']==expected['output_sha256'];assert err.stat().st_size==0 and sha(err)==part['stderr_sha256']==hashlib.sha256(b'').hexdigest();assert equal(out,path(Path(frozen['shared'])/expected['reference']));assert part['complete_reference_bytes_match'];assert part['free_bytes_before']>=3*1024**3+expected['output_bytes'] and part['free_bytes_after']>=3*1024**3
+                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:40:36.162158+00:00",
+  "run": "$EXPERIMENT/downstream/harness-controls-macos-02/audit-overlap-parts",
+  "path_mapping": [
+    [
+      "$EXPERIMENT/downstream/harness-controls-macos-02/valid/measurements",
+      "$EXPERIMENT/downstream/harness-controls-macos-02/audit-overlap-parts"
+    ]
+  ],
+  "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+  "error": "AssertionError('Split-family process intervals overlap')",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 59, in <module>\n    assert all(parts[i]['finished_at']<=parts[i+1]['started_at'] for i in range(len(parts)-1)),'Split-family process intervals overlap'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Split-family process intervals overlap\n",
+  "finished_at": "2026-11-18T03:40:36.169458+00:00"
+}

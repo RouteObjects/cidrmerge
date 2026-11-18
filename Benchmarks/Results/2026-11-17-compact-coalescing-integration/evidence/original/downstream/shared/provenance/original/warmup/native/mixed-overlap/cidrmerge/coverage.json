@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "fixture": "$PRIOR_EXPERIMENT/fixtures/mixed-overlap",
+  "started_at": "2026-11-14T21:23:15.252254+00:00",
+  "expected_sha256": "df4d5bff67b41ec08fb5db793e84a837cd7ab214fbf2c954441f46b733dba864",
+  "output_files": [
+    {
+      "path": "$PRIOR_EXPERIMENT/warmup/native/mixed-overlap/cidrmerge/mixed.stdout",
+      "bytes": 25,
+      "line_count": 2,
+      "blank_lines": 0,
+      "sha256": "dd3b6a74f444a73621f3f19674e0c3083f9b202efc2923f82c82b3dfe1dcabac"
+    }
+  ],
+  "actual": {
+    "input_count": 2,
+    "family_counts": {
+      "ipv4": 1,
+      "ipv6": 1
+    },
+    "coverage_sha256": "d5abf69f7b997011affb11ca5d9bae4ca1d3b5435ce79a73394dabe4273cbc41",
+    "coverage_serialization": "concatenated records: family uint8 (4 or 6), start uint128 big-endian, end uint128 big-endian; IPv4 records first, sorted/coalesced per family",
+    "range_count": 2,
+    "range_count_by_family": {
+      "ipv4": 1,
+      "ipv6": 1
+    },
+    "minimal_cidr_count": 2,
+    "minimal_cidr_count_by_family": {
+      "ipv4": 1,
+      "ipv6": 1
+    },
+    "addresses_covered": {
+      "ipv4": "16777216",
+      "ipv6": "79228162514264337593543950336"
+    }
+  },
+  "expected_coverage_sha256": "d5abf69f7b997011affb11ca5d9bae4ca1d3b5435ce79a73394dabe4273cbc41",
+  "expected_minimal_cidr_count": 2,
+  "finished_at": "2026-11-14T21:23:15.262254+00:00"
+}

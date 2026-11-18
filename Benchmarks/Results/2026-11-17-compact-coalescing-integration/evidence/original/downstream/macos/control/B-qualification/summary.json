@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "variant": "B",
+  "source_commit": "5ab794a5a0578c03fd7b52f3b72889de201c09f8",
+  "source_freeze": "control/cidrmerge-baseline-freeze.json",
+  "started_at": "2026-11-18T03:38:49.657079+00:00",
+  "steps": [
+    {
+      "name": "B-ordinary-release",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/B-ordinary",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--product",
+        "cidrmerge"
+      ],
+      "started_at": "2026-11-18T03:38:50.743214+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:39:14.736112+00:00",
+      "log": "downstream/macos/logs/B-ordinary-release.log",
+      "log_sha256": "b01de7a3e4735d545fd2e1f3cc295950a0e3edbd1e79406e7e545d13afb4e4b2",
+      "passed": true,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5618261704704
+      }
+    },
+    {
+      "name": "B-test-debug",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/B-tests",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "debug"
+      ],
+      "started_at": "2026-11-18T03:39:16.154519+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:39:38.727922+00:00",
+      "log": "downstream/macos/logs/B-test-debug.log",
+      "log_sha256": "d9a5dea450b69b2cab807dab47b25fd42f3c20266a34bcd39b4ca0515982b4b7",
+      "passed": true,
+      "test_counts": [
+        7,
+        78
+      ],
+      "total_tests": 85,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5617933144064
+      }
+    },
+    {
+      "name": "B-test-release",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/B-tests",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "release"
+      ],
+      "started_at": "2026-11-18T03:39:39.195619+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:40:04.057000+00:00",
+      "log": "downstream/macos/logs/B-test-release.log",
+      "log_sha256": "328223b55fe0369ab14b5d3bddbb36d329b4e6b01f75ac141ec0f62eacdd0eb7",
+      "passed": true,
+      "test_counts": [
+        7,
+        78
+      ],
+      "total_tests": 85,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5617818308608
+      }
+    }
+  ],
+  "timed_measurements_started": false,
+  "entry": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5618490470400
+  },
+  "swift_version": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "xcode_version": "Xcode 27.2\nBuild version 27B52\n",
+  "compiler": {
+    "path": "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend",
+    "sha256": "020a521df9efc127b6817a2ed2f1560155108f0a0ead1ee1fa98147f5944eb4f",
+    "sdk": "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk"
+  },
+  "environment": {
+    "DEVELOPER_DIR": "/Applications/Xcode-27.2.0.app/Contents/Developer",
+    "TMPDIR": "$EXPERIMENT/downstream/macos/tmp/",
+    "CLANG_MODULE_CACHE_PATH": "$EXPERIMENT/downstream/macos/build/module-cache"
+  },
+  "system": {
+    "sw_vers": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+    "uname": "Darwin Craig-MacBook-Pro.local 27.2.0 Darwin Kernel Version 27.2.0: Thu Oct 15 00:02:46 PDT 2026; root:xnu-13432.41.4~25/RELEASE_ARM64_T6000 arm64\n",
+    "hardware": "hw.model: MacBookPro18,2\nhw.ncpu: 10\nhw.memsize: 68719476736\n"
+  },
+  "exit": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5617818300416
+  },
+  "binary_metadata": "downstream/macos/metadata/B-ordinary.json",
+  "finished_at": "2026-11-18T03:40:04.716766+00:00"
+}

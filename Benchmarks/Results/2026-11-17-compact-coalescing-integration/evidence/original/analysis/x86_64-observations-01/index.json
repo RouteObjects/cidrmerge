@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:22:45.840672+00:00",
+  "platform": "x86_64",
+  "audit_path_mapping": [
+    [
+      "$EXPERIMENT/downstream/x86_64",
+      "$EXPERIMENT/downstream/x86_64/retrieved-01"
+    ]
+  ],
+  "helper_sha256": "c7e7d657bafdbae52d2cecd6438aa6604aee4d504792fdad3953834a58095b64",
+  "record_policy": "Original parsed JSON values plus original relative path, byte length and raw SHA256. native.time text is preserved exactly as UTF8. No stdout, stderr, binaries or runtime files are copied.",
+  "scope": "This bundles existing independently passed audits; it does not execute the product or replace the full-byte measurement audit.",
+  "source_root": "$EXPERIMENT",
+  "phases": [
+    {
+      "file": "original-primary.json",
+      "sha256": "1d9157fa532738bdefdf90aeadf45a90f029197f2cdb1529cebba37119a02835",
+      "bytes": 1130154,
+      "group": "original",
+      "phase": "primary",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32,
+      "sample_records": 154,
+      "process_records": 224,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/x86_64/audits-01/original-primary.json",
+        "raw_sha256": "1160b6ad0028d02d254b916345cfcd24aa6bd2cf025ac89b53734e8fa1a53534",
+        "raw_bytes": 40456
+      }
+    },
+    {
+      "file": "scale-primary.json",
+      "sha256": "1e514bc3d20428fdfe8dcf66e0f7bca049f044a7074001c551fe1601dd5cd16c",
+      "bytes": 915597,
+      "group": "scale",
+      "phase": "primary",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24,
+      "sample_records": 168,
+      "process_records": 168,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/x86_64/audits-01/scale-primary.json",
+        "raw_sha256": "ae0037dba7f6b48df2d0200c4bf294b0d7aecac9c47da1987eb44ed4398bbd0d",
+        "raw_bytes": 42652
+      }
+    },
+    {
+      "file": "sparse-primary.json",
+      "sha256": "55aa6e70c14ef063bb9c3013e952c5479d713aa01cc58c693cb8185b6956fbfa",
+      "bytes": 159165,
+      "group": "sparse",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "sample_records": 28,
+      "process_records": 28,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/x86_64/audits-01/sparse-primary.json",
+        "raw_sha256": "80a09270325f9319a7d6ebb5911d0bec9f522a4f1de76859bc41c1c3c83f7ceb",
+        "raw_bytes": 9428
+      }
+    }
+  ],
+  "totals": {
+    "measured_samples": 300,
+    "warmups": 50,
+    "measured_processes": 360,
+    "warmup_processes": 60,
+    "sample_records": 350,
+    "process_records": 420,
+    "native_time_records": 0
+  },
+  "driver": {
+    "file": "driver.json",
+    "sha256": "1c0cf481ccc7f21674be66d30c9cf786ef901ce2760b053ddc82ed29163109f3",
+    "bytes": 4939
+  },
+  "audit_summary": {
+    "file": "audit-summary.json",
+    "sha256": "14d9c6f3716d46a30349a86878a91f21ccb8d4624e4c42a4ddadd2bbc8f50896",
+    "bytes": 1288
+  },
+  "source_files": 781,
+  "source_inventory": {
+    "file": "source-identities.json",
+    "sha256": "a6d8da99c5eb5fc4270b3f5be62ed2a22dc61bd9c293438acf0090e2105fe51b",
+    "bytes": 297924
+  },
+  "finished_at": "2026-11-18T04:22:46.150276+00:00"
+}

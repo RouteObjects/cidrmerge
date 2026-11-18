@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "at": "2026-11-18T04:13:04.871106+00:00",
+  "phases": [
+    {
+      "group": "original",
+      "phase": "primary",
+      "path": "measurements-01/original/primary/summary.json",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32,
+      "followup_required": []
+    },
+    {
+      "group": "scale",
+      "phase": "primary",
+      "path": "measurements-01/scale/primary/summary.json",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24,
+      "followup_required": [
+        "mixed-disjoint-1000"
+      ]
+    },
+    {
+      "group": "scale",
+      "phase": "followup",
+      "path": "measurements-01/scale/followup/summary.json",
+      "measured_samples": 12,
+      "warmups": 2,
+      "measured_processes": 12,
+      "warmup_processes": 2,
+      "followup_required": []
+    },
+    {
+      "group": "sparse",
+      "phase": "primary",
+      "path": "measurements-01/sparse/primary/summary.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "followup_required": []
+    }
+  ],
+  "totals": {
+    "measured_samples": 312,
+    "warmups": 52,
+    "measured_processes": 372,
+    "warmup_processes": 62
+  },
+  "container": "coalescing-downstream-arm642-20261118T031137Z",
+  "processes_after_timing": "PID                 STAT                COMMAND\n302855              S                   /sbin/docker-init -- sleep infinity\n302866              S                   sleep infinity\n",
+  "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "stop_output": "coalescing-downstream-arm642-20261118T031137Z\n",
+  "container_stopped_preserved": true,
+  "audits_not_yet_run": true
+}

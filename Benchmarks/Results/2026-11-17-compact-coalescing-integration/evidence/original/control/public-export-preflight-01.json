@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "at": "2026-11-18T04:32:23.033058+00:00",
+  "original_selection": "control/public-selection-01.json",
+  "original_selection_sha256": "b9a4d5240e8e4795fe015529d3545f49f903eda0afd9a9a6d95b5bbd2a0e81d7",
+  "source_files_checked": 633,
+  "invalid_utf8": [
+    {
+      "path": "downstream/arm64/control/B-qualification/test-debug.log",
+      "sha256": "2a0b76f15992da3a28be8f69d3ee240f2764a7349a3f78eeb38a5d86f80db8ff",
+      "bytes": 43754,
+      "failure": "'utf-8' codec can't decode byte 0xe2 in position 42056: invalid continuation byte",
+      "replacement_evidence": "downstream/arm64/control/B-qualification/summary.json",
+      "disposition": "Original raw log remains unchanged in Downloads. Excluded from UTF8-only public export; passed test count and command status are preserved in qualification summary."
+    }
+  ],
+  "credential_pattern_matches": 0,
+  "policy": "Exclude nonUTF8 raw logs; do not repair, decode lossily, or rewrite original evidence."
+}

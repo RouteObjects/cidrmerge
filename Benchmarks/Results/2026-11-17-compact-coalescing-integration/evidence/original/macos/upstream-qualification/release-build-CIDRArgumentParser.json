@@ -1,0 +1,25 @@
+{
+  "name": "release-build-CIDRArgumentParser",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-c",
+    "release",
+    "--target",
+    "CIDRArgumentParser"
+  ],
+  "environment": {
+    "MACOSX_DEPLOYMENT_TARGET": "15.0"
+  },
+  "started_at": "2026-11-18T03:17:02.757948+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:17:17.028983+00:00",
+  "log": "macos/upstream-qualification/release-build-CIDRArgumentParser.log",
+  "log_sha256": "a0d99707ac256377db385d7fd7dd9018fedee9b85fdec577184fb5c7b8df21bb"
+}

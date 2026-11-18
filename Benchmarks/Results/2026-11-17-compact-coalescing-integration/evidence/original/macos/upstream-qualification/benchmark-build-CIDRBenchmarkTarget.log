@@ -1,0 +1,144 @@
+Fetching https://github.com/apple/swift-argument-parser.git from cache
+Fetching https://github.com/apple/swift-nio.git from cache
+Fetching https://github.com/ordo-one/TextTable.git from cache
+Fetching https://github.com/apple/swift-numerics from cache
+Fetching https://github.com/apple/swift-system.git from cache
+Fetching https://github.com/apple/swift-atomics.git from cache
+Fetching https://github.com/ordo-one/malloc-interposer.git from cache
+Fetched https://github.com/ordo-one/TextTable.git from cache (0.04s)
+Fetching https://github.com/HdrHistogram/hdrhistogram-swift.git from cache
+Fetched https://github.com/apple/swift-nio.git from cache (0.12s)
+Fetched https://github.com/apple/swift-argument-parser.git from cache (0.13s)
+Fetched https://github.com/apple/swift-system.git from cache (0.15s)
+Fetched https://github.com/HdrHistogram/hdrhistogram-swift.git from cache (0.05s)
+Fetched https://github.com/apple/swift-atomics.git from cache (0.18s)
+Fetching https://github.com/ordo-one/benchmark.git from cache
+Fetching https://github.com/apple/swift-collections.git from cache
+Fetched https://github.com/ordo-one/malloc-interposer.git from cache (0.24s)
+Fetched https://github.com/apple/swift-collections.git from cache (0.09s)
+Fetched https://github.com/apple/swift-numerics from cache (0.30s)
+Fetched https://github.com/ordo-one/benchmark.git from cache (0.19s)
+Creating working copy for https://github.com/apple/swift-numerics
+Creating working copy for https://github.com/apple/swift-nio.git
+Creating working copy for https://github.com/ordo-one/benchmark.git
+Creating working copy for https://github.com/apple/swift-system.git
+Creating working copy for https://github.com/ordo-one/malloc-interposer.git
+Creating working copy for https://github.com/HdrHistogram/hdrhistogram-swift.git
+Creating working copy for https://github.com/apple/swift-argument-parser.git
+Creating working copy for https://github.com/apple/swift-atomics.git
+Creating working copy for https://github.com/ordo-one/TextTable.git
+Creating working copy for https://github.com/apple/swift-collections.git
+Working copy of https://github.com/apple/swift-argument-parser.git resolved at 1.8.2
+Working copy of https://github.com/HdrHistogram/hdrhistogram-swift.git resolved at 0.1.4
+Working copy of https://github.com/apple/swift-system.git resolved at 1.6.4
+Working copy of https://github.com/ordo-one/malloc-interposer.git resolved at 1.3.1
+Working copy of https://github.com/ordo-one/benchmark.git resolved at 1.35.0
+Working copy of https://github.com/apple/swift-numerics resolved at 1.1.1
+Working copy of https://github.com/apple/swift-nio.git resolved at 2.101.0
+Working copy of https://github.com/ordo-one/TextTable.git resolved at 0.0.2
+Working copy of https://github.com/apple/swift-atomics.git resolved at 1.3.0
+Working copy of https://github.com/apple/swift-collections.git resolved at 1.5.0
+Building for production...
+[Computing dependencies]
+[Pre-planning 1 / 658]
+[Planning deferred tasks]
+[26 / 229] SwiftRuntimeHooks
+[111 / 229]
+[118 / 236] ArgumentParserToolInfo
+[119 / 239]
+[123 / 265]
+[127 / 267]
+[133 / 268]
+[139 / 268] _NumericsShims
+[142 / 268] CIDR
+[144 / 277]
+[145 / 277]
+[147 / 277]
+[149 / 277]
+[158 / 277]
+[161 / 277] _NumericsShims
+[165 / 277] SwiftRuntimeHooks
+[168 / 277] RealModule
+[178 / 285] _AtomicsShims
+[185 / 285] MallocInterposerC
+[187 / 285] ComplexModule
+[192 / 285] CSystem
+[195 / 290] SwiftRuntimeHooks
+[204 / 290]
+[207 / 290] _AtomicsShims
+[208 / 290] Atomics
+[209 / 290]
+[218 / 291]
+[221 / 292] SystemPackage
+[229 / 293]
+[237 / 294] Numerics
+[239 / 295] Numerics
+[246 / 296] Histogram
+[248 / 297] ArgumentParser
+[254 / 332]
+[257 / 332]
+[259 / 332]
+[262 / 332]
+[265 / 332]
+[266 / 332]
+[273 / 332]
+[276 / 332]
+[277 / 332]
+[285 / 332]
+[286 / 332]
+[288 / 332] CIDR
+[298 / 332]
+[298 / 332] SystemPackage
+[305 / 332]
+[306 / 332]
+[307 / 332]
+[308 / 332] ArgumentParser
+[316 / 334] BenchmarkBoilerplateGenerator-product
+[325 / 359]
+[329 / 359]
+[332 / 359]
+[333 / 359]
+[334 / 359]
+[336 / 359] BenchmarkBoilerplateGenerator-product
+[338 / 359]
+[341 / 359]
+[341 / 359] BenchmarkBoilerplateGenerator-product
+[342 / 359]
+[343 / 359]
+[344 / 359]
+[345 / 359]
+[346 / 359]
+[347 / 359] Benchmark
+[353 / 359] Benchmark
+[354 / 359] CIDRBenchmarkTarget-product
+[355 / 360] CIDRBenchmarkTarget-product
+[362 / 367]
+$EXPERIMENT/sources/upstream-validation/Benchmarks/CIDRBenchmarkTarget/CIDRBenchmarkTarget.swift:896:35: warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or addresses.contains(_:) on IPNetwork for exact element membership. [#DeprecatedDeclaration]
+ 894 |     ) { benchmark in
+ 895 |         for _ in benchmark.scaledIterations {
+ 896 |             blackHole(ipv4Network.contains(ipv4Host))
+     |                                   `- warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or addresses.contains(_:) on IPNetwork for exact element membership. [#DeprecatedDeclaration]
+ 897 |         }
+ 898 |     }
+
+$EXPERIMENT/sources/upstream-validation/Benchmarks/CIDRBenchmarkTarget/CIDRBenchmarkTarget.swift:905:35: warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or addresses.contains(_:) on IPNetwork for exact element membership. [#DeprecatedDeclaration]
+ 903 |     ) { benchmark in
+ 904 |         for _ in benchmark.scaledIterations {
+ 905 |             blackHole(ipv6Network.contains(ipv6Host))
+     |                                   `- warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or addresses.contains(_:) on IPNetwork for exact element membership. [#DeprecatedDeclaration]
+ 906 |         }
+ 907 |     }
+
+$EXPERIMENT/sources/upstream-validation/Benchmarks/CIDRBenchmarkTarget/CIDRBenchmarkTarget.swift:1044:38: warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or the concrete network's addresses view for exact membership. [#DeprecatedDeclaration]
+1042 |     ) { benchmark in
+1043 |         for _ in benchmark.scaledIterations {
+1044 |             blackHole(anyIPv4Network.contains(anyIPv4Address))
+     |                                      `- warning: 'contains' is deprecated: Checks address bits only. Use contains(address:) for hierarchical containment, or the concrete network's addresses view for exact membership. [#DeprecatedDeclaration]
+1045 |         }
+1046 |     }
+
+[#DeprecatedDeclaration]: <https://docs.swift.org/compiler/documentation/diagnostics/deprecated-declaration>
+[363 / 367] CIDRBenchmarkTarget-product
+[365 / 367] CIDRBenchmarkTarget-product
+[366 / 367] CIDRBenchmarkTarget-product
+Build complete! (39.85 sec)

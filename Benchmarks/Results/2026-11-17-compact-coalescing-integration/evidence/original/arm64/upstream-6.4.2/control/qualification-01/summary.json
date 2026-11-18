@@ -1,0 +1,138 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T03:17:37.496301+00:00",
+  "version": "6.4.2",
+  "script_sha256": "78400aa9b17e409bb860c55d97a5cb11048c197936c2d1ea569a6cb64f9eccdd",
+  "steps": [
+    {
+      "configuration": "debug",
+      "command": [
+        "/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$PLATFORM/upstream-source",
+        "--scratch-path",
+        "$PLATFORM/upstream-6.4.2/build",
+        "--cache-path",
+        "$PLATFORM/upstream-6.4.2/cache",
+        "--config-path",
+        "$PLATFORM/upstream-6.4.2/config",
+        "--security-path",
+        "$PLATFORM/upstream-6.4.2/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "debug",
+        "-j",
+        "8"
+      ],
+      "started_at": "2026-11-18T03:17:38.940422+00:00",
+      "disk_free_before": 5620765114368,
+      "exit_code": 0,
+      "elapsed_s": 35.158190187008586,
+      "finished_at": "2026-11-18T03:18:14.100538+00:00",
+      "log_sha256": "12aef32d3a53172a4b2b7ed7a6eee45ad17ef6128b3fd17f350b816b48f01301",
+      "test_summaries": [
+        [
+          "311",
+          "35"
+        ]
+      ],
+      "test_count": 311,
+      "dependency_pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-atomics": {
+          "revision": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+          "version": "1.3.0"
+        },
+        "swift-collections": {
+          "revision": "03cc312c2c933ed87abace34044a5dff7a3117c1",
+          "version": "1.5.0"
+        },
+        "swift-nio": {
+          "revision": "77b84ac2cd2ac9e4ac67d19f045fd5b434f56967",
+          "version": "2.101.0"
+        },
+        "swift-system": {
+          "revision": "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
+          "version": "1.6.4"
+        }
+      }
+    },
+    {
+      "configuration": "release",
+      "command": [
+        "/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$PLATFORM/upstream-source",
+        "--scratch-path",
+        "$PLATFORM/upstream-6.4.2/build",
+        "--cache-path",
+        "$PLATFORM/upstream-6.4.2/cache",
+        "--config-path",
+        "$PLATFORM/upstream-6.4.2/config",
+        "--security-path",
+        "$PLATFORM/upstream-6.4.2/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "release",
+        "-j",
+        "8"
+      ],
+      "started_at": "2026-11-18T03:18:14.196058+00:00",
+      "disk_free_before": 5620438966272,
+      "exit_code": 0,
+      "elapsed_s": 74.21222716104239,
+      "finished_at": "2026-11-18T03:19:28.408586+00:00",
+      "log_sha256": "5e309e620b0d7292ce089c503ca728f7a7e5fa069fe121715f00006544de0474",
+      "test_summaries": [
+        [
+          "311",
+          "35"
+        ]
+      ],
+      "test_count": 311,
+      "dependency_pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-atomics": {
+          "revision": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+          "version": "1.3.0"
+        },
+        "swift-collections": {
+          "revision": "03cc312c2c933ed87abace34044a5dff7a3117c1",
+          "version": "1.5.0"
+        },
+        "swift-nio": {
+          "revision": "77b84ac2cd2ac9e4ac67d19f045fd5b434f56967",
+          "version": "2.101.0"
+        },
+        "swift-system": {
+          "revision": "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
+          "version": "1.6.4"
+        }
+      }
+    }
+  ],
+  "source_unchanged": true,
+  "lockfile_unchanged": true,
+  "test_count": 311,
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "disk_free_after": 5619647533056,
+  "finished_at": "2026-11-18T03:19:29.139831+00:00"
+}
