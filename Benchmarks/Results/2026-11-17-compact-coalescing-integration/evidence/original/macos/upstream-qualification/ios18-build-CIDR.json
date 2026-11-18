@@ -1,0 +1,25 @@
+{
+  "name": "ios18-build-CIDR",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "--target",
+    "CIDR",
+    "--triple",
+    "arm64-apple-ios18.0-simulator",
+    "--sdk",
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+  ],
+  "environment": {},
+  "started_at": "2026-11-18T03:18:31.251635+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:18:39.999833+00:00",
+  "log": "macos/upstream-qualification/ios18-build-CIDR.log",
+  "log_sha256": "8d04f73c09f26edc37dd15365e9db69b01b040ee0bb02ca6df82f4db8583d526"
+}

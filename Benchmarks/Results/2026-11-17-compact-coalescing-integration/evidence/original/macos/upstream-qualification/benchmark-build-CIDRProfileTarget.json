@@ -1,0 +1,23 @@
+{
+  "name": "benchmark-build-CIDRProfileTarget",
+  "command": [
+    "swift",
+    "build",
+    "--package-path",
+    "$EXPERIMENT/sources/upstream-validation/Benchmarks",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "--product",
+    "CIDRProfileTarget"
+  ],
+  "environment": {},
+  "started_at": "2026-11-18T03:20:48.634820+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:20:55.498322+00:00",
+  "log": "macos/upstream-qualification/benchmark-build-CIDRProfileTarget.log",
+  "log_sha256": "458bae9dffeb29e12aee39b2ba79a29682bf88036a0d513d0f5b22448bdab46c"
+}

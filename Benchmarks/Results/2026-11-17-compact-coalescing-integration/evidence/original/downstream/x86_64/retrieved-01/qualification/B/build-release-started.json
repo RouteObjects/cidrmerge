@@ -1,0 +1,31 @@
+{
+  "name": "build-release",
+  "command": [
+    "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$EXPERIMENT/downstream/sources/B",
+    "--scratch-path",
+    "$EXPERIMENT/downstream/x86_64/build/B",
+    "--cache-path",
+    "$EXPERIMENT/downstream/x86_64/cache",
+    "--config-path",
+    "$EXPERIMENT/downstream/x86_64/config",
+    "--security-path",
+    "$EXPERIMENT/downstream/x86_64/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-j",
+    "4",
+    "-c",
+    "release",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-18T03:53:21.863618+00:00",
+  "free_bytes_before": 66252034048
+}

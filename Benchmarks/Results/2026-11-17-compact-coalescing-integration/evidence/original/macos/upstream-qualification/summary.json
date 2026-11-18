@@ -1,0 +1,507 @@
+{
+  "started_at": "2026-11-18T03:16:09.899046+00:00",
+  "passed": false,
+  "head": "35003688c139adea9a6dcf17f2748fa3c2b0348a",
+  "steps": [
+    {
+      "name": "debug-build-CIDR",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "debug",
+        "--target",
+        "CIDR"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:16:10.839507+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:16:19.722253+00:00",
+      "log": "macos/upstream-qualification/debug-build-CIDR.log",
+      "log_sha256": "706bc36357b8868843b73f6a3d5f4611c47f721ca39cc1835f2ddb271cd83176"
+    },
+    {
+      "name": "debug-build-CIDRArgumentParser",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "debug",
+        "--target",
+        "CIDRArgumentParser"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:16:19.885701+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:16:27.318121+00:00",
+      "log": "macos/upstream-qualification/debug-build-CIDRArgumentParser.log",
+      "log_sha256": "fe0b2e6faf8d5511a086c9cbfb71da542a3257877643c43b25c33ecb5be7b704"
+    },
+    {
+      "name": "debug-build-CIDRPOSIX",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "debug",
+        "--target",
+        "CIDRPOSIX"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:16:27.472148+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:16:29.712752+00:00",
+      "log": "macos/upstream-qualification/debug-build-CIDRPOSIX.log",
+      "log_sha256": "de7f98c456124b7dbcd66c103e8c95ac6b6be285634a133a13f3d3b3682db2ca"
+    },
+    {
+      "name": "debug-build-CIDRNIO",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "debug",
+        "--target",
+        "CIDRNIO"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:16:29.840943+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:16:39.497891+00:00",
+      "log": "macos/upstream-qualification/debug-build-CIDRNIO.log",
+      "log_sha256": "b151c0bd8b1beb913fc42c23976fa89999e8a2974dc1d71b3d01ad1af067a234"
+    },
+    {
+      "name": "test-debug",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "debug"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:16:39.634176+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:16:57.166536+00:00",
+      "log": "macos/upstream-qualification/test-debug.log",
+      "log_sha256": "058af2e5c7be6efe3f591245a57d64007b8d2cbed171219af96b92bb67a3d3e0",
+      "test_counts": [
+        246,
+        3,
+        23,
+        39
+      ],
+      "total_tests": 311
+    },
+    {
+      "name": "release-build-CIDR",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--target",
+        "CIDR"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:16:57.493750+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:17:02.610316+00:00",
+      "log": "macos/upstream-qualification/release-build-CIDR.log",
+      "log_sha256": "6b083fa2e21dffaaedb78fd63e3a014191a4316ec5940dd780b76aa8c497b0ad"
+    },
+    {
+      "name": "release-build-CIDRArgumentParser",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--target",
+        "CIDRArgumentParser"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:17:02.757948+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:17:17.028983+00:00",
+      "log": "macos/upstream-qualification/release-build-CIDRArgumentParser.log",
+      "log_sha256": "a0d99707ac256377db385d7fd7dd9018fedee9b85fdec577184fb5c7b8df21bb"
+    },
+    {
+      "name": "release-build-CIDRPOSIX",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--target",
+        "CIDRPOSIX"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:17:17.318025+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:17:19.374454+00:00",
+      "log": "macos/upstream-qualification/release-build-CIDRPOSIX.log",
+      "log_sha256": "07fe79694d44e067d8059f51a7c7040d4dfb02c1c6747a9e66d2664ef7ec4391"
+    },
+    {
+      "name": "release-build-CIDRNIO",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--target",
+        "CIDRNIO"
+      ],
+      "environment": {
+        "MACOSX_DEPLOYMENT_TARGET": "15.0"
+      },
+      "started_at": "2026-11-18T03:17:19.519067+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:17:34.901764+00:00",
+      "log": "macos/upstream-qualification/release-build-CIDRNIO.log",
+      "log_sha256": "f6c2da71ae4aa07d65c31fa7cb1802db5503e4deb194248e94514ab5ef710074"
+    },
+    {
+      "name": "test-release",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/build",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "release"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:17:35.045669+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:18:30.865713+00:00",
+      "log": "macos/upstream-qualification/test-release.log",
+      "log_sha256": "c5eee4dc2eac2dffcd9cb18369258a957e8bf9797cd7e8f3afe1743903e4b6d7",
+      "test_counts": [
+        246,
+        3,
+        23,
+        39
+      ],
+      "total_tests": 311
+    },
+    {
+      "name": "ios18-build-CIDR",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "--target",
+        "CIDR",
+        "--triple",
+        "arm64-apple-ios18.0-simulator",
+        "--sdk",
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:18:31.251635+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:18:39.999833+00:00",
+      "log": "macos/upstream-qualification/ios18-build-CIDR.log",
+      "log_sha256": "8d04f73c09f26edc37dd15365e9db69b01b040ee0bb02ca6df82f4db8583d526"
+    },
+    {
+      "name": "ios18-build-CIDRArgumentParser",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "--target",
+        "CIDRArgumentParser",
+        "--triple",
+        "arm64-apple-ios18.0-simulator",
+        "--sdk",
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:18:40.165754+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:18:46.491768+00:00",
+      "log": "macos/upstream-qualification/ios18-build-CIDRArgumentParser.log",
+      "log_sha256": "a42f69cebceed66d0b8a8101ab0fe38eb4afe0e6721f09b27d3dee1c24182caa"
+    },
+    {
+      "name": "ios18-build-CIDRPOSIX",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "--target",
+        "CIDRPOSIX",
+        "--triple",
+        "arm64-apple-ios18.0-simulator",
+        "--sdk",
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:18:46.642547+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:18:49.699809+00:00",
+      "log": "macos/upstream-qualification/ios18-build-CIDRPOSIX.log",
+      "log_sha256": "1409d51b810f1c4187cd9fe718683d9712d34b6f0acfc32c77b2c6763202f78d"
+    },
+    {
+      "name": "ios18-build-CIDRNIO",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "--target",
+        "CIDRNIO",
+        "--triple",
+        "arm64-apple-ios18.0-simulator",
+        "--sdk",
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:18:49.872310+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:19:04.674771+00:00",
+      "log": "macos/upstream-qualification/ios18-build-CIDRNIO.log",
+      "log_sha256": "2051c952b5249ea689351aa0a018705321e617b27ba8551ee2db0a55dab5ee72"
+    },
+    {
+      "name": "benchmark-build-CIDRBenchmarkTarget",
+      "command": [
+        "./scripts/benchmarks.sh",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6"
+      ],
+      "environment": {
+        "CIDR_BENCHMARK_TARGET": "CIDRBenchmarkTarget"
+      },
+      "started_at": "2026-11-18T03:19:05.035341+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:19:54.816761+00:00",
+      "log": "macos/upstream-qualification/benchmark-build-CIDRBenchmarkTarget.log",
+      "log_sha256": "1f17eeb8e6f64ac7e88e5c2ea15a56bd7bbbdfb103b83600618782a364de17b0"
+    },
+    {
+      "name": "benchmark-build-CIDRCPUBenchmarkTarget",
+      "command": [
+        "./scripts/benchmarks.sh",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6"
+      ],
+      "environment": {
+        "CIDR_BENCHMARK_TARGET": "CIDRCPUBenchmarkTarget"
+      },
+      "started_at": "2026-11-18T03:19:55.231108+00:00",
+      "passed": false,
+      "exit_code": 1,
+      "finished_at": "2026-11-18T03:20:03.067898+00:00",
+      "log": "macos/upstream-qualification/benchmark-build-CIDRCPUBenchmarkTarget.log",
+      "log_sha256": "94a146d50dd072b5a042adf59d3c2c4aaca4a96b596f2ab35cead6edede6d548"
+    },
+    {
+      "name": "benchmark-build-CIDRNIOBenchmarkTarget",
+      "command": [
+        "./scripts/benchmarks.sh",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6"
+      ],
+      "environment": {
+        "CIDR_BENCHMARK_TARGET": "CIDRNIOBenchmarkTarget"
+      },
+      "started_at": "2026-11-18T03:20:03.245410+00:00",
+      "passed": false,
+      "exit_code": 1,
+      "finished_at": "2026-11-18T03:20:26.229647+00:00",
+      "log": "macos/upstream-qualification/benchmark-build-CIDRNIOBenchmarkTarget.log",
+      "log_sha256": "704e201bc6dfc5d59c2a9dc738de8bfa076e59f90fb94e7e80e28d66115d2aca"
+    },
+    {
+      "name": "benchmark-build-CIDRSummarizationBenchmarkTarget",
+      "command": [
+        "./scripts/benchmarks.sh",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-Xswiftc",
+        "-DSUMMARIZATION_APPEND_APIS"
+      ],
+      "environment": {
+        "CIDR_BENCHMARK_TARGET": "CIDRSummarizationBenchmarkTarget"
+      },
+      "started_at": "2026-11-18T03:20:26.570499+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:20:48.256397+00:00",
+      "log": "macos/upstream-qualification/benchmark-build-CIDRSummarizationBenchmarkTarget.log",
+      "log_sha256": "6c3d1496200ee9f7b8f42c3f57a7bf2e9e9e577380a20292c5c7b9baddb4cefb"
+    },
+    {
+      "name": "benchmark-build-CIDRProfileTarget",
+      "command": [
+        "swift",
+        "build",
+        "--package-path",
+        "$EXPERIMENT/sources/upstream-validation/Benchmarks",
+        "--scratch-path",
+        "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "--product",
+        "CIDRProfileTarget"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:20:48.634820+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:20:55.498322+00:00",
+      "log": "macos/upstream-qualification/benchmark-build-CIDRProfileTarget.log",
+      "log_sha256": "458bae9dffeb29e12aee39b2ba79a29682bf88036a0d513d0f5b22448bdab46c"
+    },
+    {
+      "name": "format-changed-files",
+      "command": [
+        "xcrun",
+        "swift-format",
+        "lint",
+        "--strict",
+        "--configuration",
+        "$USER_HOME/Developer/Route Objects/.swift-format.json",
+        "$EXPERIMENT/sources/upstream-validation/Sources/CIDR/IPAddressRange.swift",
+        "$EXPERIMENT/sources/upstream-validation/Tests/CIDRTests/InPlaceCoalescingTests.swift"
+      ],
+      "environment": {},
+      "started_at": "2026-11-18T03:20:55.659765+00:00",
+      "passed": true,
+      "exit_code": 0,
+      "finished_at": "2026-11-18T03:20:55.750197+00:00",
+      "log": "macos/upstream-qualification/format-changed-files.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "timed_benchmarks_started": false,
+  "entry": {
+    "changed_files": [],
+    "git_status": "",
+    "head": "35003688c139adea9a6dcf17f2748fa3c2b0348a",
+    "threshold_files": 79
+  },
+  "swift_version": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "xcode_version": "Xcode 27.2\nBuild version 27B52\n",
+  "ios_sdk": "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk",
+  "exit": {
+    "changed_files": [],
+    "git_status": "",
+    "head": "35003688c139adea9a6dcf17f2748fa3c2b0348a",
+    "threshold_files": 79
+  },
+  "finished_at": "2026-11-18T03:20:56.029971+00:00"
+}

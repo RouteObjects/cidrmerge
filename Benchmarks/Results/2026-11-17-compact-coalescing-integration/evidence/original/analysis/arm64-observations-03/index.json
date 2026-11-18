@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:21:56.022881+00:00",
+  "platform": "arm64",
+  "audit_path_mapping": [
+    [
+      "$PLATFORM",
+      "$EXPERIMENT/downstream/arm64"
+    ]
+  ],
+  "helper_sha256": "c7e7d657bafdbae52d2cecd6438aa6604aee4d504792fdad3953834a58095b64",
+  "record_policy": "Original parsed JSON values plus original relative path, byte length and raw SHA256. native.time text is preserved exactly as UTF8. No stdout, stderr, binaries or runtime files are copied.",
+  "scope": "This bundles existing independently passed audits; it does not execute the product or replace the full-byte measurement audit.",
+  "source_root": "$EXPERIMENT",
+  "phases": [
+    {
+      "file": "original-primary.json",
+      "sha256": "1e9cc1096ef17c9c95ccb1fe774e0b1d9b187a61bb32a348a506721fc2647a01",
+      "bytes": 1003412,
+      "group": "original",
+      "phase": "primary",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32,
+      "sample_records": 154,
+      "process_records": 224,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/arm64/audits-01/original-primary.json",
+        "raw_sha256": "f1b54ea6f14b14fa45cbcb150170d4740a1562538b49fa995fea238bc61781b0",
+        "raw_bytes": 38259
+      }
+    },
+    {
+      "file": "scale-primary.json",
+      "sha256": "c1b7f9d055d37f0ae70e522e59c9971ce17ae09667f6559c2f6b224f6a18b8cd",
+      "bytes": 819583,
+      "group": "scale",
+      "phase": "primary",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24,
+      "sample_records": 168,
+      "process_records": 168,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/arm64/audits-01/scale-primary.json",
+        "raw_sha256": "22c02e714702ba9d06142dfaf7b8c0f9169bfd781ddfaf77907f8c0e93c23182",
+        "raw_bytes": 40535
+      }
+    },
+    {
+      "file": "scale-followup.json",
+      "sha256": "9af0e05d89add176c6ccd1e231fdbb6df6f49920a7ad52424091c3769a9b0d71",
+      "bytes": 69686,
+      "group": "scale",
+      "phase": "followup",
+      "measured_samples": 12,
+      "warmups": 2,
+      "measured_processes": 12,
+      "warmup_processes": 2,
+      "sample_records": 14,
+      "process_records": 14,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/arm64/audits-01/scale-followup.json",
+        "raw_sha256": "cbec2cfc61764fd7bc08775704f8e35fca5f5b07caf7a359cac6372b08e04c56",
+        "raw_bytes": 3827
+      }
+    },
+    {
+      "file": "sparse-primary.json",
+      "sha256": "7284a3ff35173ad0e554ed62a4868563f454feb13564b3babca9860897c07296",
+      "bytes": 141078,
+      "group": "sparse",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "sample_records": 28,
+      "process_records": 28,
+      "native_time_records": 0,
+      "audit_identity": {
+        "original_relative_path": "downstream/arm64/audits-01/sparse-primary.json",
+        "raw_sha256": "8da1fbeb08d93de5bd49c4afb24b7dca78d00ba86ad4bc3c25b95d64271d2441",
+        "raw_bytes": 7310
+      }
+    }
+  ],
+  "totals": {
+    "measured_samples": 312,
+    "warmups": 52,
+    "measured_processes": 372,
+    "warmup_processes": 62,
+    "sample_records": 364,
+    "process_records": 434,
+    "native_time_records": 0
+  },
+  "driver": {
+    "file": "driver.json",
+    "sha256": "2f518f93c12455b16fe53f49d54a9f957004c05b832ccbaebbd20e2d2db767d3",
+    "bytes": 4252
+  },
+  "audit_summary": {
+    "file": "audit-summary.json",
+    "sha256": "81d4aa0891875c66374ce389ba36133faebda97b28b8679bbdf08c1ac9fe98b4",
+    "bytes": 1472
+  },
+  "source_files": 812,
+  "source_inventory": {
+    "file": "source-identities.json",
+    "sha256": "b25e12756c6750680373b9d72cbb5e948b4064b16e91f8451982c19e4e264165",
+    "bytes": 286824
+  },
+  "finished_at": "2026-11-18T04:21:56.343180+00:00"
+}

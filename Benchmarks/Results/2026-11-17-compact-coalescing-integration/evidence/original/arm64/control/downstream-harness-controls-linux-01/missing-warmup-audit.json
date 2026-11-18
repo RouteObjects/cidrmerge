@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:33:11.107219+00:00",
+  "run": "$PLATFORM/control/downstream-harness-controls-linux-01/audit-missing-warmup",
+  "path_mapping": [
+    [
+      "$PLATFORM/control/downstream-harness-controls-linux-01/valid/measurements",
+      "$PLATFORM/control/downstream-harness-controls-linux-01/audit-missing-warmup"
+    ]
+  ],
+  "auditor_sha256": "5a7f00d8b0808a668420d8fd6392c1d4d15edab27a0c287a330e617e3dafaf9d",
+  "error": "FileNotFoundError(2, 'No such file or directory')",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 46, in <module>\n    d=a.run/phase/case['id']/v;sfile=d/'sample.json';expected_sample_paths.add(sfile);row=load(sfile);assert row['passed'] and (row['id'],row['group'],row['suite'],row['variant'],row['round'],row['sequence'])==(case['id'],case['group'],case['suite'],v,rnd,sequence);sequence+=1;assert len(row['parts'])==len(case['parts']);timeline.append((row['started_at'],row['finished_at']));assert row['started_at']<=row['finished_at']\n                                                                                          ^^^^^^^^^^^\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 14, in load\n    def load(p):return json.loads(Path(p).read_text())\n                                  ^^^^^^^^^^^^^^^^^^^\n  File \"$PLATFORM/python/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"$PLATFORM/python/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '$PLATFORM/control/downstream-harness-controls-linux-01/audit-missing-warmup/warmup/control/B/sample.json'\n",
+  "finished_at": "2026-11-18T03:33:11.111074+00:00"
+}

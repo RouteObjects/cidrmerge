@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:40:35.851318+00:00",
+  "run": "$EXPERIMENT/downstream/harness-controls-macos-02/audit-extra-sample",
+  "path_mapping": [
+    [
+      "$EXPERIMENT/downstream/harness-controls-macos-02/valid/measurements",
+      "$EXPERIMENT/downstream/harness-controls-macos-02/audit-extra-sample"
+    ]
+  ],
+  "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+  "error": "AssertionError()",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 64, in <module>\n    assert set(a.run.glob('warmup/*/*/sample.json'))|set(a.run.glob('round-*/*/*/sample.json'))==expected_sample_paths\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "finished_at": "2026-11-18T03:40:35.867615+00:00"
+}

@@ -1,0 +1,18 @@
+START differential
+DONE differential
+START io-differential
+DONE io-differential
+START harness-controls
+DONE harness-controls
+START final-validation
+DONE final-validation
+START bindings
+{"passed": false, "timing_started": false, "error": "AssertionError('bindings')"}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/control/qualify_downstream.py", line 35, in <module>
+    run('bindings',cmd);bindings=json.loads((P/'control/premeasurement.json').read_text());assert bindings['passed']
+    ^^^^^^^^^^^^^^^^^^^
+  File "$EXPERIMENT/downstream/control/qualify_downstream.py", line 16, in run
+    row.update(exit_code=q.returncode,finished_at=now(),log_sha256=sha(O/(label+'.log')));save(O/(label+'.json'),row);record['steps'].append(row);assert q.returncode==0,label;print('DONE',label,flush=True)
+                                                                                                                                                         ^^^^^^^^^^^^^^^
+AssertionError: bindings

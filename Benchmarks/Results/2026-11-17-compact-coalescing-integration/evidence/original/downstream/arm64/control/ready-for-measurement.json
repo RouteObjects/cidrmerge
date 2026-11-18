@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "at": "2026-11-18T04:07:24.695653+00:00",
+  "qualification_gate": "downstream/arm64/control/qualification-gate.json",
+  "bindings": "downstream/arm64/control/premeasurement.json",
+  "bindings_sha256": "d27a16dc107c46789c9b11850642600244ca13531567940af83ec9483b7ebf59",
+  "bound_files": 4362,
+  "containers": [
+    {
+      "container": "coalescing-downstream-arm642-20261118T031137Z",
+      "processes_before_stop": "PID                 STAT                COMMAND\n294040              S                   /sbin/docker-init -- sleep infinity\n294052              S                   sleep infinity\n",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "stop_output": "coalescing-downstream-arm642-20261118T031137Z\n"
+    },
+    {
+      "container": "coalescing-downstream-arm624-20261118T031137Z",
+      "processes_before_stop": "PID                 STAT                COMMAND\n294002              S                   /sbin/docker-init -- sleep infinity\n294013              S                   sleep infinity\n",
+      "memory_events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+      "stop_output": "coalescing-downstream-arm624-20261118T031137Z\n"
+    }
+  ],
+  "all_new_arm_containers_stopped_preserved": true,
+  "disk_free_bytes": 5613635960832,
+  "build_system": "native",
+  "ordinary_artifacts": {
+    "B": {
+      "sha256": "51dbea7b5b26f52eeafacb268b2aac7a2098eed4a17aab3c291d690abe50d57c",
+      "bytes": 17361272,
+      "stripped_sha256": "aa478f5883dd08a339d88dafb3899d72f97f2aaa62554553e6a6a7992f12e675",
+      "stripped_bytes": 3322808
+    },
+    "C": {
+      "sha256": "a03a8672ea998c8be7f704b13625d6b354c24df8eb7e1a2afb4cd245d4d2c2fe",
+      "bytes": 17366592,
+      "stripped_sha256": "97f705b85dcc2366e91b3f9df4d799c346198f2383f92a9c5da1fdd1f085a933",
+      "stripped_bytes": 3322808
+    }
+  },
+  "no_measurement_started": true
+}

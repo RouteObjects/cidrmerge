@@ -1,0 +1,25 @@
+{
+  "name": "range-derived-mixed",
+  "input_count": 1000000,
+  "recipe": "500,000 disjoint six-address intervals alternate family; lower=ordinal*16 (plus 2001:db8:: for IPv6); decompose each into /30+/31 or /126+/127 before benchmarking, yielding 1,000,000 common CIDR records",
+  "generator_sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+  "oracle_sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+  "files": {
+    "input.txt": {
+      "lines": 1000000,
+      "bytes": 18445838,
+      "sha256": "f5ffadd5048313e0c43d08efa2ec6553d29806c3d7dedfbc534f10611d5751cf"
+    },
+    "ipv4.txt": {
+      "lines": 500000,
+      "bytes": 7553022,
+      "sha256": "53db427e9aee7d9817f2384521f688751c2cfff9c78f9156380a96441e242c8c"
+    },
+    "ipv6.txt": {
+      "lines": 500000,
+      "bytes": 10892816,
+      "sha256": "68d161443d998ee9008d43c58214729c163ccb94e6cf4724e6a3957c2896d2d6"
+    }
+  },
+  "conversion_scope": "All tools receive identical CIDR records. Native arbitrary-range parsing is outside this comparison; range-derived-mixed expansion occurs before timing."
+}

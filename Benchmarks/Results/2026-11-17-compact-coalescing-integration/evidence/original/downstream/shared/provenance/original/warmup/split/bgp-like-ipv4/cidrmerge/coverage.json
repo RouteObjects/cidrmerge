@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "fixture": "$PRIOR_EXPERIMENT/fixtures/bgp-like-ipv4",
+  "started_at": "2026-11-14T21:20:44.384303+00:00",
+  "expected_sha256": "2b43575b733a10a022970d56e0b7e3457e31f559b66286dd434a5a087bdc5bff",
+  "output_files": [
+    {
+      "path": "$PRIOR_EXPERIMENT/warmup/split/bgp-like-ipv4/cidrmerge/4.stdout",
+      "bytes": 3691176,
+      "line_count": 233532,
+      "blank_lines": 0,
+      "sha256": "23e12791525edcd3c6bd2b372e2684713c5c1550811530a3f4357991c2f8ea01"
+    }
+  ],
+  "actual": {
+    "input_count": 233532,
+    "family_counts": {
+      "ipv4": 233532,
+      "ipv6": 0
+    },
+    "coverage_sha256": "4f674a8e92ed5bfbc5771b2cd93f1eb541a0d7ed97d238fe04ebd2ad4180415f",
+    "coverage_serialization": "concatenated records: family uint8 (4 or 6), start uint128 big-endian, end uint128 big-endian; IPv4 records first, sorted/coalesced per family",
+    "range_count": 193255,
+    "range_count_by_family": {
+      "ipv4": 193255,
+      "ipv6": 0
+    },
+    "minimal_cidr_count": 233532,
+    "minimal_cidr_count_by_family": {
+      "ipv4": 233532,
+      "ipv6": 0
+    },
+    "addresses_covered": {
+      "ipv4": "3379002069",
+      "ipv6": "0"
+    }
+  },
+  "expected_coverage_sha256": "4f674a8e92ed5bfbc5771b2cd93f1eb541a0d7ed97d238fe04ebd2ad4180415f",
+  "expected_minimal_cidr_count": 233532,
+  "finished_at": "2026-11-14T21:20:45.412410+00:00"
+}

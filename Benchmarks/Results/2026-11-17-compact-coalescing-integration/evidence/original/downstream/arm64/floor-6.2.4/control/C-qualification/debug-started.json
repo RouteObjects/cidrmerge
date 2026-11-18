@@ -1,0 +1,29 @@
+{
+  "command": [
+    "/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$PLATFORM/sources/C",
+    "--scratch-path",
+    "$PLATFORM/floor-6.2.4/build/C-tests",
+    "--cache-path",
+    "$PLATFORM/floor-6.2.4/cache",
+    "--config-path",
+    "$PLATFORM/floor-6.2.4/config",
+    "--security-path",
+    "$PLATFORM/floor-6.2.4/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "debug",
+    "-j",
+    "8"
+  ],
+  "configuration": "debug",
+  "started_at": "2026-11-18T04:04:03.588824+00:00",
+  "free_bytes_before": 5614737416192
+}

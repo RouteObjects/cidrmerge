@@ -1,0 +1,25 @@
+{
+  "name": "ios18-build-CIDRPOSIX",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "--target",
+    "CIDRPOSIX",
+    "--triple",
+    "arm64-apple-ios18.0-simulator",
+    "--sdk",
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+  ],
+  "environment": {},
+  "started_at": "2026-11-18T03:18:46.642547+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:18:49.699809+00:00",
+  "log": "macos/upstream-qualification/ios18-build-CIDRPOSIX.log",
+  "log_sha256": "1409d51b810f1c4187cd9fe718683d9712d34b6f0acfc32c77b2c6763202f78d"
+}

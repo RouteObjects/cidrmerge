@@ -1,0 +1,25 @@
+{
+  "name": "debug-build-CIDRPOSIX",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-c",
+    "debug",
+    "--target",
+    "CIDRPOSIX"
+  ],
+  "environment": {
+    "MACOSX_DEPLOYMENT_TARGET": "15.0"
+  },
+  "started_at": "2026-11-18T03:16:27.472148+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:16:29.712752+00:00",
+  "log": "macos/upstream-qualification/debug-build-CIDRPOSIX.log",
+  "log_sha256": "de7f98c456124b7dbcd66c103e8c95ac6b6be285634a133a13f3d3b3682db2ca"
+}

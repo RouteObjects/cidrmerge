@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:13:25.726987+00:00",
+  "audits": [
+    {
+      "group": "original",
+      "phase": "primary",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "downstream/macos/audits-01/original-primary.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$EXPERIMENT/downstream/macos/measurements-01/original/primary",
+        "--output",
+        "$EXPERIMENT/downstream/macos/audits-01/original-primary.json"
+      ],
+      "receipt_sha256": "e43cdce4d1688bfe03efa07d43f4d33dea00a80f0f238e3f256f6a9a5135ec42"
+    },
+    {
+      "group": "scale",
+      "phase": "primary",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "downstream/macos/audits-01/scale-primary.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$EXPERIMENT/downstream/macos/measurements-01/scale/primary",
+        "--output",
+        "$EXPERIMENT/downstream/macos/audits-01/scale-primary.json"
+      ],
+      "receipt_sha256": "8e6c8c1562c103f2f20eb1fe3c9632108b9d07f76d42a7dbe722af65eaf3c860"
+    },
+    {
+      "group": "scale",
+      "phase": "followup",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "downstream/macos/audits-01/scale-followup.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$EXPERIMENT/downstream/macos/measurements-01/scale/followup",
+        "--output",
+        "$EXPERIMENT/downstream/macos/audits-01/scale-followup.json"
+      ],
+      "receipt_sha256": "c66586488e567cedfe4d14a7c0155800d4d97529d8246f18743d6d0b8a255aff"
+    },
+    {
+      "group": "sparse",
+      "phase": "primary",
+      "passed": true,
+      "exit_code": 0,
+      "receipt": "downstream/macos/audits-01/sparse-primary.json",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "$EXPERIMENT/downstream/shared/control/audit_measurements.py",
+        "--run",
+        "$EXPERIMENT/downstream/macos/measurements-01/sparse/primary",
+        "--output",
+        "$EXPERIMENT/downstream/macos/audits-01/sparse-primary.json"
+      ],
+      "receipt_sha256": "6f693f65a6bbc5af43368ff3eaf2ce81eabd7dee733b257e76fb51157276b06b"
+    }
+  ],
+  "new_measurements": false,
+  "totals": {
+    "measured_samples": 336,
+    "warmups": 56,
+    "measured_processes": 396,
+    "warmup_processes": 66
+  },
+  "finished_at": "2026-11-18T04:13:32.801597+00:00"
+}

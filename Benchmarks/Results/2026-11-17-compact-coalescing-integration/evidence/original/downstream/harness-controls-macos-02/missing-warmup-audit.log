@@ -1,0 +1,15 @@
+{"passed": false}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 46, in <module>
+    d=a.run/phase/case['id']/v;sfile=d/'sample.json';expected_sample_paths.add(sfile);row=load(sfile);assert row['passed'] and (row['id'],row['group'],row['suite'],row['variant'],row['round'],row['sequence'])==(case['id'],case['group'],case['suite'],v,rnd,sequence);sequence+=1;assert len(row['parts'])==len(case['parts']);timeline.append((row['started_at'],row['finished_at']));assert row['started_at']<=row['finished_at']
+                                                                                          ^^^^^^^^^^^
+  File "$EXPERIMENT/downstream/shared/control/audit_measurements.py", line 14, in load
+    def load(p):return json.loads(Path(p).read_text())
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '$EXPERIMENT/downstream/harness-controls-macos-02/audit-missing-warmup/warmup/control/B/sample.json'

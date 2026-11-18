@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "at": "2026-11-18T04:06:33.186866+00:00",
+  "platform": "native ARM64 Linux OrbStack",
+  "build_system": "native",
+  "baseline_candidate_commands_match_after_variant_path_normalization": true,
+  "swift_sha256": "ab29559ff929fde0817840371d5e385213602a2dab8536253479508bdc850dcc",
+  "full_tests": {
+    "B": {
+      "debug": 85,
+      "release": 85
+    },
+    "C": {
+      "debug": 85,
+      "release": 85
+    }
+  },
+  "floor_swift_6_2_4_C": {
+    "debug": 85,
+    "release": 85
+  },
+  "cli_differential": {
+    "cases": 254,
+    "processes": 508
+  },
+  "io_differential": {
+    "total": 86,
+    "passed": 86,
+    "failed": 0
+  },
+  "final_validation_steps": [
+    "source-git-init",
+    "source-git-index",
+    "whitespace",
+    "content-audit",
+    "format",
+    "documentation-symbol-graph",
+    "core-consumer-build",
+    "core-consumer-run",
+    "cli-smoke"
+  ],
+  "evidence": {
+    "$PLATFORM/control/B-qualification/summary.json": "0114a67636e52eedf6f871e046d8c46c9b2f5b1bdd7b46b14b9e029d586d246e",
+    "$PLATFORM/metadata/B-ordinary.json": "bff05ab4c4ed5f768fab1e9362ed7daad460706c1562b3e8191b3b30009afcff",
+    "$PLATFORM/control/C-qualification/summary.json": "c252f15bb055f94ef101e3c6825083b7b52dbf2f1bdebc7b498abd5e88cf619b",
+    "$PLATFORM/metadata/C-ordinary.json": "a92a502427962e3c1ec82494b26f626fbbadbab226a1665d611aece910c4954c",
+    "$PLATFORM/floor-6.2.4/control/C-qualification/summary.json": "18570b3edbd12ef999a928c1f82bacd8842c247bd348d42a58d6fb6d2dead187",
+    "$PLATFORM/differential-01/summary.json": "9ab0337fada0327588bd56fd202c96ad0cbf6e19243ead2857ffb90c88dcca09",
+    "$PLATFORM/io-differential-01/summary.json": "dcb1b57f58d3b7398fa3363ebc7a50064350c1d779cf9f7900b491c9fcc43f78",
+    "$PLATFORM/final-validation-01/summary.json": "c0acdcfda15d9ea454bab85e4a561de58eb985ff5e247112beff6bba577122bb",
+    "$PLATFORM/control/B-preparation.json": "57374b664766636c03af2a931412fd56ed3149d6d8d4cb3bf94429a12563cf08",
+    "$PLATFORM/control/C-preparation.json": "b774e988548bb2dd5a6856d32fe9f377d34680af27cc164643343514470d92d7"
+  },
+  "no_oom_events": true
+}

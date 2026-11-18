@@ -1,0 +1,72 @@
+{
+  "label": "build-release",
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$PLATFORM/sources/B",
+    "--scratch-path",
+    "$PLATFORM/build/B-ordinary",
+    "--cache-path",
+    "$PLATFORM/cache",
+    "--config-path",
+    "$PLATFORM/config",
+    "--security-path",
+    "$PLATFORM/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-18T03:45:43.476971+00:00",
+  "disk_free_before": 5617586921472,
+  "exit_code": 0,
+  "elapsed_s": 30.49765654600924,
+  "finished_at": "2026-11-18T03:46:13.974970+00:00",
+  "log_sha256": "9cf30198e16c12eb0269ad14f387d6b5cc9cb79008369a85d3ab1f9db9e32844",
+  "pins": {
+    "swift-argument-parser": {
+      "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+      "version": "1.8.2"
+    },
+    "swift-asn1": {
+      "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+      "version": "1.7.1"
+    },
+    "swift-atomics": {
+      "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+      "version": "1.3.1"
+    },
+    "swift-cidr": {
+      "revision": "5e4b3d2f881340a6ced05742429f1bd680dfd1e0",
+      "version": "0.10.1"
+    },
+    "swift-collections": {
+      "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+      "version": "1.6.0"
+    },
+    "swift-crypto": {
+      "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+      "version": "5.1.1"
+    },
+    "swift-nio": {
+      "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+      "version": "2.101.2"
+    },
+    "swift-system": {
+      "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+      "version": "1.7.4"
+    }
+  },
+  "binary_sha256": "51dbea7b5b26f52eeafacb268b2aac7a2098eed4a17aab3c291d690abe50d57c",
+  "stripped_bytes": 3322808,
+  "ordinary_binary_frozen_before_tests": true
+}

@@ -1,0 +1,25 @@
+{
+  "name": "ios18-build-CIDRNIO",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/ios18-build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "--target",
+    "CIDRNIO",
+    "--triple",
+    "arm64-apple-ios18.0-simulator",
+    "--sdk",
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator27.2.sdk"
+  ],
+  "environment": {},
+  "started_at": "2026-11-18T03:18:49.872310+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:19:04.674771+00:00",
+  "log": "macos/upstream-qualification/ios18-build-CIDRNIO.log",
+  "log_sha256": "2051c952b5249ea689351aa0a018705321e617b27ba8551ee2db0a55dab5ee72"
+}

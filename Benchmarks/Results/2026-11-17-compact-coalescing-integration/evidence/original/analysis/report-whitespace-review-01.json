@@ -1,0 +1,60 @@
+{
+  "passed": false,
+  "scope": "First public export; default Git check had 1120 issues including 1110 CRLF lines. Accounting only for CRLF leaves the following genuine log whitespace issues. Original bytes were left intact.",
+  "command": "git -c core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol diff --no-index --check EMPTY reports/public-01",
+  "exit_code": 3,
+  "issues": [
+    {
+      "path": "evidence/original/arm64/upstream-6.2.4/control/qualification-01/debug.log",
+      "line": 578,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/arm64/upstream-6.4.2/control/qualification-01/debug.log",
+      "line": 173,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-qualification/benchmark-build-CIDRCPUBenchmarkTarget.log",
+      "line": 8,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-qualification/benchmark-build-CIDRCPUBenchmarkTarget.log",
+      "line": 20,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-qualification/benchmark-build-CIDRNIOBenchmarkTarget.log",
+      "line": 27,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-qualification/benchmark-build-CIDRNIOBenchmarkTarget.log",
+      "line": 39,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-qualification/test-debug.log",
+      "line": 13,
+      "issue": "trailing whitespace."
+    },
+    {
+      "path": "evidence/original/macos/upstream-span-metrics-01/command.log",
+      "line": 147,
+      "issue": "new blank line at EOF."
+    },
+    {
+      "path": "evidence/original/macos/upstream-thresholds-full-01/command.log",
+      "line": 106,
+      "issue": "new blank line at EOF."
+    },
+    {
+      "path": "evidence/original/x86_64/upstream-qualification/test-debug.log",
+      "line": 18,
+      "issue": "trailing whitespace."
+    }
+  ],
+  "space_before_tab": false,
+  "superseded_by": "reports/public-02"
+}

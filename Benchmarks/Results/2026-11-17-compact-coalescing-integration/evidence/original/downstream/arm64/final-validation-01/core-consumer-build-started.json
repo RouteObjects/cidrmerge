@@ -1,0 +1,29 @@
+{
+  "label": "core-consumer-build",
+  "command": [
+    "/usr/bin/swift",
+    "build",
+    "--package-path",
+    "$PLATFORM/final-validation-01/consumer",
+    "--scratch-path",
+    "$PLATFORM/final-validation-01/consumer-build",
+    "--cache-path",
+    "$PLATFORM/final-validation-01/cache",
+    "--config-path",
+    "$PLATFORM/final-validation-01/config",
+    "--security-path",
+    "$PLATFORM/final-validation-01/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-j",
+    "8",
+    "--product",
+    "CoreConsumer"
+  ],
+  "cwd": "$PLATFORM/final-validation-01",
+  "started_at": "2026-11-18T04:06:04.240519+00:00"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "benchmark-build-CIDRSummarizationBenchmarkTarget",
+  "command": [
+    "./scripts/benchmarks.sh",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/benchmark-build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-Xswiftc",
+    "-DSUMMARIZATION_APPEND_APIS"
+  ],
+  "environment": {
+    "CIDR_BENCHMARK_TARGET": "CIDRSummarizationBenchmarkTarget"
+  },
+  "started_at": "2026-11-18T03:20:26.570499+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:20:48.256397+00:00",
+  "log": "macos/upstream-qualification/benchmark-build-CIDRSummarizationBenchmarkTarget.log",
+  "log_sha256": "6c3d1496200ee9f7b8f42c3f57a7bf2e9e9e577380a20292c5c7b9baddb4cefb"
+}

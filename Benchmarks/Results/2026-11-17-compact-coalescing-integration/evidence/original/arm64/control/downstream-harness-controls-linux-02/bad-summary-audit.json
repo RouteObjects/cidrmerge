@@ -1,0 +1,15 @@
+{
+  "passed": false,
+  "started_at": "2026-11-18T03:41:13.801093+00:00",
+  "run": "$PLATFORM/control/downstream-harness-controls-linux-02/audit-bad-summary",
+  "path_mapping": [
+    [
+      "$PLATFORM/control/downstream-harness-controls-linux-02/valid/measurements",
+      "$PLATFORM/control/downstream-harness-controls-linux-02/audit-bad-summary"
+    ]
+  ],
+  "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+  "error": "AssertionError((-2.6973032421021284, -0.6973032421021284))",
+  "traceback": "Traceback (most recent call last):\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 76, in <module>\n    compare(value,summary['pairs'][case['id']]);recomputed[case['id']]=value\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 27, in compare\n    if isinstance(x,dict):assert set(x)==set(y),(set(x),set(y));[compare(x[k],y[k]) for k in x]\n                                                                 ^^^^^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 27, in compare\n    if isinstance(x,dict):assert set(x)==set(y),(set(x),set(y));[compare(x[k],y[k]) for k in x]\n                                                                 ^^^^^^^^^^^^^^^^^^\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 29, in compare\n    elif isinstance(x,(float,int)) and not isinstance(x,bool):close(x,y)\n                                                              ^^^^^^^^^^\n  File \"$EXPERIMENT/downstream/shared/control/audit_measurements.py\", line 25, in close\n    def close(x,y):assert math.isclose(x,y,rel_tol=1e-12,abs_tol=1e-12),(x,y)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (-2.6973032421021284, -0.6973032421021284)\n",
+  "finished_at": "2026-11-18T03:41:13.825916+00:00"
+}

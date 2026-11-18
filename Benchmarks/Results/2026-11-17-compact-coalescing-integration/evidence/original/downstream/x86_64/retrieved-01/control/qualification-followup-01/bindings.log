@@ -1,0 +1,6 @@
+{"passed": false, "bound_files": 4331}
+Traceback (most recent call last):
+  File "$EXPERIMENT/downstream/shared/control/freeze_bindings.py", line 34, in <module>
+    obj=json.loads(path.read_text());assert obj.get('passed') is True,('Gate not passed',path);add(path)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Gate not passed', PosixPath('$EXPERIMENT/downstream/x86_64/behavior/io-differential-01/summary.json'))

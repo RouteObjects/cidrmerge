@@ -1,0 +1,28 @@
+{
+  "name": "C-final-validation",
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+    "$EXPERIMENT/downstream/shared/control/final_validation_v2.py",
+    "--source",
+    "$EXPERIMENT/downstream/macos/sources/C",
+    "--baseline-source",
+    "$EXPERIMENT/downstream/macos/sources/B",
+    "--seed",
+    "$EXPERIMENT/downstream/macos/build/C-ordinary",
+    "--output",
+    "$EXPERIMENT/downstream/macos/final-validation-01",
+    "--binary",
+    "$EXPERIMENT/downstream/macos/bin/C",
+    "--swift",
+    "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "--jobs",
+    "6"
+  ],
+  "started_at": "2026-11-18T04:01:56.231648+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T04:02:30.539696+00:00",
+  "receipt": "downstream/macos/final-validation-01/summary.json",
+  "receipt_sha256": "363e22b1f6eed4d10b899655ff5f3517f877d968b73917d54ec290ac50a628f5",
+  "case_count": null
+}

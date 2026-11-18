@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "platform": "x86_64",
+  "audit_rows": [
+    {
+      "group": "original",
+      "phase": "primary",
+      "receipt": "downstream/x86_64/audits-01/original-primary.json",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32
+    },
+    {
+      "group": "scale",
+      "phase": "primary",
+      "receipt": "downstream/x86_64/audits-01/scale-primary.json",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24
+    },
+    {
+      "group": "sparse",
+      "phase": "primary",
+      "receipt": "downstream/x86_64/audits-01/sparse-primary.json",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4
+    }
+  ],
+  "audit_totals": {
+    "measured_samples": 300,
+    "warmups": 50,
+    "measured_processes": 360,
+    "warmup_processes": 60
+  },
+  "measurement_review": "downstream/x86_64/analysis/measurement-review.json",
+  "qualification_gate": "downstream/x86_64/retrieved-01/control/qualification-gate.json",
+  "bindings": "downstream/x86_64/retrieved-01/control/premeasurement-v2.json",
+  "sources": {
+    "B": "control/cidrmerge-baseline-freeze.json",
+    "C": "control/cidrmerge-candidate-freeze.json"
+  },
+  "publication": "control/upstream-publication.json",
+  "qualification": {
+    "B": "downstream/x86_64/retrieved-01/qualification/B/summary.json",
+    "C": "downstream/x86_64/retrieved-01/qualification/C/summary.json",
+    "cli_differential": "downstream/x86_64/retrieved-01/behavior/differential-01/summary.json",
+    "io_differential": "downstream/x86_64/retrieved-01/behavior/io-differential-01/summary.json",
+    "final_validation": "downstream/x86_64/retrieved-01/final-validation-01/summary.json"
+  },
+  "environment": {
+    "before": "downstream/x86_64/retrieved-01/control/premeasurement-host.json",
+    "after": "downstream/x86_64/retrieved-01/control/postmeasurement-host.json",
+    "expanded_disk": "x86_64/control/expanded-disk-preflight.json"
+  },
+  "artifacts": {
+    "B": "downstream/x86_64/retrieved-01/qualification/B/summary.json",
+    "C": "downstream/x86_64/retrieved-01/qualification/C/summary.json"
+  },
+  "runtime_manifest": "downstream/x86_64/retrieved-01/control/premeasurement-v2.json",
+  "external_binding_copies": "downstream/x86_64/retrieved-01/control/external-binding-copies.json",
+  "postmeasurement_identity": {
+    "passed": true,
+    "receipt": "downstream/x86_64/retrieved-01/control/postmeasurement-host.json",
+    "all_source_binary_compiler_and_bound_runtime_hashes_verified_by_remote_and_local_audits": true,
+    "binding_receipt": "downstream/x86_64/retrieved-01/control/premeasurement-v2.json",
+    "four_workspaces_and_all_32_checkouts_postchecked_clean": true,
+    "workspace_receipt": "downstream/x86_64/control/postprocess-final/completion-receipt.json"
+  },
+  "preserved_failures": {
+    "product_failures": [],
+    "timing_failures": [],
+    "qualification_helper_failures": [
+      {
+        "description": "The unchanged I/O gate reports passed as a count(86); strict binding rejected it. A separate hash-bound boolean qualification adapter passed with every original receipt retained. No tests, binaries or measurements rerun.",
+        "paths": [
+          "downstream/x86_64/retrieved-01/control/qualification-followup-01/summary.json",
+          "downstream/x86_64/retrieved-01/control/premeasurement.json",
+          "downstream/x86_64/retrieved-01/control/qualification-binding-02/summary.json"
+        ]
+      }
+    ],
+    "historical_data_deleted": false
+  },
+  "preservation": {
+    "receipt": "downstream/x86_64/transfer-01/verification.json",
+    "archive_receipt": "downstream/x86_64/transfer-01/receipt.json",
+    "archive_manifest": "downstream/x86_64/transfer-01/manifest.json",
+    "local_audit_maps": "downstream/x86_64/control/local-audit-mappings.json",
+    "remote_sources_builds_and_all_original_evidence_retained": true
+  },
+  "no_new_measurements": true,
+  "completion": "downstream/x86_64/control/postprocess-final/completion-receipt.json",
+  "postprocess_completion_supplement": "downstream/x86_64/control/postprocess-final/retrieval.json"
+}

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "fixture": "$PRIOR_EXPERIMENT/fixtures/mixed-disjoint",
+  "started_at": "2026-11-14T21:19:00.388765+00:00",
+  "expected_sha256": "2d88b6e30a35ea7c9813839551d2c2171e61b7b4cfc1ee13202f815cf28c5bae",
+  "output_files": [
+    {
+      "path": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/4.stdout",
+      "bytes": 7399156,
+      "line_count": 500000,
+      "blank_lines": 0,
+      "sha256": "0c5bc7e05c757270e6cbb6256f71f9595e8173b193470b0efc3efc897aab427e"
+    },
+    {
+      "path": "$PRIOR_EXPERIMENT/warmup/split/mixed-disjoint/cidrmerge/6.stdout",
+      "bytes": 10465056,
+      "line_count": 500000,
+      "blank_lines": 0,
+      "sha256": "2e1b4cfc8201858191fb1f709188a0dc7b751d4d85cf3065936f3fb637ab74bd"
+    }
+  ],
+  "actual": {
+    "input_count": 1000000,
+    "family_counts": {
+      "ipv4": 500000,
+      "ipv6": 500000
+    },
+    "coverage_sha256": "f774655f3baf3e1a545e7b80e472d6203efa990d4a442e57080b74fe0a19f329",
+    "coverage_serialization": "concatenated records: family uint8 (4 or 6), start uint128 big-endian, end uint128 big-endian; IPv4 records first, sorted/coalesced per family",
+    "range_count": 1000000,
+    "range_count_by_family": {
+      "ipv4": 500000,
+      "ipv6": 500000
+    },
+    "minimal_cidr_count": 1000000,
+    "minimal_cidr_count_by_family": {
+      "ipv4": 500000,
+      "ipv6": 500000
+    },
+    "addresses_covered": {
+      "ipv4": "500000",
+      "ipv6": "9223372036854775808000000"
+    }
+  },
+  "expected_coverage_sha256": "f774655f3baf3e1a545e7b80e472d6203efa990d4a442e57080b74fe0a19f329",
+  "expected_minimal_cidr_count": 1000000,
+  "finished_at": "2026-11-14T21:19:05.935676+00:00"
+}

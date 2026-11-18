@@ -1,0 +1,585 @@
+{
+  "passed": true,
+  "captured_at": "2026-11-18T03:47:37.317036+00:00",
+  "binary": {
+    "path": "$EXPERIMENT/downstream/macos/bin/B",
+    "sha256": "539fe7144515b3475d6cb60d564ec1732b4ef359eb266c8c14ea079a08713061"
+  },
+  "system": {
+    "command": [
+      "sw_vers"
+    ],
+    "exit_code": 0,
+    "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+    "stderr": ""
+  },
+  "kernel": {
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "exit_code": 0,
+    "stdout": "Darwin Craig-MacBook-Pro.local 27.2.0 Darwin Kernel Version 27.2.0: Thu Oct 15 00:02:46 PDT 2026; root:xnu-13432.41.4~25/RELEASE_ARM64_T6000 arm64\n",
+    "stderr": ""
+  },
+  "compiler": {
+    "invocation_path": "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+    "resolved_path": "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend",
+    "sha256": "020a521df9efc127b6817a2ed2f1560155108f0a0ead1ee1fa98147f5944eb4f",
+    "version": {
+      "command": [
+        "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+      "stderr": "swift-driver version: 1.168.6 "
+    }
+  },
+  "swift_package_help": {
+    "command": [
+      "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift",
+      "package",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "OVERVIEW: Perform operations on Swift packages.\n\nSEE ALSO: swift build, swift run, swift test \n(Run this command without --help to see possible dynamic plugin commands.)\n\nUSAGE: swift package <options> <subcommand>\n\nPATHS & LOCATIONS:\n  --package-path <package-path>\n                          Specify the package path to operate on (default\n                          current directory). This changes the working\n                          directory before any other operation.\n  --cache-path <cache-path>\n                          Specify the shared cache directory path.\n  --config-path <config-path>\n                          Specify the shared configuration directory path.\n  --security-path <security-path>\n                          Specify the shared security directory path.\n  --scratch-path <scratch-path>\n                          Specify a custom scratch directory path. (default\n                          .build)\n  --swift-sdks-path <swift-sdks-path>\n                          Path to the directory containing installed Swift SDKs.\n  --toolset <toolset>     Specify a toolset JSON file to use when building for\n                          the target platform. Use the option multiple times to\n                          specify more than one toolset. Toolsets will be\n                          merged in the order they're specified into a single\n                          final toolset for the current build.\n  --pkg-config-path <pkg-config-path>\n                          Specify alternative path to search for pkg-config\n                          `.pc` files. Use the option multiple times to\n                          specify more than one path.\n\nCACHING:\n  --enable-dependency-cache/--disable-dependency-cache\n                          Determines whether dependency fetching uses a shared\n                          cache. (default: --enable-dependency-cache)\n  --enable-build-manifest-caching/--disable-build-manifest-caching\n                          (default: --enable-build-manifest-caching)\n  --manifest-cache <manifest-cache>\n                          Caching mode of Package.swift manifests. Valid values\n                          are: (shared: shared cache, local: package's build\n                          directory, none: disabled) (default: shared)\n  --enable-experimental-prebuilts/--disable-experimental-prebuilts\n                          Determines whether macros use prebuilt swift-syntax\n                          libraries. (default: --enable-experimental-prebuilts)\n\nLOGGING:\n  -v, --verbose           Increase verbosity to include informational output.\n  --very-verbose, --vv    Increase verbosity to include debug output.\n  -q, --quiet             Decrease verbosity to only include error output.\n  --color-diagnostics/--no-color-diagnostics\n                          Determines whether color diagnostics appear when\n                          printing to a TTY.\n                          By default, the terminal enables color diagnostics\n                          when connected to a TTY and disables them otherwise.\n                          (default: --no-color-diagnostics)\n\nSECURITY:\n  --disable-sandbox       Disable the sandbox when executing subprocesses.\n  --netrc                 Use netrc file even in cases where other credential\n                          stores are preferred.\n  --enable-netrc/--disable-netrc\n                          Determines whether SwiftPM loads credentials from a\n                          netrc file. (default: --enable-netrc)\n  --netrc-file <netrc-file>\n                          Specify the netrc file path.\n  --enable-keychain/--disable-keychain\n                          Determines whether SwiftPM searches for credentials\n                          in the macOS keychain. (default: --enable-keychain)\n  --resolver-fingerprint-checking <resolver-fingerprint-checking>\n                          (default: strict)\n  --resolver-signing-entity-checking <resolver-signing-entity-checking>\n                          (default: warn)\n  --enable-signature-validation/--disable-signature-validation\n                          Determines whether SwiftPM validates signatures on\n                          package releases downloaded from the registry.\n                          (default: --enable-signature-validation)\n\nRESOLUTION:\n  --enable-prefetching/--disable-prefetching\n                          (default: --enable-prefetching)\n  --force-resolved-versions, --disable-automatic-resolution, --only-use-versions-from-resolved-file\n                          Only use versions from the Package.resolved file and\n                          fail resolution if it is out-of-date.\n  --skip-update           Skip updating dependencies from their remote during a\n                          resolution.\n  --disable-scm-to-registry-transformation\n                          Disable source control to registry transformation.\n                          (default: --disable-scm-to-registry-transformation)\n  --use-registry-identity-for-scm\n                          Look up source control dependencies in the registry\n                          and use their registry identity when possible to help\n                          deduplicate across the two origins.\n  --replace-scm-with-registry\n                          Look up source control dependencies in the registry\n                          and use the registry to retrieve them instead of\n                          source control when possible.\n  --default-registry-url <default-registry-url>\n                          Default registry URL to use, instead of the\n                          registries.json configuration file.\n\nBUILD OPTIONS:\n  -c, --configuration <configuration>\n                          Build with the specified configuration. (values:\n                          debug, release)\n  -Xcc <Xcc>              Pass flag through to all C compiler invocations.\n  -Xswiftc <Xswiftc>      Pass flag through to all Swift compiler invocations.\n  -Xlinker <Xlinker>      Pass flag through to all linker invocations.\n  -Xcxx <Xcxx>            Pass flag through to all C++ compiler invocations.\n  --triple <triple>\n  --sdk <sdk>\n  --toolchain <toolchain>\n  --swift-sdk <swift-sdk> Filter for selecting a specific Swift SDK to build\n                          with.\n  --sanitize <sanitize>   Turn on runtime checks for erroneous behavior.\n                          (values: address, thread, undefined, scudo, fuzzer)\n  --auto-index-store/--enable-index-store/--disable-index-store\n                          Determines whether to automatically index while\n                          building. (default: --auto-index-store)\n  --enable-parseable-module-interfaces\n  -j, --jobs <jobs>       The number of jobs to spawn in parallel during the\n                          build process. (default: 10)\n  --use-integrated-swift-driver\n  --explicit-target-dependency-import-check <explicit-target-dependency-import-check>\n                          Check that targets only import their explicitly\n                          declared dependencies. (values: none, warn, error;\n                          default: none)\n  --build-system <build-system>\n                          Specify the build system to use. (default: swiftbuild)\n        native            - Native Build System (deprecated)\n        swiftbuild        - Swift Build build engine (default)\n        xcode             - Xcode build system integration (deprecated)\n  -debug-info-format <debug-info-format>\n                          The Debug Information Format to use. (values: dwarf,\n                          codeview, none)\n  --experimental-enable-codesize-profile\n                          Generate SIL, LLVM IR, and optimization record files\n                          for code size profiling.\n  --experimental-codesize-profile-output-dir <experimental-codesize-profile-output-dir>\n                          Directory to store code size profiling output files.\n  --enable-experimental-strip-products/--disable-experimental-strip-products\n                          Whether or not to strip debug symbols from the final\n                          binary.\n  --enable-dead-strip/--disable-dead-strip\n                          Determines whether the linker strips unused code.\n                          (default: --enable-dead-strip)\n  --disable-local-rpath   Disable adding $ORIGIN/@loader_path to the rpath by\n                          default.\n\nTRAIT OPTIONS:\n  --traits <traits>       Enable the specified traits of the package. Specify\n                          multiple traits as a comma-separated list, for\n                          example: `--traits Trait1,Trait2`. When enabling\n                          specific traits, you must also explicitly enable the\n                          default traits by passing `defaults` to this option.\n  --enable-all-traits     Enable all traits of the package.\n  --disable-default-traits\n                          Disable all default traits of the package.\n\nOPTIONS:\n  --version               Show the version.\n\nSUBCOMMANDS:\n  add-dependency          Add a package dependency to the manifest.\n  add-product             Add a new product to the manifest.\n  add-target              Add a new target to the manifest.\n  add-target-dependency   Add a new target dependency to the manifest.\n  add-setting             Add a new setting to the manifest.\n  experimental-audit-binary-artifact\n                          Audit a static library binary artifact for undefined\n                          symbols.\n  add-target-plugin       Add a new target plugin to the manifest\n  clean                   Delete build artifacts.\n  purge-cache             Purge the global repository cache.\n  reset                   Reset the complete cache/build directory.\n  update                  Update package dependencies.\n  describe                Describe the current package.\n  init                    Initialize a new package.\n  migrate                 Migrate a package or its individual targets to use\n                          the given set of features.\n  experimental-install    Offers the ability to install executable products of\n                          the current package.\n  experimental-uninstall  Offers the ability to uninstall executable products\n                          previously installed by `swift package\n                          experimental-install`.\n  diagnose-api-breaking-changes\n                          Diagnose API-breaking changes to Swift modules in a\n                          package.\n  dump-symbol-graph       Dump symbol graphs.\n  dump-package            Print parsed Package.swift as JSON.\n  edit                    Put a package in editable mode.\n  unedit                  Remove a package from editable mode.\n  config                  Manipulate configuration of the package\n  resolve                 Resolve package dependencies.\n  generate-sbom           Generate a Software Bill of Materials (SBOM).\n  show-dependencies       Print the resolved dependency graph.\n  show-executables        List the available executables from this package.\n  show-traits             List the available traits for a package.\n  tools-version           Manipulate tools version of the current package.\n  compute-checksum        Compute the checksum for a binary artifact.\n  archive-source          Create a source archive for the package.\n  completion-tool         Command to generate shell completions.\n  plugin                  Invoke a command plugin or perform other actions on\n                          command plugins.\n\n  See 'swift help package <subcommand>' for detailed help.\n",
+    "stderr": ""
+  },
+  "build_backend": "Swift Build (swiftbuild), Swift6.4.2 default; no --build-system override. Both matched Mac builds must use the same command/backend.",
+  "linkage": {
+    "command": [
+      "otool",
+      "-L",
+      "$EXPERIMENT/downstream/macos/bin/B"
+    ],
+    "exit_code": 0,
+    "stdout": "$EXPERIMENT/downstream/macos/bin/B:\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 5027.1.8)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1359.40.3)\n\t/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit (compatibility version 1.0.0, current version 1.0.0)\n\t/usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 2200.32.0)\n\t/usr/lib/swift/libswiftCore.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftCoreFoundation.dylib (compatibility version 1.0.0, current version 120.100.0, weak)\n\t/usr/lib/swift/libswiftDarwin.dylib (compatibility version 1.0.0, current version 428.40.1)\n\t/usr/lib/swift/libswiftDispatch.dylib (compatibility version 1.0.0, current version 1605.40.4, weak)\n\t/usr/lib/swift/libswiftIOKit.dylib (compatibility version 1.0.0, current version 1.0.0, weak)\n\t/usr/lib/swift/libswiftObjectiveC.dylib (compatibility version 1.0.0, current version 973.1.0, weak)\n\t/usr/lib/swift/libswiftXPC.dylib (compatibility version 1.0.0, current version 167.0.2, weak)\n\t/usr/lib/swift/libswift_Builtin_float.dylib (compatibility version 0.0.0, current version 0.0.0, weak)\n\t/usr/lib/swift/libswift_Concurrency.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswift_StringProcessing.dylib (compatibility version 0.0.0, current version 0.0.0)\n\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1090.40.3, weak)\n\t/usr/lib/swift/libswift_stdio.dylib (compatibility version 1.0.0, current version 428.40.1)\n",
+    "stderr": ""
+  },
+  "linked_image_uuids": {
+    "command": [
+      "xcrun",
+      "dyld_info",
+      "-uuid",
+      "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "/usr/lib/libobjc.A.dylib",
+      "/usr/lib/libSystem.B.dylib",
+      "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+      "/usr/lib/libc++.1.dylib",
+      "/usr/lib/swift/libswiftCore.dylib",
+      "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "/usr/lib/swift/libswiftDarwin.dylib",
+      "/usr/lib/swift/libswiftDispatch.dylib",
+      "/usr/lib/swift/libswiftIOKit.dylib",
+      "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "/usr/lib/swift/libswiftXPC.dylib",
+      "/usr/lib/swift/libswift_Builtin_float.dylib",
+      "/usr/lib/swift/libswift_Concurrency.dylib",
+      "/usr/lib/swift/libswift_StringProcessing.dylib",
+      "/usr/lib/swift/libswiftos.dylib",
+      "/usr/lib/swift/libswift_stdio.dylib"
+    ],
+    "exit_code": 0,
+    "stdout": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation [arm64e]:\n    -uuid:\n        3F6D1ACE-7756-3B52-A297-8E7ADA36194F\n/usr/lib/libobjc.A.dylib [arm64e]:\n    -uuid:\n        1FF743DE-675D-30F9-82EC-A3B6801513D7\n/usr/lib/libSystem.B.dylib [arm64e]:\n    -uuid:\n        DEAF2098-8EDD-3E5D-A821-F63A14D6C055\n/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit [arm64e]:\n    -uuid:\n        E7C4045B-9A81-31A0-AABB-09293F8B48C6\n/usr/lib/libc++.1.dylib [arm64e]:\n    -uuid:\n        29FF7149-AB23-3DEC-8DA3-39E2CB145F89\n/usr/lib/swift/libswiftCore.dylib [arm64e]:\n    -uuid:\n        EC0C27EC-C327-3027-80FA-2F2FF76C4D52\n/usr/lib/swift/libswiftCoreFoundation.dylib [arm64e]:\n    -uuid:\n        9089145C-1294-3880-9DA4-A3F5CA934103\n/usr/lib/swift/libswiftDarwin.dylib [arm64e]:\n    -uuid:\n        D8ED1CC1-69DC-368C-9E7C-6B408E8403D8\n/usr/lib/swift/libswiftDispatch.dylib [arm64e]:\n    -uuid:\n        F3FC740F-4CE6-361E-AD75-89F813C49949\n/usr/lib/swift/libswiftIOKit.dylib [arm64e]:\n    -uuid:\n        5E463932-B509-3BB9-8457-FBD9508E555E\n/usr/lib/swift/libswiftObjectiveC.dylib [arm64e]:\n    -uuid:\n        F8D80D8B-FAC5-31E3-8CD0-7EEAA5A60B53\n/usr/lib/swift/libswiftXPC.dylib [arm64e]:\n    -uuid:\n        88295802-0089-3B7F-8AB2-6406B73A0720\n/usr/lib/swift/libswift_Builtin_float.dylib [arm64e]:\n    -uuid:\n        4310F8AA-3ADE-338B-A529-CC91AFF61D23\n/usr/lib/swift/libswift_Concurrency.dylib [arm64e]:\n    -uuid:\n        2249664D-2D56-3C9B-A6C9-CD03B6B6A793\n/usr/lib/swift/libswift_StringProcessing.dylib [arm64e]:\n    -uuid:\n        41BE15D1-2323-37FC-BF67-8413FC453DD4\n/usr/lib/swift/libswiftos.dylib [arm64e]:\n    -uuid:\n        309CE1B1-E511-3672-A989-35EABD87C7D3\n/usr/lib/swift/libswift_stdio.dylib [arm64e]:\n    -uuid:\n        8A1C9F5A-7373-37D5-8F43-7351A74A2DC0\n",
+    "stderr": ""
+  },
+  "loaded_shared_cache": {
+    "uuid": "c208f2eb-29b0-3d9e-ba56-45fd90e37b16",
+    "method": "Read-only _dyld_get_shared_cache_uuid query in this native host Python process; not a product dependency.",
+    "copied": false
+  },
+  "linked_paths": [
+    {
+      "path": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/libobjc.A.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/libSystem.B.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/System/Library/Frameworks/CryptoKit.framework/Versions/A/CryptoKit",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/libc++.1.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftCore.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftCoreFoundation.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftDarwin.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftDispatch.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftIOKit.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftObjectiveC.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftXPC.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswift_Builtin_float.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswift_Concurrency.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswift_StringProcessing.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswiftos.dylib",
+      "ordinary_file_exists": false
+    },
+    {
+      "path": "/usr/lib/swift/libswift_stdio.dylib",
+      "ordinary_file_exists": false
+    }
+  ],
+  "runtime_scope": "Records host OS build, system shared-cache identity and linked image UUIDs. System/shared-cache libraries are not copied or claimed as frozen redistributable runtime files.",
+  "shared_cache_files": [
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e",
+      "bytes": 753664,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.01",
+      "bytes": 130711552,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.02",
+      "bytes": 229376,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.03",
+      "bytes": 131284992,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.04",
+      "bytes": 245760,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.05",
+      "bytes": 131301376,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.06",
+      "bytes": 245760,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.07",
+      "bytes": 130809856,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.08",
+      "bytes": 278528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.09",
+      "bytes": 130990080,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.10",
+      "bytes": 229376,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.11",
+      "bytes": 131940352,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.12",
+      "bytes": 245760,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.13",
+      "bytes": 131383296,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.14",
+      "bytes": 344064,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.15",
+      "bytes": 131186688,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.16",
+      "bytes": 212992,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.17",
+      "bytes": 131284992,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.18",
+      "bytes": 229376,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.19",
+      "bytes": 131268608,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.20",
+      "bytes": 294912,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.21",
+      "bytes": 131350528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.22",
+      "bytes": 262144,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.23",
+      "bytes": 131350528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.24",
+      "bytes": 360448,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.25.dylddata",
+      "bytes": 219693056,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.26.dyldreadonly",
+      "bytes": 180060160,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.27",
+      "bytes": 32768,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.28",
+      "bytes": 131334144,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.29",
+      "bytes": 344064,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.30",
+      "bytes": 131825664,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.31",
+      "bytes": 376832,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.32",
+      "bytes": 131268608,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.33",
+      "bytes": 393216,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.34",
+      "bytes": 130990080,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.35",
+      "bytes": 475136,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.36",
+      "bytes": 130383872,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.37",
+      "bytes": 163840,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.38",
+      "bytes": 131366912,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.39",
+      "bytes": 344064,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.40",
+      "bytes": 130760704,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.41",
+      "bytes": 344064,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.42",
+      "bytes": 131432448,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.43",
+      "bytes": 278528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.44",
+      "bytes": 131088384,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.45",
+      "bytes": 475136,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.46",
+      "bytes": 130449408,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.47",
+      "bytes": 98304,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.48",
+      "bytes": 130629632,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.49",
+      "bytes": 196608,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.50",
+      "bytes": 130629632,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.51",
+      "bytes": 360448,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.52",
+      "bytes": 130744320,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.53",
+      "bytes": 360448,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.54.dylddata",
+      "bytes": 205094912,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.55.dyldreadonly",
+      "bytes": 5341184,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.56",
+      "bytes": 32768,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.57",
+      "bytes": 130367488,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.58",
+      "bytes": 114688,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.59",
+      "bytes": 130662400,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.60",
+      "bytes": 294912,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.61",
+      "bytes": 130662400,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.62",
+      "bytes": 278528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.63",
+      "bytes": 130482176,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.64",
+      "bytes": 180224,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.65",
+      "bytes": 130990080,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.66",
+      "bytes": 409600,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.67",
+      "bytes": 130760704,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.68",
+      "bytes": 278528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.69",
+      "bytes": 130957312,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.70",
+      "bytes": 327680,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.71",
+      "bytes": 130793472,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.72",
+      "bytes": 278528,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.73",
+      "bytes": 131072000,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.74",
+      "bytes": 409600,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.75",
+      "bytes": 130777088,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.76",
+      "bytes": 393216,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.77",
+      "bytes": 130301952,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.78",
+      "bytes": 147456,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.79.dylddata",
+      "bytes": 171671552,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.80.dyldreadonly",
+      "bytes": 1982464,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.81.dyldlinkedit",
+      "bytes": 1703837696,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.atlas",
+      "bytes": 2709011,
+      "mtime_ns": 1793942531000000000
+    },
+    {
+      "path": "/System/Volumes/Preboot/Cryptexes/OS/System/Library/dyld/dyld_shared_cache_arm64e.map",
+      "bytes": 1505007,
+      "mtime_ns": 1793942531000000000
+    }
+  ]
+}

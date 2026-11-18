@@ -1,0 +1,1956 @@
+{
+  "platform": "arm64",
+  "group": "scale",
+  "phase": "followup",
+  "phase_summary": {
+    "original_relative_path": "downstream/arm64/measurements-01/scale/followup/summary.json",
+    "raw_sha256": "947c86dbf426e123f12276bd2cb9dd7c59eb616ba9d4a042167fdcacbee8b99c",
+    "raw_bytes": 3557,
+    "record": {
+      "passed": true,
+      "started_at": "2026-11-18T04:11:21.567249+00:00",
+      "group": "scale",
+      "platform": "linux",
+      "measured_samples": 12,
+      "warmups": 2,
+      "measured_processes": 12,
+      "warmup_processes": 2,
+      "pairs": {
+        "mixed-disjoint-1000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 5326809,
+                "cpu_seconds": 0.005226,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5396934,
+                "cpu_seconds": 0.005286,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 1.3164541848600164,
+              "cpu_change_pct": 1.148105625717566,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 5621435,
+                "cpu_seconds": 0.005513,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5786102,
+                "cpu_seconds": 0.005644,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 2.9292698394626893,
+              "cpu_change_pct": 2.3762017050607653,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 6125853,
+                "cpu_seconds": 0.006024,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6766272,
+                "cpu_seconds": 0.006604,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 10.45436447789394,
+              "cpu_change_pct": 9.628154050464799,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 6368021,
+                "cpu_seconds": 0.006218,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6284270,
+                "cpu_seconds": 0.006135,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": -1.315180964384377,
+              "cpu_change_pct": -1.3348343518816308,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 7012439,
+                "cpu_seconds": 0.006862,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6143270,
+                "cpu_seconds": 0.0059759999999999995,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": -12.394674663123627,
+              "cpu_change_pct": -12.911687554648799,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 5234183,
+                "cpu_seconds": 0.00513,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5607018,
+                "cpu_seconds": 0.005448,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 7.123079189244996,
+              "cpu_change_pct": 6.198830409356715,
+              "rss_change_pct": 0.0
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.122862012161353,
+            "cpu": 1.7621536653891656,
+            "rss": 0.0
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -12.394674663123627,
+              10.45436447789394
+            ],
+            "cpu": [
+              -12.911687554648799,
+              9.628154050464799
+            ],
+            "rss": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "followup_required": [],
+      "freeze_unchanged": true,
+      "finished_at": "2026-11-18T04:11:22.370463+00:00"
+    }
+  },
+  "independent_audit": {
+    "original_relative_path": "downstream/arm64/audits-01/scale-followup.json",
+    "raw_sha256": "cbec2cfc61764fd7bc08775704f8e35fca5f5b07caf7a359cac6372b08e04c56",
+    "raw_bytes": 3827,
+    "record": {
+      "passed": true,
+      "started_at": "2026-11-18T04:13:39.374815+00:00",
+      "run": "$PLATFORM/measurements-01/scale/followup",
+      "path_mapping": [],
+      "auditor_sha256": "9e8a726280515ae5dd034a6adc116897fce4bbd5ec2065599e94e770ed1af063",
+      "measured_samples": 12,
+      "warmups": 2,
+      "measured_processes": 12,
+      "warmup_processes": 2,
+      "platform": "linux",
+      "group": "scale",
+      "case_count": 1,
+      "recomputed": {
+        "mixed-disjoint-1000": {
+          "pairs": [
+            {
+              "round": 1,
+              "B": {
+                "elapsed_ns": 5326809,
+                "cpu_seconds": 0.005226,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5396934,
+                "cpu_seconds": 0.005286,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 1.3164541848600164,
+              "cpu_change_pct": 1.148105625717566,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 2,
+              "B": {
+                "elapsed_ns": 5621435,
+                "cpu_seconds": 0.005513,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5786102,
+                "cpu_seconds": 0.005644,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 2.9292698394626893,
+              "cpu_change_pct": 2.3762017050607653,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 3,
+              "B": {
+                "elapsed_ns": 6125853,
+                "cpu_seconds": 0.006024,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6766272,
+                "cpu_seconds": 0.006604,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 10.45436447789394,
+              "cpu_change_pct": 9.628154050464799,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 4,
+              "B": {
+                "elapsed_ns": 6368021,
+                "cpu_seconds": 0.006218,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6284270,
+                "cpu_seconds": 0.006135,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": -1.315180964384377,
+              "cpu_change_pct": -1.3348343518816308,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 5,
+              "B": {
+                "elapsed_ns": 7012439,
+                "cpu_seconds": 0.006862,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 6143270,
+                "cpu_seconds": 0.0059759999999999995,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": -12.394674663123627,
+              "cpu_change_pct": -12.911687554648799,
+              "rss_change_pct": 0.0
+            },
+            {
+              "round": 6,
+              "B": {
+                "elapsed_ns": 5234183,
+                "cpu_seconds": 0.00513,
+                "peak_rss_bytes": 22769664
+              },
+              "C": {
+                "elapsed_ns": 5607018,
+                "cpu_seconds": 0.005448,
+                "peak_rss_bytes": 22769664
+              },
+              "elapsed_change_pct": 7.123079189244996,
+              "cpu_change_pct": 6.198830409356715,
+              "rss_change_pct": 0.0
+            }
+          ],
+          "paired_change_medians": {
+            "elapsed": 2.122862012161353,
+            "cpu": 1.7621536653891656,
+            "rss": 0.0
+          },
+          "paired_change_ranges": {
+            "elapsed": [
+              -12.394674663123627,
+              10.45436447789394
+            ],
+            "cpu": [
+              -12.911687554648799,
+              9.628154050464799
+            ],
+            "rss": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      },
+      "followup_required": [],
+      "frozen_files_verified": 4365,
+      "all_output_bytes_verified": true,
+      "resource_metrics_reconciled": true,
+      "finished_at": "2026-11-18T04:13:39.826029+00:00"
+    }
+  },
+  "original_freeze_identity": {
+    "original_relative_path": "downstream/arm64/measurements-01/scale/followup/freeze.json",
+    "raw_sha256": "17628c23b07effd02edf6d639d0148b8674443a55b9d48bbc0c71928a8c77694",
+    "raw_bytes": 887315
+  },
+  "counts": {
+    "measured_samples": 12,
+    "warmups": 2,
+    "measured_processes": 12,
+    "warmup_processes": 2
+  },
+  "sample_records": [
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-01/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "a912c1c40e03e49b5d4d20419f2f5582df147337d69bf259e6ad2b1ca7cb4aa1",
+      "raw_bytes": 1819,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 1,
+        "sequence": 2,
+        "started_at": "2026-11-18T04:11:21.942382+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:21.942485+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365198848,
+            "directory": "round-01/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 5326809,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.00209,
+              "ru_stime": 0.003136,
+              "ru_maxrss": 22236,
+              "ru_minflt": 780,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.005226,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365198848,
+            "finished_at": "2026-11-18T04:11:21.949626+00:00"
+          }
+        ],
+        "elapsed_ns": 5326809,
+        "cpu_seconds": 0.005226,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.949832+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-01/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "81196b2eb3641a3837fab411a368438265839678daca3d86fdac9fc3bdbc3cfd",
+      "raw_bytes": 1820,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 1,
+        "sequence": 3,
+        "started_at": "2026-11-18T04:11:21.950102+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:21.950213+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365190656,
+            "directory": "round-01/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 5396934,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.004229,
+              "ru_stime": 0.001057,
+              "ru_maxrss": 22236,
+              "ru_minflt": 779,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.005286,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365190656,
+            "finished_at": "2026-11-18T04:11:21.957714+00:00"
+          }
+        ],
+        "elapsed_ns": 5396934,
+        "cpu_seconds": 0.005286,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.958032+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-02/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "a95ab465faddeb23aee5cbcbfcd3b2862c670d505fcbcd5971118d0702b5e09d",
+      "raw_bytes": 1833,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 2,
+        "sequence": 5,
+        "started_at": "2026-11-18T04:11:21.966826+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:21.966935+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365161984,
+            "directory": "round-02/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 5621435,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0033079999999999997,
+              "ru_stime": 0.002205,
+              "ru_maxrss": 22236,
+              "ru_minflt": 779,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.005513,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365161984,
+            "finished_at": "2026-11-18T04:11:21.974373+00:00"
+          }
+        ],
+        "elapsed_ns": 5621435,
+        "cpu_seconds": 0.005513,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.974592+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-02/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "1d297a11bb1b1189579a55da9cad9eea8e91804511601b62c3d1ad83125ea81b",
+      "raw_bytes": 1833,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 2,
+        "sequence": 4,
+        "started_at": "2026-11-18T04:11:21.958590+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:21.958719+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365170176,
+            "directory": "round-02/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 5786102,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0018809999999999999,
+              "ru_stime": 0.003763,
+              "ru_maxrss": 22236,
+              "ru_minflt": 777,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.005644,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365170176,
+            "finished_at": "2026-11-18T04:11:21.966335+00:00"
+          }
+        ],
+        "elapsed_ns": 5786102,
+        "cpu_seconds": 0.005644,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.966555+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-03/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "56bdd95e170e97fbe4c95940e6cfdf0c179257bc663bea17739dd176e0bfc09c",
+      "raw_bytes": 1820,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 3,
+        "sequence": 6,
+        "started_at": "2026-11-18T04:11:21.975067+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:21.975188+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365153792,
+            "directory": "round-03/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 6125853,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.003012,
+              "ru_stime": 0.003012,
+              "ru_maxrss": 22236,
+              "ru_minflt": 778,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.006024,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365149696,
+            "finished_at": "2026-11-18T04:11:21.983697+00:00"
+          }
+        ],
+        "elapsed_ns": 6125853,
+        "cpu_seconds": 0.006024,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.983984+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-03/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "0d3627b208aa3dc29f9aecabd3a99051539cb9b83fff8ff07a9fa69d3fe47f74",
+      "raw_bytes": 1820,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 3,
+        "sequence": 7,
+        "started_at": "2026-11-18T04:11:21.984312+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:21.984433+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365141504,
+            "directory": "round-03/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 6766272,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.004717,
+              "ru_stime": 0.001887,
+              "ru_maxrss": 22236,
+              "ru_minflt": 778,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.006604,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365141504,
+            "finished_at": "2026-11-18T04:11:21.993596+00:00"
+          }
+        ],
+        "elapsed_ns": 6766272,
+        "cpu_seconds": 0.006604,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.993944+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-04/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "5852d08e15f51072c0e54004f7baff7cb327397164264bc6cfbe2fb407ba80e3",
+      "raw_bytes": 1820,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 4,
+        "sequence": 9,
+        "started_at": "2026-11-18T04:11:22.004426+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:22.004568+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365121024,
+            "directory": "round-04/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 6368021,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.003109,
+              "ru_stime": 0.003109,
+              "ru_maxrss": 22236,
+              "ru_minflt": 777,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.006218,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365121024,
+            "finished_at": "2026-11-18T04:11:22.013026+00:00"
+          }
+        ],
+        "elapsed_ns": 6368021,
+        "cpu_seconds": 0.006218,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.013364+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-04/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "847a1f8b52550bab972c9defbf0232b358fb1981e8a15359e704f92d2da2633a",
+      "raw_bytes": 1819,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 4,
+        "sequence": 8,
+        "started_at": "2026-11-18T04:11:21.994506+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:21.994627+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365133312,
+            "directory": "round-04/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 6284270,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.00409,
+              "ru_stime": 0.002045,
+              "ru_maxrss": 22236,
+              "ru_minflt": 782,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.006135,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365133312,
+            "finished_at": "2026-11-18T04:11:22.003608+00:00"
+          }
+        ],
+        "elapsed_ns": 6284270,
+        "cpu_seconds": 0.006135,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.004051+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-05/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "4e55d13be5a28c6465439bc3451647642ee5cd836ac9076aedb9a32154b8adbf",
+      "raw_bytes": 1820,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 5,
+        "sequence": 10,
+        "started_at": "2026-11-18T04:11:22.013871+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:22.013981+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365112832,
+            "directory": "round-05/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 7012439,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.005882,
+              "ru_stime": 0.00098,
+              "ru_maxrss": 22236,
+              "ru_minflt": 777,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.006862,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365112832,
+            "finished_at": "2026-11-18T04:11:22.023351+00:00"
+          }
+        ],
+        "elapsed_ns": 7012439,
+        "cpu_seconds": 0.006862,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.023723+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-05/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "917c9bd4f676ef6f1e3644c71896b137d5b2b2f356034f71a8e76b4efa461c40",
+      "raw_bytes": 1847,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 5,
+        "sequence": 11,
+        "started_at": "2026-11-18T04:11:22.024090+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:22.024244+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365104640,
+            "directory": "round-05/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 6143270,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.003984,
+              "ru_stime": 0.001992,
+              "ru_maxrss": 22236,
+              "ru_minflt": 779,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.0059759999999999995,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365100544,
+            "finished_at": "2026-11-18T04:11:22.032319+00:00"
+          }
+        ],
+        "elapsed_ns": 6143270,
+        "cpu_seconds": 0.0059759999999999995,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.032586+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-06/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "7304e7819e603ff4dd405aea09d4117e2cb0a19f5d25e3d37a48ba5f413a154e",
+      "raw_bytes": 1819,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 6,
+        "sequence": 13,
+        "started_at": "2026-11-18T04:11:22.041088+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:22.041192+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365084160,
+            "directory": "round-06/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 5234183,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.003078,
+              "ru_stime": 0.002052,
+              "ru_maxrss": 22236,
+              "ru_minflt": 778,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 0
+            },
+            "cpu_seconds": 0.00513,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365084160,
+            "finished_at": "2026-11-18T04:11:22.048152+00:00"
+          }
+        ],
+        "elapsed_ns": 5234183,
+        "cpu_seconds": 0.00513,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.048376+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-06/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "1c82cd0c9d33f236d89fb47be62624885b5bce2993d45877328122136b950730",
+      "raw_bytes": 1834,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 6,
+        "sequence": 12,
+        "started_at": "2026-11-18T04:11:22.033079+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:22.033187+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365092352,
+            "directory": "round-06/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 5607018,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0032689999999999998,
+              "ru_stime": 0.002179,
+              "ru_maxrss": 22236,
+              "ru_minflt": 779,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 1
+            },
+            "cpu_seconds": 0.005448,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365092352,
+            "finished_at": "2026-11-18T04:11:22.040593+00:00"
+          }
+        ],
+        "elapsed_ns": 5607018,
+        "cpu_seconds": 0.005448,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:22.040824+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/warmup/mixed-disjoint-1000/B/sample.json",
+      "raw_sha256": "66f5349431d3953722d66c2c637525c63ea8f7d12570453f875f6130f66e11bf",
+      "raw_bytes": 1842,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "B",
+        "round": 0,
+        "sequence": 0,
+        "started_at": "2026-11-18T04:11:21.924895+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "B",
+            "started_at": "2026-11-18T04:11:21.925054+00:00",
+            "command": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/B",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365219328,
+            "directory": "warmup/mixed-disjoint-1000/B/mixed",
+            "elapsed_ns": 6400854,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.003966,
+              "ru_stime": 0.001983,
+              "ru_maxrss": 22236,
+              "ru_minflt": 780,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 1
+            },
+            "cpu_seconds": 0.005948999999999999,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365219328,
+            "finished_at": "2026-11-18T04:11:21.933407+00:00"
+          }
+        ],
+        "elapsed_ns": 6400854,
+        "cpu_seconds": 0.005948999999999999,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.933640+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/warmup/mixed-disjoint-1000/C/sample.json",
+      "raw_sha256": "7d392cc3871baa66eed8b717f67f1672cb8c808658fc4645c57fa848ab9181ee",
+      "raw_bytes": 1870,
+      "record": {
+        "passed": true,
+        "id": "mixed-disjoint-1000",
+        "group": "scale",
+        "suite": "native",
+        "variant": "C",
+        "round": 0,
+        "sequence": 1,
+        "started_at": "2026-11-18T04:11:21.933993+00:00",
+        "parts": [
+          {
+            "passed": true,
+            "label": "mixed",
+            "variant": "C",
+            "started_at": "2026-11-18T04:11:21.934118+00:00",
+            "command": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "invocation": [
+              "$PLATFORM/bin/C",
+              "--raw",
+              "--representation",
+              "cidr",
+              "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+            ],
+            "free_bytes_before": 5613365211136,
+            "directory": "warmup/mixed-disjoint-1000/C/mixed",
+            "elapsed_ns": 5682893,
+            "exit_code": 0,
+            "wait4_rusage": {
+              "ru_utime": 0.0044199999999999995,
+              "ru_stime": 0.0011049999999999999,
+              "ru_maxrss": 22236,
+              "ru_minflt": 781,
+              "ru_majflt": 0,
+              "ru_nswap": 0,
+              "ru_inblock": 0,
+              "ru_oublock": 31,
+              "ru_nvcsw": 1,
+              "ru_nivcsw": 2
+            },
+            "cpu_seconds": 0.0055249999999999995,
+            "peak_rss_bytes": 22769664,
+            "output_bytes": 16140,
+            "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+            "stderr_bytes": 0,
+            "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "complete_reference_bytes_match": true,
+            "post_verification_identical_output_hardlink": true,
+            "free_bytes_after": 5613365211136,
+            "finished_at": "2026-11-18T04:11:21.941665+00:00"
+          }
+        ],
+        "elapsed_ns": 5682893,
+        "cpu_seconds": 0.0055249999999999995,
+        "peak_rss_bytes": 22769664,
+        "finished_at": "2026-11-18T04:11:21.941896+00:00"
+      }
+    }
+  ],
+  "process_records": [
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-01/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "685ce1dc54cf42155182eec7561364197a918083995068a4d6cc826732ef275c",
+      "raw_bytes": 1288,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:21.942485+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365198848,
+        "directory": "round-01/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 5326809,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.00209,
+          "ru_stime": 0.003136,
+          "ru_maxrss": 22236,
+          "ru_minflt": 780,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.005226,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365198848,
+        "finished_at": "2026-11-18T04:11:21.949626+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-01/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "71762f9f29ae36570b4cfa2929d782e97b902b80272cefcac28a7e6f89a74973",
+      "raw_bytes": 1289,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:21.950213+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365190656,
+        "directory": "round-01/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 5396934,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.004229,
+          "ru_stime": 0.001057,
+          "ru_maxrss": 22236,
+          "ru_minflt": 779,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.005286,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365190656,
+        "finished_at": "2026-11-18T04:11:21.957714+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-02/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "7ed7979968bf0470e4df71a2e947dccb24543453ca066f5d0608d7e557a3a510",
+      "raw_bytes": 1302,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:21.966935+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365161984,
+        "directory": "round-02/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 5621435,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0033079999999999997,
+          "ru_stime": 0.002205,
+          "ru_maxrss": 22236,
+          "ru_minflt": 779,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.005513,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365161984,
+        "finished_at": "2026-11-18T04:11:21.974373+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-02/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "47cb92da92e618219716f87e43cc94011488f8dfe56e210ed0520db729c983e2",
+      "raw_bytes": 1302,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:21.958719+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365170176,
+        "directory": "round-02/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 5786102,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0018809999999999999,
+          "ru_stime": 0.003763,
+          "ru_maxrss": 22236,
+          "ru_minflt": 777,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.005644,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365170176,
+        "finished_at": "2026-11-18T04:11:21.966335+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-03/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "542f92d5405c2b260d00d53dcf8ffe89c410890a3e57e7be6d284ea59a4fd5e5",
+      "raw_bytes": 1289,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:21.975188+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365153792,
+        "directory": "round-03/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 6125853,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.003012,
+          "ru_stime": 0.003012,
+          "ru_maxrss": 22236,
+          "ru_minflt": 778,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.006024,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365149696,
+        "finished_at": "2026-11-18T04:11:21.983697+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-03/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "5c6d71d67ae23cfbcced6de709c59fddffc887c9a64be97cb89ec4fb53f3cb94",
+      "raw_bytes": 1289,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:21.984433+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365141504,
+        "directory": "round-03/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 6766272,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.004717,
+          "ru_stime": 0.001887,
+          "ru_maxrss": 22236,
+          "ru_minflt": 778,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.006604,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365141504,
+        "finished_at": "2026-11-18T04:11:21.993596+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-04/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "acc4577f622985e5d09fa7841d787ac83fab5a9ee8e3314dc6245f7270078ed9",
+      "raw_bytes": 1289,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:22.004568+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365121024,
+        "directory": "round-04/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 6368021,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.003109,
+          "ru_stime": 0.003109,
+          "ru_maxrss": 22236,
+          "ru_minflt": 777,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.006218,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365121024,
+        "finished_at": "2026-11-18T04:11:22.013026+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-04/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "3d44bb1bb04501230f8e9a272dc64fb143e9dc894062be69813d5a485a1854c1",
+      "raw_bytes": 1288,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:21.994627+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365133312,
+        "directory": "round-04/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 6284270,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.00409,
+          "ru_stime": 0.002045,
+          "ru_maxrss": 22236,
+          "ru_minflt": 782,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.006135,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365133312,
+        "finished_at": "2026-11-18T04:11:22.003608+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-05/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "eb60ed7ee01e3493bb552e9ea50c0fb8896c6b2815083bac0a46edbacf5f80da",
+      "raw_bytes": 1288,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:22.013981+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365112832,
+        "directory": "round-05/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 7012439,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.005882,
+          "ru_stime": 0.00098,
+          "ru_maxrss": 22236,
+          "ru_minflt": 777,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.006862,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365112832,
+        "finished_at": "2026-11-18T04:11:22.023351+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-05/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "c75a805488018a24769fd2d19ce094f5abd0ba78129bfa35aab54d78d8f5e30a",
+      "raw_bytes": 1302,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:22.024244+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365104640,
+        "directory": "round-05/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 6143270,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.003984,
+          "ru_stime": 0.001992,
+          "ru_maxrss": 22236,
+          "ru_minflt": 779,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.0059759999999999995,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365100544,
+        "finished_at": "2026-11-18T04:11:22.032319+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-06/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "5e933c75ea1a252546c15db2c2de823adbb7265d100c0e9260172fb7ebbfaf77",
+      "raw_bytes": 1288,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:22.041192+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365084160,
+        "directory": "round-06/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 5234183,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.003078,
+          "ru_stime": 0.002052,
+          "ru_maxrss": 22236,
+          "ru_minflt": 778,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 0
+        },
+        "cpu_seconds": 0.00513,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365084160,
+        "finished_at": "2026-11-18T04:11:22.048152+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/round-06/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "ce6a622a3113d4b5244aa4de9e6784f9d492a287292655cb0ba69840838c4249",
+      "raw_bytes": 1302,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:22.033187+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365092352,
+        "directory": "round-06/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 5607018,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0032689999999999998,
+          "ru_stime": 0.002179,
+          "ru_maxrss": 22236,
+          "ru_minflt": 779,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 1
+        },
+        "cpu_seconds": 0.005448,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365092352,
+        "finished_at": "2026-11-18T04:11:22.040593+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/warmup/mixed-disjoint-1000/B/mixed/process.json",
+      "raw_sha256": "0cc8f19662ea3e7e755229227c44b41dd4208bae3961ec8308de6bb6b3283269",
+      "raw_bytes": 1299,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "B",
+        "started_at": "2026-11-18T04:11:21.925054+00:00",
+        "command": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/B",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365219328,
+        "directory": "warmup/mixed-disjoint-1000/B/mixed",
+        "elapsed_ns": 6400854,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.003966,
+          "ru_stime": 0.001983,
+          "ru_maxrss": 22236,
+          "ru_minflt": 780,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 1
+        },
+        "cpu_seconds": 0.005948999999999999,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365219328,
+        "finished_at": "2026-11-18T04:11:21.933407+00:00"
+      }
+    },
+    {
+      "original_relative_path": "downstream/arm64/measurements-01/scale/followup/warmup/mixed-disjoint-1000/C/mixed/process.json",
+      "raw_sha256": "97da89ad0cdfa06f41304e7c9f37e506f154bc7473835fc6f91466193496e5e6",
+      "raw_bytes": 1326,
+      "record": {
+        "passed": true,
+        "label": "mixed",
+        "variant": "C",
+        "started_at": "2026-11-18T04:11:21.934118+00:00",
+        "command": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "invocation": [
+          "$PLATFORM/bin/C",
+          "--raw",
+          "--representation",
+          "cidr",
+          "$EXPERIMENT/downstream/shared/scale/mixed-disjoint-1000/input.txt"
+        ],
+        "free_bytes_before": 5613365211136,
+        "directory": "warmup/mixed-disjoint-1000/C/mixed",
+        "elapsed_ns": 5682893,
+        "exit_code": 0,
+        "wait4_rusage": {
+          "ru_utime": 0.0044199999999999995,
+          "ru_stime": 0.0011049999999999999,
+          "ru_maxrss": 22236,
+          "ru_minflt": 781,
+          "ru_majflt": 0,
+          "ru_nswap": 0,
+          "ru_inblock": 0,
+          "ru_oublock": 31,
+          "ru_nvcsw": 1,
+          "ru_nivcsw": 2
+        },
+        "cpu_seconds": 0.0055249999999999995,
+        "peak_rss_bytes": 22769664,
+        "output_bytes": 16140,
+        "output_sha256": "f24c83bc54d42887aecb1c2292decf62231fc2ac33948264014ddd8232c9f097",
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "complete_reference_bytes_match": true,
+        "post_verification_identical_output_hardlink": true,
+        "free_bytes_after": 5613365211136,
+        "finished_at": "2026-11-18T04:11:21.941665+00:00"
+      }
+    }
+  ]
+}

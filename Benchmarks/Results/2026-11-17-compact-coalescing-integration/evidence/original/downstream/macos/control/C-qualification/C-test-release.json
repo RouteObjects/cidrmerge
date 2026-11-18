@@ -1,0 +1,31 @@
+{
+  "name": "C-test-release",
+  "command": [
+    "./scripts/test.sh",
+    "--scratch-path",
+    "$EXPERIMENT/downstream/macos/build/C-tests",
+    "--disable-automatic-resolution",
+    "-j",
+    "6",
+    "-c",
+    "release"
+  ],
+  "started_at": "2026-11-18T04:00:33.617965+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-18T04:00:59.573047+00:00",
+  "log": "downstream/macos/logs/C-test-release.log",
+  "log_sha256": "56e1140d1c0a60543959de4062a0fa6bd20afad23ac4fc7a2b4edc6b7079fdab",
+  "passed": true,
+  "test_counts": [
+    7,
+    78
+  ],
+  "total_tests": 85,
+  "preservation": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5615960018944
+  }
+}

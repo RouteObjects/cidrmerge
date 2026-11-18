@@ -1,0 +1,162 @@
+{
+  "passed": true,
+  "variant": "C",
+  "source_commit": "5ab794a5a0578c03fd7b52f3b72889de201c09f8",
+  "source_freeze": "control/cidrmerge-candidate-freeze.json",
+  "started_at": "2026-11-18T03:59:50.917692+00:00",
+  "steps": [
+    {
+      "name": "C-ordinary-release",
+      "command": [
+        "swift",
+        "build",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/C-ordinary",
+        "--only-use-versions-from-resolved-file",
+        "-j",
+        "6",
+        "-c",
+        "release",
+        "--product",
+        "cidrmerge"
+      ],
+      "started_at": "2026-11-18T03:59:51.764873+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:00:14.127428+00:00",
+      "log": "downstream/macos/logs/C-ordinary-release.log",
+      "log_sha256": "a90991bc176eef91846c150967ac88ae65bba89ac782921985c8ca895b82c190",
+      "passed": true,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5616401850368
+      }
+    },
+    {
+      "name": "C-test-debug",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/C-tests",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "debug"
+      ],
+      "started_at": "2026-11-18T04:00:15.419596+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:00:32.990705+00:00",
+      "log": "downstream/macos/logs/C-test-debug.log",
+      "log_sha256": "333556346b5018dd5f2e94e9360e2a825ee09630941cf67f91f916afec0f5e01",
+      "passed": true,
+      "test_counts": [
+        7,
+        78
+      ],
+      "total_tests": 85,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5616083353600
+      }
+    },
+    {
+      "name": "C-test-release",
+      "command": [
+        "./scripts/test.sh",
+        "--scratch-path",
+        "$EXPERIMENT/downstream/macos/build/C-tests",
+        "--disable-automatic-resolution",
+        "-j",
+        "6",
+        "-c",
+        "release"
+      ],
+      "started_at": "2026-11-18T04:00:33.617965+00:00",
+      "exit_code": 0,
+      "finished_at": "2026-11-18T04:00:59.573047+00:00",
+      "log": "downstream/macos/logs/C-test-release.log",
+      "log_sha256": "56e1140d1c0a60543959de4062a0fa6bd20afad23ac4fc7a2b4edc6b7079fdab",
+      "passed": true,
+      "test_counts": [
+        7,
+        78
+      ],
+      "total_tests": 85,
+      "preservation": {
+        "passed": true,
+        "file_count": 2152,
+        "all_source_hashes_match": true,
+        "eight_pins_match": true,
+        "free_bytes": 5615960018944
+      }
+    }
+  ],
+  "timed_measurements_started": false,
+  "source_kind": "Uncommitted dependency candidate based on the recorded CLI commit; exact patch/source state is in the candidate freeze",
+  "candidate_freeze_sha256": "1db1825206019e5effac5ca3904bcdb47de789cb5b86f9101300cdc69becb3b7",
+  "candidate_freeze_metadata": {
+    "commit": "5ab794a5a0578c03fd7b52f3b72889de201c09f8",
+    "baseline_tree": "522b4de33d8a954fc4268875d7584da9bc0f5ca3",
+    "state": "Uncommitted dependency candidate based on the baseline commit; exact identity is the full file manifest and patch hash",
+    "changed_files": [
+      ".github/workflows/ci.yml",
+      "Package.resolved",
+      "Package.swift",
+      "README.md",
+      "THIRD_PARTY_NOTICES.txt",
+      "scripts/check-core-consumer.sh"
+    ],
+    "cli_source_and_tests_identical_to_baseline": true,
+    "patch": "$EXPERIMENT/control/cidrmerge-candidate.patch",
+    "patch_sha256": "44e18183f22c04b29273e10b34964a590b3614eef421c0dab3ee4b9036d76c02",
+    "archive": "$EXPERIMENT/control/cidrmerge-candidate-portable.tar",
+    "archive_bytes": 42147840,
+    "archive_sha256": "fd04ea7e2e978f06e7852a177897c5cdf1f85cc64cf1a98ec55af28284fa9b3e",
+    "upstream_version": "0.11.0",
+    "upstream_revision": "ae956313ebbcb5a6f9d20b74626ce5b6e2e69839",
+    "publication_receipt": "$EXPERIMENT/control/upstream-publication.json",
+    "publication_receipt_sha256": "99d9b0dfcbe66d09c4734e049d89ca2010451f26d869b612b06f0e88fe51fb4c"
+  },
+  "publication_receipt_sha256": "99d9b0dfcbe66d09c4734e049d89ca2010451f26d869b612b06f0e88fe51fb4c",
+  "published_upstream_revision": "ae956313ebbcb5a6f9d20b74626ce5b6e2e69839",
+  "backend": "swiftbuild (Swift6.4.2 default), identical explicit build/test flags to B",
+  "entry": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5616596762624
+  },
+  "swift_version": "Apple Swift version 6.4.2 (swiftlang-6.4.2.1.9 clang-2100.4.1.1)\nTarget: arm64-apple-macosx27.2.0\n",
+  "xcode_version": "Xcode 27.2\nBuild version 27B52\n",
+  "compiler": {
+    "path": "/Applications/Xcode-27.2.0.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend",
+    "sha256": "020a521df9efc127b6817a2ed2f1560155108f0a0ead1ee1fa98147f5944eb4f",
+    "sdk": "/Applications/Xcode-27.2.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.2.sdk"
+  },
+  "environment": {
+    "DEVELOPER_DIR": "/Applications/Xcode-27.2.0.app/Contents/Developer",
+    "TMPDIR": "$EXPERIMENT/downstream/macos/tmp/",
+    "CLANG_MODULE_CACHE_PATH": "$EXPERIMENT/downstream/macos/build/module-cache"
+  },
+  "system": {
+    "sw_vers": "ProductName:\t\tmacOS\nProductVersion:\t\t27.2.1\nBuildVersion:\t\t26B131\n",
+    "uname": "Darwin Craig-MacBook-Pro.local 27.2.0 Darwin Kernel Version 27.2.0: Thu Oct 15 00:02:46 PDT 2026; root:xnu-13432.41.4~25/RELEASE_ARM64_T6000 arm64\n",
+    "hardware": "hw.model: MacBookPro18,2\nhw.ncpu: 10\nhw.memsize: 68719476736\n"
+  },
+  "exit": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5615960010752
+  },
+  "binary_metadata": "downstream/macos/metadata/C-ordinary.json",
+  "finished_at": "2026-11-18T04:01:00.364886+00:00"
+}

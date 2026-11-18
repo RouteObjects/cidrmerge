@@ -1,0 +1,29 @@
+{
+  "label": "test-release",
+  "command": [
+    "/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$PLATFORM/sources/C",
+    "--scratch-path",
+    "$PLATFORM/build/C-tests",
+    "--cache-path",
+    "$PLATFORM/cache",
+    "--config-path",
+    "$PLATFORM/config",
+    "--security-path",
+    "$PLATFORM/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8"
+  ],
+  "started_at": "2026-11-18T04:03:12.470488+00:00",
+  "disk_free_before": 5614923190272
+}

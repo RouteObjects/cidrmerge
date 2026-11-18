@@ -1,0 +1,31 @@
+{
+  "name": "B-test-debug",
+  "command": [
+    "./scripts/test.sh",
+    "--scratch-path",
+    "$EXPERIMENT/downstream/macos/build/B-tests",
+    "--disable-automatic-resolution",
+    "-j",
+    "6",
+    "-c",
+    "debug"
+  ],
+  "started_at": "2026-11-18T03:39:16.154519+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:39:38.727922+00:00",
+  "log": "downstream/macos/logs/B-test-debug.log",
+  "log_sha256": "d9a5dea450b69b2cab807dab47b25fd42f3c20266a34bcd39b4ca0515982b4b7",
+  "passed": true,
+  "test_counts": [
+    7,
+    78
+  ],
+  "total_tests": 85,
+  "preservation": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5617933144064
+  }
+}

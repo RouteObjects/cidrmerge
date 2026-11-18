@@ -1,0 +1,69 @@
+{
+  "at": "2026-11-18T03:18:41.281027+00:00",
+  "scope": "Read-only system/compiler/capacity/process preflight; no package installation, cleanup, source mutation or builds.",
+  "uname": {
+    "command": [
+      "uname",
+      "-a"
+    ],
+    "exit_code": 0,
+    "stdout": "Linux swift-dev 6.14.8-2-pve #1 SMP PREEMPT_DYNAMIC PMX 6.14.8-2 (2025-07-22T10:04Z) x86_64 x86_64 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "swift_path": "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+  "swift_exists": true,
+  "swift": {
+    "command": [
+      "$LINUX_HOME/.local/share/swiftly/toolchains/6.4.2/usr/bin/swift",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-linux-gnu\n",
+    "stderr": ""
+  },
+  "root_disk": {
+    "total": 67318259712,
+    "used": 61306654720,
+    "free": 2795102208
+  },
+  "home_disk": {
+    "total": 67318259712,
+    "used": 61306654720,
+    "free": 2795102208
+  },
+  "tmpfs": {
+    "total": 67530514432,
+    "used": 0,
+    "free": 67530514432
+  },
+  "memory": "MemTotal:        8388608 kB\nMemFree:          653304 kB\nMemAvailable:    8313405 kB\nBuffers:               0 kB\nCached:          6389588 kB\nSwapCached:            0 kB\nActive:          3451540 kB\nInactive:        2993468 kB\nActive(anon):      51576 kB\nInactive(anon):     3944 kB\nActive(file):    3399964 kB\nInactive(file):  2989524 kB\nUnevictable:           0 kB\nMlocked:           24512 kB\nSwapTotal:        524288 kB\nSwapFree:         509852 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:                 0 kB\nWriteback:             0 kB\nAnonPages:         55420 kB\nMapped:                0 kB\nShmem:               100 kB\nKReclaimable:    2146764 kB\nSlab:            1274429 kB\nSReclaimable:    1270613 kB\nSUnreclaim:         3815 kB\nKernelStack:        8176 kB\nPageTables:        16488 kB\nSecPageTables:      4116 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    74336372 kB\nCommitted_AS:    2748392 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:      220792 kB\nVmallocChunk:          0 kB\nPercpu:            62272 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      410436 kB\nDirectMap2M:    133797888 kB\n",
+  "logical_cpus": 4,
+  "cpu_models": [
+    "Intel(R) Xeon(R) CPU           E5520  @ 2.27GHz"
+  ],
+  "processes": {
+    "command": [
+      "ps",
+      "-eo",
+      "pid,ppid,stat,etimes,comm",
+      "--sort=-etimes"
+    ],
+    "exit_code": 0,
+    "stdout": "    PID    PPID STAT ELAPSED COMMAND\n      1       0 Ss   2357685 systemd\n     44       1 Ss   2357683 systemd-journal\n    103       1 Ss   2357683 systemd-network\n    226       1 Ss   2357681 systemd-resolve\n    230       1 Ss   2357681 cron\n    231       1 Ss   2357681 dbus-daemon\n    234       1 Ss   2357681 networkd-dispat\n    246       1 Ss   2357681 systemd-logind\n    261       1 Ss+  2357681 agetty\n    262       1 Ss   2357681 login\n    265       1 Ss+  2357681 agetty\n    267       1 Ss   2357681 sshd\n    431       1 Ss   2357680 master\n    433     431 S    2357680 qmgr\n    440       1 Ssl  2357680 rsyslogd\n    486     262 S+   2356959 bash\n   1097       1 Ss   2356704 uuidd\n 945995       1 Ss     19592 systemd\n 945996  945995 S      19592 (sd-pam)\n 946639  945995 Ss     19446 dbus-daemon\n 946745       1 Sl     19445 codex\n 946752     267 Ss     19445 sshd\n 946790  946752 S      19444 sshd\n 946791  946790 Ssl    19444 codex\n 948808     431 S       3850 pickup\n 949260     267 Ss        75 sshd\n 949280  949260 S         75 sshd\n 949288  949280 Ss         0 python3\n 949293  949288 R          0 ps\n",
+    "stderr": ""
+  },
+  "cgroup": {
+    "/sys/fs/cgroup/memory.max": "max\n",
+    "/sys/fs/cgroup/memory.current": "7920390144\n",
+    "/sys/fs/cgroup/cpu.max": "max 100000\n",
+    "/sys/fs/cgroup/memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\n"
+  },
+  "toolchains": [
+    "6.4.0",
+    "6.2.4",
+    "6.4.2",
+    "6.3.3"
+  ],
+  "passed": true
+}

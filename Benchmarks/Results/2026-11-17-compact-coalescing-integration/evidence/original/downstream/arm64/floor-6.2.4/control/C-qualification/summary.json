@@ -1,0 +1,168 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:04:01.899942+00:00",
+  "script_sha256": "c7fb8262718543b91c597af7332376bb73a84342fd1eb8e79b8cc94d1bf3866b",
+  "manifest_sha256": "1db1825206019e5effac5ca3904bcdb47de789cb5b86f9101300cdc69becb3b7",
+  "steps": [
+    {
+      "command": [
+        "/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$PLATFORM/sources/C",
+        "--scratch-path",
+        "$PLATFORM/floor-6.2.4/build/C-tests",
+        "--cache-path",
+        "$PLATFORM/floor-6.2.4/cache",
+        "--config-path",
+        "$PLATFORM/floor-6.2.4/config",
+        "--security-path",
+        "$PLATFORM/floor-6.2.4/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "debug",
+        "-j",
+        "8"
+      ],
+      "configuration": "debug",
+      "started_at": "2026-11-18T04:04:03.588824+00:00",
+      "free_bytes_before": 5614737416192,
+      "exit_code": 0,
+      "elapsed_s": 27.960199291992467,
+      "finished_at": "2026-11-18T04:04:31.549491+00:00",
+      "test_summaries": [
+        [
+          "85",
+          "11"
+        ]
+      ],
+      "test_count": 85,
+      "pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-asn1": {
+          "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+          "version": "1.7.1"
+        },
+        "swift-atomics": {
+          "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+          "version": "1.3.1"
+        },
+        "swift-cidr": {
+          "revision": "ae956313ebbcb5a6f9d20b74626ce5b6e2e69839",
+          "version": "0.11.0"
+        },
+        "swift-collections": {
+          "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+          "version": "1.6.0"
+        },
+        "swift-crypto": {
+          "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+          "version": "5.1.1"
+        },
+        "swift-nio": {
+          "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+          "version": "2.101.2"
+        },
+        "swift-system": {
+          "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+          "version": "1.7.4"
+        }
+      },
+      "log_sha256": "e5b187a2360e8010c93ea79b95e62c432d19c85fb528f3dbad26a940c0d41881"
+    },
+    {
+      "command": [
+        "/usr/bin/swift",
+        "test",
+        "--package-path",
+        "$PLATFORM/sources/C",
+        "--scratch-path",
+        "$PLATFORM/floor-6.2.4/build/C-tests",
+        "--cache-path",
+        "$PLATFORM/floor-6.2.4/cache",
+        "--config-path",
+        "$PLATFORM/floor-6.2.4/config",
+        "--security-path",
+        "$PLATFORM/floor-6.2.4/security",
+        "--disable-netrc",
+        "--skip-update",
+        "--only-use-versions-from-resolved-file",
+        "--disable-sandbox",
+        "--build-system",
+        "native",
+        "-c",
+        "release",
+        "-j",
+        "8"
+      ],
+      "configuration": "release",
+      "started_at": "2026-11-18T04:04:31.838246+00:00",
+      "free_bytes_before": 5614497021952,
+      "exit_code": 0,
+      "elapsed_s": 45.88004907197319,
+      "finished_at": "2026-11-18T04:05:17.718880+00:00",
+      "test_summaries": [
+        [
+          "85",
+          "11"
+        ]
+      ],
+      "test_count": 85,
+      "pins": {
+        "swift-argument-parser": {
+          "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+          "version": "1.8.2"
+        },
+        "swift-asn1": {
+          "revision": "a9a5efd40eaf558a2bcd48d64b1d1646be686008",
+          "version": "1.7.1"
+        },
+        "swift-atomics": {
+          "revision": "0442cb5a3f98ab802acb777929fdb446bda11a34",
+          "version": "1.3.1"
+        },
+        "swift-cidr": {
+          "revision": "ae956313ebbcb5a6f9d20b74626ce5b6e2e69839",
+          "version": "0.11.0"
+        },
+        "swift-collections": {
+          "revision": "a0cb0954ecb21e4e31b0070e6ed5674e8556685a",
+          "version": "1.6.0"
+        },
+        "swift-crypto": {
+          "revision": "f8fad2f95ad67b45f6340c0960e2396094d67e07",
+          "version": "5.1.1"
+        },
+        "swift-nio": {
+          "revision": "cd3e1152083706d77b223fb29110e590efcc70c0",
+          "version": "2.101.2"
+        },
+        "swift-system": {
+          "revision": "b5544ba79a70a0cb3563e75bf26dc198d6b40ed3",
+          "version": "1.7.4"
+        }
+      },
+      "log_sha256": "3149acf65c11d43676fd3083af019dd48021353e1819e4b0261850d736e98585"
+    }
+  ],
+  "test_counts": {
+    "debug": 85,
+    "release": 85
+  },
+  "source_and_pins_unchanged": true,
+  "ordinary_binaries_unchanged": true,
+  "ordinary_binary_hashes": {
+    "B": "51dbea7b5b26f52eeafacb268b2aac7a2098eed4a17aab3c291d690abe50d57c",
+    "C": "a03a8672ea998c8be7f704b13625d6b354c24df8eb7e1a2afb4cd245d4d2c2fe"
+  },
+  "memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0\nsock_throttled 0\n",
+  "finished_at": "2026-11-18T04:05:18.567724+00:00"
+}

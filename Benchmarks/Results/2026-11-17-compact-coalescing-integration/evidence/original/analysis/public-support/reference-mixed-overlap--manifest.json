@@ -1,0 +1,25 @@
+{
+  "name": "mixed-overlap",
+  "input_count": 1000000,
+  "recipe": "alternate families; every 64th family ordinal emits parent 10.0.0.0/8 or 2001:db8::/32; other records are canonical contained /16,/24,/32 or /48,/64,/128 networks",
+  "generator_sha256": "e33dd8c7f9205ae9d15e8a4fb26048bb37b5c624ed6b80b463dc17e9fbedf6de",
+  "oracle_sha256": "a12e70b8d642b499630e7ddb4e693ebafb695b8886f3c809a0bdb48f65ff1654",
+  "files": {
+    "input.txt": {
+      "lines": 1000000,
+      "bytes": 17315741,
+      "sha256": "fef0a6ab45ff93141a9d95eb867b8ce28e8a237a67bc01fa7ea4ca88dc49ae01"
+    },
+    "ipv4.txt": {
+      "lines": 500000,
+      "bytes": 7275958,
+      "sha256": "591a9e86c965dca39473f7958f0dde8e5aef4f9a4ff122fc1fc2823016832a3a"
+    },
+    "ipv6.txt": {
+      "lines": 500000,
+      "bytes": 10039783,
+      "sha256": "43a1abca074298cb2e1d3cc0acae1026477fe616396274ca6d6e1a974eae8164"
+    }
+  },
+  "conversion_scope": "All tools receive identical CIDR records. Native arbitrary-range parsing is outside this comparison; range-derived-mixed expansion occurs before timing."
+}

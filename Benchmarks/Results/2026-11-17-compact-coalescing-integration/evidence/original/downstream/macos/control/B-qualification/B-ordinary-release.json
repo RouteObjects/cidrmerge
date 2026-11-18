@@ -1,0 +1,29 @@
+{
+  "name": "B-ordinary-release",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/downstream/macos/build/B-ordinary",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-c",
+    "release",
+    "--product",
+    "cidrmerge"
+  ],
+  "started_at": "2026-11-18T03:38:50.743214+00:00",
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:39:14.736112+00:00",
+  "log": "downstream/macos/logs/B-ordinary-release.log",
+  "log_sha256": "b01de7a3e4735d545fd2e1f3cc295950a0e3edbd1e79406e7e545d13afb4e4b2",
+  "passed": true,
+  "preservation": {
+    "passed": true,
+    "file_count": 2152,
+    "all_source_hashes_match": true,
+    "eight_pins_match": true,
+    "free_bytes": 5618261704704
+  }
+}

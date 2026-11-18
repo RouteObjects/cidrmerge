@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "at": "2026-11-18T04:23:41.064650+00:00",
+  "bundles": {
+    "macos": {
+      "directory": "analysis/macos-observations-02",
+      "index_sha256": "b1c88483373b3e96c41dc640ebca0f50da0fa705465c7121069c6185ca8b02f5",
+      "helper": "control/bundle_observations-v2.py",
+      "helper_sha256": "6862f95dd1de7b623afdcf333214ff5f07834b825c85345a234dbdea33c882ec",
+      "files": 8,
+      "bytes": 3412300,
+      "original_source_files": 1330,
+      "counts": {
+        "measured_samples": 336,
+        "warmups": 56,
+        "measured_processes": 396,
+        "warmup_processes": 66,
+        "sample_records": 392,
+        "process_records": 462,
+        "native_time_records": 462
+      }
+    },
+    "arm64": {
+      "directory": "analysis/arm64-observations-03",
+      "index_sha256": "e3c92e57edf9b77c3b3319a15310ab8a1120d230f43c30bbe6895d614126f769",
+      "helper": "control/bundle_observations.py",
+      "helper_sha256": "c7e7d657bafdbae52d2cecd6438aa6604aee4d504792fdad3953834a58095b64",
+      "files": 8,
+      "bytes": 2330457,
+      "original_source_files": 812,
+      "counts": {
+        "measured_samples": 312,
+        "warmups": 52,
+        "measured_processes": 372,
+        "warmup_processes": 62,
+        "sample_records": 364,
+        "process_records": 434,
+        "native_time_records": 0
+      }
+    },
+    "x86_64": {
+      "directory": "analysis/x86_64-observations-01",
+      "index_sha256": "8ad604fb09abc3b769489c11fe7a0106e7213c6e4b5140ad247c9a894f22fe05",
+      "helper": "control/bundle_observations.py",
+      "helper_sha256": "c7e7d657bafdbae52d2cecd6438aa6604aee4d504792fdad3953834a58095b64",
+      "files": 7,
+      "bytes": 2512670,
+      "original_source_files": 781,
+      "counts": {
+        "measured_samples": 300,
+        "warmups": 50,
+        "measured_processes": 360,
+        "warmup_processes": 60,
+        "sample_records": 350,
+        "process_records": 420,
+        "native_time_records": 0
+      }
+    }
+  },
+  "totals": {
+    "measured_samples": 948,
+    "warmups": 158,
+    "measured_processes": 1128,
+    "warmup_processes": 188,
+    "sample_records": 1106,
+    "process_records": 1316,
+    "native_time_records": 462
+  },
+  "all_numerical_source_records_unchanged": true,
+  "no_stdout_binary_or_runtime_payloads_copied": true,
+  "no_new_measurements": true,
+  "x86_metadata_peer_review": {
+    "passed": true,
+    "rows": 25,
+    "absolute_statistic_checks": 450,
+    "pairs_medians_spreads_match_independent_audits": true,
+    "source": "downstream/x86_64/analysis/measurement-review.json",
+    "source_sha256": "898e55aab9215d8263a0585235c6c69082cad2410729baca5647078d29abd088",
+    "rss_limit_review": "Explicit inherited-parent RSS-floor inference is appropriately qualified; no application-only equivalence or newly performed control is claimed."
+  },
+  "preserved_preparation_attempts": [
+    {
+      "directory": "analysis/macos-observations",
+      "reason": "Complete numerical records; superseded to add aggregate audit receipt to source inventory."
+    },
+    {
+      "directory": "analysis/arm64-observations-01",
+      "reason": "Stopped before records because container audit path required explicit bind-mount mapping."
+    },
+    {
+      "directory": "analysis/arm64-observations-02",
+      "reason": "Complete numerical records; process exited1 on tuple/list roundtrip of helper index mapping metadata. Explicit failure receipt retained; superseded by03."
+    }
+  ]
+}

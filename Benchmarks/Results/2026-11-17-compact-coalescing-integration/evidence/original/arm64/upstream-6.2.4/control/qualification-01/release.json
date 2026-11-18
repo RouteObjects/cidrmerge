@@ -1,0 +1,62 @@
+{
+  "configuration": "release",
+  "command": [
+    "/usr/bin/swift",
+    "test",
+    "--package-path",
+    "$PLATFORM/upstream-source",
+    "--scratch-path",
+    "$PLATFORM/upstream-6.2.4/build",
+    "--cache-path",
+    "$PLATFORM/upstream-6.2.4/cache",
+    "--config-path",
+    "$PLATFORM/upstream-6.2.4/config",
+    "--security-path",
+    "$PLATFORM/upstream-6.2.4/security",
+    "--disable-netrc",
+    "--skip-update",
+    "--only-use-versions-from-resolved-file",
+    "--disable-sandbox",
+    "--build-system",
+    "native",
+    "-c",
+    "release",
+    "-j",
+    "8"
+  ],
+  "started_at": "2026-11-18T03:19:59.468529+00:00",
+  "disk_free_before": 5619311472640,
+  "exit_code": 0,
+  "elapsed_s": 60.707063728012145,
+  "finished_at": "2026-11-18T03:21:00.175914+00:00",
+  "log_sha256": "2ee9c134e95d2e5e48a66d147be586a837c6b60949505da52e08d390ef73b4d1",
+  "test_summaries": [
+    [
+      "311",
+      "35"
+    ]
+  ],
+  "test_count": 311,
+  "dependency_pins": {
+    "swift-argument-parser": {
+      "revision": "6a52f3251125d74daf04fcbd5e6f08a75d074382",
+      "version": "1.8.2"
+    },
+    "swift-atomics": {
+      "revision": "b601256eab081c0f92f059e12818ac1d4f178ff7",
+      "version": "1.3.0"
+    },
+    "swift-collections": {
+      "revision": "03cc312c2c933ed87abace34044a5dff7a3117c1",
+      "version": "1.5.0"
+    },
+    "swift-nio": {
+      "revision": "77b84ac2cd2ac9e4ac67d19f045fd5b434f56967",
+      "version": "2.101.0"
+    },
+    "swift-system": {
+      "revision": "7c6ad0fc39d0763e0b699210e4124afd5041c5df",
+      "version": "1.6.4"
+    }
+  }
+}

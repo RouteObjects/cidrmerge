@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "started_at": "2026-11-18T04:19:39.403399+00:00",
+  "platform": "macos",
+  "helper_sha256": "6862f95dd1de7b623afdcf333214ff5f07834b825c85345a234dbdea33c882ec",
+  "record_policy": "Original parsed JSON values plus original relative path, byte length and raw SHA256. native.time text is preserved exactly as UTF8. No stdout, stderr, binaries or runtime files are copied.",
+  "scope": "This bundles existing independently passed audits; it does not execute the product or replace the full-byte measurement audit.",
+  "source_root": "$EXPERIMENT",
+  "phases": [
+    {
+      "file": "original-primary.json",
+      "sha256": "06a0190416cb78d2200503372172621a6787bc4756b51caa3f4bd34e944cad9a",
+      "bytes": 1373433,
+      "group": "original",
+      "phase": "primary",
+      "measured_samples": 132,
+      "warmups": 22,
+      "measured_processes": 192,
+      "warmup_processes": 32,
+      "sample_records": 154,
+      "process_records": 224,
+      "native_time_records": 224,
+      "audit_identity": {
+        "original_relative_path": "downstream/macos/audits-01/original-primary.json",
+        "raw_sha256": "e43cdce4d1688bfe03efa07d43f4d33dea00a80f0f238e3f256f6a9a5135ec42",
+        "raw_bytes": 36887
+      }
+    },
+    {
+      "file": "scale-primary.json",
+      "sha256": "7c2559927d05fceb9f58b5388227056163d246f84aa2bba8ee8f3fcaf0f69adf",
+      "bytes": 1092160,
+      "group": "scale",
+      "phase": "primary",
+      "measured_samples": 144,
+      "warmups": 24,
+      "measured_processes": 144,
+      "warmup_processes": 24,
+      "sample_records": 168,
+      "process_records": 168,
+      "native_time_records": 168,
+      "audit_identity": {
+        "original_relative_path": "downstream/macos/audits-01/scale-primary.json",
+        "raw_sha256": "8e6c8c1562c103f2f20eb1fe3c9632108b9d07f76d42a7dbe722af65eaf3c860",
+        "raw_bytes": 38322
+      }
+    },
+    {
+      "file": "scale-followup.json",
+      "sha256": "0fe02e05579454005c54f98a32c0bd5053b5539dc3848de374220277c1ce2ce8",
+      "bytes": 274013,
+      "group": "scale",
+      "phase": "followup",
+      "measured_samples": 36,
+      "warmups": 6,
+      "measured_processes": 36,
+      "warmup_processes": 6,
+      "sample_records": 42,
+      "process_records": 42,
+      "native_time_records": 42,
+      "audit_identity": {
+        "original_relative_path": "downstream/macos/audits-01/scale-followup.json",
+        "raw_sha256": "c66586488e567cedfe4d14a7c0155800d4d97529d8246f18743d6d0b8a255aff",
+        "raw_bytes": 10082
+      }
+    },
+    {
+      "file": "sparse-primary.json",
+      "sha256": "98e86bb0ceedc9ea1cc8a8abdf0932de4a10577c0557751c751db220ac44b9a0",
+      "bytes": 187534,
+      "group": "sparse",
+      "phase": "primary",
+      "measured_samples": 24,
+      "warmups": 4,
+      "measured_processes": 24,
+      "warmup_processes": 4,
+      "sample_records": 28,
+      "process_records": 28,
+      "native_time_records": 28,
+      "audit_identity": {
+        "original_relative_path": "downstream/macos/audits-01/sparse-primary.json",
+        "raw_sha256": "6f693f65a6bbc5af43368ff3eaf2ce81eabd7dee733b257e76fb51157276b06b",
+        "raw_bytes": 7008
+      }
+    }
+  ],
+  "totals": {
+    "measured_samples": 336,
+    "warmups": 56,
+    "measured_processes": 396,
+    "warmup_processes": 66,
+    "sample_records": 392,
+    "process_records": 462,
+    "native_time_records": 462
+  },
+  "driver": {
+    "file": "driver.json",
+    "sha256": "f05ec975ccc7b47b790bbe82f146c01880dfefe6416b77137122517b9bae8419",
+    "bytes": 6145
+  },
+  "audit_summary": {
+    "file": "audit-summary.json",
+    "sha256": "2114d241ec819e75fa303d26d8deab9b6f8c04b89c3ed3cc44f748d476db245f",
+    "bytes": 3820
+  },
+  "source_files": 1330,
+  "source_inventory": {
+    "file": "source-identities.json",
+    "sha256": "36b5019d875330c7e5ab681c91e3e430c9699fb6a2a05ff701b1792e369a1f64",
+    "bytes": 471193
+  },
+  "finished_at": "2026-11-18T04:19:39.780265+00:00"
+}

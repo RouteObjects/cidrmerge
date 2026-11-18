@@ -1,0 +1,25 @@
+{
+  "name": "release-build-CIDR",
+  "command": [
+    "swift",
+    "build",
+    "--scratch-path",
+    "$EXPERIMENT/macos/upstream-qualification/build",
+    "--only-use-versions-from-resolved-file",
+    "-j",
+    "6",
+    "-c",
+    "release",
+    "--target",
+    "CIDR"
+  ],
+  "environment": {
+    "MACOSX_DEPLOYMENT_TARGET": "15.0"
+  },
+  "started_at": "2026-11-18T03:16:57.493750+00:00",
+  "passed": true,
+  "exit_code": 0,
+  "finished_at": "2026-11-18T03:17:02.610316+00:00",
+  "log": "macos/upstream-qualification/release-build-CIDR.log",
+  "log_sha256": "6b083fa2e21dffaaedb78fd63e3a014191a4316ec5940dd780b76aa8c497b0ad"
+}
