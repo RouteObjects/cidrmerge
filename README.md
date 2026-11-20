@@ -26,7 +26,7 @@ or adjacent coverage; it never fills an uncovered gap to make output shorter.
 - iOS 18 or newer when using `CIDRMergeCore` in an application
 
 The package is verified against the declared compatibility floors of
-`swift-cidr` 0.11.0, Swift Argument Parser 1.7.0, and Swift Crypto 5.1.1.
+`swift-cidr` 0.11.0, Swift Argument Parser 1.7.0, and Swift Crypto 5.1.2.
 `Package.resolved` records the exact dependency revisions used for release
 verification. Swift Crypto is used only by the CLI artifact boundary;
 `CIDRMergeCore` does not import or link it.
